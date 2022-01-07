@@ -1,12 +1,8 @@
-## Welcome to Pages of JSI
+## This is my second content in a different directory
 
 You can use the [editor on GitHub](https://github.com/johsieders/test_blog3/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-This is a local link [mylink0](content.md)
-
-This is a local link to a directory [mylink2](adirectory/content1.md)
 
 ### Markdown
 
