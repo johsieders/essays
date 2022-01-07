@@ -5,8 +5,9 @@ You can use the [editor on GitHub](https://github.com/johsieders/test_blog3/edit
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 This is a local link [mylink0](content.md)
-
+This is a another local link [mylink1](./content.md)
 This is a local link to a directory [mylink2](adirectory/content1.md)
+This is another local link to a directory [mylink3](adirectory/content1.md)
 
 ### Markdown
 
