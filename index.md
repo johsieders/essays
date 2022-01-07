@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Pages of JSI
 
 You can use the [editor on GitHub](https://github.com/johsieders/test_blog3/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
