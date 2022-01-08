@@ -1,12 +1,11 @@
-## Welcome to Pages of JSI
+## Some Bagatelles
 
-You can use the [editor on GitHub](https://github.com/johsieders/test_blog3/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Some texts of mine. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Do we have a soul? [Find out](content/do_we_have_a_soul.md)
 
-This is a local link [mylink0](content.md)
 
-This is a local link to a directory [mylink2](adirectory/content1.md)
+Was the Holy Roman Empire holy, roman or an empire at all? [Find out](content/holy_roman_empire.md)
 
 
 ### Markdown
@@ -30,13 +29,3 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/johsieders/test_blog3/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
