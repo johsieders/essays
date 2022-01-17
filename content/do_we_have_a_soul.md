@@ -3,7 +3,7 @@
 
 *Johannes Siedersleben, Oxford, July 2016*
 
-The importance of the soul is stressed in Matthew 16:26. In the King James Version (KJV) it reads:
+The importance of the soul is stressed in Matthew 16:26. In the  King James Version (KJV) it reads:
 
 > For what is a man profited, if he shall gain the whole world, and lose his own soul?
 > Or what shall a man give in exchange for his soul?
