@@ -50,7 +50,7 @@ The higher-rational part contains everything else: intuition, conscience, will, 
 Figure 1 shows the non-living body as hardware (on the right) and three layers of software
 (in the middle) with the rational system divided into two parts.
 
-![soul](soul.png)
+![soul](5-soul.png)
 
 *Figure 1: L-soul as a layered system*
 
@@ -58,7 +58,7 @@ As a parenthesis I would like to mention that diagrams drawn by neuroscientists 
 resemblance to those used by software architects: Figure 2 shows a hypothetical design of our
 perceptive system.
 
-![brain](brain.png)
+![brain](5-brain.png)
 
 *Figure 2: Hypothetical design of the perceptive system for listening, watching, speaking and writing*
 
