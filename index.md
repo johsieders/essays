@@ -1,6 +1,6 @@
 # Bagatelles
 
-These are short papers I wrote over the last few years, 
+These are some short papers I wrote over the last few years, 
 some in Oxford ([OUSSA](https://www.conted.ox.ac.uk/about/oussa)), 
 some in Paris, some at home and all for my own pleasure.
 Enjoy, agree or disagree!
@@ -45,6 +45,6 @@ Enjoy, agree or disagree!
 
 ## Fun
 
-> [There is more to life than philosophy.](content/999-2westfields.png)
-
 > [Qu'est-ce qu'elle est belle, la Bavière!](content/2-baviere) 
+
+> [There is more to life than philosophy.](content/999-2westfields.png)
