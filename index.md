@@ -1,6 +1,6 @@
 # Bagatelles
 
-These are some short papers I wrote over the last few years, 
+These are some essays I wrote over the last few years, 
 some in Oxford ([OUSSA](https://www.conted.ox.ac.uk/about/oussa)), 
 some in Paris, some at home and all for my own pleasure.
 Enjoy, agree or disagree!
