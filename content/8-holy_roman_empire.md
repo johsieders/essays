@@ -5,12 +5,12 @@
 
 
 The Holy Roman Empire lasted over a thousand years, from 800 to 1806.
-The title Holy Roman Empire of the German Nation became established not before 1500,
-and Voltaire’s scathing remark about it being neither holy,
-Roman nor an empire was published in 1756, when the Empire was agonizing.
+The title *Holy Roman Empire of the German Nation* became established not before 1500,
+and Voltaire’s remark about it being neither holy,
+Roman nor an empire was published in 1756 when the Empire was agonizing.
 Was Voltaire right?
 
-### Was the Empire Holy?
+### Was it holy?
 
 Holy is a big word. Who could claim it? Let’s declare holy, for the sake of simplicity,
 whatever is endorsed or at least approved by the Pope. Now, out of 31 Emperors,
@@ -115,7 +115,7 @@ in the Seven Year’s War (1756 to 1763), Austria and Saxony found themselves
 fighting with France against the English and their allies Prussia, Brunswick,
 Hesse-Kassel and Schaumburg Lippe, all members of the Empire. For good measure
 we see Prussia on the side of the Ottomans in the last Austro-Turkish war in 1787.
-Voltaire was right: This was no Empire, at any rate not after 1648.
+Voltaire was right: This was not an Empire, at any rate not after 1648.
 
 #### References
 Klaus Fitschen: Wie die Deutschen Christen wurden. Elsengoldverlag, 2016
