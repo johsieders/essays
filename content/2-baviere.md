@@ -54,4 +54,4 @@ avec respect le mur qu’ils se sont proposé d’escalader.
 La Bavière n’est pas un pays extraordinaire. Des montagnes, des lacs, des rivières, des villes et des
 villages, il y en a partout. Elle n’a rien qu’on ne trouve ailleurs. 
 Et pourtant, elle est unique en réunissant tous ces éléments en un ensemble 
-qui renforce les beautés et estompe les endroits moins jolis. 
+qui renforce les beautés et estompe les laideurs. 
