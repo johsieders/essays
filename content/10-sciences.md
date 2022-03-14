@@ -10,7 +10,8 @@ sciences, comment fonctionnent-elles et faut-il s’en méfier ? Allons voir ça
 
 ### Un peu d’histoire
 Platon (mort en 348 BCE) méprisait les expériences scientifiques ; il les considérait comme indignes
-d’un homme érudit. En revanche, Aristote (mort en 322 BCE) en réalisait beaucoup, mais ses résultats étaient largement erronés, en physique comme en logique. Plus de succès avaient Ératosthène
+d’un homme érudit. En revanche, Aristote (mort en 322 BCE) en réalisait beaucoup, mais ses résultats étaient 
+largement erronés, en physique comme en logique. Plus de succès avaient Ératosthène
 (mort en 194 BCE) et Euclid (mort vers 200 BCE). Le premier mesura la circonférence de la Terre à
 mille kilomètres près, la géométrie du dernier, pratiquement exempte d’erreurs, est à la base de la
 géométrie de nos jours. L’atomisme de Démocrite (mort en 370 BCE) est remarquablement proche
