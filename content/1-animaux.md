@@ -29,4 +29,4 @@ meilleure et deux fois plus chère. Les bêtes n’auraient plus d’antibiotiqu
 place. On ne mangerait de la viande que trois fois par semaine avec deux fois plus de plaisir. Les
 éleveurs gagneraient autant qu’avant, les consommateurs ne payeraient pas plus cher et les bêtes
 auraient la belle vie, un peu comme les moutons normands qui broutent l’herbe en profitant de la
-vue sur le Mont St. Michel. Une utopie ? Et si on commençait par une réduction de 10 pourcents ?
+vue sur le Mont St. Michel. Une utopie ? Et si on commençait par une réduction de 10 pourcents au lieu de 50 ?
