@@ -20,8 +20,8 @@ L’origine du mal, c’est notre gourmandise. Nous sommes insatiables. Personne
 viande par an ; il est même malsain d’en manger tant. Mais la demande est là, et les éleveurs font
 l’impossible pour la satisfaire : Ils produisent le maximum aux plus bas coûts au détriment des
 animaux, des intérimaires dans les fermes et les abattoirs, et aussi de l’environnement : Dans les
-champs, on ne voit plus que du maïs ; chaque vache produit autant de CO2 par an qu’une voiture
-moyenne. Nous apercevons ici le côté sombre du capitalisme, qui n’est pas sans mérites, mais est
+champs, on ne voit plus que du maïs ; chaque vache produit autant de CO<sub>2</sub> par an qu’une voiture
+moyenne. Nous apercevons ici le côté sombre du capitalisme, qui n’est pas sans mérites mais
 défaillant en agriculture, dans les transports publics, les hôpitaux et bien d’autres domaines.
 
 Voici ma modeste proposition : Mangeons moins de viande, la moitié par exemple, mais deux fois
