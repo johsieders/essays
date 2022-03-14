@@ -8,7 +8,7 @@ ein Drittel beiträgt. Bei 80 Millionen Einwohnern bedeutet das im Durchschnitt 
 11,7 Tonnen CO<sub>2</sub> pro Kopf insgesamt und ca. 4 Tonnen, die der Einzelne verursacht und somit 
 theoretisch einsparen kann. Bei Vielfliegern und SUV-Fahrern sind die Werte höher, aber trotzdem niedrig
 im Vergleich mit einem Kohlekraftwerk: Bei einer Leistung von 1000 MW und angenommenen 1000 g
-CO2/kWh produziert es fast 9 Millionen Tonnen CO<sub>2</sub> pro Jahr. Seine Stilllegung ist also 
+CO<sub>2</sub>/kWh produziert es fast 9 Millionen Tonnen CO<sub>2</sub> pro Jahr. Seine Stilllegung ist also 
 gleichbedeutend mit 2,25 Millionen durchschnittlichen Verbrauchern, die ihren persönlichen 
 CO<sub>2</sub>-Ausstoß von 4 Tonnen auf null reduzieren, oder 4,5 Millionen, die ihn halbieren. 
 Alle deutschen Kohlekraftwerke zusammen verursachen mehr als 250 Millionen Tonnen CO<sub>2</sub>, 
