@@ -1,13 +1,11 @@
 
-## The Battle of Bosworth - the End of an Era
+## The Battle of Bosworth &ndash; a Day-By-Day Account
 
 
 *Johannes Siedersleben, Oxford, July 2014*
 
 The Battle of Bosworth marked the end of Richard III, the end of the Plantagenet dynasty and the beginning of the Tudors. Three weeks from Henry’s landing till the battle changed the course of English
-history.
-
-Our knowledge is mainly based on two sources: the Croyland Chronicle and the Anglia Historica. The
+history. Our knowledge is mainly based on two sources: the Croyland Chronicle and the Anglia Historica. The
 Croyland Chronicle covers the period from 655 to 1486. The part that describes the years 1459 till
 1486 was written as early as April 1486 by an anonymous writer. The Anglia Historica was written by
 Polydor Vergil (1470 – 1555), an Italian scholar, historian, priest and diplomat. It first appeared in
@@ -25,7 +23,8 @@ towards Nottingham where Richard was. The towns Henry came through were happy to
 gates, towns Richard had been at pains to insure. Henry was also joined by the Welsh captain Rhys ap
 Thomas and by Sir George Talbot followed by 500 Shropshire men.
 
-Richard knew about Henry’s landing four days later, on Thursday 11th August, being correctly reported that Henry’s army was pitifully small and ill-equipped. As he was also unaware of the Welsh
+Richard knew about Henry’s landing four days later, on *Thursday 11th August*, being correctly 
+reported that Henry’s army was pitifully small and ill-equipped. As he was also unaware of the Welsh
 captain’s treason, he completely underestimated the danger.
 
 It was only on *Monday 15th August* that Richard learnt what was really going on. He was “sore moved

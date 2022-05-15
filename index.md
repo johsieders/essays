@@ -5,6 +5,8 @@ some in Oxford ([OUSSA](https://www.conted.ox.ac.uk/about/oussa)),
 some in Paris, some at home and all for my own pleasure.
 Enjoy, agree or disagree!
 
+Johannes Siedersleben, Munich
+
 ## Philosophy
 
 > [Philosophy on two charts](content/4-philo-2charts.md)
@@ -19,6 +21,7 @@ Enjoy, agree or disagree!
 
 
 ## History
+> [The Battle of Bosworth](content/16-battle-of-bosworth.md)
 
 > [Was the Holy Roman Empire holy, roman or an empire at all?](content/8-holy_roman_empire.md)
 
