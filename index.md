@@ -19,6 +19,7 @@ Enjoy, agree or disagree!
 
 
 ## History
+> [The Battle of Bosworth](content/16-battle-of-bosworth.md)
 
 > [Was the Holy Roman Empire holy, roman or an empire at all?](content/8-holy_roman_empire.md)
 
