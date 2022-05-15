@@ -1,11 +1,12 @@
-
+#Bagatelles
 
 These are essays I wrote over the last few years, 
 some in Oxford ([OUSSA](https://www.conted.ox.ac.uk/about/oussa)), 
 some in Paris, some at home and all for my own pleasure.
 Enjoy, agree or disagree!
 
-Johannes Siedersleben, Munich
+Johannes Siedersleben 
+(Tuntenhausen, Germany)
 
 ## Philosophy
 
