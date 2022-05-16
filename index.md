@@ -31,7 +31,7 @@ Johannes Siedersleben, Tuntenhausen, Germany
 
 ## Religion
 
-> [Questions about Genesis I](content/7-genesis-questions.md)
+> [Questions about Genesis](content/7-genesis-questions.md)
 
 ## Language
 
