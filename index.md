@@ -15,13 +15,13 @@ Johannes Siedersleben, Tuntenhausen, Germany
 
 > [Kant und seine Zeit](content/13-kant.md)
 
+> [Einstein and Philosophy](content/13-kant.md)
+
 > [Do we have a soul?](content/5-do-we-have-a-soul.md)
 
 > [What is a dream?](content/12-what-is-a-dream.md)
 
-
 ## History
-> [The Battle of Bosworth](content/16-battle-of-bosworth.md)
 
 > [Was the Holy Roman Empire holy, roman or an empire at all?](content/8-holy_roman_empire.md)
 
@@ -32,6 +32,14 @@ Johannes Siedersleben, Tuntenhausen, Germany
 ## Religion
 
 > [Questions about Genesis](content/7-genesis-questions.md)
+
+## Shakespeare
+
+> [The Battle of Bosworth](content/16-battle-of-bosworth.md)
+
+> [Hotspur and Henry V](content/16-battle-of-bosworth.md)
+
+> [The Chorus in Henry V](content/16-battle-of-bosworth.md)
 
 ## Language
 
