@@ -15,7 +15,7 @@ Johannes Siedersleben, Tuntenhausen, Germany
 
 > [Kant und seine Zeit](content/13-kant.md)
 
-> [Einstein and Philosophy](content/13-kant.md)
+> [Einstein and Philosophy](content/18-einstein-philosophy.md)
 
 > [Do we have a soul?](content/5-do-we-have-a-soul.md)
 
@@ -37,9 +37,9 @@ Johannes Siedersleben, Tuntenhausen, Germany
 
 > [The Battle of Bosworth](content/16-battle-of-bosworth.md)
 
-> [Hotspur and Henry V](content/16-battle-of-bosworth.md)
+> [Hotspur and Henry V](content/17-hotspur-henry-v.md)
 
-> [The Chorus in Henry V](content/16-battle-of-bosworth.md)
+> [The Chorus in Henry V](content/19-henry-v-chorus.md)
 
 ## Language
 

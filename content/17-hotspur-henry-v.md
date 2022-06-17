@@ -58,6 +58,7 @@ how to divide England among themselves after the victory. This latter meeting
 happened historically in February 1405, only after Shrewsbury. Hotspur and his
 fellow rebels prepare for the battle in their base camp [4.1, 4.3], and in [5.1], we
 watch the final showdown with Hotspur killed and Harry victorious.
+
 Harry and Hotspur are frequently compared to each other, not always to Harry’s
 pleasure. Harry famously mocks his rival: I am not yet of Percy’s mind, the
 Hotspur of the north, that kills me some six or seven Scots at breakfast, washes
@@ -86,7 +87,9 @@ competence, Harry was discharged from the Council in 1411. According to Dan
 Jones, this was due to tensions between the ailing King (he died in 1413) and the
 heir, burning for action. The reference in [1 Henry IV, 3.2, 32 – 33] is unhistorical,
 because Henry IV presented his accusations while Hotspur was still alive, that is
-before 1403. On his accession (1413), Henry V wanted to unite England, assert
+before 1403. 
+
+On his accession (1413), Henry V wanted to unite England, assert
 the pending claim to the French throne, and go on a crusade. He was successful
 in the first two aims but failed in the third. Henry quelled the Southampton plot,
 immediately before leaving for Harfleur. He embarked on a war with France in
@@ -95,6 +98,7 @@ surrender: The treaty of Troyes recognized Henry as heir apparent to the French
 throne. In 1420, Henry married Charles’s daughter Catherine of Valois. But Henry
 died in 1422, bequeathing his infant son an empire too large and heterogeneous
 to be governed by a single king, let alone a weak one like Henry VI.
+
 Shakespeare tells us in [1 Henry IV, 1.2, 2.1, 2.2, 2.4] that Harry spent a great deal
 of time in the taverns of Eastcheap, together with his cronies Falstaff, Poins,
 Bardolph and others. Sirrah, I am sworn brother to a leash of drawers, and can
