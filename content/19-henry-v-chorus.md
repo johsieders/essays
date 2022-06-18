@@ -35,6 +35,7 @@ that the King is travelling from Calais to London and back to the French court.
 (e) It makes apologies: for the limited space in the playhouse, for the small
 number of actors, for the fact that we cannot travel in time, and also for the
 poor quality of the text which is certainly meant ironically.
+
 Each appearance of the Chorus contains one or more of these elements, but the
 point to observe is that the prologues are all different. Some of them are a guide
 to the upcoming act, and others aren’t. Let us look at them one by one.
