@@ -1,130 +1,143 @@
 
-## Questions about Genesis, Chapters 11 to 30
+## How Good a Guide to the Play is the Chorus in Henry V?
 
-*Johannes Siedersleben, Oxford, May 2019*
 
-Genesis lets us peek into a different world. At the time of writing the 
-world population was less than 100 million, living mostly on agriculture. 
-They had little more than rakes, scythes and ploughs. Writing and 
-counting had been invented but was used only by a tiny minority. 
-This context explains, at least to some extent, the strangeness 
-if not preposterousness of the text when taken at face value. 
-Let us examine some questions which impose themselves upon the
-reader.
+Johannes Siedersleben, Oxford, July 2018
 
-### Who, Whence, Why and for Whom?
-Who wrote Genesis? How many authors were they? How did they cooperate?
-How could they know about the thoughts of God, the dreams, fears and hopes of
-the key people? What is fiction, what isn’t? Where did the story come from? Was
-it a tale, handed down verbally for generations and finally brought into a written
-form? How reliable is the version which has happened to survive among 
-presumably many others? How disputed was it? And why did the authors go to such
-lengths? Was it for the reader’s pleasure, assuming they had any idea about the
-future readership? Did they describe an existing religion, or did they say: Let’s
-found a new one, we have a nice story we can start from? Computer-aided text
-analysis has produced some results as to the authorship, but I am afraid many of
-these questions will forever remain unanswered. 
-(I deliberately do not discuss any celestial origin of the Bible.)
+In Henry V each act is preceded by a Chorus. We will investigate the role of the
+Chorus, what it says and what it fails to say, and why Shakespeare might have
+introduced this role. Henry IV part One does without prologue or epilogue. Part Two features both,
+and in Henry V, the Chorus appears at the beginning of each act and at the end of
+the last one. One reason for this proliferation is certainly the fact that Henry V is
+set in different locations across England and the north of France. So, some
+explication is needed to guide the spectator where the play geographically is, and
+what is happening elsewhere that cannot be displayed on scene. But in fact, the
+Chorus does more than that. It serves different purposes given in order of
+descending importance:
 
-### How mighty is God?
-What God is or is not capable of is an intriguing question. If sin is evil, why did
-God bother to create it? No sin, no sinners, no punishment. Paradise appears to
-have been a failure, necessitating the eviction and subsequently a 
-complete restart in terms of the Flood. Who failed? God or the people he created? 
-Could God have done better? Why did God choose an impotent old man and a barren
-old woman as parents of future nations? Would it have been too easy to take a
-young couple in the prime of life and fertility? Why go the obvious way when a
-hard one is at hand? Why are there wars? Why did humanity have to wait for
-millennia to benefit from modern technology? 
+(a) It gives virtual stage directions to the audience, e.g. the scene is now
+transported to Southampton. As it is impossible to move the playhouse, or to
+have 10,000 soldiers fighting on scene, or to display an ocean with battleships
+ploughing their way through the billows, Shakespeare uses the Chorus as a
+means of stimulating the spectator’s imagination. A real stage direction says
+what is to happen on the scene, a virtual one says what is to happen in the
+spectator’s imagination.
 
-We are approaching the much disputed, unsolved and, most likely, unsolvable question of theodicy.
+(b) It sets the mood, it creates the ambiance for the upcoming act. This applies
+particularly to Act IV before the battle of Agincourt. It also awakes
+expectations and generates suspense.
 
-### The Covenant: Why Abraham?
-Abraham and his progeny have been elected by God: My covenant is with thee,
-and thou shalt be a father of many nations (17,4). But why Abraham and his
-progeny? The choice appears arbitrary. Abraham has no more merits or 
-less demerits than countless contemporaries. Choosing Abraham seems to be arbitrary,
-good for him, and unjust to everybody else.
+(c) It fills a gap: the story is told rather than played, as in Act V, when we learn
+that the King is travelling from Calais to London and back to the French court.
 
-All men are created equal, except Abraham and his progeny?
+(d) It makes announcements or gives explanations.
 
-### Men, Women and Servants
-Genesis describes a three-class society: The story is carried by the big shots such
-as Noah, Abraham, Isaac, Esau, Laban, Jacob plus some kings and pharaohs. All of
-them have names, live long and are affluent if not rich. They go through numerous adventures, 
-often but not always lucky, and are, after all, self-determined
-and live a life worth living. Their wives, the second class, also have names but are
-clearly second to their husbands or bedfellows whom they have to share with
-other women, wives or handmaids. A wife’s value depends heavily on her fertility, 
-barrenness being a grave deficiency. The servants represent the third class.
-They remain anonymous and seem to depend completely on their master or mistress. 
-In fact, they are serfs. Not even the meritorious servant who found a wife
-for Isaac (Chapter 24) is granted a name.
+(e) It makes apologies: for the limited space in the playhouse, for the small
+number of actors, for the fact that we cannot travel in time, and also for the
+poor quality of the text which is certainly meant ironically.
+Each appearance of the Chorus contains one or more of these elements, but the
+point to observe is that the prologues are all different. Some of them are a guide
+to the upcoming act, and others aren’t. Let us look at them one by one.
 
-All men are created equal, aren’t they?
+### Chorus in Act I
 
-### Righteousness (or Lack of)
-Genesis features examples of strange bargaining, of taking in one’s opponent. 
-Examples include Isaac, Jacob and Laban. These people are not righteous, they are
-unfair. 
+The Chorus begs pardon for the limited space and the small number of actors.
+The main point here is the definition of the play’s realm, much larger than the
+scene: Suppose within the girdle of these walls are now confined two mighty
+monarchies whose high uprearèd and abutting fronts the perilous ocean parts
+asunder. The prologue ends politely by asking the audience gently to hear, kindly
+to judge our play. It does not introduce Act I in any way: scene I.1 clearly belongs
+somewhere in the English court, where I.2 takes place. It is thus a prologue to the
+whole play rather than to the first act. The audience is left in expectation, the
+promises are still to be fulfilled.
 
-What does this teach us? To behave similarly? Where is the idea of fairness?
+### Chorus in Act II
 
-### Obedience, Punishment, Faith and Trial
-God gives orders (where to go, whom to marry or not to marry, circumcision),
-decrees bans (what to eat or not to eat), makes covenants (promises of reward in
-return for obedience) and punishes cruelly in cases of disobedience, 
-the case being often minor (eating apples from a forbidden tree, looking back to burning
-Sodom) or obscure: what was Sodom and Gomorrah’s wickedness? The pattern
-of disobedience followed by severe punishment is ubiquitous throughout the Old
-Testament. Examples include the eviction from Paradise, the Flood, 
-the destruction of Sodom and Gomorrah, the fate of Lot’s wife and the Babylonian Exile, 
-to name but a few; the Book of the Judges contains many more. Genesis distinguishes 
-believers and non-believers. Believers are subject to God’s rules, are
-talked to and listened by him. They benefit from God’s deeds while risking severe
-and disproportionate punishment. Non-believers tend to be less happy, are
-promised nothing and otherwise left alone, thus escaping an appalling variety of
-obedience, the trial of faith, inflicted on Abraham and Job. They risk, however,
-punishment for wickedness, whatever that means.
+At the end of Act I, Henry effectively declares war on France. He himself and,
+most likely, the audience are upset at the French after the insult by the French
+Ambassador. Now, as the Chorus in Act II tells us, all the youth of England are on
+fire. The audience is to feel how outraged the English were, and how eager to
+fight. And then we learn that the French are shaken in their fear, which is good.
+But they also seek to divert the English purposes by bribing three treacherous
+nobles whose names are given, which is bad. I imagine a highly partial audience,
+awaiting English victories and scorning the French. So, this first part of this Act’s
+prologue sets the mood and makes at the same time announcements about the
+things to come. This is followed by a virtual stage direction: The scene is to move
+first to Southampton and thence to France shall we convey you safe and bring
+you back. But against all expectations, scene II.1 is not in Southampton let alone
+in France, but in Eastcheap. It is probably no coincidence that the Chorus never
+mentions commoners by name but only anonymously if at all. The audience
+must wait until scene II.2 to see Henry and his entourage acting in Southampton
+and the traitors dispatched.
 
-Could not any terrorist claim (as Abraham) to have received an order from God?
+### Chorus in Act III
 
-### Wealth and Values
-It’s these gifts God keeps promising to his proteges: offspring, old age, land and,
-less often mentioned, cattle, silver and gold. Just a few examples: 
-Look now toward heaven, and tell the stars, if thou be able to number them: 
-and he said unto him, so shall thy seed be (15,5). Thou shalt be buried in a good old age (15,15).
-Unto thy seed I have given this land: from the river of Egypt unto the river Euphrates (15,18). 
-I will multiply thee exceedingly (17,2). Abram was very rich in
-cattle, in silver, and in gold (13,2). We are led to believe that offspring, old age,
-land, cattle, silver and gold was that which made a life worth living at the time of
-Abraham.
+We now accompany the King as passengers on his trip from Southampton to
+Harfleur. Shakespeare excels at describing what such a trip is like: the noises you
+hear, the views you appreciate: You stand upon the rivage and behold a city on
+th’ inconstant billows dancing. Shakespeare also describes England as being
+guarded with grandsires, babies and old women which is not consistent with the
+fact that three quarters of his army have been left behind to defend England
+against the Scots, the Welsh and whoever else and with the St. Crispin speech
+when Henry mocks at gentlemen in England now abed. The Chorus now takes up
+an open point from scene II.4: At the French Court, Exeter demands formally the
+crown of France and the French King’s answer which must be negative is still due.
+It is the Chorus who brings the news in a somewhat concealed form: Suppose th’
+ambassador from the French comes back. He does come back with an
+unacceptable offer, and this is the moment when the button is pushed, the war is
+launched: Alarum, and chambers go off – a real stage direction within a virtual
+one. The prologue of Act III is a good guide to scenes III.1, III.2, III.3 and III.6, all
+located in Harfleur and describing the victorious siege: The fatal mouths gaping
+on girded Harfleur will have worked satisfactorily. The Chorus doesn’t mention
+the remaining scenes: Scene III.4, short and almost entirely in bad French, is a bit
+disparate; the audience’s knowledge of French was probably next to nothing. The
+scene could be meant to show how strange a language the French is. Scenes III.5
+and III.7 take up the thread of the French side, first mentioned in the prologue of
+Act II when the French are shaken by fear. They are described as cowards, feeble
+and braggarts at the same time, presumably much to the pleasure of the English
+audience.
 
-Isn’t this a hedonist view, an early version of our egoistic craving for personal
-happiness and affluence?
+### Chorus in Act IV
 
-### Moral and Promiscuity
-A striking element of Genesis is the issue of promiscuity which defies today’s
-moral standards. Proliferation appears to have been of paramount importance,
-to be attained by any means including polygamy and incest. Monogamy as a
-moral rule is not even mentioned. Handmaids (e.g. Zilpah, Bilbah) come as a free
-add-on, useful in case of but not restricted to barrenness of the mistress. Abraham had offspring from Hagar, Sarai and Keturah; Isaac from Leah, Bilbah, Zilpah
-and finally Rachel – and that without the least excuse or justification. But the importance of proliferation can hardly justify the variety of incest chosen by Lot’s
-daughters: They sleep with their drunken father in two consecutive nights, both
-getting pregnant, for no other reason than that there is not a man in the earth to
-come into us after the manner of all the earth (19,31).
+In the prologue of Act III, we were passengers on a battleship. Now, we are
+soldiers in a camp in the night before the all-decisive battle. Again, Shakespeare
+is second to none at describing what a camp is like. It is the details which count:
+at three o’clock in the morning we see the paly flames, the umbered faces, we
+hear the noise of the armourers, the noise of the cocks. One can even imagine
+the smell. And now comes a cold shower: the French as represented in Act III, 1
+can hardly be considered a serious threat. But the Chorus tells us: The poor
+condemnèd English, like sacrifices, by their watchful fires sit patiently and inly
+ruminate the morning’s danger. What a change! They must have realized how
+hopelessly outnumbered they are, and that only luck and extraordinary courage
+can save them. But then comes Henry as a saviour: the royal captain of the
+ruined band walking from watch to watch, from tent to tent. Many get a little
+touch of Henry in the night, and thus, at least, some confidence is assured.
+Here again, the Chorus sets the mood: it dampens the expectations, it creates
+suspense like in a detective story. It is a good guide to Act IV which presents the
+battle of Agincourt seen from the English camp (scenes IV.1. IV.3), the French
+camp (scenes IV.2, IV.5) and on the battlefield itself (scenes IV.4, IV.6, IV.7, IV.8)
+with the English fate shifting from stern, almost desperate confidence in the St.
+Crispins speech in the morning to a brilliant victory in the evening.
 
-How do the morals of Genesis match our own?
+### Chorus in Act V
 
-### Impact
-Genesis, and not only the chapters considered here, is a strange text, 
-hard to understand, hard to accept, easy to scathe. How could it rise 
-to its ultimate importance?
+After his victory, Henry is about to go to Calais, and to England then. But Act V is
+located in an English army base in France (scene V.1) and in the palace of the King
+of France (scene V.2) rather than in England. What happens in between? The
+Chorus represents an imaginary short act Shakespeare didn’t bother writing, with
+the King travelling to London, celebrating his victory and coming back to France.
+The audience is not part of the play as in the prologues to Acts III and IV. The
+Chorus fills a gap; no hint to Act V is given. There is an incongruous element: the
+General of our gracious Empress. The Empress is Queen Elisabeth I, and the
+General almost certainly the unlucky Earl of Essex. The Chorus tells us that the
+imagined crowds greeting him from Ireland coming, bringing rebellion broachèd
+on his sword would be inferior to those greeting Henry after his victory at
+Agincourt. Shakespeare could certainly have devised a less contrived way of
+describing the enthusiasm of the huge crowds celebrating Henry. And we all
+know that Essex never brought rebellion broachèd on his sword.
 
-*References*
+### References
+The Oxford Shakespeare: Henry V, 2008
 
-The Bible. Authorized King James Version, Oxford University Press, 1997
-
-Die Bibel nach der Übersetzung Martin Luthers. Deutsche Bibelstiftung Stuttgart, 1972
-
-The SPCK Bible Guide. Henry Wansbrough. 2013
+### Link verified on 24/05/2018
+http://www.sparknotes.com/shakespeare/henry5

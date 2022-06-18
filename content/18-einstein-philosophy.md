@@ -6,8 +6,8 @@ Johannes Siedersleben, Oxford,  June 2022
 quotation from Einstein, from which some have concluded that Einstein believed in God and didn’t
 believe in quantum mechanics. Both conclusions are wrong, as we are going to show. Einstein wrote a
 great deal on physics but little on philosophy and other non-technical topics. He left us the booklet
-On Cosmic Religion, and three short non-technical papers included in a celebrated collection, the
-Readings in the Philosophy of Science. Let us see what these writings tell us.
+*On Cosmic Religion*, and three short non-technical papers included in a celebrated collection, the
+*Readings in the Philosophy of Science*. Let us see what these writings tell us.
 
 Remark 1: The quotation is from a letter to Max Born from 26 December 1926. The original reads: “At any rate, I am
 convinced that He doesn’t play dice”.
@@ -27,10 +27,10 @@ his fellow researchers overwhelmed him. But an eminent contemporary didn’t agr
 Martin Heidegger, “there is no beauty at all in science, and the least perhaps in philosophy.” (GA 20,
 204). Who is right?
 
-Einstein’s stance clearly relies on the extraordinary gems of clarity and brilliance modern physics affords:
+Einstein’s stance clearly relies on the extraordinary gems of clarity and brilliance modern physics such as 
 Newton’s theory, Maxwell's equations and his own theory of relativity. 
 Einstein was less happy with quantum mechanics which wasn’t quite
-up to his standards of nobility and marvellous order. In Fundamentals of Theoretical Physics he
+up to his standards of nobility and marvellous order. In *Fundamentals of Theoretical Physics* he
 conceded that “it is probably out of the question that any future knowledge can compel physics again
 to relinquish our present statistical foundation in favour of a deterministic one which would deal
 directly with physical reality” but hoped, albeit with little confidence, that quantum mechanics would
@@ -63,7 +63,7 @@ sequence of events in the world is impossible.”
 ### Philosophy of Physics
 
 Here is the one, big question: How true are the laws of physics? Can we trust them? What does truth
-mean in physics? In his Geometry and Experience, Einstein only touches on the subject, using
+mean in physics? In his *Geometry and Experience*, Einstein only touches on the subject, using
 geometry, which means earth-measuring, as a sandbox-example of physics. The following few
 excerpts of his line of thought deal only with a tiny aspect of the towering problem of truth in physics.
 
@@ -83,7 +83,7 @@ provided by measurement. Modern logic
 calls axiomatic geometry a theory, and practical geometry a model thereof. If theory and experiment
 agree, we can relax. But neither models nor measurements are ever a hundred percent accurate: in
 this world there are no points, no perfectly straight lines, no perfectly rigid bodies, and in no worldly
-right triangle $`c2`$ has ever been exactly a2 + b2. So, how can you tell a faulty theory from a faulty
+right triangle c<sup>2</sup> has ever been exactly a<sup>2</sup> + b<sup>2</sup>. So, how can you tell a faulty theory from a faulty
 measurement? Here is how Einstein puts his sad conclusion: “As far as laws of mathematics refer to
 reality, they are not certain; and as far as they are certain, they do not refer to reality”.
 I’m stopping here; this topic would lead us too far. 
@@ -113,10 +113,10 @@ Remark 3: The *Open Society* was first published in 1945. Einstein died in 1955,
 ### Was Einstein of Central Importance for Philosophy?
 Yes, he definitely was and still is. He pulled the rug from under a large swath of philosophy; some of
 Kant’s assertions were refuted, epistemology was to be rebuilt, the work being still in progress. As
-Einstein had read Kant at the age of sixteen, he knew what he was arguing against. The bitter lesson was
+Einstein had read Kant at the age of sixteen he knew what he was arguing against. The bitter lesson was
 that human perception and common sense have always been misleading. Aristotle’s physics is
 perfectly compatible with common sense but out-and-out wrong. Two thousand years later, Galileo
-came up with the law of inertia (aka Newton’s first law) which is counterintuitive and required some
+came up with the law of inertia (aka Newton’s first law) which is counterintuitive and requires some
 getting used to. Three hundred years later, Einstein published his theory of relativity: The Lorentz
 transformation is formally proven by one tricky application of Pythagoras; time dilatation and length
 contraction follow from it in a few lines of calculation and can be verified by experiment exactly as
