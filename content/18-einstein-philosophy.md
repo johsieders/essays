@@ -13,7 +13,7 @@ Remark 1: The quotation is from a letter to Max Born from 26 December 1926. The 
 convinced that He doesn’t play dice”.
 
 Remark 2: Setting *c = 1* (which is as mundane as replacing miles with kilometres), the formula boils down to *E = m*:
-Mass is a form of energy as the atomic bomb shows.
+mass is a form of energy as the atomic bomb shows.
 
 ### Cosmic Religion and the Beauty of Physics
 
@@ -27,7 +27,7 @@ his fellow researchers overwhelmed him. But an eminent contemporary didn’t agr
 Martin Heidegger, “there is no beauty at all in science, and the least perhaps in philosophy.” (GA 20,
 204). Who is right?
 
-Einstein’s stance clearly relies on the extraordinary gems of clarity and brilliance modern physics such as 
+Einstein’s stance relies on the extraordinary gems of clarity and brilliance of modern physics such as 
 Newton’s theory, Maxwell's equations and his own theory of relativity. 
 Einstein was less happy with quantum mechanics which wasn’t quite
 up to his standards of nobility and marvellous order. In *Fundamentals of Theoretical Physics* he
@@ -90,7 +90,7 @@ I’m stopping here; this topic would lead us too far.
 
 
 ### Philosophy of Ethics
-Einstein’s paper The Laws of Science and the Laws of Ethics is an attempt at applying the
+Einstein’s paper *The Laws of Science and the Laws of Ethics* is an attempt at applying the
 scientific approach to ethics: “Ethical directives can be made rational and coherent by
 logical thinking and empirical knowledge.” One could start from axioms such as “Human
 life shall be preserved”, or “Pain and sorrow shall be lessened as much as possible”. Are

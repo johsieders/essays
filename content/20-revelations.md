@@ -4,21 +4,35 @@
 
 Johannes Siedersleben, Tuntenhausen, Dezember 2019
 
+Im Schloss von Angers (Maine-et-Loire) hängt ein monumentaler Wandteppich mit den wesentlichen Elementen:
+die sieben Siegel, die sieben Posaunen, der Drache, die drei Engel, die sieben Schalen und das neue Jerusalem.
+Im *Namen der Rose* von Umberto Eco sind die sieben toten Mönche kunstvoll mit den sieben Posaunen verknüft; so 
+verspeist Jorge, der blinde Bibliothekar, ein vergiftetes Buch in Analogie zur sechsten Posaune, wo Johannes 
+ein himmlisches Büchlein isst (sic).
 
-Die Offenbarungen gehören zu den rätselhaften Teilen der Bibel. Luther hätte sie am liebsten aus der Bibel entfernt,
-Umberto Ecco verwendete die sieben Posaunen als Rahmen für die sieben Verbrechen der *Name der Rose*. 
-Der Autor ist mit einiger Sicherheit nicht der Johannes des Evangeliums, denn zwischen Evangelium und Offenbarungen 
-liegen sechzig Jahre, und das Griechisch des Evangeliums ist viel ausdrucksvoller. 
+Die Offenbarungen wurden erst spät ins Neue Testament aufgenommen; Luther hätte sie am liebsten wieder entfernt &ndash; 
+verständlicherweise, muss man sagen. Wir verdanken ihnen Begriffe wie die *apokalyptischen Reiter*, das *Lamm Gottes*, 
+das *Jüngste Gericht*, das *Tausendjährige Reich*, *Harmagedon*.
+Der Autor ist mit Sicherheit nicht der Johannes des Evangeliums, denn zwischen Evangelium und Offenbarungen 
+liegen sechzig Jahre, und das Griechisch der Offenbarungen ist arm und fehlerhaft im Gegensatz zur Eleganz des Evangeliums.
+(Barton, p.154, Freeman, p. 107)
+Wir erfahren die sadistischen Details einer Apokalypse in viele Schritten, den Untergang der Welt auf 
+kleiner Flamme und die anschließende Erlösung als neue Welt Gottes, die aber nur wenigen Auserwählten
+offen steht. Die anderen landen im Feuersee.
 
-Wer auch immer der Autor war: Nur ein kranker Geist konnte dieses Hexen-Einmaleins erfinden: eine sadistische,
-detaillierte Dramaturgie der Apokalypse. 
+Die Offenbarungen haben über Jahrhunderte hinweg zahllose Gläubige in Angst und Schrecken versetzt, 
+denn auserwählt sind nur 144.000. Wer auch immer der Autor war: 
+Nur ein kranker Geist konnte ein solches Hexen-Einmaleins erfinden. Wir heutigen stehen ratlos vor dem Text; 
+nur ein paar Ultras nehmen ihn noch ernst.
 
-Im Schloss von Angers (Main-et-Loire) hängt ein monumantaler Wandteppich mit Szenen daraus.
+### Was steht da eigentlich drin?
 
-
-### Was steht in den Offenbarungen?
+Hier der Inhalt in Stichpunkten. 
 
 #### Sieben Sendschreiben
+
+Sieben Gemeinden bekommen einen Brief mit einer strengen Beurteilung, wie in der Schule.
+Manche kommen ganz gut weg (Smyrna), andere weniger (Sardes, Laodizea).
 
 a. Ephesus 2, 1-7
 
@@ -28,13 +42,16 @@ c. Pergamon 2,12-17
 
 d. Thyatira 2,18-29
 
-e. Sardes 3,1-6 (!)
+e. Sardes 3,1-6
 
 f. Philadelphia 3,7-13
 
-g. Laodizea 3,14-22 (!)
+g. Laodizea 3,14-22
 
-#### Vision vom thronenden Gott im Himmel 4,1-11
+#### Vision vom thronenden Gott im Himmel 4,1-11:
+Ein Thron in der Mitte, umgeben von 24 Greisen in weißen Gewändern, ebenfalls auf Thronen sitzend,
+Vor dem Thron sieben Fackeln, welche die sieben Geister Gottes darstellen. Vier himmlische Gestalten mit
+Augen vorne und hinten usw.
 
 #### Das Buch mit den sieben Siegeln 5,1-14
 Nur das Lamm Gottes, mit sieben Augen und sieben Hörnern (entsprechend den sieben Geistern, die Gott auf die Erde geschickt hat), 
@@ -49,8 +66,7 @@ c. Dritter apokalyptischer Reiter (schwarzes Pferd, Waage: Rationierung, Hungers
 
 d. Vierter apokalyptischer Reiter (fahles Pferd, Tod) 6,7-8
 
-e. Fünftes Siegel: 6,9- 11
-
+e. Fünftes Siegel: 6,9- 11: 
 Es erscheinen die Seelen der Märtyrer, die ein Gericht verlangen.
 
 f. Sechstes Siegel 6,12-17
@@ -65,22 +81,22 @@ Eine halbe Stunde Stille. Dann bekommen sieben Engel sieben Posaunen.
 #### Die sieben Posaunen 8,6-11,19
 
 a. Die erste Posaune 8,7: 
-Hagel und Feuer, ein Drittel der Erde wird verbrannt
+Hagel und Feuer, ein Drittel der Erde wird verbrannt.
 
 b. Die zweite Posaune 8,8-9: 
-Ein brennender Berg fällt ins Meer, ein Drittel der Fische und der Schiffe wird vernichtet
+Ein brennender Berg fällt ins Meer, ein Drittel der Fische und der Schiffe wird vernichtet.
 
 c. Die dritte Posaune 8,12-13: 
 Der Stern „Wermut“ fällt in Flüsse und Quellen. Ein Drittel des Wassers wird bitter,
-viele Menschen werden vergiftet
+viele Menschen werden vergiftet.
 
 d. Die vierte Posaune 8,12-13: 
 Sonne, Mond und Sterne verlieren ein Drittel ihrer Leuchtkraft. Ein Adler ruft dreimal
-„Wehe“ (entspricht den drei kommenden Posaunen)
+„Wehe“ (entspricht den drei kommenden Posaunen).
 
 e. Die fünfte Posaune 9,1-12: 
 Heuschrecken kommen aus dem Schacht des Abgrunds und quälen alle Menschen
-ohne Gottessiegel (alle bis auf die 144.000)
+ohne Gottessiegel (alle bis auf die 144.000).
 
 f. Die sechste Posaune 9,13-21
 
@@ -96,17 +112,16 @@ durch das (erste?) Tier getötet und liegen 3,5 Tage auf der Straße.
 Dann werden sie auferweckt und steigen in den Himmel auf. Dabei stürzt ein Zehntel
 der Stadt ein und 7000 Menschen kommen um.
 
-g. Die siebte Posaune 11,15-10
-
+g. Die siebte Posaune 11,15-10: 
 Die 24 Ältesten loben Gott, dass er die Herrschaft angetreten hat. Der Tempel Gottes
 wird geöffnet, die Bundeslade wird sichtbar. Es kommen ein schweres Erdbeben und
-schwerer Hagel
+schwerer Hagel.
 
 #### Kampf des Satans gegen das Volk Gottes
 
 a. Die Frau und der Drache 12,1-18: 
 Eine Frau gebiert einen Sohn, ein Drache mit sieben Köpfen und zehn Hörnern will
-sie verschlingen. Sie flieht in die Wüste für 1260 (12 x 7 x 15) Tage. Michael und seine
+sie verschlingen. Sie flieht in die Wüste für 1260 (= 12 x 7 x 15) Tage. Michael und seine
 Engel besiegen den Drachen und dessen Engel und stürzen sie auf die Erde. 
 Der Drache versucht, die Frau zu ertränken, schafft es aber nicht. Er beschließt, Krieg gegen
 die Nachkommen der Frau zu führen.
@@ -137,7 +152,7 @@ d. Die Überwinder des Tieres singen Gott ein Loblied 15,2-4
 
 e. Die sieben Schalen des Zornes Gottes
 
-Die Übergabe der Schalen 15,5-8: Jeder der Engel (der sieben Plagen) bekommt von
+* Die Übergabe der Schalen 15,5-8: Jeder der Engel (der sieben Plagen) bekommt von
 einem der vier Lebewesen eine goldene Schale gefüllt mit dem Zorn Gottes.
 
 * Die erste Schale wird über das Land gegossen 16,2: 
@@ -150,7 +165,7 @@ Das Meer wird zu Blut, alle Lebewesen im Meer sterben.
 Das Wasser wird zu Blut.
 
 * Die vierte Schale wird über die Sonne gegossen 16,8-9:
-Die Menschen verbrennen in der Hitze. Trotzdem bekehren sie sich nicht
+Die Menschen verbrennen in der Hitze. Trotzdem bekehren sie sich nicht.
 
 * Die fünfte Schale wird über den Thron des Tieres gegossen 16,10-11:
 Es kommt Finsternis über das Reich des Tiers. Die Menschen bekommen
@@ -208,4 +223,12 @@ geht das Wasser des Lebens aus, an dem die Bäume des Lebens stehen.
 Selig ist, der die Worte dieses Buches bewahrt. Aber wehe dem, der etwas wegnimmt oder hinzufügt.
 
 ### References
+
+John Barton: A History of the Bible, Allen Lane, 2019
+
+Umberto Eco: Im Namen der Rose, Hanser Verlag, 1982
+
+Charles Freeman: A New History of Early Christianity, Yale University Press, 2011
+
+
 
