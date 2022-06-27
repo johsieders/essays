@@ -32,6 +32,8 @@ Johannes Siedersleben, Tuntenhausen, Germany
 ## Religion
 
 > [Questions about Genesis](content/7-genesis-questions.md)
+> 
+> [Die Offenbarungen](content/20-revelations.md)
 
 ## Shakespeare
 
