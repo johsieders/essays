@@ -42,13 +42,15 @@ Hint: Use [DeepL](https://www.deepl.com/translator) for translating
 
 > [The Battle of Bosworth](content/16-battle-of-bosworth.md)
 
+> [Henry IV](content/21-henry-iv.md)
+
 > [Hotspur and Henry V](content/17-hotspur-henry-v.md)
 
 > [The Chorus in Henry V](content/19-henry-v-chorus.md)
 
 ## Language
 
-> Bertrand Russell on [Useless Knowledge](content/9-russell-on-useless-knowledge.md)
+> [Bertrand Russell on Useless Knowledge](content/9-russell-on-useless-knowledge.md)
 
 > [Le français en voie de perdition ?](content/3-francais-perdition.md)
 
