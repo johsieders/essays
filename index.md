@@ -8,7 +8,7 @@ Enjoy, agree or disagree!
 Johannes Siedersleben, Germany (near Munich)
 
 Hint: Use [DeepL](https://www.deepl.com/translator) for translating 
-(copy and paste max. 5000 letters at a time; translation is immediate).
+(copy and paste max. 5000 characters at a time; translation is immediate).
 
 ## Philosophy
 
