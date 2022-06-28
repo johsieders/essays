@@ -14,20 +14,20 @@ Die Offenbarungen wurden erst spät ins Neue Testament aufgenommen; Luther hätt
 verständlicherweise, muss man sagen. Wir verdanken ihnen Begriffe wie die *apokalyptischen Reiter*, das *Lamm Gottes*, 
 das *Jüngste Gericht*, das *Tausendjährige Reich*, *Harmagedon*.
 Der Autor ist mit Sicherheit nicht der Johannes des Evangeliums, denn zwischen Evangelium und Offenbarungen 
-liegen sechzig Jahre, und das Griechisch der Offenbarungen ist arm und fehlerhaft im Gegensatz zur Eleganz des Evangeliums.
-(Barton, p.154, Freeman, p. 107)
-Wir erfahren die sadistischen Details einer Apokalypse in viele Schritten, den Untergang der Welt auf 
+liegen sechzig Jahre, und das Griechisch der Offenbarungen ist arm und fehlerhaft im Gegensatz zur Eleganz des Evangeliums
+(Barton, p.154, Freeman, p. 107).
+Wir erfahren die sadistischen Details einer Apokalypse in vielen Schritten, den Untergang der Welt auf 
 kleiner Flamme und die anschließende Erlösung als neue Welt Gottes, die aber nur wenigen Auserwählten
 offen steht. Die anderen landen im Feuersee.
 
 Die Offenbarungen haben über Jahrhunderte hinweg zahllose Gläubige in Angst und Schrecken versetzt, 
-denn auserwählt sind nur 144.000. Wer auch immer der Autor war: 
-Nur ein kranker Geist konnte ein solches Hexen-Einmaleins erfinden. Wir heutigen stehen ratlos vor dem Text; 
-nur ein paar Ultras nehmen ihn noch ernst.
+denn auserwählt sind nur 144.000. Wer auch immer der Autor war:
+Nur ein kranker Geist konnte ein solches Hexen-Einmaleins erfinden. 
+Heute stehen wir ratlos vor diesem Text; wer nimmt ihn noch ernst?
 
 ### Was steht da eigentlich drin?
 
-Hier der Inhalt in Stichpunkten. 
+Der Inhalt in Stichpunkten zusammengefasst.
 
 #### Sieben Sendschreiben
 

@@ -5,7 +5,10 @@ some in Oxford ([OUSSA](https://www.conted.ox.ac.uk/about/oussa)),
 some in Paris, some at home and all for my own pleasure.
 Enjoy, agree or disagree!
 
-Johannes Siedersleben, Tuntenhausen, Germany
+Johannes Siedersleben, Germany (near Munich)
+
+Hint: Use [DeepL](https://www.deepl.com/translator) for translating 
+(copy and paste max. 5000 letters at a time; translation is immediate).
 
 ## Philosophy
 
