@@ -6,7 +6,7 @@ Johannes Siedersleben, Tuntenhausen, Dezember 2019
 
 Im Schloss von Angers (Maine-et-Loire) hängt ein monumentaler Wandteppich mit den wesentlichen Elementen:
 die sieben Siegel, die sieben Posaunen, der Drache, die drei Engel, die sieben Schalen und das neue Jerusalem.
-Im *Namen der Rose* von Umberto Eco sind die sieben toten Mönche kunstvoll mit den sieben Posaunen verknüft; so 
+Im *Namen der Rose* von Umberto Eco sind die sieben toten Mönche kunstvoll mit den sieben Posaunen verknüpft; so 
 verspeist Jorge, der blinde Bibliothekar, ein vergiftetes Buch in Analogie zur sechsten Posaune, wo Johannes 
 ein himmlisches Büchlein isst (sic).
 
