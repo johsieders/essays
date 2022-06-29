@@ -1,3 +1,4 @@
+You can use [DeepL](https://www.deepl.com/translator) for translating 
 ## Einstein and Philosophy
 
 Johannes Siedersleben, Oxford,  June 2022

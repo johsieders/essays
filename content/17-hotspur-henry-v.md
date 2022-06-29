@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) for translating 
 ## Hotspur and Harry: Two Sharks in a Pool
 
 *Johannes Siedersleben, Oxford, June 2022*

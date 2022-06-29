@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) for translating 
 ## Die Offenbarungen
 
 Johannes Siedersleben, Tuntenhausen, Dezember 2019

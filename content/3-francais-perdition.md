@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) for translating 
 ## Le français en voie de perdition?
 
 *Johannes Siedersleben, Paris, juillet 2013*

@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) for translating 
 ## Questions about Genesis, Chapters 11 to 30
 
 *Johannes Siedersleben, Oxford, May 2019*

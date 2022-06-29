@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) for translating 
 ## Kant und seine Zeit
 
 *Johannes Siedersleben, Februar 2020*
