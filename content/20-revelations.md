@@ -1,52 +1,50 @@
 
 ## Die Offenbarungen
 
-
 Johannes Siedersleben, Tuntenhausen, Dezember 2019
 
-Im Schloss von Angers (Maine-et-Loire) hängt ein monumentaler Wandteppich mit den wesentlichen Elementen:
+Im Schloss von Angers (Maine-et-Loire) hängt ein monumentaler Wandteppich mit den wesentlichen Elementen der Offenbarungen:
 die sieben Siegel, die sieben Posaunen, der Drache, die drei Engel, die sieben Schalen und das neue Jerusalem.
-Im *Namen der Rose* von Umberto Eco sind die sieben toten Mönche kunstvoll mit den sieben Posaunen verknüpft; so 
-verspeist Jorge, der blinde Bibliothekar, ein vergiftetes Buch in Analogie zur sechsten Posaune, wo Johannes 
-ein himmlisches Büchlein isst (sic).
+Im *Namen der Rose* von Umberto Eco sind sechs tote Mönche kunstvoll mit den ersten sechs Posaunen verknüpft: Jorge, 
+der blinde Bibliothekar, verspeist ein vergiftetes Buch (das zweite Buch des Aristoteles) in Analogie zur sechsten Posaune, 
+wo Johannes ein himmlisches Büchlein isst (sic). Der Brand des Klosters am Ende des Buches entspricht der siebenten Posaune 
+(Erdbeben und Hagel).
 
 Die Offenbarungen wurden erst spät ins Neue Testament aufgenommen; Luther hätte sie am liebsten wieder entfernt &ndash; 
 verständlicherweise, muss man sagen. Wir verdanken ihnen Begriffe wie die *apokalyptischen Reiter*, das *Lamm Gottes*, 
-das *Jüngste Gericht*, das *Tausendjährige Reich*, *Harmagedon*.
-Der Autor ist mit Sicherheit nicht der Johannes des Evangeliums, denn zwischen Evangelium und Offenbarungen 
-liegen sechzig Jahre, und das Griechisch der Offenbarungen ist arm und fehlerhaft im Gegensatz zur Eleganz des Evangeliums
+das *Jüngste Gericht*, *Armageddon* und das *Tausendjährige Reich*.
+Der Autor ist mit Sicherheit nicht der Johannes des Evangeliums, denn die Offenbarungen wurden sechzig Jahre
+später verfasst, und ihr Griechisch ist arm und fehlerhaft im Gegensatz zur Eleganz des Evangeliums 
 (Barton, p.154, Freeman, p. 107).
 Wir erfahren die sadistischen Details einer Apokalypse in vielen Schritten, den Untergang der Welt auf 
 kleiner Flamme und die anschließende Erlösung als neue Welt Gottes, die aber nur wenigen Auserwählten
-offen steht. Die anderen landen im Feuersee.
+offen steht. Die anderen landen im Feuersee. 
 
 Die Offenbarungen haben über Jahrhunderte hinweg zahllose Gläubige in Angst und Schrecken versetzt, 
-denn auserwählt sind nur 144.000. Wer auch immer der Autor war:
-Nur ein kranker Geist konnte ein solches Hexen-Einmaleins erfinden. 
-Heute stehen wir ratlos vor diesem Text; wer nimmt ihn noch ernst?
+denn wer kann hoffen, auserwählt zu sein? Jede Katastrophe auf dieser Welt (Krieg, Epidemie, Klima) kann und wird von
+manchen als Bestätigung der Offenbarungen gewertet. Wer auch immer der Autor war:
+Nur ein kranker Geist konnte ein solches Hexen-Einmaleins erfinden. Heute stehen wir ratlos vor dem Text; 
+wer nimmt ihn noch ernst?
 
 ### Was steht da eigentlich drin?
 
-Der Inhalt in Stichpunkten zusammengefasst.
+Die Offenbarungen (22 Kapitel) bestehen aus fünf ungleichen Teilen:
 
-#### Sieben Sendschreiben
-
-Sieben Gemeinden bekommen einen Brief mit einer strengen Beurteilung, wie in der Schule.
+* Einleitung (1): Der Autor stellt sich vor als Johannes von Patmos. *Ich bin das A und das O*
+* Die sieben Sendschreiben (2 - 3): Sieben Gemeinden (Ephesus, Smyrna, Pergamon, Thyatira, Sardes, Philadelphia,
+Laodizea) bekommen einen Brief mit einer strengen Beurteilung, wie in der Schule.
 Manche kommen ganz gut weg (Smyrna), andere weniger (Sardes, Laodizea).
+* Der Weltuntergang (4 bis 20) wird im Detail in in zahlreichen Schritten dargestellt mit dem Weltgericht 
+als schrecklichem Abschluß für alle Nicht-Erwählten. 
+* Das neue Jerusalem (21), wo *der Tod nicht mehr sein wird, noch Leid noch Geschrei noch Schmerz wird mehr sein*.
+Es entstehen ein neuer Himmel, eine neue Erde und das neue Jerusalem, die Braut
+des Lammes, mit 12 Toren und 12 Grundsteinen mit den Namen der 12 Apostel. Es
+gibt weder Tod noch Leid. Gott ist der Tempel. Vom Thron Gottes und des Lammes
+geht das Wasser des Lebens aus, an dem die Bäume des Lebens stehen.
 
-a. Ephesus 2, 1-7
+* Epilog (22): *Selig ist, der die Worte dieses Buches bewahrt. Aber wehe dem, der etwas wegnimmt oder hinzufügt.*
 
-b. Smyrna 2,8-11
-
-c. Pergamon 2,12-17
-
-d. Thyatira 2,18-29
-
-e. Sardes 3,1-6
-
-f. Philadelphia 3,7-13
-
-g. Laodizea 3,14-22
+Hier eine Zusammenfassung der Kapitel 4 bis 20 in Stichpunkten.
 
 #### Vision vom thronenden Gott im Himmel 4,1-11:
 Ein Thron in der Mitte, umgeben von 24 Greisen in weißen Gewändern, ebenfalls auf Thronen sitzend,
@@ -212,17 +210,7 @@ Erde und Himmel verschwinden, das Buch des Lebens wird aufgeschlagen.
 Die übrigen Toten stehen auf und werden nach ihren Werken gerichtet. Wer nicht im Buch
 des Lebens verzeichnet ist, wird in den Feuersee geworfen.
 
-n. Die neue Welt Gottes 21,1-22,5: 
-Es entstehen ein neuer Himmel, eine neue Erde und das neue Jerusalem, die Braut
-des Lammes, mit 12 Toren und 12 Grundsteinen mit den Namen der 12 Apostel. Es
-gibt weder Tod noch Leid. Gott ist der Tempel. Vom Thron Gottes und des Lammes
-geht das Wasser des Lebens aus, an dem die Bäume des Lebens stehen.
-
-#### Epilog 22,6-21
-
-Selig ist, der die Worte dieses Buches bewahrt. Aber wehe dem, der etwas wegnimmt oder hinzufügt.
-
-### References
+### Literatur
 
 John Barton: A History of the Bible, Allen Lane, 2019
 

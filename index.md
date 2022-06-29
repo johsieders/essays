@@ -7,8 +7,8 @@ Enjoy, agree or disagree!
 
 Johannes Siedersleben, Germany (near Munich)
 
-Hint: Use [DeepL](https://www.deepl.com/translator) for translating 
-(copy and paste max. 5000 characters at a time; translation is immediate).
+You can use [DeepL](https://www.deepl.com/translator) for translating 
+(copy/paste chunks of up to 5000 characters; translation is immediate).
 
 ## Philosophy
 
@@ -40,13 +40,13 @@ Hint: Use [DeepL](https://www.deepl.com/translator) for translating
 
 ## Shakespeare
 
-> [The Battle of Bosworth](content/16-battle-of-bosworth.md)
-
-> [Henry IV](content/21-henry-iv.md)
+> [Henry IV, Part 1 and Part 2](content/21-henry-iv.md)
 
 > [Hotspur and Henry V](content/17-hotspur-henry-v.md)
 
 > [The Chorus in Henry V](content/19-henry-v-chorus.md)
+> 
+> [The Battle of Bosworth](content/16-battle-of-bosworth.md)
 
 ## Language
 
