@@ -1,4 +1,4 @@
-You can use [DeepL](https://www.deepl.com/translator) to translate. 
+
 ## La Bavière
 
 *Johannes Siedersleben, Paris, juillet 2013*
