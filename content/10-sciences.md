@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) to translate. 
 ## L’essence des sciences naturelles
 
 *Johannes Siedersleben, Tuntenhausen, octobre 2020*

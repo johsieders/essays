@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) to translate. 
 ## The Battle of Bosworth &ndash; a Day-By-Day Account
 
 

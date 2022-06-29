@@ -7,7 +7,7 @@ Enjoy, agree or disagree!
 
 Johannes Siedersleben, Germany, near Munich
 
-You can use [DeepL](https://www.deepl.com/translator) for translating 
+You can use [DeepL](https://www.deepl.com/translator) to translate
 (copy/paste chunks of up to 5000 characters; translation is immediate).
 
 ## Philosophy

@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) to translate.
 ## What does Part Two of Henry IV add to Part One (apart from the Ending to Part One)?
 
 Johannes Siedersleben, Oxford, June 2018

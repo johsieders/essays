@@ -1,4 +1,4 @@
-
+You can use [DeepL](https://www.deepl.com/translator) to translate.
 ## How Good a Guide to the Play is the Chorus in Henry V?
 
 
