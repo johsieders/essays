@@ -5,10 +5,9 @@ Johannes Siedersleben, Tuntenhausen, Dezember 2019
 
 Im Schloss von Angers (Maine-et-Loire) hängt ein monumentaler Wandteppich mit den wesentlichen Elementen der Offenbarungen:
 die sieben Siegel, die sieben Posaunen, der Drache, die drei Engel, die sieben Schalen und das neue Jerusalem.
-Im *Namen der Rose* von Umberto Eco sind sechs tote Mönche kunstvoll mit den ersten sechs Posaunen verknüpft: Jorge, 
-der blinde Bibliothekar, verspeist ein vergiftetes Buch (das zweite Buch des Aristoteles) in Analogie zur sechsten Posaune, 
-wo Johannes ein himmlisches Büchlein isst (sic). Der Brand des Klosters am Ende des Buches entspricht der siebenten Posaune 
-(Erdbeben und Hagel).
+Im *Namen der Rose* von Umberto Eco sind sechs tote Mönche kunstvoll mit den ersten sechs Posaunen verknüpft. So verspeist Jorge, 
+der blinde Bibliothekar, ein vergiftetes Buch (das zweite Buch des Aristoteles) in Analogie zur sechsten Posaune, 
+wo Johannes ein himmlisches Büchlein isst (sic).
 
 Die Offenbarungen wurden erst spät ins Neue Testament aufgenommen; Luther hätte sie am liebsten wieder entfernt &ndash; 
 verständlicherweise, muss man sagen. Wir verdanken ihnen Begriffe wie die *apokalyptischen Reiter*, das *Lamm Gottes*, 
@@ -21,20 +20,20 @@ kleiner Flamme und die anschließende Erlösung als neue Welt Gottes, die aber n
 offen steht. Die anderen landen im Feuersee. 
 
 Die Offenbarungen haben über Jahrhunderte hinweg zahllose Gläubige in Angst und Schrecken versetzt, 
-denn wer kann hoffen, auserwählt zu sein? Jede Katastrophe auf dieser Welt (Krieg, Epidemie, Klima) kann und wird von
+denn wer kann hoffen, auserwählt zu sein? Jede Katastrophe auf dieser Welt (Epidemie, Krieg, Klima) kann und wird von
 manchen als Bestätigung der Offenbarungen gewertet. Wer auch immer der Autor war:
-Nur ein kranker Geist konnte ein solches Hexen-Einmaleins erfinden. Heute stehen wir ratlos vor dem Text; 
-wer nimmt ihn noch ernst?
+Nur ein kranker Geist konnte dieses Hexen-Einmaleins erfinden. Heute stehen wir ratlos vor dem Text &ndash;
+nimmt ihn noch jemand ernst?
 
 ### Was steht da eigentlich drin?
 
 Die Offenbarungen (22 Kapitel) bestehen aus fünf ungleichen Teilen:
 
-* Einleitung (1): Der Autor stellt sich vor als Johannes von Patmos. *Ich bin das A und das O*
+* Einleitung (1): Der Autor stellt sich vor als Johannes von Patmos. Hier sagt Jesus: *Ich bin das A und das O*
 * Die sieben Sendschreiben (2 - 3): Sieben Gemeinden (Ephesus, Smyrna, Pergamon, Thyatira, Sardes, Philadelphia,
 Laodizea) bekommen einen Brief mit einer strengen Beurteilung, wie in der Schule.
 Manche kommen ganz gut weg (Smyrna), andere weniger (Sardes, Laodizea).
-* Der Weltuntergang (4 bis 20) wird im Detail in in zahlreichen Schritten dargestellt mit dem Weltgericht 
+* Der Weltuntergang (4 bis 20) wird in zahlreichen Schritten detailliert dargestellt mit dem Weltgericht 
 als schrecklichem Abschluß für alle Nicht-Erwählten. 
 * Das neue Jerusalem (21), wo *der Tod nicht mehr sein wird, noch Leid noch Geschrei noch Schmerz wird mehr sein*.
 Es entstehen ein neuer Himmel, eine neue Erde und das neue Jerusalem, die Braut
@@ -44,7 +43,7 @@ geht das Wasser des Lebens aus, an dem die Bäume des Lebens stehen.
 
 * Epilog (22): *Selig ist, der die Worte dieses Buches bewahrt. Aber wehe dem, der etwas wegnimmt oder hinzufügt.*
 
-Hier eine Zusammenfassung der Kapitel 4 bis 20 in Stichpunkten.
+Hier eine Zusammenfassung der Kapitel 4 bis 20 in Stichpunkten ohne weiteren Kommentar.
 
 #### Vision vom thronenden Gott im Himmel 4,1-11:
 Ein Thron in der Mitte, umgeben von 24 Greisen in weißen Gewändern, ebenfalls auf Thronen sitzend,
