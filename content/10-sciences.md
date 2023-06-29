@@ -1,4 +1,3 @@
-You can use [DeepL](https://www.deepl.com/translator) to translate. 
 # Bagatelles
 
 ## L’essence des sciences naturelles
