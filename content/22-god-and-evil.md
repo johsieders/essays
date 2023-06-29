@@ -1,7 +1,4 @@
-# Bagatelles
-
-
-## Is God Responsible for Evil?
+# Is God Responsible for Evil?
 
 *Johannes Siedersleben, Oxford, June 2023*
 
