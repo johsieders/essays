@@ -17,9 +17,9 @@ The famous free-will argument appears in sections (2) and (4).
 
 Evil is the absence of good, just as darkness is the absence of light. Our sins hide the good, just as clouds hide 
 the sun. Good is God’s, evil is man’s. None other than Joseph Ratzinger, Pope from 2005 to 2013, promotes this idea. 
-He writes: *God created only the good, evil is not an independent entity, but can only ever be conceived as 
-the negation of an actually good being.* And: *Human beings, with their abilities, can unfold ways of destruction 
-that no other living creature carries within itself.* 
+He writes ([5], p. 107): *God created only the good, evil is not an independent entity, but can only ever be conceived as 
+the negation of an actually good being.* And ([5], p. 103): *Human beings, with their abilities, can unfold ways of 
+destruction that no other living creature carries within itself.* 
 A torturer would thus be depriving the tortured of their well-being with full responsibility for his actions 
 and a passive, innocent God on the sidelines. In short, evil is not God’s business, he doesn’t get his hands dirty.
 
@@ -102,9 +102,9 @@ The New Testament establishes the sequence “creation → sin → redemption th
 of Christian doctrine, which is hardly evidence of God’s omnipotence and, it must be said, stretches logic to its 
 limits and beyond.
 
-The postulate of a perfect God can be traced back to the Councils of Nicaea (325 CE) and Constantinople (381 CE)  
-and was further developed by Augustine, Thomas Aquinas, John Duns Scotus, and many others. Since then, it has been 
-a cornerstone of Christian thought, proclaimed in the Catechism of the Catholic Church (§§ 268, 385) [1]. 
+The postulate of a perfect God can be traced back to the Councils of Nicaea (325 CE) and Constantinople (381 CE), and 
+was further developed by Augustine, Thomas Aquinas, John Duns Scotus, and many others. Since then, it has been 
+a cornerstone of Christian thought, proclaimed in the Catechism of the Catholic Church ([1], §§ 268, 385). 
 This is strange because it raises awkward questions:  If God knows today what I will do tomorrow, 
 then I have no free will.  God’s own free will is hindered by the fact that He must be perfect – His choice is 
 limited to the one or very few optimal options. He can hardly evolve, because any change could jeopardise 
