@@ -1,4 +1,4 @@
-Bagatelles
+# Bagatelles
 
 ## L’essence des sciences naturelles
 
