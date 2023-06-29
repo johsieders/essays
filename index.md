@@ -34,9 +34,12 @@ You can use [DeepL](https://www.deepl.com/translator) to translate
 
 ## Religion
 
+>  [Is God responsible for Evil?](content/22-god-and-evil.md)
+> 
 > [Questions about Genesis](content/7-genesis-questions.md)
 > 
 > [Die Offenbarungen](content/20-revelations.md)
+>
 
 ## Shakespeare
 
