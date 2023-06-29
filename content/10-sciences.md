@@ -1,6 +1,4 @@
-# Bagatelles
-
-## L’essence des sciences naturelles
+# L’essence des sciences naturelles
 
 *Johannes Siedersleben, Tuntenhausen, octobre 2020*
 
