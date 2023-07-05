@@ -10,23 +10,31 @@ I will present and comment on them in five sections: (1) God as bystander, (2) G
 I challenge divine perfection in section (4) and turn to the imperfect God in section (5). 
 The famous free-will argument appears in sections (2) and (4).
 
-### God as Bystander
+### 1 God as Bystander
 
 Evil is the absence of good, just as darkness is the absence of light. Our sins hide the good, just as clouds hide 
 the sun. Good is God’s, evil is man’s. None other than Joseph Ratzinger, Pope from 2005 to 2013, promotes this idea. 
 He writes ([5], p. 107): *God created only the good, evil is not an independent entity, but can only ever be conceived as 
 the negation of an actually good being.* And ([5], p. 103): *Human beings, with their abilities, can unfold ways of 
 destruction that no other living creature carries within itself.* 
-A torturer would thus be depriving the tortured of their well-being with full responsibility for his actions 
-and a passive, innocent God on the sidelines. In short, evil is not God’s business, he doesn’t get his hands dirty.
+A torturer would thus be responsible for the absence of well-being of the tortured, 
+with a passive, innocent God on the sidelines. 
+In short, evil is not God’s business, he doesn’t get his hands dirty.
 
 Is this convincing? Many would argue that shifting responsibility from God to man gives Him too easy a pass. 
 After all, He has created the whole world, including the evil that is not man-made: natural disasters, disease, accidents. 
 To reduce evil to the negation of good seems to be nothing more than a sleight of hand. 
 You can certainly define death as the negation of life, but is that what you would say to a mourning mother?
 
+The idea goes back to Plato whose ideals include goodness, love and freedom, 
+but famously lack evil, hatred and oppression. 
+But the absence of good is not the same as evil, the absence of love is not the same as hatred, 
+and the absence of freedom is not the same as oppression. On the other hand, rest is indeed the absence of movement, 
+cold is the absence of heat (very similar to the previous example), and light is the absence of darkness.
+So, the absence argument seems to be either misleading or, at best, 
+a poor description of the physics. I fail to see the insight it provides.
 
-### God as Educator
+### 2 God as Educator
 
 Proponents of this view attribute to God the intention to educate us, to challenge us, to give us opportunities 
 to develop, to grow, to excel, but also to err, to sin, to commit atrocities. This shaping of souls, as it is 
@@ -55,7 +63,7 @@ without poverty, there is no charity, no way to distinguish oneself as a pious b
 is this: Proponents of this view put themselves in God’s shoes (if He wears any) and argue as if they knew what 
 God thinks. Who do they think they are?
 
-### God as Enigma
+### 3 God as Enigma
 
 The enigma argument is based precisely on the fact that we don’t know what God thinks. It is gentle and modest unlike 
 the previous one, and comes in two flavours, weak and strong. 
@@ -88,7 +96,7 @@ mad (Revelation), cruel (Job, crucifixion), incongruous (Song of Songs), amusing
 the Good Samaritan), and much more. This is why *the Devil can cite Scripture for his purpose*. And the believer 
 seeking guidance is left with countless translations and thousands of interpretations from competing denominations.
 
-### Perfection Challenged
+### 4 Perfection Challenged
 
 The Bible does contain references to God’s omnipotence (Genesis 18:14, Job 42:2), 
 omniscience (Psalm 147:5, Psalm 139:1-4) and perfect goodness (Exodus 34:6, Psalm 25:8), but these are few and far 
@@ -110,7 +118,7 @@ If, on the other hand, we admit imperfection, the evidential problem of evil sim
 arguments we have seen in the previous sections become unnecessary. After all, perfection has unpleasant connotations: 
 it is cold, awe-inspiring, unattainable, unlovable. So why hold on to it?
 
-### The Imperfect God
+### 5 The Imperfect God
 
 We are going to gradually relax the requirement for perfection. As a first step, let's assume that God is limited by 
 the laws of logic and cannot make a triangle with four corners. This weakens the strong enigma argument, 
@@ -144,7 +152,8 @@ You cannot have your cake and eat it.
 
 [3] Brian Davis: Philosophy of Religion; Oxford University Press, 2000
 
-[4] Kurt Gödel: Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. https://www.w-k-essler.de/pdfs/goedel.pdf
+[4] Kurt Gödel: On Formally Undecidable Propositions of Principia Mathematica and Related Systems; 
+Dover Publications, 1992
 
 [5] Joseph Ratzinger, Peter Seewald: Gott und die Welt; DVA, 2000
 
