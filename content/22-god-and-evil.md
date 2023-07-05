@@ -26,8 +26,8 @@ After all, He has created the whole world, including the evil that is not man-ma
 To reduce evil to the negation of good seems to be nothing more than a sleight of hand. 
 You can certainly define death as the negation of life, but is that what you would say to a mourning mother?
 
-The idea goes back to Plato whose ideals include goodness, love and freedom, 
-but famously lack evil, hatred and oppression. 
+The idea of defining something as the absence of its opposite goes back to Plato, whose ideals include goodness, 
+love and freedom, but famously lack evil, hatred and oppression. 
 But the absence of good is not the same as evil, the absence of love is not the same as hatred, 
 and the absence of freedom is not the same as oppression. On the other hand, rest is indeed the absence of movement, 
 cold is the absence of heat (very similar to the previous example), and light is the absence of darkness.
