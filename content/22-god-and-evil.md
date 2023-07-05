@@ -32,7 +32,7 @@ But the absence of good is not the same as evil, the absence of love is not the 
 and the absence of freedom is not the same as oppression. On the other hand, rest is indeed the absence of movement, 
 cold is the absence of heat (very similar to the previous example), and light is the absence of darkness.
 So, the absence argument seems to be either misleading or, at best, 
-a poor description of the physics. I fail to see the insight it provides.
+a poor description of physics. I fail to see the insight it provides.
 
 ### 2 God as Educator
 
