@@ -133,7 +133,7 @@ In *Paradise Lost*, John Milton tells of the faithful angels fighting Satan’s 
 Chris de Burgh sings the song of God playing poker with the Devil. The idea of an imperfect God struggling with 
 the Devil goes back to Manichaeism, the religion with which Augustine grew up. There the evidential problem of evil 
 finds a plausible, if heretical, answer: The competition between good and evil on earth is an image of the wrestling 
-between God and the Devil. Catastrophes such as the Second World War are due to a defeat of God.
+between God and the Devil. Catastrophes such as a World War are due to a defeat of God.
 
 If you don't like the devil you can do without. Some dilute the concept of God beyond recognition and 
 renounce any responsibility on God’s part. In pantheism, God is little more than another name for nature. 
@@ -159,7 +159,7 @@ Dover Publications, 1992
 
 [6] Alfred Tarski: The Semantic Conception of Truth and the Foundations of Semantics. In: Philosophy and Phenomenological Research. IV,3 (1944), S. 341–375.
 
-[7] Alan Turing:On Computable Numbers, with an Application to the Entscheidungsproblem, 1936 https://www.wolframscience.com/prizes/tm23/images/Turing.pdf
+[7] Alan Turing: On Computable Numbers, with an Application to the Entscheidungsproblem, 1936 https://www.wolframscience.com/prizes/tm23/images/Turing.pdf
 
 
 
