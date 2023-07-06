@@ -12,7 +12,7 @@ You can use [DeepL](https://www.deepl.com/translator) to translate
 
 ## Philosophy
 
-> [Philosophy on two xx charts](content/4-philo-2charts.md)
+> [Philosophy on two charts](content/4-philo-2charts.md)
 
 > [L'essence des sciences](content/10-sciences.md) 
 
