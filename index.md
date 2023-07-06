@@ -12,11 +12,11 @@ You can use [DeepL](https://www.deepl.com/translator) to translate
 
 ## Philosophy
 
-> [Philosophy on two charts](content/4-philo-2charts.md)
+> [Philosophy on two xx charts](content/4-philo-2charts.md)
 
-> [L'essence des sciences](content/10-sciences.md)
+> [L'essence des sciences](content/10-sciences.md) 
 
-> [Kant und seine Zeit](content/13-kant.md)
+> [Kant und seine Zeit](content/13-kant.md) 
 
 > [Einstein and Philosophy](content/18-einstein-philosophy.md)
 
