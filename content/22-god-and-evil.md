@@ -29,10 +29,11 @@ You can certainly define death as the negation of life, but is that what you wou
 The idea of defining something as the absence of its opposite goes back to Plato, whose ideals include goodness, 
 love and freedom, but famously lack evil, hatred and oppression. 
 But the absence of good is not the same as evil, the absence of love is not the same as hatred, 
-and the absence of freedom is not the same as oppression. On the other hand, rest is indeed the absence of movement, 
-cold is the absence of heat (very similar to the previous example), and light is the absence of darkness.
+and the absence of freedom is not the same as oppression, and the inverse is even less true. 
+On the other hand, rest is indeed the absence of movement, 
+cold is the absence of heat (very similar to the previous example), and darkness is the absence of light.
 So, the absence argument seems to be either misleading or, at best, 
-a vague description of the physics. I fail to see the insight it provides.
+a loose description of physics. I fail to see the insight it provides.
 
 ### 2 God as Educator
 
