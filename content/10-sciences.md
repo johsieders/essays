@@ -21,7 +21,7 @@ Chacun suivait imperturbablement ses propres idées sans se soucier de la direct
 
 Un des évènements qui ont annoncé la fin de l’Antiquité est l’édit d’intolérance de Théodose I en 393
 CE, qui mettait un terme à la liberté de pensée. Un nuage sombre enveloppait l’Occident, un nuage
-qui étouffait les sciences naturelles pendant un millénaire. Le savants de l’époque considéraient que
+qui étouffait les sciences naturelles pendant un millénaire. Les savants de l’époque considéraient que
 tout le savoir concevable de l’humanité était déjà enregistré soit dans la Bible, soit dans les écritures
 des Pères de l’Église tels que Jérôme, Ambrose et Augustin, soit, à la rigueur, dans des œuvres
 grecques triées : Platon, oui, Epicure, non. Ce qui n’y était pas, était faux, inutile ou les deux à la fois.
@@ -64,7 +64,7 @@ scientifique nous nous rendons compte de notre infimité, de notre impuissance, 
 
 (1) Il n’y a qu’une seule science sur cette Terre. Il n’y a pas de physique japonaise, 
 de médecine américaine, de biologie française. Ça n’empêche pas qu’un pays soit particulièrement fort dans un
-domaine. Mais tout ce qui a été découvert quelque part finira tôt ou tard par être connu partout.
+domaine. Mais tout ce qui a été découvert quelque part finira tôt ou tard par être connu dans le monde entier.
 Aujourd’hui, avec Internet, les chercheurs communiquent quasiment en temps réel. Même les
 résultats des services secrets tel que le NSA ne sont pas ensevelis pour toujours et peuvent être
 redécouverts ailleurs.
@@ -81,7 +81,7 @@ anéantie. À peu de chose près, le patrimoine scientifique est indélébile.
 
 (4) Parmi les théories non falsifiées, quelques-unes sont largement acceptées comme la théorie de
 la relativité, et d’autres plus ou moins contestées comme celle du multivers. C’est normal, c’est
-de ce discours éternel dont il a été question. La théorie de Copernic a mis deux siècles pour être
+de ce discours éternel qu'il a été question. La théorie de Copernic a mis deux siècles pour être
 acceptée, la théorie d’Einstein à peu près 20 ans.
 
 (5) Des phénomènes surnaturels sont par définition hors du domaine du discours. Les sciences sont
@@ -112,7 +112,7 @@ n’est point niée par les sciences ; elle serait parfaitement compatible avec 
 Le différend entre les sciences et la religion tourne autour de la
 valeur qu’on y attribue : tandis que les sciences ignorent cette force mystérieuse, la religion la met au
 centre de sa pensée en la qualifiant de toute-puissante, omnisciente et bienveillante à la fois. Ceci
-entraine des difficultés insolubles telle que la théodicée : Comment un être toutpuissant et 
+entraine des difficultés insolubles telle que la théodicée : Comment un être tout-puissant et 
 bienveillant aurait pu créer les Cavaliers de l’Apocalypse ? Et puis, Dieu, qu’est-ce que c’est ? 
 Est-ce que c’est un bonhomme barbu qui nous regarde du haut des nuages ? Ou est-ce que c’est le Dieu panthéiste,
 qui n’est qu’un autre nom pour la nature, l’Univers, pour tout ce qui nous entoure ? Ou quelque
@@ -125,7 +125,7 @@ ne font que décrire et constater, elles n’expliquent rien, nous l’avons dit
 (1) l’évolution des animaux des organismes unicellulaires à l’Homo Sapiens et (2) les mécanismes de
 mutation et de sélection. Elle dit ce qui se passe, elle ne dit pas pourquoi, elle ne s’occupe pas de
 l’au-delà. Ce qui a provoqué un choc était l’affirmation de Darwin que les animaux n’ont pas été
-créés en un jour mais se sont développés au cours des millions d’années. La théorie de l’évolution
+créés en un jour, mais se sont développés au cours des millions d’années. La théorie de l’évolution
 résiste depuis 150 ans à toutes tentatives de falsification. Elle est donc difficile à nier – autant nier la
 loi de la pesanteur. Personne dans le monde scientifique ne demande si quelqu’un veille à ce que la
 mutation et la sélection se fassent de telle ou telle façon. Mais c’est là-dessus que les détracteurs de
@@ -133,7 +133,7 @@ l’évolution n’arrêtent pas d’insister. Ils s’acharnent sur des préten
 comme le passage de l’eau à la terre, de la terre à l’air. Mais ces lacunes, même si elles sont réelles,
 n’ont aucune importance, puisque la théorie de l’évolution ne sera jamais achevée, pas plus que les
 mathématiques, la physique ou n’importe quelle autre science. Nous retrouvons ici une étrange attitude 
-qui considère tout problème scientifique irrésolu comme une affirmation de la religion et toute
+qui considère tout problème scientifique irrésolu comme une confirmation de la religion et toute
 découverte comme une défaite. Alors, qui a créé l’homme ? Chacun a le droit de se faire son idée
 sans entrer en conflit avec les sciences. Moi, je dirais que c’est le même qui a combiné la loi de la pesanteur.
 
