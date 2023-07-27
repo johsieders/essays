@@ -57,9 +57,9 @@ même sa méthode, si bien que les sciences naturelles se sont toujours présent
 des questions résolues. En outre, parmi les résultats les plus importants en mathématiques et en 
 informatique comptent les théorèmes d’impossibilité : Presque toutes les assertions mathématiques
 imaginables ne sont ni démontrables, ni réfutables – on ne saura jamais (Kurt Gödel). Presque tous
-les problèmes de l’informatique sont insolubles, c’est-à-dire il n’y aura jamais d’algorithme pour les
-résoudre (Alan Turing). Nous voilà confrontés à un paradoxe : malgré la vitesse vertigineuse du progrès 
-scientifique nous nous rendons compte de notre infimité, de notre impuissance, de nos limites
+les problèmes de l’informatique sont insolubles, c’est-à-dire, il n’y aura jamais d’algorithme pour les
+résoudre (Alonso Church, Alan Turing). Nous voilà confrontés à un paradoxe : malgré la vitesse vertigineuse du progrès 
+scientifique, nous nous rendons compte de notre infimité, de notre impuissance, de nos limites
 étroites. Il y a de quoi devenir humble. Cela dit, retenons quelques faits importants :
 
 (1) Il n’y a qu’une seule science sur cette Terre. Il n’y a pas de physique japonaise, 
@@ -89,8 +89,9 @@ restreintes au monde perceptible ; elles ne se soucient pas de l’au-delà, ell
 pas l’existence. L’au-delà se soustrait à l’analyse scientifique.
 
 (6) Les sciences ne font que décrire et constater, elles n’expliquent rien. Prenons comme exemple la
-loi de la pesanteur qui permet, entre autres, de calculer la vitesse d’une pierre tombante : Newton l’a seulement découverte, pas inventée, puisque cette loi existait avant. Bien sûr, on peut se
-demander qui l’a combinée et promulguée, qui surveille son observance dans les coins les plus
+loi de la pesanteur qui permet, entre autres, de calculer la vitesse d’une pierre tombante : 
+Newton l’a seulement découverte, pas inventée, puisque les pierres sont toujours tombées de la même façon. 
+Bien sûr, on peut se demander qui a combiné et promulgué cette loi, qui surveille son observance dans les coins les plus
 éloignés de l’Univers. Mais ceci n’est pas la besogne des sciences. L’au-delà se soustrait à l’analyse scientifique.
 
 (7) Les sciences ignorent les dogmes quelle que soit leur provenance. Une contradiction avec la Bible
