@@ -36,7 +36,7 @@ You can use [DeepL](https://www.deepl.com/translator) to translate
 
 > [Is God Responsible for Evil?](content/22-god-and-evil.md)
 > 
-> [Is Science a Treat to Religion?](content/23-is-science-a-threat.md)
+> [Is Science a Threat to Religion?](content/23-is-science-a-threat.md)
 > 
 > [Questions about Genesis](content/7-genesis-questions.md)
 > 
