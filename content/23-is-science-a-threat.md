@@ -13,7 +13,7 @@ three sections: classical physics (3), modern physics (4), and evolution (5), le
 conclusion. In the final section (6) I will talk about the veil that separates the perceivable world from
 everything else, if there is such a thing.
 
-### Science
+### 1 Science
 It is important to be clear about what we mean by science. I propose to distinguish exact science,
 non-exact science and non-science.
 
@@ -60,7 +60,7 @@ all is Richard Dawkins, renown as a biologist and as a critic of religion. His b
 (exact science) tells the story of evolution, and his book The God Delusion (non-exact science and
 heavily criticized for scientism) is a philosophical examination of the fallacies of religion.
 
-### History
+### 2 History
 Let us begin with the Greeks. Plato (d. 348 BC) despised scientific experiments, which he considered
 unworthy of a scholar. Aristotle (d. 322 BC), on the other hand, carried out many experiments, but his
 results were largely wrong, both in physics and in logic. If the Greeks, with a few exceptions such as
@@ -100,7 +100,7 @@ every unsolved scientific problem, every phenomenon that science cannot explain,
 defended against the attacks of science. They are, of course, dead wrong. To see why, let us look at
 three prominent examples: classical physics, modern physics, and evolution.
 
-### Classical Physics
+### 3 Classical Physics
 I will use classical mechanics to make my point, which is to explain the nature of classical physics and
 what it means for religion. Classical mechanics includes the law of gravity, Newton's three laws and
 the equations of motion. It has been accepted by virtually everyone except a few stubborn people
@@ -142,7 +142,7 @@ Does he? The theist is free to choose his preferred answer without interfering w
 Exact science completely ignores his choice, it ignores religion altogether. There is no conflict at all,
 unless the theist takes the Bible literally. But then no dialogue is possible.
 
-### Modern Physics
+### 4 Modern Physics
 I will use special relativity and quantum mechanics to make my point, which is to explain the nature
 of modern physics and what it means for religion. Special relativity and quantum mechanics are
 models in exactly the same way as classical mechanics. Classical mechanics fails when there are two
@@ -180,7 +180,7 @@ teachings accordingly. But this is a challenge, not a threat. The good news, at 
 that modern physics is so weird that it doesn't raise any new contradictions with the Bible. So this is
 where the story ends for both theist and atheist.
 
-### Evolution
+### 5 Evolution
 In his book, On the Origin of Species, Darwin conveys two messages: (1) the evolution of animals from
 single-celled organisms to Homo sapiens and (2) the mechanisms of mutation and selection. When he
 says that animals evolved over millions of years, he contradicts the Bible in at least two ways: first, he
@@ -218,7 +218,7 @@ law, and that's all there is to object to. The famous dust bomb argument misses 
 will never produce an aeroplane no matter how many trillion times you fire it, but where is the
 connection with evolution?
 
-### The Veil
+### 6 The Veil
 We humans are an insignificant species, tiny creatures, living for a few world seconds on a planet that
 is not even a grain of dust in the universe, equipped with the senses and the brain that evolution has
 happened to give us. We don't smell carbon monoxide because it hardly exists in nature, we have no
