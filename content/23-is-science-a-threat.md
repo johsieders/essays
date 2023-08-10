@@ -118,7 +118,7 @@ the principle of symmetry (you can't tell which train is moving) and the princip
 says that every object behaves in a way that causes the least amount of mess. Everyone is free to
 develop their own mechanics based on the principles of their choice, but these two have proved
 extremely useful. From the concept and the principles mentioned you can derive the equations of classical
-mechanics from your armchair using mathematics. Then you go to your laboratory and test them.
+mechanics from your armchair using mathematics. And back in your lab, you'll see your results confirmed.
 
 Conceptually, classical mechanics is a model in our
 brain (or on paper, in computers) that happens to fit (or to model) reality in such a way that we can
@@ -143,7 +143,7 @@ For the atheist, this is where the story ends. The theist might ask: who made th
 just create reality, or did He provide the models at the time of creation for later use? How does He
 ensure that all objects, even in the darkest corners of the universe, behave in the same way forever?
 Does He? The theist is free to choose his preferred answer without interfering with hard science.
-hard science completely ignores his choice, it ignores religion altogether. There is no conflict at all,
+Hard science completely ignores his choice, it ignores religion altogether. There is no conflict at all,
 unless the theist takes the Bible literally. But then no dialogue is possible.
 
 ### 4 Modern Physics
@@ -162,7 +162,7 @@ mechanics does not require any additional principles, but it replaces the volume
 classical mechanics with wave functions, which can be used to calculate the probability of a particle
 having a particular property, such as position or momentum. Given the concepts and principles
 involved, you can derive both theories from your armchair, using mathematics that is slightly more
-complicated for quantum mechanics.  And again, you go to your laboratory and test the equations. 
+complicated for quantum mechanics. And again, back in your lab, you'll see your results confirmed.
 So the miracle goes on and on and on. Imagine all these famous
 and utterly unfathomable results, such as E = mc2, Schrödinger’s equation, or the Heisenberg
 Uncertainty Principle, popping up after a few lines of calculation using mathematics that existed long
