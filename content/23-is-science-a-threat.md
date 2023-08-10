@@ -95,7 +95,8 @@ the Earth orbits the Sun, and the theory of evolution was half-heartedly accepte
 Since Copernicus, the development of science has been like a series of rockets, each building on the
 previous one and picking up speed: Descartes and Pascal, Newton and Leibniz, Darwin and Wallace,
 Einstein and Poincaré, Heisenberg and Schrödinger, Turing and Alonso Church are just a few prominent
-examples, and after 1700 or so nobody had to fear a terrible end at the stake. Religion was no longer a threat to
+examples, and after 1700 or so nobody had to fear a terrible end at the stake. 
+Religion was no longer a threat to
 science, and some theists claim that now the roles were reversed. For them, the discoveries of the
 Enlightenment, from Newton to Darwin to Einstein, were as many blows to religion. And they see
 every unsolved scientific problem, every phenomenon that science cannot explain, as a bulwark to be
