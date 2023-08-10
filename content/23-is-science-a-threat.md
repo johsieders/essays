@@ -31,9 +31,11 @@ questions is growing much faster than the list of resolved ones.
 In soft sciences, rule (1) is relaxed, while rule (2) is maintained, which forbids any kind of
 prejudice, any limitation of thought. Soft sciences include law, history, literature, political
 science, religious studies, philosophy and so on. They are, in a much stronger sense than the hard
-sciences, an eternal discourse because they lack a criterion of truth: 
-Is Friedrich Hajek right or John Maynard Keynes? The term *soft* is by no
-means pejorative. But soft sciences will never be anything other than a succession of
+sciences, an eternal discourse because they lack a criterion of truth. 
+Who is right? Plato or Aristotle, Hume or Kant, Hajek or Keynes? 
+They all have good points, but none is decisive.
+
+The term *soft* is by no means pejorative. But soft sciences will never be anything other than a succession of
 competing theories that emerge, are tested, sometimes applied and often disappear. There will never
 be an ultimate legislation, an ultimate political system, let alone an ultimate ethics.
 
@@ -50,9 +52,9 @@ Does soft science threaten religion? While it is hard to see how, for example, t
 or history could be a threat to religious belief, philosophy plays a different role. At its heart are three
 questions: what is true or false, what is good or bad, and how do we know? So religion is an obvious
 object of philosophical inquiry, and religion has to accept the challenge as part of the game, but by no
-means as an existential threat. It goes without saying that philosophers are allowed to use hard
-sciences as a toolbox, which means that scientism, a pejorative term for the use of hard sciences to
-debunk religion, is perfectly legal. As for the boundaries between hard science, soft science
+means as an existential threat. It goes without saying that philosophers are allowed to use the hard
+sciences as a toolbox without exposing themselves to the charge of scientism.
+As for the boundaries between hard science, soft science
 and non-science, there are of course grey areas such as psychology, but that is irrelevant to our
 discussion. It is worth noting, however, that many eminent scientists wear two hats. Albert Einstein,
 the physicist, wrote a booklet, *On Cosmic Religion*, in which he presents a pantheistic view of the
@@ -119,7 +121,7 @@ the principle of symmetry (you can't tell which train is moving) and the princip
 says that every object behaves in a way that causes the least amount of mess. Everyone is free to
 develop their own mechanics based on the principles of their choice, but these two have proved
 extremely useful. From the concept and the principles mentioned you can derive the equations of classical
-mechanics from your armchair using mathematics. And back in your lab, you'll see your results confirmed.
+mechanics from your armchair using mathematics. And back in your lab, you'll find your results confirmed.
 
 Conceptually, classical mechanics is a model in our
 brain (or on paper, in computers) that happens to fit (or to model) reality in such a way that we can
@@ -143,7 +145,7 @@ this miracle. Is it explicable? The debate is ongoing.
 For the atheist, this is where the story ends. The theist might ask: who made the whole thing? Did He
 just create reality, or did He provide the models at the time of creation for later use? How does He
 ensure that all objects, even in the darkest corners of the universe, behave in the same way forever?
-Does He? The theist is free to choose his preferred answer without interfering with hard science.
+Does He really? The theist is free to choose his preferred answer without interfering with hard science.
 Hard science completely ignores his choice, it ignores religion altogether. There is no conflict at all,
 unless the theist takes the Bible literally. But then no dialogue is possible.
 
@@ -163,7 +165,7 @@ mechanics does not require any additional principles, but it replaces the volume
 classical mechanics with wave functions, which can be used to calculate the probability of a particle
 having a particular property, such as position or momentum. Given the concepts and principles
 involved, you can derive both theories from your armchair, using mathematics that is slightly more
-complicated for quantum mechanics. And again, back in your lab, you'll see your results confirmed.
+complicated for quantum mechanics. And again, back in your lab, you'll find your results confirmed.
 So the miracle goes on and on and on. Imagine all these famous
 and utterly unfathomable results, such as E = mc2, Schrödinger’s equation, or the Heisenberg
 Uncertainty Principle, popping up after a few lines of calculation using mathematics that existed long
@@ -173,10 +175,10 @@ replacing particles with wave functions? Is this another miracle? Evolution migh
 I'll return to this point in section (5).
 
 Classical mechanics is counterintuitive, but we are somehow used to it. We simply believe that we are
-moving through space at 67,000 mph, we see cars driving and planes flying – physics seem to
+moving through space at 67,000 mph, we see cars driving and planes flying – physics seems to
 work. But relativity and quantum mechanics are not only counterintuitive, they defy our reason.
 Relativity involves time dilation, length contraction and a host of paradoxes that can be
-formally explained away by the equations, but which no one can imagine or understand in the usual
+formally explained by the equations, which no one can imagine or understand in the usual
 sense of the word. Quantum mechanics is even worse: small particles no longer exist; the equations
 give probabilities rather than certainties. And then there is quantum entanglement, the basis of
 quantum computers, which leaves you stunned. What does this mean for questions of
@@ -209,10 +211,27 @@ the existing religions are those that haven't disappeared, the companies that ar
 those that haven't gone bankrupt, and so on. This obvious fact is sometimes forgotten: standing in
 front of an ancient building, some visitors would say to themselves: oh yes, the builders of yesteryear
 knew how to make their work last. But these visitors are admiring a building that happens to be still
-standing, regardless of the many that have disappeared. Coming back to Schrödinger brillant idea, 
-it is clear that selection also applies to physical theories: the ones we are using (Newton, Einstein,
+standing, regardless of the many that have disappeared. 
+
+This same argument can lead us a long way:
+I said earlier that both the hard and soft sciences are an eternal discourse,
+a sequence of competing theories that come and go without ever reaching a conclusion.
+Let's assume that selection also applies to physical theories: the ones we use (Newton, Einstein,
 quantum physics) are the ones that haven't disappeared like those of Aristotle and countless others:
-published, criticized, refuted, forgotten. The next paragraph should sound familiar.
+published, criticised, refuted, forgotten. Then Schrödinger's brilliant idea 
+(replacing particles with wave functions) is like a building still 
+standing among many others that have been torn down. Now, take the question of morality:
+Moral systems have varied greatly throughout human history and across the countries of the world: 
+we have seen human sacrifice, torture, capital punishment, slavery, vendetta, all of which seem to have been 
+to be outlawed by now, at least in most Western countries. Here is the argument: 
+The society with a better moral system has a better chance of survival. Vendetta, for example,
+is a bad system that undermines the future of the country, so it is almost gone.
+If it is true that moral systems are subject to Darwinian selection, then they are unlikely to 
+converge on an ultimate solution, and there is no point in searching for one. Instead, 
+we are all a part of this eternal discourse, 
+taking sides, defending our favourites and fighting all the others. Notice that this is exactly 
+the opposite of the anything-goes attitude of moral relativity.
+The next paragraph should sound familiar.
 
 For the atheist, this is where the story ends. The theist might say: There must be a Creator who set
 the whole process in motion. Does He have a laboratory to design complicated organs like the eye or
