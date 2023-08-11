@@ -131,7 +131,7 @@ such a model is nothing more than a description of reality with some limited pre
 is completely ignorant of Newton, stones have always fallen in the same way. To say that a stone falls
 the way it does *because of Newton’s laws* would be completely wrong. There are alternative models,
 such as those of Aristotle, of Einstein and of quantum mechanics. While Aristotle’s model is useless
-and forgotten, the other two are more accurate than Newton’s, have a wider scope and are more
+and forgotten, the other two are more accurate than Newton’s, have a wider scope but are more
 complicated. Here is my point: a model like classical mechanics or any other can be more or less
 useful, more or less accurate. But it cannot be true or false. Physics will forever only provide models
 of varying quality and applicability, not truth.
@@ -256,7 +256,7 @@ logic is limited to what our brains can think; perception, by definition, is lim
 perceive. Imagine this: In addition to the four fundamental forces of physics, there could be a fifth
 force that can only be detected by senses that are not available to us, and that, at long random intervals, 
 produces side effects we can perceive. Such a force cannot be ruled out, and the observed side effects would be
-considered miracles. So I think of a veil that separates the perceivable world from everything else.
+considered miracles. So there is a veil that separates the perceivable world from everything else.
 This veil is indisputable, unless you claim that what we perceive is all there is.
 
 What do I learn if I don't? First of all, I become humble. Modesty is an essential virtue of science: the
