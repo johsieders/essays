@@ -167,7 +167,7 @@ having a particular property, such as position or momentum. Given the concepts a
 involved, you can derive both theories from your armchair, using mathematics that is slightly more
 complicated for quantum mechanics. And again, back in your lab, you'll find your results confirmed.
 So the miracle goes on and on and on. Imagine all these famous
-and utterly unfathomable results, such as E = mc2, Schrödinger’s equation, or the Heisenberg
+and utterly unfathomable results, such as *E = mc<sup>2</sup>*, Schrödinger’s equation, or the Heisenberg
 Uncertainty Principle, popping up after a few lines of calculation using mathematics that existed long
 before. A puzzling question remains:
 How on earth could someone (in this case Schrödinger) come up with the outlandish idea of
@@ -177,9 +177,9 @@ I'll return to this point in section (5).
 Classical mechanics is counterintuitive, but we are somehow used to it. We simply believe that we are
 moving through space at 67,000 mph, we see cars driving and planes flying – physics seems to
 work. But relativity and quantum mechanics are not only counterintuitive, they defy our reason.
-Relativity involves time dilation, length contraction and a host of paradoxes that can be
-formally explained by the equations, which no one can imagine or understand in the usual
-sense of the word. Quantum mechanics is even worse: small particles no longer exist; the equations
+Relativity involves time dilation, length contraction and a host of paradoxes that no one can imagine or 
+understand in the usual sense of the word. And yet, they follow easily from the equations.
+Quantum mechanics is even worse: small particles no longer exist; the equations
 give probabilities rather than certainties. And then there is quantum entanglement, the basis of
 quantum computers, which leaves you stunned. What does this mean for questions of
 existence, of causality? Are these problems just problems within physical models, or are they
