@@ -3,7 +3,7 @@
 *Johannes Siedersleben, Oxford, August 2023*
 
 
-Given the fate of Galileo (house arrest), William of Ockham (exile) and Giordano Bruno (death at the
+Given the fate of Galileo (house arrest), William of Ockham (exile) or Giordano Bruno (death at the
 stake), it is tempting to say that it is the religion that threatens science. The relationship between
 science and religion has always been an uneasy one, fraught with mistrust, misunderstanding and
 mutual recrimination. The purpose of this paper is to explain what science really is, and why science
@@ -23,7 +23,7 @@ on. It is governed by two irrevocable rules, tacitly accepted by the global comm
 mathematics. (2) Everything can be called into question, except these two rules. I deliberately do not
 include the claim of falsifiability, which is an interesting property, but subject to many objections
 (falsifiable by whom and when – now or in a million years?). In hard science, doubt is essential,
-certainty fallacious. Anyone, and especially any competitor, has the right to challenge the experiments
+certainty often delusive. Anyone, and especially any competitor, has the right to challenge the experiments
 carried out by another, to question his reasoning and even his method, so much so that hard science
 has always presented itself as an eternal discourse that will never reach a conclusion; the list of open
 questions is growing much faster than the list of resolved ones.
