@@ -1,4 +1,4 @@
-You can use [DeepL](https://www.deepl.com/translator) to translate. 
+ 
 ## Bertrand Russell Talking about Useless Knowledge
 
 *Johannes Siedersleben, December 2014*

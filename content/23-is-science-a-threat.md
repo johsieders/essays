@@ -203,8 +203,8 @@ on the evidence available. They are not an argument against evolution. This map 
 tested using DNA-based methods and found to be completely accurate.
 
 The mechanism of mutation and selection can be easily verified in a test tube using rapidly reproducing
-bacteria. As for selection, a
-word is in order: selection in the sense of *survival of the fittest* is a tautology, there is nothing to
+bacteria. As for selection, a word is in order: selection in the sense of
+*survival of the fittest* is a tautology, there is nothing to
 prove and nothing to deny: The living species are those that haven't disappeared, just as the living
 people are those that haven't died, the standing buildings are those that haven't been demolished,
 the existing religions are those that haven't disappeared, the companies that are in business are
@@ -220,7 +220,7 @@ Let's assume that selection also applies to physical theories: the ones we use (
 quantum physics) are the ones that haven't disappeared like those of Aristotle and countless others:
 published, criticised, refuted, forgotten. Then Schrödinger's brilliant idea 
 (replacing particles with wave functions) is like a building still 
-standing among many others that have been torn down. Now, take the question of morality:
+standing among many others that have collapsed. Now, take the question of morality:
 Moral systems have varied greatly throughout human history and across the countries of the world: 
 we have seen human sacrifice, torture, capital punishment, slavery, vendetta, all of which seem to have been 
 to be outlawed by now, at least in most Western countries. Here is the argument: 

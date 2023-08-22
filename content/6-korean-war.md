@@ -1,4 +1,4 @@
-You can use [DeepL](https://www.deepl.com/translator) to translate.
+
 ## The Way to the Korean War
 
 *Johannes Siedersleben, Oxford, August 2015*

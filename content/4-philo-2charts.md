@@ -1,4 +1,4 @@
-You can use [DeepL](https://www.deepl.com/translator) to translate. 
+
 # Philosophy on Two Charts
 
 *Johannes Siedersleben, Oxford, July 2016*
