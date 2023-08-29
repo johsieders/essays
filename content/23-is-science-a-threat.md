@@ -64,7 +64,11 @@ all is Richard Dawkins, renown as a biologist and as a critic of religion. His b
 heavily criticized for scientism) is a philosophical examination of the fallacies of religion.
 
 ### 2 History
-Let us begin with the Greeks. Plato (d. 348 BCE) despised scientific experiments, which he considered
+Let us begin with the Greeks. 
+
+#TODO Anaximander
+
+Plato (d. 348 BCE) despised scientific experiments, which he considered
 unworthy of a scholar. Aristotle (d. 322 BCE), on the other hand, carried out many experiments, but his
 results were largely wrong, both in physics and in logic. If the Greeks, with a few exceptions such as
 Archimedes and Eratosthenes, were not good at scientific experimentation, they were excellent at
@@ -132,9 +136,10 @@ is completely ignorant of Newton, stones have always fallen in the same way. To 
 the way it does *because of Newton’s laws* would be completely wrong. There are alternative models,
 such as those of Aristotle, of Einstein and of quantum mechanics. While Aristotle’s model is useless
 and forgotten, the other two are more accurate than Newton’s, have a wider scope but are more
-complicated. Here is my point: a model like classical mechanics or any other can be more or less
-useful, more or less accurate. But it cannot be true or false. Physics will forever only provide models
-of varying quality and applicability, not truth.
+complicated. Here is my point: physics provides models, such as that of classical mechanics, which are 
+more or less useful, more or less accurate. Does it also provide truth? If anything, 
+classical physics is true in an ideal space with no friction and dimensions that go straight to infinity.
+But there is no such ideal space.
 
 I said that classical mechanics can be derived from an armchair using mathematics. Imagine this: You
 start with two innocent principles, you calculate a few pages, and you end up with a model that
@@ -163,9 +168,10 @@ the speed of light is the same for all observers, no matter how fast they are tr
 principles, the constancy of the speed of light is only an observation that cannot be proved. Quantum
 mechanics does not require any additional principles, but it replaces the volume-less particles of
 classical mechanics with wave functions, which can be used to calculate the probability of a particle
-having a particular property, such as position or momentum. Given the concepts and principles
-involved, you can derive both theories from your armchair, using mathematics that is slightly more
-complicated for quantum mechanics. And again, back in your lab, you'll find your results confirmed.
+having a particular property, such as position or momentum. Given the concepts and principles involved, 
+you can use mathematics to derive both theories from your armchair. 
+However, the mathematics of quantum mechanics and general relativity is more complicated. 
+And again, back in your lab, you'll find your results confirmed.
 So the miracle goes on and on and on. Imagine all these famous
 and utterly unfathomable results, such as *E = mc<sup>2</sup>*, Schrödinger’s equation, or the Heisenberg
 Uncertainty Principle, popping up after a few lines of calculation using mathematics that existed long
@@ -178,12 +184,14 @@ Classical mechanics is counterintuitive, but we are somehow used to it. We simpl
 moving through space at 67,000 mph, we see cars driving and planes flying – physics seems to
 work. But relativity and quantum mechanics are not only counterintuitive, they defy our reason.
 Relativity involves time dilation, length contraction and a host of paradoxes that no one can imagine or 
-understand in the usual sense of the word. And yet, they follow easily from the equations.
+intuitively understand. And yet, they follow easily from the equations.
 Quantum mechanics is even worse: small particles no longer exist; the equations
 give probabilities rather than certainties. And then there is quantum entanglement, the basis of
 quantum computers, which leaves you stunned. What does this mean for questions of
 existence, of causality? Are these problems just problems within physical models, or are they
-somehow real? Has our common sense become useless or misleading? The bad news is that both
+somehow real? Do electrons really exist? No one has ever seen one directly, but you 
+have the equations, and you have dots on a screen that represent electrons, if you believe the machinery.
+Has our common sense become useless or misleading? The bad news is that both
 philosophy and religion have the enormous task of digesting these results and adapting their existing
 teachings accordingly. But this is a challenge, not a threat. The good news, at least for the theist, is
 that modern physics is so weird that it doesn't raise any new contradictions with the Bible. So this is
@@ -211,39 +219,21 @@ the existing religions are those that haven't disappeared, the companies that ar
 those that haven't gone bankrupt, and so on. This obvious fact is sometimes forgotten: standing in
 front of an ancient building, some visitors would say to themselves: oh yes, the builders of yesteryear
 knew how to make their work last. But these visitors are admiring a building that happens to be still
-standing, regardless of the many that have disappeared. 
-
-This same argument can lead us a long way:
-I said earlier that both the hard and soft sciences are an eternal discourse,
-a sequence of competing theories that come and go without ever reaching a conclusion.
-Let's assume that selection also applies to physical theories: the ones we use (Newton, Einstein,
-quantum physics) are the ones that haven't disappeared like those of Aristotle and countless others:
-published, criticised, refuted, forgotten. Then Schrödinger's brilliant idea 
-(replacing particles with wave functions) is like a building still 
-standing among many others that have collapsed. Now, take the question of morality:
-Moral systems have varied greatly throughout human history and across the countries of the world: 
-we have seen human sacrifice, torture, capital punishment, slavery, vendetta, all of which seem to have been 
-to be outlawed by now, at least in most Western countries. Here is the argument: 
-The society with a better moral system has a better chance of survival. Vendetta, for example,
-is a bad system that undermines the future of the country, so it is almost gone.
-If it is true that moral systems are subject to Darwinian selection, then they are unlikely to 
-converge on an ultimate solution, and there is no point in searching for one. Instead, 
-we are all a part of this eternal discourse, 
-taking sides, defending our favourites and fighting all the others. Notice that this is exactly 
-the opposite of the anything-goes attitude of moral relativity.
+standing, regardless of the many that have disappeared.
 The next paragraph should sound familiar.
 
-For the atheist, this is where the story ends. The theist might say: There must be a Creator who set
-the whole process in motion. Does He have a laboratory to design complicated organs like the eye or
-the brain? Does He use a joystick to control the rise and fall of species? The theist is free to choose his
-preferred answer without interfering with hard science. Hard science completely ignores his choice,
-it ignores religion altogether. There is no conflict at all, unless the theist takes the Bible literally. But
+For the atheist, this is where the story ends. The theist might say, without interfering with Darwin: 
+There must be a Creator who set the whole process in motion. Does He have a laboratory 
+to design complicated organs like the eye or the brain? Does He use a joystick to control the rise 
+and fall of species? The theist is free to choose his preferred answer without interfering with hard science. 
+Hard science completely ignores his choice, it ignores religion altogether. 
+Evolution deniers are left with no target: denying Darwin's message (1, evolution) or message (2, selection) is as 
+absurd as denying Newton's law, and that's all there is to object to. The famous dust bomb argument misses the point: 
+the bomb will never produce an aeroplane no matter how many trillion times you fire it. 
+If anything, it's an argument against evolution happening entirely by chance, a claim no one makes.
+There is no conflict at all, unless the theist takes the Bible literally. But
 then no dialogue is possible.
 
-Evolution deniers are left with no target: denying message (1) or (2) is as absurd as denying Newton's
-law, and that's all there is to object to. The famous dust bomb argument misses the point: the bomb
-will never produce an aeroplane no matter how many trillion times you fire it, but where is the
-connection with evolution?
 
 ### 6 The Veil
 We humans are an insignificant species, tiny creatures, living for a few world seconds on a planet that
@@ -278,7 +268,28 @@ it.
 
 For the atheist, this is where the story ends. The theist might say: Oh yes, that's fantastic! It's behind
 the veil where God lives, where the ghosts are, where my ancestors float around and send me signals
-and so on. So what?
+and so on. Fair enough, why not? But who cares?
+
+
+### 7 Evolution Revisited
+The evolution argument can lead us a long way:
+I said earlier that both the hard and soft sciences are an eternal discourse,
+a sequence of competing theories that come and go without ever reaching a conclusion.
+Let's assume that selection also applies to physical theories: the ones we use (Newton, Einstein,
+quantum physics) are the ones that haven't disappeared like those of Aristotle and countless others:
+published, criticised, refuted, forgotten. Then Schrödinger's brilliant idea 
+(replacing particles with wave functions) is like a building still 
+standing among many others that have collapsed. Now, take the question of morality:
+Moral systems have varied greatly throughout human history and across the countries of the world: 
+we have seen human sacrifice, torture, capital punishment, slavery, vendetta, all of which seem to have been 
+to be outlawed by now, at least in most Western countries. Here is the argument: 
+The society with a better moral system has a better chance of survival. Vendetta, for example,
+is a bad system that undermines the future of the country, so it is almost gone.
+If it is true that moral systems are subject to Darwinian selection, then they are unlikely to 
+converge on an ultimate solution, and there is no point in searching for one. Instead, 
+we are all a part of this eternal discourse, 
+taking sides, defending our favourites and fighting all the others. Notice that this is exactly 
+the opposite of the anything-goes attitude of moral relativity.
 
 
 References
