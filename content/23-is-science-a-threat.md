@@ -10,8 +10,9 @@ mutual recrimination. The purpose of this paper is to explain what science reall
 is a challenge but not a threat to religion. To do this, I will clarify terms in section (1) and take a
 historical look at that uneasy relationship in section (2). I will then explain the nature of science in
 three sections: classical physics (3), modern physics (4), and evolution (5), leading us to the desired
-conclusion. In the final section (6) I will talk about the veil that separates the perceivable world from
-everything else, if there is such a thing.
+conclusion. In section (6) I will talk about the veil that separates the perceivable world from
+everything else, if there is such a thing. I will conclude with two appendices: the first (A) on the evolution of    
+systems of any kind, such as physical or moral, and the second (B) on the truth and reality of physics.
 
 ### 1 Science
 It is important to be clear about what we mean by science. I propose to distinguish hard science,
@@ -65,10 +66,11 @@ heavily criticized for scientism) is a philosophical examination of the fallacie
 
 ### 2 History
 Let us begin with the Greeks. 
-
-#TODO Anaximander
-
-Plato (d. 348 BCE) despised scientific experiments, which he considered
+Before about 600 BCE, everything was down to the gods: sunshine, rain, hail and thunderstorms.
+Anaximander of Milet, a pupil of Thales, was the first to question this attitude. He correctly observed
+that rain is the moisture that had risen from the earth. This was the beginning of science, 
+but there was still a long way to go. Plato (d. 348 BCE) despised scientific experiments, 
+which he considered
 unworthy of a scholar. Aristotle (d. 322 BCE), on the other hand, carried out many experiments, but his
 results were largely wrong, both in physics and in logic. If the Greeks, with a few exceptions such as
 Archimedes and Eratosthenes, were not good at scientific experimentation, they were excellent at
@@ -136,10 +138,9 @@ is completely ignorant of Newton, stones have always fallen in the same way. To 
 the way it does *because of Newton’s laws* would be completely wrong. There are alternative models,
 such as those of Aristotle, of Einstein and of quantum mechanics. While Aristotle’s model is useless
 and forgotten, the other two are more accurate than Newton’s, have a wider scope but are more
-complicated. Here is my point: physics provides models, such as that of classical mechanics, which are 
-more or less useful, more or less accurate. Does it also provide truth? If anything, 
-classical physics is true in an ideal space with no friction and dimensions that go straight to infinity.
-But there is no such ideal space.
+complicated. Physics provides models, such as that of classical mechanics, which are 
+more or less useful, more or less accurate. Does it also provide truth? We'll come back to this 
+question in section (4).
 
 I said that classical mechanics can be derived from an armchair using mathematics. Imagine this: You
 start with two innocent principles, you calculate a few pages, and you end up with a model that
@@ -197,13 +198,14 @@ teachings accordingly. But this is a challenge, not a threat. The good news, at 
 that modern physics is so weird that it doesn't raise any new contradictions with the Bible. So this is
 where the story ends for both theist and atheist.
 
+
 ### 5 Evolution
 In his book, *On the Origin of Species*, Darwin conveys two messages: (1) the evolution of animals from
 single-celled organisms to Homo sapiens and (2) the mechanisms of mutation and selection. When he
 says that animals evolved over millions of years, he contradicts the Bible in at least two ways: first, he
 claims, animals were not created in one day, and second, they were not perfect. If they had been
 perfect at the time of creation, as many theists purport, there would have been no need for
-evolution. But Darwin says nothing about the Creator. He is not claiming, as some pretend, that
+evolution. But Darwin says nothing about the Creator. He is NOT claiming, as some pretend, that
 everything happened by itself or by chance. Rather, he says what happened, what the mechanisms
 are, and that's it. Darwin's tree of species is simply a map showing how species appeared, evolved
 and often disappeared. White spots on the map may or may not be filled in in the future, depending
@@ -214,25 +216,25 @@ The mechanism of mutation and selection can be easily verified in a test tube us
 bacteria. As for selection, a word is in order: selection in the sense of
 *survival of the fittest* is a tautology, there is nothing to
 prove and nothing to deny: The living species are those that haven't disappeared, just as the living
-people are those that haven't died, the standing buildings are those that haven't been demolished,
+people are those that haven't died, the standing buildings are those that haven't collapsed,
 the existing religions are those that haven't disappeared, the companies that are in business are
 those that haven't gone bankrupt, and so on. This obvious fact is sometimes forgotten: standing in
 front of an ancient building, some visitors would say to themselves: oh yes, the builders of yesteryear
 knew how to make their work last. But these visitors are admiring a building that happens to be still
-standing, regardless of the many that have disappeared.
-The next paragraph should sound familiar.
+standing, regardless of the many that have disappeared. The next paragraph should sound familiar.
 
 For the atheist, this is where the story ends. The theist might say, without interfering with Darwin: 
 There must be a Creator who set the whole process in motion. Does He have a laboratory 
 to design complicated organs like the eye or the brain? Does He use a joystick to control the rise 
 and fall of species? The theist is free to choose his preferred answer without interfering with hard science. 
-Hard science completely ignores his choice, it ignores religion altogether. 
-Evolution deniers are left with no target: denying Darwin's message (1, evolution) or message (2, selection) is as 
-absurd as denying Newton's law, and that's all there is to object to. The famous dust bomb argument misses the point: 
-the bomb will never produce an aeroplane no matter how many trillion times you fire it. 
-If anything, it's an argument against evolution happening entirely by chance, a claim no one makes.
-There is no conflict at all, unless the theist takes the Bible literally. But
-then no dialogue is possible.
+Hard science completely ignores his choice, it ignores religion altogether. There is no conflict at all, 
+unless the theist takes the Bible literally. But then no dialogue is possible.
+
+Evolution deniers are left with no target: denying Darwin's message (1), evolution, or message (2), selection,
+is as absurd as denying Newton's law, and that's all there is to object to. The famous dust bomb argument
+misses the point. It is, if anything, an argument against evolution 
+being entirely by chance, a claim that no one makes. The bomb, of course, will never make a plane, no matter
+how many trillion times you fire it.
 
 
 ### 6 The Veil
@@ -271,25 +273,45 @@ the veil where God lives, where the ghosts are, where my ancestors float around 
 and so on. Fair enough, why not? But who cares?
 
 
-### 7 Evolution Revisited
-The evolution argument can lead us a long way:
-I said earlier that both the hard and soft sciences are an eternal discourse,
-a sequence of competing theories that come and go without ever reaching a conclusion.
+
+### Appendix A: Evolution Revisited
+The evolution argument can lead us a long way: I said earlier that both the hard and soft sciences are 
+an eternal discourse, a sequence of competing theories that come and go without ever reaching a conclusion.
 Let's assume that selection also applies to physical theories: the ones we use (Newton, Einstein,
-quantum physics) are the ones that haven't disappeared like those of Aristotle and countless others:
+quantum mechanics) are the ones that haven't disappeared like those of Aristotle and countless others:
 published, criticised, refuted, forgotten. Then Schrödinger's brilliant idea 
 (replacing particles with wave functions) is like a building still 
-standing among many others that have collapsed. Now, take the question of morality:
+standing among many others that have collapsed. But all physical theories may be replaced by better ones. 
+Now, take the question of morality:
 Moral systems have varied greatly throughout human history and across the countries of the world: 
 we have seen human sacrifice, torture, capital punishment, slavery, vendetta, all of which seem to have been 
-to be outlawed by now, at least in most Western countries. Here is the argument: 
-The society with a better moral system has a better chance of survival. Vendetta, for example,
+outlawed by now, at least in most Western countries. Here is the argument: 
+Societies benefit from a good moral system, they have a better chance of survival. Vendetta, for example,
 is a bad system that undermines the future of the country, so it is almost gone.
 If it is true that moral systems are subject to Darwinian selection, then they are unlikely to 
-converge on an ultimate solution, and there is no point in searching for one. Instead, 
-we are all a part of this eternal discourse, 
-taking sides, defending our favourites and fighting all the others. Notice that this is exactly 
-the opposite of the anything-goes attitude of moral relativity.
+converge on an ultimate solution. All imaginable moral systems compete on the same battlefield, and some turn out
+to be more successful than others. The liberal, democratic systems many of us prefer is by no means
+granted to be the ultimate solution, it is just one of many competing systems. We are all a part of an 
+eternal discourse, taking sides, defending our favourites and fighting all the others.
+Notice that this is exactly the opposite of the anything-goes attitude of moral relativity.
+
+
+### Appendix B: Truth and Reality
+Here is another question: Given their precarious existence, can physical theories contain any kind of 
+truth? If anything, classical physics is true in an ideal space with no friction and dimensions that 
+go straight to infinity. But there is no such ideal space.
+As far as I am concerned, I am quite happy with the subjective value of models in terms of usefulness and 
+insight, and I see little interest in the search for a higher truth. Moreover, truth is generally 
+thought to be immutable, absolute, in stark contrast to the tentative nature of scientific theories. 
+We can replace theories, but not truth. 
+
+A related question is that of reality. How real are the physical laws?
+Again, I am quite happy with the idea that theories exist in our brains and that they only describe 
+nature without being part of it. A falling stone is unaware of Newton's laws, a whirling leave is 
+unaware of the equation of motion that governs its trajectory. I cannot see, for example, 
+what it means to say that *an electron is real*. We have the equations, we can predict the outcome 
+of experiments, and that's quite an achievement.  We have to give up good old ideas such as 
+simultaneity, time and much more. We can give up outdated theories, but not reality.
 
 
 References
