@@ -11,8 +11,9 @@ is a challenge but not a threat to religion. To do this, I will clarify terms in
 historical look at that uneasy relationship in section (2). I will then explain the nature of science in
 three sections: classical physics (3), modern physics (4), and evolution (5), leading us to the desired
 conclusion. In section (6) I will talk about the veil that separates the perceivable world from
-everything else, if there is such a thing. I will conclude with two appendices: the first (A) on the evolution of    
-systems of any kind, such as physical or moral, and the second (B) on the truth and reality of physics.
+everything else, if there is such a thing. I will conclude with two appendices: 
+the first (A) on the Darwinian evolution of systems such as physical or moral ones, 
+and the second (B) on the truth and reality of physics.
 
 ### 1 Science
 It is important to be clear about what we mean by science. I propose to distinguish hard science,
