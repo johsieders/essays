@@ -21,7 +21,7 @@ mass is a form of energy as the atomic bomb shows.
 Einstein embraces what he calls cosmic religion. This has little in common with religions in the
 ordinary sense: there is no anthropomorphic idea of God, no reward and no punishment, there are
 no dogmas, no priests, no prayers. But what is there, then? “There is the nobility and marvellous
-order which are revealed in nature and in the world of thought “, Einstein says, and goes on: “The
+order which are revealed in nature and in the world of thought“, Einstein says, and goes on: “The
 most important function of art and science is to keep alive this feeling in those who are receptive.”
 This is the gist of Einstein’s thinking: the beauty of science, the beauty of his own findings and that of
 his fellow researchers overwhelmed him. But an eminent contemporary didn’t agree. According to
