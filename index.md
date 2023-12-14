@@ -16,8 +16,10 @@ Johannes Siedersleben, Germany
 > [Kant und seine Zeit](content/13-kant.md) 
 
 > [Einstein and Philosophy](content/18-einstein-philosophy.md)
-> 
+
 > [A Roadmap of Physics](content/25-physics-roadmap.pdf)
+
+> [Quantum Computing](content/26-qbits.ipynb)
 
 > [Do we have a soul?](content/5-do-we-have-a-soul.md)
 
