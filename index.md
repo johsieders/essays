@@ -19,8 +19,6 @@ Johannes Siedersleben, Germany
 
 > [A Roadmap of Physics](content/25-physics-roadmap.pdf)
 
-> [Quantum Computing](content/26-qbits.ipynb)
-
 > [Do we have a soul?](content/5-do-we-have-a-soul.md)
 
 > [What is a dream?](content/12-what-is-a-dream.md)
