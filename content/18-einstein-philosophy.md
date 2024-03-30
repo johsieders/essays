@@ -91,7 +91,7 @@ I’m stopping here; this topic would lead us too far.
 
 
 ### Philosophy of Ethics
-Einstein’s paper *The Laws of Science and the Laws of Ethics* is an attempt at applying the
+Einstein’s paper *The Laws of Science and the Laws of Ethics* is an attempt to applying the
 scientific approach to ethics: “Ethical directives can be made rational and coherent by
 logical thinking and empirical knowledge.” One could start from axioms such as “Human
 life shall be preserved”, or “Pain and sorrow shall be lessened as much as possible”. Are
@@ -119,7 +119,7 @@ that human perception and common sense have always been misleading. Aristotle’
 perfectly compatible with common sense but out-and-out wrong. Two thousand years later, Galileo
 came up with the law of inertia (aka Newton’s first law) which is counterintuitive and requires some
 getting used to. Three hundred years later, Einstein published his theory of relativity: The Lorentz
-transformation is formally proven by one tricky application of Pythagoras; time dilatation and length
+transformation is formally proven by one tricky application of Pythagoras; time dilation and length
 contraction follow from it in a few lines of calculation and can be verified by experiment exactly as
 Pythagoras’ Theorem, albeit not on a sheet of paper. But they are completely unfathomable for the
 human mind, however many superfast trains travel through popular science textbooks. About ten
