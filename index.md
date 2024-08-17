@@ -13,13 +13,13 @@ Johannes Siedersleben, Germany
 
 > [L'essence des sciences](content/10-sciences.md) 
 
-> [Kant und seine Zeit](content/13-kant.md) 
-
-> [Einstein and philosophy](content/18-einstein-philosophy.md)
+> [Kant und seine Zeit](content/13-kant.md)
 
 > [Do we have a soul?](content/5-do-we-have-a-soul.md)
 
 > [What is a dream?](content/12-what-is-a-dream.md)
+
+> [Einstein and philosophy](content/18-einstein-philosophy.md)
 
 > [Can science tell us everything there is?](content/27-science.md)
 
