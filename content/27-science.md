@@ -26,7 +26,7 @@ as an observer, and for him the observers are the travellers. Observer and trave
 speed is always relative, and the notion of rest is meaningless. From the point of view of an electron, 
 the observing physicist passes by at the speed of light. The equations of motion had to be adjusted so that all 
 the actors agree, no matter how fast they are moving. This led, among other things, 
-to the famous equation *E = mc<sup>2<sup>*
+to the famous equation *E = mc<sup>2</sup>*
 and to a new quantity called *proper time*, which is shared by all the actors. The theory of relativity is, in a sense, 
 Newtonian mechanics with guardrails to keep events on the track of invariance of proper time, called *Lorentz invariance*. 
 Relativity theory has consequences for everything that can be said about time and causality: 
