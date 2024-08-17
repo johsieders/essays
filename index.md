@@ -19,9 +19,15 @@ Johannes Siedersleben, Germany
 
 > [A Roadmap of Physics](content/25-physics-roadmap.pdf)
 
+> [Modern Physics on One Page](content/29-physics-one-page.pdf)
+
 > [Do we have a soul?](content/5-do-we-have-a-soul.md)
 
 > [What is a dream?](content/12-what-is-a-dream.md)
+
+> [Can science tell us everything there is about reality?](content/27-science.md)
+
+> [Is truth objective, eternal, and the same for everyone, or subjective and all in the mind?](content/28-truth.md)
 
 ## History
 
