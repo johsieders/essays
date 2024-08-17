@@ -21,7 +21,7 @@ Johannes Siedersleben, Germany
 
 > [Einstein and philosophy](content/18-einstein-philosophy.md)
 
-> [Can science tell us everything there is?](content/27-science.md)
+> [Can science tell us everything?](content/27-science.md)
 
 > [Is truth objective, eternal, and the same for everyone?](content/28-truth.md)
 
