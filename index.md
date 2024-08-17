@@ -15,19 +15,23 @@ Johannes Siedersleben, Germany
 
 > [Kant und seine Zeit](content/13-kant.md) 
 
-> [Einstein and Philosophy](content/18-einstein-philosophy.md)
-
-> [A Roadmap of Physics](content/25-physics-roadmap.pdf)
-
-> [Modern Physics on One Page](content/29-physics-one-page.pdf)
+> [Einstein and philosophy](content/18-einstein-philosophy.md)
 
 > [Do we have a soul?](content/5-do-we-have-a-soul.md)
 
 > [What is a dream?](content/12-what-is-a-dream.md)
 
-> [Can science tell us everything there is about reality?](content/27-science.md)
+> [Can science tell us everything there is?](content/27-science.md)
 
-> [Is truth objective, eternal, and the same for everyone, or subjective and all in the mind?](content/28-truth.md)
+> [Is truth objective, eternal, and the same for everyone?](content/28-truth.md)
+
+
+## Physics
+
+> [A Roadmap of physics](content/25-physics-roadmap.pdf)
+
+> [Modern physics on one page](content/29-physics-one-page.pdf)
+
 
 ## History
 
@@ -39,9 +43,9 @@ Johannes Siedersleben, Germany
 
 ## Religion
 
-> [Is God Responsible for Evil?](content/22-god-and-evil.md)
+> [Is God responsible for evil?](content/22-god-and-evil.md)
 > 
-> [Is Science a Threat to Religion?](content/23-is-science-a-threat.md)
+> [Is science a threat to religion?](content/23-is-science-a-threat.md)
 > 
 > [Questions about Genesis](content/7-genesis-questions.md)
 > 
