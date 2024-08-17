@@ -3,7 +3,7 @@
 
 Johannes Siedersleben, Oxford,  June 2022
 
-“God does not play dice”. This is, besides the enigmatic formula *E = mc<sup>2</sup>*, probably the best-known
+“God does not play dice”. This, along with the enigmatic formula *E = mc<sup>2</sup>*, is probably the best-known
 quotation from Einstein, from which some have concluded that Einstein believed in God and didn’t
 believe in quantum mechanics. Both conclusions are wrong, as we are going to show. Einstein wrote a
 great deal on physics but little on philosophy and other non-technical topics. He left us the booklet

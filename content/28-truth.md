@@ -80,7 +80,7 @@ What would you have said? (3) After a rocky period of heated debate, Darwin's th
 evolution is now widely uncontested among biologists, but there are still vocal groups who disagree. 
 (4) Ten years ago, you could still find a few meteorologists who denied anthropogenic climate change. 
 Today, there are virtually none. And yet there are influential organizations that call climate change a 
-Chinese hoax and oppose all measures to reduce CO2 emissions. Can we blame the opponents 
+Chinese hoax and oppose all measures to reduce CO<sub>2</sub> emissions. Can we blame the opponents 
 in examples (3) and (4) for ignorance, narrow-mindedness, or stupidity? Should we require every 
 debater to have a PhD or a minimum Hirsch index? No. You might just as well restrict the vote to 
 an arbitrarily defined elite. Freedom of speech covers all nonsense, including denying accepted 
