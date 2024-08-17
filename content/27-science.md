@@ -1,4 +1,4 @@
-# Can science tell us everything there is about reality?
+# Can science tell us everything?
 
 
 *Johannes Siedersleben, Oxford, July 2024*

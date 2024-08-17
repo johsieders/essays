@@ -1,5 +1,4 @@
-# Is truth objective, eternal, and the same for everyone, or subjective and all in the mind?
-
+# Is truth objective, eternal, and the same for everyone?
 
 *Johannes Siedersleben, Oxford, July 2024*
 
