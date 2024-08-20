@@ -37,6 +37,8 @@ Johannes Siedersleben, Germany
 
 ## History
 
+> [Edinburgh](content/31-edinburgh.pdf)
+
 > [Was the Holy Roman Empire holy, roman or an empire at all?](content/8-holy_roman_empire.md)
 
 > [How did Britain react to the American Civil War?](content/15-american-civil-war.md)
