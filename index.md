@@ -25,13 +25,15 @@ Johannes Siedersleben, Germany
 
 > [Is truth objective, eternal, and the same for everyone?](content/28-truth.md)
 
-
 ## Physics
 
 > [A Roadmap of physics](content/25-physics-roadmap.pdf)
 
 > [Modern physics on one page](content/29-physics-one-page.pdf)
 
+## Mathematics
+
+> [On formal logic](content/30-formal-logic.pdf)
 
 ## History
 
