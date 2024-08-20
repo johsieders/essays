@@ -47,12 +47,14 @@ Johannes Siedersleben, Germany
 
 ## Religion
 
+> [Religions in Britain](content/32-religions-in-britain.md)
+
 > [Is God responsible for evil?](content/22-god-and-evil.md)
-> 
+ 
 > [Is science a threat to religion?](content/23-is-science-a-threat.md)
-> 
+
 > [Questions about Genesis](content/7-genesis-questions.md)
-> 
+
 > [Die Offenbarungen](content/20-revelations.md)
 >
 
