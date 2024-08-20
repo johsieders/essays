@@ -47,7 +47,7 @@ Johannes Siedersleben, Germany
 
 ## Religion
 
-> [Religions in Britain](content/32-religions-in-britain.md)
+> [Religions in Britain](content/32-religions-in-britain.pdf)
 
 > [Is God responsible for evil?](content/22-god-and-evil.md)
  
