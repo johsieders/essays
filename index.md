@@ -31,9 +31,11 @@ Johannes Siedersleben, Germany
 
 > [Modern physics on one page](content/29-physics-one-page.pdf)
 
-## Mathematics
+## Computer Science, Mathematics
 
 > [On formal logic](content/30-formal-logic.pdf)
+
+> [The Spy Who Came in from the Cloud](content/33-cyber-espionage.md)
 
 ## History
 
