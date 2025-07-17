@@ -96,7 +96,7 @@ Leonard Susskind: Quantum Mechanics. Allen Lane, 2015
 Leonard Susskind: Special Relativity and Classical Field Theory. Allen Lane, 2017
 
 
-
+> [Review by Gemini 2.5 Pro](content/27-review-gemini.md)
 
 
 

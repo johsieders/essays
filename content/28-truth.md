@@ -100,8 +100,7 @@ Bertrand Russell: History of Western Philosophy. Routledge Classics, 1996 (repri
 
 Noson S. Yanofski: Why Mathematics Works so Well? In: A. Aguirre, B. Foster, Z. Merali: Trick or Truth? Springer, 2016, p. 211 – 228
 
-
-
+[Review by Gemini 2.5 Pro](content/28-review-gemini.md)
 
 
 

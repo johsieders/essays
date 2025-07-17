@@ -92,3 +92,11 @@ Johannes Siedersleben
 > [Qu'est-ce qu'elle est belle, la Bavière!](content/2-baviere) 
 
 > [There is more to life than philosophy.](content/999-2westfields.png)
+
+## What Gemini says about
+
+> [Can science tell us everything?](content/27-review-gemini.md)
+
+> [Is truth objective, eternal, and the same for everyone?](content/28-review-gemini.md)
+
+> [The Spy Who Came in from the Cloud](content/33-review-gemini.md)
