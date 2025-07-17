@@ -93,7 +93,7 @@ Johannes Siedersleben
 
 > [There is more to life than philosophy.](content/999-2westfields.png)
 
-## What Gemini says about
+## How Gemini finds my essays
 
 > [Can science tell us everything?](content/27-review-gemini.md)
 

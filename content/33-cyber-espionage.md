@@ -48,9 +48,6 @@ Nicole Perlroth: This is How They Tell Me the World Ends. 2021
 Martin Untersinger: Espionner, mentir, détruire. 2024
 
 
-[Review by Gemini 2.5 Pro](content/33-review-gemini.md)
-
-
 
 
 
