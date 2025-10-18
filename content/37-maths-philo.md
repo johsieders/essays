@@ -2,6 +2,8 @@
 
 *This essay develops arguments from a philosophical dialogue with Claude Sonnet 4.5, conducted over three sessions of about two hours each. The anti-Platonist position and its defenses are mine; the challenges and objections are Claude's. The text itself is Claude's synthesis, revised according to my specifications.*
 
+Johannes Siedersleben, October 2025
+
 ## Introduction: The Central Question
 
 Do mathematical objects exist independently of human minds? When we prove theorems about prime numbers, are we discovering pre-existing truths in some Platonic realm, or are we manipulating symbols according to rules we invented? This ancient question has gained new urgency as computers formalize mathematics and as we confront the "unreasonable effectiveness" of mathematics in physics.
