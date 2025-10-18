@@ -308,7 +308,7 @@ We can replace theories, but not truth.
 
 A related question is that of reality. How real are the physical laws?
 Again, I am quite happy with the idea that theories exist in our brains and that they only describe 
-nature without being part of it. A falling stone is unaware of Newton's laws, a whirling leave is 
+nature without being part of it. A falling stone is unaware of Newton's laws, a whirling leaf is 
 unaware of the equation of motion that governs its trajectory. I cannot see, for example, 
 what it means to say that *an electron is real*. We have the equations, we can predict the outcome 
 of experiments, and that's quite an achievement.  We have to give up good old ideas such as 
