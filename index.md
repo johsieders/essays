@@ -37,6 +37,9 @@ Johannes Siedersleben
 
 > [The Spy Who Came in from the Cloud](content/33-cyber-espionage.md)
 
+> [The Nature of Mathematics - an Anti-Platonist View](content/37-maths-philo.md)
+> .md)
+
 ## History
 
 > [Edinburgh](content/31-edinburgh.pdf)

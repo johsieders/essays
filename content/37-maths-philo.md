@@ -1,4 +1,4 @@
-# What Exists in Mathematics? A Defense of Formalism Against Platonism
+# The Nature of Mathematics - an Anti-Platonist View
 
 *This essay develops arguments from a philosophical dialogue with Claude Sonnet 4.5, conducted over three sessions of about two hours each. The anti-Platonist position and its defenses are mine; the challenges and objections are Claude's. The text itself is Claude's synthesis, revised according to my specifications.*
 
