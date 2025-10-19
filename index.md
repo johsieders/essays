@@ -41,7 +41,7 @@ Johannes Siedersleben
 
 > [What exists in Mathematics?](philosophy/)
 
-
+  
 ## History
 
 > [Edinburgh](content/31-edinburgh.pdf)
