@@ -1,17 +1,39 @@
-name: Build and Deploy Jupyter Book
-on: [push]
+_filesname: Build and Deploy Jupyter Book
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'philosophy/**'
+      - '.github/workflows/deploy-book.yml'
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - run: pip install -r philosophy/requirements.txt
-      - run: jupyter-book build philosophy/
-      - uses: peaceiris/actions-gh-pages@v3
+      
+      - name: Install dependencies
+        run: |
+          pip install -r philosophy/requirements.txt
+      
+      - name: Build Jupyter Book
+        run: |
+          jupyter-book build philosophy/
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./philosophy/_build/html
-          destination_dir: philosophy
+          publish_dir: ./philosophy/_build/html  # Deploy the BUILT files
+          destination_dir: philosophy              # Put them in /philosophy/ on gh-pages
+          enable_jekyll: false                     # Disable Jekyll processing
+          keep_files: true
