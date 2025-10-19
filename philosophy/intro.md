@@ -11,7 +11,7 @@ This book contains a philosophical essay examining whether mathematical objects 
 This essay develops arguments from a philosophical dialogue with Claude Sonnet 4.5, presenting an anti-Platonist position that views mathematics as formal symbol manipulation refined by Darwinian selection, alongside challenges from the Platonist perspective.
 
 ## About
-
+  
 Author: Johannes Siedersleben
 
 The essay explores:
