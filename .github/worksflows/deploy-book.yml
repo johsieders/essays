@@ -1,0 +1,40 @@
+name: Build and Deploy Jupyter Book
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'philosophy/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      
+      - name: Install dependencies
+        run: |
+          pip install -r philosophy/requirements.txt
+      
+      - name: Build book
+        run: |
+          jupyter-book build philosophy/
+      
+      - name: Copy built book to docs
+        run: |
+          mkdir -p docs/philosophy
+          cp -r philosophy/_build/html/* docs/philosophy/
+      
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/philosophy/
+          git commit -m "Update Jupyter Book" || exit 0
+          git push
