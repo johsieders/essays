@@ -39,6 +39,8 @@ Johannes Siedersleben
 
 > [The Nature of Mathematics - an Anti-Platonist View](content/37-maths-philo.md)
 
+> [What exists in Mathematics?](content/37-maths-philo/html/index.html)
+
 
 ## History
 
