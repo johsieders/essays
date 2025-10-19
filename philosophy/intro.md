@@ -26,7 +26,5 @@ The essay explores:
 
 
 *Navigate to the full essay using the navigation menu or the link above.*
-
-# Test
    
 
