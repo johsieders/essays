@@ -1,0 +1,12 @@
+# Jupyter Book build outputs
+philosophy/_build/
+**/_build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Other common excludes
+.DS_Store
+*.swp
