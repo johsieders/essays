@@ -1,4 +1,4 @@
-name: Build and Deploy Jupyter Book
+_filesname: Build and Deploy Jupyter Book
 
 on:
   push:
@@ -36,4 +36,6 @@ jobs:
           publish_dir: ./philosophy/_build/html  # Deploy the BUILT files
           destination_dir: philosophy              # Put them in /philosophy/ on gh-pages
           enable_jekyll: false                     # Disable Jekyll processing
-          
+          keep_files: true
+
+        
