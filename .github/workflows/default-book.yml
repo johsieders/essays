@@ -1,0 +1,17 @@
+name: Build and Deploy Jupyter Book
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r philosophy/requirements.txt
+      - run: jupyter-book build philosophy/
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./philosophy/_build/html
+          destination_dir: philosophy
