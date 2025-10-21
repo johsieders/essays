@@ -41,4 +41,8 @@ sphinx:
       use_repository_button: true
       use_issues_button: true
       use_edit_page_button: true
+      home_page_in_toc: true
+      show_navbar_depth: 2
+      navigation_with_keys: true
+      show_prev_next: true
     bibtex_reference_style: author_year
