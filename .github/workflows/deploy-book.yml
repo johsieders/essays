@@ -42,6 +42,23 @@ jobs:
           enable_jekyll: false
           keep_files: true
 
+      # Checkout gh-pages to remove .nojekyll file
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages-temp
+
+      - name: Remove .nojekyll to enable Jekyll for main site
+        run: |
+          rm -f gh-pages-temp/.nojekyll
+          cd gh-pages-temp
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "Remove .nojekyll to enable Jekyll"
+          git push
+
       # Deploy Jekyll content (root site: index.md, content/, _config.yml)
       - name: Deploy Jekyll content to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
