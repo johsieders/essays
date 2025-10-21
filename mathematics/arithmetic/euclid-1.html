@@ -1,0 +1,827 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Congruences and Integer Division &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/arithmetic/euclid-1';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Euclid’s Algorithm and Applications" href="euclid-2.html" />
+    <link rel="prev" title="First Steps in Arithmetic" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/4-philo-2charts.html">Philosophy on two charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/5-do-we-have-a-soul.html">Do we have a soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/12-what-is-a-dream.html">What is a dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/18-einstein-philosophy.html">Einstein and philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/27-science.html">Can science tell us everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/28-truth.html">Is truth objective, eternal, and the same for everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/36-free-will.html">A Dialogue on Free Will</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../philosophy/mathematics_existence.html">What Exists in Mathematics?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history/6-korean-war.html">The way to the Korean War</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/20-revelations.html">Die Offenbarungen</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Arithmetic - Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Euclid's Algorithm: Part 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="euclid-2.html">Euclid's Algorithm: Part 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/arithmetic/euclid-1.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/arithmetic/euclid-1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/mathematics/arithmetic/euclid-1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Congruences and Integer Division</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="congruences-and-integer-division">
+<h1>Congruences and Integer Division<a class="headerlink" href="#congruences-and-integer-division" title="Link to this heading">#</a></h1>
+<p>Our starting point is a well-known fact about the division of integers:</p>
+<div class="proof theorem admonition" id="thr-integer-division">
+<p class="admonition-title"><span class="caption-number">Theorem 1 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(m &gt; 0\)</span> be integers.
+There is exactly one pair of integers <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(q\)</span> satisfying <span class="math notranslate nohighlight">\(a = r + mq\)</span> with <span class="math notranslate nohighlight">\(0 \le r &lt; m\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. One such pair is given by <span class="math notranslate nohighlight">\(q = \max \{t \in \mathbb{Z} | tm \le a\}\)</span> and <span class="math notranslate nohighlight">\(r = a - mq\)</span>.
+We have <span class="math notranslate nohighlight">\(qm \le a &lt; (q + 1)m\)</span>, so <span class="math notranslate nohighlight">\(0 \le r = a - qm &lt; qm \le a\)</span>.
+Assume we have two pairs <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(q\)</span>, and <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(p\)</span> satisfying the requirement, with <span class="math notranslate nohighlight">\(r \ge s\)</span>.
+Then <span class="math notranslate nohighlight">\(0 \le r - s = (q - p)m &lt; r &lt; m\)</span>, so
+<span class="math notranslate nohighlight">\(0 \le q - p &lt; 1\)</span> which implies <span class="math notranslate nohighlight">\(q = p\)</span> because <span class="math notranslate nohighlight">\(q - p\)</span> is an integer.</p>
+</div>
+<p><a class="reference internal" href="#thr-integer-division">Theorem 1</a> allows us to define the operators <code class="docutils literal notranslate"><span class="pre">%</span></code> (<em>remainder</em>) and <code class="docutils literal notranslate"><span class="pre">//</span></code> (<em>integer division</em>).</p>
+<div class="proof definition admonition" id="def-integer-division">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(m &gt; 0\)</span> be integers. Then, using <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(q\)</span> introduced in <a class="reference internal" href="#thr-integer-division">Theorem 1</a>, we define</p>
+<div class="math notranslate nohighlight" id="equation-equ-remainder">
+<span class="eqno">(1)<a class="headerlink" href="#equation-equ-remainder" title="Link to this equation">#</a></span>\[a\%m = r, \]</div>
+<div class="math notranslate nohighlight" id="equation-equ-integer-division">
+<span class="eqno">(2)<a class="headerlink" href="#equation-equ-integer-division" title="Link to this equation">#</a></span>\[a//m = q.\]</div>
+<p>These operators work for positive and negative values of <span class="math notranslate nohighlight">\(a\)</span>. Here is an example:</p>
+<p><span class="math notranslate nohighlight">\(17 \ \% \ 3 = 2\)</span> (check: <span class="math notranslate nohighlight">\(17 = 5 \cdot 3 + 2\)</span>)<br />
+<span class="math notranslate nohighlight">\(-17 \ \% \ 3 = 1\)</span> (check: <span class="math notranslate nohighlight">\(-17 = -6 \cdot 3 + 1\)</span>).</p>
+</section>
+</div><div class="proof definition admonition" id="def-congruences">
+<p class="admonition-title"><span class="caption-number">Definition 2 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(m\)</span> be integers.</p>
+<p>(i) We say that <span class="math notranslate nohighlight">\(a\)</span> is <em>congruent to</em> <span class="math notranslate nohighlight">\(b\)</span> <em>modulo</em> <span class="math notranslate nohighlight">\(m\)</span> iff there is
+an integer <span class="math notranslate nohighlight">\(q\)</span> such that <span class="math notranslate nohighlight">\(a = b + qm\)</span>. This is written as</p>
+<div class="math notranslate nohighlight" id="equation-equ-congruence">
+<span class="eqno">(3)<a class="headerlink" href="#equation-equ-congruence" title="Link to this equation">#</a></span>\[a \equiv b \bmod m. \]</div>
+<p>(ii) We say that <span class="math notranslate nohighlight">\(a\)</span> is a multiple of <span class="math notranslate nohighlight">\(m\)</span>, or that <span class="math notranslate nohighlight">\(m\)</span> divides <span class="math notranslate nohighlight">\(a\)</span> iff <span class="math notranslate nohighlight">\(a \equiv 0 \bmod m\)</span>.
+This is can also be written as <span class="math notranslate nohighlight">\(m|a\)</span>.</p>
+</section>
+</div><div class="proof remark admonition" id="remark-3">
+<p class="admonition-title"><span class="caption-number">Remark 1 </span></p>
+<section class="remark-content" id="proof-content">
+<p>We have, a bit surprisingly,  <span class="math notranslate nohighlight">\(0|a\)</span> and <span class="math notranslate nohighlight">\(a|0\)</span> for any <span class="math notranslate nohighlight">\(a\)</span>.
+Note that <span class="math notranslate nohighlight">\(a\%m\)</span> and <span class="math notranslate nohighlight">\(a//m\)</span> are <em>integer numbers</em> while <span class="math notranslate nohighlight">\(a \equiv b \bmod m\)</span> is a <em>boolean value</em>.
+The following facts follow from the previous definitions.</p>
+<p>(i) <span class="math notranslate nohighlight">\(a = (a\%m) + (a//m) m\)</span>,</p>
+<p>(ii) <span class="math notranslate nohighlight">\(a \equiv a\%m \bmod m\)</span>,</p>
+<p>(iii) <span class="math notranslate nohighlight">\(a \equiv b \bmod 0\)</span> iff <span class="math notranslate nohighlight">\(a = b\)</span>,</p>
+<p>(iv) <span class="math notranslate nohighlight">\(a \equiv b \bmod m\)</span> iff <span class="math notranslate nohighlight">\(a \equiv b \bmod -m\)</span>.</p>
+<p>Due to (iii), the case <span class="math notranslate nohighlight">\(m = 0\)</span> is uninteresting.<br />
+Due to (iv), we can restrict our attention to positive values of <span class="math notranslate nohighlight">\(m\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-equivalence-relation">
+<p class="admonition-title"><span class="caption-number">Theorem 2 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>For any integer <span class="math notranslate nohighlight">\(m\)</span>, the relation <span class="math notranslate nohighlight">\(a \equiv b \bmod m\)</span> is an equivalence relation on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. The assertion is true because:</p>
+<p>(i) <span class="math notranslate nohighlight">\(a \equiv a \bmod m\)</span>.</p>
+<p>(ii) If <span class="math notranslate nohighlight">\(a \equiv b \bmod m\)</span> then <span class="math notranslate nohighlight">\(b \equiv a \bmod m\)</span>.</p>
+<p>(iii) If <span class="math notranslate nohighlight">\(a \equiv b \bmod m\)</span> and <span class="math notranslate nohighlight">\(b \equiv c \bmod m\)</span> then <span class="math notranslate nohighlight">\(a \equiv c \bmod m\)</span>.</p>
+</div>
+<p>There is a subtle but important distinction between an integer <span class="math notranslate nohighlight">\(a\)</span>
+and its equivalence class modulo <span class="math notranslate nohighlight">\(m\)</span>, denoted by <span class="math notranslate nohighlight">\(\overline{a}\)</span>. Take <span class="math notranslate nohighlight">\(a=5\)</span> and <span class="math notranslate nohighlight">\(m= 7\)</span> as an example:
+<span class="math notranslate nohighlight">\(\overline{5} = \{5, 12, 19, \ldots\} = \overline{12} = \overline{19} = \ldots\)</span>.
+All numbers <span class="math notranslate nohighlight">\(b \equiv a \bmod m\)</span> represent
+the same equivalence class modulo <span class="math notranslate nohighlight">\(m\)</span>, denoted by <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span>.
+Choosing <span class="math notranslate nohighlight">\(\{0, 1, \ldots, m-1\}\)</span> as natural representatives, we can write</p>
+<div class="math notranslate nohighlight" id="equation-equ-equivalence-classes">
+<span class="eqno">(4)<a class="headerlink" href="#equation-equ-equivalence-classes" title="Link to this equation">#</a></span>\[\mathbb{Z}_m = \{\overline{0}, \overline{1}, \ldots\, \overline{m-1}\}\]</div>
+<p>because any two different integers <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(m-1\)</span>
+belong to different equivalence classes modulo <span class="math notranslate nohighlight">\(m\)</span>. The mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T :
+\quad
+\left\{
+\begin{array}{l}
+   \{0, 1, \ldots, m-1\} &amp; \to \{\overline{0}, \overline{1}, \ldots\, \overline{m-1}\} \\
+   a &amp; \mapsto \overline{a}
+\end{array}
+\right.
+\end{split}\]</div>
+<p>is an isomorphism, so we can write:</p>
+<div class="math notranslate nohighlight" id="equation-equ-equivalence-isomorphism">
+<span class="eqno">(5)<a class="headerlink" href="#equation-equ-equivalence-isomorphism" title="Link to this equation">#</a></span>\[\mathbb{Z}_m \cong \{0, 1, \ldots, m-1\},\]</div>
+<p>and the notation <a class="reference internal" href="#equation-equ-equivalence-classes">(4)</a> is rarely needed.
+The next theorem shows that <span class="math notranslate nohighlight">\(\mathbb{Z}_m \)</span> is a ring, the <em>residue class ring</em> of <span class="math notranslate nohighlight">\(m\)</span>.
+Its elements are called the <em>residue classes modulo m</em>.</p>
+<div class="proof theorem admonition" id="thr-residue-class-ring">
+<p class="admonition-title"><span class="caption-number">Theorem 3 </span> (Residue Class Ring)</p>
+<section class="theorem-content" id="proof-content">
+<p>For any integer <span class="math notranslate nohighlight">\(m\)</span>, the set <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span> with the usual
+addition and multiplication is a ring.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. The assertion is true because:</p>
+<p>(i) <span class="math notranslate nohighlight">\(a \equiv a + 0 \bmod m\)</span></p>
+<p>(ii) <span class="math notranslate nohighlight">\(a \equiv 1 \cdot a \bmod m\)</span></p>
+<p>(iii) If <span class="math notranslate nohighlight">\(a \equiv b \bmod m\)</span> then <span class="math notranslate nohighlight">\(a \pm c \equiv b \pm c \bmod m\)</span> and  <span class="math notranslate nohighlight">\(ac \equiv bc \bmod m\)</span>.</p>
+</div>
+<p>The following lemma will be useful for understanding Euclid’s algorithm, which is covered in the next section.</p>
+<div class="proof lemma admonition" id="lem-euclid-util">
+<p class="admonition-title"><span class="caption-number">Lemma 1 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span> be integers. If
+<span class="math notranslate nohighlight">\(a \equiv 0 \bmod b\)</span>,
+and
+<span class="math notranslate nohighlight">\(b \equiv c \bmod a\)</span>
+then <span class="math notranslate nohighlight">\(c \equiv 0 \bmod b\)</span></p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. <span class="math notranslate nohighlight">\(c\)</span> is <span class="math notranslate nohighlight">\(b\)</span> plus a multiple of <span class="math notranslate nohighlight">\(a\)</span>, which is a multiple of <span class="math notranslate nohighlight">\(b\)</span>. So, <span class="math notranslate nohighlight">\(c\)</span> is a multiple of <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</div>
+<p>Addition and multiplication operate on residue classes in much the same way as they do on integers.
+We now turn to the division of residue classes which requires a bit more attention.
+<a class="reference internal" href="#lem-euler">Lemma 2</a> is about the division of congruences.
+It includes the celebrated Euler’s Lemma, which is the key to <a class="reference internal" href="#thr-fundamental">Theorem 6</a>,
+the Fundamental Theorem of Arithmetic. <a class="reference internal" href="#thr-euler">Theorem 7</a> is a first approach to solving
+equations of the form <span class="math notranslate nohighlight">\(ax \equiv 1 \bmod m\)</span>, that is, finding the inverse modulo <span class="math notranslate nohighlight">\(m\)</span>.
+But we need to introduce some new concepts before we can get to that.</p>
+<div class="proof definition admonition" id="primes">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
+<section class="definition-content" id="proof-content">
+<p>(i) The <em>greatest common divisor</em> of two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the largest
+non-negative integer <span class="math notranslate nohighlight">\(d\)</span> such that <span class="math notranslate nohighlight">\(a \equiv 0 \bmod d\)</span> and <span class="math notranslate nohighlight">\(b \equiv 0 \bmod d\)</span>. It is denoted
+as <span class="math notranslate nohighlight">\(\gcd(a,b)\)</span> or simply as <span class="math notranslate nohighlight">\((a,b)\)</span>. Note that, for any integer <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(\gcd(a,0) = \gcd(0,a) = a\)</span>.</p>
+<p>(ii) The <em>least common multiple</em> of two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the smallest non-negative
+integer <span class="math notranslate nohighlight">\(c\)</span> such that <span class="math notranslate nohighlight">\(c \equiv 0 \bmod a\)</span> and <span class="math notranslate nohighlight">\(c \equiv 0 \bmod b\)</span>. It is denoted as <span class="math notranslate nohighlight">\(\text{lcm}(a,b)\)</span>.</p>
+<p>(iii) An integer <span class="math notranslate nohighlight">\(p\)</span> is called <em>prime</em> if it is greater than 1 and has no divisors other than 1 and itself.
+Two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are <em>coprime</em> iff <span class="math notranslate nohighlight">\((a,b) = 1\)</span>.</p>
+<p>(iv)<br />
+<span class="math notranslate nohighlight">\(U_m = \{a \in \mathbb{Z}| 1 \le a &lt; m, (a,m) = 1 \}\)</span><br />
+<span class="math notranslate nohighlight">\(\mathbb{Z}^\times_m = \{\overline{a}| a \in U_m \}\)</span></p>
+<p>(iv) The Euler function <span class="math notranslate nohighlight">\(\phi(m)\)</span> denotes the number of integers between 1 and <span class="math notranslate nohighlight">\(m\)</span> that are coprime to <span class="math notranslate nohighlight">\(m\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(\phi(m) = |U_m| = |\mathbb{Z}^\times_m|\)</span></p>
+<p>So, <span class="math notranslate nohighlight">\(\phi(p) = p - 1\)</span> iff <span class="math notranslate nohighlight">\(p\)</span> is prime.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-gcd-lcm">
+<p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>For any integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, we have</p>
+<p><span class="math notranslate nohighlight">\(\gcd(a,b) \cdot \text{lcm}(a,b) = a \cdot b\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. It holds that <span class="math notranslate nohighlight">\((a \cdot b) / \gcd(a,b)\)</span> is a multiple of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, so <span class="math notranslate nohighlight">\(\text{lcm}(a, b) \le (a \cdot b) / \gcd(a,b)\)</span>.
+It also holds that <span class="math notranslate nohighlight">\((a \cdot b) / \text{lcm}(a,b)\)</span> divides <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, so <span class="math notranslate nohighlight">\((a \cdot b) /\text{lcm}(a, b) \le \gcd(a,b)\)</span>,
+and we get: <span class="math notranslate nohighlight">\(a \cdot b \le \gcd(a,b) \cdot \text{lcm}(a,b) \le a \cdot b\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="phi-prime">
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(p\)</span> be a prime and <span class="math notranslate nohighlight">\(\alpha\)</span> be a positive integer. Then:</p>
+<div class="math notranslate nohighlight" id="equation-equ-phi-prime">
+<span class="eqno">(6)<a class="headerlink" href="#equation-equ-phi-prime" title="Link to this equation">#</a></span>\[ \phi(p^\alpha) = p^{\alpha - 1} (p - 1).
+ \]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We calculate the number of integers between 1 and <span class="math notranslate nohighlight">\(p^\alpha\)</span> that are not coprime to <span class="math notranslate nohighlight">\(p^\alpha\)</span>.
+Then <span class="math notranslate nohighlight">\(\phi(p^\alpha)\)</span> is <span class="math notranslate nohighlight">\(p^{\alpha}\)</span> minus that number.</p>
+<p><span class="math notranslate nohighlight">\(\{ a \in \mathbb{N} | a &lt; p^\alpha, (a, p^\alpha) &gt; 1 \} =  \{ a\cdot p | 1 \le a &lt; p^{\alpha - 1}\}\)</span>, so:</p>
+<p><span class="math notranslate nohighlight">\(|\{ a \in \mathbb{N} | a &lt; p^\alpha, (a, p^\alpha) &gt; 1 )\}| =  p^{\alpha - 1}\)</span>, so:</p>
+<p><span class="math notranslate nohighlight">\(|\{ a \in \mathbb{N} | a &lt; p^\alpha, (a, p^\alpha) = 1 )\}| =  p^{\alpha} - p^{\alpha - 1}\)</span>.</p>
+</div>
+<div class="proof lemma admonition" id="lem-euler">
+<p class="admonition-title"><span class="caption-number">Lemma 2 </span> (Euler’s Lemma)</p>
+<section class="lemma-content" id="proof-content">
+<p>(i) If <span class="math notranslate nohighlight">\(ac \equiv bc \bmod m\)</span> then <span class="math notranslate nohighlight">\(a \equiv b \bmod{\frac{m}{(c,m)}}\)</span>.
+So, if <span class="math notranslate nohighlight">\((c, m) = 1\)</span> we can divide by <span class="math notranslate nohighlight">\(c\)</span> and get <span class="math notranslate nohighlight">\(a \equiv b \bmod m\)</span>.</p>
+<p>(ii) If <span class="math notranslate nohighlight">\(ac \equiv 0 \bmod m\)</span> and <span class="math notranslate nohighlight">\((c, m) = 1\)</span> then <span class="math notranslate nohighlight">\(a \equiv 0 \bmod m\)</span>.</p>
+<p>(iii) Euler’s Lemma: If <span class="math notranslate nohighlight">\(c|ab\)</span> and <span class="math notranslate nohighlight">\((c, a) = 1\)</span> then <span class="math notranslate nohighlight">\(c|b\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (i) From <span class="math notranslate nohighlight">\(ac = bc + qm\)</span> it follows that <span class="math notranslate nohighlight">\(a = b + q \frac{m}{c} = b + q \frac{(c, m)}{c} \frac{m}{(c, m)}\)</span>,
+which is the same as <span class="math notranslate nohighlight">\(a \equiv b \bmod \frac{m}{(c,m)}\)</span></p>
+<p>(ii) This is (i) with <span class="math notranslate nohighlight">\(b=0\)</span>.</p>
+<p>(iii) is a reformulation of (ii).</p>
+</div>
+<div class="proof theorem admonition" id="thr-fundamental">
+<p class="admonition-title"><span class="caption-number">Theorem 6 </span> (Fundamental Theorem of Arithmetic)</p>
+<section class="theorem-content" id="proof-content">
+<p>Any integer <span class="math notranslate nohighlight">\(a\)</span> with <span class="math notranslate nohighlight">\(|a| &gt; 1\)</span> can be uniquely decomposed
+into a product of primes: <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
+are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</span> are integers.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(a\)</span> be an integer. We show first that such a decomposition exists.
+If <span class="math notranslate nohighlight">\(a\)</span> is the power of a prime number, we are done.
+If not, let <span class="math notranslate nohighlight">\(p_1\)</span> be the smallest prime factor of <span class="math notranslate nohighlight">\(a\)</span>.
+Then, by Euler’s Lemma, <span class="math notranslate nohighlight">\(a = p_1^{\alpha_1} \cdot a_1\)</span> for some integer <span class="math notranslate nohighlight">\(\alpha_1\)</span>.
+If <span class="math notranslate nohighlight">\(a_1 = 1\)</span>, we are done. If not, we apply the same procedure to <span class="math notranslate nohighlight">\(a_1\)</span>,
+getting <span class="math notranslate nohighlight">\(a = p_1^{\alpha_1} \cdot p_2^{\alpha_2} \cdot a_2\)</span>,
+and so on until <span class="math notranslate nohighlight">\(a_k = 1\)</span> after finitely many steps.
+We now show that this decomposition is unique.
+Let <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i} = \prod_{i=1}^n q_i^{\beta_i}\)</span>.
+Then, again by Euler’s Lemma, <span class="math notranslate nohighlight">\(p_1 | q_j\)</span> for some <span class="math notranslate nohighlight">\(j\)</span>,
+and therefore <span class="math notranslate nohighlight">\(p_1 = q_j\)</span> because both numbers are prime.
+Division by <span class="math notranslate nohighlight">\(p_1\)</span> gives <span class="math notranslate nohighlight">\(\prod_{i=2}^n p_i^{\alpha_i} = \prod_{i=1, i\ne j}^n q_i^{\beta_i}\)</span>.
+We repeat the procedure until we arrive at <span class="math notranslate nohighlight">\(\{p_1,...,p_n\} = \{q_1,...,q_n\}\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="thr-euler">
+<p class="admonition-title"><span class="caption-number">Theorem 7 </span> (Euler’s Theorem)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(m &gt; 1\)</span> be integers and <span class="math notranslate nohighlight">\((a, m) = 1\)</span>. Then <span class="math notranslate nohighlight">\(a^{\phi(m)} \equiv 1 \bmod m\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We choose an <span class="math notranslate nohighlight">\(a \in U_m\)</span> and set <span class="math notranslate nohighlight">\(aU_m = \{au |u \in U_m \}\)</span>.
+We observe that <span class="math notranslate nohighlight">\(au \equiv av \bmod m\)</span> implies <span class="math notranslate nohighlight">\(u \equiv v \bmod m\)</span> for all <span class="math notranslate nohighlight">\(u, v \in U_m\)</span> because <span class="math notranslate nohighlight">\((a, m) = 1\)</span>.
+So, all elements of <span class="math notranslate nohighlight">\(aU_m\)</span> are distinct and <span class="math notranslate nohighlight">\(aU_m\)</span> is a permutation of <span class="math notranslate nohighlight">\(U_m\)</span>. We get:</p>
+<p><span class="math notranslate nohighlight">\(\prod_{u \in U_m}u = a^{\phi(m)} \prod_{u \in U_m} u \equiv \prod_{u \in U_m} u \bmod m\)</span>.</p>
+<p>Because of <span class="math notranslate nohighlight">\((u, m) = 1\)</span>, we can divide this equation by <span class="math notranslate nohighlight">\(\prod_{u \in U_m}u\)</span> which gives the result.</p>
+</div>
+<div class="proof corollary admonition" id="cor-little-fermat">
+<p class="admonition-title"><span class="caption-number">Corollary 1 </span> (Little Fermat)</p>
+<section class="corollary-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(p\)</span> be a prime number. Then <span class="math notranslate nohighlight">\(a^{p-1} \equiv 1 \bmod p\)</span> for any <span class="math notranslate nohighlight">\(a \in \{1, 2, \ldots, p-1\}\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. This is Euler’s theorem with <span class="math notranslate nohighlight">\(m = p\)</span> and <span class="math notranslate nohighlight">\(\phi(m) = p - 1\)</span>.</p>
+</div>
+<div class="proof remark admonition" id="remark-14">
+<p class="admonition-title"><span class="caption-number">Remark 2 </span> (The Inverse of Euler’s Theorem is False)</p>
+<section class="remark-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(m\)</span> be coprime integers.
+The equation <span class="math notranslate nohighlight">\(a^k \equiv 1 \bmod m\)</span> has many more solutions than just the one given by Euler or Fermat.
+We give two examples, the first one refering to Euler’s Theorem, the second one to Little Fermat:</p>
+<p><span class="math notranslate nohighlight">\(3^2 \equiv 1 \bmod 8\)</span>; Euler:  <span class="math notranslate nohighlight">\(\phi(8) = 4\)</span><br />
+<span class="math notranslate nohighlight">\(2^3 \equiv 1 \bmod 7\)</span>; Fermat: <span class="math notranslate nohighlight">\(7 - 1 = 6\)</span></p>
+<p>It is therefore useful to define for <span class="math notranslate nohighlight">\(a\)</span> with <span class="math notranslate nohighlight">\((a, m) = 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{ord}_m(a) = \min \{k \in \mathbb{N} | a^k \equiv 1 \bmod m\}\)</span>.</p>
+<p>By definition,</p>
+<p><span class="math notranslate nohighlight">\(\text{ord}_m(a) \le \phi(m)\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\( a^k \equiv 1 \bmod m\)</span>, then <span class="math notranslate nohighlight">\(\text{ord}_m(a) | k \)</span>. This can be seen as follows:<br />
+Let <span class="math notranslate nohighlight">\(d = \text{ord}_m(a)\)</span> and <span class="math notranslate nohighlight">\(d &lt; k &lt; 2d\)</span>. Then <span class="math notranslate nohighlight">\( a^{k - d} \equiv 1 \bmod m\)</span> and <span class="math notranslate nohighlight">\(k - d &lt; d\)</span>, which is a contradiction.
+So, <span class="math notranslate nohighlight">\(\text{ord}_m(a)\)</span> divides <span class="math notranslate nohighlight">\(\phi(m)\)</span>. It can be computed using the relationship</p>
+<p><span class="math notranslate nohighlight">\(\text{ord}_m(a) = \min \{k \in \mathbb{N} | k | \phi(m) \ \text{and} \ a^k \equiv 1 \bmod m\}\)</span></p>
+</section>
+</div><div class="proof remark admonition" id="remark-15">
+<p class="admonition-title"><span class="caption-number">Remark 3 </span> (Modular Inverses)</p>
+<section class="remark-content" id="proof-content">
+<p><a class="reference internal" href="#thr-euler">Theorem 7</a> is a first step towards modular inverses, because</p>
+<p><span class="math notranslate nohighlight">\(a^{\phi(m)- k}a^k \equiv 1 \bmod m\)</span>,</p>
+<p>implies</p>
+<p><span class="math notranslate nohighlight">\(a^{-k} \equiv a^{\phi(m)- k} \bmod m\)</span>.</p>
+<p>A better approach to finding the modular inverses is Euclid’s algorithm to which we turn in the next section.</p>
+</section>
+</div><div class="proof remark admonition" id="rem-carmichael">
+<p class="admonition-title"><span class="caption-number">Remark 4 </span> (Carmichael numbers)</p>
+<section class="remark-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(k &gt; 1\)</span> be integers. If <span class="math notranslate nohighlight">\(a^{m-1} \equiv k \bmod p\)</span> for some <span class="math notranslate nohighlight">\(a \in \mathbb{Z}\)</span>, then, by Euler’s theorem,
+<span class="math notranslate nohighlight">\(m\)</span> cannot be prime. But there are non-prime integers <span class="math notranslate nohighlight">\(n\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-equ-carmichael">
+<span class="eqno">(7)<a class="headerlink" href="#equation-equ-carmichael" title="Link to this equation">#</a></span>\[a^{n-1} \equiv 1 \bmod n\]</div>
+<p>holds for at least one <span class="math notranslate nohighlight">\(a\)</span>.
+Integers <span class="math notranslate nohighlight">\(n\)</span> fullfilling <a class="reference internal" href="#equation-equ-carmichael">(7)</a> for all <span class="math notranslate nohighlight">\(a &lt; n\)</span> are called <em>Carmichael numbers</em>.
+The smallest one is <span class="math notranslate nohighlight">\(561 = 3 \cdot 11 \cdot 17\)</span>. Testing for primes is notoriously difficult,
+but <a class="reference internal" href="#equation-equ-carmichael">(7)</a> provides a necessary condition for
+primality. The idea is, for a given <span class="math notranslate nohighlight">\(m\)</span>, to test the congruence
+<span class="math notranslate nohighlight">\(a^{m-1} \equiv 1 \bmod m\)</span>
+for randomly chosen values of <span class="math notranslate nohighlight">\(a\)</span>. If the congruence is not satisfied for at least one <span class="math notranslate nohighlight">\(a\)</span>, then <span class="math notranslate nohighlight">\(m\)</span> is not prime.
+Otherwise, <span class="math notranslate nohighlight">\(m\)</span> is is probably prime, with the likelihood depending on the number of <span class="math notranslate nohighlight">\(a\)</span> tested.
+The <em>Fermat test</em> does exactly that; the more sophisticated <em>Miller-Rabin test</em> is based on the same idea.</p>
+</section>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./mathematics/arithmetic"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">First Steps in Arithmetic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="euclid-2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Euclid’s Algorithm and Applications</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
