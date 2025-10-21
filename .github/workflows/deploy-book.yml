@@ -33,33 +33,19 @@ jobs:
           jupyter-book build philosophy/
 
       # Deploy Jupyter Book to /philosophy/ subdirectory
+      # NOTE: We do NOT use enable_jekyll: false here because that creates
+      # .nojekyll at the ROOT level, which breaks the main Jekyll site
       - name: Deploy Jupyter Book to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./philosophy/_build/html
           destination_dir: philosophy
-          enable_jekyll: false
           keep_files: true
-
-      # Checkout gh-pages to remove .nojekyll file
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v3
-        with:
-          ref: gh-pages
-          path: gh-pages-temp
-
-      - name: Remove .nojekyll to enable Jekyll for main site
-        run: |
-          rm -f gh-pages-temp/.nojekyll
-          cd gh-pages-temp
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --quiet && git diff --staged --quiet || git commit -m "Remove .nojekyll to enable Jekyll"
-          git push
+          # DO NOT set enable_jekyll: false - it affects the entire repo
 
       # Deploy Jekyll content (root site: index.md, content/, _config.yml)
+      # This runs second and will NOT create .nojekyll at root level
       - name: Deploy Jekyll content to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
