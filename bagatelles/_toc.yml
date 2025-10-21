@@ -1,0 +1,87 @@
+# Table of Contents for Bagatelles
+
+format: jb-book
+root: intro
+
+parts:
+  - caption: Philosophy
+    chapters:
+      - file: philosophy/4-philo-2charts
+        title: Philosophy on two charts
+      - file: philosophy/10-sciences
+        title: L'essence des sciences
+      - file: philosophy/13-kant
+        title: Kant und seine Zeit
+      - file: philosophy/5-do-we-have-a-soul
+        title: Do we have a soul?
+      - file: philosophy/12-what-is-a-dream
+        title: What is a dream?
+      - file: philosophy/18-einstein-philosophy
+        title: Einstein and philosophy
+      - file: philosophy/27-science
+        title: Can science tell us everything?
+      - file: philosophy/28-truth
+        title: Is truth objective, eternal, and the same for everyone?
+      - file: philosophy/36-free-will
+        title: A Dialogue on Free Will
+      - file: philosophy/37-maths-philo
+        title: The Nature of Mathematics - an Anti-Platonist View
+      - file: philosophy/mathematics_existence
+        title: What exists in Mathematics?
+
+  - caption: Science
+    chapters:
+      - file: science/33-cyber-espionage
+        title: The Spy Who Came in from the Cloud
+
+  - caption: History
+    chapters:
+      - file: history/8-holy_roman_empire
+        title: Was the Holy Roman Empire holy, roman or an empire at all?
+      - file: history/15-american-civil-war
+        title: How did Britain react to the American Civil War?
+      - file: history/6-korean-war
+        title: The way to the Korean War
+
+  - caption: Religion
+    chapters:
+      - file: literature/22-god-and-evil
+        title: Is God responsible for evil?
+      - file: literature/23-is-science-a-threat
+        title: Is science a threat to religion?
+      - file: literature/7-genesis-questions
+        title: Questions about Genesis
+      - file: literature/20-revelations
+        title: Die Offenbarungen
+
+  - caption: Shakespeare
+    chapters:
+      - file: literature/21-henry-iv
+        title: Henry IV, Part 1 and Part 2
+      - file: literature/17-hotspur-henry-v
+        title: Hotspur and Henry V
+      - file: literature/19-henry-v-chorus
+        title: The Chorus in Henry V
+      - file: literature/16-battle-of-bosworth
+        title: The Battle of Bosworth
+
+  - caption: Language & Culture
+    chapters:
+      - file: literature/9-russell-on-useless-knowledge
+        title: Bertrand Russell on Useless Knowledge
+      - file: literature/3-francais-perdition
+        title: Le français en voie de perdition ?
+      - file: literature/0-bibliography
+        title: Books to read
+
+  - caption: Environment & Society
+    chapters:
+      - file: literature/1-animaux
+        title: Modeste proposition pour la sauvegarde du bétail
+      - file: literature/14-fliegen
+        title: Darf man noch fliegen?
+
+  - caption: For Fun
+    chapters:
+      - file: literature/2-baviere
+        title: Qu'est-ce qu'elle est belle, la Bavière!
