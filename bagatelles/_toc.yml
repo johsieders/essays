@@ -79,6 +79,15 @@ parts:
       - file: literature/14-fliegen
         title: Darf man noch fliegen?
 
+  - caption: Mathematics
+    chapters:
+      - file: mathematics/arithmetic/intro
+        title: Arithmetic - Introduction
+      - file: mathematics/arithmetic/euclid-1
+        title: "Euclid's Algorithm: Part 1"
+      - file: mathematics/arithmetic/euclid-2
+        title: "Euclid's Algorithm: Part 2"
+
   - caption: For Fun
     chapters:
       - file: literature/2-baviere
