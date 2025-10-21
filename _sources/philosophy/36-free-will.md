@@ -2,6 +2,8 @@
 
 *Determinism, Pseudo-Determinism, and the Freedom Worth Wanting*
 
+*Summary of a dialogue with Claude Sonnet 4.5*
+
 ---
 
 ## Introduction
