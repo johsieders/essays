@@ -7,21 +7,23 @@ parts:
   - caption: Philosophy
     chapters:
       - file: philosophy/4-philo-2charts
-        title: Philosophy on two charts
+        title: Philosophy on Two Charts
+      - file: philosophy/34-medieval-philosophy  
+        title: Medieval Philosophy
       - file: philosophy/10-sciences
         title: L'essence des sciences
       - file: philosophy/13-kant
         title: Kant und seine Zeit
       - file: philosophy/5-do-we-have-a-soul
-        title: Do we have a soul?
+        title: Do We Have a Soul?
       - file: philosophy/12-what-is-a-dream
-        title: What is a dream?
+        title: What is a Dream?
       - file: philosophy/18-einstein-philosophy
-        title: Einstein and philosophy
+        title: Einstein and Philosophy
       - file: philosophy/27-science
-        title: Can science tell us everything?
+        title: Can Science Tell Us Everything?
       - file: philosophy/28-truth
-        title: Is truth objective, eternal, and the same for everyone?
+        title: Is Truth Objective, Eternal, and the Same for Everyone?
       - file: philosophy/36-free-will
         title: A Dialogue on Free Will
       - file: philosophy/mathematics_existence
