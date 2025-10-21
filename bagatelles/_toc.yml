@@ -24,10 +24,8 @@ parts:
         title: Is truth objective, eternal, and the same for everyone?
       - file: philosophy/36-free-will
         title: A Dialogue on Free Will
-      - file: philosophy/37-maths-philo
-        title: The Nature of Mathematics - an Anti-Platonist View
       - file: philosophy/mathematics_existence
-        title: What exists in Mathematics?
+        title: What Exists in Mathematics?
 
   - caption: Science
     chapters:
