@@ -84,9 +84,9 @@ parts:
       - file: mathematics/arithmetic/intro
         title: Arithmetic - Introduction
       - file: mathematics/arithmetic/euclid-1
-        title: "Euclid's Algorithm: Part 1"
+        title: "Congruences and Integer Divison"
       - file: mathematics/arithmetic/euclid-2
-        title: "Euclid's Algorithm: Part 2"
+        title: "Euclid's Algorithm and Applications"
 
   - caption: For Fun
     chapters:

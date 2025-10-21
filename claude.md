@@ -4,7 +4,11 @@
 
 ## Executive Summary
 
-This is a comprehensive collection of philosophical, historical, literary, scientific, and mathematical essays by Johannes Siedersleben. The repository represents version 0.7 of a GitHub Pages website with a **unified Jupyter Book architecture** called "Bagatelles". The site is live at **https://jsiedersleben.de/** with HTTPS enabled.
+This is a comprehensive collection of philosophical, historical, literary, 
+scientific, and mathematical essays by Johannes Siedersleben. 
+The repository represents version 0.7 of a GitHub Pages website 
+with a **unified Jupyter Book architecture** called "Bagatelles". 
+The site is live at **https://www.jsiedersleben.de/** with HTTPS enabled.
 
 ---
 
