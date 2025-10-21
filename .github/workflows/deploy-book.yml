@@ -1,39 +1,53 @@
-name: Build and Deploy Jupyter Book
+name: Build and Deploy Site
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'philosophy/**'
+      - 'philosophy/**'           # Jupyter Book content
+      - 'content/**'              # Jekyll content (essays)
+      - 'index.md'                # Landing page
+      - '_config.yml'             # Jekyll config
       - '.github/workflows/deploy-book.yml'
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      
+
       - name: Install dependencies
         run: |
           pip install -r philosophy/requirements.txt
-      
+
       - name: Build Jupyter Book
         run: |
           jupyter-book build philosophy/
-      
-      - name: Deploy to GitHub Pages
+
+      # Deploy Jupyter Book to /philosophy/ subdirectory
+      - name: Deploy Jupyter Book to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./philosophy/_build/html  # Deploy the BUILT files
-          destination_dir: philosophy              # Put them in /philosophy/ on gh-pages
-          enable_jekyll: false                     # Disable Jekyll processing
+          publish_dir: ./philosophy/_build/html
+          destination_dir: philosophy
+          enable_jekyll: false
           keep_files: true
+
+      # Deploy Jekyll content (root site: index.md, content/, _config.yml)
+      - name: Deploy Jekyll content to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          enable_jekyll: true              # Enable Jekyll processing for main site
+          keep_files: true                 # Preserve /philosophy/ subdirectory
+          exclude_assets: '.github,philosophy,.git,**/_build'
