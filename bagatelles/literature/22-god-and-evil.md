@@ -6,11 +6,11 @@
 The *evidential problem of evil* is the view that the existence of evil is evidence against the existence of a perfect 
 God: omniscient, omnipotent, and perfectly good. *Theodicy* is the branch of philosophy-theology that seeks answers to 
 this contradiction. The purpose of this paper is to outline some of its main lines of thought. 
-I will present and comment on them in five sections: (1) God as bystander, (2) God as educator, and (3) God as enigma. 
-I challenge divine perfection in section (4) and turn to the imperfect God in section (5). 
+I will present and comment on them in five sections: (1) God as bystander, (2) God as educator, and (3) God as enigma.
+I challenge divine perfection in section (4) and turn to the imperfect God in section (5).
 The famous free-will argument appears in sections (2) and (4).
 
-### 1 God as Bystander
+## 1 God as Bystander
 
 Evil is the absence of good, just as darkness is the absence of light. Our sins hide the good, just as clouds hide 
 the sun. Good is God’s, evil is man’s. None other than Joseph Ratzinger, Pope from 2005 to 2013, promotes this idea. 
@@ -35,7 +35,7 @@ cold is the absence of heat (very similar to the previous example), and darkness
 So, the absence argument seems to be either misleading or, at best, 
 a loose description of physics. I fail to see the insight it provides.
 
-### 2 God as Educator
+## 2 God as Educator
 
 Proponents of this view attribute to God the intention to educate us, to challenge us, to give us opportunities 
 to develop, to grow, to excel, but also to err, to sin, to commit atrocities. This shaping of souls, as it is 
@@ -61,12 +61,12 @@ to train our mental capabilities? This would be a disputable reason, given the p
 for example, penicillin had been available 100 or better 100,000 years ago. The educator argument can be taken 
 to the point of absurdity by seeing the existence of the poor as an opportunity for the rich to do good: 
 without poverty, there is no charity, no way to distinguish oneself as a pious benefactor. But the main criticism 
-is this: Proponents of this view put themselves in God’s shoes (if He wears any) and argue as if they knew what 
+is this: Proponents of this view put themselves in God's shoes (if He wears any) and argue as if they knew what
 God thinks. Who do they think they are?
 
-### 3 God as Enigma
+## 3 God as Enigma
 
-The enigma argument is based precisely on the fact that we don’t know what God thinks. It is gentle and modest unlike 
+The enigma argument is based precisely on the fact that we don't know what God thinks. It is gentle and modest unlike 
 the previous one, and comes in two flavours, weak and strong. 
 
 The weak variant: We humans don’t see the whole picture. God maximizes the total good in the vast universe of which 
@@ -94,12 +94,12 @@ there is no way of knowing how his behaviour fits with God’s expectations, if 
 you might ask. Of course, but the Bible is so heterogeneous, so self-contradictory, so enigmatic that it can itself 
 be used as evidence for the strong enigma argument. The Bible has a bit of everything: it is obscene (Genesis 19:31-38), 
 mad (Revelation), cruel (Job, crucifixion), incongruous (Song of Songs), amusing (Ecclesiastes), sublime (some Psalms, 
-the Good Samaritan), and much more. This is why *the Devil can cite Scripture for his purpose*. And the believer 
+the Good Samaritan), and much more. This is why *the Devil can cite Scripture for his purpose*. And the believer
 seeking guidance is left with countless translations and thousands of interpretations from competing denominations.
 
-### 4 Perfection Challenged
+## 4 Perfection Challenged
 
-The Bible does contain references to God’s omnipotence (Genesis 18:14, Job 42:2), 
+The Bible does contain references to God's omnipotence (Genesis 18:14, Job 42:2), 
 omniscience (Psalm 147:5, Psalm 139:1-4) and perfect goodness (Exodus 34:6, Psalm 25:8), but these are few and far 
 between. Instead, the God of the Old Testament comes across as an old man, often angry with His people, sometimes 
 punishing them for minor transgressions (Eve eating the forbidden fruit, Lot’s wife looking back), sometimes on 
@@ -116,10 +116,10 @@ then I have no free will.  God’s own free will is hindered by the fact that He
 limited to the one or very few optimal options. He can hardly evolve, because any change could jeopardise 
 His perfection. Redefining perfection as whatever God does is possible, but brings us back to the enigma arguments. 
 If, on the other hand, we admit imperfection, the evidential problem of evil simply vanishes and the contrived 
-arguments we have seen in the previous sections become unnecessary. After all, perfection has unpleasant connotations: 
+arguments we have seen in the previous sections become unnecessary. After all, perfection has unpleasant connotations:
 it is cold, awe-inspiring, unattainable, unlovable. So why hold on to it?
 
-### 5 The Imperfect God
+## 5 The Imperfect God
 
 We are going to gradually relax the requirement for perfection. As a first step, let's assume that God is limited by 
 the laws of logic and cannot make a triangle with four corners. This weakens the strong enigma argument, 
@@ -142,10 +142,10 @@ In process theology, the relationship between God and the world is an ongoing dy
 the opposite direction, many atheists accept the idea of anonymous forces out there that we humans will never 
 directly perceive, let alone understand, forces that might as well be called God: *There are more things in 
 Heaven and Earth than are dreamt of in your philosophy*. Whatever the details, all these views leave little 
-of the loving God of the Bible, who protects, comforts, and saves us. But they solve the evidential problem of evil. 
+of the loving God of the Bible, who protects, comforts, and saves us. But they solve the evidential problem of evil.
 You cannot have your cake and eat it.
 
-### References
+## References
 
 [1] Catechism of the Catholic Church, §§ 268, 385, https://www.vatican.va/archive/ENG0015/_INDEX.HTM
 

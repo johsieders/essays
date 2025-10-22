@@ -1,5 +1,5 @@
 
-## What is a Dream?
+# What is a Dream?
 
 *Johannes Siedersleben, Oxford, June 2017*
 
@@ -86,10 +86,10 @@ idea where our customary p-reality we believe to live in is positioned. We canno
 conscious life is in any way more real than our dreams. As there is a subconsciousness below our 
 consciousness, there might likewise be a superconsciousness on top we are not aware of. 
 A different reality could be going on up there, unknown to us, and what we see as p-reality 
-would be but our superconscious dreams. And these were just three levels of consciousness out 
-of arbitrarily many. We have no idea of what’s happening, and we never will.
+would be but our superconscious dreams. And these were just three levels of consciousness out
+of arbitrarily many. We have no idea of what's happening, and we never will.
 
-#### References
+## References
 Kelly Bulkely: Big Dreams. Oxford University Press, 2016
 
 Heiko Luhmann: Alles Einbildung. Was unser Gehirn tatsächlich wahrnimmt. WBG, 2015
