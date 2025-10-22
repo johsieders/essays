@@ -33,11 +33,10 @@ A lot can be held against AI: the intellectual-property issue (a challenge for l
 the energy footprint (but many AI providers are committed to renewable sources), 
 the job market (a challenge for employment agencies, employers, and employees), 
 the singularity issue (a longer-term consideration) — to name just a few.
-Despite these concerns
-, AI can contribute greatly to solving our problems and making life more worthwhile. 
+Despite these concerns, AI can contribute greatly to solving our problems and making life more worthwhile. 
 Yet it can also be misused to lead the world into disaster. It all depends on who wields the power.
 Given the crowds that seem to have lost their marbles, I am only mildly optimistic.
-Or have I lost mine? No idea.
+Or have I lost mine? You decide.
 
 Johannes Siedersleben
 
