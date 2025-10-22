@@ -1,7 +1,6 @@
 # First Steps in Arithmetic
 
 
-
 ## Introduction
 
 This note takes a deliberately short, constructive path through the core facts of elementary number theory—enough to make modular arithmetic usable, 
@@ -15,6 +14,8 @@ Euler’s Theorem and its prime-modulus corollary (Little Fermat) provide the fi
 
 The second half turns this theory into algorithms. Euclid’s extended algorithm not only computes $\gcd(a,b)$ but exhibits integers $x,y$ with $ax+by=(a,b)$ (Bézout), giving 
 immediate criteria for the solvability and uniqueness of linear congruences $ax \equiv b \pmod m$. This constructive viewpoint culminates in the Chinese Remainder Theorem and the multiplicativity of $\phi$.
+
+Useful books are {cite:t}`riesel1985primes` and {cite:t}`hardy2008introduction`.
 
 **Why read this?** Because it packages the essentials—definitions, theorems, and proofs—so that each statement is both conceptually transparent 
 and algorithmically actionable. Readers who enjoy precise reasoning and also care about computation (e.g., implementing `%`, `//`, modular inverses, 
@@ -642,10 +643,12 @@ is an isomorphism.
 
 $\phi(m) = \phi(p_1^{\alpha_1}) \ \phi(p_2^{\alpha_2}) \ \cdots \ \phi(p_n^{\alpha_n}) =$     
 $p_1^{\alpha_1 - 1}(p_1 - 1) \ p_2^{\alpha_2 - 1}(p_2 - 1) \ \cdots \ p_n^{\alpha_n - 1}(p_n - 1) =$  
-$m\prod_{i=1}^n (1 - \frac{1}{p_i})$ 
+$m\prod_{i=1}^n (1 - \frac{1}{p_i})$
+
+## References
 
 ```{bibliography}
-
+:filter: docname in docnames
 ```
 
 
