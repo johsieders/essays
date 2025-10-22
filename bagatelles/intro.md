@@ -24,7 +24,7 @@ I could have written a similar text, but not in two seconds.
 It condenses my view of the subject and is useful when 
 read alongside other sources such as Russell’s and Adamson’s books. In [A Dialogue on Free Will *](philosophy/36-free-will.md) 
 I defend my view against Claude’s objections, as I do in [What Exists in Mathematics? *](philosophy/mathematics-existence.md) 
-If you ask Claude to challenge you, it (or they?) will probably give you more than you asked for. 
+If you ask Claude to challenge you, it will probably give you more than you asked for. 
 I need a rest after two hours of objection–response exchange, but I accomplish in days what would otherwise have taken weeks or months.
 I do not claim authorship of the papers marked with `*`; they express, however, 
 exactly what I want to say — often better than I could have said it myself.
@@ -32,8 +32,9 @@ exactly what I want to say — often better than I could have said it myself.
 A lot can be held against AI: the intellectual-property issue (a challenge for legislators), 
 the energy footprint (but many AI providers are committed to renewable sources), 
 the job market (a challenge for employment agencies, employers, and employees), 
-the singularity issue (don't worry too much about this one.) — to name just a few.
-However many there might be, AI can contribute greatly to solving our problems and making life more worthwhile. 
+the singularity issue (a longer-term consideration) — to name just a few.
+Despite these concerns
+, AI can contribute greatly to solving our problems and making life more worthwhile. 
 Yet it can also be misused to lead the world into disaster. It all depends on who wields the power.
 Given the crowds that seem to have lost their marbles, I am only mildly optimistic. 
 Or have I lost mine? No idea.
