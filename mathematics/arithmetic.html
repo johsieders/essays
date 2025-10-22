@@ -477,6 +477,7 @@ Euler’s Lemma supports both the manipulation of congruences (including safe �
 Euler’s Theorem and its prime-modulus corollary (Little Fermat) provide the first general tool for finding modular inverses in principle.</p>
 <p>The second half turns this theory into algorithms. Euclid’s extended algorithm not only computes <span class="math notranslate nohighlight">\(\gcd(a,b)\)</span> but exhibits integers <span class="math notranslate nohighlight">\(x,y\)</span> with <span class="math notranslate nohighlight">\(ax+by=(a,b)\)</span> (Bézout), giving
 immediate criteria for the solvability and uniqueness of linear congruences <span class="math notranslate nohighlight">\(ax \equiv b \pmod m\)</span>. This constructive viewpoint culminates in the Chinese Remainder Theorem and the multiplicativity of <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
+<p>Useful books are <span id="id1">Riesel [<a class="reference internal" href="#id8" title="Hans Riesel. Prime Numbers and Computer Methods for Factorization. Birkhäuser, 1985.">1985</a>]</span> and <span id="id2">Hardy and Wright [<a class="reference internal" href="#id9" title="G. H. Hardy and E. M. Wright. An Introduction to the Theory of Numbers. Oxford University Press, 6th edition edition, 2008. First published 1938.">2008</a>]</span>.</p>
 <p><strong>Why read this?</strong> Because it packages the essentials—definitions, theorems, and proofs—so that each statement is both conceptually transparent
 and algorithmically actionable. Readers who enjoy precise reasoning and also care about computation (e.g., implementing <code class="docutils literal notranslate"><span class="pre">%</span></code>, <code class="docutils literal notranslate"><span class="pre">//</span></code>, modular inverses,
 or CRT in code) will find a compact, self-contained route from first principles to tools that power modern applications in cryptography, coding theory,
@@ -922,15 +923,16 @@ The inverse of <span class="math notranslate nohighlight">\(q_i \bmod m_i\)</spa
 <p><span class="math notranslate nohighlight">\(\phi(m) = \phi(p_1^{\alpha_1}) \ \phi(p_2^{\alpha_2}) \ \cdots \ \phi(p_n^{\alpha_n}) =\)</span><br />
 <span class="math notranslate nohighlight">\(p_1^{\alpha_1 - 1}(p_1 - 1) \ p_2^{\alpha_2 - 1}(p_2 - 1) \ \cdots \ p_n^{\alpha_n - 1}(p_n - 1) =\)</span><br />
 <span class="math notranslate nohighlight">\(m\prod_{i=1}^n (1 - \frac{1}{p_i})\)</span></p>
-<div class="docutils container" id="id1">
+<h2 class="rubric" id="references">References</h2>
+<div class="docutils container" id="id3">
 <div role="list" class="citation-list">
 <div class="citation" id="id9" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Ada14<span class="fn-bracket">]</span></span>
-<p>Peter Adamson. <em>Medieval Philosophy: A History of Philosophy Without Any Gaps, Volume 4</em>. Oxford University Press, 2014.</p>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">HW08</a><span class="fn-bracket">]</span></span>
+<p>G. H. Hardy and E. M. Wright. <em>An Introduction to the Theory of Numbers</em>. Oxford University Press, 6th edition edition, 2008. First published 1938.</p>
 </div>
-<div class="citation" id="id10" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Rus04<span class="fn-bracket">]</span></span>
-<p>Bertrand Russell. <em>History of Western Philosophy</em>. Routledge, routledge classics edition edition, 2004. First published 1946.</p>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Rie85</a><span class="fn-bracket">]</span></span>
+<p>Hans Riesel. <em>Prime Numbers and Computer Methods for Factorization</em>. Birkhäuser, 1985.</p>
 </div>
 </div>
 </div>
