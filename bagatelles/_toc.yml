@@ -9,7 +9,7 @@ parts:
       - file: philosophy/4-philo-2charts
         title: Philosophy on Two Charts
       - file: philosophy/34-medieval-philosophy  
-        title: Medieval Philosophy
+        title: Medieval Philosophy *
       - file: philosophy/10-sciences
         title: L'essence des sciences
       - file: philosophy/13-kant
@@ -25,9 +25,9 @@ parts:
       - file: philosophy/28-truth
         title: Is Truth Objective, Eternal, and the Same for Everyone?
       - file: philosophy/36-free-will
-        title: A Dialogue on Free Will
+        title: A Dialogue on Free Will *
       - file: philosophy/mathematics_existence
-        title: What Exists in Mathematics?
+        title: What Exists in Mathematics? *
 
   - caption: Computer Science
     chapters:
