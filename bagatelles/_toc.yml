@@ -29,7 +29,7 @@ parts:
       - file: philosophy/mathematics_existence
         title: What Exists in Mathematics?
 
-  - caption: Science
+  - caption: Computer Science
     chapters:
       - file: science/33-cyber-espionage
         title: The Spy Who Came in from the Cloud
@@ -83,12 +83,8 @@ parts:
 
   - caption: Mathematics
     chapters:
-      - file: mathematics/arithmetic/intro
-        title: Arithmetic - Introduction
-      - file: mathematics/arithmetic/euclid-1
-        title: "Congruences and Integer Divison"
-      - file: mathematics/arithmetic/euclid-2
-        title: "Euclid's Algorithm and Applications"
+      - file: mathematics/arithmetic
+        title: First Steps in Arithmetic
 
   - caption: For Fun
     chapters:
