@@ -26,7 +26,7 @@ parts:
         title: Is Truth Objective, Eternal, and the Same for Everyone?
       - file: philosophy/36-free-will
         title: A Dialogue on Free Will *
-      - file: philosophy/mathematics_existence
+      - file: philosophy/mathematics-existence
         title: What Exists in Mathematics? *
 
   - caption: Computer Science
