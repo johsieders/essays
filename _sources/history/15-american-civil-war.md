@@ -1,5 +1,5 @@
 
-## How Did Britain React to the American Civil War?
+# How Did Britain React to the American Civil War?
 
 
 *Johannes Siedersleben, Oxford, August 2014*
@@ -50,6 +50,6 @@ July 1863) that Britain accepted the dominance of the North and the fact that th
 would emerge unified out of this war. But no one could imagine that not even a lifetime later, in
 1918, this remote country should be one of the leading nations of the world.
 
-#### References
+## References
 
 [1] Kathleen Burk: Old World, New World. The Story of Britain and America. Abacus, 2009

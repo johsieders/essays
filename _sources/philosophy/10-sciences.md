@@ -7,7 +7,7 @@ sont difficiles à comprendre, elles sont mises en cause, parce qu’on s’en m
 soupçonnent d’être au service de forces occultes au détriment de la race humaine. D’où viennent les
 sciences, comment fonctionnent-elles et faut-il s’en méfier ? Allons voir ça.
 
-### Un peu d’histoire
+## Un peu d’histoire
 Platon (mort en 348 BCE) méprisait les expériences scientifiques ; il les considérait comme indignes
 d’un homme érudit. En revanche, Aristote (mort en 322 BCE) en réalisait beaucoup, mais ses résultats étaient 
 largement erronés, en physique comme en logique. Plus de succès avaient Ératosthène
@@ -45,7 +45,7 @@ elles, la civilisation telle que nous la connaissons n’aurait pas été imagin
 les ordinateurs vers 1940, Internet vers 1990, l’intelligence artificielle depuis à peu près 2010. 
 Qu’est-ce qui nous attend dans 10, dans 50, dans 100 ans ?
 
-### L’essence des sciences naturelles
+## L’essence des sciences naturelles
 Quelle est cette machine miraculeuse qui tourne de plus en plus vite depuis 500 ans ? 
 Elle est déterminée par deux lois irrévocables, acceptées tacitement par la communauté mondiale des chercheurs : 
 (1) Les seuls outils admis sont les expériences scientifiques, donc répétables, et le raisonnement logique, 
@@ -103,7 +103,7 @@ ADN, pas besoin de régler les manipulations génétiques. Chacune de ces décou
 fil à retordre aux commissions d’éthique et aux législateurs, qui, eux aussi, mènent un discours
 éternel.
 
-### Dieu existe-t-il ?
+## Dieu existe-t-il ?
 Il n’y a jamais eu de recherche scientifique sur Dieu, puisque les sciences ne s’occupent 
 pas des phénomènes surnaturels. Mais qu’en est-il des prétendues preuves de l’existence de Dieu ? 
 Leur logique est très attaquable, mais si tant est qu’elles démontrent quelque chose, 
@@ -119,7 +119,7 @@ Est-ce que c’est un bonhomme barbu qui nous regarde du haut des nuages ? Ou es
 qui n’est qu’un autre nom pour la nature, l’Univers, pour tout ce qui nous entoure ? Ou quelque
 chose entre les deux ? Alors, Dieu existe-t-il ? Le bonhomme, non, le Dieu panthéiste, oui.
 
-### Qui a créé l’homme ?
+## Qui a créé l’homme ?
 La théorie de Darwin est une des majeures pierres d’achoppement du point de vue religieux. Mais il y
 a là un malentendu : Darwin ne s’occupe pas de l’existence ou de l’inexistence de Dieu. Les sciences
 ne font que décrire et constater, elles n’expliquent rien, nous l’avons dit. La théorie de Darwin décrit

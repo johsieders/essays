@@ -12,10 +12,10 @@ historical look at that uneasy relationship in section (2). I will then explain 
 three sections: classical physics (3), modern physics (4), and evolution (5), leading us to the desired
 conclusion. In section (6) I will talk about the veil that separates the perceivable world from
 everything else, if there is such a thing. I will conclude with two appendices: 
-the first (A) on the Darwinian evolution of systems such as physical or moral ones, 
+the first (A) on the Darwinian evolution of systems such as physical or moral ones,
 and the second (B) on the truth and reality of physics.
 
-### 1 Science
+## 1 Science
 It is important to be clear about what we mean by science. I propose to distinguish hard science,
 soft science and non-science.
 

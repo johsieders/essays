@@ -9,5 +9,8 @@ Johannes Siedersleben
 
 ---
 
-This collection explores themes in philosophy, history, literature, science, and mathematics.
-Use the navigation sidebar to browse by topic, or use the search function to find specific essays.
+This collection explores themes in philosophy, history, literature, science, 
+and mathematics.
+Use the navigation sidebar to browse by topic, or use the search function 
+to find specific essays.
+

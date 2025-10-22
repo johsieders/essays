@@ -5,7 +5,7 @@
 
 Calculemus! said Leibniz (1666). A salient feeling of the Enlightenment was that mankind had finally succeeded in deciphering nature and that the deep questions of whether there is a God, what is good and what is evil, and so on, were just waiting to be solved by calculation. This is what Spinoza tried to do in his Ethics (1677), and, much later, Einstein in his paper on The Laws of Science and the Laws of Ethics (1950). The mathematical approach failed in philosophy, which could never be reduced to mere calculations, and the deep questions are still waiting to be answered. But the new, bold way of thinking succeeded in science. Starting with pioneers like Descartes and Galileo, science has evolved like a series of rockets, each building on the previous one and gaining speed: Newton and Leibniz, Darwin and Wallace, Bohr and Einstein, Dirac and Schrödinger are just a few prominent examples. Will there be a day X in 100 or 1000 years when they say, OK, mission accomplished, all questions ticked? The answer is no. Gödel showed that many propositions can neither be proved nor disproved (1931), Church and Turing showed that many problems cannot be programmed (1936). The vision of the Enlightenment was illusory. With this in mind, and using physics as an example, I will describe in the first section what science tells us, and in the second what it doesn't.
 
-### What science tells us
+## What science tells us
 Imagine the anonymous scientist who, long before CE, studied round objects like bowls, wheels, and the sun. 
 He abstracted away properties such as weight, colour, and the third dimension, eventually arriving at the idea of 
 roundness shared by these objects: the circle was invented. Much later, in 250 BCE, Archimedes calculated its surface, 
@@ -61,7 +61,7 @@ experience, their successors were motivated by experiments that few of us have s
 Their results defy common sense and challenge our naive understanding of reality. 
 We have learned more than we could have hoped for and are left with deep questions that may never be answered.
 
-### What science doesn’t tell us
+## What science doesn’t tell us
 Mankind is an insignificant species. We are minuscule creatures, living for a few world seconds on a planet 
 that is barely a grain of dust in the universe, equipped with the senses and the brain that evolution has happened 
 to give us. Scientists, for all their cleverness, are like beetles exploring a few metres of motorway: 
@@ -80,7 +80,7 @@ and large parts of the universe have probably never been perceived by any being.
 
 
 
-### References
+## References
 
 Albert Einstein: The Laws of Science and the Laws of Ethics (1950); 
 Readings in the Philosophy of Science. Appleton-Century-Crofts, 1953, p. 779 - 780
