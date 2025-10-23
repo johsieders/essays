@@ -37,7 +37,7 @@ generated text unread to his tutor is a caricature and a challenge for the unive
 But there are many: the intellectual-property issue (a challenge for legislators), 
 the energy footprint (but many AI providers are committed to renewable sources), 
 the job market (how can the value added by AI be distributed fairly?), 
-the singularity issue (no evidence and no way to refute it) — to name just a few.
+the singularity issue (no evidence but no way to refute it) — to name just a few.
 Despite these concerns, AI can contribute greatly to solving our problems and making life more worthwhile. 
 
 Yet it can also be misused to lead the world into disaster. 
