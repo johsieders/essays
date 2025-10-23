@@ -213,7 +213,7 @@ Die übrigen Toten stehen auf und werden nach ihren Werken gerichtet. Wer nicht 
 des Lebens verzeichnet ist, wird in den Feuersee geworfen.
 
 
-### Literatur
+## Literatur
 
 ```{bibliography}
 :filter: docname in docnames
