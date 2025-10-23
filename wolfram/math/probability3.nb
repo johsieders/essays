@@ -1,0 +1,1179 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     49664,       1171]
+NotebookOptionsPosition[     45088,       1092]
+NotebookOutlinePosition[     45784,       1117]
+CellTagsIndexPosition[     45716,       1112]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Probability 3: Monty Hall, Bags on a plane, Maximum Likelihood Prediction\
+\>", "Title",
+ CellChangeTimes->{{3.9343667788643475`*^9, 3.9343667893130264`*^9}, {
+  3.9348725255040607`*^9, 3.9348725451210976`*^9}, {3.9482826923951263`*^9, 
+  3.9482827536756897`*^9}, {3.9483679281278706`*^9, 
+  3.9483679290307293`*^9}},ExpressionUUID->"8df1a5d9-2e4d-4eef-9db4-\
+7a2a61abedab"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ 
+ CounterBox["Section"],
+ " Bayesian Tests"
+}], "Section",
+ CellChangeTimes->{{3.935229308580353*^9, 3.935229316378294*^9}, {
+  3.9352293625355663`*^9, 3.9352293904129105`*^9}, {3.93523019722373*^9, 
+  3.9352302005278225`*^9}},ExpressionUUID->"6514f002-846d-4d83-9a2a-\
+f1605bfb79a5"],
+
+Cell[CellGroupData[{
+
+Cell["The Monty Hall Problem", "Subsection",
+ CellChangeTimes->{{3.934009266463499*^9, 3.9340092715360184`*^9}, {
+  3.9340093362073936`*^9, 3.934009343635973*^9}, {3.934103722238022*^9, 
+  3.934103726209732*^9}, {3.9343473981776104`*^9, 
+  3.9343474072497253`*^9}},ExpressionUUID->"da0a0b6f-77dc-40d6-8d92-\
+8a3d620982e1"],
+
+Cell[TextData[{
+ "Suppose you\[CloseCurlyQuote]re on a game show, and you are given the \
+choice of three doors. Behind one is a car, behind the others, goats. You \
+pick a door, say door ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "44c5b620-369e-614a-bb6b-efd4d0b7dd4a"],
+ ", and the host, who knows what\[CloseCurlyQuote]s behind the doors, opens \
+another door, say, door ",
+ Cell[BoxData[
+  FormBox["B", TraditionalForm]],ExpressionUUID->
+  "c73dfba1-4fec-a84f-a47f-525e02a07d69"],
+ ", which has a goat. He says to you: Do you want to pick door ",
+ Cell[BoxData[
+  FormBox["C", TraditionalForm]],ExpressionUUID->
+  "2a164e90-f37f-9b41-9512-9d273e438384"],
+ "? Is it to your advantage to switch your choice of doors? (Book of Why, \
+p.190)"
+}], "Text",
+ CellChangeTimes->{{3.9341049333465633`*^9, 3.934104961734148*^9}, {
+  3.9341153157103977`*^9, 3.934115321118204*^9}, {3.9343474503519115`*^9, 
+  3.934347640106777*^9}, {3.934347717980852*^9, 3.9343477356841507`*^9}, {
+  3.9343573694037514`*^9, 3.9343573809499073`*^9}, {3.934366037443056*^9, 
+  3.934366045935463*^9}},ExpressionUUID->"80efc66f-8cc2-c946-a1f8-\
+1d5eaa5d60ff"],
+
+Cell[CellGroupData[{
+
+Cell["The Answer", "Subsubsection",
+ CellChangeTimes->{{3.934347762959099*^9, 
+  3.9343477952696953`*^9}},ExpressionUUID->"39c5363b-74ff-4f7f-a522-\
+f8fd73a4e196"],
+
+Cell[TextData[{
+ "The first reaction is often this: Why should I change? The car can\
+\[CloseCurlyQuote]t have moved! But let\[CloseCurlyQuote]s take a closer \
+look. There are two situations:  (1) your choice (door ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "004a7c9c-cb00-4440-9434-05d5d6bb7ffb"],
+ ") was good, or (2) it wasn\[CloseCurlyQuote]t. The probability of (1) is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "1"], "=", " ", 
+    RowBox[{"1", "/", "3"}]}], TraditionalForm]],ExpressionUUID->
+  "fb425a54-6c0b-654c-b484-2398109c5c0d"],
+ ", that of (2) is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "2"], "=", " ", 
+    RowBox[{"2", "/", "3"}]}], TraditionalForm]],ExpressionUUID->
+  "14d23ebf-566e-4048-994b-579cef37e159"],
+ ". Let\[CloseCurlyQuote]s evaluate the two strategies. \n\n(I) You stick to \
+door ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"A", ":"}], TraditionalForm]],ExpressionUUID->
+  "79b519cd-270f-bd44-b9a8-e640fed14143"],
+ " in this case the probability of getting the car is the probability of its \
+being behind door ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "c0ef6895-8316-2f46-8ca2-11a49148c14c"],
+ ", which is 1/3. \n\n(II) You change your choice: if the car was behind door \
+",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "3e500bb3-a407-7a4a-9999-373b554e39c5"],
+ ", you lose, which happens with a probability of 1/3. If not, you win with a \
+probability of 2/3. Here is why: The car is not behind door ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "977ac15f-e71f-e94f-b568-48672b4b0b7c"],
+ " (that\[CloseCurlyQuote]s the assumption) nor is it behind door ",
+ Cell[BoxData[
+  FormBox["B", TraditionalForm]],ExpressionUUID->
+  "92d765c7-b957-0746-8e91-8ed39312a276"],
+ ", the one the host has opened. So it must be behind door ",
+ Cell[BoxData[
+  FormBox["C", TraditionalForm]],ExpressionUUID->
+  "70a78126-abc0-f34f-aec4-43ca4c8c100f"],
+ ", the only one left.\n\nBy opening a door without a car behind it, the host \
+is giving you additional information, that you\[CloseCurlyQuote]ll ignore if \
+you stick to door ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "44c426fe-ab79-8546-9f08-08071aa2a03d"],
+ ". If you don\[CloseCurlyQuote]t, you double your chances: the prior \
+probability 1/3 becomes the posterior probability 2/3. And this is our \
+general theme: you find yourself in a situation with some prior probability. \
+The question is how to compute the posterior probability, when some \
+additional information becomes available."
+}], "Text",
+ CellChangeTimes->{{3.9343478032887173`*^9, 3.934348063516573*^9}, {
+   3.934348107618595*^9, 3.9343481899364204`*^9}, {3.934348229463415*^9, 
+   3.9343482603762016`*^9}, {3.9343482978057137`*^9, 3.934348445233225*^9}, {
+   3.9343484789103775`*^9, 3.934348942744196*^9}, 3.934348977855156*^9, {
+   3.9343491698663635`*^9, 3.9343492567426987`*^9}, {3.9343492958689537`*^9, 
+   3.9343494249091167`*^9}, {3.9343494773205643`*^9, 3.9343495756728*^9}, {
+   3.934349616349375*^9, 3.934349658285015*^9}, {3.9343497108359756`*^9, 
+   3.9343497142571907`*^9}, {3.9343497546581554`*^9, 
+   3.9343497892471256`*^9}, {3.934357221840063*^9, 3.934357242423538*^9}, {
+   3.934357275392126*^9, 3.9343573066116295`*^9}, {3.934357400382824*^9, 
+   3.9343574862317486`*^9}, {3.934357696228218*^9, 3.9343577433580456`*^9}, {
+   3.9343578276674023`*^9, 3.9343578715468197`*^9}, {3.9343593770328712`*^9, 
+   3.9343594113114853`*^9}, {3.934359442111393*^9, 3.934359543467081*^9}, {
+   3.9343602291000195`*^9, 3.934360251620041*^9}, {3.9343603052489567`*^9, 
+   3.9343603060436954`*^9}, {3.9343603700370045`*^9, 3.934360392962942*^9}, {
+   3.934361064486929*^9, 3.934361112534851*^9}, {3.9343611499217396`*^9, 
+   3.93436119132193*^9}, {3.9343612692428837`*^9, 3.93436128632288*^9}, {
+   3.9343632220444145`*^9, 3.9343633320760517`*^9}, {3.9343660573709126`*^9, 
+   3.9343660801380844`*^9}, {3.934366938897667*^9, 3.934366959054409*^9}, {
+   3.934372440498369*^9, 3.934372454740444*^9}, {3.934373108431713*^9, 
+   3.9343732018025208`*^9}, {3.9344177104709816`*^9, 
+   3.9344177261983967`*^9}, {3.93441776208634*^9, 
+   3.9344180227659893`*^9}},ExpressionUUID->"c5d5cbf9-9756-ab4b-ba13-\
+b20fc9bc4db6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The General Case", "Subsubsection",
+ CellChangeTimes->{{3.934357322141676*^9, 
+  3.9343573259255466`*^9}},ExpressionUUID->"1e3d3ece-9bec-48a0-a5d5-\
+2ae338eba854"],
+
+Cell[TextData[{
+ "Assume there are ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],ExpressionUUID->
+  "3861bc2d-68df-5a4d-8641-67c8b953f044"],
+ " doors and ",
+ Cell[BoxData[
+  FormBox["k", TraditionalForm]],ExpressionUUID->
+  "4e974439-37b5-6d4b-adc0-3a177add3faa"],
+ " cars, with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"1", " ", "<=", "k", " ", "<=", " ", 
+     RowBox[{"n", "-", "2"}]}], ",", " ", 
+    RowBox[{"3", "<=", " ", "n", " "}]}], TraditionalForm]],ExpressionUUID->
+  "1a2364ad-02d0-db45-93c6-170aaf3b44a8"],
+ ". We\[CloseCurlyQuote]ll repeat the  reasoning of the preceding paragraph \
+to generalize our result. There are again two situations: (1) Your choice \
+(door ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "490b40ef-c03a-a64f-9cd0-4ba903f72bcc"],
+ ") was good, or (2) it wasn\[CloseCurlyQuote]t. The probability of (1) is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "1"], "=", " ", 
+    RowBox[{"k", "/", "n"}]}], TraditionalForm]],ExpressionUUID->
+  "783cb824-3ec5-db45-a9db-31042b4ec78b"],
+ ", that of (2) is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["p", "2"], "=", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"n", "-", "k"}], ")"}], "/", "n"}]}], TraditionalForm]],
+  ExpressionUUID->"a398e403-9375-f24e-8c8b-46a1eb9e6e17"],
+ ". Let\[CloseCurlyQuote]s evaluate the two strategies. \n\n(I) You stick to \
+door ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"A", ":"}], TraditionalForm]],ExpressionUUID->
+  "6c3c7669-4f9d-764d-ad32-565cebcdcc94"],
+ " in this case the probability of getting a car is the probability of a car \
+being behind door ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],ExpressionUUID->
+  "5d6a02c7-62bb-ab4c-a669-305037e1a7dc"],
+ ", which is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"k", "/", "n"}], TraditionalForm]],ExpressionUUID->
+  "6c8dac21-797e-9f40-8351-5fe50a580c02"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.9343477887777596`*^9, 3.9343477890567055`*^9}, {
+   3.9343478296401463`*^9, 3.934347831480795*^9}, {3.934357330806141*^9, 
+   3.934357330965332*^9}, {3.9343574922363396`*^9, 3.9343575863212643`*^9}, {
+   3.9343576285986576`*^9, 3.934357688939039*^9}, {3.934357765419197*^9, 
+   3.9343578445477543`*^9}, {3.934357877821945*^9, 3.9343579878107014`*^9}, {
+   3.934358018174679*^9, 3.934358057343107*^9}, {3.934358093279873*^9, 
+   3.934358101326519*^9}, {3.934358145582926*^9, 3.934358152044241*^9}, {
+   3.9343581974344425`*^9, 3.9343584380950623`*^9}, {3.934358526596323*^9, 
+   3.9343588137569427`*^9}, {3.9343588478030243`*^9, 3.934358848230007*^9}, {
+   3.934358942113983*^9, 3.934359073325098*^9}, {3.9343591481652546`*^9, 
+   3.934359189386915*^9}, {3.934359228189377*^9, 3.9343592687879353`*^9}, {
+   3.9343593533391*^9, 3.934359373597868*^9}, {3.9343595670296917`*^9, 
+   3.934359630420744*^9}, {3.9343597430757446`*^9, 3.934359837136385*^9}, 
+   3.934360014320017*^9, {3.934360289031933*^9, 3.9343602960435543`*^9}, {
+   3.934360438353346*^9, 3.9343604521870613`*^9}, {3.934360484564867*^9, 
+   3.9343605179798794`*^9}, {3.934360560753477*^9, 3.9343605740317287`*^9}, {
+   3.9343731834165497`*^9, 
+   3.9343731840591755`*^9}},ExpressionUUID->"722b1c43-707b-0d4f-8aaf-\
+15ef77ec89a5"],
+
+Cell[BoxData[
+ RowBox[{"\t", 
+  FormBox[
+   RowBox[{"prior_probability", " ", "=", " ", 
+    RowBox[{"k", "/", "n"}]}],
+   TraditionalForm]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.9343477887777596`*^9, 3.9343477890567055`*^9}, {
+   3.9343478296401463`*^9, 3.934347831480795*^9}, {3.934357330806141*^9, 
+   3.934357330965332*^9}, {3.9343574922363396`*^9, 3.9343575863212643`*^9}, {
+   3.9343576285986576`*^9, 3.934357688939039*^9}, {3.934357765419197*^9, 
+   3.9343578445477543`*^9}, {3.934357877821945*^9, 3.9343579878107014`*^9}, {
+   3.934358018174679*^9, 3.934358057343107*^9}, {3.934358093279873*^9, 
+   3.934358101326519*^9}, {3.934358145582926*^9, 3.934358152044241*^9}, {
+   3.9343581974344425`*^9, 3.9343584380950623`*^9}, {3.934358526596323*^9, 
+   3.9343588137569427`*^9}, {3.9343588478030243`*^9, 3.934358848230007*^9}, {
+   3.934358942113983*^9, 3.934359073325098*^9}, {3.9343591481652546`*^9, 
+   3.934359189386915*^9}, {3.934359228189377*^9, 3.9343592687879353`*^9}, {
+   3.9343593533391*^9, 3.934359373597868*^9}, {3.9343595670296917`*^9, 
+   3.934359630420744*^9}, {3.9343597430757446`*^9, 3.934359837136385*^9}, 
+   3.9343600293625813`*^9, {3.934360100525219*^9, 3.934360100526232*^9}, {
+   3.9343608267282295`*^9, 3.9343608661221714`*^9}, {3.9343609076823483`*^9, 
+   3.934360908339348*^9}},ExpressionUUID->"a96be2c8-dd7f-fe4f-9665-\
+349b26c248cf"],
+
+Cell[TextData[{
+ "(II) If you change your choice, there are ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "-", "2"}], TraditionalForm]],ExpressionUUID->
+  "437295df-ee04-5549-9b4c-cb84ad86c9ed"],
+ " doors left because the one you chose and the one the host has opened are \
+no longer eligible. If there was a car behind door ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"A", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["p", "1"], "=", " ", 
+      RowBox[{"k", "/", "n"}]}], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "d9f5fd5f-f810-4a41-8ac5-ba2a94d715ff"],
+ ", there are ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"k", "-", "1", " "}], TraditionalForm]],ExpressionUUID->
+  "374b24e5-203d-7740-ae44-22d77e8ba360"],
+ "cars behind the remaining ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "-", "2"}], TraditionalForm]],ExpressionUUID->
+  "fd75f168-74b1-8446-9238-1aa60ee6586b"],
+ " doors, otherwise ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["p", "2"], "=", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"n", "-", "k"}], ")"}], "/", "n"}]}], ")"}], TraditionalForm]],
+  ExpressionUUID->"3bc532fa-4da6-6640-8e9f-00ac4315e97e"],
+ " there are ",
+ Cell[BoxData[
+  FormBox["k", TraditionalForm]],ExpressionUUID->
+  "6a81b48c-bb3a-d14f-8761-a839d613b37d"],
+ ". Using the law of total probability, this gives us:"
+}], "Text",
+ CellChangeTimes->{{3.9343477887777596`*^9, 3.9343477890567055`*^9}, {
+   3.9343478296401463`*^9, 3.934347831480795*^9}, {3.934357330806141*^9, 
+   3.934357330965332*^9}, {3.9343574922363396`*^9, 3.9343575863212643`*^9}, {
+   3.9343576285986576`*^9, 3.934357688939039*^9}, {3.934357765419197*^9, 
+   3.9343578445477543`*^9}, {3.934357877821945*^9, 3.9343579878107014`*^9}, {
+   3.934358018174679*^9, 3.934358057343107*^9}, {3.934358093279873*^9, 
+   3.934358101326519*^9}, {3.934358145582926*^9, 3.934358152044241*^9}, {
+   3.9343581974344425`*^9, 3.9343584380950623`*^9}, {3.934358526596323*^9, 
+   3.9343588137569427`*^9}, {3.9343588478030243`*^9, 3.934358848230007*^9}, {
+   3.934358942113983*^9, 3.934359073325098*^9}, {3.9343591481652546`*^9, 
+   3.934359189386915*^9}, {3.934359228189377*^9, 3.9343592687879353`*^9}, {
+   3.9343593533391*^9, 3.934359373597868*^9}, {3.9343595670296917`*^9, 
+   3.934359630420744*^9}, {3.9343597430757446`*^9, 3.934359837136385*^9}, 
+   3.934360167913149*^9, {3.934360620285839*^9, 3.9343606502427387`*^9}, {
+   3.9343614976352882`*^9, 3.934361497959484*^9}, {3.934367328057928*^9, 
+   3.934367328454502*^9}},ExpressionUUID->"114c6889-39f8-d342-8830-\
+314e659a8c92"],
+
+Cell[BoxData[
+ RowBox[{"\t", 
+  FormBox[
+   RowBox[{
+   "posterior_probability", " ", "=", " ", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"k", "/", "n"}], "  ", "*", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"k", "-", "1"}], ")"}], " ", "/", " ", 
+        RowBox[{"(", 
+         RowBox[{"n", "-", "2"}], ")"}]}]}], " ", "+", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"n", "-", "k"}], ")"}], "/", "n"}], " ", "*", 
+       RowBox[{"k", "/", 
+        RowBox[{"(", 
+         RowBox[{"n", "-", "2"}], ")"}]}]}]}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"k", "/", "n"}], " ", "*", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"n", "-", "1"}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"n", "-", "2"}], ")"}]}]}]}]}],
+   TraditionalForm]}]], "DisplayFormula",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQnfF4hqNOwFvHjgsLwbRIzRY3EL0m6T2YfnE68pUB
+kGZ4EgemJSa0/wPRZ9y9uAyBtInGZH4QPYdHThxEC2StVQCLt0/UAtEJvrv0
+QLTLx0obEP1jmqsDiN7zS8sVRO/4ssITRN8oWuUFokOWGwWA6JwsxkAQ/eXZ
+2jAQfYDrcAmIFhG9XA+iH1jsWAw2f9PP5SDaIoZ9BVjd0sObwfanax0B0Uc8
+W8+C3Ze45hJYPX/bdbC42cw7IPrFTa3nYPcobn4Jom0+P2A0AvHLznKC6Iac
+R+Ig2iV2iTKIlll4zhdEz3CT9AfRE/yMl4HoORlMq0A0T1huhAWQXmC4FkwD
+AHiWoPM=
+  "],ExpressionUUID->"429095cf-93d3-0142-8a19-292eb144840e"],
+
+Cell["or:", "Text",
+ CellChangeTimes->{{3.934361001761345*^9, 
+  3.9343610049932556`*^9}},ExpressionUUID->"490db07a-3e39-0e4b-9869-\
+d380629c5f0f"],
+
+Cell[BoxData[
+ RowBox[{"\t", 
+  RowBox[{"posterior_probability", " ", "=", " ", 
+   RowBox[{"prior_probability", " ", "*", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "2"}], ")"}]}]}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.9343609447589817`*^9, 
+  3.9343609764240704`*^9}},ExpressionUUID->"da241b62-88b9-da4b-b774-\
+90c3f8dcec54"],
+
+Cell[BoxData[
+ RowBox[{"posteriorProbability", " ", "=", " ", 
+  RowBox[{"priorProbability", " ", "*", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"n", "-", "1"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"n", "-", "2"}], ")"}]}]}]}]], "Input",
+ CellOpen->False,
+ CellChangeTimes->{{3.9343618466553307`*^9, 
+  3.934361877008726*^9}},ExpressionUUID->"b9f0a665-43b7-9c40-81b9-\
+dc237d6d9ff5"],
+
+Cell[TextData[{
+ "So, the prior probability is multiplied by the ratio = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"n", "-", "1"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"n", "-", "2"}], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "546a85c1-f493-2f46-a790-8a17a1c73b9f"],
+ ", which is ",
+ Cell[BoxData[
+  FormBox["2", TraditionalForm]],ExpressionUUID->
+  "778e79e0-2822-9f45-a805-a98c135855e4"],
+ " if ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", " ", "=", " ", "3"}], TraditionalForm]],ExpressionUUID->
+  "b9502eab-6bf0-d148-956c-49d4b35a4a59"],
+ ". The ratio depends only on ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],ExpressionUUID->
+  "e356c875-75a3-084b-abdf-859a13057d02"],
+ ", not on ",
+ Cell[BoxData[
+  FormBox["k", TraditionalForm]],ExpressionUUID->
+  "5abddd37-6317-6c45-a948-d60b2299405b"],
+ ", and is always greater than 1: switching increases your chances."
+}], "Text",
+ CellChangeTimes->{{3.9343477887777596`*^9, 3.9343477890567055`*^9}, {
+   3.9343478296401463`*^9, 3.934347831480795*^9}, {3.934357330806141*^9, 
+   3.934357330965332*^9}, {3.9343574922363396`*^9, 3.9343575863212643`*^9}, {
+   3.9343576285986576`*^9, 3.934357688939039*^9}, {3.934357765419197*^9, 
+   3.9343578445477543`*^9}, {3.934357877821945*^9, 3.9343579878107014`*^9}, {
+   3.934358018174679*^9, 3.934358057343107*^9}, {3.934358093279873*^9, 
+   3.934358101326519*^9}, {3.934358145582926*^9, 3.934358152044241*^9}, {
+   3.9343581974344425`*^9, 3.9343584380950623`*^9}, {3.934358526596323*^9, 
+   3.9343588137569427`*^9}, {3.9343588478030243`*^9, 3.934358848230007*^9}, {
+   3.934358942113983*^9, 3.934359073325098*^9}, {3.9343591481652546`*^9, 
+   3.934359189386915*^9}, {3.934359228189377*^9, 3.9343592687879353`*^9}, {
+   3.9343593533391*^9, 3.934359373597868*^9}, {3.9343595670296917`*^9, 
+   3.934359630420744*^9}, {3.9343597430757446`*^9, 3.934359837136385*^9}, {
+   3.9343607450661373`*^9, 3.9343607458011017`*^9}, {3.9343610285311375`*^9, 
+   3.934361028937828*^9}, {3.9343637178548603`*^9, 3.93436376562241*^9}, {
+   3.934372642980379*^9, 3.9343727839956455`*^9}, 3.93437288399551*^9, {
+   3.9343730615393333`*^9, 
+   3.934373062785309*^9}},ExpressionUUID->"a8066216-b240-e443-9070-\
+be368801ce17"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Bags on a Plane", "Subsection",
+ CellChangeTimes->{{3.9343668547688046`*^9, 
+  3.9343668607589016`*^9}},ExpressionUUID->"e99358a0-36df-4e12-873b-\
+58c4fec060e4"],
+
+Cell[TextData[{
+ "Suppose you are waiting for your bag at the conveyor belt. Suppose further \
+that you know two facts: (1) The prior probability that your bag is on the \
+plane is ",
+ Cell[BoxData[
+  FormBox["p", TraditionalForm]],ExpressionUUID->
+  "7046539a-5cc9-654b-8bec-3d2e3d1cec73"],
+ "\[RawEscape], say ",
+ Cell[BoxData[
+  FormBox["0.95", TraditionalForm]],ExpressionUUID->
+  "e8d215aa-84f9-2347-adcb-8c71053afd39"],
+ ". (2) The last bag from your plane arrives after, say, 30 minutes at the \
+latest, and your bag arrives with equal probability at any time within that \
+half hour. The posterior probability is the probability that your bag is on \
+the plane, given that it hasn\[CloseCurlyQuote]t arrived before time t. "
+}], "Text",
+ CellChangeTimes->{{3.9343668695988903`*^9, 3.9343668767857666`*^9}, {
+   3.9344183370118065`*^9, 3.9344183537556*^9}, {3.9344261369014874`*^9, 
+   3.9344261519573975`*^9}, {3.934426228353798*^9, 3.9344264474067993`*^9}, {
+   3.9344264782361584`*^9, 3.934426504767908*^9}, {3.9344265383801517`*^9, 
+   3.934426880606447*^9}, {3.9344269229409943`*^9, 3.9344269497663155`*^9}, {
+   3.934426983614254*^9, 3.9344269868226852`*^9}, {3.934427111994875*^9, 
+   3.9344271904939785`*^9}, {3.934427226494177*^9, 3.9344272446519337`*^9}, {
+   3.9344272785466576`*^9, 3.9344272841503296`*^9}, {3.934427317110237*^9, 
+   3.934427411903515*^9}, {3.9344274487186527`*^9, 3.934427703027851*^9}, {
+   3.934427770180147*^9, 3.9344279351061115`*^9}, 3.9344279739086704`*^9, {
+   3.9344282980976105`*^9, 
+   3.934428408056225*^9}},ExpressionUUID->"69e381dd-347b-f848-b9cc-\
+6b55b1710113"],
+
+Cell[CellGroupData[{
+
+Cell["The Answer", "Subsubsection",
+ CellChangeTimes->{{3.9344280347727203`*^9, 
+  3.934428038077963*^9}},ExpressionUUID->"16b8fc4a-43cf-49b5-ac92-\
+1a48bd4a253b"],
+
+Cell[TextData[{
+ "To keep the calculations simple, we call the maximum waiting time a time \
+unit. While you are waiting, the probability of our bag being on the plane \
+decreases from ",
+ Cell[BoxData[
+  FormBox["p", TraditionalForm]],ExpressionUUID->
+  "94d9fd6f-8257-834d-b7e0-9fe60d3996eb"],
+ " at time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", " ", "=", " ", "0"}], TraditionalForm]],ExpressionUUID->
+  "44863a50-44f1-6e43-a301-96eb10cc9759"],
+ " to zero at time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", " ", "=", " ", "1"}], TraditionalForm]],ExpressionUUID->
+  "791c5c75-8ff6-0849-886b-e9f054011219"],
+ ". Let\[CloseCurlyQuote]s call ",
+ Cell[BoxData[
+  FormBox["Y", TraditionalForm]],ExpressionUUID->
+  "da9b6433-728c-ed41-a330-cb687e37b40d"],
+ " the fact that your bag is on the plane (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Y", " ", "=", " ", "yes"}], TraditionalForm]],ExpressionUUID->
+  "91d26efa-78fc-4241-825e-08eab50176e2"],
+ " or ",
+ Cell[BoxData[
+  FormBox["no", TraditionalForm]],ExpressionUUID->
+  "639eea2a-6401-6449-9e78-3776720d641f"],
+ ") and ",
+ Cell[BoxData[
+  FormBox["X", TraditionalForm]],ExpressionUUID->
+  "150a9fea-4fed-a64c-a163-45a3d22b01c1"],
+ " the elapsed waiting time (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", " ", "<=", " ", "X", " ", "<=", " ", "1"}], TraditionalForm]],
+  ExpressionUUID->"79a001bc-a259-1544-8f8e-1f2d93f194b0"],
+ "). Here is what we know so far:"
+}], "Text",
+ CellChangeTimes->{{3.9343668695988903`*^9, 3.9343668767857666`*^9}, {
+   3.9344183370118065`*^9, 3.9344183537556*^9}, {3.9344261369014874`*^9, 
+   3.9344261519573975`*^9}, {3.934426228353798*^9, 3.9344264474067993`*^9}, {
+   3.9344264782361584`*^9, 3.934426504767908*^9}, {3.9344265383801517`*^9, 
+   3.934426880606447*^9}, {3.9344269229409943`*^9, 3.9344269497663155`*^9}, {
+   3.934426983614254*^9, 3.9344269868226852`*^9}, {3.934427111994875*^9, 
+   3.9344271904939785`*^9}, {3.934427226494177*^9, 3.9344272446519337`*^9}, {
+   3.9344272785466576`*^9, 3.9344272841503296`*^9}, {3.934427317110237*^9, 
+   3.934427411903515*^9}, {3.9344274487186527`*^9, 3.934427703027851*^9}, {
+   3.934427770180147*^9, 3.9344279351061115`*^9}, {3.9344280625633583`*^9, 
+   3.9344280925412617`*^9}, {3.9344281282105255`*^9, 3.934428157082796*^9}, {
+   3.934428240390579*^9, 3.9344282417456264`*^9}, {3.9344284111329594`*^9, 
+   3.9344284624033337`*^9}, {3.934429116009575*^9, 3.9344291450216503`*^9}, {
+   3.9344294227042313`*^9, 3.9344294238491592`*^9}, 
+   3.9344319913996353`*^9},ExpressionUUID->"f8d469e6-84fe-ad41-81e3-\
+e7beb5b99a0d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"P", "[", 
+   RowBox[{"Y", "=", "yes"}], "]"}], " ", "=", " ", "p"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"P", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"X", " ", ">", " ", "t"}], "|", "Y"}], "=", "yes"}], "]"}], " ", 
+  "=", " ", 
+  RowBox[{"1", "-", "t"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"P", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"X", " ", ">", " ", "t"}], "|", " ", "Y"}], " ", "=", " ", 
+    "no"}], "]"}], " ", "=", " ", "1"}]}], "DisplayFormula",
+ CellChangeTimes->{{3.9344282845244255`*^9, 3.9344282862915993`*^9}, {
+   3.9344284718875675`*^9, 3.9344287473603764`*^9}, {3.9344287885090103`*^9, 
+   3.934428790685999*^9}, {3.934428828874382*^9, 3.934429060641567*^9}, 
+   3.9344290949893627`*^9},ExpressionUUID->"4c0cf08a-183f-7049-86b7-\
+a8492ed48ca3"],
+
+Cell[TextData[{
+ "The fact that your bag does not arrive before time ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],ExpressionUUID->
+  "7abee8e0-ba18-6248-bb65-5ee719a438c8"],
+ " is the additional information to be included in the posterior probability \
+which is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"P", "[", 
+    RowBox[{"Y", "=", 
+     RowBox[{"yes", "|", 
+      RowBox[{"X", ">", "t"}]}]}], "]"}], TraditionalForm]],ExpressionUUID->
+  "8dcc9edb-9420-794a-af60-94edaa1a2a8f"],
+ ". It is given by"
+}], "Text",
+ CellChangeTimes->{{3.9344294307951336`*^9, 3.9344294551208572`*^9}, {
+   3.9344294890486183`*^9, 3.9344294920021496`*^9}, 3.934431999091284*^9, {
+   3.9344320352488003`*^9, 3.9344320375047836`*^9}, {3.9344444396458664`*^9, 
+   3.9344444545738144`*^9}},ExpressionUUID->"a2fddf3b-df93-2b44-8c34-\
+cec1e8312dd2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"P", "[", 
+   RowBox[{"Y", "=", 
+    RowBox[{"yes", "|", 
+     RowBox[{"X", ">", "t"}]}]}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"P", "[", 
+    RowBox[{"Y", "=", "yes"}], "]"}], "*", 
+   RowBox[{
+    RowBox[{"P", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"X", ">", "t"}], "|", "Y"}], "=", "yes"}], "]"}], "/", 
+    RowBox[{"P", "[", 
+     RowBox[{"X", ">", "t"}], "]"}]}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.9344282845244255`*^9, 3.9344282862915993`*^9}, {
+   3.9344284718875675`*^9, 3.9344287473603764`*^9}, {3.9344287885090103`*^9, 
+   3.934428790685999*^9}, {3.934428828874382*^9, 3.934429060641567*^9}, 
+   3.9344290949893627`*^9, {3.9344295044261284`*^9, 3.934429513903469*^9}, {
+   3.9344321373346634`*^9, 3.934432223687992*^9}, {3.9344428121076603`*^9, 
+   3.934442847703682*^9}, {3.948368283267332*^9, 3.9483682838659534`*^9}},
+ CellTags->"tag1",ExpressionUUID->"ce78ead2-b3bb-0a4e-9bac-0349e8022faf"],
+
+Cell[TextData[{
+ "We know the first two factors, ",
+ Cell[BoxData[
+  FormBox["p", TraditionalForm]],ExpressionUUID->
+  "59f7027c-519c-6844-82c3-2ba0494965d5"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "-", "t"}], TraditionalForm]],ExpressionUUID->
+  "9de953c0-6cf3-bf4d-bb68-82fa4e41cf0a"],
+ ", but not the denominator, the unconditional probability ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"P", "[", 
+    RowBox[{"X", ">", "t"}], "]"}], TraditionalForm]],ExpressionUUID->
+  "7c459479-b640-a448-9689-801aa4fc7b26"],
+ ". Here we go, applying  the law of total probability:"
+}], "Text",
+ CellChangeTimes->{{3.934429532579012*^9, 3.9344295820567913`*^9}, {
+  3.9344322556452866`*^9, 3.9344323228084087`*^9}, {3.9344361050637016`*^9, 
+  3.9344361394129105`*^9}, {3.9344444830212574`*^9, 3.9344445041373997`*^9}, {
+  3.9483683427945156`*^9, 
+  3.948368345494976*^9}},ExpressionUUID->"bc738882-ba32-0846-987d-\
+4886bb3b69b7"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"P", "[", 
+   RowBox[{"X", " ", ">", " ", "t"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"P", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"X", ">", "t"}], "|", "Y"}], "=", "yes"}], "]"}], " ", "*", 
+    " ", 
+    RowBox[{"P", "[", 
+     RowBox[{"Y", "=", "yes"}], "]"}]}], "+", " ", 
+   RowBox[{
+    RowBox[{"P", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"X", ">", "t"}], "|", "Y"}], "=", "no"}], "]"}], "*", 
+    RowBox[{"P", "[", 
+     RowBox[{"Y", "=", "no"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\t", 
+  RowBox[{"=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "t"}], ")"}], " ", "*", " ", "p"}], " ", "+", " ", 
+    "1", "-", "p"}]}], " "}], "\[IndentingNewLine]", 
+ RowBox[{"\t", 
+  RowBox[{"=", " ", 
+   RowBox[{"1", " ", "-", 
+    RowBox[{"t", "*", "p"}]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.9344282845244255`*^9, 3.9344282862915993`*^9}, {
+   3.9344284718875675`*^9, 3.9344287473603764`*^9}, {3.9344287885090103`*^9, 
+   3.934428790685999*^9}, {3.934428828874382*^9, 3.934429060641567*^9}, 
+   3.9344290949893627`*^9, {3.9344295044261284`*^9, 3.934429513903469*^9}, 
+   3.9344296943358974`*^9, {3.934444581777626*^9, 
+   3.9344445948976*^9}},ExpressionUUID->"bb9cc3c6-8800-fe4f-b81a-\
+5f0b81978ee5"],
+
+Cell[TextData[{
+ "Plugging this into (",
+ 
+ CounterBox["DisplayFormulaNumbered", "tag1"],
+ ") gives the desired result:"
+}], "Text",
+ CellChangeTimes->{{3.934429703784033*^9, 3.9344297316994457`*^9}, {
+   3.9344365025530186`*^9, 3.934436522418049*^9}, {3.934442261779852*^9, 
+   3.934442268433588*^9}, {3.934442320217676*^9, 3.934442337313177*^9}, 
+   3.9344425410853767`*^9, {3.934442645530531*^9, 3.934442646079645*^9}, {
+   3.9344426815185966`*^9, 3.934442695737814*^9}, 3.9344427603055*^9, 
+   3.934442841318039*^9, {3.9344432852573833`*^9, 3.934443306839493*^9}, {
+   3.9483683049779415`*^9, 3.94836830780974*^9}, {3.948370343369913*^9, 
+   3.9483704266936455`*^9}},ExpressionUUID->"1059e19d-affe-dc4a-8025-\
+302ce83620d6"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"P", "[", 
+   RowBox[{"Y", "=", 
+    RowBox[{"yes", "|", 
+     RowBox[{"X", ">", "t"}]}]}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"P", "[", 
+    RowBox[{"Y", "=", "yes"}], "]"}], "*", " ", 
+   RowBox[{
+    RowBox[{"P", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"X", ">", "t"}], "|", "Y"}], "=", "yes"}], "]"}], "/", 
+    RowBox[{"P", "[", 
+     RowBox[{"X", ">", "t"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"\t", 
+  RowBox[{"=", " ", 
+   RowBox[{"p", "*", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "t"}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"t", "*", "p"}]}], ")"}]}]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.9344282845244255`*^9, 3.9344282862915993`*^9}, {
+   3.9344284718875675`*^9, 3.9344287473603764`*^9}, {3.9344287885090103`*^9, 
+   3.934428790685999*^9}, {3.934428828874382*^9, 3.934429060641567*^9}, 
+   3.9344290949893627`*^9, {3.9344295044261284`*^9, 3.934429513903469*^9}, 
+   3.9344296943358974`*^9, {3.9344365132998943`*^9, 3.934436515122854*^9}, {
+   3.934444576762476*^9, 
+   3.934444600951269*^9}},ExpressionUUID->"a3b16fd3-0393-bd49-925e-\
+5c4a088fc8fd"],
+
+Cell[TextData[{
+ "The ratio ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", "t"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "pt"}], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "dcea734b-bfd3-754e-b05a-edcd0ee512d2"],
+ " quantifies the information gain after waiting time",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", "t"}], TraditionalForm]],ExpressionUUID->
+  "748f64f7-ed2b-8349-a7c9-0faa815462dd"],
+ ". It is less than ",
+ Cell[BoxData[
+  FormBox["1", TraditionalForm]],ExpressionUUID->
+  "12011ef2-f2e2-0e4e-8881-4b8db87e7ea7"],
+ ",  and, as expected, ",
+ Cell[BoxData[
+  FormBox["1", TraditionalForm]],ExpressionUUID->
+  "c34a7bb3-3104-f24e-8f2c-a95f9919532d"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", " ", "=", " ", "0"}], TraditionalForm]],ExpressionUUID->
+  "5e5ae31e-69df-cf45-acb7-4d6545d7f07d"],
+ " and zero for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", " ", "=", " ", "1"}], TraditionalForm]],ExpressionUUID->
+  "0b733ed4-d726-c94e-8bb2-9574da9cc3f5"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.9344282794127026`*^9, 3.9344282802418003`*^9}, {
+  3.9344299408482437`*^9, 3.9344300070027065`*^9}, {3.9344300526834183`*^9, 
+  3.934430114346775*^9}, {3.9344302442826767`*^9, 3.9344303012306023`*^9}, {
+  3.9344446206255703`*^9, 
+  3.9344446229654694`*^9}},ExpressionUUID->"7da37d1a-aee0-b942-805b-\
+e73dc2c8ff19"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", "[", 
+   RowBox[{"t_", ",", " ", "p_"}], "]"}], " ", ":=", " ", 
+  RowBox[{"p", " ", "*", " ", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "-", "t"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"p", " ", "*", "t"}]}], ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", " ", 
+    RowBox[{
+     RowBox[{"g", "[", 
+      RowBox[{"t", ",", " ", "p"}], "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", " ", "0", ",", " ", "1"}], "}"}], ",", "  ", 
+     "\[IndentingNewLine]", 
+     RowBox[{"PlotLabel", "\[Rule]", " ", "\"\<P[Y=yes|X>t], given p\>\""}], ",",
+      " ", "\[IndentingNewLine]", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", " ", "0.5", ",", " ", "1", ",", " ", 
+     RowBox[{"Appearance", " ", "->", " ", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9344304558032417`*^9, 3.934430591732092*^9}, {
+   3.9344306306398716`*^9, 3.934430661579748*^9}, {3.934430751293459*^9, 
+   3.9344308094207973`*^9}, {3.9344309029403706`*^9, 
+   3.9344309840373096`*^9}, {3.9344310257962456`*^9, 3.9344310673674297`*^9}, 
+   3.934431119174822*^9, {3.934431152068905*^9, 3.9344311724067097`*^9}, {
+   3.93443157358177*^9, 3.934431575110224*^9}, {3.93443163329661*^9, 
+   3.9344316974917088`*^9}, {3.934431786476879*^9, 3.93443180558609*^9}, {
+   3.9344318401667614`*^9, 3.9344318749386864`*^9}, {3.934443342424944*^9, 
+   3.9344433881008205`*^9}, {3.9344434188606377`*^9, 3.934443421472769*^9}, {
+   3.9344435375758095`*^9, 3.934443590462679*^9}, {3.9344436437288513`*^9, 
+   3.934443728308138*^9}, {3.934443762339695*^9, 3.93444376284762*^9}, {
+   3.9344438107437935`*^9, 3.9344438433949966`*^9}, {3.934444047078867*^9, 
+   3.934444069059334*^9}, {3.9344441045836277`*^9, 3.934444309899683*^9}, {
+   3.934511474099327*^9, 3.934511507699932*^9}, {3.934511548120714*^9, 
+   3.9345115607410183`*^9}, {3.9345121039040756`*^9, 
+   3.9345121529645634`*^9}, {3.9345121869038067`*^9, 
+   3.9345122320431576`*^9}, {3.9345124880708294`*^9, 
+   3.9345124917110596`*^9}, {3.9345125388469563`*^9, 
+   3.934512557831049*^9}},ExpressionUUID->"5dd306f0-08a5-4a82-8884-\
+5d164e04e834"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`p$$ = 0.5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`p$$], 0.5, 1, ControlType -> Manipulator}}, 
+    Typeset`size$$ = {360., {117.78247639163062`, 123.51440998538062`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`p$$ = 0.5}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> Plot[
+        $CellContext`g[$CellContext`t, $CellContext`p$$], {$CellContext`t, 0, 
+         1}, PlotLabel -> "P[Y=yes|X>t], given p", 
+        PlotRange -> {{0, 1}, {0, 1}}], 
+      "Specifications" :> {{$CellContext`p$$, 0.5, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405.1, {158.99331623538063`, 164.72524982913063`}},
+     SingleEvaluation->True],
+    ExpressionUUID -> "fc2e3c5f-b96f-4aa9-aa0c-0ca1cf18327a",
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.935230951907652*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"a1942de5-2e8e-664d-adc3-8f180abd73e8"]
+}, Open  ]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`p$$ = 0.9390000000000001, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`p$$], 0.5, 1, ControlType -> Manipulator}}, 
+    Typeset`size$$ = {360., {117.78247639163062`, 123.51440998538062`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`p$$ = 0.5}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> Plot[
+        $CellContext`g[$CellContext`t, $CellContext`p$$], {$CellContext`t, 0, 
+         1}, PlotLabel -> "P[Y=yes|X>t], given p", 
+        PlotRange -> {{0, 1}, {0, 1}}], 
+      "Specifications" :> {{$CellContext`p$$, 0.5, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405.1, {158.99331623538063`, 164.72524982913063`}},
+     SingleEvaluation->True],
+    ExpressionUUID -> "b380bcdb-4a27-45d6-97c0-9a504892adc0",
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Input",
+ CellChangeTimes->{3.9345338283939915`*^9},
+ CellLabel->
+  "In[146]:=",ExpressionUUID->"a05482a5-5f74-da43-8f2d-66a514bfc234"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A Maximum Likelihood Prediction", "Subsubsection",
+ CellChangeTimes->{
+  3.934431761049719*^9, 3.9344434146343327`*^9, {3.9345136255979557`*^9, 
+   3.9345136680918865`*^9}, {3.934517157991558*^9, 
+   3.9345171599114113`*^9}},ExpressionUUID->"de15680d-b76c-49f6-baa1-\
+f3093d4e390e"],
+
+Cell[TextData[{
+ "Suppose you are asked to guess at time ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],ExpressionUUID->
+  "d6313559-d185-6642-abf2-ab5c2bc082d2"],
+ " whether your bag is on the plane. A natural approach would be to choose \
+the most likely option; you would answer \[OpenCurlyDoubleQuote]yes, it is\
+\[CloseCurlyDoubleQuote] if ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],ExpressionUUID->
+  "c49873fd-bd8c-2e4d-9639-4532c29ce24e"],
+ " is such that:"
+}], "Text",
+ CellChangeTimes->{{3.9345137004997044`*^9, 3.9345137307074814`*^9}, 
+   3.934513810564804*^9, {3.934513852803917*^9, 3.934513873579258*^9}, 
+   3.9345140182511673`*^9, {3.93451413567568*^9, 3.934514159362816*^9}, {
+   3.9345155236259804`*^9, 3.934515529826214*^9}, {3.934515653049158*^9, 
+   3.9345156608184185`*^9}, {3.934516959931635*^9, 3.9345169653922424`*^9}, {
+   3.93453391661763*^9, 
+   3.9345339368746967`*^9}},ExpressionUUID->"a0a93b5f-538d-a042-b163-\
+b0ab97d3f18f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"P", "[", 
+   RowBox[{"Y", "=", 
+    RowBox[{"yes", "|", 
+     RowBox[{"X", ">", "t"}]}]}], "]"}], " ", "=", "  ", 
+  RowBox[{
+   RowBox[{"p", "*", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "t"}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{"t", "*", "p"}]}], ")"}]}]}], ">=", " ", 
+   "0.5"}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.9345140041960926`*^9, 3.934514012563343*^9}, {
+  3.9345142148204727`*^9, 3.934514215091175*^9}, {3.934514283132145*^9, 
+  3.9345142925953426`*^9}},ExpressionUUID->"3071ec64-4510-6c48-bae5-\
+2c49e2a8e6af"],
+
+Cell[TextData[{
+ "and \[OpenCurlyDoubleQuote]no, it isn\[CloseCurlyQuote]t\
+\[CloseCurlyDoubleQuote] otherwise. That\[CloseCurlyQuote]s the idea behind \
+what\[CloseCurlyQuote]s called a maximum likelihood estimation: you just pick \
+the option with the highest probability. Solving (6) for ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],ExpressionUUID->
+  "56ea5710-49eb-c64a-b87d-d09e0387d7b7"],
+ " gives"
+}], "Text",
+ CellChangeTimes->{{3.934514026963459*^9, 3.9345141188996887`*^9}, {
+  3.934514162843466*^9, 3.934514193259062*^9}, {3.9345143016351833`*^9, 
+  3.934514312035383*^9}, {3.934516976417574*^9, 3.9345169786097717`*^9}, {
+  3.9345170599060936`*^9, 3.9345170657342854`*^9}, {3.934517186288086*^9, 
+  3.9345171923351593`*^9}, {3.934533953570036*^9, 3.9345340116896973`*^9}, {
+  3.9483683877210655`*^9, 
+  3.948368389033556*^9}},ExpressionUUID->"64773f3f-93a2-1f44-8d1d-\
+807b6d8ddbb8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox["t", "tip"], 
+   RowBox[{"(", "p", ")"}]}], " ", "=", " ", 
+  RowBox[{"2", " ", "-", " ", 
+   RowBox[{"1", "/", "p"}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.934514344268116*^9, 3.9345143622116604`*^9}, {
+  3.9345154949301624`*^9, 3.934515497425808*^9}, {3.934515608905163*^9, 
+  3.9345156266913548`*^9}, {3.9345157364339695`*^9, 
+  3.934515763002001*^9}},ExpressionUUID->"1d77b11e-3c65-5941-b389-\
+25771b9a6070"],
+
+Cell[TextData[{
+ "With ",
+ Cell[BoxData[
+  FormBox["p", TraditionalForm]],ExpressionUUID->
+  "f526cc1b-b8bd-1b46-8d81-713de14f8959"],
+ " given, you would say \[OpenCurlyDoubleQuote]yes\[CloseCurlyDoubleQuote] if \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", " ", "<=", " ", 
+    RowBox[{
+     SubscriptBox["t", "tip"], "(", "p", ")"}], " "}], TraditionalForm]],
+  ExpressionUUID->"8769954f-0312-c443-9651-2ee07ae2bcc1"],
+ "and \[OpenCurlyDoubleQuote]no\[CloseCurlyDoubleQuote] after. We get ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["t", "tip"], "(", "0.5", ")"}], "=", " ", "0"}], 
+   TraditionalForm]],ExpressionUUID->"f6021383-76b8-1c45-ae30-ff46b58afcfd"],
+ " ( always \[OpenCurlyDoubleQuote]no\[CloseCurlyDoubleQuote]),  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["t", "tip"], "(", "0.8", ")"}], "=", " ", "0.75"}], 
+   TraditionalForm]],ExpressionUUID->"5bacad2f-d549-d241-bb81-71d93dd73a75"],
+ " ( yes until t = 0.75) ,  and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["t", "tip"], "(", "1", ")"}], "=", " ", "1"}], 
+   TraditionalForm]],ExpressionUUID->"a5ae8bbc-fff7-b948-b1f0-a7615b8fd15d"],
+ " ( always  \[OpenCurlyDoubleQuote]yes\[CloseCurlyDoubleQuote]). Here\
+\[CloseCurlyQuote]s the graph:"
+}], "Text",
+ CellChangeTimes->{{3.9345157702013187`*^9, 3.93451586861145*^9}, {
+   3.934515906619028*^9, 3.934515915225622*^9}, {3.93451600589114*^9, 
+   3.9345161157367496`*^9}, {3.934516174200409*^9, 3.934516174584984*^9}, {
+   3.9345162183689404`*^9, 3.934516245201149*^9}, {3.9345168277038383`*^9, 
+   3.9345168330802937`*^9}, {3.934517078087269*^9, 3.9345170964080887`*^9}, {
+   3.934517228432024*^9, 3.9345172298720474`*^9}, {3.9345175590075912`*^9, 
+   3.9345176997664833`*^9}, 
+   3.934517768559719*^9},ExpressionUUID->"bfe57b1d-1f27-3348-8c4a-\
+af40e9ec7440"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Plot", "[", " ", 
+   RowBox[{
+    RowBox[{"2", " ", "-", 
+     RowBox[{"1", "/", "p"}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"p", ",", " ", "0.5", ",", " ", "1"}], "}"}], ",", "  ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"PlotLabel", "\[Rule]", " ", "\"\<tip(p)\>\""}], ",", " ", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Filling", "\[Rule]", " ", "Bottom"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"PlotRange", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0.5", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.9345143949158382`*^9, 3.9345144764753113`*^9}, {
+  3.934515085619589*^9, 3.9345151476591206`*^9}, {3.9345152358521595`*^9, 
+  3.9345152502591896`*^9}, {3.9345152884507427`*^9, 3.9345152891221848`*^9}, {
+  3.9345159443298035`*^9, 3.9345159749378357`*^9}, {3.934516664448843*^9, 
+  3.9345166684486866`*^9}, {3.9345173588158417`*^9, 3.934517394487768*^9}, {
+  3.9345341080674267`*^9, 3.934534108714382*^9}},
+ CellLabel->
+  "In[147]:=",ExpressionUUID->"47355bd3-ab5d-cb4f-b221-84f5695bbe5a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{916.5, 987.5},
+WindowMargins->{{Automatic, -1883}, {Automatic, 12}},
+TaggingRules-><|"ChatNotebookSettings" -> <|"Assistance" -> True|>|>,
+CellContext->Notebook,
+ShowCellTags->True,
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (December 26, 2024)",
+StyleDefinitions->"Chatbook.nb",
+ExpressionUUID->"470e13e7-3d51-1942-b171-0f3c2b4f355d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "tag1"->{
+  Cell[25514, 609, 977, 22, 38, "DisplayFormulaNumbered",ExpressionUUID->"ce78ead2-b3bb-0a4e-9bac-0349e8022faf",
+   CellTags->"tag1"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"tag1", 45557, 1106}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 384, 7, 157, "Title",ExpressionUUID->"8df1a5d9-2e4d-4eef-9db4-7a2a61abedab"],
+Cell[CellGroupData[{
+Cell[985, 33, 301, 8, 66, "Section",ExpressionUUID->"6514f002-846d-4d83-9a2a-f1605bfb79a5"],
+Cell[CellGroupData[{
+Cell[1311, 45, 322, 5, 53, "Subsection",ExpressionUUID->"da0a0b6f-77dc-40d6-8d92-8a3d620982e1"],
+Cell[1636, 52, 1158, 24, 77, "Text",ExpressionUUID->"80efc66f-8cc2-c946-a1f8-1d5eaa5d60ff"],
+Cell[CellGroupData[{
+Cell[2819, 80, 163, 3, 43, "Subsubsection",ExpressionUUID->"39c5363b-74ff-4f7f-a522-f8fd73a4e196"],
+Cell[2985, 85, 4324, 85, 317, "Text",ExpressionUUID->"c5d5cbf9-9756-ab4b-ba13-b20fc9bc4db6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7346, 175, 169, 3, 43, "Subsubsection",ExpressionUUID->"1e3d3ece-9bec-48a0-a5d5-2ae338eba854"],
+Cell[7518, 180, 3233, 75, 121, "Text",ExpressionUUID->"722b1c43-707b-0d4f-8aaf-15ef77ec89a5"],
+Cell[10754, 257, 1378, 22, 24, "DisplayFormulaNumbered",ExpressionUUID->"a96be2c8-dd7f-fe4f-9665-349b26c248cf"],
+Cell[12135, 281, 2572, 58, 77, "Text",ExpressionUUID->"114c6889-39f8-d342-8830-314e659a8c92"],
+Cell[14710, 341, 1344, 37, 44, "DisplayFormula",ExpressionUUID->"429095cf-93d3-0142-8a19-292eb144840e"],
+Cell[16057, 380, 147, 3, 33, "Text",ExpressionUUID->"490db07a-3e39-0e4b-9869-d380629c5f0f"],
+Cell[16207, 385, 426, 11, 24, "DisplayFormulaNumbered",ExpressionUUID->"da241b62-88b9-da4b-b774-90c3f8dcec54"],
+Cell[16636, 398, 393, 11, 19, "Input",ExpressionUUID->"b9f0a665-43b7-9c40-81b9-dc237d6d9ff5",
+ CellOpen->False],
+Cell[17032, 411, 2239, 47, 55, "Text",ExpressionUUID->"a8066216-b240-e443-9070-be368801ce17"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19320, 464, 167, 3, 53, "Subsection",ExpressionUUID->"e99358a0-36df-4e12-873b-58c4fec060e4"],
+Cell[19490, 469, 1613, 28, 99, "Text",ExpressionUUID->"69e381dd-347b-f848-b9cc-6b55b1710113"],
+Cell[CellGroupData[{
+Cell[21128, 501, 163, 3, 43, "Subsubsection",ExpressionUUID->"16b8fc4a-43cf-49b5-ac92-1a48bd4a253b"],
+Cell[21294, 506, 2555, 56, 77, "Text",ExpressionUUID->"f8d469e6-84fe-ad41-81e3-e7beb5b99a0d"],
+Cell[23852, 564, 826, 21, 65, "DisplayFormula",ExpressionUUID->"4c0cf08a-183f-7049-86b7-a8492ed48ca3"],
+Cell[24681, 587, 830, 20, 55, "Text",ExpressionUUID->"a2fddf3b-df93-2b44-8c34-cec1e8312dd2"],
+Cell[25514, 609, 977, 22, 38, "DisplayFormulaNumbered",ExpressionUUID->"ce78ead2-b3bb-0a4e-9bac-0349e8022faf",
+ CellTags->"tag1"],
+Cell[26494, 633, 929, 23, 55, "Text",ExpressionUUID->"bc738882-ba32-0846-987d-4886bb3b69b7"],
+Cell[27426, 658, 1336, 37, 65, "DisplayFormulaNumbered",ExpressionUUID->"bb9cc3c6-8800-fe4f-b81a-5f0b81978ee5"],
+Cell[28765, 697, 728, 14, 33, "Text",ExpressionUUID->"1059e19d-affe-dc4a-8025-302ce83620d6"],
+Cell[29496, 713, 1202, 32, 44, "DisplayFormulaNumbered",ExpressionUUID->"a3b16fd3-0393-bd49-925e-5c4a088fc8fd"],
+Cell[30701, 747, 1380, 40, 55, "Text",ExpressionUUID->"7da37d1a-aee0-b942-805b-e73dc2c8ff19"],
+Cell[CellGroupData[{
+Cell[32106, 791, 2481, 53, 104, "Input",ExpressionUUID->"5dd306f0-08a5-4a82-8884-5d164e04e834"],
+Cell[34590, 846, 2012, 38, 340, "Output",ExpressionUUID->"a1942de5-2e8e-664d-adc3-8f180abd73e8"]
+}, Open  ]],
+Cell[36617, 887, 2033, 39, 336, "Input",ExpressionUUID->"a05482a5-5f74-da43-8f2d-66a514bfc234"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38687, 931, 288, 5, 43, "Subsubsection",ExpressionUUID->"de15680d-b76c-49f6-baa1-f3093d4e390e"],
+Cell[38978, 938, 968, 20, 55, "Text",ExpressionUUID->"a0a93b5f-538d-a042-b163-b0ab97d3f18f"],
+Cell[39949, 960, 632, 18, 24, "DisplayFormulaNumbered",ExpressionUUID->"3071ec64-4510-6c48-bae5-2c49e2a8e6af"],
+Cell[40584, 980, 902, 17, 55, "Text",ExpressionUUID->"64773f3f-93a2-1f44-8d1d-807b6d8ddbb8"],
+Cell[41489, 999, 478, 11, 25, "DisplayFormulaNumbered",ExpressionUUID->"1d77b11e-3c65-5941-b389-25771b9a6070"],
+Cell[41970, 1012, 1862, 45, 57, "Text",ExpressionUUID->"bfe57b1d-1f27-3348-8c4a-af40e9ec7440"],
+Cell[43835, 1059, 1201, 27, 104, "Input",ExpressionUUID->"47355bd3-ab5d-cb4f-b221-84f5695bbe5a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
