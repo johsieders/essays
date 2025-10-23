@@ -5,6 +5,6 @@ I have attempted to capture some of the key ideas and explain the steps required
 It's my answer to the question: What is modern physics all about?
 I dislike torches and superfast trains, and I embrace clean ideas, even if they are abstract.
 
-<object data="../_static/25-physics-roadmap.pdf" type="application/pdf" width="100%" height="800px">
-  <p>Unable to display PDF. <a href="../_static/25-physics-roadmap.pdf" download>Download PDF</a> instead.</p>
-</object>
+[Download/View PDF](../_static/25-physics-roadmap.pdf)
+
+<embed src="../_static/25-physics-roadmap.pdf" type="application/pdf" width="100%" height="800px" />
