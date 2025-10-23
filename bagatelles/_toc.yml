@@ -33,6 +33,12 @@ parts:
     chapters:
       - file: science/33-cyber-espionage
         title: The Spy Who Came in from the Cloud
+      - file: science/25-physics-roadmap
+        title: Physics Roadmap
+      - file: science/29-physics-one-page
+        title: Modern Physics One-Pager
+      - file: science/30-formal-logic
+        title: Formal Logic
 
   - caption: History
     chapters:

@@ -46,3 +46,5 @@ sphinx:
       navigation_with_keys: true
       show_prev_next: true
     bibtex_reference_style: author_year
+    html_static_path:
+      - _static
