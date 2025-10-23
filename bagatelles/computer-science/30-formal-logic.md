@@ -9,6 +9,6 @@ Formal logic is a model of mathematics with nothing left of mathematics but symb
 And this bizarre system turns out to be equivalent to programming, which is the gist of the Curry-Howard Correspondence.
 
 
-<object data="../_static/30-formal-logic.pdf" type="application/pdf" width="100%" height="800px">
-  <p>Unable to display PDF. <a href="../_static/30-formal-logic.pdf" download>Download PDF</a> instead.</p>
-</object>
+[Download/View PDF](../_static/30-formal-logic.pdf)
+
+<embed src="../_static/30-formal-logic.pdf" type="application/pdf" width="100%" height="800px" />
