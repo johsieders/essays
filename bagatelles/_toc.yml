@@ -20,7 +20,7 @@ parts:
         title: What is a Dream?
       - file: philosophy/18-einstein-philosophy
         title: Einstein and Philosophy
-      - file: philosophy/27-physics
+      - file: philosophy/27-science
         title: Can Science Tell Us Everything?
       - file: philosophy/28-truth
         title: Is Truth Objective, Eternal, and the Same for Everyone?
@@ -31,9 +31,9 @@ parts:
 
   - caption: Computer Science
     chapters:
-      - file: physics/33-cyber-espionage
+      - file: computer-science/33-cyber-espionage
         title: The Spy Who Came in from the Cloud
-      - file: physics/30-formal-logic
+      - file: computer-science/30-formal-logic
         title: Formal Logic
 
   - caption: Physics
@@ -61,8 +61,8 @@ parts:
     chapters:
       - file: literature/22-god-and-evil
         title: Is God responsible for evil?
-      - file: literature/23-is-physics-a-threat
-        title: Is physics a threat to religion?
+      - file: literature/23-is-science-a-threat
+        title: Is science a threat to religion?
       - file: literature/7-genesis-questions
         title: Questions about Genesis
       - file: literature/20-revelations
