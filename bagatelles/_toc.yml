@@ -20,7 +20,7 @@ parts:
         title: What is a Dream?
       - file: philosophy/18-einstein-philosophy
         title: Einstein and Philosophy
-      - file: philosophy/27-science
+      - file: philosophy/27-physics
         title: Can Science Tell Us Everything?
       - file: philosophy/28-truth
         title: Is Truth Objective, Eternal, and the Same for Everyone?
@@ -31,14 +31,22 @@ parts:
 
   - caption: Computer Science
     chapters:
-      - file: science/33-cyber-espionage
+      - file: physics/33-cyber-espionage
         title: The Spy Who Came in from the Cloud
-      - file: science/25-physics-roadmap
-        title: Physics Roadmap
-      - file: science/29-physics-one-page
-        title: Modern Physics One-Pager
-      - file: science/30-formal-logic
+      - file: physics/30-formal-logic
         title: Formal Logic
+
+  - caption: Physics
+    chapters:
+      - file: physics/25-physics-roadmap
+        title: Physics Roadmap
+      - file: physics/29-physics-one-page
+        title: Modern Physics One-Pager
+        
+  - caption: Mathematics
+    chapters:
+      - file: mathematics/arithmetic
+        title: First Steps in Arithmetic
 
   - caption: History
     chapters:
@@ -53,8 +61,8 @@ parts:
     chapters:
       - file: literature/22-god-and-evil
         title: Is God responsible for evil?
-      - file: literature/23-is-science-a-threat
-        title: Is science a threat to religion?
+      - file: literature/23-is-physics-a-threat
+        title: Is physics a threat to religion?
       - file: literature/7-genesis-questions
         title: Questions about Genesis
       - file: literature/20-revelations
@@ -86,11 +94,6 @@ parts:
         title: Modeste proposition pour la sauvegarde du bétail
       - file: literature/14-fliegen
         title: Darf man noch fliegen?
-
-  - caption: Mathematics
-    chapters:
-      - file: mathematics/arithmetic
-        title: First Steps in Arithmetic
 
   - caption: For Fun
     chapters:
