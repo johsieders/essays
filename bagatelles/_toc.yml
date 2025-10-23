@@ -56,6 +56,8 @@ parts:
         title: How did Britain react to the American Civil War?
       - file: history/6-korean-war
         title: The way to the Korean War
+      - file: history/31-edinburgh
+        title: Edinburgh
 
   - caption: Religion
     chapters:
@@ -67,6 +69,8 @@ parts:
         title: Questions about Genesis
       - file: literature/20-revelations
         title: Die Offenbarungen
+      - file: literature/32-religions-in-britain
+        title: Religions in Britain
 
   - caption: Shakespeare
     chapters:

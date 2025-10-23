@@ -11,9 +11,9 @@ flavours (Newton, Hamilton, Schrödinger, Einstein, Klein–Gordon, and Dirac).
 I'll put that sheet on my gravestone.
 
 
-[Download/View PDF](../_static/29-physics-one-page.pdf)
-
 <embed src="../_static/29-physics-one-page.pdf" type="application/pdf" width="100%" height="800px" />
+
+[Download/View PDF](../_static/29-physics-one-page.pdf)
 
 ## References
 
