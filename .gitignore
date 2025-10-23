@@ -10,3 +10,6 @@ __pycache__/
 # Other common excludes
 .DS_Store
 *.swp
+
+# IDE
+.idea/
