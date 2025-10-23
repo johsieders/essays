@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'philosophy/**'           # Jupyter Book content
+      - '../../philosophy_old/**'           # Jupyter Book content
       - 'content/**'              # Jekyll content (essays)
       - 'index.md'                # Landing page
       - '_config.yml'             # Jekyll config
@@ -32,15 +32,15 @@ jobs:
         run: |
           jupyter-book build philosophy/
 
-      # Deploy Jupyter Book to /philosophy/ subdirectory
+      # Deploy Jupyter Book to /philosophy_old/ subdirectory
       # NOTE: We do NOT use enable_jekyll: false here because that creates
       # .nojekyll at the ROOT level, which breaks the main Jekyll site
       - name: Deploy Jupyter Book to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./philosophy/_build/html
-          destination_dir: philosophy
+          publish_dir: ./philosophy_old/_build/html
+          destination_dir: philosophy_old
           keep_files: true
           # DO NOT set enable_jekyll: false - it affects the entire repo
 
@@ -52,5 +52,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           enable_jekyll: true              # Enable Jekyll processing for main site
-          keep_files: true                 # Preserve /philosophy/ subdirectory
-          exclude_assets: '.github,philosophy,.git,**/_build'
+          keep_files: true                 # Preserve /philosophy_old/ subdirectory
+          exclude_assets: '.github,philosophy_old,.git,**/_build'

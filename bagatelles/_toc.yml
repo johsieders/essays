@@ -6,27 +6,27 @@ root: intro
 parts:
   - caption: Philosophy
     chapters:
-      - file: philosophy/4-philo-2charts
+      - file: philosophy_old/4-philo-2charts
         title: Philosophy on Two Charts
-      - file: philosophy/34-medieval-philosophy  
+      - file: philosophy_old/34-medieval-philosophy_old  
         title: Medieval Philosophy *
-      - file: philosophy/10-sciences
+      - file: philosophy_old/10-sciences
         title: L'essence des sciences
-      - file: philosophy/13-kant
+      - file: philosophy_old/13-kant
         title: Kant und seine Zeit
-      - file: philosophy/5-do-we-have-a-soul
+      - file: philosophy_old/5-do-we-have-a-soul
         title: Do We Have a Soul?
-      - file: philosophy/12-what-is-a-dream
+      - file: philosophy_old/12-what-is-a-dream
         title: What is a Dream?
-      - file: philosophy/18-einstein-philosophy
+      - file: philosophy_old/18-einstein-philosophy_old
         title: Einstein and Philosophy
-      - file: philosophy/27-science
+      - file: philosophy_old/27-science
         title: Can Science Tell Us Everything?
-      - file: philosophy/28-truth
+      - file: philosophy_old/28-truth
         title: Is Truth Objective, Eternal, and the Same for Everyone?
-      - file: philosophy/36-free-will
+      - file: philosophy_old/36-free-will
         title: A Dialogue on Free Will *
-      - file: philosophy/mathematics-existence
+      - file: philosophy_old/mathematics-existence
         title: What Exists in Mathematics? *
 
   - caption: Computer Science

@@ -31,7 +31,7 @@ pip install sphinx-proof sphinx-togglebutton
 To build the HTML version:
 
 ```bash
-jupyter-book build philosophy/
+jupyter-book build philosophy_old/
 ```
 
 The HTML output will be in `philosophy/_build/html/`.
@@ -41,7 +41,7 @@ The HTML output will be in `philosophy/_build/html/`.
 To build the PDF version:
 
 ```bash
-jupyter-book build philosophy/ --builder pdflatex
+jupyter-book build philosophy_old/ --builder pdflatex
 ```
 
 The PDF output will be in `philosophy/_build/latex/`.
@@ -51,7 +51,7 @@ The PDF output will be in `philosophy/_build/latex/`.
 To clean previous builds:
 
 ```bash
-jupyter-book clean philosophy/
+jupyter-book clean philosophy_old/
 ```
 
 ## Viewing the Book
@@ -63,7 +63,7 @@ After building, open `philosophy/_build/html/index.html` in your browser.
 To publish to GitHub Pages, you can use:
 
 ```bash
-ghp-import -n -p -f philosophy/_build/html
+ghp-import -n -p -f philosophy_old/_build/html
 ```
 
 ## Author

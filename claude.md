@@ -1,14 +1,55 @@
-# Claude's Analysis: Bagatelles Repository (v0.7)
+# Claude's Analysis: Bagatelles Repository (v0.8)
 
-*Analysis Date: October 21, 2025*
+*Analysis Date: October 23, 2025*
 
 ## Executive Summary
 
-This is a comprehensive collection of philosophical, historical, literary, 
-scientific, and mathematical essays by Johannes Siedersleben. 
-The repository represents version 0.7 of a GitHub Pages website 
-with a **unified Jupyter Book architecture** called "Bagatelles". 
+This is a comprehensive collection of philosophical, historical, literary,
+scientific, and mathematical essays by Johannes Siedersleben.
+The repository represents version 0.8 of a GitHub Pages website
+with a **unified Jupyter Book architecture** called "Bagatelles".
 The site is live at **https://www.jsiedersleben.de/** with HTTPS enabled.
+
+---
+
+## Version 0.8 Changes (October 23, 2025)
+
+### Content Expansion & Reorganization ✅
+
+**Focus**: Added presentation PDFs, comprehensive physics bibliography, and reorganized content structure.
+
+### What Changed
+
+1. **New Section Structure**: Separated Physics and Computer Science
+2. **PDF Presentations Added**: 5 presentation PDFs with embedded viewers
+3. **Comprehensive Physics Bibliography**: Added 25+ physics books and online lecture series
+4. **Archives Cleaned**: Moved old `philosophy/` to `philosophy_old/`
+5. **Git Workflow**: Configured `pull.rebase` to prevent merge conflicts
+
+### PDF Integration System
+
+**New presentations with embedded viewers:**
+- Physics Roadmap (`physics/25-physics-roadmap.pdf`)
+- Modern Physics One-Pager (`physics/29-physics-one-page.pdf`)
+- Formal Logic (`computer-science/30-formal-logic.pdf`)
+- Edinburgh (`history/31-edinburgh.pdf`)
+- Religions in Britain (`literature/32-religions-in-britain.pdf`)
+
+**Technical solution:**
+- PDFs stored in `bagatelles/_static/`
+- Embedded with `<embed>` tags for inline viewing
+- Download links for fallback
+- Relative paths (`../_static/`) for local and deployed compatibility
+
+### Bibliography Enhancement
+
+**Added comprehensive physics references:**
+- Einstein, Feynman, Rovelli, Susskind series
+- Greene, Deutsch, Tegmark, Krauss, Wilczek, Smolin
+- Lancaster & Blundell (Quantum Field Theory)
+- Susskind's Stanford lecture series (6 courses, online links)
+
+**Total entries in `references.bib`**: 40+ books and online resources
 
 ---
 
@@ -32,26 +73,28 @@ The site is live at **https://www.jsiedersleben.de/** with HTTPS enabled.
 
 ---
 
-## Current Repository Structure (v0.7)
+## Current Repository Structure (v0.8)
 
 ```
 essays/
 ├── bagatelles/                        # ACTIVE: Unified Jupyter Book
 │   ├── _config.yml                   # Book configuration
-│   ├── _toc.yml                      # Table of contents (30+ essays)
+│   ├── _toc.yml                      # Table of contents (35+ essays + presentations)
+│   ├── _static/                      # PDF presentations (5 files)
 │   ├── intro.md                      # Landing page
 │   ├── philosophy/                   # 10 essays including mathematics existence
-│   ├── science/                      # 1 essay (cyber espionage)
-│   ├── history/                      # 3 essays
-│   ├── literature/                   # 13 essays (religion, Shakespeare, language)
+│   ├── computer-science/             # 2 presentations (cyber espionage, formal logic)
+│   ├── physics/                      # 2 presentations (roadmap, one-pager)
+│   ├── history/                      # 4 essays (3 + Edinburgh presentation)
+│   ├── literature/                   # 14 essays (13 + Religions in Britain)
 │   ├── mathematics/                  # 3 essays (arithmetic, Euclid)
 │   ├── westfield2.png               # Logo
-│   ├── references.bib               # Bibliography
+│   ├── references.bib               # Bibliography (40+ entries)
 │   └── requirements.txt             # Python dependencies
 ├── .github/workflows/
 │   └── deploy.yml                   # ACTIVE: Simple workflow
 ├── content/                         # ARCHIVED: Old Jekyll markdown files
-├── philosophy/                      # ARCHIVED: Old separate Jupyter Book
+├── philosophy_old/                  # ARCHIVED: Old separate Jupyter Book
 ├── index.md                         # ARCHIVED: Old Jekyll landing page
 └── _config.yml                      # ARCHIVED: Old Jekyll config
 ```
@@ -64,7 +107,7 @@ essays/
 
 **Archived (not deployed, kept for reference)**:
 - `content/` → Original 38+ markdown essays
-- `philosophy/` → Original separate Jupyter Book
+- `philosophy_old/` → Renamed old separate Jupyter Book
 - `index.md` → Original Jekyll landing page
 - `.github/workflows/deploy-book.yml` → Old broken workflow
 
@@ -300,7 +343,7 @@ www  A    185.199.111.153
 
 1. **Clean up archives** (when verified safe):
    ```bash
-   git rm -r content/ philosophy/ index.md _config.yml .github/workflows/deploy-book.yml
+   git rm -r content/ philosophy_old/ index.md _config.yml .github/workflows/deploy-book.yml
    ```
 
 2. **Fix www CNAME** (via IONOS support):
@@ -493,9 +536,9 @@ Strong points:
 
 ## Conclusion
 
-**Version 0.7 is production-ready.** The site is live, secure, and professional. All major technical problems solved. The unified Jupyter Book architecture is clean, maintainable, and scalable.
+**Version 0.8 is production-ready.** The site is live, secure, and professional. All major technical problems solved. The unified Jupyter Book architecture is clean, maintainable, and scalable.
 
-The repository now showcases 30+ high-quality essays across philosophy, science, history, literature, and mathematics, accessible at a custom domain with HTTPS. The structure supports easy expansion and the workflow is simple and reliable.
+The repository now showcases 35+ high-quality essays and presentations across philosophy, computer science, physics, history, literature, religion, and mathematics, accessible at a custom domain with HTTPS. PDF presentations are seamlessly integrated with embedded viewers. The comprehensive physics bibliography provides excellent references for the technical content.
 
 **Next milestone**: Version 1.0 after adding significant formal mathematics content and cleaning up archives.
 
@@ -509,9 +552,9 @@ The repository now showcases 30+ high-quality essays across philosophy, science,
 - **Deployment**: GitHub Actions → GitHub Pages
 - **SSL**: Let's Encrypt (auto-renewed)
 - **Build time**: ~45 seconds
-- **Content**: 30+ essays, 9 sections
+- **Content**: 35+ essays & presentations, 10 sections (including PDF presentations)
 - **Authentication**: SSH (ed25519 key)
 - **Status**: ✅ Fully operational
 
-*Last updated: October 21, 2025*
+*Last updated: October 23, 2025*
 *Analysis by: Claude (Anthropic)*
