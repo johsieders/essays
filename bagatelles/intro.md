@@ -43,7 +43,8 @@ Despite these concerns, AI can contribute greatly to solving our problems and ma
 Yet it can also be misused to lead the world into disaster. 
 Social media, with their horrible impact on opinion-making, are assisted by algorithms and AI.
 And here is the towering threat: Those who hold the power, the ones in office, are they good guys or bad guys?
-I am not too optimistic, given the crowds that seem to have lost their marbles. Or have I lost mine? You decide.
+I am not too optimistic, given the large number of voters who seem to have lost their marbles. 
+Or have I lost mine? You decide.
 
 Johannes Siedersleben
 

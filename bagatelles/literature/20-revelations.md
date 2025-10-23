@@ -1,11 +1,11 @@
 
-## Die Offenbarungen
+# Die Offenbarungen
 
 Johannes Siedersleben, Tuntenhausen, Dezember 2019
 
 Im Schloss von Angers (Maine-et-Loire) hängt ein monumentaler Wandteppich mit den wesentlichen Elementen der Offenbarungen:
 die sieben Siegel, die sieben Posaunen, der Drache, die drei Engel, die sieben Schalen und das neue Jerusalem.
-Im *Namen der Rose* von Umberto Eco sind sechs tote Mönche kunstvoll mit den ersten sechs Posaunen verknüpft. So verspeist Jorge, 
+Im *Namen der Rose* {cite}`eco1982rose` von Umberto Eco sind sechs tote Mönche kunstvoll mit den ersten sechs Posaunen verknüpft. So verspeist Jorge, 
 der blinde Bibliothekar, ein vergiftetes Buch (das zweite Buch des Aristoteles) in Analogie zur sechsten Posaune, 
 wo Johannes ein himmlisches Büchlein isst (sic).
 
@@ -14,7 +14,8 @@ verständlicherweise, muss man sagen. Wir verdanken ihnen Begriffe wie die *apok
 das *Jüngste Gericht*, *Armageddon* und das *Tausendjährige Reich*.
 Der Autor ist mit Sicherheit nicht der Johannes des Evangeliums, denn die Offenbarungen wurden sechzig Jahre
 später verfasst, und ihr Griechisch ist arm und fehlerhaft im Gegensatz zur Eleganz des Evangeliums 
-(Barton, p.154, Freeman, p. 107).
+{cite}`barton2019history`, p.154, {cite}`freeman2011early`, p. 107)
+
 Wir erfahren die sadistischen Details einer Apokalypse in vielen Schritten, den Untergang der Welt auf 
 kleiner Flamme und die anschließende Erlösung als neue Welt Gottes, die aber nur wenigen Auserwählten
 offen steht. Die anderen landen im Feuersee. 
@@ -25,7 +26,7 @@ manchen als Bestätigung der Offenbarungen gewertet. Wer auch immer der Autor wa
 Nur ein kranker Geist konnte dieses Hexen-Einmaleins erfinden. Heute stehen wir ratlos vor dem Text &ndash;
 nimmt ihn noch jemand ernst?
 
-### Was steht da eigentlich drin?
+## Was steht da eigentlich drin?
 
 Die Offenbarungen (22 Kapitel) bestehen aus fünf ungleichen Teilen:
 
@@ -43,14 +44,16 @@ geht das Wasser des Lebens aus, an dem die Bäume des Lebens stehen.
 
 * Epilog (22): *Selig ist, der die Worte dieses Buches bewahrt. Aber wehe dem, der etwas wegnimmt oder hinzufügt.*
 
+## Kapitel 4 bis 20
+
 Hier eine Zusammenfassung der Kapitel 4 bis 20 in Stichpunkten ohne weiteren Kommentar.
 
-#### Vision vom thronenden Gott im Himmel 4,1-11:
+### Vision vom thronenden Gott im Himmel 4,1-11:
 Ein Thron in der Mitte, umgeben von 24 Greisen in weißen Gewändern, ebenfalls auf Thronen sitzend,
 Vor dem Thron sieben Fackeln, welche die sieben Geister Gottes darstellen. Vier himmlische Gestalten mit
 Augen vorne und hinten usw.
 
-#### Das Buch mit den sieben Siegeln 5,1-14
+### Das Buch mit den sieben Siegeln 5,1-14
 Nur das Lamm Gottes, mit sieben Augen und sieben Hörnern (entsprechend den sieben Geistern, die Gott auf die Erde geschickt hat), 
 ist würdig, die Siegel zu öffnen.
 
@@ -75,7 +78,7 @@ f. Sechstes Siegel 6,12-17
 g. Siebtes Siegel 8,1-5: 
 Eine halbe Stunde Stille. Dann bekommen sieben Engel sieben Posaunen.
 
-#### Die sieben Posaunen 8,6-11,19
+### Die sieben Posaunen 8,6-11,19
 
 a. Die erste Posaune 8,7: 
 Hagel und Feuer, ein Drittel der Erde wird verbrannt.
@@ -114,7 +117,7 @@ Die 24 Ältesten loben Gott, dass er die Herrschaft angetreten hat. Der Tempel G
 wird geöffnet, die Bundeslade wird sichtbar. Es kommen ein schweres Erdbeben und
 schwerer Hagel.
 
-#### Kampf des Satans gegen das Volk Gottes
+### Kampf des Satans gegen das Volk Gottes
 
 a. Die Frau und der Drache 12,1-18: 
 Eine Frau gebiert einen Sohn, ein Drache mit sieben Köpfen und zehn Hörnern will
@@ -133,7 +136,7 @@ c. Das Lamm und die Seinen 14,1-5:
 Das Lamm steht auf dem Berg Zion, zusammen mit den 144.000, die jungfräulich
 sind. Sie singen vor dem Thron Gottes ein neues Lied, das nur sie lernen können.
 
-#### Das Jüngste Gericht
+### Das Jüngste Gericht
 
 a. Ankündigung des Gerichts 14,6-13: 
 Drei Engel kündigen das Jüngste Gericht an, den Fall Babylons und die Bestrafung derer, die das erste Tier anbeten.
@@ -209,13 +212,12 @@ Erde und Himmel verschwinden, das Buch des Lebens wird aufgeschlagen.
 Die übrigen Toten stehen auf und werden nach ihren Werken gerichtet. Wer nicht im Buch
 des Lebens verzeichnet ist, wird in den Feuersee geworfen.
 
-### Literatur
 
-John Barton: A History of the Bible, Allen Lane, 2019
+## Literatur
 
-Umberto Eco: Im Namen der Rose, Hanser Verlag, 1982
-
-Charles Freeman: A New History of Early Christianity, Yale University Press, 2011
+```{bibliography}
+:filter: docname in docnames
+```
 
 
 
