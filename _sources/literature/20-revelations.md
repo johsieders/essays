@@ -14,7 +14,7 @@ verständlicherweise, muss man sagen. Wir verdanken ihnen Begriffe wie die *apok
 das *Jüngste Gericht*, *Armageddon* und das *Tausendjährige Reich*.
 Der Autor ist mit Sicherheit nicht der Johannes des Evangeliums, denn die Offenbarungen wurden sechzig Jahre
 später verfasst, und ihr Griechisch ist arm und fehlerhaft im Gegensatz zur Eleganz des Evangeliums 
-{cite}`barton2019history`, p.154, {cite}`freeman2011early`, p. 107)
+{cite}`barton2019history`, p.154, {cite}`freeman2011early`, p. 107.
 
 Wir erfahren die sadistischen Details einer Apokalypse in vielen Schritten, den Untergang der Welt auf 
 kleiner Flamme und die anschließende Erlösung als neue Welt Gottes, die aber nur wenigen Auserwählten
