@@ -4,8 +4,8 @@ Johannes Siedersleben
 
 [ADD YOUR SHORT DESCRIPTION HERE]
 
-[View/Download PDF](30-formal-logic.pdf)
+[View PDF](/_static/30-formal-logic.pdf)
 
-<iframe src="30-formal-logic.pdf" width="100%" height="800px">
-Your browser does not support PDFs. Please download the PDF to view it.
-</iframe>
+<object data="/_static/30-formal-logic.pdf" type="application/pdf" width="100%" height="800px">
+  <p> <a href="/_static/30-formal-logic.pdf">Download PDF</a>.</p>
+</object>
