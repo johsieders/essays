@@ -22,7 +22,7 @@ I could have written a similar text, but not in two seconds.
 [Medieval Philosophy *](philosophy/34-medieval-philosophy.md) is a summary of a conversation with Claude.
 It condenses my view of the subject and is useful when
 read alongside other sources such as {cite:t}`russell2004history` and {cite:t}`adamson2014medieval`. In [A Dialogue on Free Will *](philosophy/36-free-will.md) 
-I defend my view against Claude’s objections, as I do in [What Exists in Mathematics? *](philosophy/mathematics-existence.md) 
+I defend my view against Claude’s objections, as I do in [What Exists in Mathematics? *](philosophy/mathematics-existence.md).
 If you ask Claude to challenge you, it will probably give you more than you asked for. 
 I need a rest after two hours of objection–response exchange, but I accomplish in days what would otherwise have taken weeks or months.
 
@@ -43,8 +43,7 @@ Despite these concerns, AI can contribute greatly to solving our problems and ma
 Yet it can also be misused to lead the world into disaster. 
 Social media, with their horrible impact on opinion-making, are assisted by algorithms and AI.
 And here is the towering threat: Those who hold the power, the ones in office, are they good guys or bad guys?
-Given the crowds that seem to have lost their marbles, I am not too optimistic.
-Or have I lost mine? You decide.
+I am not too optimistic, given the crowds that seem to have lost their marbles. Or have I lost mine? You decide.
 
 Johannes Siedersleben
 
