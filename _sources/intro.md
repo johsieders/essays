@@ -26,21 +26,29 @@ I defend my view against Claude’s objections, as I do in [What Exists in Mathe
 If you ask Claude to challenge you, it will probably give you more than you asked for. 
 I need a rest after two hours of objection–response exchange, but I accomplish in days what would otherwise have taken weeks or months.
 
-
 The papers marked with `*` are AI-assisted.
-They express exactly what I want to say — often better than I could have said it myself.
+They express exactly what I want to say — often better than I could have done it myself.
 I am not the author in the traditional sense; rather, I am the Executive Director. 
-I can sign the paper and stand by its content, exactly as did the boss in the old days, 
-whose collaborators didn't appear on the title page. The student who copy-pastes his subject to GPT and forwards the
-generated text unread to his tutor is a caricature and a challenge for the universities, but no argument against AI.
+I can sign the paper and stand by its content, exactly as did the boss in the old days, 3
+whose collaborators didn't appear on the title page. I could also conceal the contribution of AI:
+after a little reworking, possibly with the help of AI, I defy any expert or AI tool to tell the difference. 
+You could even train an AI to write in this funny old-fashioned German of Einstein, Heisenberg and others! 
+Is this a challenge for Editors and publishers? Does AI assistance devalue an otherwise excellent, informative paper or a discovery?
+I can't see why it should. And what about the credit to the authors? This problem has existed since the beginning of 
+scientific publications. The famous ERP-Paper {cite}`einstein1935epr` was written by Podolsky and seen by Einstein after publication only. 
+As an outsider you just don't know how the contributions of several authors were distributed. 
+The student who copy-pastes his subject into GPT and forwards the
+generated text unread to his tutor is an extreme case. It is a caricature and a challenge for the universities, 
+but no argument against AI.
 
-But there are many: the intellectual-property issue (a challenge for legislators), 
+But there are serious arguments: the intellectual-property issue (a challenge for legislators), 
 the energy footprint (but many AI providers are committed to renewable sources), 
 the job market (how can the value added by AI be distributed fairly?), 
-the singularity issue (no evidence but no way to refute it) — to name just a few.
+the spectre of singularity (no evidence but no way to refute it) — to name just a few.
 Despite these concerns, AI can contribute greatly to solving our problems and making life more worthwhile. 
 
-Yet it can also be misused to lead the world into disaster. 
+Yet it can also be misused to lead the world into disaster.
+{cite}`oneil2016weapons` gives hair-raising examples of the havoc that algorithms can wreak.
 Social media, with their horrible impact on opinion-making, are assisted by algorithms and AI.
 And here is the towering threat: Those who hold the power, the ones in office, are they good guys or bad guys?
 I am not too optimistic, given the large number of voters who seem to have lost their marbles. 

@@ -1,9 +1,9 @@
 # Formal Logic
 
 
-Honestly, and without any boasting: These are the deepest thoughts I know of, they send shivers down my spine.
+This is abbout the deepest thoughts I know of; they send shivers down my spine.
 It's all about models. Mathematics is a model of our world, 
-more details in [What Exists im Mathematics?](philosophy/mathematics-existence).
+more details in [What Exists im Mathematics?](philosophy/mathematics-existence.md).
 Formal logic is a model of mathematics with nothing left of it but symbols and rules to manipulate them.
 And this bizarre system turns out to be equivalent to programming, which is the gist of the Curry-Howard Correspondence.
 
