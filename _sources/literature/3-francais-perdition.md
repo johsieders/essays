@@ -1,5 +1,5 @@
 
-## Le français en voie de perdition?
+# Le français en voie de perdition?
 
 *Johannes Siedersleben, Paris, juillet 2013*
 

@@ -208,7 +208,7 @@ Feuer fällt vom Himmel und verzehrt sie. Auch der Satan wird in
 den See von brennendem Schwefel geworfen.
 
 m. Das Weltgericht 20,11-15: 
-Erde und Himmel verschwinden, das Buch des Lebens wird aufgeschlagen. 
+Erde und Himmel verschwinden, das Buch des Lebens wird aufgeschlagen.
 Die übrigen Toten stehen auf und werden nach ihren Werken gerichtet. Wer nicht im Buch
 des Lebens verzeichnet ist, wird in den Feuersee geworfen.
 

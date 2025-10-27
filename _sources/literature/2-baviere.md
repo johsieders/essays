@@ -1,5 +1,5 @@
 
-## La Bavière
+# La Bavière
 
 *Johannes Siedersleben, Paris, juillet 2013*
 

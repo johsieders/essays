@@ -1,5 +1,5 @@
- 
-## Bertrand Russell Talking about Useless Knowledge
+
+# Bertrand Russell Talking about Useless Knowledge
 
 *Johannes Siedersleben, December 2014*
 
