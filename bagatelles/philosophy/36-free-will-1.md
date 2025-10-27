@@ -2,7 +2,7 @@
 
 *Determinism, Pseudo-Realism, and the Freedom Worth Wanting*
 
-*Johannes Siedersleben, assisted by Claude Sonnet 4.5 
+*Johannes Siedersleben, assisted by Claude Sonnet 4.5     
 October 2025*
 
 ---
