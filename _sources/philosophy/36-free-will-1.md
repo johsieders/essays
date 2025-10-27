@@ -1,6 +1,6 @@
-# Stop Press: Problem of Free Will Dissolved
+# Stop Press: Problem of Free Will Dissolved!
 
-*Determinism, Pseudo-Realism, and the Freedom Worth Wanting*
+*Determinism, Pseudo-Determinism, and the Freedom Worth Wanting*
 
 *Johannes Siedersleben, assisted by Claude Sonnet 4.5     
 October 2025*
@@ -19,7 +19,7 @@ There are, in principle, three possible accounts of human decision-making:
 
 3. **Causal determination**: Our choices are fully determined by our genetic inheritance and our life experiences.
 
-I reject the first option as unscientific and unsupported by evidence. I reject the second as incoherent: random choices are not free choices—they are merely dice rolls that happen to occur in our brains. I embrace the third option, but with an important qualification that I call pseudo-realism.
+I reject the first option as unscientific and unsupported by evidence. I reject the second as incoherent: random choices are not free choices—they are merely dice rolls that happen to occur in our brains. I embrace the third option, but with an important qualification that I call Pseudo-Determinism.
 
 ## The Repository Constitutes the Self
 
@@ -27,7 +27,7 @@ Consider what we are. We possess a genetic endowment—perhaps a few megabytes o
 
 When I make a decision, it depends on some bytes in this personal repository. The repository is me. Therefore, when my decisions flow from it, they flow from myself. This is self-determination in the most literal sense. The apparent threat posed by determinism—that I am merely a puppet of external forces—evaporates once we recognize that these "external forces" constituted me in the first place and continue to operate as me.
 
-## Pseudo-Realism: The Boiling Water Analogy
+## Pseudo-Determinism: The Boiling Water Analogy
 
 Consider a pot of boiling water. Most people would describe the bubbles as appearing randomly—unpredictable in their size, location, and timing. But if we could replicate the initial conditions down to the quantum level and run the process again, the exact same bubbles would form in exactly the same sequence. The bubbles are not genuinely random; they are pseudo-random. Their behaviour is fully determined by initial conditions too complex for us to track.
 
@@ -35,7 +35,7 @@ Human choices exhibit the same character. They feel free and unpredictable—eve
 
 The butterfly effect illustrates this principle: a butterfly's wing-flap in Tokyo might contribute to a thunderstorm in Cornwall, not because the connection is mysterious or magical, but because atmospheric systems exhibit sensitive dependence on initial conditions. The thunderstorm is fully determined by prior physical states, yet its occurrence is practically unpredictable. Similarly, my decision to have coffee rather than tea this morning was determined by countless prior causes stretching back through my personal history, yet no one—including myself—could have reliably predicted it in advance.
 
-The term "pseudo-realism" acknowledges both aspects: the ontological determinism (it is fully caused) and the epistemic unpredictability (we cannot, even in principle, track all the causes). This distinction matters enormously for how we understand ourselves. We are not helpless victims of external forces; we are complex systems whose outputs genuinely emerge from our own internal structure.
+The term "Pseudo-Determinism" acknowledges both aspects: the ontological determinism (it is fully caused) and the epistemic unpredictability (we cannot, even in principle, track all the causes). This distinction matters enormously for how we understand ourselves. We are not helpless victims of external forces; we are complex systems whose outputs genuinely emerge from our own internal structure.
 
 ## Freedom as Self-Determination
 
@@ -65,7 +65,7 @@ Several objections might be raised against this position.
 
 ### Challenge 1: The Simulation Argument
 
-Suppose we could perfectly simulate a human being—replicate all their genes, all their accumulated experiences, every detail down to the quantum level. We run the simulation: the person is offered coffee or tea, and chooses coffee. We reset the simulation with absolutely identical initial conditions and run it again. On my view, the simulated person must choose coffee every single time. But doesn't this reveal that "pseudo-realism" is just determinism in disguise? What work is the "pseudo" prefix actually doing?
+Suppose we could perfectly simulate a human being—replicate all their genes, all their accumulated experiences, every detail down to the quantum level. We run the simulation: the person is offered coffee or tea, and chooses coffee. We reset the simulation with absolutely identical initial conditions and run it again. On my view, the simulated person must choose coffee every single time. But doesn't this reveal that "Pseudo-Determinism" is just determinism in disguise? What work is the "pseudo" prefix actually doing?
 
 The simulation argument does not trouble me. Yes, identical conditions would produce identical choices—that is precisely what determinism entails, and I accept it. The "pseudo" prefix does real work not by introducing ontological indeterminacy but by capturing the practical and experiential difference between simple determinism (a billiard ball's trajectory) and complex determinism (a human choice). The latter feels free because even the agent cannot predict the outcome until it emerges from deliberation.
 
