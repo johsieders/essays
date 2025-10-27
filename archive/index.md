@@ -94,6 +94,6 @@ Johannes Siedersleben
 
 ## Fun
 
-> [Qu'est-ce qu'elle est belle, la Bavière!](content/2-baviere) 
+> [Qu'est-ce qu'elle est belle, la Bavière!](archive/content/2-baviere) 
 
 > [There is more to life than philosophy.](content/999-2westfields.png)
