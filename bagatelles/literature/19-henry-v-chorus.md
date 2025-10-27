@@ -1,5 +1,5 @@
 
-## How Good a Guide to the Play is the Chorus in Henry V?
+# How Good a Guide to the Play is the Chorus in Henry V?
 
 
 Johannes Siedersleben, Oxford, July 2018

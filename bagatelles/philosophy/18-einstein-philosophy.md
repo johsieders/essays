@@ -1,5 +1,5 @@
 
-## Einstein and Philosophy
+# Einstein and Philosophy
 
 Johannes Siedersleben, Oxford,  June 2022
 

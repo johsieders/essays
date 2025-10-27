@@ -21,7 +21,7 @@ The introduction to [First Steps in Arithmetic](mathematics/arithmetic.md) was g
 I could have written a similar text, but not in two seconds.
 [Medieval Philosophy *](philosophy/34-medieval-philosophy.md) is a summary of a conversation with Claude.
 It condenses my view of the subject and is useful when
-read alongside other sources such as {cite:t}`russell2004history` and {cite:t}`adamson2014medieval`. In [Problem of Free Will Dissolved *](philosophy/36-free-will-1.md) 
+read alongside other sources such as {cite}`russell2004history` and {cite}`adamson2014medieval`. In [Problem of Free Will Dissolved *](philosophy/36-free-will-1.md) 
 I defend my view against Claude’s objections, as I do in [What Exists in Mathematics? *](philosophy/mathematics-existence.md).
 If you ask Claude to challenge you, it will probably give you more than you asked for. 
 I need a rest after two hours of objection–response exchange, but I accomplish in days what would otherwise have taken weeks or months.
@@ -40,7 +40,7 @@ The famous EPR paper {cite}`einstein1935epr` was written by Podolsky,
 and Einstein apparently did not see (certainly did not inspect) the final draft before submission, see {cite}`fine1996shaky`, p. 35.
 As an outsider you just don't know how the contributions of the various authors were distributed. 
 The student who copy-pastes his subject into GPT and forwards the
-generated text unread to his tutor is an extreme case. It is a caricature and a challenge for the universities, 
+generated text to the tutor is an extreme case. It is a caricature and a challenge for the universities, 
 but no argument against AI.
 
 But there are serious arguments: the intellectual-property issue (a challenge for legislators), 

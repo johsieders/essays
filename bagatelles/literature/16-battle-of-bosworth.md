@@ -1,5 +1,5 @@
 
-## The Battle of Bosworth &ndash; a Day-By-Day Account
+# The Battle of Bosworth &ndash; a Day-By-Day Account
 
 
 *Johannes Siedersleben, Oxford, July 2014*

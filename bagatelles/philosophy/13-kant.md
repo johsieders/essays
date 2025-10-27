@@ -1,5 +1,5 @@
 
-## Kant und seine Zeit
+# Kant und seine Zeit
 
 *Johannes Siedersleben, Februar 2020*
 

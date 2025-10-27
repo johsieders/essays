@@ -1,5 +1,5 @@
 
-## What Do I Understand by Soul?
+# What Do I Understand by Soul?
 
 *Johannes Siedersleben, Oxford, July 2016*
 

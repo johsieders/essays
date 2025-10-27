@@ -1,5 +1,5 @@
 
-## Hotspur and Harry: Two Sharks in a Pool
+# Hotspur and Harry: Two Sharks in a Pool
 
 *Johannes Siedersleben, Oxford, June 2022*
 

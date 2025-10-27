@@ -36,11 +36,11 @@ The term "pseudo-realism" acknowledges both aspects: the ontological determinism
 
 ## Freedom as Self-Determination
 
-This view aligns with a distinguished philosophical tradition. {cite:t}`spinoza1677ethics` argued that freedom consists in acting from one's own nature, not in acting without cause. To be free is to be self-determined, not undetermined. A falling stone is not free because its motion is imposed externally. A living organism exhibits a kind of freedom when it moves according to its own internal purposes. A human being exhibits the highest form of freedom when decisions flow from rational deliberation, from the integration of values and experiences, from the rich repository that constitutes the self.
+This view aligns with a distinguished philosophical tradition. {cite}`spinoza1677ethics` argued that freedom consists in acting from one's own nature, not in acting without cause. To be free is to be self-determined, not undetermined. A falling stone is not free because its motion is imposed externally. A living organism exhibits a kind of freedom when it moves according to its own internal purposes. A human being exhibits the highest form of freedom when decisions flow from rational deliberation, from the integration of values and experiences, from the rich repository that constitutes the self.
 
-{cite:t}`dennett1984elbow` calls this "the freedom worth wanting"—the ability to respond to reasons, to have one's actions flow from one's own deliberative structure rather than from simple stimulus-response or external coercion. A thermostat is not free, even though it "responds" to temperature. But a human being is free, because the internal complexity is so vast that choices emerge from a genuinely autonomous process.
+{cite}`dennett1984elbow` calls this "the freedom worth wanting"—the ability to respond to reasons, to have one's actions flow from one's own deliberative structure rather than from simple stimulus-response or external coercion. A thermostat is not free, even though it "responds" to temperature. But a human being is free, because the internal complexity is so vast that choices emerge from a genuinely autonomous process.
 
-What drops away on this view is *libertarian* free will {cite:p}`kane1996significance,vaninwagen1983essay,oconnor2024freewill`—the metaphysically mysterious ability to have done otherwise in absolutely identical circumstances. But this was never a coherent concept to begin with. If I could have done otherwise in identical circumstances, the variation would have to come from either randomness (which I reject as incompatible with genuine agency) or from some causally efficacious but non-physical soul (which I reject as unscientific). The "freedom" promised by libertarian free will is either incoherent or undesirable.
+What drops away on this view is *libertarian* free will {cite}`kane1996significance,vaninwagen1983essay,oconnor2024freewill`—the metaphysically mysterious ability to have done otherwise in absolutely identical circumstances. But this was never a coherent concept to begin with. If I could have done otherwise in identical circumstances, the variation would have to come from either randomness (which I reject as incompatible with genuine agency) or from some causally efficacious but non-physical soul (which I reject as unscientific). The "freedom" promised by libertarian free will is either incoherent or undesirable.
 
 ## Implications for Justice
 
@@ -54,7 +54,7 @@ On my view, society retains legitimate interests in responding to criminal behav
 
 What drops away is retributive justice—the idea that punishment is justified because the wrongdoer "deserves to suffer" in some metaphysical sense. Punishing someone for having made a deterministically caused bad decision is like punishing a computer for executing buggy code. We can quarantine the computer, fix the bug, or deter other systems from running similar code—but vindictive punishment serves no rational purpose.
 
-This is not a soft-hearted position but a clear-eyed consequentialist one. The medieval logic of "an eye for an eye" should be abandoned in favour of approaches focused on reducing harm and improving outcomes. Notably, societies that have moved in this direction—particularly Scandinavian countries with rehabilitation-focused prison systems {cite:p}`pratt2008scandinavian,lappi2012penal`—demonstrate dramatically better outcomes than those clinging to retributive models.
+This is not a soft-hearted position but a clear-eyed consequentialist one. The medieval logic of "an eye for an eye" should be abandoned in favour of approaches focused on reducing harm and improving outcomes. Notably, societies that have moved in this direction—particularly Scandinavian countries with rehabilitation-focused prison systems {cite}`pratt2008scandinavian,lappi2012penal`—demonstrate dramatically better outcomes than those clinging to retributive models.
 
 ## Challenges
 
@@ -76,7 +76,7 @@ The subjective experience of deliberation is not epiphenomenal. Deliberation is 
 
 Even granting that retributive punishment is unjustified, doesn't this view eliminate the possibility of genuine moral responsibility? If a person's actions flow inevitably from their repository, and they did not choose their genes or their early experiences, in what sense are they responsible for what they do? And if responsibility evaporates, don't we lose something essential to human dignity and moral community?
 
-Responsibility remains coherent on this view, though reconceived. We hold people responsible not because they possess libertarian free will but because treating them as responsible agents—praising, blaming, reasoning with them—changes their repository in ways that improve future behaviour. {cite:t}`dennett2003freedom` captures it well: we are responsible because we are the kind of beings whose behaviour responds to being held responsible. This is a pragmatic, forward-looking conception of responsibility compatible with determinism.
+Responsibility remains coherent on this view, though reconceived. We hold people responsible not because they possess libertarian free will but because treating them as responsible agents—praising, blaming, reasoning with them—changes their repository in ways that improve future behaviour. {cite}`dennett2003freedom` captures it well: we are responsible because we are the kind of beings whose behaviour responds to being held responsible. This is a pragmatic, forward-looking conception of responsibility compatible with determinism.
 
 ### Challenge 4: The Self-Modification Problem
 
@@ -97,5 +97,6 @@ The freedom worth wanting is not metaphysical immunity from causation. It is the
 ## References
 
 ```{bibliography}
+:filter: docname in docnames
 :style: plain
 ```
