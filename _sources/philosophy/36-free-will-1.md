@@ -2,6 +2,8 @@
 
 *Determinism, Pseudo-Realism, and the Freedom Worth Wanting*
 
+*Johannes Siedersleben, assisted by Claude Sonnet 4.5  
+October 2025*
 ---
 
 Do we genuinely choose our actions, or are our decisions merely the inevitable output of prior causes? Either our choices are determined by preceding events (in which case we seem not to be truly free), or they arise from some form of randomness or supernatural intervention (in which case they aren't really our choices at all). Here is my claim: This dilemma rests on a false premise—that determinism and genuine agency are incompatible. By examining what we actually mean by "self" and "choice," we can dissolve rather than solve the traditional free will problem.
