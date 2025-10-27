@@ -24,8 +24,8 @@ parts:
         title: Can Science Tell Us Everything?
       - file: philosophy/28-truth
         title: Is Truth Objective, Eternal, and the Same for Everyone?
-      - file: philosophy/36-free-will
-        title: A Dialogue on Free Will *
+      - file: philosophy/36-free-will-1
+        title: Problem of Free Will Dissolved
       - file: philosophy/mathematics-existence
         title: What Exists in Mathematics? *
 
