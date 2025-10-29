@@ -2,6 +2,9 @@
 
 *A Defense of Formalism Against Platonism*
 
+*Johannes Siedersleben, assisted by Claude Sonnet 4.5     
+October 2025*
+
 ---
 
 Do mathematical objects exist independently of human minds? When we prove theorems about prime numbers, are we discovering pre-existing truths in some Platonic realm, or are we manipulating symbols according to rules we invented? This ancient question has gained new urgency as computers formalize mathematics and as we confront the "unreasonable effectiveness" of mathematics in physics.
@@ -10,7 +13,7 @@ My position: mathematics is human-constructed formal symbol manipulation, refine
 
 ## Numbers as Models of What We See
 
-The story begins with simple observation. In everyday experience, we encounter countable items: fingers, trees, pebbles. When we have five fingers and five pebbles, they share something we might call "fiveness," even though fingers and pebbles differ in every other respect. Numbers emerge as abstractions from this counting experience. We strip away everything particular about the objects—their color, texture, weight—and retain only their countability.
+When we have five fingers and five pebbles, they share something we might call "fiveness," even though fingers and pebbles differ in every other respect. Numbers emerge as abstractions from this counting experience. We strip away everything particular about the objects—their color, texture, weight—and retain only their countability.
 
 There must have been a first person to grasp the concept of "three" as something distinct from three particular objects. Numbers were invented by humans through this abstraction process. They exist, at minimum, in our minds as abstract concepts. Whether they exist anywhere else is the question at stake.
 
