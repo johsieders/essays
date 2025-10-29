@@ -1,4 +1,4 @@
-# Bagatelles
+ # Bagatelles
 
 These are papers I wrote over the last few years,
 some in Oxford ([OUSSA](https://www.conted.ox.ac.uk/about/oussa)),
