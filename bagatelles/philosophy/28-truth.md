@@ -24,8 +24,8 @@ counterpart in the real world, while mathematics models part of it. Numbers, for
 of everything that can be counted: five apples, five fingers and five pounds share the property of fiveness, 
 and 7 + 5 = 12, no matter what is added. Vector spaces, as another example, are a model of the space 
 we live in and of much more. It should be noted that the rules of the mathematical game are not entirely 
-arbitrary. Rather, they have been adjusted until mathematics matches the world. This is one of the reasons 
-*why it works so well* (cf. Yanofski).
+arbitrary. Rather, they have been adjusted until mathematics matches the world. This is one of the reasons
+*why it works so well* {cite}`yanofski2016mathematics`.
 
 The bedrock of mathematical truth is not as solid as you might think. Some theorems can be 
 approximately verified by counting or measuring, such as the Pythagorean Theorem, but most cannot: 
@@ -33,17 +33,17 @@ how would you verify that the number of primes is infinite? We have to trust our
 or that of other mathematicians, that the proof is valid. Consider this: Andrew Wiles' proof of 
 Fermat's Theorem is over 100 pages long and has been fully understood by only a few experts. 
 How many of them, perhaps weighted by reputation, are needed to confirm a proof? And it gets worse: 
-Around 1900, the foundations of mathematics were completely overhauled by scientists such as Russell, 
-Cantor, Hilbert, and many others. The existing theorems remained valid, but many proofs had to be revised. 
-In 1931, Gödel shattered mathematics with his incompleteness theorems: many propositions can neither 
-be proved nor disproved. When will the next Russell come along to revise the foundations again, 
+Around 1900, the foundations of mathematics were completely overhauled by scientists such as Russell,
+Cantor, Hilbert, and many others. The existing theorems remained valid, but many proofs had to be revised.
+In 1931, Gödel shattered mathematics with his incompleteness theorems {cite}`franzen2005godel,hoffmann2013grenzen`: many propositions can neither
+be proved nor disproved. When will the next Russell come along to revise the foundations again,
 the next Gödel to reveal even more incompleteness?
 
 ## Physics
 This is how physicists work: they start with a handful of non-provable principles, such as the constant speed 
 of light or the principle of least action. They then apply appropriate mathematical theories and test the 
-results in the laboratory. This process is repeated until mathematics matches the measurements. 
-Historically, things have been less straightforward (cf. Kuhn), but that is the essence. 
+results in the laboratory. This process is repeated until mathematics matches the measurements.
+Historically, things have been less straightforward {cite}`kuhn2012structure`, but that is the essence. 
 Physicists have been extremely successful: relativity, quantum mechanics, quantum field theory 
 have changed our world. Without physics, there would be no computers, no aeroplanes, no spacecraft. 
 Truth in physics depends on empirical evidence, which by definition is limited, and more so than 
@@ -90,15 +90,9 @@ spread by less benign groups. What if they win the next election?
 
 ## References
 
-Torkel Franzén: Gödel’s Theorem. An Incomplete Guide to its Use and Abuse. CRC Press, 2005
-
-Dirk Hoffmann: Grenzen der Mathematik. Springer, 2013
-
-Thomas Kuhn: The Structure of Scientific Revolutions. University of Chicago Press, 2012
-
-Bertrand Russell: History of Western Philosophy. Routledge Classics, 1996 (reprint)
-
-Noson S. Yanofski: Why Mathematics Works so Well? In: A. Aguirre, B. Foster, Z. Merali: Trick or Truth? Springer, 2016, p. 211 – 228
+```{bibliography}
+:filter: docname in docnames
+```
 
 
 
