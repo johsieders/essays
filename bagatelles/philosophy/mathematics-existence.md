@@ -41,14 +41,13 @@ Chess has no counterpart in the real world—it's pure rule-following. Mathemati
 
 Chess illustrates the formal nature of mathematics, but mathematics extends far beyond anything with obvious empirical applications. 
 Mathematicians freely generalize and explore. Complex numbers, quaternions, the number googol (10<sup>100</sup>), and far more exotic constructs emerge naturally as extensions of simpler systems.
-
-The key insight: we choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.
+We choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.
 
 Even basic arithmetic facts should be understood as conventional rather than metaphysically necessary. The statement "1 + 1 = 2" is a definition within the Peano axiom system, not a discovery about pre-existing abstract objects. Each number has exactly one successor by definition: the successor of 1 is called 2, and that's the end of the matter. Once we establish Peano arithmetic, theorems follow necessarily from the axioms—but the axioms themselves represent conventional choices, refined over time by what proves useful.
 
 ## The Correctness Problem: Symbol Manipulation
 
-Here is a radical claim: mathematics can, at least in theory, be reduced to mere symbol manipulation. A computer can verify proofs mechanically without understanding what they mean. Given formal axioms and inference rules, a machine can check whether a purported proof is valid—just symbol pushing according to syntactic rules.
+Mathematics can, at least in theory, be reduced to mere symbol manipulation. A computer can verify proofs mechanically without understanding what they mean. Given formal axioms and inference rules, a machine can check whether a purported proof is valid—just symbol pushing according to syntactic rules.
 
 Consider the proof that √2 is irrational. A computer can verify this proof by checking each logical step, ensuring each follows from previous steps or axioms according to the rules of inference. The computer need not understand what "irrational" means, what square roots are, or why the result matters. It simply manipulates symbols according to rules.
 
@@ -60,7 +59,7 @@ The bedrock of mathematical truth is not as solid as it might appear. Around 190
 
 ## Darwinian Selection of Mathematical Theories
 
-The central puzzle: Why does mathematics "work"? Why does it apply to physical reality with such remarkable precision? The answer lies in understanding mathematics not as discovery but as a selection process analogous to biological evolution.
+Why does mathematics "work"? Why does it apply to physical reality with such remarkable precision? The answer lies in understanding mathematics not as discovery but as a selection process analogous to biological evolution.
 
 Mathematics is pseudo-arbitrary. We could have invented other types of mathematics—and we did. We have kept the ones that are still around because they are useful. Similarly, we could have invented other board games, and we certainly did. We have kept the ones that are still around because we like them.
 
