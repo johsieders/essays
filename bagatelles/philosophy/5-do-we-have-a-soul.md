@@ -172,3 +172,5 @@ tackle trivial problems like bad temper. But the L-soul is something to work on,
 methods and tools to start with, to progress year by year, century by century. The D-soul is a different
 kettle of fish. It leads directly to the nagging question: Will I (that is: my D-soul) or will I not get a
 place in paradise? The dispute about how to get a ticket has done untold harm to mankind to this day.
+
+<div style="margin-bottom: 100px;"></div>

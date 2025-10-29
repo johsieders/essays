@@ -11,3 +11,5 @@ And this bizarre system turns out to be equivalent to programming, which is the 
 <embed src="../_static/30-formal-logic.pdf" type="application/pdf" width="100%" height="800px" />
 
 [Download/View PDF](../_static/30-formal-logic.pdf)
+
+<div style="margin-bottom: 100px;"></div>

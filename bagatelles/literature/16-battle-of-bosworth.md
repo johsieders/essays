@@ -92,3 +92,5 @@ Battle of Bosworth.
 [1] Cheetham, Anthony: The Life and the Time of Richard II, reprinted and reissued in 1992
 
 [2] Lander, J.R.: The War of the Roses. Alan Sutton, reprinted in 1993
+
+<div style="margin-bottom: 100px;"></div>

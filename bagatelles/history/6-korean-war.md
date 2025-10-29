@@ -134,3 +134,5 @@ and unwilling to return home. The war ended officially on July 27, 1953 with an 
 Panmunjong. It established a demilitarised zone, returned the city of Kaesong to North Korea which
 lost a net of 3,900 km2 to South Korea. The Korean War had come to an end, but the iron curtain
 should remain closed for another 40 years. And the Korean division persists to the present.
+
+<div style="margin-bottom: 100px;"></div>

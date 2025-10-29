@@ -285,3 +285,5 @@ Mit diesen drei Kritiken gibt Kant eine abstrakte, aus seiner Sicht vollständig
 menschlichen Denkens und Handelns. Zwei andere Werke der kritischen Periode verdienen eine
 Erwähnung: Die Prolegomena zu jeder künftigen Metaphysik (1783) und die Grundlage zur
 Metaphysik der Sitten (1785), eine erste Version der Kritik der praktischen Vernunft.
+
+<div style="margin-bottom: 100px;"></div>

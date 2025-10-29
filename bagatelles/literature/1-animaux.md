@@ -30,3 +30,5 @@ place. On ne mangerait de la viande que trois fois par semaine avec deux fois pl
 éleveurs gagneraient autant qu’avant, les consommateurs ne payeraient pas plus cher et les bêtes
 auraient la belle vie, un peu comme les moutons normands qui broutent l’herbe en profitant de la
 vue sur le Mont St. Michel. Une utopie ? Et si on commençait par une réduction de 10 pourcents au lieu de 50 ?
+
+<div style="margin-bottom: 100px;"></div>

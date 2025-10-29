@@ -101,3 +101,5 @@ Evan Thompson: Waking, Dreaming, Being, Columbia University Press, 2015
 Link verified on 11 June 2017
 http://overviewbible.com/infographic-dreams-bible/
 
+
+<div style="margin-bottom: 100px;"></div>

@@ -94,3 +94,5 @@ But ‘fine’, ‘amazing’ and ‘nice’ convey little information, do not s
 * Have a twinkle in your eyes as you write, and don’t take yourself too seriously. The pleasure
 however is on the reader’s side, not on yours. This is unfortunate for writers but the world has
 been so designed.
+
+<div style="margin-bottom: 100px;"></div>

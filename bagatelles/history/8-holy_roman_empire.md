@@ -130,3 +130,5 @@ Joachim Whaley: The Holy Roman Empire. A Very Short Introduction. Oxford Univers
 
 Peter H. Wilson: The Holy Roman Empire. Penguin Books, 2016
 
+
+<div style="margin-bottom: 100px;"></div>
