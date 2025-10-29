@@ -53,3 +53,5 @@ would emerge unified out of this war. But no one could imagine that not even a l
 ## References
 
 [1] Kathleen Burk: Old World, New World. The Story of Britain and America. Abacus, 2009
+
+<div style="margin-bottom: 100px;"></div>

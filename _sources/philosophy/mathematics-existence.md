@@ -39,7 +39,8 @@ Chess has no counterpart in the real world—it's pure rule-following. Mathemati
 
 ## Mathematics as Formal System
 
-Chess illustrates the formal nature of mathematics, but mathematics extends far beyond anything with obvious empirical applications. Mathematicians freely generalize and explore. Complex numbers, quaternions, the number googol (10^100), and far more exotic constructs emerge naturally as extensions of simpler systems.
+Chess illustrates the formal nature of mathematics, but mathematics extends far beyond anything with obvious empirical applications. 
+Mathematicians freely generalize and explore. Complex numbers, quaternions, the number googol (10<sup>100</sup>), and far more exotic constructs emerge naturally as extensions of simpler systems.
 
 The key insight: we choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.
 

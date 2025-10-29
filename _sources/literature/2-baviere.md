@@ -55,3 +55,5 @@ La Bavière n’est pas un pays extraordinaire. Des montagnes, des lacs, des riv
 villages, il y en a partout. Elle n’a rien qu’on ne trouve ailleurs. 
 Et pourtant, elle est unique en réunissant tous ces éléments en un ensemble 
 qui renforce les beautés et estompe les laideurs. 
+
+<div style="margin-bottom: 100px;"></div>

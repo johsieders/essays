@@ -138,3 +138,5 @@ qui considère tout problème scientifique irrésolu comme une confirmation de l
 découverte comme une défaite. Alors, qui a créé l’homme ? Chacun a le droit de se faire son idée
 sans entrer en conflit avec les sciences. Moi, je dirais que c’est le même qui a combiné la loi de la pesanteur.
 
+
+<div style="margin-bottom: 100px;"></div>

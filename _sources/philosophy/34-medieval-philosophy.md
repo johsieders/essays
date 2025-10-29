@@ -126,3 +126,5 @@
 3. The trajectory from Anselm's optimism through Aquinas' synthesis to Ockham's separation enabled modern science
 4. Medieval theological debates are historically important but don't illuminate how nature actually works
 5. Modern science is methodologically nominalist and operates within Ockham's separation of domains
+
+<div style="margin-bottom: 100px;"></div>
