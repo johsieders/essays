@@ -1,337 +1,275 @@
-# What Exists in Mathematics? A Defense of Formalism Against Platonism
+# What Exists in Mathematics?
 
-*This essay develops arguments from a philosophical dialogue with Claude Sonnet 4.5, conducted over three sessions of about two hours each. The anti-Platonist position and its defenses are mine; the challenges and objections are Claude's. The text itself is Claude's synthesis, revised according to my specifications.*
+*A Defense of Formalism Against Platonism*
 
-## Introduction: The Central Question
+---
 
 Do mathematical objects exist independently of human minds? When we prove theorems about prime numbers, are we discovering pre-existing truths in some Platonic realm, or are we manipulating symbols according to rules we invented? This ancient question has gained new urgency as computers formalize mathematics and as we confront the "unreasonable effectiveness" of mathematics in physics.
 
-This essay develops and examines an anti-Platonist position: mathematics is human-constructed formal symbol manipulation, refined by selection pressure from empirical applications. Mathematical "existence" means consistency within a chosen formal system, not discovery of pre-existing abstract objects. While this view faces challenges—particularly regarding mathematical applicability and the nature of mathematical existence—it offers a coherent alternative to Platonism without metaphysical extravagance.
+My position: mathematics is human-constructed formal symbol manipulation, refined by selection pressure from empirical applications. Mathematical "existence" means consistency within a chosen formal system, not discovery of pre-existing abstract objects. Prime numbers exist exactly as much as the Sicilian Defense exists—as patterns within rule structures humans created.
 
-Einstein captured an essential tension when he said {cite}`einstein1950laws`: "As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they do not refer to reality." This insight illuminates the gap between mathematical models (certain within their formal systems) and physical reality (which our models approximate but never perfectly capture). The question is whether this gap reveals mathematics as human construction or whether it merely reflects our imperfect access to mathematical truth.
+## Numbers as Models of What We See
 
-## The Anti-Platonist Position
+The story begins with simple observation. In everyday experience, we encounter countable items: fingers, trees, pebbles. When we have five fingers and five pebbles, they share something we might call "fiveness," even though fingers and pebbles differ in every other respect. Numbers emerge as abstractions from this counting experience. We strip away everything particular about the objects—their color, texture, weight—and retain only their countability.
 
-### Origins in Empirical Abstraction
+There must have been a first person to grasp the concept of "three" as something distinct from three particular objects. Numbers were invented by humans through this abstraction process. They exist, at minimum, in our minds as abstract concepts. Whether they exist anywhere else is the question at stake.
 
-The position begins with a simple observation about the physical world. In our everyday experience, we encounter countable items: fingers, trees, pebbles. When we have five fingers and five pebbles, they share something we might call "fiveness," even though fingers and pebbles differ in every other respect. Numbers, on this view, emerge as abstractions from this counting experience. We strip away everything particular about the objects—their color, texture, weight—and retain only their countability.
+The mathematical process follows a three-stage pattern. First, we abstract from the real world to create formal models—numbers, geometric figures, algebraic structures. Second, we reason within these abstractions, proving theorems and developing theories. Third, we apply our results back to the real world. Remarkably, five plus seven equals twelve regardless of whether we're adding fingers, pebbles, or days. This universal applicability demands explanation, but the explanation need not invoke Platonic realms. As {cite}`leifer2016mathematics` argues, mathematics can be understood as a natural science—"the study of regularities, within regularities, within regularities of the natural world"—which explains why it applies so effectively to physics.
 
-This abstraction process suggests that numbers were invented by humans. There must have been a first person to grasp the concept of "three" as something distinct from three particular objects. Numbers exist, at minimum, in our minds as these abstract concepts. Whether they exist anywhere else is the question at stake.
+Consider another example: the anonymous scientist who, long before the Common Era, studied round objects like bowls, wheels, and the sun. He abstracted away properties such as weight, color, and the third dimension, eventually arriving at the idea of roundness shared by these objects: the circle was invented. Much later, Archimedes calculated its surface, circumference, and the number π. The circle is an abstraction or a model; bowls, wheels, and the sun are tangible instances, but they are never perfectly round. Archimedes' formula is exact for an ideal circle (which isn't real), but approximate otherwise.
 
-The mathematical process then follows a three-stage pattern. First, we abstract from the real world to create formal models—numbers, geometric figures, algebraic structures. Second, we reason within these abstractions, proving theorems and developing theories using chosen axioms and inference rules. Third, we apply our results back to the real world, using mathematical conclusions to make predictions. Remarkably, five plus seven equals twelve regardless of whether we're adding fingers, pebbles, or days. This universal applicability demands explanation, but the explanation need not invoke Platonic realms.
+Einstein captured this tension perfectly {cite}`einstein1950laws`: "As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they do not refer to reality."
 
-### Mathematics as Formal System
+## The Chess Analogy
 
-This view does not confine itself to mathematics with obvious empirical applications. Mathematicians are free to generalize and explore far beyond immediate practical needs. Complex numbers, quaternions, the number googol (10^100), and far more exotic constructs emerge naturally as extensions of simpler systems. The key insight is that we choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.
+Consider chess. The game has fixed, arbitrary rules invented by humans. Within this rule structure, certain truths are indisputable: a knight moves in an L-shape, castling requires specific conditions, checkmate ends the game. These truths are objective, eternal, and the same for everyone who plays chess. But they are relative to arbitrary, man-made rules.
 
-Crucially, even basic arithmetic facts should be understood as conventional rather than metaphysically necessary. The statement "1 + 1 = 2" is a definition within the Peano axiom system, not a discovery about pre-existing abstract objects. Each number has exactly one successor by definition: the successor of 1 is called 2, and that's the end of the matter. Once we establish Peano arithmetic, theorems follow necessarily from the axioms—but the axioms themselves represent conventional choices, refined over time by what proves useful.
+No one believes chess pieces exist in some Platonic realm, waiting to be discovered. We invented chess. The rules could have been different—and indeed, there are chess variants with different boards, different pieces, different rules. Yet within standard chess, truth is perfectly clear and binding.
 
-### The Darwinian Selection Model
+Mathematics works the same way. Natural numbers populate the set ℕ and are subject to Peano's axioms, which are arbitrary and man-made, just like chess rules. The axioms are the rules of the game. Logical steps from one statement to the next are the moves. Mathematical theorems are positions you can reach by legal moves from the starting position (the axioms).
 
-The central puzzle becomes: Why does mathematics "work"? Why does it apply to physical reality with such remarkable precision? The answer lies in understanding mathematics not as discovery but as a selection process analogous to biological evolution.
+What do numbers have in common with chess? Numbers are the chess pieces, the set ℕ is the chessboard, the axioms are the chess rules, and logical inference is moving the pieces. Peano arithmetic is just another game. Alternative games exist: Robinson arithmetic or Presburger arithmetic, where some of Peano's axioms are dropped—a bit like chess without knights or bishops.
 
-Consider the variation side of the equation. Mathematicians freely explore and generalize, proving theorems and developing theories far in excess of what applications require. There are millions of mathematical theorems in the literature, and the vast majority have no known application to physics or engineering. Pure mathematicians pursue questions for their intrinsic interest, follow aesthetic impulses toward elegance, and generalize concepts simply to see where they lead. This generates an enormous inventory of mathematical results, most of which will never find practical use.
+Do these different arithmetical systems agree that 1 + 1 = 2? They do: according to an axiom shared by all three systems, every natural number has exactly one successor (that's what "+1" means), and the successor of 1 is called 2. To say that 1 + 1 = 2 is like saying that a triangle has three angles. It's true by definition within the system.
 
-On the selection side, physicists and engineers continually pose problems requiring mathematical solutions. They need tools for quantum mechanics, general relativity, fluid dynamics, cryptography, signal processing. When a physics problem arises, physicists search the mathematical inventory for applicable tools. Sometimes they find what they need already developed; sometimes they collaborate with mathematicians to extend existing frameworks. Functional analysis, for instance, was substantially developed in response to the needs of quantum mechanics. Riemannian geometry, originally explored for purely mathematical reasons in the 1850s, was revived and extended when Einstein needed it for general relativity in the 1910s.
+Chess has no counterpart in the real world—it's pure rule-following. Mathematics, by contrast, models part of reality. Numbers model everything that can be counted: five apples, five fingers, and five pounds share the property of fiveness, and 7 + 5 = 12, no matter what is being added. This is the crucial difference, and it explains why mathematical "rules" aren't entirely arbitrary. They have been adjusted over time until mathematics matches the world.
+
+## Mathematics as Formal System
+
+Chess illustrates the formal nature of mathematics, but mathematics extends far beyond anything with obvious empirical applications. Mathematicians freely generalize and explore. Complex numbers, quaternions, the number googol (10^100), and far more exotic constructs emerge naturally as extensions of simpler systems.
+
+The key insight: we choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.
+
+Even basic arithmetic facts should be understood as conventional rather than metaphysically necessary. The statement "1 + 1 = 2" is a definition within the Peano axiom system, not a discovery about pre-existing abstract objects. Each number has exactly one successor by definition: the successor of 1 is called 2, and that's the end of the matter. Once we establish Peano arithmetic, theorems follow necessarily from the axioms—but the axioms themselves represent conventional choices, refined over time by what proves useful.
+
+## The Correctness Problem: Symbol Manipulation
+
+Here is a radical claim: mathematics can, at least in theory, be reduced to mere symbol manipulation. A computer can verify proofs mechanically without understanding what they mean. Given formal axioms and inference rules, a machine can check whether a purported proof is valid—just symbol pushing according to syntactic rules.
+
+Consider the proof that √2 is irrational. A computer can verify this proof by checking each logical step, ensuring each follows from previous steps or axioms according to the rules of inference. The computer need not understand what "irrational" means, what square roots are, or why the result matters. It simply manipulates symbols according to rules.
+
+This is not how mathematicians actually work, of course. Human mathematicians think about what theorems mean, develop intuitions, seek elegant arguments. But the *verification* of proofs can be mechanical. This is what proof assistants like Coq and Lean exploit. They formalize mathematics to the point where correctness becomes a computational question: does this string of symbols follow from these axioms according to these rules?
+
+If mathematical truth were discovery of facts about pre-existing Platonic objects, this mechanical verifiability would be mysterious. How could symbol manipulation reveal truths about a transcendent realm? But if mathematics is a formal game we invented—elaborate chess—then mechanical verification makes perfect sense. We're just checking whether someone played by the rules.
+
+The bedrock of mathematical truth is not as solid as it might appear. Around 1900, the foundations of mathematics were completely overhauled by Russell, Cantor, Hilbert, and many others. Existing theorems remained valid, but many proofs had to be revised. In 1931, Gödel shattered mathematics with his incompleteness theorems: many propositions can neither be proved nor disproved within any sufficiently powerful formal system. When will the next Russell come along to revise the foundations again, the next Gödel to reveal even more incompleteness?
+
+## Darwinian Selection of Mathematical Theories
+
+The central puzzle: Why does mathematics "work"? Why does it apply to physical reality with such remarkable precision? The answer lies in understanding mathematics not as discovery but as a selection process analogous to biological evolution.
+
+Mathematics is pseudo-arbitrary. We could have invented other types of mathematics—and we did. We have kept the ones that are still around because they are useful. Similarly, we could have invented other board games, and we certainly did. We have kept the ones that are still around because we like them.
+
+Consider the variation side. Mathematicians freely explore and generalize, proving theorems and developing theories far in excess of what applications require. There are millions of mathematical theorems in the literature, and the vast majority have no known application to physics or engineering. Pure mathematicians pursue questions for their intrinsic interest, follow aesthetic impulses toward elegance, and generalize concepts simply to see where they lead. This generates an enormous inventory of mathematical results, most of which will never find practical use.
+
+On the selection side, physicists and engineers continually pose problems requiring mathematical solutions. They need tools for quantum mechanics, general relativity, fluid dynamics, cryptography, signal processing. When a physics problem arises, physicists search the mathematical inventory for applicable tools. Sometimes they find what they need already developed; sometimes they collaborate with mathematicians to extend existing frameworks.
+
+Examples abound. Functional analysis was substantially developed in response to the needs of quantum mechanics. Riemannian geometry, originally explored for purely mathematical reasons in the 1850s, was revived and extended when Einstein needed it for general relativity in the 1910s. Group theory, developed in the 19th century to understand polynomial equations, became essential for particle physics in the 20th century. Conic sections, studied by Greeks for their geometric beauty, became crucial for orbital mechanics two millennia later.
 
 This creates a survival-of-the-fittest dynamic. Useful mathematics gets refined, taught, celebrated, and remembered. It appears in textbooks, wins Fields Medals, and shapes future research. Useless mathematics, by contrast, is largely forgotten. Papers gather dust in obscure journals. Results are not taught to graduate students. Entire research programs fade away when they produce no applications.
 
-Occasionally, something remarkable happens: a dormant theory suddenly provides an unexpected answer to a physics question. Group theory, developed in the 1830s to understand polynomial equations, became essential to particle physics in the 1950s. Number theory, studied for millennia as pure intellectual curiosity, found application in cryptography in the 1970s. These revivals seem miraculous, but they're simply unlikely matches from a vast inventory finally finding their use.
+The rules of the mathematical game are not entirely arbitrary. Rather, they have been adjusted over centuries until mathematics matches the world. This is one of the reasons why it works so well. Mathematical systems that failed to model reality were discarded. Those that succeeded were retained, refined, and extended.
 
-The matching process continues indefinitely. There remain millions of unanswered questions in physics and millions of mathematical theorems awaiting application. The inventory is so vast and time scales so long that occasional matches are inevitable. What seems like "unreasonable effectiveness" dissolves when we recognize that we're seeing only the successful matches, not the ocean of unused mathematics. It's survivorship bias on a grand scale, not metaphysical mystery.
+New mathematical theories, like new physical theories, enter a Darwinian battlefield. They must prove their worth through applications, internal consistency, fertility for further research. Even if they survive initial scrutiny, they remain forever subject to competition from new theories, to revision in light of new foundations, to abandonment if better frameworks emerge.
 
-## Challenges to the Anti-Platonist View
+## The Axiom of Choice: Selection Determines the Future
+
+The Darwinian selection process continues today and will shape mathematics' future. Consider the Axiom of Choice (AC), one of the most controversial axioms in set theory.
+
+AC states, roughly, that given any collection of non-empty sets, we can choose one element from each set, even if we have no rule for making the choice. This seems innocent but has counterintuitive consequences: it implies the Banach-Tarski paradox (you can decompose a sphere and reassemble it into two spheres of the same size) and the existence of non-measurable sets.
+
+Today, mathematicians can practice mathematics with or without AC. You can work in ZFC (set theory with Choice) or in ZF (set theory without Choice). You can study constructive mathematics, which rejects not only AC but also the law of excluded middle. These are different formal systems, different mathematical "games," and they produce different theorems.
+
+Which will survive? That depends on what proves useful, elegant, and fruitful. If physics or computer science finds applications for constructive mathematics, it may gain prominence. If the consequences of AC prove indispensable for important theories, ZFC will dominate. The selection process is ongoing.
+
+The same applies to alternative arithmetics. You can study number theory using Peano axioms, Robinson axioms, or Presburger axioms. Each system proves different theorems, has different strengths. Which you choose depends on your purposes. This is not discovering pre-existing mathematical reality—it's choosing which formal game to play.
+
+## Physics as a Model of Reality
+
+Physics provides the clearest example of mathematics as modeling rather than discovering. Consider how physicists work: they start with a handful of non-provable principles, such as the constant speed of light or the principle of least action. They then apply appropriate mathematical theories and test the results in the laboratory. This process is repeated until mathematics matches the measurements.
+
+Newton studied how heavy objects move when subjected to gravity. He abstracted away properties such as volume, feel, and color, eventually arriving at the idea of volume-less particles with positive mass, and calculated how they move. Raindrops, apples, and planets are tangible instances, but they have shape, volume, and many other properties. Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise.
+
+Newtonian mechanics is a model—in the mind, on paper, or in a computer—that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop is completely unaware of Newton's laws. Raindrops have always fallen in the same way. Newton's laws have less effect on objects in motion than a thermometer has on temperature.
+
+Einstein studied particles moving at high relative speeds, a case where classical mechanics fails. He kept the four-dimensional space-time framework and particles, but included the constant speed of light. From his thought experiments, he concluded that observers traveling at high relative speeds would perceive each other in distorted ways. The equations of motion had to be adjusted so that all observers agree, regardless of their relative motion. This led to E = mc² and to relativity theory.
+
+Schrödinger studied the double-slit experiment. He replaced particles moving along definite paths with evolving probabilities called wave functions. In classical mechanics you knew exactly where a particle would be; in quantum mechanics you just get probabilities. Determinism was gone. The idea of continuity was gone: on a small scale, what looks continuous (energy, for example) breaks up into tiny pieces called quanta.
+
+Dirac brought relativity and quantum mechanics together. The formula he found became the equation of motion for quantum field theory (QFT). QFT features mathematical structures that predict four varieties of physics: one is ours (with time and space as we know them), and three others involve time reversal, space inversion, or both. Nobody knows if there are universes described by these other mathematical possibilities.
+
+What have we learned? Science has produced powerful mathematical models that describe the observable world and make good, but imperfect, predictions. None is definitive; each has refined the previous one, been more precise, and often more complicated. The relationship to reality can be obvious (circles), plausible (Newtonian mechanics), puzzling (relativity), unfathomable (quantum mechanics), or mind-boggling (QFT).
+
+This explains why mathematics and physics match so well: physics uses mathematics as its modeling language. Physicists choose mathematical structures that fit observations. When a mathematical model fails to match experiments, physicists adjust the model or develop a new one. The "unreasonable effectiveness" of mathematics dissolves once we recognize that physics is mathematical modeling of reality, not discovery of mathematical reality.
+
+## Predictive Power: Remarkable But Not Miraculous
+
+Mathematical structures sometimes predict completely unobserved phenomena before any experimental confirmation. The Dirac equation predicted antimatter. Maxwell's equations predicted electromagnetic waves. The Higgs mechanism predicted a new particle nearly half a century before detection. These successes are remarkable—but do they require Platonism?
+
+Not necessarily. Consider how prediction works in this framework. Physicists build mathematical models that fit known observations. These models have internal mathematical structure—symmetries, conservation laws, derived consequences. When physicists work out all the implications of their models, they sometimes find predictions about unobserved phenomena. If the model is good (matches reality well), these predictions may come true.
+
+This is impressive but not miraculous. It's what good models do. A geographical map predicts what you'll find if you travel west from here, even if the mapmaker never traveled that direction. The map's predictive power comes from accurately modeling the territory, not from accessing a Platonic realm of abstract geographical forms.
+
+The Lorentz group's mathematical structure, for instance, reveals four disconnected components: our familiar world, plus three exotic possibilities involving time reversal, space inversion, or both. Mathematics generates more structure than we observe. Sometimes experiments later confirm these mathematical possibilities; sometimes they don't. We remember the successes and forget the failures.
+
+What about the hit rate? If mathematical predictions succeeded far more often than chance would allow, that might suggest something beyond mere modeling. But we lack systematic data on prediction success rates. Physicists remember Dirac predicting antimatter; they forget countless failed predictions. This is publication bias and confirmation bias at work.
+
+Moreover, even high success rates wouldn't require Platonism. They might simply show that our mathematical models are very good—that we've refined them through centuries of empirical testing until they capture deep structural features of reality. The models are still models, not discoveries of pre-existing mathematical objects.
+
+Predictive power is remarkable. It shows that mathematics is extraordinarily useful. But "useful" doesn't mean "true in a Platonic sense." It means "matches reality well enough to make accurate predictions." That's all we need and all we can honestly claim.
+
+## Two Varieties of Existence
+
+There are two varieties of existence that matter for this discussion: physical existence and mathematical existence.
+
+**Physical existence** is what we can perceive. Objects, forces, events in space and time. The chair you sit on, the light that reaches your eyes, the planet Earth. Physical existence is empirical—discovered through observation and experiment. It is contingent—the universe could have been otherwise. It is shared—we all perceive the same physical world (with minor variations in perspective).
+
+**Mathematical existence** is what we can think of consistently within chosen axiom systems. Mathematical objects don't exist in space and time. You can't bump into a prime number or measure the weight of a triangle. Mathematical existence means: we can define this object within our formal system and reason about it without contradiction.
+
+This makes mathematical existence system-relative. What exists in ZFC may not exist in constructive mathematics. It makes mathematical existence conventional—we choose which formal system to adopt. The natural numbers exist in Peano arithmetic because that system defines them. Whether they exist "absolutely" is a meaningless question, like asking whether the bishop exists absolutely rather than as a piece in chess.
+
+Our choice of axiom systems is not arbitrary, however. It is driven by a kind of Darwinian evolution. We retain mathematical systems that prove useful for modeling reality, elegant for internal development, fruitful for generating interesting theorems. We discard or forget systems that fail these tests.
+
+Physical theories use mathematical structures to model reality. When Newton modeled gravity, he used mathematical objects called "real numbers" and "differential equations." These mathematical objects don't physically exist—you can't put a differential equation in a test tube. But they provide the language for expressing physical laws.
+
+The match between mathematics and physics is therefore not mysterious. Physics *uses* mathematics. Physicists choose mathematical structures that fit observations. If a mathematical structure fails to model reality, physicists try a different structure. The "effectiveness" of mathematics just means: physicists are good at finding mathematical structures that model reality well.
+
+Why is reality *mathematizable* at all? Why can we model physical phenomena using formal systems? This remains genuinely mysterious. But positing a Platonic realm doesn't explain it. Saying "mathematics applies because mathematical structures exist independently and physical reality instantiates them" merely relocates the mystery. Why should physical reality instantiate mathematical structures? How does the instantiation relationship work? Platonism multiplies entities and relationships without genuinely explaining.
+
+The anti-Platonist position admits ignorance here. We don't know why reality is mathematizable. We observe that it is, we exploit this fact brilliantly, but we have no ultimate explanation. Perhaps the question is unanswerable. Perhaps, as Wittgenstein said, "Explanations come to an end somewhere."
+
+## Allies and Opponents
+
+The position developed here stands in a complex relationship with various philosophical traditions.
+
+### Allies
+
+**Formalists** like Hilbert emphasized mathematics as symbol manipulation according to formal rules. Mathematical truth is provability within a formal system. This aligns well with the view that mathematics is chess-like rule-following rather than discovery of pre-existing objects.
+
+**Nominalists** deny the existence of abstract objects. Only concrete particulars exist. Mathematical talk should be understood as useful fiction or eliminated through paraphrase. The present position shares nominalism's ontological parsimony while preserving mathematics' objectivity through formal rigor.
+
+**Empiricists about mathematics** argue that mathematical knowledge derives from empirical observation and abstraction from physical experience. {cite}`leifer2016mathematics` makes this case powerfully, arguing that mathematics is a natural science like physics or biology. Mathematics studies "regularities, within regularities, within regularities of the natural world," becoming increasingly abstract through a process of recognizing analogies and creating new conceptual frameworks. Since mathematical theories derive from the natural world, albeit at higher levels of abstraction than other sciences, their applicability to physics becomes unsurprising rather than mysterious. This position closely parallels the view developed here, particularly regarding the empirical origins of mathematical concepts and the selection process that retains useful mathematics.
+
+**Constructivists** require mathematical objects to be explicitly constructible and proofs to be algorithmic. They reject the Axiom of Choice and the law of excluded middle. While the present position doesn't mandate constructivism, it recognizes constructive mathematics as one legitimate formal system among others—another game we can play.
+
+**Pragmatists** emphasize that truth is what works in practice. Mathematical truth might be understood as fertility for applications, elegance of formulations, and usefulness for science. The Darwinian selection model shares this pragmatic spirit.
+
+### Opponents
+
+**Platonists** like Gödel and many working mathematicians believe mathematical objects exist independently in an abstract realm. Mathematicians discover truths about this realm rather than inventing formal systems. This position explains mathematical objectivity and necessity elegantly but at the cost of metaphysical extravagance. Where is this Platonic realm? How do human minds access it? What is the relationship between abstract mathematical objects and physical reality?
+
+**Realists** hold that true mathematical statements correspond to mathematical facts, and these facts obtain independently of human minds. Mathematical realism comes in various strengths, from Platonism (abstract objects exist in a non-physical realm) to Aristotelian realism (mathematical structures exist as aspects of physical reality). {cite}`maudlin2016mathematics` represents a sophisticated realist position, arguing that even the applicability of elementary mathematics like arithmetic and geometry requires explanation beyond mere convention or modeling. For Maudlin, the physical world genuinely has mathematical structure, and this structural correspondence demands a realist interpretation. All realist positions face the epistemic problem: how do we know about these mind-independent mathematical facts?
+
+**Logicists** like Frege and the early Russell attempted to reduce mathematics to logic. If successful, this would ground mathematical truth in logical truth, which might be necessary and objective without requiring Platonic objects. But the project failed. Russell's paradox showed that naive set theory is inconsistent, and subsequent repairs (like type theory) introduced machinery as complex as mathematical axioms themselves.
+
+**Intuitionists** like Brouwer ground mathematics in mental constructions. Mathematical objects are created by the ideal mathematician's thought processes. This shares with the present position an anti-Platonist stance but differs in emphasizing subjective mental acts rather than objective formal systems. The present position seeks intersubjective agreement through formal rules rather than grounding mathematics in individual consciousness.
+
+The anti-Platonist formalist position developed here occupies distinctive ground. It shares with nominalism the rejection of abstract objects. It shares with formalism the emphasis on formal systems and symbol manipulation. It shares with pragmatism the emphasis on usefulness and selection. It shares with constructivism the recognition that we choose our axiom systems. But it synthesizes these elements into a view centered on Darwinian selection: mathematics consists of formal systems refined over time by what proves useful, elegant, and fruitful.
+
+## Challenges
+
+Several objections might be raised against this position.
+
+### Mathematical Objectivity
+
+If mathematics is just rule-following in games we invented, why does it feel so objective? Why do mathematicians experience themselves as discovering truths rather than creating them? When we prove that there are infinitely many primes, it feels like we've uncovered a fact about numbers, not like we've made an arbitrary choice.
+
+**Response:** Chess also feels objective once you're playing it. Given the rules, certain positions are winning and others are losing—that's objective fact, not arbitrary choice. Mathematical objectivity comes from the rigidity of logical inference. Once axioms are chosen, theorems follow necessarily. This necessity feels like discovery because we can't change it by wishing.
+
+Moreover, mathematical training shapes intuitions. After years of working within Peano arithmetic, the natural numbers feel real and their properties feel discovered. But this psychological experience doesn't settle the metaphysical question. It's compatible with both Platonism and formalism.
+
+The question is: does this feeling of discovery require a Platonic realm, or can formal systems explain it? The latter seems sufficient. The objectivity is the objectivity of rule-following, not the objectivity of correspondence to pre-existing objects.
+
+### Mathematical Necessity
+
+Mathematical truths seem necessary in a way that physical truths don't. The laws of physics could have been different, but could 2 + 2 have equaled 5? Doesn't this necessity point toward Platonic existence?
+
+**Response:** Mathematical necessity is hypothetical necessity: *given* these axioms and inference rules, these theorems follow. It's no more mysterious than: *given* chess rules, certain positions are checkmate. The necessity comes from logical consequence, not from the nature of abstract objects.
+
+Could 2 + 2 have equaled 5? Not in Peano arithmetic—that's fixed by the axioms. But we could have adopted different axioms. In modular arithmetic mod 3, we have 2 + 2 ≡ 1. Different formal systems yield different "necessities."
+
+The feeling that 2 + 2 *must* equal 4 reflects the depth of our commitment to standard arithmetic. We've been counting this way since childhood. The formal system is so deeply internalized that alternatives seem impossible. But this is psychological, not metaphysical.
 
 ### The Precision Problem
 
-When mathematics and physics do match—rare as such matches may be—the fit often displays a striking characteristic: exact structural identity rather than approximate resemblance. Planetary orbits aren't just "roughly elliptical" in the way that a racetrack is roughly elliptical. To Newtonian approximation, they are precisely ellipses, described exactly by the mathematical definition. Quantum states aren't merely "analogous to" vectors in some loose metaphorical sense. They literally are vectors in Hilbert space, obeying all the mathematical axioms of vector spaces. Gauge theory isn't just "similar to" the mathematics of fiber bundles; it is precisely and completely described by fiber bundle formalism.
+When mathematics and physics connect successfully, they often exhibit exact structural identity rather than approximate resemblance. The mathematics of quantum mechanics, for instance, precisely matches quantum phenomena. This precision strains the idea that we're simply selecting useful tools from a human-constructed inventory.
 
-This precision contrasts sharply with looser analogies we might draw between different domains. When economists say "the economy is like a thermodynamic system" or sociologists say "society is like an organism," these are suggestive metaphors that break down under scrutiny. They capture something at a high level but fail in detail. Mathematical physics, however, shows exact structural correspondence that survives rigorous examination.
+**Response:** Einstein's insight about mathematics and reality addresses this directly {cite}`einstein1950laws`. "As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they do not refer to reality."
 
-But this objection misconceives the relationship between mathematical models and physical reality. Einstein's observation {cite}`einstein1950laws` illuminates the issue perfectly: "As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they do not refer to reality." Ellipses are models of orbits, and there has never been a perfect ellipse in physical reality. Newtonian physics imagines a four-dimensional space extending straight to infinity, populated by volumeless particles with properties like mass and momentum. This entire framework is an abstraction, a model existing in our minds. The model is mathematically exact and certain, but it doesn't perfectly describe reality—as we discovered when Newtonian mechanics failed to account for Mercury's perihelion precession or the behavior of objects at high velocities.
+Mathematical models never perfectly capture reality. Newton's laws are exact only for ideal point particles (which don't exist). Quantum mechanics uses continuous wave functions, but reality may be fundamentally discrete at the Planck scale. The "precision" is the precision of the model within its domain of applicability, not exact correspondence to reality itself.
 
-Similarly, Hilbert spaces and wave functions model the quantum world and enable astonishingly accurate predictions. Yet nobody knows what lies "behind" these equations. The interpretation of quantum mechanics remains hotly debated nearly a century after the theory's formulation. The mathematical formalism is certain within its own terms, but its relationship to physical reality remains mysterious.
+When we say quantum mechanics "precisely matches" quantum phenomena, we mean: the model's predictions match our measurements to high accuracy. But measurements have limited precision. Experiments test predictions to many decimal places, and the agreement is impressive—but it's always finite precision, never infinite.
 
-The crucial point: these models have been invented by humans, and they survive because they work well enough for their intended purposes. We cannot explain why these models work so well—and indeed, no one else can either. But accepting this as a brute fact about our universe seems more honest than invoking Platonic realms of mathematical objects, which merely postpone the question without answering it. If mathematical objects exist independently and physical reality somehow "instantiates" them, we're still left asking: Why does reality instantiate precisely these mathematical structures and not others? The Platonist has replaced one mystery with another.
+Moreover, the selection mechanism produces this precision. Mathematical models that match reality poorly get discarded. Models that match reality well get refined and extended. Over centuries of this process, we develop extraordinarily precise models. This doesn't require Platonism—just good modeling and selection.
 
-### The Predictive Power Problem
-
-The selection model offers an elegant explanation for post-hoc matching. Mathematics exists in a vast inventory of results, physics discovers a need, and we celebrate when dormant mathematics finds application. But what about cases where mathematical structure alone predicts novel phenomena before anyone has observed them? These cases seem to challenge the selection model more directly.
-
-Consider Maxwell's equations in the 1860s. Working from pure mathematical symmetry considerations—the requirement that electromagnetic laws have certain elegant mathematical properties—Maxwell predicted the existence of electromagnetic waves propagating at the speed of light. No one had observed such waves. Maxwell wasn't responding to experimental data demanding explanation. He was following mathematical structure, and that structure predicted a new phenomenon. When Hertz experimentally confirmed electromagnetic waves 25 years later, it seemed like mathematics had reached out and touched reality before physics could catch up.
-
-The Dirac equation of 1928 provides an even more striking example. Dirac sought a relativistic quantum mechanics that maintained certain mathematical symmetries. The resulting equation had peculiar solutions with negative energy that Dirac initially tried to interpret away. Eventually he recognized that mathematical consistency demanded these solutions represent a new kind of particle—antimatter—with the same mass but opposite charge as the electron. He predicted the positron's existence purely from mathematical structure, and Anderson discovered it experimentally four years later with precisely the predicted properties.
-
-The Higgs mechanism, proposed in 1964, predicted a new particle required by the mathematical consistency of gauge theories. Physicists had to wait 48 years before the Large Hadron Collider confirmed the Higgs boson in 2012. Again, mathematical structure predicted physical reality.
-
-One of the most remarkable predictions emerges from the structure of the Lorentz group—the mathematical symmetries of special relativity. This group has four disconnected components. We inhabit the first component, where time flows forward and space has the orientation we experience. But the mathematics indicates three other possibilities: a component where time runs backward while space remains familiar, a component where time runs forward but space is inverted (whatever that might physically mean), and a component where both time and space are inverted. The mathematical structure predicts more than we observe, and physicists have spent decades trying to understand whether these other components have physical meaning—perhaps related to antimatter or to time-symmetry violations in certain particle interactions.
-
-These aren't selections from an existing inventory of observations. These are mathematical structures predicting phenomena before experimental confirmation. How does selection explain forward-prediction rather than backward-matching?
-
-The response maintains that even these striking cases fit within the broader pattern. We must remember confirmation bias: for every successful prediction like Dirac's antimatter, how many theoretical predictions have failed? Supersymmetry has predicted partner particles for every known particle for over 50 years, yet experiments have found none. String theory, despite decades of development, has made no confirmed novel predictions about observable phenomena. Theories of quantum gravity proliferate with different mathematical structures, but we cannot test them. Most mathematical "possibilities" explored in theoretical physics don't manifest physically.
-
-The hit rate may actually be quite low. We remember Maxwell and Dirac and toast their genius at physics conferences. We quietly set aside or rationalize away the failures. The predictive successes are real and impressive, but they're part of the larger Darwinian pattern: mathematics generates vast possibility spaces through free exploration, and occasionally—more rarely than we might think—physical reality instantiates one of those possibilities. The successes don't require Platonism; they require large numbers, long time scales, and selective memory for what worked.
+Still, we can honestly admit: we don't know why models work so well. Conceding this surrenders explanatory ground that Platonists eagerly occupy. But their explanation—"mathematical structures exist independently"—doesn't actually explain anything. It just relocates the mystery.
 
 ### Pre-Adaptation Across Centuries
 
-Perhaps the most striking challenge to the selection model emerges when we examine mathematics developed purely for internal mathematical reasons that finds application only centuries later. These cases strain any simple account of selection pressure because there was no evident demand when the mathematics was created.
+Mathematics developed purely for internal reasons—group theory for polynomial equations, conic sections for geometric beauty, prime numbers for intellectual curiosity—finds application centuries later to problems its developers never imagined. How does the selection model explain this?
 
-Group theory emerged in the 1830s through Galois's brilliant analysis of polynomial equations. This was pure mathematics, pursued to understand why certain equations could be solved by radicals while others could not. No physicist was asking for group theory. No engineer needed it. Galois died in a duel at age twenty, his work barely understood by contemporaries. Yet 120 years later, group theory became absolutely essential to particle physics. The Standard Model classifies elementary particles by their transformation properties under symmetry groups. The entire structure of modern particle physics is fundamentally group-theoretic. This wasn't adaptation of an existing tool—it was discovering that a tool built for entirely different purposes fit perfectly.
+**Response:** The selection model requires large numbers, long time scales, and vast unused inventory—all of which exist. Mathematicians have explored widely for millennia. Most of this exploration produces no applications. But the inventory is so vast that when physicists need a tool, they often find something already developed.
 
-The ancient Greeks studied conic sections—circles, ellipses, parabolas, hyperbolas—as pure geometry, finding these curves beautiful and intellectually fascinating. For two thousand years, this remained abstract mathematics with no clear application beyond perhaps architecture. Then Kepler, analyzing Tycho Brahe's astronomical observations, discovered that planets move in ellipses. The mathematical structure developed for aesthetic and philosophical reasons millennia earlier turned out to describe celestial mechanics exactly.
+This is not miraculous pre-adaptation. It's the law of large numbers. Generate millions of theorems over thousands of years, and some will match future needs by chance. We remember group theory finding application in particle physics. We forget countless mathematical theories that found no application.
 
-Prime numbers fascinated mathematicians from antiquity. Euclid proved their infinitude around 300 BCE. For over two millennia, prime numbers remained objects of pure mathematical curiosity, pursued for the intellectual challenge they presented. Then in the 1970s, number theory became the foundation of RSA cryptography, which now secures much of electronic communication. Mathematical properties explored for their own sake proved essential to modern technology.
+Perhaps the hit rate exceeds what pure chance would predict. If so, this might suggest that mathematical exploration, though unconstrained by immediate empirical needs, is still constrained by something—not Platonic objects exactly, but structural possibilities inherent in logic and coherence themselves. Mathematicians explore the space of consistent structures, and physics happens to actualize some structures from that space.
 
-Boolean algebra emerged in 1847 from Boole's attempt to formalize logical reasoning. This was abstract symbolic logic, motivated by philosophical questions about the nature of thought. Eighty years later, Claude Shannon realized that Boolean algebra perfectly described electrical circuits, with "true/false" corresponding to "on/off" in switches. The mathematical structure of logic turned out to be the mathematical structure of computation.
+This wouldn't require Platonism, but it might suggest that the space of logically possible structures has its own reality independent of particular physical instantiation. Whether this helps or merely relocates the puzzle remains unclear.
 
-Selection pressure can explain why *used* mathematics gets refined and remembered. Functional analysis flourished because quantum mechanics needed it. But selection struggles to explain why *unused* mathematics—developed with no physics application in mind, sometimes millennia before application—turns out to fit physical needs when finally discovered. What constrains mathematical exploration such that its products, generated for purely internal reasons, turn out to have external applicability?
+### What About Discovery?
 
-The response requires biting the bullet, but with an important twist. We should note that millions of mathematical theorems sit unused in the literature, and millions of physics questions remain unanswered. Occasionally—more rarely than we might imagine—a dormant theory matches a physics problem. But we don't see the denominator. We don't see the actual hit rate, only the hits themselves.
+Mathematicians overwhelmingly report the phenomenology of discovery rather than invention. They feel they're exploring an objective realm, not making arbitrary choices. Doesn't this count for something?
 
-Consider how much Greek mathematics found no application. How many geometric constructions, how many results in number theory, how many theorems proved by ancient mathematicians lie completely unused? We don't remember them because they never proved useful. We remember conic sections precisely because of the Kepler connection. Similarly, vast portions of modern mathematics—most topology, most abstract algebra, most combinatorics—have found no physics applications. The inventory of unused mathematics is enormous.
+**Response:** Psychological experience doesn't settle metaphysical questions. Scientists once experienced the sun rising and earth standing still—direct perceptual experience that turned out to be false. Mathematicians' feeling of discovery is genuine psychological data but doesn't entail Platonism.
 
-When ancient conic sections matched planetary orbits two millennia later, it seems miraculous. But this appearance reflects our selective attention to successful matches. Given the sheer volume of mathematical exploration over centuries and the multitude of phenomena physics seeks to explain, occasional matches become not just possible but likely. The "pre-adaptation" doesn't reveal Platonic necessity—it reveals the scope of human mathematical invention and the long time scales over which matching occurs.
+Moreover, formalism explains this phenomenology. When exploring a formal system, mathematicians don't know in advance what theorems are provable. They investigate, conjecture, prove or disprove. This feels like exploring territory because, in a sense, it is—exploring the logical consequences of chosen axioms. But the territory is formal structure, not pre-existing Platonic objects.
 
-## The Argument from Formalization
+Great mathematical discoveries—like non-Euclidean geometry or Gödel's theorems—often shock their discoverers. This seems to support Platonism: how could we be shocked by our own inventions? But shock comes from unexpected consequences of the rules we set up. Chess players are shocked by brilliant unexpected moves—this doesn't mean chess positions exist in Plato's heaven.
 
-### Mathematics as Symbol Manipulation
+### The Axiom of Choice Dilemma
 
-If mathematics truly consists of formal symbol manipulation rather than discovery of Platonic truths, we should expect mathematical proof to be mechanizable. And indeed, this is precisely what modern proof assistants demonstrate. Formal logic represents mathematics reduced to its essence: explicit axioms, mechanical inference rules, symbol manipulation with no appeal to intuition or Platonic insight.
+If mathematical existence is system-relative, and we can practice mathematics with or without the Axiom of Choice, doesn't this make mathematics arbitrary? How can mathematical truth be objective if we just choose axioms based on convenience?
 
-Modern theorem provers—Isabelle, Coq, Lean, and Mizar being the most prominent—have successfully formalized substantial portions of mathematics over the past few decades. Most undergraduate mathematics now exists in formalized form: calculus, linear algebra, basic topology, group theory. Significant graduate-level mathematics has also been mechanized: measure theory, functional analysis, portions of algebraic topology. Major theorems have fallen to formalization: the Four Color Theorem, the Feit-Thompson Theorem (also known as the Odd Order Theorem), Kepler's Conjecture about sphere packing, and the Prime Number Theorem.
+**Response:** This is a feature, not a bug. Mathematical truth *is* system-relative. But this doesn't make it arbitrary in a problematic sense.
 
-The formalization process reveals something philosophically crucial. Mathematical proof can be reduced to mechanical symbol manipulation. No theorem has proven "unformalizable in principle," setting aside certain Gödelian technicalities that rarely affect working mathematics. The primary obstacle to complete formalization isn't theoretical impossibility but practical effort. Formalization requires extraordinary labor, but it succeeds wherever that labor is invested. This success vindicates the view that mathematics is rule-following rather than Platonic discovery.
+First, different formal systems serve different purposes. ZFC is useful for mainstream mathematics. Constructive mathematics is useful for computer science and proof theory. Each has its domain of application. Choosing between them is like choosing between Newtonian mechanics and quantum mechanics: the choice depends on what you're modeling.
 
-### The Correctness Problem
+Second, objectivity comes from rigorous proof within the chosen system. Once axioms are fixed, theorems follow necessarily. This necessity is objective, even if the initial choice of axioms was conventional.
 
-Formalization provides a powerful argument for the anti-Platonist position through its treatment of mathematical correctness. Consider how we establish that a proof is correct when it remains informal versus when it has been formalized.
+Third, the Darwinian selection process isn't arbitrary. Mathematical systems that prove useful, elegant, and fruitful survive. Those that don't fade away. This isn't arbitrary selection—it's selection by multiple constraints: internal consistency, applicability, fertility, elegance.
 
-Take Wiles's proof of Fermat's Last Theorem as exemplifying informal proof at the highest level. The proof spans roughly 150 pages and builds on hundreds of pages of prerequisite mathematics in algebraic number theory and elliptic curves. How many people fully understand this proof? Perhaps ten to twenty experts worldwide—possibly fewer. The original announcement in 1993 contained a gap that took over a year to fix. How do we know the corrected version is right? We rely on expert consensus weighted by reputation, social networks within the mathematical community, and the passage of time without anyone finding another error. Andrew Wiles is a professor at Princeton, a Fields Medalist, one of the most respected number theorists alive. Other top mathematicians reviewed the proof. The community reached consensus. This is how we "know" it's correct.
+The Axiom of Choice will persist if it proves indispensable. If constructive mathematics produces better applications or deeper theories, it may supplant ZFC. This is rational selection, not arbitrary whim.
 
-But this social process looks uncomfortably similar to how we establish knowledge in law or politics—through authority, peer review, and consensus—not like the algorithmic certainty mathematics claims for itself. Mathematical "truth" for cutting-edge results depends on authority, social networks, and reputation in ways that seem disturbingly contingent.
+## Conclusion
 
-History reveals the problem starkly. Kempe published a "proof" of the Four Color Theorem in 1879. The mathematical community accepted it. Kempe was made a Fellow of the Royal Society partly on its strength. Eleven years later, Heawood found a gap in the reasoning. The consensus had been wrong for over a decade. Lebesgue "proved" a result about projections in 1905 that was accepted by experts for over seventy years before a counterexample emerged in the 1970s. Even great mathematicians, even careful peer review, can be systematically mistaken.
+The anti-Platonist formalist position offers clarity about what mathematics is (formal systems), honesty about what remains mysterious (applicability), and parsimony in ontology (no Platonic heaven).
 
-The Italian school of algebraic geometry in the early twentieth century developed an elaborate framework of "proven" results. Most turned out to be either wrong or insufficiently rigorous, requiring complete reconstruction by later mathematicians like André Weil and Alexander Grothendieck. The Classification of Finite Simple Groups, completed in the 1980s, spans roughly 15,000 pages across hundreds of papers. A gap was discovered in the 1990s concerning quasithin groups. This was fixed by 2004, but the fact remains: how many people understand the entire proof? Probably none individually. We trust it through distributed verification across the community.
+Mathematics consists of formal systems—combinations of axioms and inference rules—that humans construct. These systems don't emerge from nowhere. They're refined over time through selection pressure from applications. When a formal system proves useful for modeling reality, it survives, gets taught, appears in textbooks, shapes further development. When a system proves useless or leads nowhere, it fades from practice.
 
-For cutting-edge mathematics, we often trust theorems understood by single-digit numbers of people. When Perelman posted his proof of the Poincaré Conjecture on the arXiv—not even submitting to peer-reviewed journals—why was it accepted despite being dense, cryptic, and omitting steps? Because Perelman had a towering reputation from prior work. Other experts invested enormous effort to fill in gaps and verify his reasoning. But how many people fully checked every step? Perhaps five to ten? If an unknown mathematician had posted an identical proof, would it have received the same charitable reading? Almost certainly not. Reputation carries enormous epistemic weight in mathematical practice.
+Mathematical existence means consistency within chosen formal systems. To say a mathematical object exists is to say we can define it consistently within an axiom system and reason about it without contradiction. This makes existence system-relative and conventional. The language of mathematical existence is pragmatic convenience rather than metaphysical discovery.
 
-Contrast this with formalized proofs. The Four Color Theorem's original proof in 1976 was partially computer-assisted and controversial. Many mathematicians felt uncomfortable calling it a "real proof" since humans couldn't check every case. But when Georges Gonthier formalized the proof in Coq in 2005, all controversy evaporated. The proof is now provably correct—not in some loose sense of expert agreement, but in the strict sense that it type-checks. No experts need verify it. No reputation is required. No authority is appealed to. The proof consists simply of axioms plus inference rules yielding the theorem, mechanically verifiable by anyone with the Coq system.
+Why these formal systems apply to physical reality remains unexplained and perhaps inexplicable. We can point to the selection mechanism—systems that model reality well get retained—but this describes the process without explaining the deep fact that such systems exist at all. The position frankly admits this ignorance.
 
-Hales's proof of the Kepler Conjecture in 1998 involved massive computer-assisted calculations. The referees, after years of effort, reported they were "99% certain" but couldn't verify everything. This limbo was unsatisfying. When Hales completed the Flyspeck project in 2014, formalizing the entire proof in Isabelle/HOL, uncertainty vanished. The proof is now certain in the strongest possible sense. No consensus required. No expert judgment necessary. Just type-checking: axioms plus rules implies theorem.
+Some Platonists offer what they take to be explanations: mathematics applies because mathematical structures exist independently and physical reality instantiates them. But this merely relocates the mystery. Why should physical reality instantiate mathematical structures? How does the instantiation relationship work? Platonism multiplies entities without genuinely explaining.
 
-### What This Reveals
+This pattern repeats throughout intellectual history. When confronted with something remarkable—the apparent fine-tuning of physical constants, the emergence of life, the applicability of mathematics—a recurring argumentative move appears: "It's so fantastic, there must be... a God, a hidden reality, many universes, a Platonic realm."
 
-The contrast between informal and formal proof illuminates the nature of mathematics. If mathematics really consisted of discovering truths in a Platonic realm of abstract objects, several puzzling features of informal mathematical practice demand explanation. Why does verification require social consensus rather than immediate recognition? Why do we need to weight verification by expert reputation? Why do proofs sometimes turn out wrong decades or even centuries after acceptance? Why isn't mathematical truth self-evident to competent practitioners once a proof is stated?
+The anthropic principles illustrate this dynamic. The strong anthropic principle assumes premeditation: physical constants were chosen to permit life. The weak anthropic principle uses probability: there are many universes, and we necessarily find ourselves in one compatible with observation. The non-anthropic principle simply accepts the world as it is: these are the constants, and we observe them.
 
-Consider an analogy to empirical science. We understand why physics requires expert consensus and social negotiation—we're studying complex external reality that reveals itself gradually through difficult experiments and subtle reasoning. But if mathematics studies an abstract realm of eternal truths, why does it exhibit the same social dynamics? Why isn't mathematical reality more transparent than physical reality?
+Both anthropic principles fall to Occam's razor. They multiply entities—designers or multiverses—to explain what might simply be. But they cannot be disproven. The key point is recognizing that these moves don't actually explain; they relocate the mystery.
 
-The messiness of informal mathematical practice, when contrasted with the algorithmic certainty of formalization, strongly supports the view that mathematics consists of conventional symbol manipulation rather than discovery of pre-existing truths. Formalization makes explicit what was always implicit: mathematics is rule-following. A proof is correct when it follows properly from axioms using permitted inference rules. Correctness equals mechanical checkability, which equals provability from axioms. No Platonic realm is needed to explain what makes a proof correct.
+The same applies to Platonism about mathematics. Invoking a realm of abstract objects doesn't explain why mathematics applies to physics—it creates new questions about the relationship between Platonic and physical realms. The anti-Platonist position resists this multiplication of mysteries. Mathematics works remarkably well; we don't fully understand why; positing extra realms of being doesn't help.
 
-This resolves the authority problem that plagues informal proof. We needn't ask how many experts of what reputation are required to certify a proof's correctness. We needn't wonder whether the Italian school of algebraic geometry was really doing mathematics or merely producing plausible-sounding arguments. We needn't worry that Perelman's status was doing epistemic work that the mathematical content alone couldn't do. Formalization strips away all social factors, leaving only the logical skeleton: axioms, rules, theorem. The proof either checks or it doesn't, with no room for negotiation or authority.
+Perhaps the effectiveness of mathematics is simply a brute fact about our universe—one we should accept with wonder rather than false confidence that we've explained it. As Wittgenstein said {cite}`wittgenstein1978remarks`: "Explanations come to an end somewhere."
 
-The fact that formalization succeeds wherever sufficient effort is invested reveals mathematics as fundamentally mechanical. If mathematical proof required accessing Platonic truths through some special faculty of mathematical intuition, we would expect formalization to eventually hit barriers where human insight proves irreplaceable. But we find no such barriers. Every informal proof that's been formalized has succumbed to mechanization. The process is laborious—Feit-Thompson's 255-page proof became 170,000 lines of Coq—but it succeeds. This mechanizability is exactly what the anti-Platonist position predicts and what Platonism struggles to explain.
+The position represents a form of pragmatic nominalism. We use mathematics because it works, not because we've discovered eternal truths in a transcendent realm. Mathematical practice is sophisticated, rigorous, and objective—but objective in the sense that formal proof is mechanically checkable, not in the sense that mathematical objects exist independently of mathematical practice.
 
-## The Chess Analogy: Dissolving the Existence Question
-
-### The Parallel Structure
-
-The question "Do prime numbers exist independently of humans?" provokes a certain kind of smile—the recognition that the question itself may be confused rather than merely difficult to answer. Consider an analogous question that makes the confusion clearer: Do chess strategies exist independently of humans?
-
-There are more than 10^100 different possible chess games. Somewhere among these astronomical possibilities lies a sophisticated strategy—perhaps the perfect defense to the Ruy Lopez opening, or an unbeatable endgame technique for rook-and-pawn versus rook. When does this strategy come into existence? Does it spring into being the first time two players happen to execute its moves, like lighting a candle in a dark room? Or have all 10^100 possible games been stored somewhere since the beginning of time, waiting for players to discover them?
-
-The question seems confused because it presupposes a false dichotomy. The chess strategy is implicit in the chess rules—it's a logical consequence of how pieces move and how the game is won. When a player first executes the strategy, they discover something (a pattern that was always possible within the rules) but they also participate in something invented (since humans created chess, and the strategy only exists within that human creation). The strategy "exists" as a pattern within a human-constructed formal system, neither entirely discovered nor entirely invented.
-
-Prime numbers present the same structure. Humans didn't encounter prime numbers lying around in nature like rocks. We abstracted from physical counting experiences, formalized that abstraction as the Peano axioms, and discovered that certain consequences follow from those axioms—including the existence of infinitely many primes. The primes are implicit in our chosen axiom system just as chess strategies are implicit in chess rules. When Euclid proved infinitely many primes exist, he discovered something (a logical consequence that follows necessarily) within something humans invented (the formal system of arithmetic).
-
-### What the Analogy Explains
-
-The chess analogy illuminates several puzzles about mathematical existence that have troubled philosophers for millennia.
-
-First, it resolves the discovery-versus-invention paradox. Do chess players discover the Sicilian Defense or invent it? In one sense they discover it—the strategy was always implicit in the rules, a logical possibility within the game structure. In another sense they invent it—humans created chess, making this fundamentally a human concept within a human creation. The question presupposes that discovery and invention are exclusive categories, when they're actually intertwined. Mathematical theorems exhibit the same duality: discovered as logical consequences, invented as elements of human-constructed formal systems.
-
-Second, the analogy explains mathematical necessity without invoking Platonic realms. Why can't prime numbers be different? For the same reason chess strategies can't violate chess rules: they're logical consequences of the formal system. Necessity emerges from rule-following, not from accessing a pre-existing realm. Once you accept that bishops move diagonally in chess, certain positions become forced. Once you accept the Peano axioms, certain theorems follow necessarily. The necessity is conditional on the rules, not absolute.
-
-Third, it handles infinitude without metaphysical mystery. The question "Are there infinitely many primes—did they all exist before being proven?" parallels "Are there 10^100 possible chess games—did they all exist before being played?" They "exist" as logical possibilities within the system, not as actual entities stored somewhere waiting to be found. The formal system generates them; they don't pre-exist independently of the system. Potential existence, not actual existence.
-
-Fourth, it explains applicability without Platonism. Why does the Sicilian Defense actually win games? Because it's an effective strategy within the rules. Why does prime number theory enable cryptography? Because it's a useful consequence of arithmetic rules, and arithmetic models counting, and counting captures something real about how we manipulate discrete objects. No mystery: formal systems that evolved to model aspects of reality naturally contain patterns relevant to that reality. The success reflects good design (refinement through selection), not metaphysical correspondence to a Platonic realm.
-
-### The Platonist Counter-Argument
-
-The Platonist naturally objects that the analogy reveals a crucial disanalogy. Chess rules are transparently arbitrary. We could have made bishops move orthogonally instead of diagonally. We could have made pawns move backward. We could have designed an entirely different game with different pieces and different objectives. Different rules would yield different strategies, and there's no "fact of the matter" about which set of rules is "correct." Chess is conventional through and through.
-
-But arithmetic seems different. Could we really have made 2+2=5? Not in any straightforward sense. If we tried to redefine addition so that 2+2=5, we wouldn't have arithmetic anymore—we'd have some other formal system that doesn't model counting. The structure of arithmetic feels constrained in a way that chess rules don't. There seems to be something non-arbitrary about arithmetic that suggests we're discovering rather than inventing.
-
-The anti-Platonist response acknowledges the distinction but interprets it differently. We could indeed define a formal system where 2+2=5, just as we could define a game where bishops move orthogonally. The question is whether such a system would be useful. Arithmetic has the structure it does because we want it to model counting fingers, counting days, counting discrete objects in the physical world. This purpose constrains the formalization. If we defined addition differently, it would fail to capture the empirical phenomenon we're trying to model.
-
-The constraint isn't that Platonic arithmetic forbids alternative definitions—the constraint is that we're modeling something real about physical reality, and that modeling goal pins down the structure. Just as: we could change chess rules, but if we want strategic depth of a particular kind, complexity of a particular level, and playability with standard pieces, the rules must be roughly like this. The non-arbitrariness comes from the modeling purpose, not from accessing pre-existing abstract objects.
-
-This response successfully explains why different cultures independently developed the same arithmetic. All human cultures count physical objects. Physical counting has the same structure everywhere—fingers are discrete, succession is linear, combinations are additive because of how physical aggregation works. The convergence doesn't reveal a Platonic realm that everyone independently discovered. It reveals that physical reality constrains useful abstractions, and similar empirical situations lead to similar formalizations. Just as different cultures might independently invent similar games if they all want strategic complexity with movable pieces, they'll invent similar number systems if they all count physical objects.
-
-The disanalogy between chess and arithmetic is real, but it cuts in favor of the anti-Platonist position rather than against it. Chess is purely formal with no external constraint. Arithmetic is grounded in physical reality, which explains both its universality and its non-arbitrariness. The grounding explains why this particular formalization is useful and why it emerged independently across cultures. It doesn't require numbers to exist independently in some abstract realm.
-
-## The Remaining Puzzle: What Does "Existence" Mean?
-
-### Two Kinds of Existence
-
-The anti-Platonist position must ultimately confront a subtle but fundamental question: What does it mean for mathematical objects to "exist"? The position naturally distinguishes two kinds of existence that seem clear in their respective domains but become murky at their boundaries.
-
-Physical existence—call it Existence₁—is what we can perceive with appropriate tools and instruments. Microscopes reveal bacteria. Telescopes reveal distant galaxies. Particle detectors reveal subatomic particles. This kind of existence is relatively straightforward: intersubjective verification through observation. Multiple observers can confirm what instruments detect. Disagreements get resolved through better instruments, more careful observation, refined experimental design. Physical existence has an empirical anchor that constrains speculation.
-
-Mathematical existence—call it Existence₂—is what we can think of and imagine in our minds, or what we can reason about consistently within a formal system. This is where subtlety enters. The phrase "think of and imagine" suggests psychological accessibility, but mathematical practice quickly outstrips what minds can actually picture or intuit. Most advanced mathematics involves entities we cannot visualize, cannot construct explicitly, cannot even fully specify. Yet we reason about them successfully. What kind of existence do they have?
-
-### The Axiom of Choice Problem
-
-The Axiom of Choice crystallizes the difficulty. This axiom asserts that given infinitely many non-empty sets, there exists a choice function that selects one element from each set. The formulation sounds innocuous enough, but its implications reveal deep puzzles about mathematical existence.
-
-Here's the problem: you cannot construct or describe this choice function for arbitrary infinite collections. There's no algorithm that produces it, no explicit definition that specifies it. The function exists only by axiom—by mathematical fiat. We simply declare that it exists and reason accordingly. This raises immediate questions. When we reason about this choice function, are we thinking or imagining it? Or are we merely manipulating the symbol "f" according to formal rules? What does "existence" mean for an object that cannot be specified, constructed, or even in principle described?
-
-This seems uncomfortably close to medieval theology declaring that angels exist by divine fiat. We can reason about angels, assign them properties, tell stories about their interactions. But if we cannot observe them, construct them, or provide empirical evidence for them, have we explained anything by invoking them? The anti-Platonist position risks the same criticism: declaring that mathematical objects exist because axioms say so might be no more substantial than declaring angels exist because dogma says so.
-
-Constructivist mathematicians like Brouwer and Bishop recognized this problem and responded by rejecting the Axiom of Choice. For constructivists, mathematical objects exist only if they can be explicitly constructed. Existence requires an algorithm or procedure that produces the object. This makes mathematical existence substantive rather than merely formal. Under constructivism, you cannot assert that a choice function exists unless you can actually produce one.
-
-But the anti-Platonist position under examination accepts the Axiom of Choice, which implies that "mathematical existence" cannot mean "mentally constructible" or "explicitly specifiable." Instead, it must mean something like "consistently definable within the formal system" or "logically possible within the axiom structure." This makes existence system-relative and conventional rather than absolute. We choose ZFC as our formal system, and within that system, choice functions exist. Choose a different system—constructive mathematics, say—and they don't. Mathematical existence becomes a matter of which formal game we're playing.
-
-### The Spectrum of Mathematical Objects
-
-Consider what mathematicians claim to "think of" when they reason about different kinds of mathematical entities. The spectrum runs from the utterly concrete to the highly abstract, and the sense in which we "imagine" these objects varies dramatically along this spectrum.
-
-The number seven seems unproblematic. We can visualize seven dots arranged in a pattern. We can manipulate seven physically: 7+1 gives 8, which we can verify with our fingers. We have a clear mental representation that corresponds to something we experience directly. Seven exists in a straightforward psychological sense—we have a concept in our minds that maps clearly to experiences in the world.
-
-But consider googol—the number 10^100. Can we actually imagine this number? Not in the sense of visualizing googol objects. There aren't that many atoms in the observable universe. We've never counted anything close to that high. What we can do is manipulate the symbol "10^100" according to arithmetic rules: 10^100 + 1 = 10^100 + 1. But is this imagination in any meaningful sense, or merely rule-following symbol manipulation? We think we're imagining a very large number, but perhaps we're just following syntactic rules with numerals, no different from a computer executing an addition algorithm.
-
-Arbitrary real numbers present an even starker challenge. When we write "let r be a real number," we're introducing a variable that might denote a non-computable real—one whose decimal expansion cannot be produced by any algorithm. We cannot construct this number explicitly. We cannot specify its digits. We cannot even in principle write it down. Yet we reason about it successfully: "if r is a real number, then 2r is a real number." Are we imagining this object? Or are we manipulating variables according to rules while telling ourselves a story about "numbers"?
-
-The Vitali set, which requires the Axiom of Choice and turns out to be non-measurable, strains imagination further still. We can prove this set exists using AC. We can derive its properties. But we cannot construct it explicitly—it's indefinable in first-order logic. It cannot be visualized; it violates our geometric intuitions about measurability. Does it exist? Well, it exists in ZFC. But what does that mean?
-
-Finally, consider the set of all sets. We can write down the definition: {x : x is a set}. We can begin to reason about it: "suppose S is the set of all sets..." But this leads immediately to Russell's paradox. Is S a member of itself? Either answer generates contradiction. The set of all sets is logically impossible—it cannot exist even in the permissive sense of formal consistency.
-
-This spectrum suggests that "mathematical existence" cannot mean "imaginable" in any straightforward psychological sense. Most advanced mathematics involves objects we cannot visualize or mentally picture. What we can do is manipulate symbols representing these objects according to formal rules. Mathematical reasoning operates on symbols, not on mental images. The "imagination" of advanced mathematics consists largely of rule-following dressed up in the language of objects.
-
-### Three Candidate Definitions
-
-What then does "mathematical existence" actually mean? Three interpretations suggest themselves, each with different implications for the anti-Platonist position.
-
-The first interpretation holds that mathematical existence equals consistency within a formal system. Objects "exist" mathematically if they can be consistently defined and reasoned about within a chosen axiom system like ZFC or Peano arithmetic. This makes existence system-relative—what exists depends on which axioms we choose. It makes existence conventional—we choose the formal system rather than discovering it. And it makes existence non-psychological—no mental images are required, just formal consistency. On this view, the Axiom of Choice doesn't assert that choice functions exist in some Platonic sense. It simply grants permission to reason as if they exist within ZFC, and that permission proves consistent with the other axioms.
-
-The second interpretation takes mathematical existence to require mental constructibility. Only those objects we can explicitly construct or specify genuinely exist mathematically. This more restrictive criterion would reject choice functions and other AC-dependent entities. But the anti-Platonist position under examination accepts AC, which means this cannot be the operative definition of existence. Mental constructibility is too narrow to capture actual mathematical practice.
-
-The third interpretation understands mathematical objects as logical possibilities within rule structures. They exist the way chess strategies exist—as possibilities within a game whose rules we invented. This is close to the chess analogy: strategies "exist" as potential patterns within the rule system, whether or not anyone has played them. Similarly, mathematical theorems "exist" as potential consequences of axiom systems, whether or not anyone has proven them yet.
-
-The ambiguity centers on the phrase "what we can think of and imagine." This language suggests psychological accessibility, but acceptance of AC requires something more abstract. What's really meant is probably "what we can consistently reason about using formal rules." Mathematical thinking, especially in advanced mathematics, consists less of forming mental images and more of manipulating symbols according to explicit rules. We operate on representations, not on the objects themselves.
-
-This suggests the first interpretation—existence as consistency within formal systems—best captures the anti-Platonist position. Mathematical objects don't exist in minds (that's psychologism, and it makes mathematics subjective) and they don't exist in Platonic realms (that's exactly what we're denying). They exist as formal structures we construct and explore through rule-following symbol manipulation. But this makes "existence" system-relative and conventional. The Continuum Hypothesis, for instance, has different truth values in different formal systems since it's independent of ZFC. What "exists" depends on which formal game we're playing.
-
-Perhaps the honest formulation is that mathematical existence is a useful fiction. We talk as if mathematical objects exist to facilitate reasoning and communication. But ultimately we're pushing symbols according to rules we chose because those rules help us model useful aspects of reality. The language of existence is pragmatic convenience rather than metaphysical commitment.
-
-## Philosophical Context
-
-### Allies in Anti-Realism
-
-The anti-Platonist position developed here aligns with several philosophical traditions that reject metaphysical commitment to abstract mathematical objects while preserving mathematics as a rigorous, objective discipline.
-
-David Hilbert's formalism represents one influential approach. For Hilbert, mathematics consists fundamentally of manipulating meaningless symbols according to explicit rules. The symbols don't refer to abstract objects; they're simply marks on paper that we transform according to procedures. Mathematical truth becomes provability within a formal system rather than correspondence to a Platonic realm. Hilbert focused particularly on proof theory and the metamathematical investigation of what formal systems can prove, treating mathematical practice as a kind of sophisticated game with precisely specified rules.
-
-Hartry Field developed the most systematic modern defense of nominalism about mathematics in his book *Science Without Numbers*. Field argues that we can reformulate physical theories without quantifying over mathematical objects, showing that mathematics is a useful fiction rather than a description of additional entities. While Field's specific technical program faces challenges, his broader philosophical point remains influential: mathematics doesn't require us to believe in abstract objects any more than fiction requires us to believe in Sherlock Holmes.
-
-Bas van Fraassen's constructive empiricism, while not specifically about mathematics, provides a complementary perspective on scientific theories. Van Fraassen argues that science aims at empirical adequacy rather than truth about unobservables. Models and theories are tools for organizing observations and making predictions, not mirrors of hidden reality. Applied to mathematics, this suggests we should view mathematical models as instruments for prediction rather than discoveries about abstract realms.
-
-The later Wittgenstein approached mathematics through his broader philosophy of language and rule-following. For Wittgenstein, mathematics consists of language games—practices we engage in according to rules that emerge from and are sustained by human forms of life. Mathematical necessity isn't metaphysical but grammatical—it reflects how we've decided to use mathematical language. Wittgenstein famously wrote "In mathematics there can be no discoveries," meaning that mathematical proof creates mathematical truth rather than discovering it. This radical view treats mathematical activity as essentially conventional, though constrained by its role in our practices.
-
-Errett Bishop and the constructivist school represent a more restrictive position than simple anti-Platonism. Constructivists accept only mathematics that can be explicitly constructed—they reject existence proofs that don't provide constructions. This makes their position more stringent than the anti-Platonism examined here, which accepts the Axiom of Choice. But constructivists share the anti-Platonist rejection of abstract objects existing independently of human mathematical activity. Mathematical objects exist for constructivists only insofar as we can construct them through explicit procedures.
-
-### Opponents in Realism
-
-The Platonist tradition in philosophy of mathematics remains vigorous and attracts many of the most prominent mathematicians and mathematical physicists. Their fundamental claim is that mathematical objects exist independently and eternally, and that mathematicians discover rather than invent mathematical truths.
-
-Kurt Gödel, himself one of the twentieth century's greatest logicians, defended strong Platonism throughout his career. He argued that mathematical objects are as real as physical objects and that we possess a faculty of mathematical intuition that perceives these objects. His famous statement that "classes and concepts may be conceived as real objects" encapsulates this view. For Gödel, our inability to physically touch or see numbers doesn't make them less real—they're simply objects of a different kind, apprehended through reason rather than sense perception.
-
-G.H. Hardy, the distinguished British mathematician, expressed similar views in his autobiographical *A Mathematician's Apology*. Hardy wrote "I believe that mathematical reality lies outside us" and insisted that mathematicians are discovering objective truths about patterns that exist whether or not humans think about them. He provocatively suggested that prime numbers would exist even if there were no humans to contemplate them—they're part of the eternal furniture of reality, not human constructions.
-
-Roger Penrose developed these ideas systematically in *The Road to Reality*, arguing for a three-world structure: the mathematical world, the physical world, and the mental world. For Penrose, mathematical objects exist in a Platonic realm, the physical world somehow instantiates or reflects mathematical structure, and human minds gain access to both physical and mathematical reality through consciousness. This ambitious framework attempts to explain why mathematics applies to physics (because physical reality is fundamentally mathematical) and why humans can do mathematics (because consciousness bridges the mental and mathematical worlds).
-
-David Deutsch, in *The Fabric of Reality*, defends a version of mathematical realism connected to his interpretation of quantum mechanics. For Deutsch, mathematical objects exist as part of the multiverse structure—they're real entities within the broader reality that includes all possible quantum histories. Reality is fundamentally mathematical in nature, making mathematical truth objective and eternal rather than conventional or constructed.
-
-Alain Connes, a Fields Medalist and leading researcher in noncommutative geometry, states the Platonist position with characteristic directness: "There exists, independently of the human mind, a raw and immutable mathematical reality." For Connes, working daily with advanced mathematical structures provides phenomenological evidence of their independence—they have properties that surprise us, resist our manipulations, and reveal depths we didn't anticipate. This experiential dimension of doing mathematics convinces many practitioners of Platonism.
-
-Max Tegmark goes further than any of these thinkers with his Mathematical Universe Hypothesis. For Tegmark, physical reality doesn't just instantiate mathematical structures—physical reality *is* a mathematical structure. There's no meaningful distinction between mathematical existence and physical existence. Everything that exists mathematically exists physically somewhere in the multiverse. This radical position eliminates the gap between mathematics and physics by making them identical.
-
-Even the playfully expressed Platonism of Paul Erdős captures something many mathematicians feel. Erdős spoke of "The Book" in which God keeps the most elegant proofs of mathematical theorems. When mathematicians discover particularly beautiful proofs, Erdős would say they had glimpsed a page from The Book. Though stated whimsically, this reflects a widespread sense among working mathematicians that they're discovering something objective rather than inventing arbitrarily.
-
-### The Impasse
-
-Both views can accommodate the evidence:
-
-- **Realist**: We discover mathematical structures; they exist independently; this explains applicability and convergence
-- **Anti-realist**: We invent formal systems; selection explains applicability; physical reality constrains convergence
-
-Neither can decisively refute the other. The choice may ultimately depend on methodological preferences: metaphysical parsimony vs. explanatory power.
-
-## Conclusion: The Strength and Limits of Anti-Platonism
-
-### What the Position Achieves
-
-The anti-Platonist formalist position offers several significant philosophical advantages that make it attractive despite the challenges it faces.
-
-First, it achieves ontological parsimony by avoiding commitment to a Platonic realm of abstract objects existing outside space and time. We need not answer puzzling questions about where numbers are located or how embodied minds gain epistemic access to causally inert abstract entities. The position refuses to multiply entities beyond necessity, adhering to the methodological principle that simpler explanations are preferable when they do equal work.
-
-Second, it provides a compelling account of mathematical practice through the lens of formalization. Modern proof assistant projects—Isabelle, Coq, Lean, and Mizar—vindicate the view that mathematics is fundamentally rule-following. The success of mechanical proof verification demonstrates that no Platonic realm is needed to explain mathematical truth. Just axioms, inference rules, and symbol manipulation suffice. This isn't merely a theoretical claim but an empirically demonstrated fact about how mathematics actually works.
-
-Third, the Darwinian selection model offers a naturalistic explanation for mathematics' applicability without invoking metaphysical mysteries. Large inventories of mathematical results, long time scales over which matching occurs, and selection pressure from physics and engineering together suffice to explain why mathematics "works." The "unreasonable effectiveness" reveals itself as survivorship bias writ large—we notice the hits and forget the vast ocean of unused mathematics. No Platonic correspondence is required.
-
-Fourth, the chess analogy successfully dissolves what initially seemed like deep metaphysical problems. The question "Do prime numbers exist independently of humans?" turns out to be confused, like asking "Did the Sicilian Defense exist before anyone played it?" The apparent dichotomy between discovery and invention collapses once we recognize that logical consequences of formal systems are both discovered (as implications of the rules) and invented (as elements of human-constructed games). This isn't evasion but clarification—some philosophical problems dissolve when properly framed rather than requiring solution.
-
-Finally, the position maintains intellectual honesty about what remains mysterious. Rather than pretending that Platonism explains applicability—when it merely relocates the mystery to the relationship between Platonic and physical realms—this view frankly admits ignorance. We don't fully know why mathematical models work so well, and perhaps we never will. That admission reflects intellectual maturity rather than defeat. Some aspects of reality may simply be brute facts not amenable to further explanation.
-
-### What Remains Unexplained
-
-Despite these strengths, the anti-Platonist position faces genuine challenges that resist easy resolution.
-
-The precision of mathematical-physical matches remains puzzling. When mathematics and physics connect successfully, they often exhibit exact structural identity rather than approximate resemblance. This precision strains the idea that we're simply selecting useful tools from a human-constructed inventory. The response—that mathematical models are abstractions that never perfectly capture reality—is philosophically sound. Einstein's insight about mathematics being certain only when it doesn't refer to reality reinforces this point. Yet this response may underestimate how precisely mathematical structures fit physical phenomena. Conceding that "we don't know why models work so well" surrenders explanatory ground that Platonists eagerly occupy.
-
-Predictive power presents a related difficulty. Mathematical structures sometimes predict completely unobserved phenomena before any experimental confirmation. The Dirac equation predicted antimatter. Maxwell's equations predicted electromagnetic waves. The Higgs mechanism predicted a new particle nearly half a century before detection. The Lorentz group's mathematical structure reveals four disconnected components: our familiar world with forward time and normal space, plus three exotic possibilities involving time reversal, space inversion, or both. Mathematics generates more structure than we observe, pointing toward possibilities that experiments sometimes later confirm. The selection model handles post-hoc matching elegantly but struggles with forward prediction. The response that we remember successes and forget failures is plausible and testable, but if the hit rate proves genuinely high, selection alone may insuffice as explanation.
-
-The nature of mathematical existence itself remains inadequately clarified. The position wavers between psychological existence (what we can imagine), formal existence (consistency in axiomatic systems), and conventional existence (useful fictions). Accepting the Axiom of Choice while claiming mathematics exists "in our minds" creates internal tension. A more precise formulation might help: mathematical objects exist as structures within formal systems that humans construct—not in Platonic heaven beyond space and time, not in individual human minds as psychological entities, but as intersubjective cultural artifacts that emerge from and are sustained by mathematical practice. Yet this formulation itself invites questions about what "intersubjective cultural artifacts" are and where they exist.
-
-Pre-adaptation across centuries continues to strike observers as remarkable. Mathematics developed purely for internal reasons—group theory for polynomial equations, conic sections for geometric beauty, prime numbers for intellectual curiosity—finds application centuries later to problems its developers never imagined. The selection model requires large numbers, long time scales, and vast unused inventory, all of which exist. But the hit rate may exceed what pure chance would predict. Perhaps this suggests that mathematical exploration, though unconstrained by immediate empirical needs, is still constrained by something real—not Platonic objects exactly, but structural possibilities inherent in logic and coherence themselves. Mathematicians explore the space of consistent structures, and physics happens to actualize some structures from that space. This wouldn't require Platonism, but it might suggest that the space of logically possible structures has its own reality independent of particular physical instantiation. Whether this helps or merely relocates the puzzle remains unclear.
-
-### The Honest Position
-
-Given these considerations, the anti-Platonist formalist position is perhaps best stated with maximal clarity and minimal pretense to explaining what may be inexplicable.
-
-Mathematics consists of formal systems—combinations of axioms and inference rules—that humans construct. These systems don't emerge from nowhere or represent arbitrary play. They're refined over time through selection pressure from applications. When a formal system proves useful for modeling aspects of reality, it survives, gets taught to students, appears in textbooks, and shapes further mathematical development. When a system proves useless or leads nowhere, it fades from practice. This refinement process doesn't make mathematics true or false in some ultimate sense. It makes particular formal systems more or less useful for particular purposes.
-
-Mathematical existence, on this view, means consistency within chosen formal systems. To say a mathematical object exists is to say we can define it consistently within an axiom system and reason about it without contradiction. This makes existence system-relative—what exists in ZFC may not exist in constructive mathematics. It makes existence conventional—we choose which formal system to adopt. And it acknowledges that the language of mathematical existence is pragmatic convenience rather than metaphysical discovery.
-
-Why these formal systems apply to physical reality remains, on this view, unexplained and perhaps inexplicable. We can point to the selection mechanism—systems that model reality well get retained—but this describes the process without explaining the deep fact that such systems exist at all. The anti-Platonist position frankly admits this ignorance. Some Platonists offer what they take to be explanations: mathematics applies because mathematical structures exist independently and physical reality instantiates them. But this merely relocates the mystery. Why should physical reality instantiate mathematical structures? How does the instantiation relationship work? Platonism multiplies entities and relationships without genuinely explaining.
-
-The position thus represents a form of pragmatic nominalism. We use mathematics because it works, not because we've discovered eternal truths in a transcendent realm. Mathematical practice is sophisticated, rigorous, and objective—but objective in the sense that formal proof is mechanically checkable, not in the sense that mathematical objects exist independently of mathematical practice. This combines the virtues of ontological parsimony with acknowledgment of mathematics' genuine power and surprising applicability.
-
-The realist may object that this leaves too much unexplained. The anti-realist can reply: your Platonism explains nothing—"mathematics applies because it describes real abstract structures" just pushes the question back. Why do abstract structures match physical reality? You've replaced one mystery with another.
-
-This pattern repeats throughout intellectual history. When confronted with something remarkable—the apparent fine-tuning of physical constants, the emergence of life, the applicability of mathematics—a recurring argumentative move appears: "It's so fantastic, there must be... a God, a hidden reality, many universes, a Platonic realm." These appeals share a common structure: invoking something beyond the observable to explain the remarkable features of the observable.
-
-The anthropic principles illustrate this dynamic clearly. The strong anthropic principle assumes some kind of premeditation or design: physical constants were chosen to permit life. The weak anthropic principle uses probability arguments: there are many universes with different constants, and we necessarily find ourselves in one compatible with observation. The non-anthropic principle simply accepts the world as it is: these are the constants, and we observe them. No explanation beyond the brute fact.
-
-Both anthropic principles, strong and weak, fall to Occam's razor. They multiply entities—designers or multiverses—to explain what might simply be. But they cannot be disproven, and if believing in cosmic design or infinite universes brings someone comfort or satisfies their desire for ultimate explanation, that's fine. The key point is recognizing that these moves don't actually explain; they relocate the mystery. Why did God choose these constants? Why does the multiverse have the structure that produces life-permitting universes? The explanatory regress continues.
-
-The same applies to Platonism about mathematics. Invoking a realm of abstract objects doesn't explain why mathematics applies to physics—it just creates new questions about the relationship between Platonic and physical realms. The anti-Platonist position resists this multiplication of mysteries. Mathematics works remarkably well; we don't fully understand why; positing extra realms of being doesn't help. Sometimes the honest answer is simply: we don't know, and perhaps we cannot know.
-
-Perhaps, in the end, the effectiveness of mathematics is simply a brute fact about our universe—one we should accept with wonder rather than false confidence that we've explained it. As Wittgenstein said {cite}`wittgenstein1978remarks`: "Explanations come to an end somewhere."
-
-The anti-Platonist position offers clarity about what mathematics is (formal systems), honesty about what remains mysterious (applicability), and parsimony in ontology (no Platonic heaven). Whether these virtues outweigh the explanatory ambitions of Platonism remains a matter of philosophical judgment.
-
-But one thing is clear: prime numbers exist exactly as much as the Sicilian Defense exists—as patterns within rule structures humans created. Whether that constitutes "real" existence depends on what we mean by existence. And that question, like so many in philosophy, may have no final answer.
+Prime numbers exist exactly as much as the Sicilian Defense exists—as patterns within rule structures humans created. Whether that constitutes "real" existence depends on what we mean by existence. And that question, like so many in philosophy, may have no final answer.
 
 ## References
 
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-
-
-
-
 
 <div style="margin-bottom: 100px;"></div>
