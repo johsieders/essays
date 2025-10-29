@@ -2,6 +2,7 @@
 
 *A Defense of Formalism Against Platonism*
 
+
 ---
 
 Do mathematical objects exist independently of human minds? When we prove theorems about prime numbers, are we discovering pre-existing truths in some Platonic realm, or are we manipulating symbols according to rules we invented? This ancient question has gained new urgency as computers formalize mathematics and as we confront the "unreasonable effectiveness" of mathematics in physics.
@@ -36,15 +37,15 @@ Chess has no counterpart in the real world—it's pure rule-following. Mathemati
 
 ## Mathematics as Formal System
 
-Chess illustrates the formal nature of mathematics, but mathematics extends far beyond anything with obvious empirical applications. Mathematicians freely generalize and explore. Complex numbers, quaternions, the number googol (10^100), and far more exotic constructs emerge naturally as extensions of simpler systems.
-
-The key insight: we choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.
+Chess illustrates the formal nature of mathematics, but mathematics extends far beyond anything with obvious empirical applications. 
+Mathematicians freely generalize and explore. Complex numbers, quaternions, the number googol (10<sup>100</sup>), and far more exotic constructs emerge naturally as extensions of simpler systems.
+In fact, we choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.
 
 Even basic arithmetic facts should be understood as conventional rather than metaphysically necessary. The statement "1 + 1 = 2" is a definition within the Peano axiom system, not a discovery about pre-existing abstract objects. Each number has exactly one successor by definition: the successor of 1 is called 2, and that's the end of the matter. Once we establish Peano arithmetic, theorems follow necessarily from the axioms—but the axioms themselves represent conventional choices, refined over time by what proves useful.
 
 ## The Correctness Problem: Symbol Manipulation
 
-Here is a radical claim: mathematics can, at least in theory, be reduced to mere symbol manipulation. A computer can verify proofs mechanically without understanding what they mean. Given formal axioms and inference rules, a machine can check whether a purported proof is valid—just symbol pushing according to syntactic rules.
+Mathematics can, at least in theory, be reduced to mere symbol manipulation. A computer can verify proofs mechanically without understanding what they mean. Given formal axioms and inference rules, a machine can check whether a purported proof is valid—just symbol pushing according to syntactic rules.
 
 Consider the proof that √2 is irrational. A computer can verify this proof by checking each logical step, ensuring each follows from previous steps or axioms according to the rules of inference. The computer need not understand what "irrational" means, what square roots are, or why the result matters. It simply manipulates symbols according to rules.
 
