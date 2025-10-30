@@ -2,7 +2,8 @@
 
 A short talk on conditional probabilities, Bayesian tests, and causation.
 
-Books to read: {cite}`pearl2018book`, {cite}`pearl2009causality`, and {cite}`pearl2016causal`
+Books to read: {cite}`pearl2018book`, {cite}`pearl2009causality`, 
+and {cite}`pearl2016causal`, {cite}`kahneman2011thinking`
 
 <embed src="../_static/bayesian-tests.pdf" type="application/pdf" width="100%" height="800px" />
 
