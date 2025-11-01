@@ -9,15 +9,19 @@ November 2025*
 
 We are easily fooled. Daniel Kahneman's *Thinking, Fast and Slow* {cite}`kahneman2011thinking` opens with a devastating example. Imagine two lists. The first contains personality descriptions: "a meek and tidy soul with a need for order and structure." The second lists professions: librarian, farmer, airline pilot, accountant. Your task: estimate how likely a given individual works in each profession.
 
-Most people ask: "How well does the description match?" Meek and tidy? Sounds like a librarian! But this intuition is fundamentally flawed. It ignores a crucial fact: some professions are vastly more common than others. However perfectly a personality fits an astronaut or lighthouse keeper, these professions are so rare that the actual probability remains minuscule.
+Most people ask: "How well does the description match?" Meek and tidy? Sounds like a librarian! 
+But this intuition ignores the fact that some professions are vastly more common than others. 
+However perfectly a personality fits an astronaut or lighthouse keeper, these professions are so rare that the actual probability remains minuscule.
 
 Kahneman calls this "What You See Is All There Is" (WYSIATI)—our tendency to judge based solely on available information while ignoring what's missing. What people systematically forget is the **base rate**: the underlying frequency of each profession. There are thousands of accountants for every lighthouse keeper, regardless of personality fit.
 
 The correct probability must be approximately the product of base rate (how common is this profession?) and personality match (how well does this person fit?). Understanding this product is the gateway to Bayesian reasoning {cite}`pearl2018book`.
+For a readable, instructive, and, at times, humorous introduction to the strange world of Bayes, see {cite}`mcgrayne2011theory`.
 
 This essay traces a journey: from Kahneman's insights about human fallibility through Bayesian tests to a surprising conclusion—trained automatons (neural networks making decisions from weighted scores) systematically outperform human experts. The implications for medicine, insurance, criminal justice are profound and troubling. We begin with musicians.
 
-## A Worked Example: Musicians and Base Rates
+
+## Musicians and Base Rates
 
 Let's examine professional musicians. Suppose:
 - **Base rate**: 0.1% of the population are professional musicians (1 in 1,000 people)
@@ -104,7 +108,11 @@ For all their limitations, Bayesian tests have been the foundation of medical di
 
 ### The Asymmetry Between Lab and Field
 
-There is a deep asymmetry between developing a test and deploying it. Pharmaceutical companies typically develop tests in laboratory settings with carefully balanced populations: perhaps 500 people with cancer and 500 without. The test's job is to distinguish these two equal-sized groups.
+There is a deep asymmetry between developing a test and deploying it. Pharmaceutical companies typically develop tests in 
+laboratory settings with carefully balanced populations: perhaps 500 people with cancer and 500 without. 
+The test's job is to distinguish these two equal-sized groups. 
+The point is this: In the lab, you see both ends (evidence and hypothesis), but in the field, 
+only the evidence is available and the hypothesis has to be predicted.
 
 In this balanced setting, the same 95% sensitivity and 95% specificity yield vastly different results:
 - True positives: 500 × 95% = 475
@@ -146,7 +154,8 @@ Finding optimal weights: collect data from 1,000 newborns (five scores plus true
 
 **Congratulations: you have just trained your first neural network.**
 
-This is not a metaphor or analogy. The weighted Apgar test *is* a neural network—specifically, a single-layer perceptron with five inputs, one output, and no hidden layers. The architecture looks like this:
+This is not a metaphor or analogy. The weighted Apgar test *is* a neural network—specifically, a single-layer perceptron with five inputs, one output, and no hidden layers. 
+The architecture looks like this:
 
 ```
 Input Layer:          Weights:      Output:
@@ -205,11 +214,15 @@ Suppose they have 10,000 historical claims with known outcomes.
 
 ### Step 3: Train the Model
 
-Using the same mathematical techniques as the weighted Apgar test (but with more sophisticated algorithms capable of handling 50+ features), the company finds the weights that best predict historical decisions:
+Using the same mathematical techniques as the weighted Apgar test (but with more sophisticated algorithms capable of handling 50+ features), 
+the company finds the weights that best predict historical decisions:
 
 **Claim Score** = w₁×(claim_amount) + w₂×(policy_age) + ... + w₅₀×(feature₅₀)
 
 If the score exceeds some threshold, approve the claim. If it falls below, deny or flag for human review.
+
+**Note** In reality, the company would probably choose a model with more layers and many more parameters rather than a simple one-layer perceptron.
+But the key ideas are identical.
 
 ### Step 4: Deploy and Monitor
 
