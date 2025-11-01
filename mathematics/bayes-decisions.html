@@ -58,9 +58,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/bayes-intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/bayes-decisions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Baysian Tests" href="bayesian-tests.html" />
+    <link rel="prev" title="Modern Physics: One-Pager" href="../physics/29-physics-one-page.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -205,8 +205,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="bayes-decisions.html">Bayesian Decision-Making</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bayesian Decision-Making</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
 </ul>
@@ -317,7 +317,7 @@
       
       
       
-      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/bayes-intro.md" target="_blank"
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/bayes-decisions.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -334,7 +334,7 @@
       
       
       
-      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/bayes-intro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/bayes-decisions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +364,7 @@
       
       
       
-      <li><a href="../_sources/mathematics/bayes-intro.md" target="_blank"
+      <li><a href="../_sources/mathematics/bayes-decisions.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -523,7 +523,7 @@ November 2025</em></p>
 <p>We are easily fooled. Daniel Kahneman’s <em>Thinking, Fast and Slow</em> <span id="id1">[<a class="reference internal" href="bayesian-tests.html#id66" title="Daniel Kahneman. Thinking, Fast and Slow. Farrar, Straus and Giroux, 2011.">Kahneman, 2011</a>]</span> opens with a devastating example of human misjudgment. Imagine you are given two lists. The first contains personality descriptions like “a meek and tidy soul with a need for order and structure.” The second is simply a list of professions: librarian, farmer, airline pilot, accountant. Your task: estimate how likely a given individual is to work in each profession.</p>
 <p>Most people approach this by asking: “How well does the description match the profession?” Meek and tidy? That sounds like a librarian! But this intuitive approach is fundamentally flawed. It ignores a crucial fact: some professions are vastly more common than others. However perfectly a personality fits an astronaut or lighthouse keeper, these professions are so rare that the actual probability of encountering one remains minuscule.</p>
 <p>Kahneman calls this cognitive error “What You See Is All There Is” (WYSIATI)—our tendency to make judgments based solely on available information while ignoring what’s missing. What people systematically forget is the <strong>base rate</strong>: the underlying frequency of each profession in the population. There are thousands of accountants for every lighthouse keeper, regardless of personality fit.</p>
-<p>The correct probability of someone being a librarian, astronaut, or accountant must be approximately the product of the base rate (how common is this profession?) and some factor determined by the personality match (how well does this person fit the professional profile?). Understanding this product—and learning to think about it systematically—is the gateway to Bayesian reasoning.</p>
+<p>The correct probability of someone being a librarian, astronaut, or accountant must be approximately the product of the base rate (how common is this profession?) and some factor determined by the personality match (how well does this person fit the professional profile?). Understanding this product—and learning to think about it systematically—is the gateway to Bayesian reasoning <span id="id2">[<a class="reference internal" href="bayesian-tests.html#id69" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>.</p>
 <p>This essay traces a journey from Kahneman’s insights about human fallibility through the mathematics of Bayesian tests to a surprising conclusion: trained automatons—neural networks making decisions based on weighted scores—systematically outperform human experts. The implications for medicine, insurance, criminal justice, and countless other domains are profound and troubling. We begin with a concrete example.</p>
 <section id="a-worked-example-musicians-and-base-rates">
 <h2>A Worked Example: Musicians and Base Rates<a class="headerlink" href="#a-worked-example-musicians-and-base-rates" title="Link to this heading">#</a></h2>
@@ -589,23 +589,23 @@ November 2025</em></p>
 <p><strong>Given:</strong></p>
 <ul class="simple">
 <li><p>Base rate: 0.1% (10 people in 10,000 have cancer)</p></li>
-<li><p>Sensitivity (true positive rate): 95% (the test detects 95% of actual cancers)</p></li>
-<li><p>Specificity (true negative rate): 95% (the test correctly identifies 95% of healthy people)</p></li>
+<li><p>The test correctly detects 95% of people who actually have cancer</p></li>
+<li><p>The test correctly identifies 95% of people who don’t have cancer</p></li>
 </ul>
 <p><strong>Calculation:</strong></p>
 <ul class="simple">
-<li><p>True positives (TP): 10 people with cancer × 95% = 9.5</p></li>
-<li><p>False negatives (FN): 10 people with cancer × 5% = 0.5</p></li>
-<li><p>True negatives (TN): 9,990 people without cancer × 95% = 9,490.5</p></li>
-<li><p>False positives (FP): 9,990 people without cancer × 5% = 499.5</p></li>
+<li><p>Among 10 people with cancer, the test detects: 10 × 95% = 9.5 (<strong>true positives</strong>, TP)</p></li>
+<li><p>Among 10 people with cancer, the test misses: 10 × 5% = 0.5 (<strong>false negatives</strong>, FN)</p></li>
+<li><p>Among 9,990 people without cancer, the test correctly identifies: 9,990 × 95% = 9,490.5 (<strong>true negatives</strong>, TN)</p></li>
+<li><p>Among 9,990 people without cancer, the test incorrectly flags: 9,990 × 5% = 499.5 (<strong>false positives</strong>, FP)</p></li>
 </ul>
 <p><strong>Results:</strong></p>
 <ul class="simple">
 <li><p>Total positive tests: TP + FP = 9.5 + 499.5 = 509</p></li>
 <li><p>Precision (positive predictive value): TP/(TP + FP) = 9.5/509 = <strong>1.9%</strong></p></li>
 </ul>
-<p>Out of 509 people who test positive, only 9.5 actually have cancer. That’s 98.1% false positives. Most patients—and many physicians—find this deeply counterintuitive. A test that is “95% accurate” produces overwhelming numbers of false alarms.</p>
-<p>This is not a defect of the test. It’s an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives.</p>
+<p>Out of 509 people who test positive, only 9.5 actually have cancer. That’s 98.1% false positives. Most patients—and many physicians—find this deeply counterintuitive <span id="id3">[<a class="reference internal" href="#id76" title="Gerd Gigerenzer. Calculated Risks: How to Know When Numbers Deceive You. Simon &amp; Schuster, New York, 2002.">Gigerenzer, 2002</a>]</span>. A test that is “95% accurate” produces overwhelming numbers of false alarms.</p>
+<p>This is not a defect of the test. It’s an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives <span id="id4">[<a class="reference internal" href="#id77" title="John P. A. Ioannidis. Why most published research findings are false. PLOS Medicine, 2(8):e124, 2005. doi:10.1371/journal.pmed.0020124.">Ioannidis, 2005</a>]</span>.</p>
 <section id="the-confusion-matrix">
 <h3>The Confusion Matrix<a class="headerlink" href="#the-confusion-matrix" title="Link to this heading">#</a></h3>
 <p>The confusion matrix organizes these four outcomes systematically:</p>
@@ -640,7 +640,7 @@ November 2025</em></p>
 </section>
 <section id="four-ways-to-measure-performance">
 <h3>Four Ways to Measure Performance<a class="headerlink" href="#four-ways-to-measure-performance" title="Link to this heading">#</a></h3>
-<p>From the confusion matrix, we can derive multiple performance metrics, each capturing a different aspect of test quality:</p>
+<p>From the confusion matrix, we can derive multiple performance metrics. The terminology here is standard but notoriously confusing, so let’s define each term precisely:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Metric</p></th>
@@ -650,30 +650,30 @@ November 2025</em></p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Accuracy</strong></p></td>
-<td><p>(TP+TN)/(TP+TN+FP+FN)</p></td>
-<td><p>95%</p></td>
-<td><p>Overall correctness</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Precision</strong></p></td>
-<td><p>TP/(TP+FP)</p></td>
-<td><p>1.9%</p></td>
-<td><p>What patients care about</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Recall (Sensitivity)</strong></p></td>
+<tr class="row-even"><td><p><strong>Sensitivity (Recall)</strong></p></td>
 <td><p>TP/(TP+FN)</p></td>
 <td><p>95%</p></td>
-<td><p>How many cancers we catch</p></td>
+<td><p>Among people with cancer, what percentage does the test detect?</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Specificity</strong></p></td>
 <td><p>TN/(TN+FP)</p></td>
 <td><p>95%</p></td>
-<td><p>How many healthy people we correctly identify</p></td>
+<td><p>Among people without cancer, what percentage does the test correctly identify?</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Precision (PPV)</strong></p></td>
+<td><p>TP/(TP+FP)</p></td>
+<td><p>1.9%</p></td>
+<td><p>Among people who test positive, what percentage actually have cancer?</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Accuracy</strong></p></td>
+<td><p>(TP+TN)/(TP+TN+FP+FN)</p></td>
+<td><p>95%</p></td>
+<td><p>Overall, what percentage of all classifications are correct?</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The test has 95% accuracy, 95% recall, and 95% specificity—all excellent numbers. Yet the precision is merely 1.9%. This is the paradox of rare events: even very good tests produce mostly false positives when screening for conditions with low base rates.</p>
+<p>The test has 95% sensitivity (catches 95% of actual cancers), 95% specificity (correctly identifies 95% of healthy people), and 95% overall accuracy. These numbers all sound excellent. Yet the precision—the answer to the question a patient with a positive test actually asks (“Do I have cancer?”)—is merely 1.9%. This is the paradox of screening for rare conditions.</p>
 <p><strong>False negatives</strong> are catastrophic—missing someone who actually has cancer. Fortunately, with 95% sensitivity, these are rare (0.5 cases in our example).</p>
 <p><strong>False positives</strong> are merely anxiety-inducing—telling someone they might have cancer when they don’t. Unfortunately, these are common (499.5 cases in our example).</p>
 <p>For all their limitations, Bayesian tests have been the foundation of medical diagnosis, quality control, security screening, and scientific inference for over a century. They remain indispensable because the alternative—human intuition—is systematically worse.</p>
@@ -832,7 +832,7 @@ November 2025</em></p>
 </section>
 <section id="why-automatons-beat-humans-anyway">
 <h2>Why Automatons Beat Humans Anyway<a class="headerlink" href="#why-automatons-beat-humans-anyway" title="Link to this heading">#</a></h2>
-<p>Given that models learn from flawed human decisions, why would they outperform humans? This is the central thesis of Kahneman’s <em>Noise: A Flaw in Human Judgment</em> <span id="id2">[<a class="reference internal" href="#id65" title="Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. Noise: A Flaw in Human Judgment. Little, Brown Spark, 2021.">Kahneman <em>et al.</em>, 2021</a>]</span>: trained automatons systematically beat human experts at decision-making because they eliminate <strong>noise</strong>.</p>
+<p>Given that models learn from flawed human decisions, why would they outperform humans? This is the central thesis of Kahneman’s <em>Noise: A Flaw in Human Judgment</em> <span id="id5">[<a class="reference internal" href="bayes-intro.html#id65" title="Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. Noise: A Flaw in Human Judgment. Little, Brown Spark, 2021.">Kahneman <em>et al.</em>, 2021</a>]</span>: trained automatons systematically beat human experts at decision-making because they eliminate <strong>noise</strong>.</p>
 <section id="what-is-noise">
 <h3>What is Noise?<a class="headerlink" href="#what-is-noise" title="Link to this heading">#</a></h3>
 <p>Noise is random variability in human judgment. It has several sources:</p>
@@ -938,7 +938,7 @@ November 2025</em></p>
 </section>
 <section id="three-critical-problems">
 <h3>Three Critical Problems<a class="headerlink" href="#three-critical-problems" title="Link to this heading">#</a></h3>
-<p>Even in appropriate domains, automation faces three serious problems:</p>
+<p>Even in appropriate domains, automation faces three serious problems that can cause significant harm <span id="id6">[<a class="reference internal" href="#id17" title="Cathy O'Neil. Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown, 2016.">O'Neil, 2016</a>]</span>:</p>
 <section id="the-training-data-problem">
 <h4>1. The Training Data Problem<a class="headerlink" href="#the-training-data-problem" title="Link to this heading">#</a></h4>
 <p>Models learn exactly what they’re taught—including biases. If historical decisions show:</p>
@@ -949,11 +949,11 @@ November 2025</em></p>
 <li><p>Geographic prejudices in medical care</p></li>
 </ul>
 <p>…the model will faithfully reproduce these patterns. It doesn’t distinguish between legitimate expertise and unjust bias. Both appear as correlations in the training data.</p>
-<p><strong>Example</strong>: The COMPAS recidivism predictor was trained on historical criminal justice data that reflected systemic racial biases. It learned to assign higher risk scores to Black defendants, not because of any individual characteristics, but because the training data showed Black defendants were more likely to be re-arrested (reflecting both higher policing in Black communities and judicial biases). The model amplified existing injustice.</p>
+<p><strong>Example</strong>: The COMPAS recidivism predictor was trained on historical criminal justice data that reflected systemic racial biases <span id="id7">[<a class="reference internal" href="#id78" title="Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. ProPublica, May 23 2016. URL: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing.">Angwin <em>et al.</em>, 2016</a>]</span>. It learned to assign higher risk scores to Black defendants, not because of any individual characteristics, but because the training data showed Black defendants were more likely to be re-arrested (reflecting both higher policing in Black communities and judicial biases). The model amplified existing injustice.</p>
 </section>
 <section id="the-feedback-loop-problem">
 <h4>2. The Feedback Loop Problem<a class="headerlink" href="#the-feedback-loop-problem" title="Link to this heading">#</a></h4>
-<p>Once deployed, models create their own training data. If an automated loan system denies credit to certain demographics, those people never get loans, never demonstrate creditworthiness, and the system “learns” that denying them was correct. The model’s decisions become self-fulfilling prophecies.</p>
+<p>Once deployed, models create their own training data. If an automated loan system denies credit to certain demographics, those people never get loans, never demonstrate creditworthiness, and the system “learns” that denying them was correct. The model’s decisions become self-fulfilling prophecies. Healthcare algorithms exhibit this problem acutely: systems trained to predict healthcare costs learn to allocate fewer resources to Black patients because historical data shows lower spending on them—not because they need less care, but because they received less care <span id="id8">[<a class="reference internal" href="#id79" title="Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464):447–453, 2019. doi:10.1126/science.aax2342.">Obermeyer <em>et al.</em>, 2019</a>]</span>.</p>
 <p><strong>Example</strong>: Amazon’s automated recruiting tool learned to penalize résumés containing the word “women’s” (as in “women’s chess club”) because historical hiring data showed men were more often hired. The system then reinforced this pattern by recommending male candidates, creating training data that confirmed its bias.</p>
 </section>
 <section id="the-accountability-problem">
@@ -1014,15 +1014,39 @@ November 2025</em></p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id3">
+<div class="docutils container" id="id9">
 <div role="list" class="citation-list">
-<div class="citation" id="id64" role="doc-biblioentry">
+<div class="citation" id="id78" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">ALMK16</a><span class="fn-bracket">]</span></span>
+<p>Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. <em>ProPublica</em>, May 23 2016. URL: <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>.</p>
+</div>
+<div class="citation" id="id76" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Gig02</a><span class="fn-bracket">]</span></span>
+<p>Gerd Gigerenzer. <em>Calculated Risks: How to Know When Numbers Deceive You</em>. Simon &amp; Schuster, New York, 2002.</p>
+</div>
+<div class="citation" id="id77" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Ioa05</a><span class="fn-bracket">]</span></span>
+<p>John P. A. Ioannidis. Why most published research findings are false. <em>PLOS Medicine</em>, 2(8):e124, 2005. <a class="reference external" href="https://doi.org/10.1371/journal.pmed.0020124">doi:10.1371/journal.pmed.0020124</a>.</p>
+</div>
+<div class="citation" id="id70" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Kah11</a><span class="fn-bracket">]</span></span>
 <p>Daniel Kahneman. <em>Thinking, Fast and Slow</em>. Farrar, Straus and Giroux, 2011.</p>
 </div>
-<div class="citation" id="id65" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">KSS21</a><span class="fn-bracket">]</span></span>
+<div class="citation" id="id71" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">KSS21</a><span class="fn-bracket">]</span></span>
 <p>Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. <em>Noise: A Flaw in Human Judgment</em>. Little, Brown Spark, 2021.</p>
+</div>
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">ONeil16</a><span class="fn-bracket">]</span></span>
+<p>Cathy O'Neil. <em>Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy</em>. Crown, 2016.</p>
+</div>
+<div class="citation" id="id79" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">OPVM19</a><span class="fn-bracket">]</span></span>
+<p>Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. <em>Science</em>, 366(6464):447–453, 2019. <a class="reference external" href="https://doi.org/10.1126/science.aax2342">doi:10.1126/science.aax2342</a>.</p>
+</div>
+<div class="citation" id="id73" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">PM18</a><span class="fn-bracket">]</span></span>
+<p>Judea Pearl and Dana Mackenzie. <em>The Book of Why: The New Science of Cause and Effect</em>. Basic Books, 2018.</p>
 </div>
 </div>
 </div>
@@ -1060,6 +1084,24 @@ November 2025</em></p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../physics/29-physics-one-page.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Modern Physics: One-Pager</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bayesian-tests.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Baysian Tests</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
