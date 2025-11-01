@@ -3,7 +3,7 @@
 *From Kahneman's Fallacies to Neural Networks That Replace Human Judgment*
 
 *Johannes Siedersleben, assisted by Claude Sonnet 4.5     
-October 2025*
+November 2025*
 
 ---
 
