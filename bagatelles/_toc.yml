@@ -45,7 +45,7 @@ parts:
         
   - caption: Mathematics
     chapters:
-      - file: mathematics/bayes-decisions
+      - file: mathematics/bayesian-decisions
         title: Bayesian Decision-Making *
       - file: mathematics/bayesian-tests
         title: Bayesian Tests
