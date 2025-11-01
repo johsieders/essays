@@ -45,6 +45,8 @@ parts:
         
   - caption: Mathematics
     chapters:
+      - file: mathematics/bayes-intro
+        title: Bayesian Test Inference
       - file: mathematics/bayesian-tests
         title: Bayesian Tests
       - file: mathematics/arithmetic
