@@ -13,7 +13,7 @@ Most people ask: "How well does the description match?" Meek and tidy? Sounds li
 But this intuition ignores the fact that some professions are vastly more common than others. 
 However perfectly a personality fits an astronaut or lighthouse keeper, these professions are so rare that the actual probability remains minuscule.
 
-Kahneman calls this "What You See Is All There Is" (WYSIATI)—our tendency to judge based solely on available information while ignoring what's missing. What people systematically forget is the **base rate**: the underlying frequency of each profession. There are thousands of accountants for every lighthouse keeper, regardless of personality fit.
+Kahneman calls this "What You See Is All There Is" (WYSIATI, pronounced 'wizzy-AH-tee')—our tendency to judge based solely on available information while ignoring what's missing. What people systematically forget is the **base rate**: the underlying frequency of each profession. There are thousands of accountants for every lighthouse keeper, regardless of personality fit.
 
 The correct probability must be approximately the product of base rate (how common is this profession?) and personality match (how well does this person fit?). Understanding this product is the gateway to Bayesian reasoning {cite}`pearl2018book`.
 For a readable, instructive, and, at times, humorous introduction to the strange world of Bayes, see {cite}`mcgrayne2011theory`.
@@ -157,14 +157,7 @@ Finding optimal weights: collect data from 1,000 newborns (five scores plus true
 This is not a metaphor or analogy. The weighted Apgar test *is* a neural network—specifically, a single-layer perceptron with five inputs, one output, and no hidden layers. 
 The architecture looks like this:
 
-```
-Input Layer:          Weights:      Output:
-[Appearance]  -------  w₁  ------→
-[Pulse]       -------  w₂  ------→
-[Grimace]     -------  w₃  ------→  [Weighted Sum] → [Threshold] → Decision
-[Activity]    -------  w₄  ------→
-[Respiration] -------  w₅  ------→
-```
+![Apgar Perceptron Architecture](apgar_perceptron.png)
 
 This is not a toy example or simplification. Real-world neural networks use exactly this principle, scaled up:
 - More inputs (50, 500, or 50,000 features instead of 5)
@@ -221,7 +214,7 @@ the company finds the weights that best predict historical decisions:
 
 If the score exceeds some threshold, approve the claim. If it falls below, deny or flag for human review.
 
-**Note** In reality, the company would probably choose a model with more layers and many more parameters rather than a simple one-layer perceptron.
+**Note:** In reality, the company would probably choose a model with more layers and many more parameters rather than a simple one-layer perceptron.
 But the key ideas are identical.
 
 ### Step 4: Deploy and Monitor
