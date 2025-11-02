@@ -21,7 +21,7 @@ they must have had, and their political and military success. There were others 
 the same league, such as the Black Prince, father of Richard II, or Lord Talbot,
 antagonist of Joan of Arc. But let us focus on Hotspur and Harry.
 
-### Fact and Fiction
+## Fact and Fiction
 Prior to that we have to make clear what we are dealing with: There are the
 historical facts we know today, over 600 years later. Then, there are the facts
 known to Shakespeare who drew much of his wisdom from the Tudor chroniclers
@@ -35,7 +35,7 @@ a myth. As to the feelings and fears of nobles and commoners, for which
 historical evidence is scarce, we are free to accept or reject Shakespeare’s
 presentation. Whatever its accuracy, it is ingeniously invented.
 
-### Hotspur
+## Hotspur
 Hotspur amassed diplomatic and military honours at a young age: he was sent to
 Cyprus (1393), appointed Lieutenant of the Duchy of Aquitaine (1394), and took
 part in Richard II's expedition to Ireland (1395). At Homildon Hill in
@@ -74,7 +74,7 @@ to bruising arms [101 –105]. Harry, who tries twice in vain to interrupt his
 father’s diatribe [18 – 28, 91 – 92], finally manages to convince him of his
 conversion.
 
-### Harry
+## Harry
 When Henry Bolingbroke, Harry’s father, was exiled (1398), Harry became King
 Richard’s page and accompanied him in 1399 on the King’s last journey to Ireland
 which opened the way for Bolingbroke’s usurpation (1399). In 1403, Harry, at
@@ -115,7 +115,7 @@ former friends. At the Battle of Agincourt, he has his former companion Bardolph
 hanged for looting: We would have all these offenders so cut off [Henry V, 3.6
 96].
 
-### Hotspur and Harry
+## Hotspur and Harry
 Hotspur died in battle at 39, after having won several wars against the Scots, but
 before he could rise to more than local importance. Shakespeare tells us little
 about his feelings. Hotspur comes across as a bit of a caricature, the prototype of
@@ -137,7 +137,7 @@ absolution by means of a crusade – these were Henry V’s trials and tribulati
 which, if Shakespeare is right, tormented him throughout his career, but that is
 another story, told in [Henry V].
 
-### References
+## References
 The Oxford Shakespeare: Richard II, 2008
 
 The Oxford Shakespeare: Henry IV, Part One, 2008

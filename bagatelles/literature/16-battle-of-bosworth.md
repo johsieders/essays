@@ -14,7 +14,7 @@ Polydor Vergil (1470 – 1555), an Italian scholar, historian, priest and diplom
 The Battle of Bosworth is the historical background of Act V of Shakespeare’s play on Richard III. We
 will present the events in chronological order and explain when and how Shakespeare comes in.
 
-### The March
+## The March
 Henry Tudor, the Earl of Richmond, landed at Milford Haven at sunset on Sunday 7
 th August 1485 accompanied by a small army consisting mainly of 2000 French convicts lured by the promise of a free
 pardon. Henry’s captains included Jasper Tudor, the Earl of Oxford and some participants of Buckingham’s unsuccessful rebellion. In his final speech to his army (Scene iii), Richard refers to them as “a
@@ -67,7 +67,7 @@ despair: “Have mercy Jesus!” he laments and then goes on to a painful self-a
 side, Henry, who had already had his share of bad nights, “has slept the sweetest sleep” and has had
 “the fairest-boding dreams that ever entered in a drowsy head”.
 
-### The Battle
+## The Battle
 The next morning, the morning of *Monday 22nd August*, Richard sent a last message to Lord Stanley,
 asking him to declare for the King now, “lest his son George fall into the blind cave of eternal night”
 as is said in Scene iii. But Stanley “doth deny to come”, and Richard wasn’t able to carry out his
@@ -87,7 +87,7 @@ off. Scene iv and the stage direction of Scene v give an abridged report of thes
 having Henry (Richmond) himself fighting victoriously against Richard. And that was the end of the
 Battle of Bosworth.
 
-#### References
+## References
 
 [1] Cheetham, Anthony: The Life and the Time of Richard II, reprinted and reissued in 1992
 

@@ -102,7 +102,7 @@ for war against France. His former friends are largely forgotten: in [Henry V],
 only Pistol, Miss Quickly and Bardolph make minor appearances. The people to
 be laughed at are now the French.
 
-### References
+## References
 
 The Oxford Shakespeare: Henry IV, Part One, 2008
 

@@ -12,7 +12,7 @@ if not preposterousness of the text when taken at face value.
 Let us examine some questions which impose themselves upon the
 reader.
 
-### Who, Whence, Why and for Whom?
+## Who, Whence, Why and for Whom?
 Who wrote Genesis? How many authors were they? How did they cooperate?
 How could they know about the thoughts of God, the dreams, fears and hopes of
 the key people? What is fiction, what isn’t? Where did the story come from? Was
@@ -26,7 +26,7 @@ analysis has produced some results as to the authorship, but I am afraid many of
 these questions will forever remain unanswered. 
 (I deliberately do not discuss any celestial origin of the Bible.)
 
-### How mighty is God?
+## How mighty is God?
 What God is or is not capable of is an intriguing question. If sin is evil, why did
 God bother to create it? No sin, no sinners, no punishment. Paradise appears to
 have been a failure, necessitating the eviction and subsequently a 
@@ -39,7 +39,7 @@ millennia to benefit from modern technology?
 
 We are approaching the much disputed, unsolved and, most likely, unsolvable question of theodicy.
 
-### The Covenant: Why Abraham?
+## The Covenant: Why Abraham?
 Abraham and his progeny have been elected by God: My covenant is with thee,
 and thou shalt be a father of many nations (17,4). But why Abraham and his
 progeny? The choice appears arbitrary. Abraham has no more merits or 
@@ -48,7 +48,7 @@ good for him, and unjust to everybody else.
 
 All men are created equal, except Abraham and his progeny?
 
-### Men, Women and Servants
+## Men, Women and Servants
 Genesis describes a three-class society: The story is carried by the big shots such
 as Noah, Abraham, Isaac, Esau, Laban, Jacob plus some kings and pharaohs. All of
 them have names, live long and are affluent if not rich. They go through numerous adventures, 
@@ -63,14 +63,14 @@ for Isaac (Chapter 24) is granted a name.
 
 All men are created equal, aren’t they?
 
-### Righteousness (or Lack of)
+## Righteousness (or Lack of)
 Genesis features examples of strange bargaining, of taking in one’s opponent. 
 Examples include Isaac, Jacob and Laban. These people are not righteous, they are
 unfair. 
 
 What does this teach us? To behave similarly? Where is the idea of fairness?
 
-### Obedience, Punishment, Faith and Trial
+## Obedience, Punishment, Faith and Trial
 God gives orders (where to go, whom to marry or not to marry, circumcision),
 decrees bans (what to eat or not to eat), makes covenants (promises of reward in
 return for obedience) and punishes cruelly in cases of disobedience, 
@@ -89,7 +89,7 @@ punishment for wickedness, whatever that means.
 
 Could not any terrorist claim (as Abraham) to have received an order from God?
 
-### Wealth and Values
+## Wealth and Values
 It’s these gifts God keeps promising to his proteges: offspring, old age, land and,
 less often mentioned, cattle, silver and gold. Just a few examples: 
 Look now toward heaven, and tell the stars, if thou be able to number them: 
@@ -103,7 +103,7 @@ Abraham.
 Isn’t this a hedonist view, an early version of our egoistic craving for personal
 happiness and affluence?
 
-### Moral and Promiscuity
+## Moral and Promiscuity
 A striking element of Genesis is the issue of promiscuity which defies today’s
 moral standards. Proliferation appears to have been of paramount importance,
 to be attained by any means including polygamy and incest. Monogamy as a
@@ -116,12 +116,12 @@ come into us after the manner of all the earth (19,31).
 
 How do the morals of Genesis match our own?
 
-### Impact
+## Impact
 Genesis, and not only the chapters considered here, is a strange text, 
 hard to understand, hard to accept, easy to scathe. How could it rise 
 to its ultimate importance?
 
-*References*
+## References
 
 The Bible. Authorized King James Version, Oxford University Press, 1997
 

@@ -16,7 +16,7 @@ convinced that He doesn’t play dice”.
 Remark 2: Setting *c = 1* (which is as mundane as replacing miles with kilometres), the formula boils down to *E = m*:
 mass is a form of energy as the atomic bomb shows.
 
-### Cosmic Religion and the Beauty of Physics
+## Cosmic Religion and the Beauty of Physics
 
 Einstein embraces what he calls cosmic religion. This has little in common with religions in the
 ordinary sense: there is no anthropomorphic idea of God, no reward and no punishment, there are
@@ -61,7 +61,7 @@ antagonists. He says, again in his Cosmic Religion: “A God who rewards and pun
 and: “For anyone who accepts the assumption of causality, the idea of a Being who interferes with a
 sequence of events in the world is impossible.”
 
-### Philosophy of Physics
+## Philosophy of Physics
 
 Here is the one, big question: How true are the laws of physics? Can we trust them? What does truth
 mean in physics? In his *Geometry and Experience*, Einstein only touches on the subject, using
@@ -90,7 +90,7 @@ reality, they are not certain; and as far as they are certain, they do not refer
 I’m stopping here; this topic would lead us too far. 
 
 
-### Philosophy of Ethics
+## Philosophy of Ethics
 Einstein’s paper *The Laws of Science and the Laws of Ethics* is an attempt to applying the
 scientific approach to ethics: “Ethical directives can be made rational and coherent by
 logical thinking and empirical knowledge.” One could start from axioms such as “Human
@@ -101,7 +101,7 @@ were sound: He was a military pacifist and a fervent advocate of disarmament. Hi
 was that if, say, two percent of all conscripts refused to perform military service, the jails
 would be too small to hold all conscientious objectors and war would be impossible.
 
-### Was Philosophy of Central Importance for Einstein?
+## Was Philosophy of Central Importance for Einstein?
 Einstein liked Spinoza and Hume; he would have presumably liked Popper’s *Open Society and its
 Enemies*, namely Plato, Hegel, and Marx, and he disliked conventional religions. He had preferences
 and resentments like the rest of us. The little he wrote about philosophy wouldn’t be remembered
@@ -111,7 +111,7 @@ been of appreciable importance for his work, let alone of central importance.
 
 Remark 3: The *Open Society* was first published in 1945. Einstein died in 1955, so he might have known the book.
 
-### Was Einstein of Central Importance for Philosophy?
+## Was Einstein of Central Importance for Philosophy?
 Yes, he definitely was and still is. He pulled the rug from under a large swath of philosophy; some of
 Kant’s assertions were refuted, epistemology was to be rebuilt, the work being still in progress. As
 Einstein had read Kant at the age of sixteen he knew what he was arguing against. The bitter lesson was
@@ -140,7 +140,7 @@ relativity and gravitation theory.” (Tegmark, p. 243). The theory of relativit
 a Nobel Prize.
 
 
-### References
+## References
 
 Albert Einstein: Über die spezielle und die allgemeine Relativitätstheorie (1916); Springer 2009
 

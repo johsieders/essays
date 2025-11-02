@@ -7,7 +7,7 @@ Kant ist neben Platon und Aristoteles einer der bedeutendsten Philosophen überh
 gibt Auskunft über die Welt in der Kant lebte und beschreibt die wichtigsten Elemente der
 Kant’schen Philosophie.
 
-### Die Welt, in der Kant lebte
+## Die Welt, in der Kant lebte
 
 Kant wurde 1724 in Königsberg geboren und starb 1804, also mit 80 Jahren, am selben Ort.
 Königsberg gehörte zu Preußen, und der für Kant maßgebliche König war Friedrich der Große (1712 –
@@ -38,7 +38,7 @@ sich die Preußen der russischen Übermacht nicht erwehren und räumten das Feld
 logistischen Problemen konnten die Russen von dem Sieg aber nicht profitieren – Königsberg blieb
 preußisch. All das muss Kant hautnah mitbekommen haben.
 
-### Aufklärung in England
+## Aufklärung in England
 
 Das 17te Jahrhundert war für dramatisch England: Hinrichtung von Karl I, Bürgerkrieg, Interregnum,
 die Glorious Revolution von 1688, Jakobiterkriege und schließlich das Ende der Stuarts mit dem Tod
@@ -114,7 +114,7 @@ Empiristen. Locke sagt: *Es ist nichts im Verstand, was nicht zuvor in den Sinne
 widerspricht damit den Rationalisten und damit mehr oder weniger der gesamten bisherigen
 Philosophie.
 
-### Aufklärung in Frankreich
+## Aufklärung in Frankreich
 
 Das 17te Jahrhundert war für Frankreich das Jahrhundert des Absolutismus, geprägt durch zwei
 Könige: Ludwig XIII (im Amt 1610 – 1643), begleitet von Richelieu und Ludwig XIV (im Amt 1643 –
@@ -157,7 +157,7 @@ Ein bemerkenswertes Projekt dieser Zeit war die Enzyklopädie mit Diderot (1713 
 (1717 – 1783) und Voltaire als Protagonisten. Sie erschien von 1751 bis 1780 in 28 Bänden und
 verkaufte sich, obwohl oft verboten, in einer Auflage von über 10.000 Exemplaren.
 
-### Die vorkritische Periode
+## Die vorkritische Periode
 
 Kant steht in der Tradition von rationalistischen Tradition von Leibniz und Wolff. Diese besagt, dass
 der Mensch in der Lage ist, allein durch seine Vernunft zu richtigen Aussagen zu kommen. Leibniz
@@ -205,7 +205,7 @@ weitere Entwicklung nicht denkbar ist, denn sonst hätte Gott ja Fehler gemacht,
 ausgeschlossen. Dieser erste Schritt in Richtung Evolutionstheorie ist ein Verdienst, für den Kant
 selten gewürdigt wird.
 
-### Die kritische Periode
+## Die kritische Periode
 
 *Der bestirnte Himmel über mir und das moralische Gesetz in mir* – das ist die knappste Darstellung
 der beiden Kritiken der reinen und der praktischen Vernunft. Der *bestirnte Himmel* repräsentiert die
@@ -239,7 +239,7 @@ er aus. Insbesondere widerlegt er die klassischen Gottesbeweise und versucht zu 
 derartiger Beweis möglich ist. Er akzeptiert aber Gott, die Seele und möglicherweise andere nicht
 wahrnehmbare Phänomene als Denkmöglichkeit: Solche Dinge sind widerspruchsfrei vorstellbar.
 
-### todo
+## todo
 
 Unteres Vermögen: die Fähigkeit sinnlicher Wahrnehmung
 

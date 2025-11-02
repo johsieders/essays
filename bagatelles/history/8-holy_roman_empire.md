@@ -10,7 +10,7 @@ and Voltaire’s remark about it being neither holy,
 Roman nor an empire was published in 1756 when the Empire was agonizing.
 Was Voltaire right?
 
-### Was it holy?
+## Was it holy?
 
 Holy is a big word. Who could claim it? Let’s declare holy, for the sake of simplicity,
 whatever is endorsed or at least approved by the Pope. Now, out of 31 Emperors,
@@ -60,7 +60,7 @@ by the Reformation which was, after a century of struggles and the devastation
 of large swathes of Europe, at least partly endorsed by the Empire but never by Rome.
 Voltaire was right: This Empire wasn’t holy.
 
-### Was it Roman?
+## Was it Roman?
 While the ever-changing imperial territory did include Italian lands such as
 Lombardy or Sicily, Rome was never part of it. So how could the Empire be Roman?
 It claimed to be Roman in virtue of it succeeding the classical Roman Empire
@@ -80,7 +80,7 @@ not eligible because of her sex. Byzant was not happy about this course of event
 but after the Schism of 1054, Byzant ceased to attach any importance to whatever Roman title.
 The Empire’s claim to be Roman is arguable but not convincing.
 
-### Was it an Empire?
+## Was it an Empire?
 An empire should have at least an Emperor, a capital, an administration,
 an army and a common policy, both domestic and foreign. Rome and Byzant,
 Russians and Ottomans were no doubt justly called empires. The British Empire
@@ -117,7 +117,7 @@ Hesse-Kassel and Schaumburg Lippe, all members of the Empire. For good measure
 we see Prussia on the side of the Ottomans in the last Austro-Turkish war in 1787.
 Voltaire was right: This was not an Empire, at any rate not after 1648.
 
-#### References
+## References
 Klaus Fitschen: Wie die Deutschen Christen wurden. Elsengoldverlag, 2016
 
 Neil MacGregor: Germany. Memories of a Nation. Penguin Books, 2014

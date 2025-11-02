@@ -40,7 +40,7 @@ Each appearance of the Chorus contains one or more of these elements, but the
 point to observe is that the prologues are all different. Some of them are a guide
 to the upcoming act, and others aren’t. Let us look at them one by one.
 
-### Chorus in Act I
+## Chorus in Act I
 
 The Chorus begs pardon for the limited space and the small number of actors.
 The main point here is the definition of the play’s realm, much larger than the
@@ -52,7 +52,7 @@ somewhere in the English court, where I.2 takes place. It is thus a prologue to 
 whole play rather than to the first act. The audience is left in expectation, the
 promises are still to be fulfilled.
 
-### Chorus in Act II
+## Chorus in Act II
 
 At the end of Act I, Henry effectively declares war on France. He himself and,
 most likely, the audience are upset at the French after the insult by the French
@@ -71,7 +71,7 @@ mentions commoners by name but only anonymously if at all. The audience
 must wait until scene II.2 to see Henry and his entourage acting in Southampton
 and the traitors dispatched.
 
-### Chorus in Act III
+## Chorus in Act III
 
 We now accompany the King as passengers on his trip from Southampton to
 Harfleur. Shakespeare excels at describing what such a trip is like: the noises you
@@ -98,7 +98,7 @@ Act II when the French are shaken by fear. They are described as cowards, feeble
 and braggarts at the same time, presumably much to the pleasure of the English
 audience.
 
-### Chorus in Act IV
+## Chorus in Act IV
 
 In the prologue of Act III, we were passengers on a battleship. Now, we are
 soldiers in a camp in the night before the all-decisive battle. Again, Shakespeare
@@ -120,7 +120,7 @@ camp (scenes IV.2, IV.5) and on the battlefield itself (scenes IV.4, IV.6, IV.7,
 with the English fate shifting from stern, almost desperate confidence in the St.
 Crispins speech in the morning to a brilliant victory in the evening.
 
-### Chorus in Act V
+## Chorus in Act V
 
 After his victory, Henry is about to go to Calais, and to England then. But Act V is
 located in an English army base in France (scene V.1) and in the palace of the King
@@ -137,10 +137,10 @@ Agincourt. Shakespeare could certainly have devised a less contrived way of
 describing the enthusiasm of the huge crowds celebrating Henry. And we all
 know that Essex never brought rebellion broachèd on his sword.
 
-### References
+## References
 The Oxford Shakespeare: Henry V, 2008
 
-### Link verified on 24/05/2018
+## Link verified on 24/05/2018
 http://www.sparknotes.com/shakespeare/henry5
 
 <div style="margin-bottom: 100px;"></div>

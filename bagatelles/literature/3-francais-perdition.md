@@ -13,7 +13,7 @@ qu’elles peuvent être élégantes en anglais. Ou cela nous mène-t-il ? Qu’
 dans cent ans ? Restera-t-il des gens prêts à parler français et capables de le faire ? 
 Allons voir pourquoi le français est probablement moins menacé que cela ne semble.
 
-### L’anglais est en effet la lingua franca du monde entier.
+## L’anglais est en effet la lingua franca du monde entier.
 Cela est un fait à ne pas nier. Il y a au moins quatre raisons : la propagation de l’anglais sur tous les
 continents, le gradient raide de l’apprentissage, son rôle en économie, politique et science et son
 patrimoine littéraire. Si le français est égal ou même supérieur sur les deux derniers points, il ne l’est
@@ -26,7 +26,7 @@ accueillant ensuite; l’anglais feint de la simplicité et dupe ainsi le début
 franca est fait : Ce n’est ni le français, ni l’allemand, ni l’espagnol, ni le russe, ni l’esperanto, mais
 l’anglais. Il ne peut y avoir qu’un seul vainqueur.
 
-### L’anglais est-il à envier ?
+## L’anglais est-il à envier ?
 Non, et ceci pour plusieurs raisons. L’anglais est menacé, lui aussi, justement et paradoxalement par
 le nombre immense de gens qui l’utilisent. Si le français paraît miné, c’est à cause de l’usage inapproprié 
 ou négligent qu’on en fait : on le maîtrise mal ; mail, Twitter et autres outils de communication nous 
@@ -46,7 +46,7 @@ nombre de francophones érudits en littérature française. Donc, l’anglais to
 as menacé au point de vue propagation et il n’est pas non plus infiltré par d’autres langues.
 Mais sa pureté est en danger et la valorisation de sa littérature demande des efforts auprès des enseignants.
 
-### Quelle attitude prendre par rapport à l’anglais ?
+## Quelle attitude prendre par rapport à l’anglais ?
 Prenons au hasard des pays comme le Danemark, la Norvège ou la Finlande comme exemple. Ils ont,
 eux aussi, leur propre langue qui est un élément essentiel de leur identité nationale et dont ils sont
 fiers malgré un patrimoine littéraire peut-être moins impressionnant que celui de la France. Un pays

@@ -48,3 +48,9 @@ sphinx:
     bibtex_reference_style: author_year
     html_static_path:
       - _static
+    mathjax3_config:
+      tex:
+        tags: 'ams'
+      chtml:
+        displayAlign: 'left'
+        displayIndent: '2em'
