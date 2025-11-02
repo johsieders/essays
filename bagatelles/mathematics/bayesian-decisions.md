@@ -144,7 +144,10 @@ The test could function as a decision automaton: observe, score, sum, compare to
 
 ### From Fixed Weights to Trained Weights
 
-The original Apgar test treats all five criteria equally—each contributes 0, 1, or 2 points. But is this optimal? Perhaps appearance matters more than grimace; perhaps pulse outweighs respiration. How would we determine the best weights?
+The original Apgar test treats all five criteria equally—each contributes 0, 1, or 2 points. 
+But is this optimal? Perhaps appearance matters more than grimace; perhaps pulse outweighs respiration.
+Let's assume, by way of a thought experiment, that life is more complicated and that the Apgar test, as we know it, produces poor results.
+How would we determine the best weights? 
 
 Modify the test to use arbitrary weights w₁, w₂, w₃, w₄, w₅ (summing to 1):
 
