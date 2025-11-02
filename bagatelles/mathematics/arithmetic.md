@@ -1,8 +1,6 @@
 # First Steps in Arithmetic
 
 
-## Introduction
-
 This note takes a deliberately short, constructive path through the core facts of elementary number theory—enough to make modular arithmetic usable, 
 computable, and conceptually clean. We begin with the integer division theorem and use it to formalize the operators `//` (integer quotient) and `%` (remainder). 
 From there, congruences are introduced as a **logical** relation (a statement with a truth value), in contrast to the **numerical** operators `//` and `%`. 

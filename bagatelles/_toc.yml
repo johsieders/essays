@@ -51,6 +51,8 @@ parts:
         title: Bayesian Tests
       - file: mathematics/arithmetic
         title: First Steps in Arithmetic
+      - file: mathematics/calculus
+        title: First Steps in Calculus
 
   - caption: History
     chapters:
