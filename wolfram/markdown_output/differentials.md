@@ -22,7 +22,7 @@ We note that:
 $$
 \text{todo}
 $$
-
+AAAA
 ### Definition of First Derivative
 
 Let $f:\mathbb{R}\rightarrow \mathbb{R}$
@@ -38,6 +38,7 @@ f[x+h]=f[x]+ f'[x]h+o[h]
 $$
 
 and the term $f'[x]h$ is a linear approximation of $f$ at $x$. 
+BBBB
 
 ### Main Theorem of Integration
 
@@ -57,6 +58,7 @@ $$
 
 ### Product Rule
 
+AAAA
 ### Theorem (Taylor)
 
 Derivatives are about local changes: how does a function $f$behave in a neighbourhood of some point $x$. The Taylor series allows us to express
@@ -136,11 +138,14 @@ $$
 =\sum _{k=0}^n \frac{f^{(k)}[x]}{k!}(u-x)^k+o\left[(u-x)^n\right]
 $$
 
+BBBB
+
+
 ## Derivatives on Hilbert Spaces
 
 #### Definition
 
-$>>>$ Let $F:U\text{-$>$ V$. The derivative DF of F at x is defined as $\text{DF}[x]:U\text{-$>$ V$ is the derivative of $F$ in $x$, iff
+Let $F:U\text{-$>$ V$. The derivative DF of F at x is defined as $\text{DF}[x]:U\text{-$>$ V$ is the derivative of $F$ in $x$, iff
 
 $$
 \text{DF}[x]= lim_{h\to 0}\frac{1}{\| h\| }(F[x+h]-F[x])
@@ -157,6 +162,7 @@ $>>>$ Chain rule, product rule
 $$
 \text{DF}[x][h]=\frac{d}{d\epsilon }F[x+\text{$\epsilon $h}]|_{\epsilon =0}
 $$
+
 
 #### Theorem 1 (Uniqueness of the Derivative)
 
