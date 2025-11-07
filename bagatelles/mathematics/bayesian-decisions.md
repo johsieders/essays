@@ -75,6 +75,17 @@ Out of 509 people who test positive, only 9.5 actually have cancer. That's 98.1%
 
 This is not a defect of the test. It's an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives {cite}`ioannidis2005why`.
 
+Let us look at two more examples to understand how general this pattern is. 
+Take **smoking and lung cancer**. The evidence is "smoking", the hypothesis is "has lung cancer". 
+The true positives would be smokers with lung cancer, the false positives smokers without lung cancer,
+and the false negatives non-smokers with lung cancer. The rest (non-smokers without cancer) are true negatives.
+The example of **intelligent philosophers** makes us think about causation.
+Let's assume that, according to a study, philosophy students are particularly intelligent.
+Here, the evidence is "intelligent", the hypothesis is "philosopher". One wonders: 
+Are philosophy students intelligent because they study philosophy, 
+or do they study philosophy because they are intelligent?  
+
+
 ### The Confusion Matrix
 
 The confusion matrix organizes these four outcomes systematically:
@@ -104,7 +115,9 @@ The test has 95% sensitivity (catches 95% of actual cancers), 95% specificity (c
 
 **False positives** are merely anxiety-inducing—telling someone they might have cancer when they don't. Unfortunately, these are common (499.5 cases in our example).
 
-For all their limitations, Bayesian tests have been the foundation of medical diagnosis, quality control, security screening, and scientific inference for over a century. They remain indispensable because the alternative—human intuition—is systematically worse.
+For all their limitations, Bayesian tests have been the foundation of 
+medical diagnosis, quality control, security screening, and scientific inference for over a century. 
+They remain indispensable because the alternative—human intuition—is systematically worse.
 
 ### The Asymmetry Between Lab and Field
 
@@ -170,7 +183,15 @@ This is not a toy example or simplification. Real-world neural networks use exac
 
 But the fundamental idea is identical: find numerical weights that transform inputs into predictions, and optimize those weights using training data.
 
-The trained Apgar test (and every neural network) fits perfectly into the Bayesian testing framework. It produces predictions (evidence) about underlying states (hypotheses). It can be evaluated using precision, recall, accuracy, and specificity. It will produce false positives and false negatives. And like all Bayesian tests, its quality depends critically on the quality of the training data.
+The trained Apgar test (and every neural network) fits perfectly into the Bayesian testing framework. 
+It produces predictions (evidence) about underlying states (hypotheses). 
+It can be evaluated using precision, recall, accuracy, and specificity. 
+It will produce false positives and false negatives. 
+And like all Bayesian tests, its quality depends critically on the quality of the training data:
+Ideally, it should accurately represent the world, including factors such as gender, race, or parents' social status.
+Do newborn babies in Australia match the same parameters as those in India? 
+Whatever criteria you can think of should be accurately represented, but achieving that is, in general, impossible.
+This is the crucial issue of bias.
 
 ## From Apgar to Insurance: Scaling Up
 

@@ -23,10 +23,9 @@ ordinary sense: there is no anthropomorphic idea of God, no reward and no punish
 no dogmas, no priests, no prayers. But what is there, then? “There is the nobility and marvellous
 order which are revealed in nature and in the world of thought“, Einstein says, and goes on: “The
 most important function of art and science is to keep alive this feeling in those who are receptive.”
-This is the gist of Einstein’s thinking: the beauty of science, the beauty of his own findings and that of
-his fellow researchers overwhelmed him. But an eminent contemporary didn’t agree. According to
-Martin Heidegger, “there is no beauty at all in science, and the least perhaps in philosophy.” (GA 20,
-204). Who is right?
+This is the gist of Einstein's thinking: the beauty of science, the beauty of his own findings and that of
+his fellow researchers overwhelmed him. But an eminent contemporary didn't agree. According to
+Martin Heidegger, "there is no beauty at all in science, and the least perhaps in philosophy" ({cite}`heidegger1925prolegomena`, GA 20, p. 204). Who is right?
 
 Einstein’s stance relies on the extraordinary gems of clarity and brilliance of modern physics such as 
 Newton’s theory, Maxwell's equations and his own theory of relativity. 
@@ -40,8 +39,8 @@ that events in nature are analogous to a game of chance.“ At any rate, he neve
 soundness of quantum mechanics, always endorsed it as a useful theory, and indeed contributed to
 it. The famous EPR paper questions the completeness of quantum mechanics rather than its soundness.
 
-Einstein’s picture of ideal physics, where everything is beauty and symmetry has been spoiled by
-the standard model of elementary particles (see e.g., Wilczek). This highly successful model presents
+Einstein's picture of ideal physics, where everything is beauty and symmetry has been spoiled by
+the standard model of elementary particles (see e.g., {cite}`wilczek2021keys`). This highly successful model presents
 itself as a mess of 20 or so elementary particles, with no convincing structure and a lot of seeming
 arbitrariness. And a world theory unifying general relativity theory and quantum mechanics seems to
 be hard to come by (I am referring to loop quantum theory and string theory).
@@ -136,26 +135,14 @@ world took about 20 years to appreciate this treasure: Einstein was awarded the 
 physics in 1922 not for his theory of relativity, but for “his services to theoretical physics and
 especially for his discovery of the photoelectric effect.” The award text points out, however, “that this
 distinction is independent of the value that, after possible confirmation, may be attributed to the
-relativity and gravitation theory.” (Tegmark, p. 243). The theory of relativity has never been worthy of
+relativity and gravitation theory" ({cite}`tegmark2014mathematical`, p. 243). The theory of relativity has never been worthy of
 a Nobel Prize.
 
 
 ## References
 
-Albert Einstein: Über die spezielle und die allgemeine Relativitätstheorie (1916); Springer 2009
-
-Albert Einstein: On Cosmic Religion and Other Opinions & Aphorisms (1931); Dover Publications, 2009
-
-Albert Einstein: Geometry and Experience (1923); Readings in the Philosophy of Science,Appleton-Century-Crofts, 1953, p. 189 - 194
-
-Albert Einstein: The Fundamentals of Theoretical Physics (1940); ibid. p. 253 -261
-
-Albert Einstein: The Laws of Science and the Laws of Ethics (1950); ibid. p. 779 - 780
-
-Martin Heidegger: Prolegomena zur Geschichte des Zeitbegriffs (1925); Gesamtausgabe (GA) 20,p.204
-
-Max Tegmark: Our Mathematical Universe (2014); Penguin Books, 2015
-
-Frank Wilczek: Ten Keys to Reality (2021); Penguin Books, 2022
+```{bibliography}
+:filter: docname in docnames
+```
 
 <div style="margin-bottom: 100px;"></div>
