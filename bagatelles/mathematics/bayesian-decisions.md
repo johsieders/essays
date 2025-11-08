@@ -154,9 +154,11 @@ To make matters worse, we finish with intelligent philosophers.
 Let's assume that, according to a study, philosophy students are particularly intelligent.
 In this case, the evidence is "intelligent", and the hypothesis is "philosopher". One wonders: 
 Are philosophy students intelligent because they study philosophy? 
-Or do they study philosophy because they are intelligent? You decide.
+Or do they study philosophy because they are intelligent? Probably the latter: 
+philosophy students are certainly positively selected in terms of intelligence. 
+But is that more than an educated guess?
 
-This was just a quick glance at the fascinating question of causality, which was beautifully developed by J.Pearl and his team 
+This was just a quick glance at the fascinating question of causality, as developed by Judea Pearl and his team 
 in {cite}`pearl2018book`, {cite}`pearl2009causality`, {cite}`pearl2016causal`.
 
 
