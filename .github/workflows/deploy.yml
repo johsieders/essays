@@ -52,8 +52,8 @@ jobs:
           ls -la
 
           echo ""
-          echo "Running: jb build . --builder html"
-          jb build . --builder html
+          echo "Running: jupyter-book build . --builder html"
+          jupyter-book build . --builder html
 
           echo ""
           echo "Build completed. Checking output..."
