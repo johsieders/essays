@@ -51,18 +51,37 @@ jobs:
 
           echo ""
           echo "Running: jupyter-book build . (no flags)"
-          jupyter-book build .
+          set +e  # Don't exit on error
+          jupyter-book build . 2>&1 | tee build_log.txt
+          BUILD_EXIT=$?
+          set -e
 
           echo ""
-          echo "Build completed. Checking output..."
-          if [ -d "_build/html" ]; then
-            echo "✓ Found _build/html directory!"
-            ls -la _build/html/ | head -10
+          echo "Build exit code: $BUILD_EXIT"
+
+          echo ""
+          echo "Checking what was created..."
+          if [ -d "_build" ]; then
+            echo "_build directory exists! Contents:"
+            ls -laR _build/
           else
-            echo "✗ No _build/html directory found!"
-            ls -la
+            echo "No _build directory at all!"
+          fi
+
+          echo ""
+          echo "Checking for EISDIR issues in files..."
+          find . -maxdepth 2 -type d -name "*.md" 2>/dev/null && echo "Found directories with .md extension!" || echo "No .md directories found (good)"
+
+          echo ""
+          if [ ! -d "_build/html" ]; then
+            echo "ERROR: No _build/html directory created!"
+            echo "Build log:"
+            cat build_log.txt
             exit 1
           fi
+
+          echo "✓ Success! _build/html exists"
+          ls -la _build/html/ | head -10
 
       - name: Verify build output
         run: |
