@@ -36,3 +36,4 @@ jobs:
           publish_dir: ./bagatelles/_build/html
           enable_jekyll: false
           cname: jsiedersleben.de
+          force_orphan: true
