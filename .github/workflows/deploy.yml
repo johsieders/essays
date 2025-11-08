@@ -48,12 +48,10 @@ jobs:
           cd bagatelles
 
           echo "Current directory: $(pwd)"
-          echo "Contents:"
-          ls -la
 
           echo ""
-          echo "Running: jupyter-book build . --builder html"
-          jupyter-book build . --builder html
+          echo "Running: jupyter-book build . (no flags)"
+          jupyter-book build .
 
           echo ""
           echo "Build completed. Checking output..."
