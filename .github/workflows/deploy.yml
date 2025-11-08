@@ -38,31 +38,37 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r bagatelles/requirements.txt
+          echo ""
+          echo "Installed packages:"
+          pip list | grep -i jupyter
 
       - name: Build Jupyter Book
         run: |
-          set -e  # Exit on any error
+          set -ex  # Exit on error and show commands
           echo "Starting Jupyter Book build..."
           echo "Current directory: $(pwd)"
-          echo "Contents before build:"
-          ls -la bagatelles/
-
-          jupyter-book build bagatelles/ --all -v 2>&1 | tee build.log
 
           echo ""
-          echo "Build command completed. Checking results..."
-          echo "Contents of bagatelles/ after build:"
+          echo "Testing jupyter-book command:"
+          jupyter-book --version
+          which jupyter-book
+
+          echo ""
+          echo "Contents of bagatelles/:"
           ls -la bagatelles/
 
-          if [ -d "bagatelles/_build" ]; then
-            echo "Found _build directory! Contents:"
-            ls -la bagatelles/_build/
-          else
-            echo "ERROR: No _build directory created!"
-            echo "Full build log:"
-            cat build.log
-            exit 1
-          fi
+          echo ""
+          echo "Checking config files:"
+          head -20 bagatelles/_config.yml
+          head -20 bagatelles/_toc.yml
+
+          echo ""
+          echo "Running build command..."
+          jupyter-book build bagatelles/ --all --verbose
+
+          echo ""
+          echo "Build finished. Checking for _build directory..."
+          ls -la bagatelles/ | grep -i build || echo "No _build directory found!"
 
       - name: Verify build output
         run: |
