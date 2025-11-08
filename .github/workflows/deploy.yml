@@ -44,31 +44,40 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          set -ex  # Exit on error and show commands
           echo "Starting Jupyter Book build..."
           echo "Current directory: $(pwd)"
 
           echo ""
           echo "Testing jupyter-book command:"
           jupyter-book --version
-          which jupyter-book
 
           echo ""
-          echo "Contents of bagatelles/:"
-          ls -la bagatelles/
+          echo "Running build command (without --all flag)..."
+          set +e  # Don't exit on error, capture output
+          jupyter-book build bagatelles/ 2>&1 | tee build_output.log
+          BUILD_EXIT=$?
+          set -e
 
           echo ""
-          echo "Checking config files:"
-          head -20 bagatelles/_config.yml
-          head -20 bagatelles/_toc.yml
+          echo "Build exit code: $BUILD_EXIT"
+
+          if [ $BUILD_EXIT -ne 0 ]; then
+            echo ""
+            echo "Build failed! Full output:"
+            cat build_output.log
+            exit 1
+          fi
 
           echo ""
-          echo "Running build command..."
-          jupyter-book build bagatelles/ --all
-
-          echo ""
-          echo "Build finished. Checking for _build directory..."
-          ls -la bagatelles/
+          echo "Build succeeded. Checking for _build directory..."
+          if [ -d "bagatelles/_build/html" ]; then
+            echo "✓ Found _build/html directory!"
+            ls -la bagatelles/_build/html/ | head -10
+          else
+            echo "✗ No _build/html directory found!"
+            ls -la bagatelles/
+            exit 1
+          fi
 
       - name: Verify build output
         run: |
