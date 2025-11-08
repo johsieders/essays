@@ -43,8 +43,26 @@ jobs:
         run: |
           set -e  # Exit on any error
           echo "Starting Jupyter Book build..."
-          jupyter-book build bagatelles/ --all -v
-          echo "Build completed!"
+          echo "Current directory: $(pwd)"
+          echo "Contents before build:"
+          ls -la bagatelles/
+
+          jupyter-book build bagatelles/ --all -v 2>&1 | tee build.log
+
+          echo ""
+          echo "Build command completed. Checking results..."
+          echo "Contents of bagatelles/ after build:"
+          ls -la bagatelles/
+
+          if [ -d "bagatelles/_build" ]; then
+            echo "Found _build directory! Contents:"
+            ls -la bagatelles/_build/
+          else
+            echo "ERROR: No _build directory created!"
+            echo "Full build log:"
+            cat build.log
+            exit 1
+          fi
 
       - name: Verify build output
         run: |
