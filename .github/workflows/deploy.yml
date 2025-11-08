@@ -33,6 +33,7 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
+          cache-dependency-path: 'bagatelles/requirements.txt'
 
       - name: Install dependencies
         run: |
@@ -41,6 +42,17 @@ jobs:
       - name: Build Jupyter Book
         run: |
           jupyter-book build bagatelles/
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "bagatelles/_build/html" ]; then
+            echo "Error: Build output directory not found!"
+            echo "Contents of bagatelles/_build:"
+            ls -la bagatelles/_build/ || echo "bagatelles/_build/ does not exist"
+            exit 1
+          fi
+          echo "Build successful! Contents:"
+          ls -la bagatelles/_build/html/ | head -20
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
