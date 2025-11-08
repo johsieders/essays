@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>What Exists in Mathematics? &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'philosophy/mathematics-existence';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Spy Who Came in from the Cloud" href="../computer-science/33-cyber-espionage.html" />
+    <link rel="prev" title="Stop Press: Problem of Free Will Dissolved!" href="36-free-will-1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">What Exists in Mathematics? *</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/philosophy/mathematics-existence.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fphilosophy/mathematics-existence.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/philosophy/mathematics-existence.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>What Exists in Mathematics?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers-as-models-of-what-we-see">Numbers as Models of What We See</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chess-analogy">The Chess Analogy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-as-formal-system">Mathematics as Formal System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-correctness-problem-symbol-manipulation">The Correctness Problem: Symbol Manipulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darwinian-selection-of-mathematical-theories">Darwinian Selection of Mathematical Theories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-axiom-of-choice-selection-determines-the-future">The Axiom of Choice: Selection Determines the Future</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-as-a-model-of-reality">Physics as a Model of Reality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-power-remarkable-but-not-miraculous">Predictive Power: Remarkable But Not Miraculous</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-varieties-of-existence">Two Varieties of Existence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allies-and-opponents">Allies and Opponents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#allies">Allies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opponents">Opponents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-objectivity">Mathematical Objectivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-necessity">Mathematical Necessity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-precision-problem">The Precision Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-adaptation-across-centuries">Pre-Adaptation Across Centuries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-about-discovery">What About Discovery?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-axiom-of-choice-dilemma">The Axiom of Choice Dilemma</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="what-exists-in-mathematics">
+<h1>What Exists in Mathematics?<a class="headerlink" href="#what-exists-in-mathematics" title="Link to this heading">#</a></h1>
+<p><em>A Defense of Formalism Against Platonism</em></p>
+<p><em>Johannes Siedersleben, assisted by Claude Sonnet 4.5<br />
+October 2025</em></p>
+<hr class="docutils" />
+<p>Do mathematical objects exist independently of human minds? When we prove theorems about prime numbers, are we discovering pre-existing truths in some Platonic realm, or are we manipulating symbols according to rules we invented? This ancient question has gained new urgency as computers formalize mathematics and as we confront the “unreasonable effectiveness” of mathematics in physics.</p>
+<p>My position: mathematics is human-constructed formal symbol manipulation, refined by selection pressure from empirical applications. Mathematical “existence” means consistency within a chosen formal system, not discovery of pre-existing abstract objects. Prime numbers exist exactly as much as the Sicilian Defense exists—as patterns within rule structures humans created.</p>
+<section id="numbers-as-models-of-what-we-see">
+<h2>Numbers as Models of What We See<a class="headerlink" href="#numbers-as-models-of-what-we-see" title="Link to this heading">#</a></h2>
+<p>When we have five fingers and five pebbles, they share something we might call “fiveness,” even though fingers and pebbles differ in every other respect. Numbers emerge as abstractions from this counting experience. We strip away everything particular about the objects—their color, texture, weight—and retain only their countability.</p>
+<p>There must have been a first person to grasp the concept of “three” as something distinct from three particular objects. Numbers were invented by humans through this abstraction process. They exist, at minimum, in our minds as abstract concepts. Whether they exist anywhere else is the question at stake.</p>
+<p>The mathematical process follows a three-stage pattern. First, we abstract from the real world to create formal models—numbers, geometric figures, algebraic structures. Second, we reason within these abstractions, proving theorems and developing theories. Third, we apply our results back to the real world. Remarkably, five plus seven equals twelve regardless of whether we’re adding fingers, pebbles, or days. This universal applicability demands explanation, but the explanation need not invoke Platonic realms. As <span id="id1">[<a class="reference internal" href="#id70" title="Matthew S. Leifer. Mathematics is physics. In Anthony Aguirre, Brendan Foster, and Zeeya Merali, editors, Trick or Truth? The Mysterious Connection Between Physics and Mathematics, The Frontiers Collection, pages 21–40. Springer, Cham, 2016. doi:10.1007/978-3-319-27495-9_3.">Leifer, 2016</a>]</span> argues, mathematics can be understood as a natural science—“the study of regularities, within regularities, within regularities of the natural world”—which explains why it applies so effectively to physics.</p>
+<p>Consider another example: the anonymous scientist who, long before the Common Era, studied round objects like bowls, wheels, and the sun. He abstracted away properties such as weight, color, and the third dimension, eventually arriving at the idea of roundness shared by these objects: the circle was invented. Much later, Archimedes calculated its surface, circumference, and the number π. The circle is an abstraction or a model; bowls, wheels, and the sun are tangible instances, but they are never perfectly round. Archimedes’ formula is exact for an ideal circle (which isn’t real), but approximate otherwise.</p>
+<p>Einstein captured this tension perfectly <span id="id2">[<a class="reference internal" href="#id68" title="Albert Einstein. The laws of science and the laws of ethics. In Readings in the Philosophy of Science, pages 779–780. Appleton-Century-Crofts, 1953.">Einstein, 1953</a>]</span>: “As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they do not refer to reality.”</p>
+</section>
+<section id="the-chess-analogy">
+<h2>The Chess Analogy<a class="headerlink" href="#the-chess-analogy" title="Link to this heading">#</a></h2>
+<p>Consider chess. The game has fixed, arbitrary rules invented by humans. Within this rule structure, certain truths are indisputable: a knight moves in an L-shape, castling requires specific conditions, checkmate ends the game. These truths are objective, eternal, and the same for everyone who plays chess. But they are relative to arbitrary, man-made rules.</p>
+<p>No one believes chess pieces exist in some Platonic realm, waiting to be discovered. We invented chess. The rules could have been different—and indeed, there are chess variants with different boards, different pieces, different rules. Yet within standard chess, truth is perfectly clear and binding.</p>
+<p>Mathematics works the same way. Natural numbers populate the set ℕ and are subject to Peano’s axioms, which are arbitrary and man-made, just like chess rules. The axioms are the rules of the game. Logical steps from one statement to the next are the moves. Mathematical theorems are positions you can reach by legal moves from the starting position (the axioms).</p>
+<p>What do numbers have in common with chess? Numbers are the chess pieces, the set ℕ is the chessboard, the axioms are the chess rules, and logical inference is moving the pieces. Peano arithmetic is just another game. Alternative games exist: Robinson arithmetic or Presburger arithmetic, where some of Peano’s axioms are dropped—a bit like chess without knights or bishops.</p>
+<p>Do these different arithmetical systems agree that 1 + 1 = 2? They do: according to an axiom shared by all three systems, every natural number has exactly one successor (that’s what “+1” means), and the successor of 1 is called 2. To say that 1 + 1 = 2 is like saying that a triangle has three angles. It’s true by definition within the system.</p>
+<p>Chess has no counterpart in the real world—it’s pure rule-following. Mathematics, by contrast, models part of reality. Numbers model everything that can be counted: five apples, five fingers, and five pounds share the property of fiveness, and 7 + 5 = 12, no matter what is being added. This is the crucial difference, and it explains why mathematical “rules” aren’t entirely arbitrary. They have been adjusted over time until mathematics matches the world.</p>
+</section>
+<section id="mathematics-as-formal-system">
+<h2>Mathematics as Formal System<a class="headerlink" href="#mathematics-as-formal-system" title="Link to this heading">#</a></h2>
+<p>Chess illustrates the formal nature of mathematics, but mathematics extends far beyond anything with obvious empirical applications.
+Mathematicians freely generalize and explore. Complex numbers, quaternions, the number googol (10<sup>100</sup>), and far more exotic constructs emerge naturally as extensions of simpler systems.
+We choose our axiom systems—whether Robinson arithmetic, Presburger arithmetic, or ZFC set theory—and we choose our rules of reasoning, like modus ponens. We experiment with these formal systems to discover what they can do.</p>
+<p>Even basic arithmetic facts should be understood as conventional rather than metaphysically necessary. The statement “1 + 1 = 2” is a definition within the Peano axiom system, not a discovery about pre-existing abstract objects. Each number has exactly one successor by definition: the successor of 1 is called 2, and that’s the end of the matter. Once we establish Peano arithmetic, theorems follow necessarily from the axioms—but the axioms themselves represent conventional choices, refined over time by what proves useful.</p>
+</section>
+<section id="the-correctness-problem-symbol-manipulation">
+<h2>The Correctness Problem: Symbol Manipulation<a class="headerlink" href="#the-correctness-problem-symbol-manipulation" title="Link to this heading">#</a></h2>
+<p>Mathematics can, at least in theory, be reduced to mere symbol manipulation. A computer can verify proofs mechanically without understanding what they mean. Given formal axioms and inference rules, a machine can check whether a purported proof is valid—just symbol pushing according to syntactic rules.</p>
+<p>Consider the proof that √2 is irrational. A computer can verify this proof by checking each logical step, ensuring each follows from previous steps or axioms according to the rules of inference. The computer need not understand what “irrational” means, what square roots are, or why the result matters. It simply manipulates symbols according to rules.</p>
+<p>This is not how mathematicians actually work, of course. Human mathematicians think about what theorems mean, develop intuitions, seek elegant arguments. But the <em>verification</em> of proofs can be mechanical. This is what proof assistants like Coq and Lean exploit. They formalize mathematics to the point where correctness becomes a computational question: does this string of symbols follow from these axioms according to these rules?</p>
+<p>If mathematical truth were discovery of facts about pre-existing Platonic objects, this mechanical verifiability would be mysterious. How could symbol manipulation reveal truths about a transcendent realm? But if mathematics is a formal game we invented—elaborate chess—then mechanical verification makes perfect sense. We’re just checking whether someone played by the rules.</p>
+<p>The bedrock of mathematical truth is not as solid as it might appear. Around 1900, the foundations of mathematics were completely overhauled by Russell, Cantor, Hilbert, and many others. Existing theorems remained valid, but many proofs had to be revised. In 1931, Gödel shattered mathematics with his incompleteness theorems: many propositions can neither be proved nor disproved within any sufficiently powerful formal system. When will the next Russell come along to revise the foundations again, the next Gödel to reveal even more incompleteness?</p>
+</section>
+<section id="darwinian-selection-of-mathematical-theories">
+<h2>Darwinian Selection of Mathematical Theories<a class="headerlink" href="#darwinian-selection-of-mathematical-theories" title="Link to this heading">#</a></h2>
+<p>Why does mathematics “work”? Why does it apply to physical reality with such remarkable precision? The answer lies in understanding mathematics not as discovery but as a selection process analogous to biological evolution.</p>
+<p>Mathematics is pseudo-arbitrary. We could have invented other types of mathematics—and we did. We have kept the ones that are still around because they are useful. Similarly, we could have invented other board games, and we certainly did. We have kept the ones that are still around because we like them.</p>
+<p>Consider the variation side. Mathematicians freely explore and generalize, proving theorems and developing theories far in excess of what applications require. There are millions of mathematical theorems in the literature, and the vast majority have no known application to physics or engineering. Pure mathematicians pursue questions for their intrinsic interest, follow aesthetic impulses toward elegance, and generalize concepts simply to see where they lead. This generates an enormous inventory of mathematical results, most of which will never find practical use.</p>
+<p>On the selection side, physicists and engineers continually pose problems requiring mathematical solutions. They need tools for quantum mechanics, general relativity, fluid dynamics, cryptography, signal processing. When a physics problem arises, physicists search the mathematical inventory for applicable tools. Sometimes they find what they need already developed; sometimes they collaborate with mathematicians to extend existing frameworks.</p>
+<p>Examples abound. Functional analysis was substantially developed in response to the needs of quantum mechanics. Riemannian geometry, originally explored for purely mathematical reasons in the 1850s, was revived and extended when Einstein needed it for general relativity in the 1910s. Group theory, developed in the 19th century to understand polynomial equations, became essential for particle physics in the 20th century. Conic sections, studied by Greeks for their geometric beauty, became crucial for orbital mechanics two millennia later.</p>
+<p>This creates a survival-of-the-fittest dynamic. Useful mathematics gets refined, taught, celebrated, and remembered. It appears in textbooks, wins Fields Medals, and shapes future research. Useless mathematics, by contrast, is largely forgotten. Papers gather dust in obscure journals. Results are not taught to graduate students. Entire research programs fade away when they produce no applications.</p>
+<p>The rules of the mathematical game are not entirely arbitrary. Rather, they have been adjusted over centuries until mathematics matches the world. This is one of the reasons why it works so well. Mathematical systems that failed to model reality were discarded. Those that succeeded were retained, refined, and extended.</p>
+<p>New mathematical theories, like new physical theories, enter a Darwinian battlefield. They must prove their worth through applications, internal consistency, fertility for further research. Even if they survive initial scrutiny, they remain forever subject to competition from new theories, to revision in light of new foundations, to abandonment if better frameworks emerge.</p>
+</section>
+<section id="the-axiom-of-choice-selection-determines-the-future">
+<h2>The Axiom of Choice: Selection Determines the Future<a class="headerlink" href="#the-axiom-of-choice-selection-determines-the-future" title="Link to this heading">#</a></h2>
+<p>The Darwinian selection process continues today and will shape mathematics’ future. Consider the Axiom of Choice (AC), one of the most controversial axioms in set theory.</p>
+<p>AC states, roughly, that given any collection of non-empty sets, we can choose one element from each set, even if we have no rule for making the choice. This seems innocent but has counterintuitive consequences: it implies the Banach-Tarski paradox (you can decompose a sphere and reassemble it into two spheres of the same size) and the existence of non-measurable sets.</p>
+<p>Today, mathematicians can practice mathematics with or without AC. You can work in ZFC (set theory with Choice) or in ZF (set theory without Choice). You can study constructive mathematics, which rejects not only AC but also the law of excluded middle. These are different formal systems, different mathematical “games,” and they produce different theorems.</p>
+<p>Which will survive? That depends on what proves useful, elegant, and fruitful. If physics or computer science finds applications for constructive mathematics, it may gain prominence. If the consequences of AC prove indispensable for important theories, ZFC will dominate. The selection process is ongoing.</p>
+<p>The same applies to alternative arithmetics. You can study number theory using Peano axioms, Robinson axioms, or Presburger axioms. Each system proves different theorems, has different strengths. Which you choose depends on your purposes. This is not discovering pre-existing mathematical reality—it’s choosing which formal game to play.</p>
+</section>
+<section id="physics-as-a-model-of-reality">
+<h2>Physics as a Model of Reality<a class="headerlink" href="#physics-as-a-model-of-reality" title="Link to this heading">#</a></h2>
+<p>Physics provides the clearest example of mathematics as modeling rather than discovering. Consider how physicists work: they start with a handful of non-provable principles, such as the constant speed of light or the principle of least action. They then apply appropriate mathematical theories and test the results in the laboratory. This process is repeated until mathematics matches the measurements.</p>
+<p>Newton studied how heavy objects move when subjected to gravity. He abstracted away properties such as volume, feel, and color, eventually arriving at the idea of volume-less particles with positive mass, and calculated how they move. Raindrops, apples, and planets are tangible instances, but they have shape, volume, and many other properties. Newton’s equations of motion are exact for particles (which aren’t real), but approximate otherwise.</p>
+<p>Newtonian mechanics is a model—in the mind, on paper, or in a computer—that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop is completely unaware of Newton’s laws. Raindrops have always fallen in the same way. Newton’s laws have less effect on objects in motion than a thermometer has on temperature.</p>
+<p>Einstein studied particles moving at high relative speeds, a case where classical mechanics fails. He kept the four-dimensional space-time framework and particles, but included the constant speed of light. From his thought experiments, he concluded that observers traveling at high relative speeds would perceive each other in distorted ways. The equations of motion had to be adjusted so that all observers agree, regardless of their relative motion. This led to E = mc² and to relativity theory.</p>
+<p>Schrödinger studied the double-slit experiment. He replaced particles moving along definite paths with evolving probabilities called wave functions. In classical mechanics you knew exactly where a particle would be; in quantum mechanics you just get probabilities. Determinism was gone. The idea of continuity was gone: on a small scale, what looks continuous (energy, for example) breaks up into tiny pieces called quanta.</p>
+<p>Dirac brought relativity and quantum mechanics together. The formula he found became the equation of motion for quantum field theory (QFT). QFT features mathematical structures that predict four varieties of physics: one is ours (with time and space as we know them), and three others involve time reversal, space inversion, or both. Nobody knows if there are universes described by these other mathematical possibilities.</p>
+<p>What have we learned? Science has produced powerful mathematical models that describe the observable world and make good, but imperfect, predictions. None is definitive; each has refined the previous one, been more precise, and often more complicated. The relationship to reality can be obvious (circles), plausible (Newtonian mechanics), puzzling (relativity), unfathomable (quantum mechanics), or mind-boggling (QFT).</p>
+<p>This explains why mathematics and physics match so well: physics uses mathematics as its modeling language. Physicists choose mathematical structures that fit observations. When a mathematical model fails to match experiments, physicists adjust the model or develop a new one. The “unreasonable effectiveness” of mathematics dissolves once we recognize that physics is mathematical modeling of reality, not discovery of mathematical reality.</p>
+</section>
+<section id="predictive-power-remarkable-but-not-miraculous">
+<h2>Predictive Power: Remarkable But Not Miraculous<a class="headerlink" href="#predictive-power-remarkable-but-not-miraculous" title="Link to this heading">#</a></h2>
+<p>Mathematical structures sometimes predict completely unobserved phenomena before any experimental confirmation. The Dirac equation predicted antimatter. Maxwell’s equations predicted electromagnetic waves. The Higgs mechanism predicted a new particle nearly half a century before detection. These successes are remarkable—but do they require Platonism?</p>
+<p>Not necessarily. Consider how prediction works in this framework. Physicists build mathematical models that fit known observations. These models have internal mathematical structure—symmetries, conservation laws, derived consequences. When physicists work out all the implications of their models, they sometimes find predictions about unobserved phenomena. If the model is good (matches reality well), these predictions may come true.</p>
+<p>This is impressive but not miraculous. It’s what good models do. A geographical map predicts what you’ll find if you travel west from here, even if the mapmaker never traveled that direction. The map’s predictive power comes from accurately modeling the territory, not from accessing a Platonic realm of abstract geographical forms.</p>
+<p>The Lorentz group’s mathematical structure, for instance, reveals four disconnected components: our familiar world, plus three exotic possibilities involving time reversal, space inversion, or both. Mathematics generates more structure than we observe. Sometimes experiments later confirm these mathematical possibilities; sometimes they don’t. We remember the successes and forget the failures.</p>
+<p>What about the hit rate? If mathematical predictions succeeded far more often than chance would allow, that might suggest something beyond mere modeling. But we lack systematic data on prediction success rates. Physicists remember Dirac predicting antimatter; they forget countless failed predictions. This is publication bias and confirmation bias at work.</p>
+<p>Moreover, even high success rates wouldn’t require Platonism. They might simply show that our mathematical models are very good—that we’ve refined them through centuries of empirical testing until they capture deep structural features of reality. The models are still models, not discoveries of pre-existing mathematical objects.</p>
+<p>Predictive power is remarkable. It shows that mathematics is extraordinarily useful. But “useful” doesn’t mean “true in a Platonic sense.” It means “matches reality well enough to make accurate predictions.” That’s all we need and all we can honestly claim.</p>
+</section>
+<section id="two-varieties-of-existence">
+<h2>Two Varieties of Existence<a class="headerlink" href="#two-varieties-of-existence" title="Link to this heading">#</a></h2>
+<p>There are two varieties of existence that matter for this discussion: physical existence and mathematical existence.</p>
+<p><strong>Physical existence</strong> is what we can perceive. Objects, forces, events in space and time. The chair you sit on, the light that reaches your eyes, the planet Earth. Physical existence is empirical—discovered through observation and experiment. It is contingent—the universe could have been otherwise. It is shared—we all perceive the same physical world (with minor variations in perspective).</p>
+<p><strong>Mathematical existence</strong> is what we can think of consistently within chosen axiom systems. Mathematical objects don’t exist in space and time. You can’t bump into a prime number or measure the weight of a triangle. Mathematical existence means: we can define this object within our formal system and reason about it without contradiction.</p>
+<p>This makes mathematical existence system-relative. What exists in ZFC may not exist in constructive mathematics. It makes mathematical existence conventional—we choose which formal system to adopt. The natural numbers exist in Peano arithmetic because that system defines them. Whether they exist “absolutely” is a meaningless question, like asking whether the bishop exists absolutely rather than as a piece in chess.</p>
+<p>Our choice of axiom systems is not arbitrary, however. It is driven by a kind of Darwinian evolution. We retain mathematical systems that prove useful for modeling reality, elegant for internal development, fruitful for generating interesting theorems. We discard or forget systems that fail these tests.</p>
+<p>Physical theories use mathematical structures to model reality. When Newton modeled gravity, he used mathematical objects called “real numbers” and “differential equations.” These mathematical objects don’t physically exist—you can’t put a differential equation in a test tube. But they provide the language for expressing physical laws.</p>
+<p>The match between mathematics and physics is therefore not mysterious. Physics <em>uses</em> mathematics. Physicists choose mathematical structures that fit observations. If a mathematical structure fails to model reality, physicists try a different structure. The “effectiveness” of mathematics just means: physicists are good at finding mathematical structures that model reality well.</p>
+<p>Why is reality <em>mathematizable</em> at all? Why can we model physical phenomena using formal systems? This remains genuinely mysterious. But positing a Platonic realm doesn’t explain it. Saying “mathematics applies because mathematical structures exist independently and physical reality instantiates them” merely relocates the mystery. Why should physical reality instantiate mathematical structures? How does the instantiation relationship work? Platonism multiplies entities and relationships without genuinely explaining.</p>
+<p>The anti-Platonist position admits ignorance here. We don’t know why reality is mathematizable. We observe that it is, we exploit this fact brilliantly, but we have no ultimate explanation. Perhaps the question is unanswerable. Perhaps, as Wittgenstein said, “Explanations come to an end somewhere.”</p>
+</section>
+<section id="allies-and-opponents">
+<h2>Allies and Opponents<a class="headerlink" href="#allies-and-opponents" title="Link to this heading">#</a></h2>
+<p>The position developed here stands in a complex relationship with various philosophical traditions.</p>
+<section id="allies">
+<h3>Allies<a class="headerlink" href="#allies" title="Link to this heading">#</a></h3>
+<p><strong>Formalists</strong> like Hilbert emphasized mathematics as symbol manipulation according to formal rules. Mathematical truth is provability within a formal system. This aligns well with the view that mathematics is chess-like rule-following rather than discovery of pre-existing objects.</p>
+<p><strong>Nominalists</strong> deny the existence of abstract objects. Only concrete particulars exist. Mathematical talk should be understood as useful fiction or eliminated through paraphrase. The present position shares nominalism’s ontological parsimony while preserving mathematics’ objectivity through formal rigor.</p>
+<p><strong>Empiricists about mathematics</strong> argue that mathematical knowledge derives from empirical observation and abstraction from physical experience. <span id="id3">[<a class="reference internal" href="#id70" title="Matthew S. Leifer. Mathematics is physics. In Anthony Aguirre, Brendan Foster, and Zeeya Merali, editors, Trick or Truth? The Mysterious Connection Between Physics and Mathematics, The Frontiers Collection, pages 21–40. Springer, Cham, 2016. doi:10.1007/978-3-319-27495-9_3.">Leifer, 2016</a>]</span> makes this case powerfully, arguing that mathematics is a natural science like physics or biology. Mathematics studies “regularities, within regularities, within regularities of the natural world,” becoming increasingly abstract through a process of recognizing analogies and creating new conceptual frameworks. Since mathematical theories derive from the natural world, albeit at higher levels of abstraction than other sciences, their applicability to physics becomes unsurprising rather than mysterious. This position closely parallels the view developed here, particularly regarding the empirical origins of mathematical concepts and the selection process that retains useful mathematics.</p>
+<p><strong>Constructivists</strong> require mathematical objects to be explicitly constructible and proofs to be algorithmic. They reject the Axiom of Choice and the law of excluded middle. While the present position doesn’t mandate constructivism, it recognizes constructive mathematics as one legitimate formal system among others—another game we can play.</p>
+<p><strong>Pragmatists</strong> emphasize that truth is what works in practice. Mathematical truth might be understood as fertility for applications, elegance of formulations, and usefulness for science. The Darwinian selection model shares this pragmatic spirit.</p>
+</section>
+<section id="opponents">
+<h3>Opponents<a class="headerlink" href="#opponents" title="Link to this heading">#</a></h3>
+<p><strong>Platonists</strong> like Gödel and many working mathematicians believe mathematical objects exist independently in an abstract realm. Mathematicians discover truths about this realm rather than inventing formal systems. This position explains mathematical objectivity and necessity elegantly but at the cost of metaphysical extravagance. Where is this Platonic realm? How do human minds access it? What is the relationship between abstract mathematical objects and physical reality?</p>
+<p><strong>Realists</strong> hold that true mathematical statements correspond to mathematical facts, and these facts obtain independently of human minds. Mathematical realism comes in various strengths, from Platonism (abstract objects exist in a non-physical realm) to Aristotelian realism (mathematical structures exist as aspects of physical reality). <span id="id4">[<a class="reference internal" href="#id71" title="Tim Maudlin. How mathematics meets the world. In Anthony Aguirre, Brendan Foster, and Zeeya Merali, editors, Trick or Truth? The Mysterious Connection Between Physics and Mathematics, The Frontiers Collection. Springer, Cham, 2016. doi:10.1007/978-3-319-27495-9_8.">Maudlin, 2016</a>]</span> represents a sophisticated realist position, arguing that even the applicability of elementary mathematics like arithmetic and geometry requires explanation beyond mere convention or modeling. For Maudlin, the physical world genuinely has mathematical structure, and this structural correspondence demands a realist interpretation. All realist positions face the epistemic problem: how do we know about these mind-independent mathematical facts?</p>
+<p><strong>Logicists</strong> like Frege and the early Russell attempted to reduce mathematics to logic. If successful, this would ground mathematical truth in logical truth, which might be necessary and objective without requiring Platonic objects. But the project failed. Russell’s paradox showed that naive set theory is inconsistent, and subsequent repairs (like type theory) introduced machinery as complex as mathematical axioms themselves.</p>
+<p><strong>Intuitionists</strong> like Brouwer ground mathematics in mental constructions. Mathematical objects are created by the ideal mathematician’s thought processes. This shares with the present position an anti-Platonist stance but differs in emphasizing subjective mental acts rather than objective formal systems. The present position seeks intersubjective agreement through formal rules rather than grounding mathematics in individual consciousness.</p>
+<p>The anti-Platonist formalist position developed here occupies distinctive ground. It shares with nominalism the rejection of abstract objects. It shares with formalism the emphasis on formal systems and symbol manipulation. It shares with pragmatism the emphasis on usefulness and selection. It shares with constructivism the recognition that we choose our axiom systems. But it synthesizes these elements into a view centered on Darwinian selection: mathematics consists of formal systems refined over time by what proves useful, elegant, and fruitful.</p>
+</section>
+</section>
+<section id="challenges">
+<h2>Challenges<a class="headerlink" href="#challenges" title="Link to this heading">#</a></h2>
+<p>Several objections might be raised against this position.</p>
+<section id="mathematical-objectivity">
+<h3>Mathematical Objectivity<a class="headerlink" href="#mathematical-objectivity" title="Link to this heading">#</a></h3>
+<p>If mathematics is just rule-following in games we invented, why does it feel so objective? Why do mathematicians experience themselves as discovering truths rather than creating them? When we prove that there are infinitely many primes, it feels like we’ve uncovered a fact about numbers, not like we’ve made an arbitrary choice.</p>
+<p><strong>Response:</strong> Chess also feels objective once you’re playing it. Given the rules, certain positions are winning and others are losing—that’s objective fact, not arbitrary choice. Mathematical objectivity comes from the rigidity of logical inference. Once axioms are chosen, theorems follow necessarily. This necessity feels like discovery because we can’t change it by wishing.</p>
+<p>Moreover, mathematical training shapes intuitions. After years of working within Peano arithmetic, the natural numbers feel real and their properties feel discovered. But this psychological experience doesn’t settle the metaphysical question. It’s compatible with both Platonism and formalism.</p>
+<p>The question is: does this feeling of discovery require a Platonic realm, or can formal systems explain it? The latter seems sufficient. The objectivity is the objectivity of rule-following, not the objectivity of correspondence to pre-existing objects.</p>
+</section>
+<section id="mathematical-necessity">
+<h3>Mathematical Necessity<a class="headerlink" href="#mathematical-necessity" title="Link to this heading">#</a></h3>
+<p>Mathematical truths seem necessary in a way that physical truths don’t. The laws of physics could have been different, but could 2 + 2 have equaled 5? Doesn’t this necessity point toward Platonic existence?</p>
+<p><strong>Response:</strong> Mathematical necessity is hypothetical necessity: <em>given</em> these axioms and inference rules, these theorems follow. It’s no more mysterious than: <em>given</em> chess rules, certain positions are checkmate. The necessity comes from logical consequence, not from the nature of abstract objects.</p>
+<p>Could 2 + 2 have equaled 5? Not in Peano arithmetic—that’s fixed by the axioms. But we could have adopted different axioms. In modular arithmetic mod 3, we have 2 + 2 ≡ 1. Different formal systems yield different “necessities.”</p>
+<p>The feeling that 2 + 2 <em>must</em> equal 4 reflects the depth of our commitment to standard arithmetic. We’ve been counting this way since childhood. The formal system is so deeply internalized that alternatives seem impossible. But this is psychological, not metaphysical.</p>
+</section>
+<section id="the-precision-problem">
+<h3>The Precision Problem<a class="headerlink" href="#the-precision-problem" title="Link to this heading">#</a></h3>
+<p>When mathematics and physics connect successfully, they often exhibit exact structural identity rather than approximate resemblance. The mathematics of quantum mechanics, for instance, precisely matches quantum phenomena. This precision strains the idea that we’re simply selecting useful tools from a human-constructed inventory.</p>
+<p><strong>Response:</strong> Einstein’s insight about mathematics and reality addresses this directly <span id="id5">[<a class="reference internal" href="#id68" title="Albert Einstein. The laws of science and the laws of ethics. In Readings in the Philosophy of Science, pages 779–780. Appleton-Century-Crofts, 1953.">Einstein, 1953</a>]</span>. “As far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they do not refer to reality.”</p>
+<p>Mathematical models never perfectly capture reality. Newton’s laws are exact only for ideal point particles (which don’t exist). Quantum mechanics uses continuous wave functions, but reality may be fundamentally discrete at the Planck scale. The “precision” is the precision of the model within its domain of applicability, not exact correspondence to reality itself.</p>
+<p>When we say quantum mechanics “precisely matches” quantum phenomena, we mean: the model’s predictions match our measurements to high accuracy. But measurements have limited precision. Experiments test predictions to many decimal places, and the agreement is impressive—but it’s always finite precision, never infinite.</p>
+<p>Moreover, the selection mechanism produces this precision. Mathematical models that match reality poorly get discarded. Models that match reality well get refined and extended. Over centuries of this process, we develop extraordinarily precise models. This doesn’t require Platonism—just good modeling and selection.</p>
+<p>Still, we can honestly admit: we don’t know why models work so well. Conceding this surrenders explanatory ground that Platonists eagerly occupy. But their explanation—“mathematical structures exist independently”—doesn’t actually explain anything. It just relocates the mystery.</p>
+</section>
+<section id="pre-adaptation-across-centuries">
+<h3>Pre-Adaptation Across Centuries<a class="headerlink" href="#pre-adaptation-across-centuries" title="Link to this heading">#</a></h3>
+<p>Mathematics developed purely for internal reasons—group theory for polynomial equations, conic sections for geometric beauty, prime numbers for intellectual curiosity—finds application centuries later to problems its developers never imagined. How does the selection model explain this?</p>
+<p><strong>Response:</strong> The selection model requires large numbers, long time scales, and vast unused inventory—all of which exist. Mathematicians have explored widely for millennia. Most of this exploration produces no applications. But the inventory is so vast that when physicists need a tool, they often find something already developed.</p>
+<p>This is not miraculous pre-adaptation. It’s the law of large numbers. Generate millions of theorems over thousands of years, and some will match future needs by chance. We remember group theory finding application in particle physics. We forget countless mathematical theories that found no application.</p>
+<p>Perhaps the hit rate exceeds what pure chance would predict. If so, this might suggest that mathematical exploration, though unconstrained by immediate empirical needs, is still constrained by something—not Platonic objects exactly, but structural possibilities inherent in logic and coherence themselves. Mathematicians explore the space of consistent structures, and physics happens to actualize some structures from that space.</p>
+<p>This wouldn’t require Platonism, but it might suggest that the space of logically possible structures has its own reality independent of particular physical instantiation. Whether this helps or merely relocates the puzzle remains unclear.</p>
+</section>
+<section id="what-about-discovery">
+<h3>What About Discovery?<a class="headerlink" href="#what-about-discovery" title="Link to this heading">#</a></h3>
+<p>Mathematicians overwhelmingly report the phenomenology of discovery rather than invention. They feel they’re exploring an objective realm, not making arbitrary choices. Doesn’t this count for something?</p>
+<p><strong>Response:</strong> Psychological experience doesn’t settle metaphysical questions. Scientists once experienced the sun rising and earth standing still—direct perceptual experience that turned out to be false. Mathematicians’ feeling of discovery is genuine psychological data but doesn’t entail Platonism.</p>
+<p>Moreover, formalism explains this phenomenology. When exploring a formal system, mathematicians don’t know in advance what theorems are provable. They investigate, conjecture, prove or disprove. This feels like exploring territory because, in a sense, it is—exploring the logical consequences of chosen axioms. But the territory is formal structure, not pre-existing Platonic objects.</p>
+<p>Great mathematical discoveries—like non-Euclidean geometry or Gödel’s theorems—often shock their discoverers. This seems to support Platonism: how could we be shocked by our own inventions? But shock comes from unexpected consequences of the rules we set up. Chess players are shocked by brilliant unexpected moves—this doesn’t mean chess positions exist in Plato’s heaven.</p>
+</section>
+<section id="the-axiom-of-choice-dilemma">
+<h3>The Axiom of Choice Dilemma<a class="headerlink" href="#the-axiom-of-choice-dilemma" title="Link to this heading">#</a></h3>
+<p>If mathematical existence is system-relative, and we can practice mathematics with or without the Axiom of Choice, doesn’t this make mathematics arbitrary? How can mathematical truth be objective if we just choose axioms based on convenience?</p>
+<p><strong>Response:</strong> This is a feature, not a bug. Mathematical truth <em>is</em> system-relative. But this doesn’t make it arbitrary in a problematic sense.</p>
+<p>First, different formal systems serve different purposes. ZFC is useful for mainstream mathematics. Constructive mathematics is useful for computer science and proof theory. Each has its domain of application. Choosing between them is like choosing between Newtonian mechanics and quantum mechanics: the choice depends on what you’re modeling.</p>
+<p>Second, objectivity comes from rigorous proof within the chosen system. Once axioms are fixed, theorems follow necessarily. This necessity is objective, even if the initial choice of axioms was conventional.</p>
+<p>Third, the Darwinian selection process isn’t arbitrary. Mathematical systems that prove useful, elegant, and fruitful survive. Those that don’t fade away. This isn’t arbitrary selection—it’s selection by multiple constraints: internal consistency, applicability, fertility, elegance.</p>
+<p>The Axiom of Choice will persist if it proves indispensable. If constructive mathematics produces better applications or deeper theories, it may supplant ZFC. This is rational selection, not arbitrary whim.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>The anti-Platonist formalist position offers clarity about what mathematics is (formal systems), honesty about what remains mysterious (applicability), and parsimony in ontology (no Platonic heaven).</p>
+<p>Mathematics consists of formal systems—combinations of axioms and inference rules—that humans construct. These systems don’t emerge from nowhere. They’re refined over time through selection pressure from applications. When a formal system proves useful for modeling reality, it survives, gets taught, appears in textbooks, shapes further development. When a system proves useless or leads nowhere, it fades from practice.</p>
+<p>Mathematical existence means consistency within chosen formal systems. To say a mathematical object exists is to say we can define it consistently within an axiom system and reason about it without contradiction. This makes existence system-relative and conventional. The language of mathematical existence is pragmatic convenience rather than metaphysical discovery.</p>
+<p>Why these formal systems apply to physical reality remains unexplained and perhaps inexplicable. We can point to the selection mechanism—systems that model reality well get retained—but this describes the process without explaining the deep fact that such systems exist at all. The position frankly admits this ignorance.</p>
+<p>Some Platonists offer what they take to be explanations: mathematics applies because mathematical structures exist independently and physical reality instantiates them. But this merely relocates the mystery. Why should physical reality instantiate mathematical structures? How does the instantiation relationship work? Platonism multiplies entities without genuinely explaining.</p>
+<p>This pattern repeats throughout intellectual history. When confronted with something remarkable—the apparent fine-tuning of physical constants, the emergence of life, the applicability of mathematics—a recurring argumentative move appears: “It’s so fantastic, there must be… a God, a hidden reality, many universes, a Platonic realm.”</p>
+<p>The anthropic principles illustrate this dynamic. The strong anthropic principle assumes premeditation: physical constants were chosen to permit life. The weak anthropic principle uses probability: there are many universes, and we necessarily find ourselves in one compatible with observation. The non-anthropic principle simply accepts the world as it is: these are the constants, and we observe them.</p>
+<p>Both anthropic principles fall to Occam’s razor. They multiply entities—designers or multiverses—to explain what might simply be. But they cannot be disproven. The key point is recognizing that these moves don’t actually explain; they relocate the mystery.</p>
+<p>The same applies to Platonism about mathematics. Invoking a realm of abstract objects doesn’t explain why mathematics applies to physics—it creates new questions about the relationship between Platonic and physical realms. The anti-Platonist position resists this multiplication of mysteries. Mathematics works remarkably well; we don’t fully understand why; positing extra realms of being doesn’t help.</p>
+<p>Perhaps the effectiveness of mathematics is simply a brute fact about our universe—one we should accept with wonder rather than false confidence that we’ve explained it. As Wittgenstein said <span id="id6">[<a class="reference internal" href="#id16" title="Ludwig Wittgenstein. Remarks on the Foundations of Mathematics. MIT Press, 1978.">Wittgenstein, 1978</a>]</span>: “Explanations come to an end somewhere.”</p>
+<p>The position represents a form of pragmatic nominalism. We use mathematics because it works, not because we’ve discovered eternal truths in a transcendent realm. Mathematical practice is sophisticated, rigorous, and objective—but objective in the sense that formal proof is mechanically checkable, not in the sense that mathematical objects exist independently of mathematical practice.</p>
+<p>Prime numbers exist exactly as much as the Sicilian Defense exists—as patterns within rule structures humans created. Whether that constitutes “real” existence depends on what we mean by existence. And that question, like so many in philosophy, may have no final answer.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id7">
+<div role="list" class="citation-list">
+<div class="citation" id="id68" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ein53<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>Albert Einstein. The laws of science and the laws of ethics. In <em>Readings in the Philosophy of Science</em>, pages 779–780. Appleton-Century-Crofts, 1953.</p>
+</div>
+<div class="citation" id="id70" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Lei16<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>Matthew S. Leifer. Mathematics is physics. In Anthony Aguirre, Brendan Foster, and Zeeya Merali, editors, <em>Trick or Truth? The Mysterious Connection Between Physics and Mathematics</em>, The Frontiers Collection, pages 21–40. Springer, Cham, 2016. <a class="reference external" href="https://doi.org/10.1007/978-3-319-27495-9_3">doi:10.1007/978-3-319-27495-9_3</a>.</p>
+</div>
+<div class="citation" id="id71" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Mau16</a><span class="fn-bracket">]</span></span>
+<p>Tim Maudlin. How mathematics meets the world. In Anthony Aguirre, Brendan Foster, and Zeeya Merali, editors, <em>Trick or Truth? The Mysterious Connection Between Physics and Mathematics</em>, The Frontiers Collection. Springer, Cham, 2016. <a class="reference external" href="https://doi.org/10.1007/978-3-319-27495-9_8">doi:10.1007/978-3-319-27495-9_8</a>.</p>
+</div>
+<div class="citation" id="id16" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">Wit78</a><span class="fn-bracket">]</span></span>
+<p>Ludwig Wittgenstein. <em>Remarks on the Foundations of Mathematics</em>. MIT Press, 1978.</p>
+</div>
+</div>
+</div>
+<div style="margin-bottom: 100px;"></div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./philosophy"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="36-free-will-1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Stop Press: Problem of Free Will Dissolved!</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../computer-science/33-cyber-espionage.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Spy Who Came in from the Cloud</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers-as-models-of-what-we-see">Numbers as Models of What We See</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chess-analogy">The Chess Analogy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-as-formal-system">Mathematics as Formal System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-correctness-problem-symbol-manipulation">The Correctness Problem: Symbol Manipulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darwinian-selection-of-mathematical-theories">Darwinian Selection of Mathematical Theories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-axiom-of-choice-selection-determines-the-future">The Axiom of Choice: Selection Determines the Future</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-as-a-model-of-reality">Physics as a Model of Reality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predictive-power-remarkable-but-not-miraculous">Predictive Power: Remarkable But Not Miraculous</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-varieties-of-existence">Two Varieties of Existence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allies-and-opponents">Allies and Opponents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#allies">Allies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opponents">Opponents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-objectivity">Mathematical Objectivity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-necessity">Mathematical Necessity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-precision-problem">The Precision Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-adaptation-across-centuries">Pre-Adaptation Across Centuries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-about-discovery">What About Discovery?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-axiom-of-choice-dilemma">The Axiom of Choice Dilemma</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
