@@ -41,7 +41,10 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          jupyter-book build bagatelles/
+          set -e  # Exit on any error
+          echo "Starting Jupyter Book build..."
+          jupyter-book build bagatelles/ --all -v
+          echo "Build completed!"
 
       - name: Verify build output
         run: |
