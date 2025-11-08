@@ -75,16 +75,6 @@ Out of 509 people who test positive, only 9.5 actually have cancer. That's 98.1%
 
 This is not a defect of the test. It's an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives {cite}`ioannidis2005why`.
 
-Let us look at two more examples to understand how general this pattern is. 
-Take **smoking and lung cancer**. The evidence is "smoking", the hypothesis is "has lung cancer". 
-The true positives would be smokers with lung cancer, the false positives smokers without lung cancer,
-and the false negatives non-smokers with lung cancer. The rest (non-smokers without cancer) are true negatives.
-The example of **intelligent philosophers** makes us think about causation.
-Let's assume that, according to a study, philosophy students are particularly intelligent.
-Here, the evidence is "intelligent", the hypothesis is "philosopher". One wonders: 
-Are philosophy students intelligent because they study philosophy, 
-or do they study philosophy because they are intelligent?  
-
 
 ### The Confusion Matrix
 
@@ -135,6 +125,40 @@ In this balanced setting, the same 95% sensitivity and 95% specificity yield vas
 The precision is excellent! The test appears to work beautifully.
 
 But when deployed in the field on the general population—where only 0.1% have cancer—that same test's precision collapses to 1.9%. The test hasn't changed; the population has. This asymmetry between development (balanced populations) and deployment (real-world base rates) is the source of most Bayesian confusion and most real-world disappointment with screening programs.
+
+
+### Causality
+In the previous example, the evidence was a "positive test result", and the hypothesis was "has cancer". 
+The likelihood ratio quantifies the extent to which our knowledge increases.
+The hypothesis (cancer) causes the test result, with the imponderables discussed earlier.
+This is a ubiquitous pattern: fire causes alarm, the signal sent causes the signal received, 
+the physical phenomenon causes what the physicist observes on his measuring device.
+
+Now consider an analogous example:
+Let the evidence be "is a smoker" and the hypothesis "has lung cancer". 
+Again, the likelihood ratio quantifies our increased knowledge. 
+We learn how much more likely a smoker is to contract cancer.
+However, in this case, the causality works the other way around: 
+It is smoking that causes lung cancer!
+There is a crucial difference, however: The patient has to accept the test result; he can do nothing about his health.
+But the smoker can stop smoking, and the non-smoker can refrain from starting to smoke.
+
+However, this is not the end of the story, as the following example illustrates. 
+It's a fact that bald men tend to be wealthier than men with a full head of hair.
+This is because bald men tend to be older, and older men tend to have more money.
+Let the evidence be "is bald" and the hypothesis "is wealthy". 
+In this case, the causality works neither way,
+having your head shaved won't affect your chances of getting rich.
+
+To make matters worse, we finish with intelligent philosophers. 
+Let's assume that, according to a study, philosophy students are particularly intelligent.
+In this case, the evidence is "intelligent", and the hypothesis is "philosopher". One wonders: 
+Are philosophy students intelligent because they study philosophy? 
+Or do they study philosophy because they are intelligent? You decide.
+
+This was just a quick glance at the fascinating question of causality, which was beautifully developed by J.Pearl and his team 
+in {cite}`pearl2018book`, {cite}`pearl2009causality`, {cite}`pearl2016causal`.
+
 
 ## The Apgar Test Is a Neural Network
 
@@ -191,7 +215,7 @@ And like all Bayesian tests, its quality depends critically on the quality of th
 Ideally, it should accurately represent the world, including factors such as gender, race, or parents' social status.
 Do newborn babies in Australia match the same parameters as those in India? 
 Whatever criteria you can think of should be accurately represented, but achieving that is, in general, impossible.
-This is the crucial issue of bias.
+This is the crucial, inescapable issue of bias.
 
 ## From Apgar to Insurance: Scaling Up
 
