@@ -64,11 +64,11 @@ jobs:
 
           echo ""
           echo "Running build command..."
-          jupyter-book build bagatelles/ --all --verbose
+          jupyter-book build bagatelles/ --all
 
           echo ""
           echo "Build finished. Checking for _build directory..."
-          ls -la bagatelles/ | grep -i build || echo "No _build directory found!"
+          ls -la bagatelles/
 
       - name: Verify build output
         run: |
