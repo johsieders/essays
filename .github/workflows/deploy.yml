@@ -44,14 +44,15 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          echo "Starting build with sphinx-build directly..."
+          echo "Starting Jupyter Book config preparation..."
           cd bagatelles
 
-          echo "Current directory: $(pwd)"
+          echo "Generating Sphinx config from Jupyter Book..."
+          jupyter-book config sphinx .
 
           echo ""
-          echo "Running sphinx-build..."
-          sphinx-build . _build/html -b html
+          echo "Building with Sphinx using generated config..."
+          sphinx-build . _build/html -c . -b html
 
           echo ""
           echo "Build completed. Checking output..."
@@ -60,7 +61,6 @@ jobs:
             ls -la _build/html/ | head -10
           else
             echo "✗ No _build/html directory found!"
-            ls -la
             exit 1
           fi
 
