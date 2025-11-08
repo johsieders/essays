@@ -1,0 +1,1205 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Why Your Model Beats You: Bayesian Decision-Making Without Noise &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/bayesian-decisions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Baysian Tests" href="bayesian-tests.html" />
+    <link rel="prev" title="Modern Physics: One-Pager" href="../physics/29-physics-one-page.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/bayesian-decisions.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/bayesian-decisions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/mathematics/bayesian-decisions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Why Your Model Beats You: Bayesian Decision-Making Without Noise</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#musicians-and-base-rates">Musicians and Base Rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-tests-the-cancer-screening-problem">Bayesian Tests: The Cancer Screening Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-confusion-matrix">The Confusion Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#four-ways-to-measure-performance">Four Ways to Measure Performance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-asymmetry-between-lab-and-field">The Asymmetry Between Lab and Field</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apgar-test-is-a-neural-network">The Apgar Test Is a Neural Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-fixed-weights-to-trained-weights">From Fixed Weights to Trained Weights</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-apgar-to-insurance-scaling-up">From Apgar to Insurance: Scaling Up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-convert-reality-to-numbers">Step 1: Convert Reality to Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-gather-training-data">Step 2: Gather Training Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-train-the-model">Step 3: Train the Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-deploy-and-monitor">Step 4: Deploy and Monitor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem-of-ground-truth">The Problem of Ground Truth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insurance-claims">Insurance Claims</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criminal-sentencing">Criminal Sentencing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loan-applications">Loan Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medical-triage">Medical Triage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-automatons-beat-humans-anyway">Why Automatons Beat Humans Anyway</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-noise">What is Noise?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-automaton-advantage">The Automaton Advantage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evidence-from-real-systems">Evidence from Real Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-automatons-decide">When Should Automatons Decide?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-appropriate-domain-for-automation">The Appropriate Domain for Automation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-inappropriate-domain-for-automation">The Inappropriate Domain for Automation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#three-critical-problems">Three Critical Problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-training-data-problem">1. The Training Data Problem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-feedback-loop-problem">2. The Feedback Loop Problem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accountability-problem">3. The Accountability Problem</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-framework-for-responsible-automation">A Framework for Responsible Automation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="why-your-model-beats-you-bayesian-decision-making-without-noise">
+<h1>Why Your Model Beats You: Bayesian Decision-Making Without Noise<a class="headerlink" href="#why-your-model-beats-you-bayesian-decision-making-without-noise" title="Link to this heading">#</a></h1>
+<p><em>From Kahneman’s Fallacies to Neural Networks That Replace Human Judgment</em></p>
+<p><em>Johannes Siedersleben, assisted by Claude Sonnet 4.5<br />
+November 2025</em></p>
+<hr class="docutils" />
+<p>We are easily fooled. Daniel Kahneman’s <em>Thinking, Fast and Slow</em> <span id="id1">[<a class="reference internal" href="bayesian-tests.html#id70" title="Daniel Kahneman. Thinking, Fast and Slow. Farrar, Straus and Giroux, 2011.">Kahneman, 2011</a>]</span> opens with a devastating example. Imagine two lists. The first contains personality descriptions: “a meek and tidy soul with a need for order and structure.” The second lists professions: librarian, farmer, airline pilot, accountant. Your task: estimate how likely a given individual works in each profession.</p>
+<p>Most people ask: “How well does the description match?” Meek and tidy? Sounds like a librarian!
+But this intuition ignores the fact that some professions are vastly more common than others.
+However perfectly a personality fits an astronaut or lighthouse keeper, these professions are so rare that the actual probability remains minuscule.</p>
+<p>Kahneman calls this “What You See Is All There Is” (WYSIATI, pronounced ‘wizzy-AH-tee’)—our tendency to judge based solely on available information while ignoring what’s missing. What people systematically forget is the <strong>base rate</strong>: the underlying frequency of each profession. There are thousands of accountants for every lighthouse keeper, regardless of personality fit.</p>
+<p>The correct probability must be approximately the product of base rate (how common is this profession?) and personality match (how well does this person fit?). Understanding this product is the gateway to Bayesian reasoning <span id="id2">[<a class="reference internal" href="bayesian-tests.html#id73" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>.
+For a readable, instructive, and, at times, humorous introduction to the strange world of Bayes, see <span id="id3">[<a class="reference internal" href="#id82" title="Sharon Bertsch McGrayne. The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy. Yale University Press, 2011.">McGrayne, 2011</a>]</span>.</p>
+<p>This essay traces a journey: from Kahneman’s insights about human fallibility through Bayesian tests to a surprising conclusion—trained automatons (neural networks making decisions from weighted scores) systematically outperform human experts. The implications for medicine, insurance, criminal justice are profound and troubling. We begin with musicians.</p>
+<section id="musicians-and-base-rates">
+<h2>Musicians and Base Rates<a class="headerlink" href="#musicians-and-base-rates" title="Link to this heading">#</a></h2>
+<p>Let’s examine professional musicians. Suppose:</p>
+<ul class="simple">
+<li><p><strong>Base rate</strong>: 0.1% of the population are professional musicians (1 in 1,000 people)</p></li>
+<li><p><strong>Musical giftedness</strong>: 5% of the population is musically gifted (50 in 1,000 people)</p></li>
+<li><p><strong>Assumption</strong>: All professional musicians are musically gifted (a simplification, but reasonable)</p></li>
+</ul>
+<p>Now consider a person selected at random from the population. If we learn nothing about them, their probability of being a professional musician is simply the base rate: 0.1%. But suppose we learn they are musically gifted. How does this change the probability?</p>
+<p>Here’s the calculation:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Population Category</p></th>
+<th class="head"><p>Count (per 1,000)</p></th>
+<th class="head"><p>Percentage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>General population</p></td>
+<td><p>1,000</p></td>
+<td><p>100%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Professional musicians</p></td>
+<td><p>1</p></td>
+<td><p>0.1%</p></td>
+</tr>
+<tr class="row-even"><td><p>Musically gifted people</p></td>
+<td><p>50</p></td>
+<td><p>5%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Musicians among the gifted</p></td>
+<td><p>1</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>P(musician | gifted)</strong></p></td>
+<td><p><strong>1/50</strong></p></td>
+<td><p><strong>2%</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The probability jumps from 0.1% to 2%—a twentyfold increase. Yet the person is still overwhelmingly unlikely to be a professional musician. Among the 50 musically gifted people, 49 have chosen different careers or never developed their talent professionally.</p>
+<p>This pattern is ubiquitous in medical diagnosis, security screening, machine learning, and everyday reasoning. Understanding it requires some terminology:</p>
+<ul class="simple">
+<li><p><strong>Evidence</strong>: Information that is readily available (here: “is musically gifted”)</p></li>
+<li><p><strong>Hypothesis</strong>: What we’re trying to determine about the underlying reality (here: “is a professional musician”)</p></li>
+<li><p><strong>Base rate</strong>: Prior probability of the hypothesis before considering evidence (here: 0.1%)</p></li>
+<li><p><strong>Likelihood</strong>: Probability of observing the evidence (here: 5%)</p></li>
+<li><p><strong>Likelihood ratio</strong>: The multiplicative factor by which evidence changes probability (here: 20)</p></li>
+</ul>
+<p>The likelihood ratio quantifies the information gained from the evidence. A ratio of 20 is excellent; in many real-world applications, we’re lucky to achieve 10.</p>
+</section>
+<section id="bayesian-tests-the-cancer-screening-problem">
+<h2>Bayesian Tests: The Cancer Screening Problem<a class="headerlink" href="#bayesian-tests-the-cancer-screening-problem" title="Link to this heading">#</a></h2>
+<p>The same pattern applies to medical diagnosis. Consider cancer screening: the patient has cancer (hypothesis); the test is positive (evidence); prevalence is 0.1% (base rate). Let’s work through actual numbers. Screen 10,000 people:</p>
+<p><strong>Given:</strong></p>
+<ul class="simple">
+<li><p>Base rate: 0.1% (10 people in 10,000 have cancer)</p></li>
+<li><p>The test correctly detects 95% of people who actually have cancer</p></li>
+<li><p>The test correctly identifies 95% of people who don’t have cancer</p></li>
+</ul>
+<p><strong>Calculation:</strong></p>
+<ul class="simple">
+<li><p>Among 10 people with cancer, the test detects: 10 × 95% = 9.5 (<strong>true positives</strong>, TP)</p></li>
+<li><p>Among 10 people with cancer, the test misses: 10 × 5% = 0.5 (<strong>false negatives</strong>, FN)</p></li>
+<li><p>Among 9,990 people without cancer, the test correctly identifies: 9,990 × 95% = 9,490.5 (<strong>true negatives</strong>, TN)</p></li>
+<li><p>Among 9,990 people without cancer, the test incorrectly flags: 9,990 × 5% = 499.5 (<strong>false positives</strong>, FP)</p></li>
+</ul>
+<p><strong>Results:</strong></p>
+<ul class="simple">
+<li><p>Total positive tests: TP + FP = 9.5 + 499.5 = 509</p></li>
+<li><p>Precision (positive predictive value): TP/(TP + FP) = 9.5/509 = <strong>1.9%</strong></p></li>
+</ul>
+<p>Out of 509 people who test positive, only 9.5 actually have cancer. That’s 98.1% false positives. Most patients—and many physicians—find this deeply counterintuitive <span id="id4">[<a class="reference internal" href="#id81" title="Gerd Gigerenzer. Calculated Risks: How to Know When Numbers Deceive You. Simon &amp; Schuster, New York, 2002.">Gigerenzer, 2002</a>]</span>. A test that is “95% accurate” produces overwhelming numbers of false alarms.</p>
+<p>This is not a defect of the test. It’s an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives <span id="id5">[<a class="reference internal" href="#id83" title="John P. A. Ioannidis. Why most published research findings are false. PLOS Medicine, 2(8):e124, 2005. doi:10.1371/journal.pmed.0020124.">Ioannidis, 2005</a>]</span>.</p>
+<p>Let us look at two more examples to understand how general this pattern is.
+Take <strong>smoking and lung cancer</strong>. The evidence is “smoking”, the hypothesis is “has lung cancer”.
+The true positives would be smokers with lung cancer, the false positives smokers without lung cancer,
+and the false negatives non-smokers with lung cancer. The rest (non-smokers without cancer) are true negatives.
+The example of <strong>intelligent philosophers</strong> makes us think about causation.
+Let’s assume that, according to a study, philosophy students are particularly intelligent.
+Here, the evidence is “intelligent”, the hypothesis is “philosopher”. One wonders:
+Are philosophy students intelligent because they study philosophy,
+or do they study philosophy because they are intelligent?</p>
+<section id="the-confusion-matrix">
+<h3>The Confusion Matrix<a class="headerlink" href="#the-confusion-matrix" title="Link to this heading">#</a></h3>
+<p>The confusion matrix organizes these four outcomes systematically:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head text-center"><p><strong>Cancer Absent</strong></p></th>
+<th class="head text-center"><p><strong>Cancer Present</strong></p></th>
+<th class="head text-center"><p><strong>Total</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Test Negative</strong></p></td>
+<td class="text-center"><p>TN = 9,490.5</p></td>
+<td class="text-center"><p>FN = 0.5</p></td>
+<td class="text-center"><p>9,491</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Test Positive</strong></p></td>
+<td class="text-center"><p>FP = 499.5</p></td>
+<td class="text-center"><p>TP = 9.5</p></td>
+<td class="text-center"><p>509</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Total</strong></p></td>
+<td class="text-center"><p>9,990</p></td>
+<td class="text-center"><p>10</p></td>
+<td class="text-center"><p>10,000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Understanding this matrix is crucial for evaluating any classification system—whether medical diagnosis, spam detection, or criminal risk assessment.</p>
+</section>
+<section id="four-ways-to-measure-performance">
+<h3>Four Ways to Measure Performance<a class="headerlink" href="#four-ways-to-measure-performance" title="Link to this heading">#</a></h3>
+<p>From the confusion matrix, we can derive multiple performance metrics. The terminology here is standard but notoriously confusing, so let’s define each term precisely:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Metric</p></th>
+<th class="head"><p>Formula</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Interpretation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Sensitivity (Recall)</strong></p></td>
+<td><p>TP/(TP+FN)</p></td>
+<td><p>95%</p></td>
+<td><p>Among people with cancer, what percentage does the test detect?</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Specificity</strong></p></td>
+<td><p>TN/(TN+FP)</p></td>
+<td><p>95%</p></td>
+<td><p>Among people without cancer, what percentage does the test correctly identify?</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Precision (PPV)</strong></p></td>
+<td><p>TP/(TP+FP)</p></td>
+<td><p>1.9%</p></td>
+<td><p>Among people who test positive, what percentage actually have cancer?</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Accuracy</strong></p></td>
+<td><p>(TP+TN)/(TP+TN+FP+FN)</p></td>
+<td><p>95%</p></td>
+<td><p>Overall, what percentage of all classifications are correct?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The test has 95% sensitivity (catches 95% of actual cancers), 95% specificity (correctly identifies 95% of healthy people), and 95% overall accuracy. These numbers all sound excellent. Yet the precision—the answer to the question a patient with a positive test actually asks (“Do I have cancer?”)—is merely 1.9%. This is the paradox of screening for rare conditions.</p>
+<p><strong>False negatives</strong> are catastrophic—missing someone who actually has cancer. Fortunately, with 95% sensitivity, these are rare (0.5 cases in our example).</p>
+<p><strong>False positives</strong> are merely anxiety-inducing—telling someone they might have cancer when they don’t. Unfortunately, these are common (499.5 cases in our example).</p>
+<p>For all their limitations, Bayesian tests have been the foundation of
+medical diagnosis, quality control, security screening, and scientific inference for over a century.
+They remain indispensable because the alternative—human intuition—is systematically worse.</p>
+</section>
+<section id="the-asymmetry-between-lab-and-field">
+<h3>The Asymmetry Between Lab and Field<a class="headerlink" href="#the-asymmetry-between-lab-and-field" title="Link to this heading">#</a></h3>
+<p>There is a deep asymmetry between developing a test and deploying it. Pharmaceutical companies typically develop tests in
+laboratory settings with carefully balanced populations: perhaps 500 people with cancer and 500 without.
+The test’s job is to distinguish these two equal-sized groups.
+The point is this: In the lab, you see both ends (evidence and hypothesis), but in the field,
+only the evidence is available and the hypothesis has to be predicted.</p>
+<p>In this balanced setting, the same 95% sensitivity and 95% specificity yield vastly different results:</p>
+<ul class="simple">
+<li><p>True positives: 500 × 95% = 475</p></li>
+<li><p>False positives: 500 × 5% = 25</p></li>
+<li><p>Precision: 475/(475+25) = <strong>95%</strong></p></li>
+</ul>
+<p>The precision is excellent! The test appears to work beautifully.</p>
+<p>But when deployed in the field on the general population—where only 0.1% have cancer—that same test’s precision collapses to 1.9%. The test hasn’t changed; the population has. This asymmetry between development (balanced populations) and deployment (real-world base rates) is the source of most Bayesian confusion and most real-world disappointment with screening programs.</p>
+</section>
+</section>
+<section id="the-apgar-test-is-a-neural-network">
+<h2>The Apgar Test Is a Neural Network<a class="headerlink" href="#the-apgar-test-is-a-neural-network" title="Link to this heading">#</a></h2>
+<p>The Apgar test, developed in 1952, assesses newborn babies worldwide. A physician observes five criteria immediately after birth:</p>
+<ol class="arabic simple">
+<li><p><strong>A</strong>ppearance (skin color)</p></li>
+<li><p><strong>P</strong>ulse (heart rate)</p></li>
+<li><p><strong>G</strong>rimace (reflex response)</p></li>
+<li><p><strong>A</strong>ctivity (muscle tone)</p></li>
+<li><p><strong>R</strong>espiration (breathing)</p></li>
+</ol>
+<p>Each criterion receives a score of 0 (poor), 1 (fair), or 2 (good). The five scores are summed to produce the Apgar score, ranging from 0 to 10. A score of 7 or higher indicates a healthy newborn; a score below 7 indicates a baby requiring immediate medical attention.</p>
+<p>The Apgar test fits perfectly into our Bayesian framework:</p>
+<ul class="simple">
+<li><p><strong>Evidence</strong>: The five observable scores</p></li>
+<li><p><strong>Hypothesis</strong>: The baby is healthy or critical</p></li>
+<li><p><strong>Decision rule</strong>: Score ≥ 7 → healthy; score &lt; 7 → critical</p></li>
+</ul>
+<p>The test could function as a decision automaton: observe, score, sum, compare to threshold, act. In practice, of course, a responsible physician is present, and the test guides rather than replaces human judgment.</p>
+<section id="from-fixed-weights-to-trained-weights">
+<h3>From Fixed Weights to Trained Weights<a class="headerlink" href="#from-fixed-weights-to-trained-weights" title="Link to this heading">#</a></h3>
+<p>The original Apgar test treats all five criteria equally—each contributes 0, 1, or 2 points.
+But is this optimal? Perhaps appearance matters more than grimace; perhaps pulse outweighs respiration.
+Let’s assume, by way of a thought experiment, that life is more complicated and that the Apgar test, as we know it, produces poor results.
+How would we determine the best weights?</p>
+<p>Modify the test to use arbitrary weights w₁, w₂, w₃, w₄, w₅ (summing to 1):</p>
+<p><strong>Weighted Apgar Score</strong> = w₁×(appearance) + w₂×(pulse) + w₃×(grimace) + w₄×(activity) + w₅×(respiration)</p>
+<p>Finding optimal weights: collect data from 1,000 newborns (five scores plus true health status); frame as optimization (1,000 equations, five unknowns); solve mathematically (least squares or gradient descent); deploy the trained weights.</p>
+<p><strong>Congratulations: you have just trained your first neural network.</strong></p>
+<p>This is not a metaphor or analogy. The weighted Apgar test <em>is</em> a neural network—specifically, a single-layer perceptron with five inputs, one output, and no hidden layers.
+The architecture looks like this:</p>
+<p><img alt="Apgar Perceptron Architecture" src="../_images/apgar_perceptron.png" /></p>
+<p>This is not a toy example or simplification. Real-world neural networks use exactly this principle, scaled up:</p>
+<ul class="simple">
+<li><p>More inputs (50, 500, or 50,000 features instead of 5)</p></li>
+<li><p>Hidden layers (intermediate processing stages)</p></li>
+<li><p>Nonlinear activation functions (allowing more complex relationships)</p></li>
+<li><p>Billions of weights instead of five</p></li>
+</ul>
+<p>But the fundamental idea is identical: find numerical weights that transform inputs into predictions, and optimize those weights using training data.</p>
+<p>The trained Apgar test (and every neural network) fits perfectly into the Bayesian testing framework.
+It produces predictions (evidence) about underlying states (hypotheses).
+It can be evaluated using precision, recall, accuracy, and specificity.
+It will produce false positives and false negatives.
+And like all Bayesian tests, its quality depends critically on the quality of the training data:
+Ideally, it should accurately represent the world, including factors such as gender, race, or parents’ social status.
+Do newborn babies in Australia match the same parameters as those in India?
+Whatever criteria you can think of should be accurately represented, but achieving that is, in general, impossible.
+This is the crucial issue of bias.</p>
+</section>
+</section>
+<section id="from-apgar-to-insurance-scaling-up">
+<h2>From Apgar to Insurance: Scaling Up<a class="headerlink" href="#from-apgar-to-insurance-scaling-up" title="Link to this heading">#</a></h2>
+<p>From medical diagnosis with five features to commercial decisions with dozens. Consider an insurance company automating claims processing.</p>
+<section id="step-1-convert-reality-to-numbers">
+<h3>Step 1: Convert Reality to Numbers<a class="headerlink" href="#step-1-convert-reality-to-numbers" title="Link to this heading">#</a></h3>
+<p>The first challenge: represent each claim as numerical scores. For auto insurance:</p>
+<ol class="arabic simple">
+<li><p><strong>Claim amount</strong> (normalized to $0-100k range)</p></li>
+<li><p><strong>Days since policy purchase</strong></p></li>
+<li><p><strong>Claimant age</strong></p></li>
+<li><p><strong>Number of previous claims</strong> (in last 5 years)</p></li>
+<li><p><strong>Police report filed?</strong> (binary: 0 or 1)</p></li>
+<li><p><strong>Independent witness statements?</strong> (count: 0, 1, 2, …)</p></li>
+<li><p><strong>Photos provided?</strong> (count: 0, 1, 2, …)</p></li>
+<li><p><strong>Damage assessment matches photos?</strong> (binary)</p></li>
+<li><p><strong>Claimant response time</strong> (hours to first contact)</p></li>
+<li><p><strong>Repair shop reputation score</strong> (0-100)</p></li>
+<li><p><strong>Claimant credit score</strong> (normalized)</p></li>
+<li><p><strong>Time of day of incident</strong> (encoded as hour 0-23)</p></li>
+<li><p><strong>Weather conditions</strong> (clear/rain/snow/fog encoded)</p></li>
+<li><p><strong>Claim description coherence score</strong> (0-100, from NLP analysis)</p></li>
+<li><p><strong>Prior claims in same location?</strong> (binary)
+… and perhaps 35-85 more features</p></li>
+</ol>
+<p>Choosing these features requires domain expertise, legal knowledge (what are we allowed to consider?), and practical judgment (what data can we reliably obtain?). This is emphatically not automated—it’s skilled human work.</p>
+</section>
+<section id="step-2-gather-training-data">
+<h3>Step 2: Gather Training Data<a class="headerlink" href="#step-2-gather-training-data" title="Link to this heading">#</a></h3>
+<p>The company needs historical data: thousands of past claims with:</p>
+<ul class="simple">
+<li><p>All feature scores</p></li>
+<li><p>The final decision (approved or denied)</p></li>
+<li><p>Ideally, whether that decision was correct (did fraud eventually surface? did legitimate claims get wrongly denied?)</p></li>
+</ul>
+<p>Suppose they have 10,000 historical claims with known outcomes.</p>
+</section>
+<section id="step-3-train-the-model">
+<h3>Step 3: Train the Model<a class="headerlink" href="#step-3-train-the-model" title="Link to this heading">#</a></h3>
+<p>Using the same mathematical techniques as the weighted Apgar test (but with more sophisticated algorithms capable of handling 50+ features),
+the company finds the weights that best predict historical decisions:</p>
+<p><strong>Claim Score</strong> = w₁×(claim_amount) + w₂×(policy_age) + … + w₅₀×(feature₅₀)</p>
+<p>If the score exceeds some threshold, approve the claim. If it falls below, deny or flag for human review.</p>
+<p><strong>Note:</strong> In reality, the company would probably choose a model with more layers and many more parameters rather than a simple one-layer perceptron.
+But the key ideas are identical.</p>
+</section>
+<section id="step-4-deploy-and-monitor">
+<h3>Step 4: Deploy and Monitor<a class="headerlink" href="#step-4-deploy-and-monitor" title="Link to this heading">#</a></h3>
+<p>The trained model processes new claims automatically. Claims with clear scores (very high or very low) are decided automatically. Claims near the threshold are flagged for human review.</p>
+<p>This is precisely analogous to the Apgar test, the cancer screening, and the musician example. It’s a Bayesian classifier making decisions based on evidence. And if the training data is good—if it represents the full diversity of legitimate and fraudulent claims—the model can be excellent.</p>
+<p>But there’s a crucial difference between babies and insurance claims.</p>
+</section>
+</section>
+<section id="the-problem-of-ground-truth">
+<h2>The Problem of Ground Truth<a class="headerlink" href="#the-problem-of-ground-truth" title="Link to this heading">#</a></h2>
+<p>Newborn babies have objective ground truth: we monitor vital signs over hours, run blood tests, consult specialists, determine with near-certainty whether the baby was truly healthy. Cancer screening too: biopsies, follow-up imaging, eventual confirmation.</p>
+<p>But for many real-world decisions, there is <strong>no objective ground truth</strong>:</p>
+<section id="insurance-claims">
+<h3>Insurance Claims<a class="headerlink" href="#insurance-claims" title="Link to this heading">#</a></h3>
+<p>An insurance adjuster decides whether a claim is legitimate or fraudulent. But this decision itself is judgment-based. There’s no lab test for fraud. The “ground truth” in the training data is just another human’s opinion. When we train a model on these decisions, we’re training it to replicate human judgment—including human biases, blind spots, and inconsistencies.</p>
+</section>
+<section id="criminal-sentencing">
+<h3>Criminal Sentencing<a class="headerlink" href="#criminal-sentencing" title="Link to this heading">#</a></h3>
+<p>A judge decides whether a defendant is high-risk or low-risk for reoffending. But this is predictive judgment, not observable fact. The training data consists of past judicial decisions and subsequent recidivism rates. A model trained on these decisions learns to reproduce judicial patterns—including racial biases, socioeconomic prejudices, and geographic disparities that characterize the justice system.</p>
+</section>
+<section id="loan-applications">
+<h3>Loan Applications<a class="headerlink" href="#loan-applications" title="Link to this heading">#</a></h3>
+<p>A bank decides whether to approve a loan. The “ground truth” is whether the person defaulted. But this is affected by the bank’s own decision: denying a loan to someone who would have repaid it creates no training signal (we never learn what would have happened). The training data is systematically incomplete.</p>
+</section>
+<section id="medical-triage">
+<h3>Medical Triage<a class="headerlink" href="#medical-triage" title="Link to this heading">#</a></h3>
+<p>An emergency room nurse decides which patients need immediate attention. The “ground truth” is patient outcomes—but these are affected by the triage decision itself. Patients sent home might have recovered regardless, or might have deteriorated because they were sent home. Cause and effect are entangled.</p>
+<p>This is the fundamental problem of training decision-making systems: <strong>we are training models to reproduce human decisions, not to discover objective truths</strong>. The model learns human biases as faithfully as it learns human expertise. It becomes a consistent version of human judgment—bias included.</p>
+</section>
+</section>
+<section id="why-automatons-beat-humans-anyway">
+<h2>Why Automatons Beat Humans Anyway<a class="headerlink" href="#why-automatons-beat-humans-anyway" title="Link to this heading">#</a></h2>
+<p>Given that models learn from flawed human decisions, why would they outperform humans? This is the central thesis of Kahneman’s <em>Noise: A Flaw in Human Judgment</em> <span id="id6">[<a class="reference internal" href="#id76" title="Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. Noise: A Flaw in Human Judgment. Little, Brown Spark, 2021.">Kahneman <em>et al.</em>, 2021</a>]</span>: trained automatons systematically beat human experts at decision-making because they eliminate <strong>noise</strong>.</p>
+<section id="what-is-noise">
+<h3>What is Noise?<a class="headerlink" href="#what-is-noise" title="Link to this heading">#</a></h3>
+<p>Noise is random variability in human judgment:</p>
+<p><strong>Occasion noise</strong>: The same person, different times—Monday morning vs. Friday afternoon; before lunch vs. after; well-rested vs. exhausted; after approving three claims vs. after denying three.</p>
+<p><strong>Mood noise</strong>: Emotional states alter judgment—anxiety, anger, depression shift risk assessment; personal events (spousal argument, traffic jam) color decisions; weather, temperature, even sports results influence judges and parole boards.</p>
+<p><strong>Context noise</strong>: Irrelevant information affects decisions—the order of case review; anchoring on previous cases; arbitrary reference points mentioned in conversation.</p>
+<p>Studies documenting occasion noise are disturbing:</p>
+<ul class="simple">
+<li><p>Judges grant parole more often right after lunch than before lunch</p></li>
+<li><p>Radiologists are more likely to detect anomalies early in their shift</p></li>
+<li><p>Loan officers are harsher after denying several applications in a row</p></li>
+<li><p>Insurance adjusters vary by ±30% in claim approval rates on identical cases</p></li>
+</ul>
+<p>This variability is not bias (systematic error). It’s noise (random error). Two experts reviewing the same case on different days can reach opposite conclusions. The same expert reviewing the same case twice may contradict themselves.</p>
+</section>
+<section id="the-automaton-advantage">
+<h3>The Automaton Advantage<a class="headerlink" href="#the-automaton-advantage" title="Link to this heading">#</a></h3>
+<p>Now suppose you train a model on one particular expert’s decisions—their judgments over thousands of cases spanning several years. That model learns to predict what the expert would decide. But crucially, the model has several advantages:</p>
+<ol class="arabic simple">
+<li><p><strong>No occasion noise</strong>: The model has no Mondays, no lunch breaks, no bad nights</p></li>
+<li><p><strong>No mood noise</strong>: The model has no emotions, no quarrels with partners, no traffic jams</p></li>
+<li><p><strong>No context noise</strong>: The model doesn’t anchor on previous cases or get influenced by irrelevant details</p></li>
+</ol>
+<p>The model represents that expert’s judgment <strong>with the noise removed</strong>. It captures their consistent patterns while eliminating their random fluctuations.</p>
+<p>As Kahneman puts it: <strong>Your model beats you, and it beats you consistently.</strong></p>
+<p>This is deeply counterintuitive. We expect humans to beat machines at tasks requiring judgment. But Kahneman’s research shows that in high-volume decision-making—insurance claims, loan applications, medical triage, parole decisions—trained automatons outperform the experts whose decisions they learned from.</p>
+<p>The automaton is not smarter than the expert. It’s more consistent. And in many domains, consistency matters more than peak performance.</p>
+</section>
+<section id="evidence-from-real-systems">
+<h3>Evidence from Real Systems<a class="headerlink" href="#evidence-from-real-systems" title="Link to this heading">#</a></h3>
+<p>Several large-scale studies support this conclusion:</p>
+<p><strong>Medical diagnosis</strong>: Simple algorithms predicting heart attack risk outperform cardiologists’ intuitive judgments (because the algorithms apply consistent criteria).</p>
+<p><strong>Recidivism prediction</strong>: The COMPAS algorithm (despite its controversies) predicts reoffending more consistently than parole boards (though it inherits their biases).</p>
+<p><strong>Insurance underwriting</strong>: Automated systems approve/deny claims more consistently than human adjusters (though they sometimes miss unusual cases requiring human judgment).</p>
+<p><strong>Academic admissions</strong>: Weighted formulas combining GPA and test scores predict college success better than holistic human review (though they may miss important qualitative factors).</p>
+<p>The pattern is clear: in domains with:</p>
+<ul class="simple">
+<li><p>High volume (thousands of decisions per year)</p></li>
+<li><p>Clear features (observable, quantifiable information)</p></li>
+<li><p>Historical data (past decisions and outcomes)</p></li>
+<li><p>Tolerable error rates (no single decision is catastrophic)</p></li>
+</ul>
+<p>…trained automatons systematically outperform human experts.</p>
+</section>
+</section>
+<section id="when-should-automatons-decide">
+<h2>When Should Automatons Decide?<a class="headerlink" href="#when-should-automatons-decide" title="Link to this heading">#</a></h2>
+<p>Not all decisions should be automated. The critical question is: when is automation appropriate, and when does it cross ethical lines?</p>
+<section id="the-appropriate-domain-for-automation">
+<h3>The Appropriate Domain for Automation<a class="headerlink" href="#the-appropriate-domain-for-automation" title="Link to this heading">#</a></h3>
+<p><strong>High-volume, moderate-stakes decisions with clear features:</strong></p>
+<ul class="simple">
+<li><p>Insurance claim processing (most claims are routine)</p></li>
+<li><p>Fraud detection (flag suspicious transactions for human review)</p></li>
+<li><p>Medical triage (prioritize patients for human examination)</p></li>
+<li><p>Loan pre-approval (initial screening before human underwriting)</p></li>
+<li><p>Spam filtering (users can check spam folders)</p></li>
+<li><p>Quality control (flag defective products for human inspection)</p></li>
+</ul>
+<p>These domains share several characteristics:</p>
+<ul class="simple">
+<li><p>Thousands or millions of decisions required</p></li>
+<li><p>Features can be quantified reliably</p></li>
+<li><p>Errors are tolerable (false positives get human review; false negatives are rare)</p></li>
+<li><p>Speed and consistency matter</p></li>
+<li><p>Humans can intervene in edge cases</p></li>
+</ul>
+</section>
+<section id="the-inappropriate-domain-for-automation">
+<h3>The Inappropriate Domain for Automation<a class="headerlink" href="#the-inappropriate-domain-for-automation" title="Link to this heading">#</a></h3>
+<p><strong>Low-volume, high-stakes decisions requiring explanation:</strong></p>
+<ul class="simple">
+<li><p>Criminal sentencing (individual liberty at stake)</p></li>
+<li><p>Medical diagnosis for serious conditions (life-or-death consequences)</p></li>
+<li><p>Child custody decisions (profound impact on multiple lives)</p></li>
+<li><p>Asylum and immigration decisions (deportation vs. safety)</p></li>
+<li><p>Academic expulsion or professional license revocation (irreversible harm)</p></li>
+</ul>
+<p>These domains share different characteristics:</p>
+<ul class="simple">
+<li><p>Each decision is individually significant</p></li>
+<li><p>Explanations and justifications are required</p></li>
+<li><p>Errors are catastrophic (wrongful conviction, missed cancer, child abuse)</p></li>
+<li><p>Human judgment includes factors that resist quantification (remorse, credibility, unique circumstances)</p></li>
+<li><p>Affected individuals have a right to human consideration</p></li>
+</ul>
+</section>
+<section id="three-critical-problems">
+<h3>Three Critical Problems<a class="headerlink" href="#three-critical-problems" title="Link to this heading">#</a></h3>
+<p>Even in appropriate domains, automation faces three serious problems that can cause significant harm <span id="id7">[<a class="reference internal" href="#id18" title="Cathy O'Neil. Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown, 2016.">O'Neil, 2016</a>]</span>:</p>
+<section id="the-training-data-problem">
+<h4>1. The Training Data Problem<a class="headerlink" href="#the-training-data-problem" title="Link to this heading">#</a></h4>
+<p>Models learn exactly what they’re taught—including biases. If historical decisions show:</p>
+<ul class="simple">
+<li><p>Racial disparities in loan approval</p></li>
+<li><p>Gender biases in hiring</p></li>
+<li><p>Socioeconomic discrimination in insurance</p></li>
+<li><p>Geographic prejudices in medical care</p></li>
+</ul>
+<p>…the model will faithfully reproduce these patterns. It doesn’t distinguish between legitimate expertise and unjust bias. Both appear as correlations in the training data.</p>
+<p><strong>Example</strong>: The COMPAS recidivism predictor was trained on historical criminal justice data that reflected systemic racial biases <span id="id8">[<a class="reference internal" href="#id84" title="Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. ProPublica, May 23 2016. URL: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing.">Angwin <em>et al.</em>, 2016</a>]</span>. It learned to assign higher risk scores to Black defendants, not because of any individual characteristics, but because the training data showed Black defendants were more likely to be re-arrested (reflecting both higher policing in Black communities and judicial biases). The model amplified existing injustice.</p>
+</section>
+<section id="the-feedback-loop-problem">
+<h4>2. The Feedback Loop Problem<a class="headerlink" href="#the-feedback-loop-problem" title="Link to this heading">#</a></h4>
+<p>Once deployed, models create their own training data. If an automated loan system denies credit to certain demographics, those people never get loans, never demonstrate creditworthiness, and the system “learns” that denying them was correct. The model’s decisions become self-fulfilling prophecies. Healthcare algorithms exhibit this problem acutely: systems trained to predict healthcare costs learn to allocate fewer resources to Black patients because historical data shows lower spending on them—not because they need less care, but because they received less care <span id="id9">[<a class="reference internal" href="#id85" title="Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464):447–453, 2019. doi:10.1126/science.aax2342.">Obermeyer <em>et al.</em>, 2019</a>]</span>.</p>
+<p><strong>Example</strong>: Amazon’s automated recruiting tool learned to penalize résumés containing the word “women’s” (as in “women’s chess club”) because historical hiring data showed men were more often hired. The system then reinforced this pattern by recommending male candidates, creating training data that confirmed its bias.</p>
+</section>
+<section id="the-accountability-problem">
+<h4>3. The Accountability Problem<a class="headerlink" href="#the-accountability-problem" title="Link to this heading">#</a></h4>
+<p>When a human makes a bad decision, we can ask: Why did you decide that? What were you thinking? We can hold individuals accountable. But when a neural network with 10 million parameters makes a decision, there’s no comprehensible explanation. The weights are optimized mathematically, not reasoned through logically.</p>
+<p>This creates a responsibility gap: the model acts, but no one can explain why. The engineer who trained it doesn’t know why it made this specific decision. The organization deploying it can’t justify the outcome. The affected person has no recourse.</p>
+<p><strong>Example</strong>: A patient denied insurance coverage wants to know why. “The algorithm gave you a score of 4.7” is not an explanation. “Your claim contained keywords associated with fraud” might be, but if the keywords are learned statistical patterns rather than explicit rules, even this explanation is suspect.</p>
+</section>
+</section>
+<section id="a-framework-for-responsible-automation">
+<h3>A Framework for Responsible Automation<a class="headerlink" href="#a-framework-for-responsible-automation" title="Link to this heading">#</a></h3>
+<p>Decision automation should follow a tiered approach:</p>
+<p><strong>Tier 1: Full automation</strong> (routine, low-stakes, high-volume)</p>
+<ul class="simple">
+<li><p>Spam filtering</p></li>
+<li><p>Product recommendations</p></li>
+<li><p>Routine transaction approval</p></li>
+<li><p>Error: minor inconvenience</p></li>
+<li><p>Human intervention: user can override or flag</p></li>
+</ul>
+<p><strong>Tier 2: Assisted decision</strong> (moderate stakes, some complexity)</p>
+<ul class="simple">
+<li><p>Insurance claims flagged as suspicious</p></li>
+<li><p>Medical test results suggesting further examination</p></li>
+<li><p>Loan applications requiring additional documentation</p></li>
+<li><p>Error: increased scrutiny, not automatic rejection</p></li>
+<li><p>Human intervention: required for final decision</p></li>
+</ul>
+<p><strong>Tier 3: Human decision with AI support</strong> (high stakes, complex)</p>
+<ul class="simple">
+<li><p>Medical diagnosis combining AI image analysis with physician judgment</p></li>
+<li><p>Criminal sentencing with risk assessment as one input among many</p></li>
+<li><p>Academic admissions using test scores plus holistic review</p></li>
+<li><p>Error: potentially catastrophic</p></li>
+<li><p>Human intervention: AI provides information, human decides</p></li>
+</ul>
+<p><strong>Tier 4: Human decision only</strong> (highest stakes, requires empathy)</p>
+<ul class="simple">
+<li><p>Parole decisions</p></li>
+<li><p>Child custody</p></li>
+<li><p>Asylum determination</p></li>
+<li><p>Physician-assisted suicide authorization</p></li>
+<li><p>Error: irreversible harm</p></li>
+<li><p>Human intervention: required throughout, AI may provide background information only</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>We began with Kahneman: humans ignore base rates. We traced this through Bayesian tests—medical screening, risk assessment, classification. We revealed the Apgar test as a neural network; showed neural networks are Bayesian classifiers transforming features into probabilities.</p>
+<p>We showed trained automatons outperform humans not through superior intelligence but through consistency—human expertise with the noise removed.</p>
+<p>But we confronted limitations: the ground truth problem (training on human bias); the feedback loop (models amplifying their errors); the accountability gap (no explanations for individual decisions).</p>
+<p>The conclusion is not that automatons should replace humans, nor that humans should resist automation. We need sophistication about where consistency trumps flexibility; where volume demands automation; where human judgment remains indispensable.</p>
+<p>Kahneman’s insight cuts both ways: humans are flawed, but so are models trained on human decisions. The question is not whether to automate, but when, how, and with what safeguards.</p>
+<p>The Bayesian pattern—from evidence to hypothesis, observation to probability, features to decisions—is powerful and ubiquitous. Understanding it matters for anyone making decisions, evaluating tests, or deploying AI systems.</p>
+<p>Your model might beat you. But only you can decide when it should.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id10">
+<div role="list" class="citation-list">
+<div class="citation" id="id84" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">ALMK16</a><span class="fn-bracket">]</span></span>
+<p>Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. <em>ProPublica</em>, May 23 2016. URL: <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>.</p>
+</div>
+<div class="citation" id="id81" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Gig02</a><span class="fn-bracket">]</span></span>
+<p>Gerd Gigerenzer. <em>Calculated Risks: How to Know When Numbers Deceive You</em>. Simon &amp; Schuster, New York, 2002.</p>
+</div>
+<div class="citation" id="id83" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">Ioa05</a><span class="fn-bracket">]</span></span>
+<p>John P. A. Ioannidis. Why most published research findings are false. <em>PLOS Medicine</em>, 2(8):e124, 2005. <a class="reference external" href="https://doi.org/10.1371/journal.pmed.0020124">doi:10.1371/journal.pmed.0020124</a>.</p>
+</div>
+<div class="citation" id="id75" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Kah11</a><span class="fn-bracket">]</span></span>
+<p>Daniel Kahneman. <em>Thinking, Fast and Slow</em>. Farrar, Straus and Giroux, 2011.</p>
+</div>
+<div class="citation" id="id76" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">KSS21</a><span class="fn-bracket">]</span></span>
+<p>Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. <em>Noise: A Flaw in Human Judgment</em>. Little, Brown Spark, 2021.</p>
+</div>
+<div class="citation" id="id82" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">McG11</a><span class="fn-bracket">]</span></span>
+<p>Sharon Bertsch McGrayne. <em>The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy</em>. Yale University Press, 2011.</p>
+</div>
+<div class="citation" id="id18" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">ONeil16</a><span class="fn-bracket">]</span></span>
+<p>Cathy O'Neil. <em>Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy</em>. Crown, 2016.</p>
+</div>
+<div class="citation" id="id85" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">OPVM19</a><span class="fn-bracket">]</span></span>
+<p>Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. <em>Science</em>, 366(6464):447–453, 2019. <a class="reference external" href="https://doi.org/10.1126/science.aax2342">doi:10.1126/science.aax2342</a>.</p>
+</div>
+<div class="citation" id="id78" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">PM18</a><span class="fn-bracket">]</span></span>
+<p>Judea Pearl and Dana Mackenzie. <em>The Book of Why: The New Science of Cause and Effect</em>. Basic Books, 2018.</p>
+</div>
+</div>
+</div>
+<div style="margin-bottom: 100px;"></div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./mathematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../physics/29-physics-one-page.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Modern Physics: One-Pager</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="bayesian-tests.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Baysian Tests</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#musicians-and-base-rates">Musicians and Base Rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayesian-tests-the-cancer-screening-problem">Bayesian Tests: The Cancer Screening Problem</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-confusion-matrix">The Confusion Matrix</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#four-ways-to-measure-performance">Four Ways to Measure Performance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-asymmetry-between-lab-and-field">The Asymmetry Between Lab and Field</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-apgar-test-is-a-neural-network">The Apgar Test Is a Neural Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-fixed-weights-to-trained-weights">From Fixed Weights to Trained Weights</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-apgar-to-insurance-scaling-up">From Apgar to Insurance: Scaling Up</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-convert-reality-to-numbers">Step 1: Convert Reality to Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-gather-training-data">Step 2: Gather Training Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-train-the-model">Step 3: Train the Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-deploy-and-monitor">Step 4: Deploy and Monitor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem-of-ground-truth">The Problem of Ground Truth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insurance-claims">Insurance Claims</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criminal-sentencing">Criminal Sentencing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loan-applications">Loan Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medical-triage">Medical Triage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-automatons-beat-humans-anyway">Why Automatons Beat Humans Anyway</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-noise">What is Noise?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-automaton-advantage">The Automaton Advantage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evidence-from-real-systems">Evidence from Real Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-should-automatons-decide">When Should Automatons Decide?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-appropriate-domain-for-automation">The Appropriate Domain for Automation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-inappropriate-domain-for-automation">The Inappropriate Domain for Automation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#three-critical-problems">Three Critical Problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-training-data-problem">1. The Training Data Problem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-feedback-loop-problem">2. The Feedback Loop Problem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-accountability-problem">3. The Accountability Problem</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-framework-for-responsible-automation">A Framework for Responsible Automation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
