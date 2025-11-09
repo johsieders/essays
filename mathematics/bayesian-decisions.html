@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -697,34 +697,13 @@ only the evidence is available and the hypothesis has to be predicted.</p>
 </section>
 <section id="causality">
 <h3>Causality<a class="headerlink" href="#causality" title="Link to this heading">#</a></h3>
-<p>In the previous example, the evidence was a “positive test result”, and the hypothesis was “has cancer”.
-The likelihood ratio quantifies the extent to which our knowledge increases.
-The hypothesis (cancer) causes the test result, with the imponderables discussed earlier.
-This is a ubiquitous pattern: fire causes alarm, the signal sent causes the signal received,
-the physical phenomenon causes what the physicist observes on his measuring device.</p>
-<p>Now consider an analogous example:
-Let the evidence be “is a smoker” and the hypothesis “has lung cancer”.
-Again, the likelihood ratio quantifies our increased knowledge.
-We learn how much more likely a smoker is to contract cancer.
-However, in this case, the causality works the other way around:
-It is smoking that causes lung cancer!
-There is a crucial difference, however: The patient has to accept the test result; he can do nothing about his health.
-But the smoker can stop smoking, and the non-smoker can refrain from starting to smoke.</p>
-<p>However, this is not the end of the story, as the following example illustrates.
-It’s a fact that bald men tend to be wealthier than men with a full head of hair.
-This is because bald men tend to be older, and older men tend to have more money.
-Let the evidence be “is bald” and the hypothesis “is wealthy”.
-In this case, the causality works neither way,
-having your head shaved won’t affect your chances of getting rich.</p>
-<p>To make matters worse, we finish with intelligent philosophers.
-Let’s assume that, according to a study, philosophy students are particularly intelligent.
-In this case, the evidence is “intelligent”, and the hypothesis is “philosopher”. One wonders:
-Are philosophy students intelligent because they study philosophy?
-Or do they study philosophy because they are intelligent? Probably the latter:
-philosophy students are certainly positively selected in terms of intelligence.
-But is that more than an educated guess?</p>
-<p>This was just a quick glance at the fascinating question of causality, as developed by Judea Pearl and his team
-in <span id="id6">[<a class="reference internal" href="bayesian-tests.html#id73" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>, <span id="id7">[<a class="reference internal" href="bayesian-tests.html#id74" title="Judea Pearl. Causality: Models, Reasoning, and Inference. Cambridge University Press, 2nd edition edition, 2009.">Pearl, 2009</a>]</span>, <span id="id8">[<a class="reference internal" href="bayesian-tests.html#id75" title="Judea Pearl, Madelyn Glymour, and Nicholas P. Jewell. Causal Inference in Statistics: A Primer. Wiley, 2016.">Pearl <em>et al.</em>, 2016</a>]</span>.</p>
+<p>In the cancer screening example, the hypothesis (cancer) causes the evidence (positive test). This is the typical pattern: fire causes alarm; transmitted signal causes received signal; physical phenomenon causes meter reading. The likelihood ratio quantifies how much we learn from observing the evidence.</p>
+<p>But causality can run the opposite direction. Let the evidence be “is a smoker” and the hypothesis “has lung cancer”. Again, the likelihood ratio quantifies increased knowledge—smokers are far more likely to develop lung cancer than non-smokers. But now the evidence (smoking) <em>causes</em> the hypothesis (cancer), not the reverse.</p>
+<p>Here causality matters for action: the patient must accept the test result (observation changes nothing), but the smoker can <em>intervene</em> by quitting. This asymmetry—between observing correlation and manipulating causes—is central to Pearl’s causal inference framework. We can predict cancer risk from smoking habits, but we can also <em>prevent</em> cancer by eliminating the cause.</p>
+<p>Not all correlations involve causation. Bald men tend to be wealthier than men with full heads of hair—but baldness doesn’t cause wealth. Both correlate with age: older men are balder and wealthier. Let evidence be “is bald” and hypothesis “is wealthy”. The causality runs neither way; shaving your head won’t improve your finances. This is spurious correlation driven by a third variable (age).</p>
+<p>Finally, the hardest case: philosophy students tend to be intelligent. Evidence: “intelligent”. Hypothesis: “philosopher”. Which direction does causality run? Does studying philosophy make you smarter, or do smart people choose philosophy? Probably the latter—self-selection—but this is educated guessing, not rigorous causal inference.</p>
+<p>Automated decision systems face a particular challenge here: trained on correlational data, they cannot distinguish causation from spurious correlation. A model that learns “baldness predicts wealth” might mistakenly recommend hair loss treatments to increase income—confusing prediction with intervention. Models trained on “philosophy students score high on intelligence tests” cannot determine whether philosophy caused the intelligence or intelligence caused the career choice. This matters profoundly when deploying automated systems: a model trained to predict outcomes from correlations may fail catastrophically in settings where interventions change the causal structure.</p>
+<p>This was a glimpse of causality—a deep topic developed by Pearl and colleagues <span id="id6">[<a class="reference internal" href="bayesian-tests.html#id73" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>, <span id="id7">[<a class="reference internal" href="bayesian-tests.html#id74" title="Judea Pearl. Causality: Models, Reasoning, and Inference. Cambridge University Press, 2nd edition edition, 2009.">Pearl, 2009</a>]</span>, <span id="id8">[<a class="reference internal" href="bayesian-tests.html#id75" title="Judea Pearl, Madelyn Glymour, and Nicholas P. Jewell. Causal Inference in Statistics: A Primer. Wiley, 2016.">Pearl <em>et al.</em>, 2016</a>]</span>. The key insight for our purposes: Bayesian inference tells us how evidence updates beliefs, but it doesn’t tell us which direction causality runs or where we can intervene. That limitation becomes critical when we automate decisions based on correlational patterns.</p>
 </section>
 </section>
 <section id="the-apgar-test-is-a-neural-network">

@@ -128,38 +128,20 @@ But when deployed in the field on the general population—where only 0.1% have 
 
 
 ### Causality
-In the previous example, the evidence was a "positive test result", and the hypothesis was "has cancer". 
-The likelihood ratio quantifies the extent to which our knowledge increases.
-The hypothesis (cancer) causes the test result, with the imponderables discussed earlier.
-This is a ubiquitous pattern: fire causes alarm, the signal sent causes the signal received, 
-the physical phenomenon causes what the physicist observes on his measuring device.
 
-Now consider an analogous example:
-Let the evidence be "is a smoker" and the hypothesis "has lung cancer". 
-Again, the likelihood ratio quantifies our increased knowledge. 
-We learn how much more likely a smoker is to contract cancer.
-However, in this case, the causality works the other way around: 
-It is smoking that causes lung cancer!
-There is a crucial difference, however: The patient has to accept the test result; he can do nothing about his health.
-But the smoker can stop smoking, and the non-smoker can refrain from starting to smoke.
+In the cancer screening example, the hypothesis (cancer) causes the evidence (positive test). This is the typical pattern: fire causes alarm; transmitted signal causes received signal; physical phenomenon causes meter reading. The likelihood ratio quantifies how much we learn from observing the evidence.
 
-However, this is not the end of the story, as the following example illustrates. 
-It's a fact that bald men tend to be wealthier than men with a full head of hair.
-This is because bald men tend to be older, and older men tend to have more money.
-Let the evidence be "is bald" and the hypothesis "is wealthy". 
-In this case, the causality works neither way,
-having your head shaved won't affect your chances of getting rich.
+But causality can run the opposite direction. Let the evidence be "is a smoker" and the hypothesis "has lung cancer". Again, the likelihood ratio quantifies increased knowledge—smokers are far more likely to develop lung cancer than non-smokers. But now the evidence (smoking) *causes* the hypothesis (cancer), not the reverse.
 
-To make matters worse, we finish with intelligent philosophers. 
-Let's assume that, according to a study, philosophy students are particularly intelligent.
-In this case, the evidence is "intelligent", and the hypothesis is "philosopher". One wonders: 
-Are philosophy students intelligent because they study philosophy? 
-Or do they study philosophy because they are intelligent? Probably the latter: 
-philosophy students are certainly positively selected in terms of intelligence. 
-But is that more than an educated guess?
+Here causality matters for action: the patient must accept the test result (observation changes nothing), but the smoker can *intervene* by quitting. This asymmetry—between observing correlation and manipulating causes—is central to Pearl's causal inference framework. We can predict cancer risk from smoking habits, but we can also *prevent* cancer by eliminating the cause.
 
-This was just a quick glance at the fascinating question of causality, as developed by Judea Pearl and his team 
-in {cite}`pearl2018book`, {cite}`pearl2009causality`, {cite}`pearl2016causal`.
+Not all correlations involve causation. Bald men tend to be wealthier than men with full heads of hair—but baldness doesn't cause wealth. Both correlate with age: older men are balder and wealthier. Let evidence be "is bald" and hypothesis "is wealthy". The causality runs neither way; shaving your head won't improve your finances. This is spurious correlation driven by a third variable (age).
+
+Finally, the hardest case: philosophy students tend to be intelligent. Evidence: "intelligent". Hypothesis: "philosopher". Which direction does causality run? Does studying philosophy make you smarter, or do smart people choose philosophy? Probably the latter—self-selection—but this is educated guessing, not rigorous causal inference.
+
+Automated decision systems face a particular challenge here: trained on correlational data, they cannot distinguish causation from spurious correlation. A model that learns "baldness predicts wealth" might mistakenly recommend hair loss treatments to increase income—confusing prediction with intervention. Models trained on "philosophy students score high on intelligence tests" cannot determine whether philosophy caused the intelligence or intelligence caused the career choice. This matters profoundly when deploying automated systems: a model trained to predict outcomes from correlations may fail catastrophically in settings where interventions change the causal structure.
+
+This was a glimpse of causality—a deep topic developed by Pearl and colleagues {cite}`pearl2018book`, {cite}`pearl2009causality`, {cite}`pearl2016causal`. The key insight for our purposes: Bayesian inference tells us how evidence updates beliefs, but it doesn't tell us which direction causality runs or where we can intervene. That limitation becomes critical when we automate decisions based on correlational patterns.
 
 
 ## The Apgar Test Is a Neural Network
