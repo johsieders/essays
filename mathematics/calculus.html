@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -461,8 +461,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-functions">Step Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrable-functions">Integrable Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-riemann-integrals">Properties of Riemann Integrals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-one-dimension">Derivatives in One Dimension</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-hilbert-spaces">Derivatives in Hilbert Spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
@@ -480,6 +485,218 @@ document.write(`
 <blockquote>
 <div><p>under construction</p>
 </div></blockquote>
+<section id="preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Link to this heading">#</a></h2>
+<div class="proof theorem admonition" id="thr-intermediate-value">
+<p class="admonition-title"><span>Theorem </span> (Intermediate Value Theorem)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function, and <span class="math notranslate nohighlight">\(\mu \in \mathbb{R}\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+\quad \min  \{f(x)|x \in [a,b]\} \le \mu  \le \max  \{f(x)| x \in [a,b]\}
+\]</div>
+<p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. The proof proceeds by halving intervals.</p>
+</div>
+<div class="proof theorem admonition" id="thr-mean-value">
+<p class="admonition-title"><span>Theorem </span> (Mean Value Theorem)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
+<p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[
+\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(\phi = 1\)</span> we get:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(x) \, dx= f(\xi) (b-a)
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. From <a class="reference internal" href="#thr-mean-value">Theorem </a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
+And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+m \le f(x) \le M 
+\]</div>
+<p>The rest is straightforward: multiply by <span class="math notranslate nohighlight">\(\phi(x)\)</span> and integrate:</p>
+<div class="math notranslate nohighlight">
+\[
+m \phi(x) \le f(x) \phi(x) \le M \phi(x)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
+\]</div>
+</div>
+</section>
+<section id="step-functions">
+<h2>Step Functions<a class="headerlink" href="#step-functions" title="Link to this heading">#</a></h2>
+<p>Consider a closed interval <span class="math notranslate nohighlight">\(A = [a, b]\subset \mathbb{R}\)</span>. A <strong>partition of A</strong> is an
+increasing sequence <span class="math notranslate nohighlight">\(\left\{x_1, x_2, \dots, x_n\right\}\)</span>
+with <span class="math notranslate nohighlight">\(a = x_1\)</span>,  <span class="math notranslate nohighlight">\(b = x_n\)</span>. Its granularity is <span class="math notranslate nohighlight">\(\max \left\{\left.x_k-x_{k-1}\right|k=1,\dots,n\right\}\)</span>. A <strong>step function</strong> is
+constant on the intervals <span class="math notranslate nohighlight">\(\left[x_{k-1}, x_k\right]\)</span>. It is clear that the sum of two step functions is again a step function,
+and the same is true for the product of a step function with a scalar. So the step functions on an interval form a vector
+space <span class="math notranslate nohighlight">\(\mathcal{S}[a, b]\)</span>. The integral of a step function <span class="math notranslate nohighlight">\(\phi\)</span> on [a, b] is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b \phi (x) \, dx= \sum _{k=1}^n \phi _k
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\phi(x)= \phi _k\)</span> on <span class="math notranslate nohighlight">\(\left[x_{k-1},x_k\right]\)</span></p>
+<p>The integration functional</p>
+<div class="math notranslate nohighlight">
+\[
+\int :\phi \mapsto \int_a^b \phi(x) \, dx
+\]</div>
+<p>is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{S}[a, b]\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. It is also monotone:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi \le \psi  \Rightarrow  \int_a^b \phi(x) \, dx \le \int _a^b\psi(x) \, dx
+\]</div>
+<p>for any two step functions  <span class="math notranslate nohighlight">\(\phi,\psi\)</span>.</p>
+</section>
+<section id="integrable-functions">
+<h2>Integrable Functions<a class="headerlink" href="#integrable-functions" title="Link to this heading">#</a></h2>
+<p>We extend the integration functional to a larger class of functions. The idea is that of a sandwich:
+A function <span class="math notranslate nohighlight">\(f\)</span> defined on <span class="math notranslate nohighlight">\([a,b]\)</span> is squeezed between two step functions <span class="math notranslate nohighlight">\(\phi, \psi \)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi \le f \le \psi 
+\]</div>
+<p>and:</p>
+<div class="math notranslate nohighlight">
+\[
+\int _a^b \psi(x) -\phi(x) \, dx \lt \epsilon
+\]</div>
+<p>If we can find such a step function for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> then we say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>Riemann-integrable</strong> or <strong>R-integrable</strong> for
+short. This is equivalent to:</p>
+<div class="math notranslate nohighlight">
+\[
+\sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \phi(x) \, dx
+\]</div>
+<p>and we can define:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(x) \, dx := \sup_{\phi \le f} \int _a^b \phi(x) \, dx  = \inf _{\psi \ge f} \int_a^b \phi (x) \, dx
+\]</div>
+<p>Equation (1) is a concise reformulation of equation (2), there is nothing to prove.
+An alternative definition of Riemann integrability is based on intermediate sums.
+This needs some terminology: we call <span class="math notranslate nohighlight">\(\left\{x_1, x_2, \dots , x_n\right\}\)</span>
+a partition of <span class="math notranslate nohighlight">\([a,b]\)</span>, <span class="math notranslate nohighlight">\(\min _{k =1,\dots ,n} \left\{x_k-x_{k-1}\right\}\)</span> its granularity,
+and <span class="math notranslate nohighlight">\(\left\{\xi_1, \xi_2, \dots,\xi_n\right\}\)</span> a set of intermediate points with <span class="math notranslate nohighlight">\(\left.\xi_k\in \left[x_{k-1},x_k\right.\right), (k=1,\dots,n)\)</span>.
+Here is the alternative definition: A function <span class="math notranslate nohighlight">\(f\)</span> is R-integrable on <span class="math notranslate nohighlight">\([a,b]\)</span> iff, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
+we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, such that for any partition with granularity less than <span class="math notranslate nohighlight">\(\delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\left|\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right|&lt;\epsilon
+\]</div>
+<p>This definition is needed for the proof of the main theorem.</p>
+</section>
+<section id="properties-of-riemann-integrals">
+<h2>Properties of Riemann Integrals<a class="headerlink" href="#properties-of-riemann-integrals" title="Link to this heading">#</a></h2>
+<p>(R1) The set <span class="math notranslate nohighlight">\(\mathcal{R}[a, b]\)</span> of R-integrable functions is a vector space. The integration functional</p>
+<div class="math notranslate nohighlight">
+\[
+\int :f \mapsto \int_a^b f(x) \, dx
+\]</div>
+<p>is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{R}[a, b]\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. It is also monotone:</p>
+<div class="math notranslate nohighlight">
+\[
+f \le g \Rightarrow  \int_a^b f(x) \, dx \le \int _a^bg(x) \, dx
+\]</div>
+<p>holds for any two functions <span class="math notranslate nohighlight">\(f,g \in\mathcal{R}[a,b]\)</span>.</p>
+<p>(R2) There are many R-integrable functions: step functions (by definition),
+continuous functions (also with finitely many discontinuities),
+monotone functions, the maximum, minimum, and product of R-integrable functions.
+A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
+<p>(R3) <span class="math notranslate nohighlight">\(\mathcal{R}[a, b]\)</span> is closed under the maximum norm, i.e. the uniform limit of R-integrable functions is R-integrable,
+and we can swap limit and integral:</p>
+<div class="math notranslate nohighlight">
+\[
+\underset{n \to \infty} \lim \int_a^b f_n(x) \, dx = \int _a^b\underset{n \to \infty} \lim f_n(x)
+\]</div>
+<p>assuming uniform convergence.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. The properties (R1), (R2) and (R3) follow easily from (3), (R5) follows easily from (R4), and the proof of (R4) is the sting of this chapter. Let’s
+do it in this order.
+(R1) We show that <span class="math notranslate nohighlight">\(f+g\)</span> is integrable if <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are. The proof follows a very simple pattern that often works: If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are integrable,
+then there are step functions <span class="math notranslate nohighlight">\(\phi\)</span>, <span class="math notranslate nohighlight">\(\psi\)</span>, <span class="math notranslate nohighlight">\(\rho\)</span>, and <span class="math notranslate nohighlight">\(\sigma\)</span> such that <span class="math notranslate nohighlight">\(\phi \le f \le \psi\)</span> and <span class="math notranslate nohighlight">\(\rho \le g \le \sigma\)</span>. So</p>
+<div class="math notranslate nohighlight">
+\[
+\phi  + \rho \le f+g \le \psi  + \sigma
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+\int _a^b \psi(x)-\phi(x) \, dx &lt; \epsilon  \text{ and } \int _a^b \rho (x)-\sigma(x) \, dx &lt; \epsilon
+\]</div>
+<p>Using the additivity of the integral for step functions, we get:</p>
+<div class="math notranslate nohighlight">
+\[
+\int _a^b(\psi (x)+\rho (x))-(\phi (x)+\sigma (x))dx &lt; 2 \epsilon
+\]</div>
+<p>Inequalities (4) and (5) show that <span class="math notranslate nohighlight">\(f+g\)</span> is integrable.
+The proof for the integrability of <span class="math notranslate nohighlight">\(\lambda f\)</span> for <span class="math notranslate nohighlight">\(\lambda \in \mathbb{R}\)</span> is analogous.</p>
+<p>(R2) We show that a function continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> is integrable.
+Intervals in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, rectangles in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, cubes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}^k\)</span>.
+The measure (or volume) <span class="math notranslate nohighlight">\(m[C]\)</span> of a cube <span class="math notranslate nohighlight">\(C\)</span> with edge length <span class="math notranslate nohighlight">\(\left[x_1, x_2, \dots,x_k\right]\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+m[C] := x_1 x_2 \cdots x_k
+\]</div>
+<p>The characteristic function <span class="math notranslate nohighlight">\(X_A\)</span> of a set <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(1\)</span> on <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(0\)</span> everywhere else.
+Step-functions take on finitely many values, are constant on cubes (of any size).
+Let <span class="math notranslate nohighlight">\(\psi\)</span> be a step function defined on disjoint cubes <span class="math notranslate nohighlight">\(C_i\)</span>
+with <span class="math notranslate nohighlight">\(\psi(x) = \psi_{i}\)</span> on <span class="math notranslate nohighlight">\(C_{i}\)</span>, <span class="math notranslate nohighlight">\((i=1,\dots, N)\)</span>.
+The integral of <span class="math notranslate nohighlight">\(\psi\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+\int _{\mathbb{R}^k}\psi(x) \, dx := \sum _{i=1}^N \psi_i m\left[C_i\right]
+\]</div>
+<p>For stepwise functions <span class="math notranslate nohighlight">\(\psi\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>, and from(XX) <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span> it is clear that:</p>
+<div class="math notranslate nohighlight">
+\[
+\int _{\mathbb{R}^k}\alpha \phi(x) + \beta \psi (x) \, dx = \alpha \int_{\mathbb{R}^k}\phi(x) \, dx + \beta \int_{\mathbb{R}^k}\psi(x) \, dx
+\]</div>
+<p>For some functions <span class="math notranslate nohighlight">\(f\)</span> it turns out that:</p>
+<div class="math notranslate nohighlight">
+\[
+\sup_{\psi \le f}\int_{\mathbb{R}^k} \psi(x) \, dx = \inf _{\psi \ge f}\int_{\mathbb{R}^k} \psi(x) \, dx
+\]</div>
+<p>If this is true, <span class="math notranslate nohighlight">\(f\)</span> is said to be Riemann-integrable (or integrable for short), and we define</p>
+<div class="math notranslate nohighlight">
+\[
+\int _{\mathbb{R}^k}f(x) \, dx := \sup _{\psi \le f}\int _{\mathbb{R}^k}\psi (x)dx = \inf _{\psi \ge f} \int _{\mathbb{R}^k} \psi(x) \, dx
+\]</div>
+<p>All step functions are obviously integrable, and so are continuous functions with compact support (proof!). A famous non-integrable function is the
+function <span class="math notranslate nohighlight">\(r\)</span> defined on the interval <span class="math notranslate nohighlight">\([0, 1]\)</span> with <span class="math notranslate nohighlight">\(r(x) = 1\)</span> if <span class="math notranslate nohighlight">\(x \in \mathbb{Q}\)</span> and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
+<p>Let <span class="math notranslate nohighlight">\(\left(\psi _n\right)_{n\in \mathbb{N}}\)</span> be a sequence of step functions converging uniformly towards some function <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\underset{n\to \infty }\lim \psi _n = f
+\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f\)</span> is integrable and it holds that</p>
+<div class="math notranslate nohighlight">
+\[
+\underset{n\to \infty }\lim \int_{\mathbb{R}^k} \psi_n(x) \, dx = \int _{\mathbb{R}^k}f(x) \, dx
+\]</div>
+<p>This can be seen as follows:</p>
+<p>to do!</p>
+<p>Now, let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be integrable and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span>. Then <span class="math notranslate nohighlight">\(\alpha f + \beta g\)</span> is integrable,
+and it holds that</p>
+<div class="math notranslate nohighlight">
+\[
+\int _{\mathbb{R}^n}\alpha f(x) + \beta g(x) \, dx = \alpha \int_{\mathbb{R}^n}f(x) \, dx + \beta \int_{\mathbb{R}^n}g(x) \, dx
+\]</div>
+</div>
+</section>
 <section id="derivatives-in-one-dimension">
 <h2>Derivatives in One Dimension<a class="headerlink" href="#derivatives-in-one-dimension" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-first-derivative">
@@ -488,12 +705,12 @@ document.write(`
 <p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span></p>
 <div class="math notranslate nohighlight">
 \[
-f'(x)=lim_{h \to 0}\frac{1}{h}(f(x+h)-f(x)) = \frac{d}{d \epsilon}f(x + \epsilon h)|_{\epsilon =0 }
+f'(x) = \underset{h \to 0} \lim\frac{1}{h}(f(x+h)-f(x)) = \frac{d}{d \epsilon}f(x + \epsilon h)|_{\epsilon =0 }
 \]</div>
 <p>So:</p>
 <div class="math notranslate nohighlight">
 \[
-f(x+h)=f(x)+ f'(x)h + o(h)
+f(x+h) = f(x)+ f'(x)h + o(h)
 \]</div>
 <p>and the term <span class="math notranslate nohighlight">\(f'(x)h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </section>
@@ -582,10 +799,39 @@ F(x+h)-F(x) = D(h) + o(h)\\F(x+h)-F(x) = E(h) + o(h)
 <p>Then:</p>
 <div class="math notranslate nohighlight">
 \[
-D[h]+o[h]=E[h]+o[h]
+D(h) + o(h) = E(h) + o(h)
 \]</div>
 <p>which shows that <span class="math notranslate nohighlight">\(D= E\)</span>.</p>
 </div>
+</section>
+<section id="little-o-big-o">
+<h2>Little o, Big O<a class="headerlink" href="#little-o-big-o" title="Link to this heading">#</a></h2>
+<p>Little o means: <span class="math notranslate nohighlight">\(f\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span> faster than <span class="math notranslate nohighlight">\(g\)</span>, or, equivalently, <span class="math notranslate nohighlight">\(f/g\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f=o(1) \Longleftrightarrow \lim f(x) = 0 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
+\]</div>
+<p>Big O means: <span class="math notranslate nohighlight">\(f\)</span> grows not faster than <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f = O(1) \Longleftrightarrow f(x)\le C 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f = O(x^n) \Longleftrightarrow f(x)\le C x^n
+\]</div>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
@@ -657,8 +903,13 @@ D[h]+o[h]=E[h]+o[h]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-functions">Step Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrable-functions">Integrable Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-riemann-integrals">Properties of Riemann Integrals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-one-dimension">Derivatives in One Dimension</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-hilbert-spaces">Derivatives in Hilbert Spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
