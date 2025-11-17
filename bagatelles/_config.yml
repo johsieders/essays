@@ -48,6 +48,12 @@ sphinx:
     bibtex_reference_style: author_year
     html_static_path:
       - _static
+    # Equation numbering configuration
+    math_numfig: true        # Enable figure-style numbering for equations
+    numfig: true             # Enable numbered cross-references
+    numfig_secnum_depth: 1   # Include chapter number (e.g., "1.1", "1.2")
+    math_eqref_format: "({number})"  # Format: (1.1) instead of 1.1
+
     mathjax3_config:
       tex:
         tags: 'ams'
