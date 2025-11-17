@@ -36,15 +36,15 @@ Let $f: [a, b] \to \mathbb{R}$ be a bounded function.
 
 The **sup norm** (or **uniform norm**) of $f$ is defined as:
 
-$$ 
-\left \lVert f \right \rVert_{\infty} = \sup \{|f(x)| \, | x \in [a, b]\}
+$$
+\left \lVert f \right \rVert_{\infty} = \sup \{\lvert f(x) \rvert \mid x \in [a, b]\}
 $$
 
 This is indeed a norm because:
 
 (i) $f = 0  \Leftrightarrow \left \lVert f \right \rVert_{\infty} = 0$
 
-(ii) $\left \lVert \alpha f \right \rVert_{\infty} = |\alpha| \left \lVert  f \right \rVert_{\infty}$
+(ii) $\left \lVert \alpha f \right \rVert_{\infty} = \lvert\alpha\rvert \left \lVert  f \right \rVert_{\infty}$
 
 (iii) $\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}$
 ````
@@ -76,11 +76,11 @@ $$
 
 Let $f: [a, b] \to \mathbb{R}$ be a function.
 
-**(a) Point continuity.** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $|f(x + h) - f(x)| < \epsilon$ whenever $|h| < \delta$.
+**(a) Point continuity.** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
 
 **(b) Continuity.** $f$ is **continuous on $[a, b]$** if $f$ is continuous at each $x \in [a, b]$.
 
-**(c) Uniform continuity.** $f$ is *uniformly continuous on $[a, b]$* if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $|f(x + h) - f(x)| < \epsilon$ for all $x \in [a, b]$ whenever $|h| < \delta$.
+**(c) Uniform continuity.** $f$ is *uniformly continuous on $[a, b]$* if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ whenever $\lvert h \rvert < \delta$.
 
 ````
 
@@ -114,7 +114,7 @@ Todo
 Let $f: [a, b] \to \mathbb{R}$ be a continuous function, and $\mu \in \mathbb{R}$ such that  
 
 $$
-\min  \{f(x)|x \in [a,b]\} \le \mu  \le \max  \{f(x)| x \in [a,b]\}
+\min  \{f(x) \mid x \in [a,b]\} \le \mu  \le \max  \{f(x) \mid x \in [a,b]\}
 $$
 
 Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
@@ -128,150 +128,93 @@ The proof proceeds by halving intervals.
 ## Riemann Integrals
 
 
-````{prf:definition} Step Functions
-:label: def-step-functions
+````{prf:definition} Riemann Integrals
+:label: def-riemann-integrals
 :nonumber:
 
-We consider a closed interval $A = [a, b] \subset \mathbb{R}$.
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$. 
  
-**(a) A **partition of A** is an increasing sequence $\left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$. 
-Its **granularity** is $\mu = \max \left\{|x_k - x_{k-1}|| k=1, \dots, n\right\}$. 
+**(a) Partitions**. A **partition of $[a, b]$** is a strictly increasing sequence $X = \left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$.
+Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$. 
 
-**(b)A **step function** $\phi$ on an interval $[a, b]$ is defined by a partition $\left\{x_0, x_1, \dots, x_n\right\}$ 
-and values $\left\{\phi(x_0), \phi(x_1), \dots, \phi(x_n)\right\}$
-that is constant on the intervals $\left[x_{k-1}, x_k\right)$.
-Its **granularity** is the granularity of its partition.
+**(b) Riemann Sums**. Let $X$ be a partition of $[a, b]$, and $\xi$ be a set of intermediate points $\xi_k \in [x_k, x_{k-1}], \, (k = 1, \ldots, n)$.
+A Riemann sum is defined as:
 
-It is clear that the sum of two step functions is again a step function, 
-and the same is true for the product of a step function with a scalar. 
-So, the step functions on an interval $[a, b]$ for a vector space, written as $\mathcal{S}[a, b]$
+```{math}
+R(f, [a, b], X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
+```
+The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity of its partition.
 
+**(c) Riemann Integrals**. We say that $f$ is **Riemann-integrable**, or **R-integrable** for short,
+and call
+
+```{math}
+\int_a^b f(x) \, dx
+```
+the **Riemann integral** of $f$ over $[a, b]$ 
+if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that for any Riemann sum $R([a, b], f, X, \xi)$ with $\mu(R)< \delta$
+it holds that
+
+```{math}
+\lvert \int_a^b f(x) \, dx - R([a, b], f, X, \xi) \rvert < \epsilon
+```
+In other words, Riemann sums can approximate Riemann integrals to arbitrary precision. This pattern is useful when proving the integral theorems.
+
+**(d) The Vector Space**. The R-integrable functions over $[a, b]$ form a vector space, written as $\mathcal{R}([a, b])$.
+
+**(e) The Integration Functional**
+
+```{math}
+\int :f \mapsto \int_a^b f(x) \, dx
+```
+
+is a linear mapping from $\mathcal{R}[a, b]$ to $\mathbb{R}$. 
+
+The proofs are obvious. 
 ````
 
-
-````{prf:definition} Integrals over Step Functions
-
-:label: def-integrals-over-step-functions
-:nonumber:
-
-The **integral** of a step function $\phi$ on $[a, b]$ is defined as 
-
-$$
-\int_a^b \phi (x) \, dx= \sum _{k=1}^n \phi(x_k)
-$$
-
-
-The **integration functional**
-
-$$
-\int :\phi \mapsto \int_a^b \phi(x) \, dx
-$$
-
-is a linear mapping from $\mathcal{S}[a, b]$ to $\mathbb{R}$. The implications
-
-```{math}
-\phi \le \psi  \Rightarrow  \int_a^b \phi(x) \, dx \le \int _a^b\psi(x) \, dx
-```
-
-```{math}
-\int_a^b \phi(x) \, dx + \int_b^c \phi(x) \, dx = \int_a^c \phi(x) \, dx
-```
-
-hold for any two step functions  $\phi,\psi$.
-
-````
-
-
-
-
-
-
-### Functions that are Riemann-integrable but not regulated
-
- ```{math}
- f(x) = \begin{cases}
-  \sin(1/x) & \text{if } x \in (\text{Cantor set}) \\
-  0 & \text{otherwise}
-  \end{cases}
- ```
- The Characteristic Function of the Cantor Set
-
-  Let $C \subset [0,1]$ be the Cantor set (middle-thirds construction). Define:
-
- ```{math}
-  \chi_C(x) = \begin{cases} 1 & \text{if } x \in C \\
-   0 & \text{if } x \notin C \end{cases}
- ```
-
-
-### Integrable Functions
-
-{prf:ref}`thr-step-uniform-continuous` opens a cheap way to integrals over continuous functions:
-
-
-````{prf:definition} Integral over Continuous Functions
-:label: def-integral-continuous-functions
-
-Let $f: [a, b] \to \mathbb{R}$ be continuous, and  $(\phi_k)_{k \in \mathbb{N}}$
-
-````
-
-We extend the integration functional to a larger class of functions.
-Imagine a function $f$, defined on $[a,b]$, sandwiched between two arbitrarily close step functions $\phi, \psi$ :
-
-```{math}
-:label: sandwich-integral
-&\phi \le f \le \psi \\
-&\int _a^b \psi(x) -\phi(x) \, dx \lt \epsilon
-```
-
-If this can be done for any $\epsilon > 0$ then we say that $f$ is **Riemann-integrable** or **R-integrable** for
-short. This is definition is equivalent to:
-
-```{math}
-\sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \phi(x) \, dx
-```
-
-which allows us to define:
-
-```{math}
-:label: sup-inf-integral
-\int_a^b f(x) \, dx := \sup_{\phi \le f} \int _a^b \phi(x) \, dx  = \inf _{\psi \ge f} \int_a^b \phi (x) \, dx
-```
-
-Equation {eq}`sup-inf-integral` is a concise reformulation of {eq}`sandwich-integral`, there is nothing to prove. 
-
-
-### Properties of Riemann Integrals
 
 ````{prf:theorem} Properties of Riemann Integrals
 :label: thr-riemann-integrals
 
-(a) The set $\mathcal{R}[a, b]$ of R-integrable functions is a vector space. The integration functional
 
-$$
-\int :f \mapsto \int_a^b f(x) \, dx
-$$
+**(a) Additivity**
 
-is a linear mapping from $\mathcal{R}[a, b]$ to $\mathbb{R}$. 
+```{math}
+\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
+```
 
-(b) The integration functional is monotone:
+holds for any $f \in\mathcal{R}[a,c]$ and any $b \in [a, c]$
 
-$$
-f \le g \Rightarrow  \int_a^b f(x) \, dx \le \int _a^bg(x) \, dx
-$$
+**(b) Uniform limit** The uniform limit of R-integrable functions is R-integrable, 
+and we can swap limit and integral:
+
+```{math}
+\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
+```
+
+In other words: $\mathcal{R}[a, b]$ is closed under the sup norm.
+````
+
+**(c) Monotony**
+
+```{math}
+f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
+```
 
 holds for any two functions $f,g \in\mathcal{R}[a,b]$.
 
-(c) The uniform limit of R-integrable functions is R-integrable, 
-and we can swap limit and integral:
+**(d) Monotonous Functions are R-Integrable**
 
-$$
-\underset{n \to \infty} \lim \int_a^b f_n(x) \, dx = \int _a^b\underset{n \to \infty} \lim f_n(x)
-$$
+**(e) Continuous Functions are R-Integrable**
 
-In other words: $\mathcal{R}[a, b]$ is closed under the maximum norm.
-````
+**(f) Bounded Continuous Functions are R-Integrable, even with finitely many discontinuities**
+
+**(f) The product of R-integrable functions is R-Integrable**
+
+**(g) The maximum and the minimum of R-integrable functions are R-Integrable**
+
+
 
 ````{prf:proof} 
 
@@ -432,7 +375,7 @@ Here is the alternative definition: A function $f$ is R-integrable on $[a,b]$ if
 we can find a $\delta > 0$, such that for any partition with granularity less than $\delta$ and any set $\xi$ of intermediate points, we have:
 
 $$
-\left|\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right|<\epsilon
+\left\lvert\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right\rvert<\epsilon
 $$
 
 
@@ -525,13 +468,13 @@ $$
 Let $f \in  C^n(A)$. Then:
 
 $$
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(|x-a|)^n
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)
 $$
 
 which is the same as $(h = u-x)$:
 
 $$
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(|h|^n) 
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)
 $$
 
 ````
