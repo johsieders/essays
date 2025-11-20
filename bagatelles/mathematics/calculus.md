@@ -55,13 +55,13 @@ This is indeed a norm because:
 
 Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions, and $f: [a, b] \to \mathbb{R}$ another function.
 
-**(a) Pointwise convergence.** We say that $\lim_{n \to \infty} f_n = f$ **pointwise** if, for all $x \in [a, b]$, we have 
+**(a)** We say that $\lim_{n \to \infty} f_n = f$ **pointwise** if, for all $x \in [a, b]$, we have 
 
 $$
-\lim_{n \to \infty} f_n(x) = f(x)
+\lim_{n \to \infty} \lvert f_n(x) - f(x) \rvert = 0
 $$
 
-**(b) Uniform convergence.** We say that $\lim_{n \to \infty} f_n = f$ **uniformly** if 
+**(b)** We say that $\lim_{n \to \infty} f_n = f$ **uniformly** if 
 
 $$
 \lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
@@ -76,11 +76,11 @@ $$
 
 Let $f: [a, b] \to \mathbb{R}$ be a function.
 
-**(a) Point continuity.** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
+**(a)** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
 
-**(b) Continuity.** $f$ is **continuous on $[a, b]$** if $f$ is continuous at each $x \in [a, b]$.
+**(b)** $f$ is **continuous on $[a, b]$** if $f$ is continuous at each $x \in [a, b]$.
 
-**(c) Uniform continuity.** $f$ is *uniformly continuous on $[a, b]$* if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ whenever $\lvert h \rvert < \delta$.
+**(c)** $f$ is **uniformly continuous on $[a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ whenever $\lvert h \rvert < \delta$.
 
 ````
 
@@ -89,15 +89,16 @@ Let $f: [a, b] \to \mathbb{R}$ be a function.
 :label: thr-continuity-on-compact-sets
 :nonumber:
 
-Let $f: K \to \mathbb{R}$ be continuous, where $K$ is compact. Then:
+Let $f: K \to \mathbb{R}$ be continuous, where $K \subset \mathbb{R}$ is compact. Then:
 
-**(a) Uniform continuity.** The function $f$ is uniformly continuous on $K$.
+**(a)** The continuous functions on K form a **vector space**, written as $C^0(K)$
 
-**(b) Fermat's Theorem** The function $f$ assumes its maximum and minimum on $K$.
-
-**(c) Limit preservation.** If $f_n: K \to \mathbb{R}$ is a sequence of continuous functions and $f_n \to f$ uniformly on $K$, 
+**(b)** If $f_n: K \to \mathbb{R}$ is a sequence of continuous functions and $f_n \to f$ uniformly on $K$, 
 then $f$ is continuous on $K$.
 
+**(c)** Continuous functions are uniformly continuous on $K$.
+
+**(d)** Continuous function assume their maximum and minimum on $K$.
 ````
 
 ````{prf:proof} 
@@ -137,13 +138,13 @@ We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a,
 **(a) Partitions**. A **partition of $[a, b]$** is a strictly increasing sequence $X = \left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$.
 Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$. 
 
-**(b) Riemann Sums**. Let $X$ be a partition of $[a, b]$, and $\xi$ be a set of intermediate points $\xi_k \in [x_k, x_{k-1}], \, (k = 1, \ldots, n)$.
-A Riemann sum is defined as:
+**(b) Riemann Sums**. Let $X$ be a partition of $[a, b]$, and $\{\xi_k \in [x_k, x_{k-1}] \mid k = 1, \ldots, n\}$ 
+be a set of intermediate points. A Riemann sum is defined as:
 
 ```{math}
-R(f, [a, b], X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
+R(f, X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
-The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity of its partition.
+The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity $\mu(X)$ of its partition.
 
 **(c) Riemann Integrals**. We say that $f$ is **Riemann-integrable**, or **R-integrable** for short,
 and call
@@ -152,69 +153,210 @@ and call
 \int_a^b f(x) \, dx
 ```
 the **Riemann integral** of $f$ over $[a, b]$ 
-if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that for any Riemann sum $R([a, b], f, X, \xi)$ with $\mu(R)< \delta$
+if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that for any Riemann sum $R(f, X, \xi)$ with $\mu(R) < \delta$
 it holds that
 
 ```{math}
-\lvert \int_a^b f(x) \, dx - R([a, b], f, X, \xi) \rvert < \epsilon
+\lvert \int_a^b f(x) \, dx - R(f, X, \xi) \rvert < \epsilon
 ```
 In other words, Riemann sums can approximate Riemann integrals to arbitrary precision. This pattern is useful when proving the integral theorems.
+We state two obvious but important properties of Riemann integrals:
 
-**(d) The Vector Space**. The R-integrable functions over $[a, b]$ form a vector space, written as $\mathcal{R}([a, b])$.
-
-**(e) The Integration Functional**
+**(a) Monotony**
 
 ```{math}
-\int :f \mapsto \int_a^b f(x) \, dx
+f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
 ```
 
-is a linear mapping from $\mathcal{R}[a, b]$ to $\mathbb{R}$. 
+holds for any two functions $f,g \in \mathcal{R}([a,b])$.
 
-The proofs are obvious. 
-````
-
-
-````{prf:theorem} Properties of Riemann Integrals
-:label: thr-riemann-integrals
-
-
-**(a) Additivity**
+**(b) Additivity**
 
 ```{math}
 \int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
 ```
 
-holds for any $f \in\mathcal{R}[a,c]$ and any $b \in [a, c]$
+holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$,
+on the understanding that
 
-**(b) Uniform limit** The uniform limit of R-integrable functions is R-integrable, 
+```{math}
+\int_a^a f(x) \, dx = 0
+
+````
+
+````{prf:theorem} Properties of Riemann Integrals
+:label: thr-riemann-integrals
+:nonumber:
+
+**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
+
+**(b)** The mapping
+
+```{math}
+\int :f \mapsto \int_a^b f(x) \, dx
+```
+
+is called the **integration functional**. It is a linear mapping from $\mathcal{R}([a, b])$ to $\mathbb{R}$.
+
+**(c)** The **uniform limit** of R-integrable functions is R-integrable, 
 and we can swap limit and integral:
 
 ```{math}
 \lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
 ```
 
-In other words: $\mathcal{R}[a, b]$ is closed under the sup norm.
+This can be expressed as: $\mathcal{R}([a, b])$ is closed under the sup norm.
+
 ````
 
-**(c) Monotony**
+````{prf:proof} 
+
+todo
+
+````
+
+````{prf:theorem} Riemann-Integrable Functions
+:label: thr-riemann-integrable-functions
+:nonumber:
+
+We consider functions on a closed interval.
+
+**(a)** Monotonous functions are R-integrable
+
+**(b)** Continuous functions are R-integrable
+
+**(c) (Lebesgue Criterion)** Bounded functions are R-integrable 
+ if their set of discontinuities has measure zero.
+
+````
+
+````{prf:proof} 
+
+todo
+
+````
+
+A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
+
+
+
+````{prf:theorem} Mean Value Theorem
+:label: thr-mean-value
+:nonumber:
+
+Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
+
+Then there exists a $\xi \in [a, b]$ such that:
 
 ```{math}
-f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
+\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
 ```
 
-holds for any two functions $f,g \in\mathcal{R}[a,b]$.
+With $\phi = 1$ we get:
 
-**(d) Monotonous Functions are R-Integrable**
+```{math}
+\int_a^b f(x) \, dx= f(\xi) (b-a)
+```
 
-**(e) Continuous Functions are R-Integrable**
+````
 
-**(f) Bounded Continuous Functions are R-Integrable, even with finitely many discontinuities**
+````{prf:proof}
+From {prf:ref}`thr-mean-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
+And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
 
-**(f) The product of R-integrable functions is R-Integrable**
+```{math}
+m \le f(x) \le M 
+```
 
-**(g) The maximum and the minimum of R-integrable functions are R-Integrable**
+The rest is straightforward: multiply by $\phi(x)$ and integrate:
+
+```{math}
+& m \phi(x) \le f(x) \phi(x) \le M \phi(x)
+
+& \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
+
+& \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
+```
+
+````
 
 
+## Derivatives
+
+
+````{prf:definition} Derivatives
+:label: def-derivatives
+:nonumber:
+
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, b] \rightarrow \mathbb{R}$.
+
+**(a)** We say that $f$ is **differentiable** in $x \in [a, b]$ if the limit
+
+```{math}
+\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)
+```
+exists. $f'(x)$ is called the derivative of $f$ at $x$. We note that
+
+
+```{math}
+f(x+h) = f(x) + f'(x) \, h + o(h)
+```
+
+which means that the term $f'(x) \, h$ is a linear approximation of $f$ at $x$.
+
+**(c)** We say that $f$ is **continuously differentiable** at $x \in [a, b]$ if it is differentiable at $x$
+and its derivative $f'$ is continuous at $x$.
+
+**(b)** We say that $f$ is **differentiable** on $[a, b]$ if it is differentiable for all $x \in [a, b]$.
+$f'$ is called the derivative of $f$ on $[a, b]$. 
+
+**(c)** We say that $f$ is **continuously differentiable** on $[a, b]$ if it is differentiable on $[a, b]$
+and its derivative is continuous on $[a, b]$.
+
+**(d)** Higher order derivatives are analogously defined and denoted by $f', f'', f^{(3)}, \ldots,   f^{(n)}$.
+A function is said to be $n$ times continuously differentiable if $f^{(n)}$ is continuous on $[a, b]$. 
+```` 
+
+
+````{prf:theorem} Properties of Derivatives
+:label: thr-properties-derivatives
+:nonumber:
+
+**(a)** The continuously differentiable functions over $[a, b]$ form a **vector space**, written as $C^1 ([a, b])$.
+Likewise, the $n$ times continuously differentiable functions over $[a, b]$ form a vector space, written as $C^n ([a, b])$.
+
+**(b)** The mapping
+
+```{math}
+\partial :f \mapsto f'
+```
+
+is called the **differential operator**. It is a linear mapping from $C^1 ([a, b])$ to $C^0 ([a, b])$.
+
+Likewise, the mapping
+
+```{math}
+\partial^2 :f \mapsto f''
+```
+
+is called the **differential operator of second order**. It is a linear mapping from $C^2 ([a, b])$ to $C^0 ([a, b])$.
+Higher order differential operators $\partial^n$ are analogouosly defined.
+
+**(c)** The **uniform limit** of differentiable functions is differentiable, 
+and we can swap limit and differentiation:
+
+```{math}
+\lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n
+```
+Likewise, we have:
+
+```{math}
+\lim_{n \to \infty} \partial^n f_n = \partial^n \lim_{n \to \infty} f_n
+```
+
+This can be expressed as: $C^n ([a, b])$ is closed under the sup norm.
+
+````
 
 ````{prf:proof} 
 
@@ -223,6 +365,189 @@ todo
 ````
 
 
+````{prf:theorem} Differentiation Rules
+:label: thr-differentiation-rules
+:nonumber:
+
+Let $f, g \in C^1([a,b])$
+
+
+**(a)** Product Rule
+Let $f, g \in C^1([a,b])$. Then
+
+```{math}
+f'g' = f'g + fg'
+```
+
+**(b)** Chain Rule
+Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then
+
+```{math}
+(f \circ g)' = (f' \circ g) \, g'
+```
+````
+
+````{prf:proof} 
+
+todo
+
+````
+
+## Main Theorem of Calculus
+
+````{prf:theorem} Main Theorem of Calculus
+:label: thr-main-theorem-calculus
+:nonumber:
+
+Let $f \in \mathcal{R}([a,b])$ and $F$ be the **primitive** of $f$, defined by
+
+```{math}
+F(x) = \int_a^x f(y) \, dy 
+```
+
+Then:
+
+**(a)**
+```{math}
+F(b) - F(a)  = \int_a^b f(y) \, dy 
+```
+
+**(b)**
+If $f$ is continuous in $x \in [a, b]$, then $F$ is differentiable in $x$ and it holds that
+
+```{math}
+F'(x) = f(x)
+```
+
+````
+
+````{prf:proof}
+
+todo
+
+````
+
+## Taylor Theorem
+
+Derivatives are about local changes: How does a function $f$ behave in a neighbourhood of some point $x$? The Taylor series allows us to express
+$f(x+h)$ in terms of the higher derivatives of $f$ with arbitrary precision. It comes in three varieties that differ in the remainder term. In
+what follows, $A$ is an open interval, and $x, u \in A$.
+
+````{prf:theorem} Taylor V1
+:label: thr-taylor-v1
+:nonumber:
+
+Let $f \in  C^{n+1}(A)$. Then:
+
+$$
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
+$$
+````
+
+
+````{prf:theorem} Taylor V2
+:label: thr-taylor-v2
+:nonumber:
+Let $f \in  C^{n+1}(A)$. Then there exists a $\xi \in [x,u]$ such that:
+
+$$
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
+$$
+
+which is the same as $(h = u-x)$:
+
+$$
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
+$$
+````
+
+````{prf:theorem} Taylor V3
+:label: thr-taylor-v3
+:nonumber:
+
+Let $f \in  C^n(A)$. Then:
+
+$$
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)
+$$
+
+which is the same as $(h = u-x)$:
+
+$$
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)
+$$
+
+````
+
+````{prf:proof}
+
+**V1:**
+
+Proof by induction, using the main theorem of integration and integration by parts:
+
+$$
+f(u) - f(x) &= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt
+
+& = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... }
+
+& =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
+$$
+
+**V2:** Using the mean value theorem, we find a $\xi \in [x, u]$ such that
+ 
+$$
+
+\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
+
+$$
+
+**V3**
+
+$$
+f(u) &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n
+
+&= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
+$$
+
+````
+
+
+
+## Little o, Big O
+
+Little o means: $f$ tends to $0$ faster than $g$, or, equivalently, $f/g$ tends to $0$:
+
+$$
+f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
+$$
+
+$$
+f=o(1) \Longleftrightarrow \lim f(x) = 0 
+$$
+
+$$
+f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
+$$
+
+Big O means: $f$ grows not faster than $g$:
+
+$$
+f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
+$$
+$$
+f = O(1) \Longleftrightarrow f(x)\le C 
+$$
+
+$$
+f = O(x^n) \Longleftrightarrow f(x)\le C x^n
+$$
+
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
 
 
 
@@ -231,11 +556,7 @@ todo
 
 
 
-(R2) There are many R-integrable functions: step functions (by definition), 
-continuous functions (also with finitely many discontinuities), 
-monotone functions, the maximum, minimum, and product of R-integrable functions. 
-A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
-
+## archive
 
 ````{prf:proof}
 The properties (R1), (R2) and (R3) follow easily from (3), (R5) follows easily from (R4), and the proof of (R4) is the sting of this chapter. Let's
@@ -326,46 +647,6 @@ $$
 
 ````
 
-````{prf:theorem} Mean Value Theorem
-:label: thr-mean-value
-:nonumber:
-
-Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
-
-Then there exists a $\xi \in [a, b]$ such that:
-
-$$
-\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
-$$
-
-With $\phi = 1$ we get:
-
-$$
-\int_a^b f(x) \, dx= f(\xi) (b-a)
-$$
-````
-
-````{prf:proof}
-From {prf:ref}`thr-mean-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
-And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
-
-$$
-m \le f(x) \le M 
-$$
-
-The rest is straightforward: multiply by $\phi(x)$ and integrate:
-
-$$
-m \phi(x) \le f(x) \phi(x) \le M \phi(x)
-$$
-$$
-m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
-$$
-$$
-\int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
-$$
-
-````
 
 An alternative definition of Riemann integrability is based on intermediate sums. 
 This needs some terminology: we call $\left\{x_1, x_2, \dots , x_n\right\}$ 
@@ -377,203 +658,6 @@ we can find a $\delta > 0$, such that for any partition with granularity less th
 $$
 \left\lvert\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right\rvert<\epsilon
 $$
-
-
-## Derivatives
-
-
-````{prf:definition} First Derivative
-:label: def-first-derivative
-:nonumber:
-
-Let $f:\mathbb{R}\rightarrow \mathbb{R}$
-
-$$
-f'(x) = \underset{h \to 0} \lim\frac{1}{h}(f(x+h)-f(x)) = \frac{d}{d \epsilon}f(x + \epsilon h)|_{\epsilon =0 }
-$$
-
-So:
-
-$$
-f(x+h) = f(x)+ f'(x)h + o(h)
-$$
-
-and the term $f'(x)h$ is a linear approximation of $f$ at $x$.
-```` 
-Derivatives are about local changes: How does a function $f$ behave in a neighbourhood of some point $x$? The Taylor series allows us to express
-$f(x+h)$ in terms of the higher derivatives of $f$ with arbitrary precision. It comes in three varieties that differ in the remainder term. In
-what follows, $A$ is an open interval, and $x, u \in A$.
-
-
-````{prf:theorem} Uniqueness of the Derivative
-:label: def-uniqueness-derivative
-:nonumber:
-The derivative is unique. 
-
-````
-````{prf:proof} 
-Assume that
-
-$$
-F(x+h)-F(x) = D(h) + o(h)
-
-F(x+h)-F(x) = E(h) + o(h)
-$$
-
-Then:
-
-$$
-D(h) + o(h) = E(h) + o(h)
-$$
-
-which shows that $D= E$.
-````
-
-## Main Theorem of Calculus
-
-## Taylor Theorem
-
-````{prf:theorem} Taylor V1
-:label: thr-taylor-v1
-:nonumber:
-
-Let $f \in  C^{n+1}(A)$. Then:
-
-$$
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-$$
-````
-
-
-````{prf:theorem} Taylor V2
-:label: thr-taylor-v2
-:nonumber:
-Let $f \in  C^{n+1}(A)$. Then there exists a $\xi \in [x,u]$ such that:
-
-$$
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
-$$
-
-which is the same as $(h = u-x)$:
-
-$$
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
-$$
-````
-
-````{prf:theorem} Taylor V3
-:label: thr-taylor-v3
-:nonumber:
-
-Let $f \in  C^n(A)$. Then:
-
-$$
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)
-$$
-
-which is the same as $(h = u-x)$:
-
-$$
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)
-$$
-
-````
-
-````{prf:proof}
-
-**V1:**
-
-Proof by induction, using the main theorem of integration and integration by parts:
-
-$$
-f(u) - f(x) &= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt
-
-& = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... }
-
-& =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-$$
-
-**V2:** Using the mean value theorem, we find a $\xi \in [x, u]$ such that
- 
-$$
-
-\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
-
-$$
-
-**V3**
-
-$$
-f(u) &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n
-
-&= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
-$$
-
-````
-
-
-````{prf:theorem} Uniqueness of the Derivative
-:label: def-unique-derivative
-:nonumber:
-The derivative is unique. 
-
-````
-````{prf:proof} 
-Assume that
-
-$$
-F(x+h)-F(x) = D(h) + o(h)
-
-F(x+h)-F(x) = E(h) + o(h)
-$$
-
-Then:
-
-$$
-D(h) + o(h) = E(h) + o(h)
-$$
-
-which shows that $D= E$.
-````
-
-
-
-## Little o, Big O
-
-Little o means: $f$ tends to $0$ faster than $g$, or, equivalently, $f/g$ tends to $0$:
-
-$$
-f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
-$$
-
-$$
-f=o(1) \Longleftrightarrow \lim f(x) = 0 
-$$
-
-$$
-f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
-$$
-
-Big O means: $f$ grows not faster than $g$:
-
-$$
-f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
-$$
-$$
-f = O(1) \Longleftrightarrow f(x)\le C 
-$$
-
-$$
-f = O(x^n) \Longleftrightarrow f(x)\le C x^n
-$$
-
-
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```
-
 
 
 <div style="margin-bottom: 100px;"></div>
