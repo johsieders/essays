@@ -5,22 +5,69 @@
 
 > under construction
  
-## Bolzano-Weierstrass and Implications
+## Convergence
+
+````{prf:definition} Convergence of Sequences
+:label: def-compactness
+:nonumber:
+
+**(a)**
+We call a sequence $\{x_n\}$ **convergent to $x$**, written as
+
+```{math}
+\lim_{n \to \infty} x_n = x
+```
+iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for all $n \ge n_0$, we have
+
+```{math}
+\lvert x_n - x \rvert < \epsilon
+```
+
+**(b)**
+We call a sequence $\{x_n\}$ a **Cauchy sequence**
+iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for all $n, m \ge n_0$, we have
+
+```{math}
+\lvert x_n - x_m \rvert < \epsilon
+```
+````
 
 ````{prf:definition} Compactness
 :label: def-compactness
 :nonumber:
 
 A set $A \subset \mathbb{R}$ is called **compact**, 
-iff each infinite bounded sequence of elements of A has an infinite convergent subsequence.
+iff each bounded sequence of elements of A has a convergent subsequence.
+````
+
+````{prf:definition} Completeness
+:label: def-completness
+:nonumber:
+
+A set $A \subset \mathbb{R}$ is called **complete**, 
+iff each Cauchy-sequence of elements of A is convergent.
+````
+
+````{prf:Lemma} Compactness Implies Completeness 
+:label: lem-compactness-completeness
+:nonumber:
+
+Compact sets are complete.
 
 ````
+
+````{prf:proof}
+
+Let $A \subset \mathbb{R}$ be compact and $\{x_n\}$ a Cauchy-sequence of elements of $A$. 
+Then, the set $\{x_n \mid n \in \mathbb{N} \}$ is bounded and has a subsequence that converges to some $x \in A$.
+Therefore $\{x_n\}$, being a Cauchy-sequence, converges itself to $x$. 
+````
+
 ````{prf:theorem} Bolzano-Weierstrass
 :label: thr-bolzano-weierstrass
 :nonumber:
 
-Each closed interval $[a, b] \subset \mathbb{R}$ is compact.
-
+Each closed interval $[a, b] \subset \mathbb{R}$ is compact (and complete).
 ````
 
 ````{prf:proof} 
@@ -28,6 +75,7 @@ Each closed interval $[a, b] \subset \mathbb{R}$ is compact.
 Todo
 
 ````
+
 ````{prf:definition} Sup Norm
 :label: def-sup-norm
 :nonumber:
@@ -36,9 +84,9 @@ Let $f: [a, b] \to \mathbb{R}$ be a bounded function.
 
 The **sup norm** (or **uniform norm**) of $f$ is defined as:
 
-$$
+```{math}
 \left \lVert f \right \rVert_{\infty} = \sup \{\lvert f(x) \rvert \mid x \in [a, b]\}
-$$
+```
 
 This is indeed a norm because:
 
@@ -47,9 +95,11 @@ This is indeed a norm because:
 (ii) $\left \lVert \alpha f \right \rVert_{\infty} = \lvert\alpha\rvert \left \lVert  f \right \rVert_{\infty}$
 
 (iii) $\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}$
+
+The proofs are trivial.
 ````
 
-````{prf:definition} Convergence
+````{prf:definition} Convergence of Functions
 :label: def-convergence
 :nonumber:
 
@@ -57,18 +107,18 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 
 **(a)** We say that $\lim_{n \to \infty} f_n = f$ **pointwise** if, for all $x \in [a, b]$, we have 
 
-$$
-\lim_{n \to \infty} \lvert f_n(x) - f(x) \rvert = 0
-$$
+```{math}
+\lim_{n \to \infty} \left | f_n(x) - f(x) \right | = 0
+```
 
 **(b)** We say that $\lim_{n \to \infty} f_n = f$ **uniformly** if 
 
-$$
+```{math}
 \lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
-$$
-
+```
 ````
 
+## Continuous Functions
 
 ````{prf:definition} Continuity
 :label: def-continuity
@@ -76,37 +126,67 @@ $$
 
 Let $f: [a, b] \to \mathbb{R}$ be a function.
 
-**(a)** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
+**(a)** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, 
+there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
 
 **(b)** $f$ is **continuous on $[a, b]$** if $f$ is continuous at each $x \in [a, b]$.
 
-**(c)** $f$ is **uniformly continuous on $[a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ whenever $\lvert h \rvert < \delta$.
-
+**(c)** $f$ is **uniformly continuous on $[a, b]$** if, for any $\epsilon > 0$, 
+there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ 
+whenever $\lvert h \rvert < \delta$.
 ````
-
 
 ````{prf:theorem} Continuous Functions on Compact Sets
 :label: thr-continuity-on-compact-sets
 :nonumber:
 
-Let $f: K \to \mathbb{R}$ be continuous, where $K \subset \mathbb{R}$ is compact. Then:
+Let $f: [a, b] \to \mathbb{R}$ be continuous. Then:
 
-**(a)** The continuous functions on K form a **vector space**, written as $C^0(K)$
+**(a)** The continuous functions on $[a, b]$ form a **vector space**, written as $C^0([a, b])$
 
-**(b)** If $f_n: K \to \mathbb{R}$ is a sequence of continuous functions and $f_n \to f$ uniformly on $K$, 
-then $f$ is continuous on $K$.
+**(b)** The uniform limit of continuous functions is continuous, or: $C^0([a, b])$ is closed under the sup-Norm.
 
-**(c)** Continuous functions are uniformly continuous on $K$.
+**(c)** Continuous function assume their maximum and minimum on $[a, b]$.
 
-**(d)** Continuous function assume their maximum and minimum on $K$.
+**(d)** Continuous functions are uniformly continuous on $[a, b]$.
 ````
 
-````{prf:proof} 
+````{prf:proof}
+Assertion (a) is obvious. We prove (b) with the triangular inequality. 
+For (c) and (d) we need [Bolzano-Weierstrass](#thr-bolzano-weierstrass).
 
-Todo
+**(b)** 
+Let $\{f_n\}$ be a sequence of functions on $[a, b]$ that converges uniformly to $f$.
+Let $\epsilon >0$, $x \in [a, b]$, $n \in \mathbb{N}$ such that $\lVert f_n - f \rVert_{\infty} < \epsilon$ and $\delta > 0$ 
+such that $ \lvert f_n(x+h) - f_n(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$. Then:
+
+```{math}
+& \lvert f(x+h) - f(x) \rvert \\
+& \le \lvert f(x+h) - f_n(x+h) \rvert + \lvert f_n(x+h) - f_n(x) \rvert + \lvert f_n(x) - f(x) \rvert \\
+& < 3 \epsilon
+```
+
+**(c)**
+We prove the assertion for the maximum. Let $M = \sup\{f(x) \mid x \in [a, b] \}$. Then, for each $n \in \mathbb{N}$, 
+there is a $x_n \in [a, b]$ such that $M - f(x_n) < 1/n$.
+The sequence $\{x_n\}$ has a subsequence that converges to some $x \in [a, b]$, and we have $f(x) = M$ because $f$ is continuous at $x$.
+
+**(d)** 
+We prove the assertion by contradiction. Assume $f$ to be not uniformly continuous. Take any $\epsilon > 0$. 
+Then there exist two sequences $\{x_n\}, \{y_n\}$ such that
+
+```{math}
+\lvert x_n - y_n \rvert < \frac{1}{n}
+```
+and
+
+```{math}
+\lvert f(x_n) - f(y_n) \rvert > \epsilon
+```
+But $\{x_n\}$ has a subsequence $\{x_{n_k}\}$ that converges to some $x \in [a, b]$,
+and $\{y_{n_k}\}$ necessarily converges to the same $x$, So, $f$ is not continuous in $x$, which is a contradiction.
 
 ````
-
 
 ````{prf:theorem} Intermediate Value Theorem
 :label: thr-intermediate-value
@@ -114,9 +194,9 @@ Todo
 
 Let $f: [a, b] \to \mathbb{R}$ be a continuous function, and $\mu \in \mathbb{R}$ such that  
 
-$$
+```{math}
 \min  \{f(x) \mid x \in [a,b]\} \le \mu  \le \max  \{f(x) \mid x \in [a,b]\}
-$$
+```
 
 Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 ````
@@ -124,9 +204,46 @@ Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 ````{prf:proof} 
 
 The proof proceeds by halving intervals.
+We build two sequences $\{a_n\},\{b_n\}$ such that $\{a_n\} is
+
+```{math}
+f(a_n) \le \mu
+f(b_n) \ge \mu
+```
+ 
+ 
+ sequence $\{x_n\}$ that converges to some $x \in [a, b]$ such that $f(x) = \mu$.
+Let $x_0 = a, x_1 = b, x_2 = (x_0 + x_1)/2$. The general rule for $x_n$ is:
+
+```{math}
+x_n = 
+\left\{
+    \begin{array}{lr}
+        (x_{n-2} + x_{n-1})/2 & \text{ if } f(x_{n-1}) < \mu \\
+        x_{n-1} & \text{ if } f(x_{n-1}) = \mu \\
+        (x_{n-3} + x_{n-1})/2 & \text{ if } f(x_{n-1}) > \mu
+    \end{array}
+\right .
+```
+
+We see that:
+
+```{math}
+\left | x_n - x_{n-1} \rvert \le \lvert x_{n-1} - x_{n-2} \right | / 2 
+```
+
+so, by induction:
+
+```{math}
+\lvert x_n - x_{n-1} \rvert \le (b - a) / 2^{n-1} 
+```
+
+The sequence $\{x_n\}$ is a Cauchy sequence. Hence it converges to some $x \in [a, b]$, and, being continuous,
+$\{f(x_n)\}$ converges to $f(x).
+
 ````
 
-## Riemann Integrals
+## Riemann-Integrable Functions
 
 
 ````{prf:definition} Riemann Integrals
@@ -157,10 +274,40 @@ if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that for any Rieman
 it holds that
 
 ```{math}
-\lvert \int_a^b f(x) \, dx - R(f, X, \xi) \rvert < \epsilon
+\left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | < \epsilon
 ```
-In other words, Riemann sums can approximate Riemann integrals to arbitrary precision. This pattern is useful when proving the integral theorems.
-We state two obvious but important properties of Riemann integrals:
+In other words, Riemann sums can approximate Riemann integrals to arbitrary precision. We often write
+
+```{math}
+\int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
+```
+as a short version of the exact definition, which lets us use finite sums instead of integrals.
+
+**(d) Riemann Primitives**. Let $f \in \mathcal{R}([a,b])$. The function $F$ defined by
+
+```{math}
+F(x) = \int_a^x f(y) \, dy 
+```
+is called the Riemann-primitive (or primitive) of $f$,
+on the understanding that
+
+```{math}
+F(a) = \int_a^a f(x) \, dx = 0
+```
+
+The notation 
+
+```{math}
+F = \int f(y) \, dy
+```
+is used if the lower bound $a$ is unimportant or not specified. Two primitives of an integrable function $f$ differ by a constant only.
+````
+
+````{prf:remark} Monotony, Additivity, Boundedness 
+:label: rem-monotony-additivity-boundedness
+:nonumber:
+
+We state three obvious but important properties of Riemann integrals:
 
 **(a) Monotony**
 
@@ -176,69 +323,16 @@ holds for any two functions $f,g \in \mathcal{R}([a,b])$.
 \int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
 ```
 
-holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$,
-on the understanding that
+holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
 
-```{math}
-\int_a^a f(x) \, dx = 0
+**(c) Boundedness**
 
-````
-
-````{prf:theorem} Properties of Riemann Integrals
-:label: thr-riemann-integrals
-:nonumber:
-
-**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
-
-**(b)** The mapping
-
-```{math}
-\int :f \mapsto \int_a^b f(x) \, dx
-```
-
-is called the **integration functional**. It is a linear mapping from $\mathcal{R}([a, b])$ to $\mathbb{R}$.
-
-**(c)** The **uniform limit** of R-integrable functions is R-integrable, 
-and we can swap limit and integral:
-
-```{math}
-\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
-```
-
-This can be expressed as: $\mathcal{R}([a, b])$ is closed under the sup norm.
+R-integrable functions are bounded on closed intervals
+(because Riemann sums are).
 
 ````
 
-````{prf:proof} 
-
-todo
-
-````
-
-````{prf:theorem} Riemann-Integrable Functions
-:label: thr-riemann-integrable-functions
-:nonumber:
-
-We consider functions on a closed interval.
-
-**(a)** Monotonous functions are R-integrable
-
-**(b)** Continuous functions are R-integrable
-
-**(c) (Lebesgue Criterion)** Bounded functions are R-integrable 
- if their set of discontinuities has measure zero.
-
-````
-
-````{prf:proof} 
-
-todo
-
-````
-
-A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
-
-
+Monotony leads us to an important theorem.
 
 ````{prf:theorem} Mean Value Theorem
 :label: thr-mean-value
@@ -257,11 +351,10 @@ With $\phi = 1$ we get:
 ```{math}
 \int_a^b f(x) \, dx= f(\xi) (b-a)
 ```
-
 ````
 
 ````{prf:proof}
-From {prf:ref}`thr-mean-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
+From {prf:ref}`thr-intermediate-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
 
 ```{math}
@@ -280,8 +373,221 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 
 ````
 
+````{prf:theorem} Properties of Riemann Integrals
+:label: thr-riemann-integrals
+:nonumber:
 
-## Derivatives
+**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
+
+**(b)** The mapping
+
+```{math}
+\int_a^b :f \mapsto \int_a^b f(y) \, dy
+```
+is called the **integration functional**. It is a linear mapping from $\mathcal{R}([a, b])$ to $\mathbb{R}$.
+
+**(c)** Let $f \in \mathcal{R}([a, b])$. Then the following inequality holds:
+
+```{math}
+\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
+```
+
+**(d)** The primitive of an R-integrable function is continuous. The mapping
+
+```{math}
+\int :f \mapsto \int_a^x f(y) \, dy
+```
+is called the **integration operator**. It is a linear mapping from $\mathcal{R}([a, b])$ to $C^0([a, b])$.
+
+**(e)** The **uniform limit** of R-integrable functions is R-integrable,
+or, equivalently: $\mathcal{R}([a, b])$ is closed under the sup norm.
+We can swap limit and integral:
+
+```{math}
+\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
+```
+````
+
+````{prf:proof}
+
+The assertions (a) and (b) are obvious. 
+The proofs of (c) and (e) use the triangular inequality, and (d) follows from the fact that R-integrable functions are bounded.
+
+**(c)** 
+The idea is to approximate the integrals over $f$ and $|f|$ by a single partition. 
+We apply the triangular inequality to the Riemann sums and, keeping track of the $\epsilon$, we transfer the result to the integrals.
+Let $X$ be a partition of $[a, b]$, $\{\xi_k\}$ a set of intermnediate points, and $\epsilon > 0$ such that: 
+
+```{math}
+\left | \int_a^b f(y) \, dy - \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | < \epsilon
+```
+and
+```{math}
+\left | \int_a^b |f(y)| \, dy - \sum_{k=0}^n |f(\xi_k)| (x_{k+1} - x_k) \right | < \epsilon
+```
+This gives us:
+
+```{math}
+& \left | \int_a^b f(y) \, dy \right | \\
+& \le \left | \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | + \epsilon \\
+& \le \sum_{k=0}^n \left | f(\xi_k) \right | (x_{k+1} - x_k)  + \epsilon \\
+& \le \int_a^b \left | f(y) \right | \, dy  + 2 \epsilon 
+```
+This is the assertion.
+
+**(d)**
+Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
+Then, $f$ is bounded by some $M \in \mathbb{R}$, and we have, for $x \in [a, b]$ and arbitrarily small $h$:
+
+```{math}
+\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M
+```
+which proves the continuity of $F$ at $x$
+
+
+**(e)**
+
+Let $\{f_n\}$ be a sequence of functions on $[a, b]$ that converges uniformly to $f$. Let $\epsilon >0$ and $n_0$ be such that, for $n \ge n_0$:
+
+```{math}
+\left \lVert f_n - f \right \rVert_{\infty} < \epsilon 
+```
+
+Let 
+
+```{math}
+A_n = \int_a^b f_n(y) \, dy 
+```
+We have, for large $n, m$:
+
+```{math}
+\left | A_n - A_m \right | \le \int_a^b \left | f_n(y) - f_m(y) \right |  \, dy \le (b - a) \epsilon
+```
+
+So, the sequence $\{A_n\}$ is a Cauchy sequence, converges to some value $A$, and:
+
+```{math}
+\left | A_n - A \right | \le \epsilon
+```
+for some large, fixed $n$.
+As $f_n$ is R-integrable we can choose a partition $X$ of $[a, b]$ such that, 
+for any set of intermediate points $\{\xi_k\}$, we have:
+
+```{math}
+\left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right | < \epsilon
+```
+
+Then
+
+```{math}
+&\left | A - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
+& \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
+& \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right |  + \sum_{k=0}^{n-1} |f_n(\xi_k) - f(\xi_k)| (x_{k+1}-x_k) \\
+& < \epsilon + (b-a) \epsilon + (b-a) \epsilon
+```
+
+This proves that $f$ is R-integrable and:
+
+```{math}
+\lim_{n \to \infty} \int_a^b f_n(y) \, dy = A = \int_a^b f(y) \, dy = \int_a^b \lim_{n \to \infty} f_n(y) \, dy 
+```
+````
+
+````{prf:theorem} Riemann-Integrable Functions
+:label: thr-riemann-integrable-functions
+:nonumber:
+
+We consider functions on a closed interval.
+
+**(a)** Step functions are R-integrable
+
+**(b)** Let $f: [a, b] \to \mathbb{R}$ be a function such that, for any $\epsilon > 0$, 
+there are R-integrable functions $\phi, \psi$ with
+
+```{math}
+\phi \le f \le \psi
+```
+
+and
+
+```{math}
+\int_a^b (\psi(x) - \phi(x)) \, dx < \epsilon.
+```
+
+Then $f$ is R-integrable
+
+**(c)** Monotonous functions are R-integrable
+
+**(d)** Continuous functions are R-integrable
+````
+
+````{prf:proof} 
+
+**(a)**
+Let $\phi$ be a step function on $[a, b]$ with $\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})$. Then, obviously:
+
+```{math}
+\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k
+``` 
+
+**(b)**
+
+todo
+
+**(c)**
+Let $f$ be monotonously non-decreasing on $[a, b]$. Then $f$ can squeezed between two step functions, $\phi, \psi$,
+which are integrable as we know from (a).
+Let $n \in \mathbb{N}$ fixed and $x_k = a + \frac{k}{n}(b-a)$. We set:
+
+```{math}
+& \phi(x) = f(x_k) \text{ for } x \in [x_k, x_{k+1}) \\
+& \psi(x) = f(x_{k+1}) \text{ for } x \in [x_k, x_{k+1})
+``` 
+Then, clearly:
+
+```{math}
+\phi \le f \le \psi
+```
+
+and
+
+```{math}
+& \int_a^b (\psi(x) - \phi(x)) \, dx \\
+& = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
+& = \frac{1}{n}(b-a) \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
+& = \frac{1}{n}(b-a)(f(b) - f(a))
+```
+which can be made arbitrarily small. The assertion follows from (b).
+
+**(d)**
+Let $f$ be continuous on $[a, b]$. Then $f$ is uniformly continuous on $[a, b]$ by {prf:ref}`thr-continuity-on-compact-sets` 
+and is the uniform limit of step functions.
+
+````
+
+
+
+A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
+
+
+````{prf:theorem} Lebesgue-Criterion
+:label: thr-riemann-integrable-functions
+:nonumber:
+
+Bounded functions are R-integrable iff their set of discontinuities has measure zero.
+
+````
+
+````{prf:proof} 
+
+todo
+
+
+````
+
+
+
+## Differentiable Functions
 
 
 ````{prf:definition} Derivatives
@@ -413,15 +719,82 @@ F(b) - F(a)  = \int_a^b f(y) \, dy
 ```
 
 **(b)**
-If $f$ is continuous in $x \in [a, b]$, then $F$ is differentiable in $x$ and it holds that
+If $f$ is continuous in $x \in [a, b]$, then $F$ is differentiable at $x$ and it holds that
 
 ```{math}
 F'(x) = f(x)
 ```
 
+**(c)**
+If $f$ is continuous on $[a, b]$, then $F$ is differentiable on $[a, b]$, and it holds that
+
+```{math}
+F' = f
+```
+
+**(d)**
+The linear operators $\int$ and $\partial$ are inverse to each other.
+
+```{math}
+
+\int : 
+\left\{
+    \begin{array}{lr}
+        C^0([a, b] \to C^1([a, b] \\
+        f \mapsto F
+    \end{array}
+\right\}
+
+\\
+
+\partial : 
+\left\{
+    \begin{array}{lr}
+        C^1([a, b] \to C^0([a, b] \\
+        F \mapsto f
+    \end{array}
+\right\}
+
+```
+
+```{math}
+
+\left( \int \partial \right) F = F
+
+\left( \partial \int \right) f = f
+
 ````
 
 ````{prf:proof}
+
+todo
+
+````
+
+
+````{prf:theorem} Integration Rules
+:label: thr-integration-rules
+:nonumber:
+
+Let $f, g \in C^1([a,b])$
+
+
+**(a)** Integration by Parts
+Let $f, g \in C^1([a,b])$. Then
+
+```{math}
+\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx
+```
+
+**(b)** Substitution Rule
+Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b))$. Then
+
+```{math}
+\int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx
+```
+````
+
+````{prf:proof} 
 
 todo
 
@@ -551,12 +924,101 @@ $$
 
 
 
-
-
-
-
-
 ## archive
+
+### Trying MyST
+
+
+```{figure} https://github.com/rowanc1/pics/blob/main/mountains.png?raw=true
+:label: my-fig
+:align: center
+
+My **bold** mountain 🏔🚠.
+```
+
+This is a reference to [My Mountain](#my-fig)
+
+This is a reference to [Bolzano-Weierstrass](#thr-bolzano-weierstrass)
+
+This is a reference to ["{name}"](#thr-bolzano-weierstrass)
+
+This is a reference to {prf:ref}`Bolzano-Weierstrass <thr-bolzano-weierstrass>`
+
+This is a reference to {prf:ref}`"{name}" <thr-bolzano-weierstrass>`
+
+This is a reference to @thr-bolzano-weierstrass
+
+---
+numbering:
+  box:
+    enabled: true
+---
+
+:::{figure} westfield2.png
+:label: my-box
+:kind: box
+
+This figure will be numbered as "Box 1"
+:::
+
+:::{math}
+:enumerated: false
+Ax = b
+:::
+
+```{math}
+:enumerated: true
+Ax = b
+```
+
+```{math}
+:typst: root(3, x)
+\sqrt[3]{x}
+```
+
+```{math}
+:label: my_label
+By=c
+```
+
+This is a reference to {prf:ref}`my_label`
+
+This is a reference to {prf:ref}`My Label <my_label>`
+
+(my-paragraph)=
+This is just a paragraph!
+
+(my-points)=
+* Bullet
+* points
+
+Please see [this paragraph](#my-paragraph) and [these points](#my-points).
+
+```{math}
+\begin{equation}
+Y(i,k) = 
+\left\{
+    \begin{array}{lr}
+        ||R_{k}-R_{i}||^{2}, & \text{if } i \neq k\\
+        ||\triangle_{i}||^{2}, & \text{if } i\leq k
+    \end{array}
+\right\} = yz
+\end{equation}
+```
+
+
+```{math}
+Y(i,k) = 
+\left\{
+    \begin{array}{lr}
+        ||R_{k}-R_{i}||^{2}, & \text{if } i \neq k\\
+        ||\triangle_{i}||^{2}, & \text{if } i\leq k
+    \end{array}
+\right\} = yz
+```
+
+
+
 
 ````{prf:proof}
 The properties (R1), (R2) and (R3) follow easily from (3), (R5) follows easily from (R4), and the proof of (R4) is the sting of this chapter. Let's
