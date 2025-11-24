@@ -67,7 +67,6 @@ $-17 \ \% \ 3 = 1$ (check: $-17 = -6 \cdot 3 + 1$).
 ````{prf:definition}
 :label: def-congruences
 
-
 Let $a$, $b$ and $m$ be integers.
  
 (i) We say that $a$ is *congruent to* $b$ *modulo* $m$ iff there is 
@@ -132,7 +131,6 @@ belong to different equivalence classes modulo $m$. The mapping
 
 $$
 T :
-\quad
 \left\{
 \begin{array}{l}
    \{0, 1, \ldots, m-1\} & \to \{\overline{0}, \overline{1}, \ldots\, \overline{m-1}\} \\
@@ -140,7 +138,6 @@ T :
 \end{array}
 \right.
 $$
-
 
 is an isomorphism, so we can write:
 

@@ -461,14 +461,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-functions">Step Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrable-functions">Integrable Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-riemann-integrals">Properties of Riemann Integrals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-one-dimension">Derivatives in One Dimension</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-hilbert-spaces">Derivatives in Hilbert Spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence">Convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-theorem-of-calculus">Main Theorem of Calculus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a></li>
 </ul>
             </nav>
         </div>
@@ -485,144 +486,571 @@ document.write(`
 <blockquote>
 <div><p>under construction</p>
 </div></blockquote>
-<section id="preliminaries">
-<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Link to this heading">#</a></h2>
+<section id="convergence">
+<h2>Convergence<a class="headerlink" href="#convergence" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-compactness">
+<p class="admonition-title"><span>Definition </span> (Convergence of Sequences)</p>
+<section class="definition-content" id="proof-content">
+<p><strong>(a)</strong>
+We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> <strong>convergent to <span class="math notranslate nohighlight">\(x\)</span></strong>, written as</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} x_n = x\]</div>
+<p>iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n \ge n_0\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\lvert x_n - x \rvert &lt; \epsilon\]</div>
+<p><strong>(b)</strong>
+We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a <strong>Cauchy-sequence</strong>
+iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n, m \ge n_0\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\lvert x_n - x_m \rvert &lt; \epsilon\]</div>
+</section>
+</div><div class="proof definition admonition" id="def-compactness">
+<p class="admonition-title"><span>Definition </span> (Compactness)</p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>compact</strong>,
+iff each bounded sequence of elements of A has a convergent subsequence.</p>
+</section>
+</div><div class="proof definition admonition" id="def-completness">
+<p class="admonition-title"><span>Definition </span> (Completeness)</p>
+<section class="definition-content" id="proof-content">
+<p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>complete</strong>,
+iff each Cauchy-sequence of elements of A is convergent.</p>
+</section>
+</div><div class="proof lemma admonition" id="lem-compactness-completeness">
+<p class="admonition-title"><span>Lemma </span> (Compactness Implies Completeness)</p>
+<section class="lemma-content" id="proof-content">
+<p>Compact sets are complete.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> be compact and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a Cauchy-sequence of elements of <span class="math notranslate nohighlight">\(A\)</span>.
+Then, the set <span class="math notranslate nohighlight">\(\{x_n \mid n \in \mathbb{N} \}\)</span> is bounded and has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in A\)</span>.
+Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a Cauchy-sequence, converges itself to <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="thr-bolzano-weierstrass">
+<p class="admonition-title"><span>Theorem </span> (Bolzano-Weierstrass)</p>
+<section class="theorem-content" id="proof-content">
+<p>Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact (and complete).</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Todo</p>
+</div>
+<div class="proof definition admonition" id="def-sup-norm">
+<p class="admonition-title"><span>Definition </span> (Sup Norm)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a bounded function.</p>
+<p>The <strong>sup norm</strong> (or <strong>uniform norm</strong>) of <span class="math notranslate nohighlight">\(f\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\left \lVert f \right \rVert_{\infty} = \sup \{\lvert f(x) \rvert \mid x \in [a, b]\}\]</div>
+<p>This is indeed a norm because:</p>
+<p>(i) <span class="math notranslate nohighlight">\(f = 0  \Leftrightarrow \left \lVert f \right \rVert_{\infty} = 0\)</span></p>
+<p>(ii) <span class="math notranslate nohighlight">\(\left \lVert \alpha f \right \rVert_{\infty} = \lvert\alpha\rvert \left \lVert  f \right \rVert_{\infty}\)</span></p>
+<p>(iii) <span class="math notranslate nohighlight">\(\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}\)</span></p>
+</section>
+</div><div class="proof definition admonition" id="def-convergence">
+<p class="admonition-title"><span>Definition </span> (Convergence of Functions)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f_n: [a, b] \to \mathbb{R}\)</span> <span class="math notranslate nohighlight">\((n \in \mathbb{N})\)</span> be a sequence of functions, and <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> another function.</p>
+<p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>pointwise</strong> if, for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \lvert f_n(x) - f(x) \rvert = 0\]</div>
+<p><strong>(b)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>uniformly</strong> if</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0\]</div>
+</section>
+</div></section>
+<section id="continuous-functions">
+<h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-continuity">
+<p class="admonition-title"><span>Definition </span> (Continuity)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function.</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
+<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> if <span class="math notranslate nohighlight">\(f\)</span> is continuous at each <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>.</p>
+<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-continuity-on-compact-sets">
+<p class="admonition-title"><span>Theorem </span> (Continuous Functions on Compact Sets)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be continuous. Then:</p>
+<p><strong>(a)</strong> The continuous functions on <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^0([a, b])\)</span></p>
+<p><strong>(b)</strong> The uniform limit of continuous functions is continuous, or: <span class="math notranslate nohighlight">\(C^0([a, b])\)</span> is closed under the sup-Norm.</p>
+<p><strong>(c)</strong> Continuous function assume their maximum and minimum on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p><strong>(d)</strong> Continuous functions are uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Assertion (a) is obvious. We prove (b) with the triangular inequality.
+For (c) and (d) we need <a class="reference internal" href="#thr-bolzano-weierstrass">Theorem </a>.</p>
+<p><strong>(b)</strong>
+Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.
+Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\(\lVert f_n - f \rVert_{\infty} &lt; \epsilon\)</span> and <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>
+such that <span class="math notranslate nohighlight">\( \lvert f_n(x+h) - f_n(x) \rvert &lt; \epsilon\)</span> whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \lvert f(x+h) - f(x) \rvert \\
+&amp; \le \lvert f(x+h) - f_n(x+h) \rvert + \lvert f_n(x+h) - f_n(x) \rvert + \lvert f_n(x) - f(x) \rvert \\
+&amp; &lt; 3 \epsilon\end{split}\]</div>
+<p><strong>(c)</strong>
+We prove the assertion for the maximum. Let <span class="math notranslate nohighlight">\(M = \sup\{f(x) \mid x \in [a, b] \}\)</span>. Then, for each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>,
+there is a <span class="math notranslate nohighlight">\(x_n \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(M - f(x_n) &lt; 1/n\)</span>.
+The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, and we have <span class="math notranslate nohighlight">\(f(x) = M\)</span> because <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><strong>(d)</strong>
+We prove the assertion by contradiction. Assume <span class="math notranslate nohighlight">\(f\)</span> to be not uniformly continuous. Take any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>.
+Then there exist two sequences <span class="math notranslate nohighlight">\(\{x_n\}, \{y_n\}\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\lvert x_n - y_n \rvert &lt; \frac{1}{n}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\lvert f(x_n) - f(y_n) \rvert &gt; \epsilon\]</div>
+<p>But <span class="math notranslate nohighlight">\(\{x_n\}\)</span> has a subsequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span> that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>,
+and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessarily converges to the same <span class="math notranslate nohighlight">\(x\)</span>, So, <span class="math notranslate nohighlight">\(f\)</span> is not continuous in <span class="math notranslate nohighlight">\(x\)</span>, which is a contradiction.</p>
+</div>
 <div class="proof theorem admonition" id="thr-intermediate-value">
 <p class="admonition-title"><span>Theorem </span> (Intermediate Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function, and <span class="math notranslate nohighlight">\(\mu \in \mathbb{R}\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[
-\quad \min  \{f(x)|x \in [a,b]\} \le \mu  \le \max  \{f(x)| x \in [a,b]\}
-\]</div>
+\[\min  \{f(x) \mid x \in [a,b]\} \le \mu  \le \max  \{f(x) \mid x \in [a,b]\}\]</div>
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The proof proceeds by halving intervals.</p>
+<p>Proof. The proof proceeds by halving intervals, and again, we need <a class="reference internal" href="#thr-bolzano-weierstrass">Theorem </a>.
+We build a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(x) = \mu\)</span>.
+Let <span class="math notranslate nohighlight">\(x_0 = a, x_1 = b, x_2 = (x_0 + x_1)/2\)</span>. The general rule for <span class="math notranslate nohighlight">\(x_n\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_n = 
+\left\{
+    \begin{array}{lr}
+        (x_{n-2} + x_{n-1})/2 &amp; \text{ if } f(x_{n-1}) &lt; \mu \\
+        x_{n-1} &amp; \text{ if } f(x_{n-1}) = \mu \\
+        (x_{n-3} + x_{n-1})/2 &amp; \text{ if } f(x_{n-1}) &gt; \mu
+    \end{array}
+\right .\end{split}\]</div>
+<p>We see that:</p>
+<div class="math notranslate nohighlight">
+\[\left | x_n - x_{n-1} \rvert \le \lvert x_{n-1} - x_{n-2} \right | / 2 \]</div>
+<p>so:</p>
+<div class="math notranslate nohighlight">
+\[\lvert x_n - x_{n-1} \rvert \le (b - a) / 2^{n-1} \]</div>
+<p>The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>,
+and, using the continuity of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>, we get to <span class="math notranslate nohighlight">\(f(x) = \mu\)</span>.</p>
 </div>
+</section>
+<section id="riemann-integrable-functions">
+<h2>Riemann-Integrable Functions<a class="headerlink" href="#riemann-integrable-functions" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-riemann-integrals">
+<p class="admonition-title"><span>Definition </span> (Riemann Integrals)</p>
+<section class="definition-content" id="proof-content">
+<p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
+<p><strong>(a) Partitions</strong>. A <strong>partition of <span class="math notranslate nohighlight">\([a, b]\)</span></strong> is a strictly increasing sequence <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> with <span class="math notranslate nohighlight">\(a = x_0\)</span>,  <span class="math notranslate nohighlight">\(b = x_n\)</span>.
+Its <strong>granularity</strong> is <span class="math notranslate nohighlight">\(\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}\)</span>.</p>
+<p><strong>(b) Riemann Sums</strong>. Let <span class="math notranslate nohighlight">\(X\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\{\xi_k \in [x_k, x_{k-1}] \mid k = 1, \ldots, n\}\)</span>
+be a set of intermediate points. A Riemann sum is defined as:</p>
+<div class="math notranslate nohighlight">
+\[R(f, X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})\]</div>
+<p>The granularity <span class="math notranslate nohighlight">\(\mu(R)\)</span> of a Riemann sum <span class="math notranslate nohighlight">\(R\)</span> is the granularity <span class="math notranslate nohighlight">\(\mu(X)\)</span> of its partition.</p>
+<p><strong>(c) Riemann Integrals</strong>. We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>Riemann-integrable</strong>, or <strong>R-integrable</strong> for short,
+and call</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) \, dx\]</div>
+<p>the <strong>Riemann integral</strong> of <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\([a, b]\)</span>
+if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that for any Riemann sum <span class="math notranslate nohighlight">\(R(f, X, \xi)\)</span> with <span class="math notranslate nohighlight">\(\mu(R) &lt; \delta\)</span>
+it holds that</p>
+<div class="math notranslate nohighlight">
+\[\left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | &lt; \epsilon\]</div>
+<p>In other words, Riemann sums can approximate Riemann integrals to arbitrary precision. We often write</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})\]</div>
+<p>as a short version of the exact definition, which lets us use finite sums instead of integrals.</p>
+<p><strong>(d) Riemann Primitives</strong>. Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span>. The function <span class="math notranslate nohighlight">\(F\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[F(x) = \int_a^x f(y) \, dy \]</div>
+<p>is called the Riemann-primitive (or primitive) of <span class="math notranslate nohighlight">\(f\)</span>,
+on the understanding that</p>
+<div class="math notranslate nohighlight">
+\[F(a) = \int_a^a f(x) \, dx = 0\]</div>
+<p>The notation</p>
+<div class="math notranslate nohighlight">
+\[F = \int f(y) \, dy\]</div>
+<p>is used if the lower bound <span class="math notranslate nohighlight">\(a\)</span> is unimportant or not specified. Two primitives of an integrable function <span class="math notranslate nohighlight">\(f\)</span> differ by a constant only.</p>
+</section>
+</div><div class="proof remark admonition" id="rem-monotony-additivity-boundedness">
+<p class="admonition-title"><span>Remark </span> (Monotony, Additivity, Boundedness)</p>
+<section class="remark-content" id="proof-content">
+<p>We state three obvious but important properties of Riemann integrals:</p>
+<p><strong>(a) Monotony</strong></p>
+<div class="math notranslate nohighlight">
+\[f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx\]</div>
+<p>holds for any two functions <span class="math notranslate nohighlight">\(f,g \in \mathcal{R}([a,b])\)</span>.</p>
+<p><strong>(b) Additivity</strong></p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx\]</div>
+<p>holds for any <span class="math notranslate nohighlight">\(f \in\mathcal{R}([a,c])\)</span> and any <span class="math notranslate nohighlight">\(b \in [a, c]\)</span>.</p>
+<p><strong>(c) Boundedness</strong></p>
+<p>R-integrable functions are bounded on closed intervals
+(because Riemann sums are).</p>
+</section>
+</div><p>Monotony leads us to an important theorem.</p>
 <div class="proof theorem admonition" id="thr-mean-value">
 <p class="admonition-title"><span>Theorem </span> (Mean Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
 <div class="math notranslate nohighlight">
-\[
-\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
-\]</div>
+\[\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx\]</div>
 <p>With <span class="math notranslate nohighlight">\(\phi = 1\)</span> we get:</p>
 <div class="math notranslate nohighlight">
+\[\int_a^b f(x) \, dx= f(\xi) (b-a)\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem </a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
+And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m \le f(x) \le M \]</div>
+<p>The rest is straightforward: multiply by <span class="math notranslate nohighlight">\(\phi(x)\)</span> and integrate:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
+</div>
+<div class="proof theorem admonition" id="thr-riemann-integrals">
+<p class="admonition-title"><span>Theorem </span> (Properties of Riemann Integrals)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
+<p><strong>(b)</strong> The mapping</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b :f \mapsto \int_a^b f(y) \, dy\]</div>
+<p>is called the <strong>integration functional</strong>. It is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<p><strong>(c)</strong> Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a, b])\)</span>. Then the following inequality holds:</p>
+<div class="math notranslate nohighlight">
+\[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
+<p><strong>(d)</strong> The primitive of an R-integrable function is continuous. The mapping</p>
+<div class="math notranslate nohighlight">
+\[\int :f \mapsto \int_a^x f(y) \, dy\]</div>
+<p>is called the <strong>integration operator</strong>. It is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^0([a, b])\)</span>.</p>
+<p><strong>(e)</strong> The <strong>uniform limit</strong> of R-integrable functions is R-integrable,
+or, equivalently: <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> is closed under the sup norm.
+We can swap limit and integral:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. The assertions (a) and (b) are obvious.
+The proofs of (c) and (e) use the triangular inequality, and (d) follows from the fact that R-integrable functions are bounded.</p>
+<p><strong>(c)</strong>
+The idea is to approximate the integrals over <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(|f|\)</span> by a single partition.
+We apply the triangular inequality to the Riemann sums and, keeping track of the <span class="math notranslate nohighlight">\(\epsilon\)</span>, we transfer the result to the integrals.
+Let <span class="math notranslate nohighlight">\(X\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermnediate points, and <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\left | \int_a^b f(y) \, dy - \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | &lt; \epsilon\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\left | \int_a^b |f(y)| \, dy - \sum_{k=0}^n |f(\xi_k)| (x_{k+1} - x_k) \right | &lt; \epsilon\]</div>
+<p>This gives us:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \left | \int_a^b f(y) \, dy \right | \\
+&amp; \le \left | \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | + \epsilon \\
+&amp; \le \sum_{k=0}^n \left | f(\xi_k) \right | (x_{k+1} - x_k)  + \epsilon \\
+&amp; \le \int_a^b \left | f(y) \right | \, dy  + 2 \epsilon \end{split}\]</div>
+<p>This is the assertion.</p>
+<p><strong>(d)</strong>
+Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be integrable,  and <span class="math notranslate nohighlight">\(F\)</span> a primitive of <span class="math notranslate nohighlight">\(f\)</span>.
+Then, <span class="math notranslate nohighlight">\(f\)</span> is bounded by some <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span>, and we have, for <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> and arbitrarily small <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M\]</div>
+<p>which proves the continuity of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span></p>
+<p><strong>(e)</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>. Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> and <span class="math notranslate nohighlight">\(n_0\)</span> be such that, for <span class="math notranslate nohighlight">\(n \ge n_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\left \lVert f_n - f \right \rVert_{\infty} &lt; \epsilon \]</div>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[A_n = \int_a^b f_n(y) \, dy \]</div>
+<p>We have, for large <span class="math notranslate nohighlight">\(n, m\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\left | A_n - A_m \right | \le \int_a^b \left | f_n(y) - f_m(y) \right |  \, dy \le (b - a) \epsilon\]</div>
+<p>So, the sequence <span class="math notranslate nohighlight">\(\{A_n\}\)</span> is a Cauchy sequence, converges to some value <span class="math notranslate nohighlight">\(A\)</span>, and:</p>
+<div class="math notranslate nohighlight">
+\[\left | A_n - A \right | \le \epsilon\]</div>
+<p>for some large, fixed <span class="math notranslate nohighlight">\(n\)</span>.
+As <span class="math notranslate nohighlight">\(f_n\)</span> is R-integrable we can choose a partition <span class="math notranslate nohighlight">\(X\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span> such that,
+for any set of intermediate points <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[\left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right | &lt; \epsilon\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\left | A - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
+&amp; \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
+&amp; \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right |  + \sum_{k=0}^{n-1} |f_n(\xi_k) - f(\xi_k)| (x_{k+1}-x_k) \\
+&amp; &lt; \epsilon + (b-a) \epsilon + (b-a) \epsilon\end{split}\]</div>
+<p>This proves that <span class="math notranslate nohighlight">\(f\)</span> is R-integrable and:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \int_a^b f_n(y) \, dy = A = \int_a^b f(y) \, dy = \int_a^b \lim_{n \to \infty} f_n(y) \, dy \]</div>
+</div>
+<div class="proof theorem admonition" id="thr-riemann-integrable-functions">
+<p class="admonition-title"><span>Theorem </span> (Riemann-Integrable Functions)</p>
+<section class="theorem-content" id="proof-content">
+<p>We consider functions on a closed interval.</p>
+<p><strong>(a)</strong> Step functions are R-integrable</p>
+<p><strong>(b)</strong> Monotonous functions are R-integrable</p>
+<p><strong>(c)</strong> Continuous functions are R-integrable</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. <strong>(a)</strong>
+Let <span class="math notranslate nohighlight">\(\phi\)</span> be a step function on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})\)</span>. Then, obviously:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k\]</div>
+<p><strong>(b)</strong>
+Let <span class="math notranslate nohighlight">\(f\)</span> be monotonous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is the uniform limit of step functions.
+We define</p>
+<div class="math notranslate nohighlight">
+\[\phi(x) = f(x_k) \text{ for } x \in [x_k, x_{k+1}).\]</div>
+<p><strong>(c)</strong>
+Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. The <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem </a>
+and is the uniform limit of step functions.</p>
+</div>
+<p>A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
+<div class="proof theorem admonition" id="thr-riemann-integrable-functions">
+<p class="admonition-title"><span>Theorem </span> (Lebesgue-Criterion)</p>
+<section class="theorem-content" id="proof-content">
+<p>Bounded functions are R-integrable iff their set of discontinuities has measure zero.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. todo</p>
+</div>
+</section>
+<section id="differentiable-functions">
+<h2>Differentiable Functions<a class="headerlink" href="#differentiable-functions" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-derivatives">
+<p class="admonition-title"><span>Definition </span> (Derivatives)</p>
+<section class="definition-content" id="proof-content">
+<p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>.</p>
+<p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> in <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
+<p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>. We note that</p>
+<div class="math notranslate nohighlight">
+\[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
+<p>which means that the term <span class="math notranslate nohighlight">\(f'(x) \, h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><strong>(c)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuously differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if it is differentiable at <span class="math notranslate nohighlight">\(x\)</span>
+and its derivative <span class="math notranslate nohighlight">\(f'\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><strong>(b)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> on <span class="math notranslate nohighlight">\([a, b]\)</span> if it is differentiable for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>.
+<span class="math notranslate nohighlight">\(f'\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p><strong>(c)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuously differentiable</strong> on <span class="math notranslate nohighlight">\([a, b]\)</span> if it is differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>
+and its derivative is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p><strong>(d)</strong> Higher order derivatives are analogously defined and denoted by <span class="math notranslate nohighlight">\(f', f'', f^{(3)}, \ldots,   f^{(n)}\)</span>.
+A function is said to be <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable if <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-properties-derivatives">
+<p class="admonition-title"><span>Theorem </span> (Properties of Derivatives)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a)</strong> The continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^1 ([a, b])\)</span>.
+Likewise, the <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a vector space, written as <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span>.</p>
+<p><strong>(b)</strong> The mapping</p>
+<div class="math notranslate nohighlight">
+\[\partial :f \mapsto f'\]</div>
+<p>is called the <strong>differential operator</strong>. It is a linear mapping from <span class="math notranslate nohighlight">\(C^1 ([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^0 ([a, b])\)</span>.</p>
+<p>Likewise, the mapping</p>
+<div class="math notranslate nohighlight">
+\[\partial^2 :f \mapsto f''\]</div>
+<p>is called the <strong>differential operator of second order</strong>. It is a linear mapping from <span class="math notranslate nohighlight">\(C^2 ([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^0 ([a, b])\)</span>.
+Higher order differential operators <span class="math notranslate nohighlight">\(\partial^n\)</span> are analogouosly defined.</p>
+<p><strong>(c)</strong> The <strong>uniform limit</strong> of differentiable functions is differentiable,
+and we can swap limit and differentiation:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n\]</div>
+<p>Likewise, we have:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \partial^n f_n = \partial^n \lim_{n \to \infty} f_n\]</div>
+<p>This can be expressed as: <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span> is closed under the sup norm.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. todo</p>
+</div>
+<div class="proof theorem admonition" id="thr-differentiation-rules">
+<p class="admonition-title"><span>Theorem </span> (Differentiation Rules)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
+<p><strong>(a)</strong> Product Rule
+Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[f'g' = f'g + fg'\]</div>
+<p><strong>(b)</strong> Chain Rule
+Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([\min(f), \max(f)])\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[(f \circ g)' = (f' \circ g) \, g'\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. todo</p>
+</div>
+</section>
+<section id="main-theorem-of-calculus">
+<h2>Main Theorem of Calculus<a class="headerlink" href="#main-theorem-of-calculus" title="Link to this heading">#</a></h2>
+<div class="proof theorem admonition" id="thr-main-theorem-calculus">
+<p class="admonition-title"><span>Theorem </span> (Main Theorem of Calculus)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span> and <span class="math notranslate nohighlight">\(F\)</span> be the <strong>primitive</strong> of <span class="math notranslate nohighlight">\(f\)</span>, defined by</p>
+<div class="math notranslate nohighlight">
+\[F(x) = \int_a^x f(y) \, dy \]</div>
+<p>Then:</p>
+<p><strong>(a)</strong></p>
+<div class="math notranslate nohighlight">
+\[F(b) - F(a)  = \int_a^b f(y) \, dy \]</div>
+<p><strong>(b)</strong>
+If <span class="math notranslate nohighlight">\(f\)</span> is continuous in <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(x\)</span> and it holds that</p>
+<div class="math notranslate nohighlight">
+\[F'(x) = f(x)\]</div>
+<p><strong>(c)</strong>
+If <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>, and it holds that</p>
+<div class="math notranslate nohighlight">
+\[F' = f\]</div>
+<p><strong>(d)</strong>
+The linear operators <span class="math notranslate nohighlight">\(\int\)</span> and <span class="math notranslate nohighlight">\(\partial\)</span> are inverse to each other.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}\int : 
+\left\{
+    \begin{array}{lr}
+        C^0([a, b] \to C^1([a, b] \\
+        f \mapsto F
+    \end{array}
+\right\}\end{split}\\\begin{split}\\\end{split}\\\begin{split}\partial : 
+\left\{
+    \begin{array}{lr}
+        C^1([a, b] \to C^0([a, b] \\
+        F \mapsto f
+    \end{array}
+\right\}
+\end{split}\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\left( \int \partial \right) F = F\\\left( \partial \int \right) f = f\end{aligned}\end{align} \]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. todo</p>
+</div>
+<div class="proof theorem admonition" id="thr-integration-rules">
+<p class="admonition-title"><span>Theorem </span> (Integration Rules)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
+<p><strong>(a)</strong> Integration by Parts
+Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
+<p><strong>(b)</strong> Substitution Rule
+Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b))\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. todo</p>
+</div>
+</section>
+<section id="taylor-theorem">
+<h2>Taylor Theorem<a class="headerlink" href="#taylor-theorem" title="Link to this heading">#</a></h2>
+<p>Derivatives are about local changes: How does a function <span class="math notranslate nohighlight">\(f\)</span> behave in a neighbourhood of some point <span class="math notranslate nohighlight">\(x\)</span>? The Taylor series allows us to express
+<span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term. In
+what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open interval, and <span class="math notranslate nohighlight">\(x, u \in A\)</span>.</p>
+<div class="proof theorem admonition" id="thr-taylor-v1">
+<p class="admonition-title"><span>Theorem </span> (Taylor V1)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
 \[
-\int_a^b f(x) \, dx= f(\xi) (b-a)
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
+\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thr-taylor-v2">
+<p class="admonition-title"><span>Theorem </span> (Taylor V2)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,u]\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
+\]</div>
+<p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
+\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thr-taylor-v3">
+<p class="admonition-title"><span>Theorem </span> (Taylor V3)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f \in  C^n(A)\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)
+\]</div>
+<p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)
 \]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. From <a class="reference internal" href="#thr-mean-value">Theorem </a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
-And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
+<p>Proof. <strong>V1:</strong></p>
+<p>Proof by induction, using the main theorem of integration and integration by parts:</p>
 <div class="math notranslate nohighlight">
-\[
-m \le f(x) \le M 
-\]</div>
-<p>The rest is straightforward: multiply by <span class="math notranslate nohighlight">\(\phi(x)\)</span> and integrate:</p>
+\[ \begin{align}\begin{aligned}
+f(u) - f(x) &amp;= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt\\&amp; = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... }\\&amp; =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
+\end{aligned}\end{align} \]</div>
+<p><strong>V2:</strong> Using the mean value theorem, we find a <span class="math notranslate nohighlight">\(\xi \in [x, u]\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[
-m \phi(x) \le f(x) \phi(x) \le M \phi(x)
-\]</div>
+\[\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}\]</div>
+<p><strong>V3</strong></p>
 <div class="math notranslate nohighlight">
-\[
-m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
-\]</div>
+\[ \begin{align}\begin{aligned}
+f(u) &amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n\\&amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
+\end{aligned}\end{align} \]</div>
 </div>
 </section>
-<section id="step-functions">
-<h2>Step Functions<a class="headerlink" href="#step-functions" title="Link to this heading">#</a></h2>
-<p>Consider a closed interval <span class="math notranslate nohighlight">\(A = [a, b]\subset \mathbb{R}\)</span>. A <strong>partition of A</strong> is an
-increasing sequence <span class="math notranslate nohighlight">\(\left\{x_1, x_2, \dots, x_n\right\}\)</span>
-with <span class="math notranslate nohighlight">\(a = x_1\)</span>,  <span class="math notranslate nohighlight">\(b = x_n\)</span>. Its granularity is <span class="math notranslate nohighlight">\(\max \left\{\left.x_k-x_{k-1}\right|k=1,\dots,n\right\}\)</span>. A <strong>step function</strong> is
-constant on the intervals <span class="math notranslate nohighlight">\(\left[x_{k-1}, x_k\right]\)</span>. It is clear that the sum of two step functions is again a step function,
-and the same is true for the product of a step function with a scalar. So the step functions on an interval form a vector
-space <span class="math notranslate nohighlight">\(\mathcal{S}[a, b]\)</span>. The integral of a step function <span class="math notranslate nohighlight">\(\phi\)</span> on [a, b] is defined as</p>
+<section id="little-o-big-o">
+<h2>Little o, Big O<a class="headerlink" href="#little-o-big-o" title="Link to this heading">#</a></h2>
+<p>Little o means: <span class="math notranslate nohighlight">\(f\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span> faster than <span class="math notranslate nohighlight">\(g\)</span>, or, equivalently, <span class="math notranslate nohighlight">\(f/g\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\int_a^b \phi (x) \, dx= \sum _{k=1}^n \phi _k
+f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
 \]</div>
-<p>with <span class="math notranslate nohighlight">\(\phi(x)= \phi _k\)</span> on <span class="math notranslate nohighlight">\(\left[x_{k-1},x_k\right]\)</span></p>
-<p>The integration functional</p>
 <div class="math notranslate nohighlight">
 \[
-\int :\phi \mapsto \int_a^b \phi(x) \, dx
+f=o(1) \Longleftrightarrow \lim f(x) = 0 
 \]</div>
-<p>is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{S}[a, b]\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. It is also monotone:</p>
 <div class="math notranslate nohighlight">
 \[
-\phi \le \psi  \Rightarrow  \int_a^b \phi(x) \, dx \le \int _a^b\psi(x) \, dx
+f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
 \]</div>
-<p>for any two step functions  <span class="math notranslate nohighlight">\(\phi,\psi\)</span>.</p>
+<p>Big O means: <span class="math notranslate nohighlight">\(f\)</span> grows not faster than <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f = O(1) \Longleftrightarrow f(x)\le C 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f = O(x^n) \Longleftrightarrow f(x)\le C x^n
+\]</div>
 </section>
-<section id="integrable-functions">
-<h2>Integrable Functions<a class="headerlink" href="#integrable-functions" title="Link to this heading">#</a></h2>
-<p>We extend the integration functional to a larger class of functions. The idea is that of a sandwich:
-A function <span class="math notranslate nohighlight">\(f\)</span> defined on <span class="math notranslate nohighlight">\([a,b]\)</span> is squeezed between two step functions <span class="math notranslate nohighlight">\(\phi, \psi \)</span> such that:</p>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<span class="target" id="id1"></span></section>
+<section id="archive">
+<h2>archive<a class="headerlink" href="#archive" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
-\[
-\phi \le f \le \psi 
-\]</div>
-<p>and:</p>
+\[\begin{split}\begin{equation}
+Y(i,k) = 
+\left\{
+    \begin{array}{lr}
+        ||R_{k}-R_{i}||^{2}, &amp; \text{if } i \neq k\\
+        ||\triangle_{i}||^{2}, &amp; \text{if } i\leq k
+    \end{array}
+\right\} = yz
+\end{equation}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\int _a^b \psi(x) -\phi(x) \, dx \lt \epsilon
-\]</div>
-<p>If we can find such a step function for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> then we say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>Riemann-integrable</strong> or <strong>R-integrable</strong> for
-short. This is equivalent to:</p>
-<div class="math notranslate nohighlight">
-\[
-\sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \phi(x) \, dx
-\]</div>
-<p>and we can define:</p>
-<div class="math notranslate nohighlight">
-\[
-\int_a^b f(x) \, dx := \sup_{\phi \le f} \int _a^b \phi(x) \, dx  = \inf _{\psi \ge f} \int_a^b \phi (x) \, dx
-\]</div>
-<p>Equation (1) is a concise reformulation of equation (2), there is nothing to prove.
-An alternative definition of Riemann integrability is based on intermediate sums.
-This needs some terminology: we call <span class="math notranslate nohighlight">\(\left\{x_1, x_2, \dots , x_n\right\}\)</span>
-a partition of <span class="math notranslate nohighlight">\([a,b]\)</span>, <span class="math notranslate nohighlight">\(\min _{k =1,\dots ,n} \left\{x_k-x_{k-1}\right\}\)</span> its granularity,
-and <span class="math notranslate nohighlight">\(\left\{\xi_1, \xi_2, \dots,\xi_n\right\}\)</span> a set of intermediate points with <span class="math notranslate nohighlight">\(\left.\xi_k\in \left[x_{k-1},x_k\right.\right), (k=1,\dots,n)\)</span>.
-Here is the alternative definition: A function <span class="math notranslate nohighlight">\(f\)</span> is R-integrable on <span class="math notranslate nohighlight">\([a,b]\)</span> iff, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
-we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, such that for any partition with granularity less than <span class="math notranslate nohighlight">\(\delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points, we have:</p>
-<div class="math notranslate nohighlight">
-\[
-\left|\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right|&lt;\epsilon
-\]</div>
-<p>This definition is needed for the proof of the main theorem.</p>
-</section>
-<section id="properties-of-riemann-integrals">
-<h2>Properties of Riemann Integrals<a class="headerlink" href="#properties-of-riemann-integrals" title="Link to this heading">#</a></h2>
-<p>(R1) The set <span class="math notranslate nohighlight">\(\mathcal{R}[a, b]\)</span> of R-integrable functions is a vector space. The integration functional</p>
-<div class="math notranslate nohighlight">
-\[
-\int :f \mapsto \int_a^b f(x) \, dx
-\]</div>
-<p>is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{R}[a, b]\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. It is also monotone:</p>
-<div class="math notranslate nohighlight">
-\[
-f \le g \Rightarrow  \int_a^b f(x) \, dx \le \int _a^bg(x) \, dx
-\]</div>
-<p>holds for any two functions <span class="math notranslate nohighlight">\(f,g \in\mathcal{R}[a,b]\)</span>.</p>
-<p>(R2) There are many R-integrable functions: step functions (by definition),
-continuous functions (also with finitely many discontinuities),
-monotone functions, the maximum, minimum, and product of R-integrable functions.
-A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
-<p>(R3) <span class="math notranslate nohighlight">\(\mathcal{R}[a, b]\)</span> is closed under the maximum norm, i.e. the uniform limit of R-integrable functions is R-integrable,
-and we can swap limit and integral:</p>
-<div class="math notranslate nohighlight">
-\[
-\underset{n \to \infty} \lim \int_a^b f_n(x) \, dx = \int _a^b\underset{n \to \infty} \lim f_n(x)
-\]</div>
-<p>assuming uniform convergence.</p>
+\[\begin{split}Y(i,k) = 
+\left\{
+    \begin{array}{lr}
+        ||R_{k}-R_{i}||^{2}, &amp; \text{if } i \neq k\\
+        ||\triangle_{i}||^{2}, &amp; \text{if } i\leq k
+    \end{array}
+\right\} = yz\end{split}\]</div>
 <div class="proof admonition" id="proof">
 <p>Proof. The properties (R1), (R2) and (R3) follow easily from (3), (R5) follows easily from (R4), and the proof of (R4) is the sting of this chapter. Let’s
 do it in this order.
@@ -696,146 +1124,17 @@ and it holds that</p>
 \int _{\mathbb{R}^n}\alpha f(x) + \beta g(x) \, dx = \alpha \int_{\mathbb{R}^n}f(x) \, dx + \beta \int_{\mathbb{R}^n}g(x) \, dx
 \]</div>
 </div>
-</section>
-<section id="derivatives-in-one-dimension">
-<h2>Derivatives in One Dimension<a class="headerlink" href="#derivatives-in-one-dimension" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="def-first-derivative">
-<p class="admonition-title"><span>Definition </span> (First Derivative)</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span></p>
+<p>An alternative definition of Riemann integrability is based on intermediate sums.
+This needs some terminology: we call <span class="math notranslate nohighlight">\(\left\{x_1, x_2, \dots , x_n\right\}\)</span>
+a partition of <span class="math notranslate nohighlight">\([a,b]\)</span>, <span class="math notranslate nohighlight">\(\min _{k =1,\dots ,n} \left\{x_k-x_{k-1}\right\}\)</span> its granularity,
+and <span class="math notranslate nohighlight">\(\left\{\xi_1, \xi_2, \dots,\xi_n\right\}\)</span> a set of intermediate points with <span class="math notranslate nohighlight">\(\left.\xi_k\in \left[x_{k-1},x_k\right.\right), (k=1,\dots,n)\)</span>.
+Here is the alternative definition: A function <span class="math notranslate nohighlight">\(f\)</span> is R-integrable on <span class="math notranslate nohighlight">\([a,b]\)</span> iff, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
+we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, such that for any partition with granularity less than <span class="math notranslate nohighlight">\(\delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points, we have:</p>
 <div class="math notranslate nohighlight">
 \[
-f'(x) = \underset{h \to 0} \lim\frac{1}{h}(f(x+h)-f(x)) = \frac{d}{d \epsilon}f(x + \epsilon h)|_{\epsilon =0 }
+\left\lvert\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right\rvert&lt;\epsilon
 \]</div>
-<p>So:</p>
-<div class="math notranslate nohighlight">
-\[
-f(x+h) = f(x)+ f'(x)h + o(h)
-\]</div>
-<p>and the term <span class="math notranslate nohighlight">\(f'(x)h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
-</section>
-</div><p>Derivatives are about local changes: How does a function <span class="math notranslate nohighlight">\(f\)</span> behave in a neighbourhood of some point <span class="math notranslate nohighlight">\(x\)</span>? The Taylor series allows us to express
-<span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term. In
-what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open interval, and <span class="math notranslate nohighlight">\(x, u \in A\)</span>.</p>
-<div class="proof theorem admonition" id="thr-taylor-v1">
-<p class="admonition-title"><span>Theorem </span> (Taylor V1)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
-<div class="math notranslate nohighlight">
-\[
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-\]</div>
-</section>
-</div><div class="proof theorem admonition" id="thr-taylor-v2">
-<p class="admonition-title"><span>Theorem </span> (Taylor V2)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,u]\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
-\]</div>
-<p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
-\]</div>
-</section>
-</div><div class="proof theorem admonition" id="thr-taylor-v3">
-<p class="admonition-title"><span>Theorem </span> (Taylor V3)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in  C^n(A)\)</span>. Then:</p>
-<div class="math notranslate nohighlight">
-\[
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(|x-a|)^n
-\]</div>
-<p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(|h|^n) 
-\]</div>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. <strong>V1:</strong></p>
-<p>Proof by induction, using the main theorem of integration and integration by parts:</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-f(u) - f(x) &amp;= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt\\&amp; = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... }\\&amp; =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-\end{aligned}\end{align} \]</div>
-<p><strong>V2:</strong> Using the mean value theorem, we find a <span class="math notranslate nohighlight">\(\xi \in [x, u]\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}\]</div>
-<p><strong>V3</strong></p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-f(u) &amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n\\&amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
-\end{aligned}\end{align} \]</div>
-</div>
-</section>
-<section id="derivatives-in-hilbert-spaces">
-<h2>Derivatives in Hilbert Spaces<a class="headerlink" href="#derivatives-in-hilbert-spaces" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="def-derivative-hilbert">
-<p class="admonition-title"><span>Definition </span> (Derivative in Hibert Spaces)</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(F: U \rightarrow V\)</span>. The derivative <span class="math notranslate nohighlight">\(DF\)</span> of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span> is
-A linear mapping <span class="math notranslate nohighlight">\(DF(x): U \rightarrow V\)</span> is the derivative of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span>, iff</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-&amp;DF(x) = lim_{h \to 0} \frac{1}{\| h\| }(F(x+h)-F(x))\\&amp;F(x+h) - F(x) = DF(x)(h) + o(h) = DF(x)\mathsf{T}h+o(\| h\|)
-\end{aligned}\end{align} \]</div>
-<p>If such a mapping exists, <span class="math notranslate nohighlight">\(F\)</span> is called differentiable in <span class="math notranslate nohighlight">\(x\)</span>.
-We say that <span class="math notranslate nohighlight">\(F\)</span> is locally approximated by <span class="math notranslate nohighlight">\(DF(x)\)</span>.</p>
-</section>
-</div><div class="proof theorem admonition" id="def-unique-derivative">
-<p class="admonition-title"><span>Theorem </span> (Uniqueness of the Derivative)</p>
-<section class="theorem-content" id="proof-content">
-<p>The derivative is unique.</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. Assume that</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-F(x+h)-F(x) = D(h) + o(h)\\F(x+h)-F(x) = E(h) + o(h)
-\end{aligned}\end{align} \]</div>
-<p>Then:</p>
-<div class="math notranslate nohighlight">
-\[
-D(h) + o(h) = E(h) + o(h)
-\]</div>
-<p>which shows that <span class="math notranslate nohighlight">\(D= E\)</span>.</p>
-</div>
-</section>
-<section id="little-o-big-o">
-<h2>Little o, Big O<a class="headerlink" href="#little-o-big-o" title="Link to this heading">#</a></h2>
-<p>Little o means: <span class="math notranslate nohighlight">\(f\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span> faster than <span class="math notranslate nohighlight">\(g\)</span>, or, equivalently, <span class="math notranslate nohighlight">\(f/g\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-f=o(1) \Longleftrightarrow \lim f(x) = 0 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
-\]</div>
-<p>Big O means: <span class="math notranslate nohighlight">\(f\)</span> grows not faster than <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-f = O(1) \Longleftrightarrow f(x)\le C 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-f = O(x^n) \Longleftrightarrow f(x)\le C x^n
-\]</div>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<span class="target" id="id1"></span><div style="margin-bottom: 100px;"></div>
+<div style="margin-bottom: 100px;"></div>
 </section>
 </section>
 
@@ -903,14 +1202,15 @@ f = O(x^n) \Longleftrightarrow f(x)\le C x^n
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-functions">Step Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrable-functions">Integrable Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-riemann-integrals">Properties of Riemann Integrals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-one-dimension">Derivatives in One Dimension</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-in-hilbert-spaces">Derivatives in Hilbert Spaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence">Convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-theorem-of-calculus">Main Theorem of Calculus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a></li>
 </ul>
   </nav></div>
 
