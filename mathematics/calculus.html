@@ -469,7 +469,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trying-myst">Trying MyST</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbering-box-enabled-true">numbering:
+box:
+enabled: true</a></li>
 </ul>
             </nav>
         </div>
@@ -499,7 +505,7 @@ We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span>
 <div class="math notranslate nohighlight">
 \[\lvert x_n - x \rvert &lt; \epsilon\]</div>
 <p><strong>(b)</strong>
-We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a <strong>Cauchy-sequence</strong>
+We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a <strong>Cauchy sequence</strong>
 iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n, m \ge n_0\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\lvert x_n - x_m \rvert &lt; \epsilon\]</div>
@@ -545,6 +551,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>(i) <span class="math notranslate nohighlight">\(f = 0  \Leftrightarrow \left \lVert f \right \rVert_{\infty} = 0\)</span></p>
 <p>(ii) <span class="math notranslate nohighlight">\(\left \lVert \alpha f \right \rVert_{\infty} = \lvert\alpha\rvert \left \lVert  f \right \rVert_{\infty}\)</span></p>
 <p>(iii) <span class="math notranslate nohighlight">\(\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}\)</span></p>
+<p>The proofs are trivial.</p>
 </section>
 </div><div class="proof definition admonition" id="def-convergence">
 <p class="admonition-title"><span>Definition </span> (Convergence of Functions)</p>
@@ -552,7 +559,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>Let <span class="math notranslate nohighlight">\(f_n: [a, b] \to \mathbb{R}\)</span> <span class="math notranslate nohighlight">\((n \in \mathbb{N})\)</span> be a sequence of functions, and <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> another function.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>pointwise</strong> if, for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, we have</p>
 <div class="math notranslate nohighlight">
-\[\lim_{n \to \infty} \lvert f_n(x) - f(x) \rvert = 0\]</div>
+\[\lim_{n \to \infty} \left | f_n(x) - f(x) \right | = 0\]</div>
 <p><strong>(b)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>uniformly</strong> if</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0\]</div>
@@ -564,9 +571,12 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p class="admonition-title"><span>Definition </span> (Continuity)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function.</p>
-<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
+there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
 <p><strong>(b)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> if <span class="math notranslate nohighlight">\(f\)</span> is continuous at each <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>.</p>
-<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
+<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
+there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>
+whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-continuity-on-compact-sets">
 <p class="admonition-title"><span>Theorem </span> (Continuous Functions on Compact Sets)</p>
@@ -579,7 +589,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Assertion (a) is obvious. We prove (b) with the triangular inequality.
-For (c) and (d) we need <a class="reference internal" href="#thr-bolzano-weierstrass">Theorem </a>.</p>
+For (c) and (d) we need <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass</span></a>.</p>
 <p><strong>(b)</strong>
 Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.
 Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\(\lVert f_n - f \rVert_{\infty} &lt; \epsilon\)</span> and <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>
@@ -612,8 +622,12 @@ and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessaril
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The proof proceeds by halving intervals, and again, we need <a class="reference internal" href="#thr-bolzano-weierstrass">Theorem </a>.
-We build a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(x) = \mu\)</span>.
+<p>Proof. The proof proceeds by halving intervals.
+We build two sequences <span class="math notranslate nohighlight">\(\{a_n\},\{b_n\}\)</span> such that ${a_n} is</p>
+<div class="math notranslate nohighlight">
+\[f(a_n) \le \mu
+f(b_n) \ge \mu\]</div>
+<p>sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(x) = \mu\)</span>.
 Let <span class="math notranslate nohighlight">\(x_0 = a, x_1 = b, x_2 = (x_0 + x_1)/2\)</span>. The general rule for <span class="math notranslate nohighlight">\(x_n\)</span> is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x_n = 
@@ -627,11 +641,11 @@ Let <span class="math notranslate nohighlight">\(x_0 = a, x_1 = b, x_2 = (x_0 + 
 <p>We see that:</p>
 <div class="math notranslate nohighlight">
 \[\left | x_n - x_{n-1} \rvert \le \lvert x_{n-1} - x_{n-2} \right | / 2 \]</div>
-<p>so:</p>
+<p>so, by induction:</p>
 <div class="math notranslate nohighlight">
 \[\lvert x_n - x_{n-1} \rvert \le (b - a) / 2^{n-1} \]</div>
-<p>The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>,
-and, using the continuity of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>, we get to <span class="math notranslate nohighlight">\(f(x) = \mu\)</span>.</p>
+<p>The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is a Cauchy sequence. Hence it converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, and, being continuous,
+<span class="math notranslate nohighlight">\(\{f(x_n)\}\)</span> converges to $f(x).</p>
 </div>
 </section>
 <section id="riemann-integrable-functions">
@@ -788,21 +802,43 @@ for any set of intermediate points <span class="math notranslate nohighlight">\(
 <section class="theorem-content" id="proof-content">
 <p>We consider functions on a closed interval.</p>
 <p><strong>(a)</strong> Step functions are R-integrable</p>
-<p><strong>(b)</strong> Monotonous functions are R-integrable</p>
-<p><strong>(c)</strong> Continuous functions are R-integrable</p>
+<p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function such that, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
+there are R-integrable functions <span class="math notranslate nohighlight">\(\phi, \psi\)</span> with</p>
+<div class="math notranslate nohighlight">
+\[\phi \le f \le \psi\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b (\psi(x) - \phi(x)) \, dx &lt; \epsilon.\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f\)</span> is R-integrable</p>
+<p><strong>(c)</strong> Monotonous functions are R-integrable</p>
+<p><strong>(d)</strong> Continuous functions are R-integrable</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
 Let <span class="math notranslate nohighlight">\(\phi\)</span> be a step function on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})\)</span>. Then, obviously:</p>
 <div class="math notranslate nohighlight">
 \[\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k\]</div>
-<p><strong>(b)</strong>
-Let <span class="math notranslate nohighlight">\(f\)</span> be monotonous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is the uniform limit of step functions.
-We define</p>
-<div class="math notranslate nohighlight">
-\[\phi(x) = f(x_k) \text{ for } x \in [x_k, x_{k+1}).\]</div>
+<p><strong>(b)</strong></p>
+<p>todo</p>
 <p><strong>(c)</strong>
-Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. The <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem </a>
+Let <span class="math notranslate nohighlight">\(f\)</span> be monotonously non-decreasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can squeezed between two step functions, <span class="math notranslate nohighlight">\(\phi, \psi\)</span>,
+which are integrable as we know from (a).
+Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed and <span class="math notranslate nohighlight">\(x_k = a + \frac{k}{n}(b-a)\)</span>. We set:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \phi(x) = f(x_k) \text{ for } x \in [x_k, x_{k+1}) \\
+&amp; \psi(x) = f(x_{k+1}) \text{ for } x \in [x_k, x_{k+1})\end{split}\]</div>
+<p>Then, clearly:</p>
+<div class="math notranslate nohighlight">
+\[\phi \le f \le \psi\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \int_a^b (\psi(x) - \phi(x)) \, dx \\
+&amp; = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
+&amp; = \frac{1}{n}(b-a) \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
+&amp; = \frac{1}{n}(b-a)(f(b) - f(a))\end{split}\]</div>
+<p>which can be made arbitrarily small. The assertion follows from (b).</p>
+<p><strong>(d)</strong>
+Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem </a>
 and is the uniform limit of step functions.</p>
 </div>
 <p>A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
@@ -1033,6 +1069,49 @@ f = O(x^n) \Longleftrightarrow f(x)\le C x^n
 <span class="target" id="id1"></span></section>
 <section id="archive">
 <h2>archive<a class="headerlink" href="#archive" title="Link to this heading">#</a></h2>
+<section id="trying-myst">
+<h3>Trying MyST<a class="headerlink" href="#trying-myst" title="Link to this heading">#</a></h3>
+<figure class="align-center" id="id77">
+<img alt="https://github.com/rowanc1/pics/blob/main/mountains.png?raw=true" src="https://github.com/rowanc1/pics/blob/main/mountains.png?raw=true" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">My <strong>bold</strong> mountain 🏔🚠.</span><a class="headerlink" href="#id77" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>This is a reference to <a class="reference internal" href="#my-fig"><span class="xref myst">My Mountain</span></a></p>
+<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass</span></a></p>
+<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">“{name}”</span></a></p>
+<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass">Bolzano-Weierstrass</a></p>
+<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass">&quot;{name}&quot;</a></p>
+<p>This is a reference to &#64;thr-bolzano-weierstrass</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="numbering-box-enabled-true">
+<h2>numbering:
+box:
+enabled: true<a class="headerlink" href="#numbering-box-enabled-true" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id78">
+<img alt="mathematics/westfield2.png" src="mathematics/westfield2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">This figure will be numbered as “Box 1”</span><a class="headerlink" href="#id78" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[Ax = b\]</div>
+<div class="math notranslate nohighlight">
+\[Ax = b\]</div>
+<div class="math notranslate nohighlight">
+\[\sqrt[3]{x}\]</div>
+<div class="math notranslate nohighlight" id="equation-my-label">
+<span class="eqno">(10)<a class="headerlink" href="#equation-my-label" title="Link to this equation">#</a></span>\[By=c\]</div>
+<p>This is a reference to <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">my_label</span></code></p>
+<p>This is a reference to <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">My</span> <span class="pre">Label</span></code></p>
+<p id="my-paragraph">This is just a paragraph!</p>
+<ul class="simple" id="my-points">
+<li><p>Bullet</p></li>
+<li><p>points</p></li>
+</ul>
+<p>Please see <a class="reference internal" href="#my-paragraph">this paragraph</a> and <a class="reference internal" href="#my-points">these points</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{equation}
 Y(i,k) = 
@@ -1210,7 +1289,13 @@ we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trying-myst">Trying MyST</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbering-box-enabled-true">numbering:
+box:
+enabled: true</a></li>
 </ul>
   </nav></div>
 

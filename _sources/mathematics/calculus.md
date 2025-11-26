@@ -24,7 +24,7 @@ iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for al
 ```
 
 **(b)**
-We call a sequence $\{x_n\}$ a **Cauchy-sequence**
+We call a sequence $\{x_n\}$ a **Cauchy sequence**
 iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for all $n, m \ge n_0$, we have
 
 ```{math}
@@ -95,6 +95,8 @@ This is indeed a norm because:
 (ii) $\left \lVert \alpha f \right \rVert_{\infty} = \lvert\alpha\rvert \left \lVert  f \right \rVert_{\infty}$
 
 (iii) $\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}$
+
+The proofs are trivial.
 ````
 
 ````{prf:definition} Convergence of Functions
@@ -106,7 +108,7 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 **(a)** We say that $\lim_{n \to \infty} f_n = f$ **pointwise** if, for all $x \in [a, b]$, we have 
 
 ```{math}
-\lim_{n \to \infty} \lvert f_n(x) - f(x) \rvert = 0
+\lim_{n \to \infty} \left | f_n(x) - f(x) \right | = 0
 ```
 
 **(b)** We say that $\lim_{n \to \infty} f_n = f$ **uniformly** if 
@@ -114,7 +116,6 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 ```{math}
 \lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
 ```
-
 ````
 
 ## Continuous Functions
@@ -125,12 +126,14 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 
 Let $f: [a, b] \to \mathbb{R}$ be a function.
 
-**(a)** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
+**(a)** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, 
+there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
 
 **(b)** $f$ is **continuous on $[a, b]$** if $f$ is continuous at each $x \in [a, b]$.
 
-**(c)** $f$ is **uniformly continuous on $[a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ whenever $\lvert h \rvert < \delta$.
-
+**(c)** $f$ is **uniformly continuous on $[a, b]$** if, for any $\epsilon > 0$, 
+there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ 
+whenever $\lvert h \rvert < \delta$.
 ````
 
 ````{prf:theorem} Continuous Functions on Compact Sets
@@ -150,7 +153,7 @@ Let $f: [a, b] \to \mathbb{R}$ be continuous. Then:
 
 ````{prf:proof}
 Assertion (a) is obvious. We prove (b) with the triangular inequality. 
-For (c) and (d) we need {prf:ref}`thr-bolzano-weierstrass`.
+For (c) and (d) we need [Bolzano-Weierstrass](#thr-bolzano-weierstrass).
 
 **(b)** 
 Let $\{f_n\}$ be a sequence of functions on $[a, b]$ that converges uniformly to $f$.
@@ -200,8 +203,16 @@ Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 
 ````{prf:proof} 
 
-The proof proceeds by halving intervals, and again, we need {prf:ref}`thr-bolzano-weierstrass`.
-We build a sequence $\{x_n\}$ that converges to some $x \in [a, b]$ such that $f(x) = \mu$.
+The proof proceeds by halving intervals.
+We build two sequences $\{a_n\},\{b_n\}$ such that $\{a_n\} is
+
+```{math}
+f(a_n) \le \mu
+f(b_n) \ge \mu
+```
+ 
+ 
+ sequence $\{x_n\}$ that converges to some $x \in [a, b]$ such that $f(x) = \mu$.
 Let $x_0 = a, x_1 = b, x_2 = (x_0 + x_1)/2$. The general rule for $x_n$ is:
 
 ```{math}
@@ -221,14 +232,15 @@ We see that:
 \left | x_n - x_{n-1} \rvert \le \lvert x_{n-1} - x_{n-2} \right | / 2 
 ```
 
-so:
+so, by induction:
 
 ```{math}
 \lvert x_n - x_{n-1} \rvert \le (b - a) / 2^{n-1} 
 ```
 
-The sequence $\{x_n\}$ has a subsequence that converges to some $x \in [a, b]$, 
-and, using the continuity of $f$ at $x$, we get to $f(x) = \mu$. 
+The sequence $\{x_n\}$ is a Cauchy sequence. Hence it converges to some $x \in [a, b]$, and, being continuous,
+$\{f(x_n)\}$ converges to $f(x).
+
 ````
 
 ## Riemann-Integrable Functions
@@ -489,11 +501,24 @@ We consider functions on a closed interval.
 
 **(a)** Step functions are R-integrable
 
-**(b)** Monotonous functions are R-integrable
+**(b)** Let $f: [a, b] \to \mathbb{R}$ be a function such that, for any $\epsilon > 0$, 
+there are R-integrable functions $\phi, \psi$ with
 
-**(c)** Continuous functions are R-integrable
+```{math}
+\phi \le f \le \psi
+```
 
+and
 
+```{math}
+\int_a^b (\psi(x) - \phi(x)) \, dx < \epsilon.
+```
+
+Then $f$ is R-integrable
+
+**(c)** Monotonous functions are R-integrable
+
+**(d)** Continuous functions are R-integrable
 ````
 
 ````{prf:proof} 
@@ -506,17 +531,36 @@ Let $\phi$ be a step function on $[a, b]$ with $\phi(x) = y_k \text{ for } x \in
 ``` 
 
 **(b)**
-Let $f$ be monotonous on $[a, b]$. Then $f$ is the uniform limit of step functions.
-We define  
 
-```{math}
-\phi(x) = f(x_k) \text{ for } x \in [x_k, x_{k+1}).
-``` 
-
-
+todo
 
 **(c)**
-Let $f$ be continuous on $[a, b]$. The $f$ is uniformly continuous on $[a, b]$ by {prf:ref}`thr-continuity-on-compact-sets` 
+Let $f$ be monotonously non-decreasing on $[a, b]$. Then $f$ can squeezed between two step functions, $\phi, \psi$,
+which are integrable as we know from (a).
+Let $n \in \mathbb{N}$ fixed and $x_k = a + \frac{k}{n}(b-a)$. We set:
+
+```{math}
+& \phi(x) = f(x_k) \text{ for } x \in [x_k, x_{k+1}) \\
+& \psi(x) = f(x_{k+1}) \text{ for } x \in [x_k, x_{k+1})
+``` 
+Then, clearly:
+
+```{math}
+\phi \le f \le \psi
+```
+
+and
+
+```{math}
+& \int_a^b (\psi(x) - \phi(x)) \, dx \\
+& = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
+& = \frac{1}{n}(b-a) \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
+& = \frac{1}{n}(b-a)(f(b) - f(a))
+```
+which can be made arbitrarily small. The assertion follows from (b).
+
+**(d)**
+Let $f$ be continuous on $[a, b]$. Then $f$ is uniformly continuous on $[a, b]$ by {prf:ref}`thr-continuity-on-compact-sets` 
 and is the uniform limit of step functions.
 
 ````
@@ -880,14 +924,75 @@ $$
 
 
 
-
-
-
-
-
 ## archive
 
+### Trying MyST
 
+
+```{figure} https://github.com/rowanc1/pics/blob/main/mountains.png?raw=true
+:label: my-fig
+:align: center
+
+My **bold** mountain 🏔🚠.
+```
+
+This is a reference to [My Mountain](#my-fig)
+
+This is a reference to [Bolzano-Weierstrass](#thr-bolzano-weierstrass)
+
+This is a reference to ["{name}"](#thr-bolzano-weierstrass)
+
+This is a reference to {prf:ref}`Bolzano-Weierstrass <thr-bolzano-weierstrass>`
+
+This is a reference to {prf:ref}`"{name}" <thr-bolzano-weierstrass>`
+
+This is a reference to @thr-bolzano-weierstrass
+
+---
+numbering:
+  box:
+    enabled: true
+---
+
+:::{figure} westfield2.png
+:label: my-box
+:kind: box
+
+This figure will be numbered as "Box 1"
+:::
+
+:::{math}
+:enumerated: false
+Ax = b
+:::
+
+```{math}
+:enumerated: true
+Ax = b
+```
+
+```{math}
+:typst: root(3, x)
+\sqrt[3]{x}
+```
+
+```{math}
+:label: my_label
+By=c
+```
+
+This is a reference to {prf:ref}`my_label`
+
+This is a reference to {prf:ref}`My Label <my_label>`
+
+(my-paragraph)=
+This is just a paragraph!
+
+(my-points)=
+* Bullet
+* points
+
+Please see [this paragraph](#my-paragraph) and [these points](#my-points).
 
 ```{math}
 \begin{equation}
