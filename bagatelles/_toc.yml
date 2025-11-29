@@ -43,14 +43,20 @@ parts:
       - file: physics/29-physics-one-page
         title: Modern Physics One-Pager
         
-  - caption: Mathematics
+  - caption: Mathematics - Probability & Statistics
     chapters:
       - file: mathematics/bayesian-decisions
         title: Bayesian Decision-Making *
       - file: mathematics/bayesian-tests
         title: Bayesian Tests
+
+  - caption: Mathematics - Number Theory
+    chapters:
       - file: mathematics/arithmetic
         title: First Steps in Arithmetic
+
+  - caption: Mathematics - Analysis
+    chapters:
       - file: mathematics/calculus
         title: First Steps in Calculus
 

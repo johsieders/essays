@@ -53,12 +53,7 @@ sphinx:
     numfig: true             # Enable numbered cross-references
     numfig_secnum_depth: 1   # Include chapter number (e.g., "1.1", "1.2")
     math_eqref_format: "({number})"  # Format: (1.1) instead of 1.1
-    
-    numbering:
-      code: true
-      math: true
-      headings: true
-      equation: true
+
 
     mathjax3_config:
       tex:

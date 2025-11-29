@@ -22,6 +22,12 @@ fi
 echo "✓ On main branch with clean working directory"
 echo ""
 
+# Push main branch to GitHub first
+echo "🚀 Pushing main branch to GitHub..."
+git push origin main
+echo "✓ Main branch synced with GitHub"
+echo ""
+
 # Build the Jupyter Book
 echo "📚 Building Jupyter Book..."
 cd bagatelles

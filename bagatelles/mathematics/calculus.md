@@ -4,12 +4,201 @@
 
 
 > under construction
- 
-## Convergence
+## Paradoxes
+
+### Achilles and the Tortoise (Zeno)
+
+Imagine the tortoise and Achilles starting a race with the tortiose 10 metres in the lead, 
+and Achilles running ten times as fast as the tortoise.  
+By the time Achilles has covered 10 meters, the tortoise is 1 metre in the lead.  
+By the time Achilles has covered 11 meters, the tortoise is 1.1 metres in the lead.  
+And so on. Will Achilles ever overtake the tortoise?
+
+Of course, he will after 11.111... metres, because
+
+```{math}
+\sum_{k=0}^\infty \alpha^k = \frac{1}{1-\alpha}
+```
+which gives, with $\alpha = 1/10$:
+
+```{math}
+10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + 1.111\ldots
+```
+
+What seemed paradoxical to Zeno is that the sum of an infinite number of terms could be finite.
+However, all he did was a mental divison of a finite distance into infinitely 
+many parts, the sum of which is obviously the distance given.
+Today infinite sums are well understood; there is nothing paradoxical about them.
+
+### The Standing Arrow (Zeno): 
+Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
+How can it ever move? The answer is given by the theory of integrals we are going to study in detail. 
+Here is just a short sketch: 
+Let $v(t)$ be the speed of the arrow at time $t$. 
+We divide a given time span $[a, b]$ into tiny, but finitely many 
+subintervals ${[t_k, t_{k+1}]}$.
+Then, the distance $D$ traveled in the interval $[a, b]$ is approximated to any accuracy by a so-called Riemann sum
+
+```{math}
+D \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)
+```
+The first paradox was that a sum with an infinite number of terms could be finite.
+Now, the paradox is that the sum of a large number of arbitrarily small terms does not vanish.
+It lies at the very heart of integration theory that such a sum can be assigned a meaningful value.
+
+### What the Tortoise Said to Achilles (Lewis Carroll)
+
+This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland. 
+It questions what mathematicians really do.
+Imagine the tortoise explaining a mathematical argument to Achilles.
+This is what it says, in the words of L. Carroll.
+
+(A) Things that are equal to the same are equal to each other.   
+(B) The two sides of this Triangle are things that are equal to the same.   
+(C) If A and B are true, D must be true.   
+(Z) The two sides of this Triangle are equal to each other.
+
+"You should call it D, not Z," said Achilles. "It comes next to the
+other three. If you accept A and B and C, you must accept Z."
+"And why must I?" "Because it follows logically from them. If A and B and C are true,
+must be true. You don't dispute that, I imagine?"
+
+"If A and B and C are true, Z must be true," the Tortoise thoughtfully
+repeated. "That's another Hypothetical, isn't it? And, if I failed to see
+its truth, I might accept A and B and C, and *still* not accept Z, mightn't I?"
+"You might," the candid hero admitted, "though such obtuseness
+would certainly be phenomenal. Still, the event is *possible*. So I might
+ask you to grant one more Hypothetical!" "Very good. I'm quite willing to grant it, 
+as soon as you've written it down. We will call it 
+
+(D) If A and B and C are true, Z must be true.  
+
+"Have you entered that in your notebook?" "I *have*!" Achilles joyfully exclaimed, 
+as he ran the pencil into its sheath. "And at last we've got to the end of this ideal racecourse! Now
+that you accept A and B and C and D, *of course* you accept Z."
+"Do I?" said the Tortoise innocently. "Let's make that quite clear.
+I accept A and B and C and D. Suppose I *still* refused to accept Z?"
+"Then Logic would take you by the throat and *force* you to do it!"
+Achilles triumphantly replied. "Logic would tell you, You can't help
+yourself. Now that you've accepted A and B and C and D, you must accept Z!" 
+So you've no choice, you see."
+"Whatever *Logic* is good enough to tell me is worth *writing down*," said
+the Tortoise. "So enter it in your book, please. We will call it
+
+(E) If A and B and C and D are true, Z must be true."
+
+"Until I've granted *that*, of course I needn't grant Z. So it's quite
+a necessary step, you see?" "I see," said Achilles; and there was a touch of sadness in his tone.
+
+So much from Lewis Carroll. With a touch of sadness, 
+I must admit that this paradox puts all mathematical reasoning at risk.
+How can we be sure that a proof is correct? Which rules do we apply, and who granted us the right to apply them?
+Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
+Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.
+
+### Littlewood's Principles
+
+Every measurable set is nearly a finite union of intervals.
+
+Every measurable function is nearly continuous.
+
+Every convergent sequence of measurable functions is nearly uniformly convergent.
+
+
+## Natural Numbers, Integers, Rationals
+
+### Natural Numbers
+
+Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
+I don't know, and, honestly, I don't care too much. What seems clear to me is that there 
+must have been first humans, probably at different times and different locations, to grasp the concept of a number. 
+They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
+It took many millennia to formalize it. 
+Today we have the Peano axioms. They describe the set $\mathbb{N}$ of natural numbers perfectly for all mathematical purposes.
+
+````{prf:definition} Peano Axioms
+:label: def-peano-axioms
+
+1) $\mathbb{N}$ is **not empty**: $0 \in \mathbb{N}$
+
+2) The relation $=$ is an **equivalence relation** on $\mathbb{N}$.
+
+3) **Successors, Predecessors**: There is a *bijection* $S$, called *successor*, 
+and its inverse $P = S^{-1}$, called *predecessor*:
+
+```{math}
+S:  
+\left\{
+    \begin{array}{lr}
+        \mathbb{N} \to \mathbb{N} - \{0\} \\
+        n \mapsto S(n)
+    \end{array}
+\right .
+```
+
+4) **Induction**: If $\phi$ is a unary predicate such that
+$\phi(0)$ is true, and for every $n \in \mathbb{N}$, $\phi(n)$ being true implies that $\phi(S(n))$ is true,
+then $\phi(n)$ is true for every $n \in \mathbb{N}$.
+````
+So, in virtue of the Peano axioms we can start at $0$ and, 
+applying the successor function, construct as many natural numbers as we like.
+The Peano axioms not only allow the definition of all basic arithmetical operations.
+They form the foundation of number theory. 
+
+### Integer Numbers
+
+The set $\mathbb{N}$ is a **semigroup with multiplication** but 
+not a group because the equation $a + x = b$ is solvable only if $a \le b$.
+
+We introduce the set $\mathbb{Z}$ of integers as the **smallest ring containing $\mathbb{N}$**. 
+While this definition is arguably concise and elegant, the question remains whether such a ring exists at all. 
+The answer is yes, it does, and it can be easily constructed.
+We define $-a$ as the unique solution of $a + x = 0$ and set:
+
+```{math}
+&\mathbb{N}_- = \{-a \mid a \in \mathbb{N} \}
+
+&\mathbb{Z} = \mathbb{N}_- \cup \mathbb{N} 
+```
+With addition, subtraction, and multiplication defined in the usual way, the set $\mathbb{Z}$ is a ring.
+As any ring containing $\mathbb{N}$ necessarily contains the negative numbers $\mathbb{N}_-$, 
+the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**.  
+
+
+### Rational Numbers
+The set $\mathbb{Z}$ is a ring but 
+not a field because the equation $ax = 1$ is solvable only for $a = 1$.
+
+We introduce the set $\mathbb{Q}$ of rationals as the **smallest field containing $\mathbb{Z}$**. 
+Again, the question remains whether such a field exists at all. 
+The answer is yes, it does, and it can be easily constructed.
+We define, for $a \ne 0$, the inverse $a^{-1} = 1/a$ as the unique solution of $ax = 1$ and set:
+
+```{math}
+
+&\mathbb{Z}^{-1} = \{a^{-1} \mid a \in \mathbb{Z} - \{0\} \}
+
+&\mathbb{Q} = \{ab \mid a \in \mathbb{Z}, b \in \mathbb{Z}^{-1}\}
+```
+
+With addition, subtraction, multiplication, and division defined in the usual way, the set $\mathbb{Q}$ is a field.
+As any field containing $\mathbb{Z}$ necessarily contains the rationals, 
+the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**.  
+
+
+## Convergence, Completeness, and the Continuum
+
+What worked fine for integers and rationals proves to be more tricky for real numbers.
+The set $\mathbb{Q}$ is a field with many holes, famous examples include $\sqrt(2), \pi, e$.
+It is tempting to introduce the set $\mathbb{R}$ of real numbers as the **smallest set containing $\mathbb{Q}$ with no holes**.
+While this definition captures the essence of the continuum, it lamentably lacks rigour. 
+The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
+The following definitions are, for now, restricted to rationals (even the epsilons are rational), because that's all we have.
+But they are, of course, valid in any metric space.
+
 
 ````{prf:definition} Convergence of Sequences
-:label: def-compactness
-:nonumber:
+:label: def-convergence
 
 **(a)**
 We call a sequence $\{x_n\}$ **convergent to $x$**, written as
@@ -30,11 +219,63 @@ iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for al
 ```{math}
 \lvert x_n - x_m \rvert < \epsilon
 ```
+
+**(c)**
+We call two Cauchy sequences $\{x_n\}, \{y_n\}$ **equivalent**
+iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for all $n \ge n_0$, we have
+
+```{math}
+\lvert x_n - y_n \rvert < \epsilon
+```
+This is written as:
+```{math}
+\{x_n\} \sim \{y_n\}
+```
+
+**(d)**
+We call a set $A$ complete, iff every Cauchy sequence converges.
 ````
+
+
+````{prf:theorem} Sequences
+:label: thr-convergent-sequences
+
+**a)** Sum, difference, product, and quotient of convergent sequences are convergent and
+converge to the sum, difference, product, and quotient of their limits. For the denominator $\{x_n\}$ we require that 
+$\lim_{n \to \infty} x_n \ne 0$.
+
+**b)** Sum, difference, product, and quotient of Cauchy sequences are Cauchy sequences.
+For the denominator  $\{x_n\}$ we require that, for all $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that 
+$|x_n| > \epsilon$ for all $n > n_0$.
+````
+````{prf:proof} 
+
+Todo
+
+````
+
+With these definitions, we can repeat the approach that worked for integers and rationals.
+We introduce the set $\mathbb{R}$ of reals as the **smallest complete field containing $\mathbb{Q}$**. 
+As before, the question remains whether such a set exists at all. 
+The answer is yes, it does, and goes back to Cantor. He defined
+
+```{math}
+
+&\mathbb{S} = \text{ set of all Cauchy sequences in } \mathbb{Q}
+
+&\mathbb{R} = \mathbb{S}/\sim
+```
+
+This reads as: $\mathbb{R}$ is the set of the equivalence classes of all Cauchy sequences, or, more informally:
+It is the set of whatever that can be approximated by rationals. $\mathbb{R}$ is complete by construction.
+In virtue of {prf:ref}`thr-convergent-sequences` all basic arithmetic can be extended to $\mathbb{R}$.
+So, the set $\mathbb{R}$ is a complete field.
+As any field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
+it is indeed the **smallest field containing $\mathbb{Z}$**.
+
 
 ````{prf:definition} Compactness
 :label: def-compactness
-:nonumber:
 
 A set $A \subset \mathbb{R}$ is called **compact**, 
 iff each bounded sequence of elements of A has a convergent subsequence.
@@ -42,7 +283,6 @@ iff each bounded sequence of elements of A has a convergent subsequence.
 
 ````{prf:definition} Completeness
 :label: def-completness
-:nonumber:
 
 A set $A \subset \mathbb{R}$ is called **complete**, 
 iff each Cauchy-sequence of elements of A is convergent.
@@ -50,7 +290,6 @@ iff each Cauchy-sequence of elements of A is convergent.
 
 ````{prf:Lemma} Compactness Implies Completeness 
 :label: lem-compactness-completeness
-:nonumber:
 
 Compact sets are complete.
 
@@ -65,7 +304,6 @@ Therefore $\{x_n\}$, being a Cauchy-sequence, converges itself to $x$.
 
 ````{prf:theorem} Bolzano-Weierstrass
 :label: thr-bolzano-weierstrass
-:nonumber:
 
 Each closed interval $[a, b] \subset \mathbb{R}$ is compact (and complete).
 ````
@@ -78,7 +316,6 @@ Todo
 
 ````{prf:definition} Sup Norm
 :label: def-sup-norm
-:nonumber:
 
 Let $f: [a, b] \to \mathbb{R}$ be a bounded function.
 
@@ -100,8 +337,7 @@ The proofs are trivial.
 ````
 
 ````{prf:definition} Convergence of Functions
-:label: def-convergence
-:nonumber:
+:label: def-convergence-functions
 
 Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions, and $f: [a, b] \to \mathbb{R}$ another function.
 
@@ -122,7 +358,6 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 
 ````{prf:definition} Continuity
 :label: def-continuity
-:nonumber:
 
 Let $f: [a, b] \to \mathbb{R}$ be a function.
 
@@ -138,7 +373,6 @@ whenever $\lvert h \rvert < \delta$.
 
 ````{prf:theorem} Continuous Functions on Compact Sets
 :label: thr-continuity-on-compact-sets
-:nonumber:
 
 Let $f: [a, b] \to \mathbb{R}$ be continuous. Then:
 
@@ -190,7 +424,6 @@ and $\{y_{n_k}\}$ necessarily converges to the same $x$, So, $f$ is not continuo
 
 ````{prf:theorem} Intermediate Value Theorem
 :label: thr-intermediate-value
-:nonumber:
 
 Let $f: [a, b] \to \mathbb{R}$ be a continuous function, and $\mu \in \mathbb{R}$ such that  
 
@@ -248,7 +481,6 @@ $\{f(x_n)\}$ converges to $f(x).
 
 ````{prf:definition} Riemann Integrals
 :label: def-riemann-integrals
-:nonumber:
 
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$. 
  
@@ -305,7 +537,6 @@ is used if the lower bound $a$ is unimportant or not specified. Two primitives o
 
 ````{prf:remark} Monotony, Additivity, Boundedness 
 :label: rem-monotony-additivity-boundedness
-:nonumber:
 
 We state three obvious but important properties of Riemann integrals:
 
@@ -336,7 +567,6 @@ Monotony leads us to an important theorem.
 
 ````{prf:theorem} Mean Value Theorem
 :label: thr-mean-value
-:nonumber:
 
 Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
 
@@ -375,7 +605,6 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 
 ````{prf:theorem} Properties of Riemann Integrals
 :label: thr-riemann-integrals
-:nonumber:
 
 **(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
 
@@ -495,7 +724,6 @@ This proves that $f$ is R-integrable and:
 
 ````{prf:theorem} Riemann-Integrable Functions
 :label: thr-riemann-integrable-functions
-:nonumber:
 
 We consider functions on a closed interval.
 
@@ -570,9 +798,8 @@ and is the uniform limit of step functions.
 A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
 
 
-````{prf:theorem} Lebesgue-Criterion
-:label: thr-riemann-integrable-functions
-:nonumber:
+````{prf:theorem} Lebesgue Criterion
+:label: thr-lebesgue-criterion
 
 Bounded functions are R-integrable iff their set of discontinuities has measure zero.
 
@@ -592,7 +819,6 @@ todo
 
 ````{prf:definition} Derivatives
 :label: def-derivatives
-:nonumber:
 
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, b] \rightarrow \mathbb{R}$.
 
@@ -626,7 +852,6 @@ A function is said to be $n$ times continuously differentiable if $f^{(n)}$ is c
 
 ````{prf:theorem} Properties of Derivatives
 :label: thr-properties-derivatives
-:nonumber:
 
 **(a)** The continuously differentiable functions over $[a, b]$ form a **vector space**, written as $C^1 ([a, b])$.
 Likewise, the $n$ times continuously differentiable functions over $[a, b]$ form a vector space, written as $C^n ([a, b])$.
@@ -673,7 +898,6 @@ todo
 
 ````{prf:theorem} Differentiation Rules
 :label: thr-differentiation-rules
-:nonumber:
 
 Let $f, g \in C^1([a,b])$
 
@@ -703,7 +927,6 @@ todo
 
 ````{prf:theorem} Main Theorem of Calculus
 :label: thr-main-theorem-calculus
-:nonumber:
 
 Let $f \in \mathcal{R}([a,b])$ and $F$ be the **primitive** of $f$, defined by
 
@@ -774,7 +997,6 @@ todo
 
 ````{prf:theorem} Integration Rules
 :label: thr-integration-rules
-:nonumber:
 
 Let $f, g \in C^1([a,b])$
 
@@ -808,7 +1030,6 @@ what follows, $A$ is an open interval, and $x, u \in A$.
 
 ````{prf:theorem} Taylor V1
 :label: thr-taylor-v1
-:nonumber:
 
 Let $f \in  C^{n+1}(A)$. Then:
 
@@ -820,7 +1041,6 @@ $$
 
 ````{prf:theorem} Taylor V2
 :label: thr-taylor-v2
-:nonumber:
 Let $f \in  C^{n+1}(A)$. Then there exists a $\xi \in [x,u]$ such that:
 
 $$
@@ -836,7 +1056,6 @@ $$
 
 ````{prf:theorem} Taylor V3
 :label: thr-taylor-v3
-:nonumber:
 
 Let $f \in  C^n(A)$. Then:
 
