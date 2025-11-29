@@ -210,11 +210,17 @@
 <li class="toctree-l1"><a class="reference internal" href="physics/25-physics-roadmap.html">Physics Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Probability &amp; Statistics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics/bayesian-tests.html">Bayesian Tests</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Number Theory</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Analysis</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mathematics/calculus.html">First Steps in Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
@@ -413,10 +419,12 @@ document.write(`
    <a href="#cap-def-congruences"><strong>def-congruences</strong></a> | 
    <a href="#cap-def-continuity"><strong>def-continuity</strong></a> | 
    <a href="#cap-def-convergence"><strong>def-convergence</strong></a> | 
+   <a href="#cap-def-convergence-functions"><strong>def-convergence-functions</strong></a> | 
    <a href="#cap-def-derivatives"><strong>def-derivatives</strong></a> | 
    <a href="#cap-def-diophantine"><strong>def-diophantine</strong></a> | 
    <a href="#cap-def-integer-division"><strong>def-integer-division</strong></a> | 
    <a href="#cap-def-module"><strong>def-module</strong></a> | 
+   <a href="#cap-def-peano-axioms"><strong>def-peano-axioms</strong></a> | 
    <a href="#cap-def-riemann-integrals"><strong>def-riemann-integrals</strong></a> | 
    <a href="#cap-def-sup-norm"><strong>def-sup-norm</strong></a> | 
    <a href="#cap-lem-compactness-completeness"><strong>lem-compactness-completeness</strong></a> | 
@@ -433,6 +441,7 @@ document.write(`
    <a href="#cap-thr-bolzano-weierstrass"><strong>thr-bolzano-weierstrass</strong></a> | 
    <a href="#cap-thr-chinese-remainder"><strong>thr-chinese-remainder</strong></a> | 
    <a href="#cap-thr-continuity-on-compact-sets"><strong>thr-continuity-on-compact-sets</strong></a> | 
+   <a href="#cap-thr-convergent-sequences"><strong>thr-convergent-sequences</strong></a> | 
    <a href="#cap-thr-differentiation-rules"><strong>thr-differentiation-rules</strong></a> | 
    <a href="#cap-thr-equivalence-relation"><strong>thr-equivalence-relation</strong></a> | 
    <a href="#cap-thr-euler"><strong>thr-euler</strong></a> | 
@@ -441,6 +450,7 @@ document.write(`
    <a href="#cap-thr-integer-division"><strong>thr-integer-division</strong></a> | 
    <a href="#cap-thr-integration-rules"><strong>thr-integration-rules</strong></a> | 
    <a href="#cap-thr-intermediate-value"><strong>thr-intermediate-value</strong></a> | 
+   <a href="#cap-thr-lebesgue-criterion"><strong>thr-lebesgue-criterion</strong></a> | 
    <a href="#cap-thr-main-theorem-calculus"><strong>thr-main-theorem-calculus</strong></a> | 
    <a href="#cap-thr-mean-value"><strong>thr-mean-value</strong></a> | 
    <a href="#cap-thr-modules"><strong>thr-modules</strong></a> | 
@@ -511,6 +521,14 @@ document.write(`
        <a href="mathematics/calculus.html#def-convergence"><code class="xref">def-convergence</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-convergence-functions"><td></td><td>
+       <strong>def-convergence-functions</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#def-convergence-functions"><code class="xref">def-convergence-functions</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-derivatives"><td></td><td>
        <strong>def-derivatives</strong></td><td></td></tr>
      <tr>
@@ -541,6 +559,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/arithmetic.html#def-module"><code class="xref">def-module</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-peano-axioms"><td></td><td>
+       <strong>def-peano-axioms</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#def-peano-axioms"><code class="xref">def-peano-axioms</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-riemann-integrals"><td></td><td>
@@ -671,6 +697,14 @@ document.write(`
        <a href="mathematics/calculus.html#thr-continuity-on-compact-sets"><code class="xref">thr-continuity-on-compact-sets</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-convergent-sequences"><td></td><td>
+       <strong>thr-convergent-sequences</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#thr-convergent-sequences"><code class="xref">thr-convergent-sequences</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-differentiation-rules"><td></td><td>
        <strong>thr-differentiation-rules</strong></td><td></td></tr>
      <tr>
@@ -733,6 +767,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/calculus.html#thr-intermediate-value"><code class="xref">thr-intermediate-value</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-lebesgue-criterion"><td></td><td>
+       <strong>thr-lebesgue-criterion</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#thr-lebesgue-criterion"><code class="xref">thr-lebesgue-criterion</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-main-theorem-calculus"><td></td><td>

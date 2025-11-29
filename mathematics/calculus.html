@@ -206,11 +206,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
-<ul class="current nav bd-sidenav">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Probability &amp; Statistics</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Number Theory</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Analysis</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">First Steps in Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
@@ -461,7 +467,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence">Convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoxes">Paradoxes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#littlewood-s-principles">Littlewood’s Principles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-integers-rationals">Natural Numbers, Integers, Rationals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers">Natural Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-numbers">Integer Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers">Rational Numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-completeness-and-the-continuum">Convergence, Completeness, and the Continuum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
@@ -492,10 +511,168 @@ enabled: true</a></li>
 <blockquote>
 <div><p>under construction</p>
 </div></blockquote>
-<section id="convergence">
-<h2>Convergence<a class="headerlink" href="#convergence" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="def-compactness">
-<p class="admonition-title"><span>Definition </span> (Convergence of Sequences)</p>
+<section id="paradoxes">
+<h2>Paradoxes<a class="headerlink" href="#paradoxes" title="Link to this heading">#</a></h2>
+<section id="achilles-and-the-tortoise-zeno">
+<h3>Achilles and the Tortoise (Zeno)<a class="headerlink" href="#achilles-and-the-tortoise-zeno" title="Link to this heading">#</a></h3>
+<p>Imagine the tortoise and Achilles starting a race with the tortiose 10 metres in the lead,
+and Achilles running ten times as fast as the tortoise.<br />
+By the time Achilles has covered 10 meters, the tortoise is 1 metre in the lead.<br />
+By the time Achilles has covered 11 meters, the tortoise is 1.1 metres in the lead.<br />
+And so on. Will Achilles ever overtake the tortoise?</p>
+<p>Of course, he will after 11.111… metres, because</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=0}^\infty \alpha^k = \frac{1}{1-\alpha}\]</div>
+<p>which gives, with <span class="math notranslate nohighlight">\(\alpha = 1/10\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + 1.111\ldots\]</div>
+<p>What seemed paradoxical to Zeno is that the sum of an infinite number of terms could be finite.
+However, all he did was a mental divison of a finite distance into infinitely
+many parts, the sum of which is obviously the distance given.
+Today infinite sums are well understood; there is nothing paradoxical about them.</p>
+</section>
+<section id="the-standing-arrow-zeno">
+<h3>The Standing Arrow (Zeno):<a class="headerlink" href="#the-standing-arrow-zeno" title="Link to this heading">#</a></h3>
+<p>Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
+How can it ever move? The answer is given by the theory of integrals we are going to study in detail.
+Here is just a short sketch:
+Let <span class="math notranslate nohighlight">\(v(t)\)</span> be the speed of the arrow at time <span class="math notranslate nohighlight">\(t\)</span>.
+We divide a given time span <span class="math notranslate nohighlight">\([a, b]\)</span> into tiny, but finitely many
+subintervals <span class="math notranslate nohighlight">\({[t_k, t_{k+1}]}\)</span>.
+Then, the distance <span class="math notranslate nohighlight">\(D\)</span> traveled in the interval <span class="math notranslate nohighlight">\([a, b]\)</span> is approximated to any accuracy by a so-called Riemann sum</p>
+<div class="math notranslate nohighlight">
+\[D \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)\]</div>
+<p>The first paradox was that a sum with an infinite number of terms could be finite.
+Now, the paradox is that the sum of a large number of arbitrarily small terms does not vanish.
+It lies at the very heart of integration theory that such a sum can be assigned a meaningful value.</p>
+</section>
+<section id="what-the-tortoise-said-to-achilles-lewis-carroll">
+<h3>What the Tortoise Said to Achilles (Lewis Carroll)<a class="headerlink" href="#what-the-tortoise-said-to-achilles-lewis-carroll" title="Link to this heading">#</a></h3>
+<p>This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland.
+It questions what mathematicians really do.
+Imagine the tortoise explaining a mathematical argument to Achilles.
+This is what it says, in the words of L. Carroll.</p>
+<p>(A) Things that are equal to the same are equal to each other.<br />
+(B) The two sides of this Triangle are things that are equal to the same.<br />
+(C) If A and B are true, D must be true.<br />
+(Z) The two sides of this Triangle are equal to each other.</p>
+<p>“You should call it D, not Z,” said Achilles. “It comes next to the
+other three. If you accept A and B and C, you must accept Z.”
+“And why must I?” “Because it follows logically from them. If A and B and C are true,
+must be true. You don’t dispute that, I imagine?”</p>
+<p>“If A and B and C are true, Z must be true,” the Tortoise thoughtfully
+repeated. “That’s another Hypothetical, isn’t it? And, if I failed to see
+its truth, I might accept A and B and C, and <em>still</em> not accept Z, mightn’t I?”
+“You might,” the candid hero admitted, “though such obtuseness
+would certainly be phenomenal. Still, the event is <em>possible</em>. So I might
+ask you to grant one more Hypothetical!” “Very good. I’m quite willing to grant it,
+as soon as you’ve written it down. We will call it</p>
+<p>(D) If A and B and C are true, Z must be true.</p>
+<p>“Have you entered that in your notebook?” “I <em>have</em>!” Achilles joyfully exclaimed,
+as he ran the pencil into its sheath. “And at last we’ve got to the end of this ideal racecourse! Now
+that you accept A and B and C and D, <em>of course</em> you accept Z.”
+“Do I?” said the Tortoise innocently. “Let’s make that quite clear.
+I accept A and B and C and D. Suppose I <em>still</em> refused to accept Z?”
+“Then Logic would take you by the throat and <em>force</em> you to do it!”
+Achilles triumphantly replied. “Logic would tell you, You can’t help
+yourself. Now that you’ve accepted A and B and C and D, you must accept Z!”
+So you’ve no choice, you see.”
+“Whatever <em>Logic</em> is good enough to tell me is worth <em>writing down</em>,” said
+the Tortoise. “So enter it in your book, please. We will call it</p>
+<p>(E) If A and B and C and D are true, Z must be true.”</p>
+<p>“Until I’ve granted <em>that</em>, of course I needn’t grant Z. So it’s quite
+a necessary step, you see?” “I see,” said Achilles; and there was a touch of sadness in his tone.</p>
+<p>So much from Lewis Carroll. With a touch of sadness,
+I must admit that this paradox puts all mathematical reasoning at risk.
+How can we be sure that a proof is correct? Which rules do we apply, and who granted us the right to apply them?
+Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
+Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.</p>
+</section>
+<section id="littlewood-s-principles">
+<h3>Littlewood’s Principles<a class="headerlink" href="#littlewood-s-principles" title="Link to this heading">#</a></h3>
+<p>Every measurable set is nearly a finite union of intervals.</p>
+<p>Every measurable function is nearly continuous.</p>
+<p>Every convergent sequence of measurable functions is nearly uniformly convergent.</p>
+</section>
+</section>
+<section id="natural-numbers-integers-rationals">
+<h2>Natural Numbers, Integers, Rationals<a class="headerlink" href="#natural-numbers-integers-rationals" title="Link to this heading">#</a></h2>
+<section id="natural-numbers">
+<h3>Natural Numbers<a class="headerlink" href="#natural-numbers" title="Link to this heading">#</a></h3>
+<p>Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
+I don’t know, and, honestly, I don’t care too much. What seems clear to me is that there
+must have been first humans, probably at different times and different locations, to grasp the concept of a number.
+They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
+It took many millennia to formalize it.
+Today we have the Peano axioms. They describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers perfectly for all mathematical purposes.</p>
+<div class="proof definition admonition" id="def-peano-axioms">
+<p class="admonition-title"><span class="caption-number">Definition 6 </span> (Peano Axioms)</p>
+<section class="definition-content" id="proof-content">
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is <strong>not empty</strong>: <span class="math notranslate nohighlight">\(0 \in \mathbb{N}\)</span></p></li>
+<li><p>The relation <span class="math notranslate nohighlight">\(=\)</span> is an <strong>equivalence relation</strong> on <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>.</p></li>
+<li><p><strong>Successors, Predecessors</strong>: There is a <em>bijection</em> <span class="math notranslate nohighlight">\(S\)</span>, called <em>successor</em>,
+and its inverse <span class="math notranslate nohighlight">\(P = S^{-1}\)</span>, called <em>predecessor</em>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}S:  
+\left\{
+    \begin{array}{lr}
+        \mathbb{N} \to \mathbb{N} - \{0\} \\
+        n \mapsto S(n)
+    \end{array}
+\right .\end{split}\]</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Induction</strong>: If <span class="math notranslate nohighlight">\(\phi\)</span> is a unary predicate such that
+<span class="math notranslate nohighlight">\(\phi(0)\)</span> is true, and for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\phi(n)\)</span> being true implies that <span class="math notranslate nohighlight">\(\phi(S(n))\)</span> is true,
+then <span class="math notranslate nohighlight">\(\phi(n)\)</span> is true for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p></li>
+</ol>
+</section>
+</div><p>So, in virtue of the Peano axioms we can start at <span class="math notranslate nohighlight">\(0\)</span> and,
+applying the successor function, construct as many natural numbers as we like.
+The Peano axioms not only allow the definition of all basic arithmetical operations.
+They form the foundation of number theory.</p>
+</section>
+<section id="integer-numbers">
+<h3>Integer Numbers<a class="headerlink" href="#integer-numbers" title="Link to this heading">#</a></h3>
+<p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is a <strong>semigroup with multiplication</strong> but
+not a group because the equation <span class="math notranslate nohighlight">\(a + x = b\)</span> is solvable only if <span class="math notranslate nohighlight">\(a \le b\)</span>.</p>
+<p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> of integers as the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
+While this definition is arguably concise and elegant, the question remains whether such a ring exists at all.
+The answer is yes, it does, and it can be easily constructed.
+We define <span class="math notranslate nohighlight">\(-a\)</span> as the unique solution of <span class="math notranslate nohighlight">\(a + x = 0\)</span> and set:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}&amp;\mathbb{N}_- = \{-a \mid a \in \mathbb{N} \}\\&amp;\mathbb{Z} = \mathbb{N}_- \cup \mathbb{N} \end{aligned}\end{align} \]</div>
+<p>With addition, subtraction, and multiplication defined in the usual way, the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring.
+As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> necessarily contains the negative numbers <span class="math notranslate nohighlight">\(\mathbb{N}_-\)</span>,
+the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.</p>
+</section>
+<section id="rational-numbers">
+<h3>Rational Numbers<a class="headerlink" href="#rational-numbers" title="Link to this heading">#</a></h3>
+<p>The set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring but
+not a field because the equation <span class="math notranslate nohighlight">\(ax = 1\)</span> is solvable only for <span class="math notranslate nohighlight">\(a = 1\)</span>.</p>
+<p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> of rationals as the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
+Again, the question remains whether such a field exists at all.
+The answer is yes, it does, and it can be easily constructed.
+We define, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>, the inverse <span class="math notranslate nohighlight">\(a^{-1} = 1/a\)</span> as the unique solution of <span class="math notranslate nohighlight">\(ax = 1\)</span> and set:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}&amp;\mathbb{Z}^{-1} = \{a^{-1} \mid a \in \mathbb{Z} - \{0\} \}\\&amp;\mathbb{Q} = \{ab \mid a \in \mathbb{Z}, b \in \mathbb{Z}^{-1}\}\end{aligned}\end{align} \]</div>
+<p>With addition, subtraction, multiplication, and division defined in the usual way, the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field.
+As any field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> necessarily contains the rationals,
+the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.</p>
+</section>
+</section>
+<section id="convergence-completeness-and-the-continuum">
+<h2>Convergence, Completeness, and the Continuum<a class="headerlink" href="#convergence-completeness-and-the-continuum" title="Link to this heading">#</a></h2>
+<p>What worked fine for integers and rationals proves to be more tricky for real numbers.
+The set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field with many holes, famous examples include <span class="math notranslate nohighlight">\(\sqrt(2), \pi, e\)</span>.
+It is tempting to introduce the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of real numbers as the <strong>smallest set containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> with no holes</strong>.
+While this definition captures the essence of the continuum, it lamentably lacks rigour.
+The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
+The following definitions are, for now, restricted to rationals (even the epsilons are rational), because that’s all we have.
+But they are, of course, valid in any metric space.</p>
+<div class="proof definition admonition" id="def-convergence">
+<p class="admonition-title"><span class="caption-number">Definition 7 </span> (Convergence of Sequences)</p>
 <section class="definition-content" id="proof-content">
 <p><strong>(a)</strong>
 We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> <strong>convergent to <span class="math notranslate nohighlight">\(x\)</span></strong>, written as</p>
@@ -509,21 +686,56 @@ We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span>
 iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n, m \ge n_0\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\lvert x_n - x_m \rvert &lt; \epsilon\]</div>
+<p><strong>(c)</strong>
+We call two Cauchy sequences <span class="math notranslate nohighlight">\(\{x_n\}, \{y_n\}\)</span> <strong>equivalent</strong>
+iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n \ge n_0\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\lvert x_n - y_n \rvert &lt; \epsilon\]</div>
+<p>This is written as:</p>
+<div class="math notranslate nohighlight">
+\[\{x_n\} \sim \{y_n\}\]</div>
+<p><strong>(d)</strong>
+We call a set <span class="math notranslate nohighlight">\(A\)</span> complete, iff every Cauchy sequence converges.</p>
 </section>
-</div><div class="proof definition admonition" id="def-compactness">
-<p class="admonition-title"><span>Definition </span> (Compactness)</p>
+</div><div class="proof theorem admonition" id="thr-convergent-sequences">
+<p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Sequences)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>a)</strong> Sum, difference, product, and quotient of convergent sequences are convergent and
+converge to the sum, difference, product, and quotient of their limits. For the denominator <span class="math notranslate nohighlight">\(\{x_n\}\)</span> we require that
+<span class="math notranslate nohighlight">\(\lim_{n \to \infty} x_n \ne 0\)</span>.</p>
+<p><strong>b)</strong> Sum, difference, product, and quotient of Cauchy sequences are Cauchy sequences.
+For the denominator  <span class="math notranslate nohighlight">\(\{x_n\}\)</span> we require that, for all <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that
+<span class="math notranslate nohighlight">\(|x_n| &gt; \epsilon\)</span> for all <span class="math notranslate nohighlight">\(n &gt; n_0\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Todo</p>
+</div>
+<p>With these definitions, we can repeat the approach that worked for integers and rationals.
+We introduce the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of reals as the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.
+As before, the question remains whether such a set exists at all.
+The answer is yes, it does, and goes back to Cantor. He defined</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}&amp;\mathbb{S} = \text{ set of all Cauchy sequences in } \mathbb{Q}\\&amp;\mathbb{R} = \mathbb{S}/\sim\end{aligned}\end{align} \]</div>
+<p>This reads as: <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of the equivalence classes of all Cauchy sequences, or, more informally:
+It is the set of whatever that can be approximated by rationals. <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete by construction.
+In virtue of <a class="reference internal" href="#thr-convergent-sequences">Theorem 11</a> all basic arithmetic can be extended to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
+So, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a complete field.
+As any field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
+it is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.</p>
+<div class="proof definition admonition" id="def-compactness">
+<p class="admonition-title"><span class="caption-number">Definition 8 </span> (Compactness)</p>
 <section class="definition-content" id="proof-content">
 <p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>compact</strong>,
 iff each bounded sequence of elements of A has a convergent subsequence.</p>
 </section>
 </div><div class="proof definition admonition" id="def-completness">
-<p class="admonition-title"><span>Definition </span> (Completeness)</p>
+<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Completeness)</p>
 <section class="definition-content" id="proof-content">
 <p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>complete</strong>,
 iff each Cauchy-sequence of elements of A is convergent.</p>
 </section>
 </div><div class="proof lemma admonition" id="lem-compactness-completeness">
-<p class="admonition-title"><span>Lemma </span> (Compactness Implies Completeness)</p>
+<p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Compactness Implies Completeness)</p>
 <section class="lemma-content" id="proof-content">
 <p>Compact sets are complete.</p>
 </section>
@@ -533,7 +745,7 @@ Then, the set <span class="math notranslate nohighlight">\(\{x_n \mid n \in \mat
 Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a Cauchy-sequence, converges itself to <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="thr-bolzano-weierstrass">
-<p class="admonition-title"><span>Theorem </span> (Bolzano-Weierstrass)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Bolzano-Weierstrass)</p>
 <section class="theorem-content" id="proof-content">
 <p>Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact (and complete).</p>
 </section>
@@ -541,7 +753,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>Proof. Todo</p>
 </div>
 <div class="proof definition admonition" id="def-sup-norm">
-<p class="admonition-title"><span>Definition </span> (Sup Norm)</p>
+<p class="admonition-title"><span class="caption-number">Definition 10 </span> (Sup Norm)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a bounded function.</p>
 <p>The <strong>sup norm</strong> (or <strong>uniform norm</strong>) of <span class="math notranslate nohighlight">\(f\)</span> is defined as:</p>
@@ -553,8 +765,8 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>(iii) <span class="math notranslate nohighlight">\(\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}\)</span></p>
 <p>The proofs are trivial.</p>
 </section>
-</div><div class="proof definition admonition" id="def-convergence">
-<p class="admonition-title"><span>Definition </span> (Convergence of Functions)</p>
+</div><div class="proof definition admonition" id="def-convergence-functions">
+<p class="admonition-title"><span class="caption-number">Definition 11 </span> (Convergence of Functions)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f_n: [a, b] \to \mathbb{R}\)</span> <span class="math notranslate nohighlight">\((n \in \mathbb{N})\)</span> be a sequence of functions, and <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> another function.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>pointwise</strong> if, for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, we have</p>
@@ -568,7 +780,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <section id="continuous-functions">
 <h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-continuity">
-<p class="admonition-title"><span>Definition </span> (Continuity)</p>
+<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Continuity)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function.</p>
 <p><strong>(a)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
@@ -579,7 +791,7 @@ there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</spa
 whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-continuity-on-compact-sets">
-<p class="admonition-title"><span>Theorem </span> (Continuous Functions on Compact Sets)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Continuous Functions on Compact Sets)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be continuous. Then:</p>
 <p><strong>(a)</strong> The continuous functions on <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^0([a, b])\)</span></p>
@@ -614,7 +826,7 @@ Then there exist two sequences <span class="math notranslate nohighlight">\(\{x_
 and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessarily converges to the same <span class="math notranslate nohighlight">\(x\)</span>, So, <span class="math notranslate nohighlight">\(f\)</span> is not continuous in <span class="math notranslate nohighlight">\(x\)</span>, which is a contradiction.</p>
 </div>
 <div class="proof theorem admonition" id="thr-intermediate-value">
-<p class="admonition-title"><span>Theorem </span> (Intermediate Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Intermediate Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function, and <span class="math notranslate nohighlight">\(\mu \in \mathbb{R}\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -651,7 +863,7 @@ Let <span class="math notranslate nohighlight">\(x_0 = a, x_1 = b, x_2 = (x_0 + 
 <section id="riemann-integrable-functions">
 <h2>Riemann-Integrable Functions<a class="headerlink" href="#riemann-integrable-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-riemann-integrals">
-<p class="admonition-title"><span>Definition </span> (Riemann Integrals)</p>
+<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Riemann Integrals)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
 <p><strong>(a) Partitions</strong>. A <strong>partition of <span class="math notranslate nohighlight">\([a, b]\)</span></strong> is a strictly increasing sequence <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> with <span class="math notranslate nohighlight">\(a = x_0\)</span>,  <span class="math notranslate nohighlight">\(b = x_n\)</span>.
@@ -687,7 +899,7 @@ on the understanding that</p>
 <p>is used if the lower bound <span class="math notranslate nohighlight">\(a\)</span> is unimportant or not specified. Two primitives of an integrable function <span class="math notranslate nohighlight">\(f\)</span> differ by a constant only.</p>
 </section>
 </div><div class="proof remark admonition" id="rem-monotony-additivity-boundedness">
-<p class="admonition-title"><span>Remark </span> (Monotony, Additivity, Boundedness)</p>
+<p class="admonition-title"><span class="caption-number">Remark 5 </span> (Monotony, Additivity, Boundedness)</p>
 <section class="remark-content" id="proof-content">
 <p>We state three obvious but important properties of Riemann integrals:</p>
 <p><strong>(a) Monotony</strong></p>
@@ -704,7 +916,7 @@ on the understanding that</p>
 </section>
 </div><p>Monotony leads us to an important theorem.</p>
 <div class="proof theorem admonition" id="thr-mean-value">
-<p class="admonition-title"><span>Theorem </span> (Mean Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Mean Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
@@ -715,7 +927,7 @@ on the understanding that</p>
 \[\int_a^b f(x) \, dx= f(\xi) (b-a)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem </a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
+<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 14</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
 And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[m \le f(x) \le M \]</div>
@@ -724,7 +936,7 @@ And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <s
 \[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
 </div>
 <div class="proof theorem admonition" id="thr-riemann-integrals">
-<p class="admonition-title"><span>Theorem </span> (Properties of Riemann Integrals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Properties of Riemann Integrals)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
 <p><strong>(b)</strong> The mapping</p>
@@ -798,7 +1010,7 @@ for any set of intermediate points <span class="math notranslate nohighlight">\(
 \[\lim_{n \to \infty} \int_a^b f_n(y) \, dy = A = \int_a^b f(y) \, dy = \int_a^b \lim_{n \to \infty} f_n(y) \, dy \]</div>
 </div>
 <div class="proof theorem admonition" id="thr-riemann-integrable-functions">
-<p class="admonition-title"><span>Theorem </span> (Riemann-Integrable Functions)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Riemann-Integrable Functions)</p>
 <section class="theorem-content" id="proof-content">
 <p>We consider functions on a closed interval.</p>
 <p><strong>(a)</strong> Step functions are R-integrable</p>
@@ -838,12 +1050,12 @@ Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed
 &amp; = \frac{1}{n}(b-a)(f(b) - f(a))\end{split}\]</div>
 <p>which can be made arbitrarily small. The assertion follows from (b).</p>
 <p><strong>(d)</strong>
-Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem </a>
+Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem 13</a>
 and is the uniform limit of step functions.</p>
 </div>
 <p>A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
-<div class="proof theorem admonition" id="thr-riemann-integrable-functions">
-<p class="admonition-title"><span>Theorem </span> (Lebesgue-Criterion)</p>
+<div class="proof theorem admonition" id="thr-lebesgue-criterion">
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Lebesgue Criterion)</p>
 <section class="theorem-content" id="proof-content">
 <p>Bounded functions are R-integrable iff their set of discontinuities has measure zero.</p>
 </section>
@@ -854,7 +1066,7 @@ and is the uniform limit of step functions.</p>
 <section id="differentiable-functions">
 <h2>Differentiable Functions<a class="headerlink" href="#differentiable-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-derivatives">
-<p class="admonition-title"><span>Definition </span> (Derivatives)</p>
+<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Derivatives)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> in <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
@@ -874,7 +1086,7 @@ and its derivative is continuous on <span class="math notranslate nohighlight">\
 A function is said to be <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable if <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-properties-derivatives">
-<p class="admonition-title"><span>Theorem </span> (Properties of Derivatives)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Properties of Derivatives)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^1 ([a, b])\)</span>.
 Likewise, the <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a vector space, written as <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span>.</p>
@@ -900,7 +1112,7 @@ and we can swap limit and differentiation:</p>
 <p>Proof. todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-differentiation-rules">
-<p class="admonition-title"><span>Theorem </span> (Differentiation Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Differentiation Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a)</strong> Product Rule
@@ -919,7 +1131,7 @@ Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <
 <section id="main-theorem-of-calculus">
 <h2>Main Theorem of Calculus<a class="headerlink" href="#main-theorem-of-calculus" title="Link to this heading">#</a></h2>
 <div class="proof theorem admonition" id="thr-main-theorem-calculus">
-<p class="admonition-title"><span>Theorem </span> (Main Theorem of Calculus)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Main Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span> and <span class="math notranslate nohighlight">\(F\)</span> be the <strong>primitive</strong> of <span class="math notranslate nohighlight">\(f\)</span>, defined by</p>
 <div class="math notranslate nohighlight">
@@ -960,7 +1172,7 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 <p>Proof. todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
-<p class="admonition-title"><span>Theorem </span> (Integration Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Integration Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a)</strong> Integration by Parts
@@ -982,7 +1194,7 @@ Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <
 <span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term. In
 what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open interval, and <span class="math notranslate nohighlight">\(x, u \in A\)</span>.</p>
 <div class="proof theorem admonition" id="thr-taylor-v1">
-<p class="admonition-title"><span>Theorem </span> (Taylor V1)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Taylor V1)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
@@ -991,7 +1203,7 @@ f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n 
 \]</div>
 </section>
 </div><div class="proof theorem admonition" id="thr-taylor-v2">
-<p class="admonition-title"><span>Theorem </span> (Taylor V2)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Taylor V2)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,u]\)</span> such that:</p>
 <div class="math notranslate nohighlight">
@@ -1005,7 +1217,7 @@ f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{
 \]</div>
 </section>
 </div><div class="proof theorem admonition" id="thr-taylor-v3">
-<p class="admonition-title"><span>Theorem </span> (Taylor V3)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Taylor V3)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in  C^n(A)\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
@@ -1091,7 +1303,7 @@ f = O(x^n) \Longleftrightarrow f(x)\le C x^n
 box:
 enabled: true<a class="headerlink" href="#numbering-box-enabled-true" title="Link to this heading">#</a></h2>
 <figure class="align-default" id="id78">
-<img alt="mathematics/westfield2.png" src="mathematics/westfield2.png" />
+<img alt="../_images/westfield2.png" src="../_images/westfield2.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">This figure will be numbered as “Box 1”</span><a class="headerlink" href="#id78" title="Link to this image">#</a></p>
 </figcaption>
@@ -1281,7 +1493,20 @@ we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence">Convergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoxes">Paradoxes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#littlewood-s-principles">Littlewood’s Principles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-integers-rationals">Natural Numbers, Integers, Rationals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers">Natural Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-numbers">Integer Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers">Rational Numbers</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-completeness-and-the-continuum">Convergence, Completeness, and the Continuum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
