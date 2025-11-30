@@ -53,13 +53,13 @@ This is what it says, in the words of L. Carroll.
 
 (A) Things that are equal to the same are equal to each other.   
 (B) The two sides of this Triangle are things that are equal to the same.   
-(C) If A and B are true, D must be true.   
+(C) If A and B are true, Z must be true.   
 (Z) The two sides of this Triangle are equal to each other.
 
 "You should call it D, not Z," said Achilles. "It comes next to the
 other three. If you accept A and B and C, you must accept Z."
 "And why must I?" "Because it follows logically from them. If A and B and C are true,
-must be true. You don't dispute that, I imagine?"
+Z must be true. You don't dispute that, I imagine?"
 
 "If A and B and C are true, Z must be true," the Tortoise thoughtfully
 repeated. "That's another Hypothetical, isn't it? And, if I failed to see
