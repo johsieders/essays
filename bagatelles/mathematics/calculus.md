@@ -281,7 +281,7 @@ converge to the sum, difference, product, and quotient of their limits. For the 
 $\lim_{n \to \infty} x_n \ne 0$.
 
 **b)** Sum, difference, product, and quotient of Cauchy sequences are Cauchy sequences.
-For the denominator  $\{y_n\}$ of a quotient we require that, for all $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that 
+For the denominator  $\{y_n\}$ of a quotient we require that there be an $\epsilon > 0$ and a $n_0 \in \mathbb{N}$ such that 
 $|y_n| > \epsilon$ for all $n > n_0$.
 ````
 ````{prf:proof} 
