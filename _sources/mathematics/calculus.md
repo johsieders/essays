@@ -1,7 +1,5 @@
 # First Steps in Calculus
 
-[aus differentials.nb 14.04.2025, Taylor V1, V2, V3]: #  
-
 
 > under construction
 ## Paradoxes
@@ -123,8 +121,8 @@ Today we have the Peano axioms. They describe the set $\mathbb{N}$ of natural nu
 
 2) The relation $=$ is an **equivalence relation** on $\mathbb{N}$.
 
-3) **Successors, Predecessors**: There is a *bijection* $S$, called *successor*, 
-and its inverse $P = S^{-1}$, called *predecessor*:
+3) Every natural number $n$ has exactly one **successor** $S(n)$, and every natural number $n$ except $0$ has exactly one **predecessor** $P(n)$.
+The function $S$ 
 
 ```{math}
 S:  
@@ -135,65 +133,103 @@ S:
     \end{array}
 \right .
 ```
+is a bijection, and $P = S^{-1}$ is its inverse. We normally write, of course, $n + 1$ and $n - 1$ to indicate successor and predecessor.
 
 4) **Induction**: If $\phi$ is a unary predicate such that
 $\phi(0)$ is true, and for every $n \in \mathbb{N}$, $\phi(n)$ being true implies that $\phi(S(n))$ is true,
 then $\phi(n)$ is true for every $n \in \mathbb{N}$.
 ````
 So, in virtue of the Peano axioms we can start at $0$ and, 
-applying the successor function, construct as many natural numbers as we like.
-The Peano axioms not only allow the definition of all basic arithmetical operations.
-They form the foundation of number theory. 
+applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.
+
+
+````{prf:definition} Infinity
+:label: def-infinity
+A set $A$ is infinite if there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+````
+The set $\mathbb{N}$ is infinite because the successor function $S$ is exactly such an injection, with $B = \mathbb{N} - \{0\}$.
+Another injection would be $\phi(n) = 10^n$, with $B = \{1, 10, 100, \ldots\}$. $B$ is a set with huge gaps, and yet, 
+it's still infinite: you never run out of natural numbers.
+
+The Peano axioms not only allow the definition of all basic arithmetical operations. 
+They form the foundation of number theory.
 
 ### Integer Numbers
 
-The set $\mathbb{N}$ is a **semigroup with multiplication** but 
-not a group because the equation $a + x = b$ is solvable only if $a \le b$.
+The set $\mathbb{N}$ is a **semigroup with respect to addition** and a **semigroup with respect to multiplication**.
+But the equation $a + x = b$ is solvable in $\mathbb{N}$ only if $a \le b$. $\mathbb{N}$ lacks the negative numbers.
 
 We introduce the set $\mathbb{Z}$ of integers as the **smallest ring containing $\mathbb{N}$**. 
 While this definition is arguably concise and elegant, the question remains whether such a ring exists at all. 
 The answer is yes, it does, and it can be easily constructed.
-We define $-a$ as the unique solution of $a + x = 0$ and set:
+We introduce a new element $-1$ as the unique solution of $1 + x = 0$ and define:
 
 ```{math}
-&\mathbb{N}_- = \{-a \mid a \in \mathbb{N} \}
+(-1) (-1) &= 1
 
-&\mathbb{Z} = \mathbb{N}_- \cup \mathbb{N} 
+-a &= (-1) a \text{ for } a \in \mathbb{N}
+
+-\!\mathbb{N} &= \{-a \mid a \in \mathbb{N} \}
+
+\mathbb{Z} &= -\!\mathbb{N} \cup \mathbb{N} 
 ```
-With addition, subtraction, and multiplication defined in the usual way, the set $\mathbb{Z}$ is a ring.
-As any ring containing $\mathbb{N}$ necessarily contains the negative numbers $\mathbb{N}_-$, 
+Starting from $(-1) (-1) = 1$, the basic arithmetic operations are easily constructed. 
+As an example, we explain how $a - b$ can be given a meaning if $a < b$:
+
+```{math}
+a - b = a + (-1)b = (-1)((-1)a + b) = (-1)(b - a) = - (b-a)
+```
+Continuing in this way, the definition of addition, subtraction and multiplication on $\mathbb{Z}$ is a straightforward exercise.
+With these operations in place, the set $\mathbb{Z}$ is a ring.
+As any ring containing $\mathbb{N}$ must also contain the negative numbers $-\!\mathbb{N}$, 
 the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**.  
 
 
 ### Rational Numbers
 The set $\mathbb{Z}$ is a ring but 
-not a field because the equation $ax = 1$ is solvable only for $a = 1$.
+not a field because the equation $ax = 1$ is solvable in $\mathbb{Z}$ only for $a = 1$. $\mathbb{Z}$ lacks the fractions.
 
 We introduce the set $\mathbb{Q}$ of rationals as the **smallest field containing $\mathbb{Z}$**. 
 Again, the question remains whether such a field exists at all. 
 The answer is yes, it does, and it can be easily constructed.
-We define, for $a \ne 0$, the inverse $a^{-1} = 1/a$ as the unique solution of $ax = 1$ and set:
+We introduce, for $a \ne 0$, the inverse $a^{-1} = 1/a$ as the unique solution of $ax = 1$ and define:
 
 ```{math}
+&a a^{-1} = 1 \text{ for } a \in \mathbb{Z}-\{0\}
 
-&\mathbb{Z}^{-1} = \{a^{-1} \mid a \in \mathbb{Z} - \{0\} \}
+&\mathbb{Q} = \{ab^{-1} \mid a \in \mathbb{Z}, b \in \mathbb{Z}-\{0\}\}
+```
+Starting from $a a^{-1} = 1$, we derive, as an example, the multiplication rule:
 
-&\mathbb{Q} = \{ab \mid a \in \mathbb{Z}, b \in \mathbb{Z}^{-1}\}
+```{math}
+&a a^{-1} = b b^{-1} = 1 \\
+&\Rightarrow a a^{-1} b b^{-1} = (ab) (a^{-1} b^{-1}) = 1 \\
+&\Rightarrow (ab)^{-1} = a^{-1} b^{-1} \\
 ```
 
-With addition, subtraction, multiplication, and division defined in the usual way, the set $\mathbb{Q}$ is a field.
-As any field containing $\mathbb{Z}$ necessarily contains the rationals, 
+and infer the cancellation law:
+
+```{math}
+a b^{-1} &= (n n^{-1}) (ab^{-1}) \\
+&= (na) (n^{-1} b^{-1}) \\
+&= (n a) (nb)^{-1}
+```
+
+Continuing in this way, the definition of addition, subtraction and multiplication on $\mathbb{Q}$ is a straightforward exercise.
+With these operations in place, the set $\mathbb{Q}$ is a field.
+As any field containing $\mathbb{Z}$ must also contain the rationals, 
 the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**.  
 
 
 ## Convergence, Completeness, and the Continuum
 
 What worked fine for integers and rationals proves to be more tricky for real numbers.
-The set $\mathbb{Q}$ is a field with many holes, famous examples include $\sqrt(2), \pi, e$.
+The set $\mathbb{Q}$ is a field with many holes: the equation $x^2 = a$ is solvable in $\mathbb{Q}$ only for square numbers, but not for, say, $a=2$.
+$\mathbb{Q}$ famously does not contain$\sqrt 2, \pi, e$, and many more numbers.
 It is tempting to introduce the set $\mathbb{R}$ of real numbers as the **smallest set containing $\mathbb{Q}$ with no holes**.
 While this definition captures the essence of the continuum, it lamentably lacks rigour. 
 The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
-The following definitions are, for now, restricted to rationals (even the epsilons are rational), because that's all we have.
+The following definitions are, for now, restricted to rationals (even the epsilons are rational!), because that's all we have.
 But they are, of course, valid in any metric space.
 
 
@@ -241,17 +277,25 @@ We call a set $A$ complete, iff every Cauchy sequence converges.
 :label: thr-convergent-sequences
 
 **a)** Sum, difference, product, and quotient of convergent sequences are convergent and
-converge to the sum, difference, product, and quotient of their limits. For the denominator $\{x_n\}$ we require that 
+converge to the sum, difference, product, and quotient of their limits. For the denominator $\{x_n\}$ of a quotient we require that 
 $\lim_{n \to \infty} x_n \ne 0$.
 
 **b)** Sum, difference, product, and quotient of Cauchy sequences are Cauchy sequences.
-For the denominator  $\{x_n\}$ we require that, for all $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that 
-$|x_n| > \epsilon$ for all $n > n_0$.
+For the denominator  $\{y_n\}$ of a quotient we require that, for all $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that 
+$|y_n| > \epsilon$ for all $n > n_0$.
 ````
 ````{prf:proof} 
 
-Todo
+We only prove that the quotient of two Cauchy sequences $\{x_n\}$, $\{y_n\}$.
 
+As $\{|y_n|\}$ is positive and bounded, we can choose $\epsilon_0, n_0, M$ such that $\epsilon_0 \le |y_n| \le M$ for all $n > n_0$.
+Then:
+
+```{math}
+\left | \frac{x_n}{y_n} - \frac{x_m}{y_m} \right | = \left | \frac{x_n y_m - x_m y_n}{y_m y_n} \right | 
+\le \frac{1}{\epsilon_0^2} \left | x_n y_m - x_m y_n \right | \le \frac{M}{\epsilon_0^2} \left | x_n - x_m \right |
+```
+This proves the assertion.
 ````
 
 With these definitions, we can repeat the approach that worked for integers and rationals.
@@ -266,13 +310,54 @@ The answer is yes, it does, and goes back to Cantor. He defined
 &\mathbb{R} = \mathbb{S}/\sim
 ```
 
-This reads as: $\mathbb{R}$ is the set of the equivalence classes of all Cauchy sequences, or, more informally:
-It is the set of whatever that can be approximated by rationals. $\mathbb{R}$ is complete by construction.
-In virtue of {prf:ref}`thr-convergent-sequences` all basic arithmetic can be extended to $\mathbb{R}$.
-So, the set $\mathbb{R}$ is a complete field.
-As any field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
-it is indeed the **smallest field containing $\mathbb{Z}$**.
+This reads as follows: $\mathbb{R}$ is the set of the equivalence classes of all Cauchy sequences, or, more informally:
+It is the set of whatever can be approximated by rationals. Example: 
+The sequence $\{x_n\}$ defined by 
 
+```{math}
+x_0 &= 2 \\
+x_{n+1} &= x_n - \frac{2-x_n^2}{2x_n}
+```
+is a Cauchy sequence in $\mathbb{Q}$ and converges to $\sqrt 2$ in $\mathbb{R}$.
+Cantor's construction identifies the sequence $\{x_n\}$ with its limit $\sqrt 2$, and we can write: $\{x_n\} = \sqrt 2$.
+All basic arithmetic can be extended to $\mathbb{R}$ along the following line:
+For $x = \{x_n\}$, $y = \{y_n\}$ we define:
+
+```{math}
+x + y = \{x_n\} + \{y_n\}
+```
+Thanks to {prf:ref}`thr-convergent-sequences` we know the meaning of $\{x_n\} + \{y_n\}$.
+Therefore, the set $\mathbb{R}$ is a field. The next theorem tells us that it is complete.
+
+
+````{prf:theorem} Completeness of $\mathbb{R}$
+:label: thr-R-completeness
+
+Any Cauchy sequence $\{x_n\}$ in $\mathbb{R}$ converges to itself:
+
+```{math}
+\lim_{n \to \infty}  \{x_n\} =  \{x_n\}
+```
+
+So, $\mathbb{R}$ is complete
+````
+
+````{prf:proof} 
+If $\{x_n\}$ happens to be rational, it converges, by construction of $\mathbb{R}$, to itself, and there is nothing to prove.
+If it doesn't, it's a Cauchy sequence of Cauchy sequences $\{x_{n_k}\}$. So, any two sequences $\{x_{m_k}\}, \{x_{n_k}\}$
+will get arbitrarily close:
+
+```{math}
+\forall \epsilon > 0: \exists k_0(\epsilon): \forall k > k_0 : \left | x_{m_k} - x_{n_k} \right | < \epsilon
+```
+
+This is exactly the fact that $\{x_{m_k}\} \sim \{x_{n_k}\}$ for any $m, n$. In other words: 
+All elements of a Cauchy sequences of Cauchy sequences belong to the same
+equivalence class, the real number they are identified with. 
+````
+
+As any field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
+it is indeed the **smallest field containing $\mathbb{Q}$**. Is 
 
 ````{prf:definition} Compactness
 :label: def-compactness
@@ -1339,6 +1424,59 @@ we can find a $\delta > 0$, such that for any partition with granularity less th
 $$
 \left\lvert\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right\rvert<\epsilon
 $$
+
+[//]: # ()
+[//]: # (```{math})
+
+[//]: # ()
+[//]: # ()
+[//]: # (\{x_{1_k}\} &= \{x_{1_1}, x_{1_2}, \ldots, x_{1_k}, \ldots \} )
+
+[//]: # ()
+[//]: # (\{x_{2_k}\} &= \{x_{2_1}, x_{2_2}, \ldots, x_{2_k}, \ldots \} )
+
+[//]: # ()
+[//]: # (&\vdots)
+
+[//]: # ()
+[//]: # (\{x_{n_k}\} &= \{x_{n_1}, x_{n_2}, \ldots, x_{n_k}, \ldots \})
+
+[//]: # ()
+[//]: # (&\vdots)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (Each sequence being a Cauchy sequence, we have, looking at {prf:ref}`equ-cauchy-cauchy` by row: )
+
+[//]: # (```{math})
+
+[//]: # (\forall n, \epsilon > 0: \exists n_0&#40;n, \epsilon&#41;: \forall k, j > n_0 : \left | x_{n_k} - x_{n_j} \right | < \epsilon)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (The sequence  $\{\{x_k\}_n\}$ being a Cauchy sequence, we have, for a large enough $k$, looking at {prf:ref}`equ-cauchy-cauchy` by column: )
+
+[//]: # (```{math})
+
+[//]: # (\forall \epsilon > 0: \exists n_1&#40;\epsilon&#41;: \forall m, n > n_1:  \left | x_{n_k} - x_{m_k} \right | < \epsilon)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (We conclude that the diagonal sequence  $\{x_{n_n}\}$ is Cauchy sequence, thus element of $\mathbb{R}$ because the inequality)
+
+[//]: # ()
+[//]: # (```{math})
+
+[//]: # (\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | < 3 \epsilon)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (holds for large enough $k, m, n$.)
+
 
 
 <div style="margin-bottom: 100px;"></div>
