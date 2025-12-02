@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -474,13 +474,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#littlewood-s-principles">Littlewood’s Principles</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-integers-rationals">Natural Numbers, Integers, Rationals</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers">Natural Numbers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-numbers">Integer Numbers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers">Rational Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals-integers-rationals">Naturals, Integers, Rationals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-completeness-and-the-continuum">Convergence, Completeness, and the Continuum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness">Compactness</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
@@ -518,14 +519,15 @@ enabled: true</a></li>
 <p>Imagine the tortoise and Achilles starting a race with the tortiose 10 metres in the lead,
 and Achilles running ten times as fast as the tortoise.<br />
 By the time Achilles has covered 10 meters, the tortoise is 1 metre in the lead.<br />
-By the time Achilles has covered 11 meters, the tortoise is 1.1 metres in the lead.<br />
+By the time Achilles has covered 11 meters, the tortoise is 0.1 metres in the lead.<br />
+By the time Achilles has covered 11.1 meters, the tortoise is 0.01 metres in the lead.<br />
 And so on. Will Achilles ever overtake the tortoise?</p>
-<p>Of course, he will after 11.111… metres, because</p>
+<p>Of course, he will after 11.111… metres because</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^\infty \alpha^k = \frac{1}{1-\alpha}\]</div>
 <p>which gives, with <span class="math notranslate nohighlight">\(\alpha = 1/10\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + 1.111\ldots\]</div>
+\[10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + \frac{10}{9} = 11.111\ldots\]</div>
 <p>What seemed paradoxical to Zeno is that the sum of an infinite number of terms could be finite.
 However, all he did was a mental divison of a finite distance into infinitely
 many parts, the sum of which is obviously the distance given.
@@ -535,15 +537,15 @@ Today infinite sums are well understood; there is nothing paradoxical about them
 <h3>The Standing Arrow (Zeno):<a class="headerlink" href="#the-standing-arrow-zeno" title="Link to this heading">#</a></h3>
 <p>Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
 How can it ever move? The answer is given by the theory of integrals we are going to study in detail.
-Here is just a short sketch:
+Here is a short sketch:
 Let <span class="math notranslate nohighlight">\(v(t)\)</span> be the speed of the arrow at time <span class="math notranslate nohighlight">\(t\)</span>.
 We divide a given time span <span class="math notranslate nohighlight">\([a, b]\)</span> into tiny, but finitely many
 subintervals <span class="math notranslate nohighlight">\({[t_k, t_{k+1}]}\)</span>.
-Then, the distance <span class="math notranslate nohighlight">\(D\)</span> traveled in the interval <span class="math notranslate nohighlight">\([a, b]\)</span> is approximated to any accuracy by a so-called Riemann sum</p>
+Then, the distance <span class="math notranslate nohighlight">\(d\)</span> traveled in the time interval <span class="math notranslate nohighlight">\([a, b]\)</span> is approximated to any accuracy by the so-called Riemann sum</p>
 <div class="math notranslate nohighlight">
-\[D \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)\]</div>
+\[d \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)\]</div>
 <p>The first paradox was that a sum with an infinite number of terms could be finite.
-Now, the paradox is that the sum of a large number of arbitrarily small terms does not vanish.
+This paradox is that the sum of a large number of arbitrarily small terms does not vanish.
 It lies at the very heart of integration theory that such a sum can be assigned a meaningful value.</p>
 </section>
 <section id="what-the-tortoise-said-to-achilles-lewis-carroll">
@@ -551,15 +553,15 @@ It lies at the very heart of integration theory that such a sum can be assigned 
 <p>This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland.
 It questions what mathematicians really do.
 Imagine the tortoise explaining a mathematical argument to Achilles.
-This is what it says, in the words of L. Carroll.</p>
+This is what it says, in the words of L. Carroll:</p>
 <p>(A) Things that are equal to the same are equal to each other.<br />
 (B) The two sides of this Triangle are things that are equal to the same.<br />
-(C) If A and B are true, D must be true.<br />
+(C) If A and B are true, Z must be true.<br />
 (Z) The two sides of this Triangle are equal to each other.</p>
 <p>“You should call it D, not Z,” said Achilles. “It comes next to the
 other three. If you accept A and B and C, you must accept Z.”
 “And why must I?” “Because it follows logically from them. If A and B and C are true,
-must be true. You don’t dispute that, I imagine?”</p>
+Z must be true. You don’t dispute that, I imagine?”</p>
 <p>“If A and B and C are true, Z must be true,” the Tortoise thoughtfully
 repeated. “That’s another Hypothetical, isn’t it? And, if I failed to see
 its truth, I might accept A and B and C, and <em>still</em> not accept Z, mightn’t I?”
@@ -584,7 +586,7 @@ the Tortoise. “So enter it in your book, please. We will call it</p>
 a necessary step, you see?” “I see,” said Achilles; and there was a touch of sadness in his tone.</p>
 <p>So much from Lewis Carroll. With a touch of sadness,
 I must admit that this paradox puts all mathematical reasoning at risk.
-How can we be sure that a proof is correct? Which rules do we apply, and who granted us the right to apply them?
+How can we be sure that a proof is correct? What rules do we apply, and who granted us the right to apply them?
 Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
 Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.</p>
 </section>
@@ -595,16 +597,16 @@ Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that
 <p>Every convergent sequence of measurable functions is nearly uniformly convergent.</p>
 </section>
 </section>
-<section id="natural-numbers-integers-rationals">
-<h2>Natural Numbers, Integers, Rationals<a class="headerlink" href="#natural-numbers-integers-rationals" title="Link to this heading">#</a></h2>
-<section id="natural-numbers">
-<h3>Natural Numbers<a class="headerlink" href="#natural-numbers" title="Link to this heading">#</a></h3>
+<section id="naturals-integers-rationals">
+<h2>Naturals, Integers, Rationals<a class="headerlink" href="#naturals-integers-rationals" title="Link to this heading">#</a></h2>
+<section id="naturals">
+<h3>Naturals<a class="headerlink" href="#naturals" title="Link to this heading">#</a></h3>
 <p>Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
 I don’t know, and, honestly, I don’t care too much. What seems clear to me is that there
 must have been first humans, probably at different times and different locations, to grasp the concept of a number.
 They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
 It took many millennia to formalize it.
-Today we have the Peano axioms. They describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers perfectly for all mathematical purposes.</p>
+Today, the Peano axioms perfectly describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers for all mathematical purposes.</p>
 <div class="proof definition admonition" id="def-peano-axioms">
 <p class="admonition-title"><span class="caption-number">Definition 6 </span> (Peano Axioms)</p>
 <section class="definition-content" id="proof-content">
@@ -622,7 +624,7 @@ The function <span class="math notranslate nohighlight">\(S\)</span></p></li>
         n \mapsto S(n)
     \end{array}
 \right .\end{split}\]</div>
-<p>is a bijection, and <span class="math notranslate nohighlight">\(P = S^{-1}\)</span> is its inverse. We normally write, of course, <span class="math notranslate nohighlight">\(n + 1\)</span> and <span class="math notranslate nohighlight">\(n - 1\)</span> to indicate successor and predecessor.</p>
+<p>  is a bijection, and <span class="math notranslate nohighlight">\(P = S^{-1}\)</span> is its inverse. We normally write, of course, <span class="math notranslate nohighlight">\(n + 1\)</span> and <span class="math notranslate nohighlight">\(n - 1\)</span> to indicate successor and predecessor.</p>
 <ol class="arabic simple" start="4">
 <li><p><strong>Induction</strong>: If <span class="math notranslate nohighlight">\(\phi\)</span> is a unary predicate such that
 <span class="math notranslate nohighlight">\(\phi(0)\)</span> is true, and for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\phi(n)\)</span> being true implies that <span class="math notranslate nohighlight">\(\phi(S(n))\)</span> is true,
@@ -642,8 +644,8 @@ it’s still infinite: you never run out of natural numbers.</p>
 <p>The Peano axioms not only allow the definition of all basic arithmetical operations.
 They form the foundation of number theory.</p>
 </section>
-<section id="integer-numbers">
-<h3>Integer Numbers<a class="headerlink" href="#integer-numbers" title="Link to this heading">#</a></h3>
+<section id="integers">
+<h3>Integers<a class="headerlink" href="#integers" title="Link to this heading">#</a></h3>
 <p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is a <strong>semigroup with respect to addition</strong> and a <strong>semigroup with respect to multiplication</strong>.
 But the equation <span class="math notranslate nohighlight">\(a + x = b\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> only if <span class="math notranslate nohighlight">\(a \le b\)</span>. <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> lacks the negative numbers.</p>
 <p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> of integers as the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
@@ -661,14 +663,14 @@ With these operations in place, the set <span class="math notranslate nohighligh
 As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> must also contain the negative numbers <span class="math notranslate nohighlight">\(-\!\mathbb{N}\)</span>,
 the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.</p>
 </section>
-<section id="rational-numbers">
-<h3>Rational Numbers<a class="headerlink" href="#rational-numbers" title="Link to this heading">#</a></h3>
+<section id="rationals">
+<h3>Rationals<a class="headerlink" href="#rationals" title="Link to this heading">#</a></h3>
 <p>The set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring but
 not a field because the equation <span class="math notranslate nohighlight">\(ax = 1\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> only for <span class="math notranslate nohighlight">\(a = 1\)</span>. <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> lacks the fractions.</p>
 <p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> of rationals as the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
 Again, the question remains whether such a field exists at all.
 The answer is yes, it does, and it can be easily constructed.
-We introduce, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>, the inverse <span class="math notranslate nohighlight">\(a^{-1} = 1/a\)</span> as the unique solution of <span class="math notranslate nohighlight">\(ax = 1\)</span> and define:</p>
+We introduce, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>, the inverse <span class="math notranslate nohighlight">\(a^{-1}\)</span>, or synonymously <span class="math notranslate nohighlight">\(1/a\)</span>, as the unique solution of <span class="math notranslate nohighlight">\(ax = 1\)</span> and define:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}&amp;a a^{-1} = 1 \text{ for } a \in \mathbb{Z}-\{0\}\\&amp;\mathbb{Q} = \{ab^{-1} \mid a \in \mathbb{Z}, b \in \mathbb{Z}-\{0\}\}\end{aligned}\end{align} \]</div>
 <p>Starting from <span class="math notranslate nohighlight">\(a a^{-1} = 1\)</span>, we derive, as an example, the multiplication rule:</p>
@@ -681,7 +683,7 @@ We introduce, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>,
 \[\begin{split}a b^{-1} &amp;= (n n^{-1}) (ab^{-1}) \\
 &amp;= (na) (n^{-1} b^{-1}) \\
 &amp;= (n a) (nb)^{-1}\end{split}\]</div>
-<p>Continuing in this way, the definition of addition, subtraction and multiplication on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a straightforward exercise.
+<p>Continuing in this way, the definition of addition, subtraction, multiplication, and division on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a straightforward exercise.
 With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field.
 As any field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> must also contain the rationals,
 the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.</p>
@@ -689,14 +691,14 @@ the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is inde
 </section>
 <section id="convergence-completeness-and-the-continuum">
 <h2>Convergence, Completeness, and the Continuum<a class="headerlink" href="#convergence-completeness-and-the-continuum" title="Link to this heading">#</a></h2>
-<p>What worked fine for integers and rationals proves to be more tricky for real numbers.
+<p>What worked fine for integers and rationals proves to be more tricky for reals.
 The set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field with many holes: the equation <span class="math notranslate nohighlight">\(x^2 = a\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> only for square numbers, but not for, say, <span class="math notranslate nohighlight">\(a=2\)</span>.
-<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> famously does not contain<span class="math notranslate nohighlight">\(\sqrt 2, \pi, e\)</span>, and many more numbers.
+<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> famously does not contain <span class="math notranslate nohighlight">\(\sqrt 2, \pi, e\)</span>, and many other numbers.
 It is tempting to introduce the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of real numbers as the <strong>smallest set containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> with no holes</strong>.
 While this definition captures the essence of the continuum, it lamentably lacks rigour.
 The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
-The following definitions are, for now, restricted to rationals (even the epsilons are rational!), because that’s all we have.
-But they are, of course, valid in any metric space.</p>
+The following definitions are, for now, restricted to rationals (even the epsilons are rational!) because that’s all we have.
+But the definitions remain valid, of course, in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and in any metric space.</p>
 <div class="proof definition admonition" id="def-convergence">
 <p class="admonition-title"><span class="caption-number">Definition 8 </span> (Convergence of Sequences)</p>
 <section class="definition-content" id="proof-content">
@@ -727,14 +729,14 @@ We call a set <span class="math notranslate nohighlight">\(A\)</span> complete, 
 <p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Sequences)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Sum, difference, product, and quotient of convergent sequences are convergent and
-converge to the sum, difference, product, and quotient of their limits. For the denominator <span class="math notranslate nohighlight">\(\{x_n\}\)</span> of a quotient we require that
-<span class="math notranslate nohighlight">\(\lim_{n \to \infty} x_n \ne 0\)</span>.</p>
+converge to the sum, difference, product, and quotient of their limits. For the denominator <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require that
+<span class="math notranslate nohighlight">\(\lim_{n \to \infty} y_n \ne 0\)</span>.</p>
 <p><strong>b)</strong> Sum, difference, product, and quotient of Cauchy sequences are Cauchy sequences.
-For the denominator  <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require that there be an <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that
+For the denominator  <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require an <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and an <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that
 <span class="math notranslate nohighlight">\(|y_n| &gt; \epsilon\)</span> for all <span class="math notranslate nohighlight">\(n &gt; n_0\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We only prove that the quotient of two Cauchy sequences <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, <span class="math notranslate nohighlight">\(\{y_n\}\)</span>.</p>
+<p>Proof. We only prove that the quotient of two Cauchy sequences <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, <span class="math notranslate nohighlight">\(\{y_n\}\)</span> is again a Cauchy sequence.</p>
 <p>As <span class="math notranslate nohighlight">\(\{|y_n|\}\)</span> is positive and bounded, we can choose <span class="math notranslate nohighlight">\(\epsilon_0, n_0, M\)</span> such that <span class="math notranslate nohighlight">\(\epsilon_0 \le |y_n| \le M\)</span> for all <span class="math notranslate nohighlight">\(n &gt; n_0\)</span>.
 Then:</p>
 <div class="math notranslate nohighlight">
@@ -749,71 +751,139 @@ The answer is yes, it does, and goes back to Cantor. He defined</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}&amp;\mathbb{S} = \text{ set of all Cauchy sequences in } \mathbb{Q}\\&amp;\mathbb{R} = \mathbb{S}/\sim\end{aligned}\end{align} \]</div>
 <p>This reads as follows: <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of the equivalence classes of all Cauchy sequences, or, more informally:
-It is the set of whatever can be approximated by rationals. Example:
+It is the set of whatever number can be approximated by rationals. Example:
 The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x_0 &amp;= 2 \\
 x_{n+1} &amp;= x_n - \frac{2-x_n^2}{2x_n}\end{split}\]</div>
 <p>is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> and converges to <span class="math notranslate nohighlight">\(\sqrt 2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
-Cantor’s construction identifies the sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> with its limit <span class="math notranslate nohighlight">\(\sqrt 2\)</span>, and we can write: <span class="math notranslate nohighlight">\(\{x_n\} = \sqrt 2\)</span>.
-All basic arithmetic can be extended to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> along the following line:
+Cantor’s construction identifies the sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> (and all sequences <span class="math notranslate nohighlight">\(\{y_n\}\)</span> with <span class="math notranslate nohighlight">\(\{y_n\} \sim \{x_n\}\)</span>)
+with its limit <span class="math notranslate nohighlight">\(\sqrt 2\)</span>. The notation</p>
+<div class="math notranslate nohighlight">
+\[\{x_n\} = \sqrt 2\]</div>
+<p>is a shorthand representation of this fact.</p>
+<p>All basic arithmetic are extended to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> in a natural way. Example:
 For <span class="math notranslate nohighlight">\(x = \{x_n\}\)</span>, <span class="math notranslate nohighlight">\(y = \{y_n\}\)</span> we define:</p>
 <div class="math notranslate nohighlight">
 \[x + y = \{x_n\} + \{y_n\}\]</div>
 <p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 11</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span>.
-Therefore, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field. The next theorem tells us that it is complete.</p>
+Therefore, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field.</p>
+<p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> not only inherits the basic arithmetics, but also the topology:
+We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
+an undertaking that involves a considerable number of epsilons.</p>
+<div class="proof definition admonition" id="def-convergence-reals">
+<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Convergence of Reals)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(r, s\)</span> be real numbers and <span class="math notranslate nohighlight">\(\{r_n\}_n\)</span> a sequence of reals numbers.
+Here is how they are represented by their defining Cauchy series of rationals:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}r &amp;= \{y_k\}_k\\s &amp;= \{z_k\}_k\\r_n &amp;= \{x_{n_k}\}_k\\\{r_n\}_n &amp;= \{\{x_{n_k}\}\}_n\end{aligned}\end{align} \]</div>
+<p>Each <span class="math notranslate nohighlight">\(r_n\)</span> corresponds to (or: is represented by, can be identified with) a Cauchy sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span>,
+and the sequence <span class="math notranslate nohighlight">\(\{r_n\}_n\)</span> is itself a sequence of Cauchy sequences.
+This can be represented as a matrix, with a row for each <span class="math notranslate nohighlight">\(r_n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}r_1 &amp; = \{x_{1_k}\} = \{x_{1_1}, x_{1_2}, \ldots, x_{1_k}, \ldots \} \\r_2 &amp; = \{x_{2_k}\} = \{x_{2_1}, x_{2_2}, \ldots, x_{2_k}, \ldots \} \\&amp;\vdots\\r_n &amp; = \{x_{n_k}\} = \{x_{n_1}, x_{n_2}, \ldots, x_{n_k}, \ldots \}\\&amp;\vdots\end{aligned}\end{align} \]</div>
+<p><strong>a) Distance of reals</strong><br />
+We define what it means for a real number to be close to zero or to another real number:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon\\\left | r - s \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k - z_k \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
+<p>Note that the equivalence of rational Cauchy sequences is same as the equality of the corresponding reals:</p>
+<div class="math notranslate nohighlight">
+\[r = s \Leftrightarrow \{y_k\}_k \sim \{z_k\}_k\]</div>
+<p><strong>b) Convergence of real sequences</strong><br />
+We define what it means for a sequence of real numbers to converge to zero or to another real number:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \left | r_n \right | &lt; \epsilon\\\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \left | r_n - r \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
+<p>which is the same as:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} \right | &lt; \epsilon\\\lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} - y_k \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
+<p><strong>c) Cauchy convergence of real sequences</strong><br />
+We define what it means for a sequence of real numbers to be a Cauchy sequence: The sequence <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span>
+is a Cauchy sequence iff:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
+<p>which is the same as:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_0(\epsilon, m, n): \forall k &gt; k_0(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+</section>
+</div><p>We take as an example the sequences</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}x_{n_0} &amp;= 2 + \frac{1}{n} \\x_{n_{k+1}} &amp;= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n_k}}\end{aligned}\end{align} \]</div>
+<p>For each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span> is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> that converges in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\sqrt{2 + \frac{1}{n}}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 <div class="proof theorem admonition" id="thr-R-completeness">
 <p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Completeness of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
 <section class="theorem-content" id="proof-content">
-<p>Any Cauchy sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> converges to itself:</p>
-<div class="math notranslate nohighlight">
-\[\lim_{n \to \infty}  \{x_n\} =  \{x_n\}\]</div>
-<p>So, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete</p>
+<p>Every Cauchy sequence <span class="math notranslate nohighlight">\(\{r_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> converges.
+So, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. If <span class="math notranslate nohighlight">\(\{x_n\}\)</span> happens to be rational, it converges, by construction of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, to itself, and there is nothing to prove.
-If it doesn’t, it’s a Cauchy sequence of Cauchy sequences <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span>. So, any two sequences <span class="math notranslate nohighlight">\(\{x_{m_k}\}, \{x_{n_k}\}\)</span>
-will get arbitrarily close:</p>
+<p>Proof. Let <span class="math notranslate nohighlight">\(\{r_n\}\)</span> be a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
+Every number <span class="math notranslate nohighlight">\(r_n\)</span> in that sequence is represented by a Cauchy sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span> of rationals:</p>
 <div class="math notranslate nohighlight">
-\[\forall \epsilon &gt; 0: \exists k_0(\epsilon): \forall k &gt; k_0 : \left | x_{m_k} - x_{n_k} \right | &lt; \epsilon\]</div>
-<p>This is exactly the fact that <span class="math notranslate nohighlight">\(\{x_{m_k}\} \sim \{x_{n_k}\}\)</span> for any <span class="math notranslate nohighlight">\(m, n\)</span>. In other words:
-All elements of a Cauchy sequences of Cauchy sequences belong to the same
-equivalence class, the real number they are identified with.</p>
+\[r_n = \{x_{n_k}\}_k\]</div>
+<p>Each <span class="math notranslate nohighlight">\(r_n\)</span> being a Cauchy sequence, we get:</p>
+<div class="math notranslate nohighlight">
+\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
+<p>The sequence  <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span> being a Cauchy sequence itself, we get:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+<p>We conclude that the diagonal sequence  <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is also Cauchy sequence.
+To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and get the inequality</p>
+<div class="math notranslate nohighlight">
+\[\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | &lt; 3 \epsilon\]</div>
+<p>So, the sequence <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> represents a real number <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[r = \{x_{n_n}\}\]</div>
+<p>It remains to show that</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty}r_n = r\]</div>
+<p>This is true because in</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+<p>we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like. Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 9</a>):</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
+<p>which is what we want.</p>
 </div>
-<p>As any field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
-it is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>. Is</p>
-<div class="proof definition admonition" id="def-compactness">
-<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Compactness)</p>
+<p>As any complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
+it is indeed the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.</p>
+</section>
+<section id="compactness">
+<h2>Compactness<a class="headerlink" href="#compactness" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-closure">
+<p class="admonition-title"><span class="caption-number">Definition 10 </span> (Accumulation Points, Closed Sets, Closure)</p>
+<section class="definition-content" id="proof-content">
+<p>todo</p>
+</section>
+</div><div class="proof definition admonition" id="def-compactness">
+<p class="admonition-title"><span class="caption-number">Definition 11 </span> (Compactness)</p>
 <section class="definition-content" id="proof-content">
 <p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>compact</strong>,
 iff each bounded sequence of elements of A has a convergent subsequence.</p>
 </section>
-</div><div class="proof definition admonition" id="def-completness">
-<p class="admonition-title"><span class="caption-number">Definition 10 </span> (Completeness)</p>
-<section class="definition-content" id="proof-content">
-<p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>complete</strong>,
-iff each Cauchy-sequence of elements of A is convergent.</p>
-</section>
 </div><div class="proof lemma admonition" id="lem-compactness-completeness">
-<p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Compactness Implies Completeness)</p>
+<p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Compact Sets)</p>
 <section class="lemma-content" id="proof-content">
-<p>Compact sets are complete.</p>
+<p><strong>a)</strong> Compact sets are complete.
+<strong>b)</strong> Closed subsets of compact sets are compact.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> be compact and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a Cauchy-sequence of elements of <span class="math notranslate nohighlight">\(A\)</span>.
+<p>Proof. a) Let <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> be compact and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a Cauchy-sequence of elements of <span class="math notranslate nohighlight">\(A\)</span>.
 Then, the set <span class="math notranslate nohighlight">\(\{x_n \mid n \in \mathbb{N} \}\)</span> is bounded and has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in A\)</span>.
 Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a Cauchy-sequence, converges itself to <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>b) todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-bolzano-weierstrass">
 <p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Bolzano-Weierstrass)</p>
 <section class="theorem-content" id="proof-content">
-<p>Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact (and complete).</p>
+<p><strong>a)</strong> Every bounded and monotonous sequence of reals is convergent.</p>
+<p><strong>b)</strong> Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Todo</p>
 </div>
 <div class="proof definition admonition" id="def-sup-norm">
-<p class="admonition-title"><span class="caption-number">Definition 11 </span> (Sup Norm)</p>
+<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Sup Norm)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a bounded function.</p>
 <p>The <strong>sup norm</strong> (or <strong>uniform norm</strong>) of <span class="math notranslate nohighlight">\(f\)</span> is defined as:</p>
@@ -826,7 +896,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>The proofs are trivial.</p>
 </section>
 </div><div class="proof definition admonition" id="def-convergence-functions">
-<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Convergence of Functions)</p>
+<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Convergence of Functions)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f_n: [a, b] \to \mathbb{R}\)</span> <span class="math notranslate nohighlight">\((n \in \mathbb{N})\)</span> be a sequence of functions, and <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> another function.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>pointwise</strong> if, for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, we have</p>
@@ -840,7 +910,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <section id="continuous-functions">
 <h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-continuity">
-<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Continuity)</p>
+<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Continuity)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function.</p>
 <p><strong>(a)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
@@ -923,7 +993,7 @@ Let <span class="math notranslate nohighlight">\(x_0 = a, x_1 = b, x_2 = (x_0 + 
 <section id="riemann-integrable-functions">
 <h2>Riemann-Integrable Functions<a class="headerlink" href="#riemann-integrable-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Riemann Integrals)</p>
+<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Riemann Integrals)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
 <p><strong>(a) Partitions</strong>. A <strong>partition of <span class="math notranslate nohighlight">\([a, b]\)</span></strong> is a strictly increasing sequence <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> with <span class="math notranslate nohighlight">\(a = x_0\)</span>,  <span class="math notranslate nohighlight">\(b = x_n\)</span>.
@@ -1126,7 +1196,7 @@ and is the uniform limit of step functions.</p>
 <section id="differentiable-functions">
 <h2>Differentiable Functions<a class="headerlink" href="#differentiable-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-derivatives">
-<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Derivatives)</p>
+<p class="admonition-title"><span class="caption-number">Definition 16 </span> (Derivatives)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> in <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
@@ -1560,13 +1630,14 @@ we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#littlewood-s-principles">Littlewood’s Principles</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-integers-rationals">Natural Numbers, Integers, Rationals</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers">Natural Numbers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integer-numbers">Integer Numbers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers">Rational Numbers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals-integers-rationals">Naturals, Integers, Rationals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-completeness-and-the-continuum">Convergence, Completeness, and the Continuum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness">Compactness</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>

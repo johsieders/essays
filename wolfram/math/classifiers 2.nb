@@ -1,0 +1,137 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5131,        129]
+NotebookOptionsPosition[      3133,         88]
+NotebookOutlinePosition[      3541,        104]
+CellTagsIndexPosition[      3498,        101]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Classification", "Section",
+ CellChangeTimes->{{3.9338267036362534`*^9, 
+  3.933826708374655*^9}},ExpressionUUID->"9c74aa5e-f31d-4d44-b10f-\
+5949c4daab62"],
+
+Cell["Bayesian networks - a generalization of Bayesian decisions", "Text",ExpressionUUID->"f1f535a7-f6cb-c544-beda-0abd08bcbe58"],
+
+Cell[CellGroupData[{
+
+Cell["Naive Bayesian Tests, Classification Problems", "Subsection",
+ CellChangeTimes->{{3.933990098493948*^9, 
+  3.93399009962315*^9}},ExpressionUUID->"c96718bc-428e-e94b-9732-\
+37f49f82687d"],
+
+Cell["\<\
+The general setting: a feature ma\.08trix  (m x n), outcome Y (m x 1)
+Assumption: [Subscript[x, 1], Subscript[x, 2], ...Subscript[x, n]] governed \
+by some known distribution (e.g. normal distribution), with some parameter \
+\[Theta]
+Approach: Divide the rows of X in K disjoint groups according to K possible \
+values of Y. Estimate Subscript[\[Theta], k] for each k \[Element] {1, K}\
+\>", "Text",ExpressionUUID->"c8dab28b-b741-2f49-9786-8223945aa35d"],
+
+Cell[CellGroupData[{
+
+Cell["Bernoulli Naive Bayes", "Subsubsection",ExpressionUUID->"e3cb9d66-5f9c-7447-a668-acf21719e118"],
+
+Cell["BOW (bag of words), tf-idf", "Text",ExpressionUUID->"518ca687-4146-df4c-8fca-fc5358116ca7"]
+}, Open  ]],
+
+Cell["Binomial Naive Bayes", "Subsubsection",ExpressionUUID->"f6a01326-64c1-8a44-9583-dc16cb954968"],
+
+Cell[CellGroupData[{
+
+Cell["Multinomial Naive Bayes", "Subsubsection",ExpressionUUID->"ec826b58-fb00-a440-8efd-b5da649d83ec"],
+
+Cell["\<\
+multinomial distribution, spam problem, comparison with Bernoulli\
+\>", "Text",ExpressionUUID->"e9104bb4-1ed6-b44f-95e7-b088d4dbf0b6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Gaussian Naive Bayes", "Subsubsection",ExpressionUUID->"34266c42-3f22-1548-af96-67ee4cf21997"],
+
+Cell["\<\
+Normal distribution, parameter estimates. Examples: Iris data set, sepal \
+length/width, petal length/width\
+\>", "Text",ExpressionUUID->"57939153-c966-7847-872e-ee5b5b7aa6f2"]
+}, Open  ]],
+
+Cell["Multivariate Gaussian Naive Bayes", "Subsubsection",ExpressionUUID->"c1f9dd05-53fe-1943-ab3a-f789546c391c"],
+
+Cell["LDA (Linear Discriminant Analysis)", "Subsubsection",ExpressionUUID->"67a8a8bd-a852-7442-b4e7-5e215782644b"],
+
+Cell["QDA (Quadratic Discriminant Analysis)", "Subsubsection",ExpressionUUID->"9d213ed2-480f-e64e-a67b-64e5cada4c43"],
+
+Cell[CellGroupData[{
+
+Cell["PLSA", "Subsubsection",ExpressionUUID->"97733fc4-6825-5841-b44e-d153885b3bb7"],
+
+Cell["Expectation-maximization with Bernoulli (AI45)", "Text",ExpressionUUID->"131619a1-207b-1c40-a3c0-349cccc0c6e2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{548, 587},
+WindowMargins->{{-1774, Automatic}, {Automatic, 195.5}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"dafbd8d8-ec9d-1742-83d4-c63714e65a77"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 161, 3, 67, "Section",ExpressionUUID->"9c74aa5e-f31d-4d44-b10f-5949c4daab62"],
+Cell[744, 27, 129, 0, 35, "Text",ExpressionUUID->"f1f535a7-f6cb-c544-beda-0abd08bcbe58"],
+Cell[CellGroupData[{
+Cell[898, 31, 192, 3, 54, "Subsection",ExpressionUUID->"c96718bc-428e-e94b-9732-37f49f82687d"],
+Cell[1093, 36, 464, 7, 150, "Text",ExpressionUUID->"c8dab28b-b741-2f49-9786-8223945aa35d"],
+Cell[CellGroupData[{
+Cell[1582, 47, 101, 0, 45, "Subsubsection",ExpressionUUID->"e3cb9d66-5f9c-7447-a668-acf21719e118"],
+Cell[1686, 49, 97, 0, 35, "Text",ExpressionUUID->"518ca687-4146-df4c-8fca-fc5358116ca7"]
+}, Open  ]],
+Cell[1798, 52, 100, 0, 45, "Subsubsection",ExpressionUUID->"f6a01326-64c1-8a44-9583-dc16cb954968"],
+Cell[CellGroupData[{
+Cell[1923, 56, 103, 0, 37, "Subsubsection",ExpressionUUID->"ec826b58-fb00-a440-8efd-b5da649d83ec"],
+Cell[2029, 58, 144, 2, 35, "Text",ExpressionUUID->"e9104bb4-1ed6-b44f-95e7-b088d4dbf0b6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2210, 65, 100, 0, 45, "Subsubsection",ExpressionUUID->"34266c42-3f22-1548-af96-67ee4cf21997"],
+Cell[2313, 67, 186, 3, 58, "Text",ExpressionUUID->"57939153-c966-7847-872e-ee5b5b7aa6f2"]
+}, Open  ]],
+Cell[2514, 73, 113, 0, 45, "Subsubsection",ExpressionUUID->"c1f9dd05-53fe-1943-ab3a-f789546c391c"],
+Cell[2630, 75, 114, 0, 37, "Subsubsection",ExpressionUUID->"67a8a8bd-a852-7442-b4e7-5e215782644b"],
+Cell[2747, 77, 117, 0, 37, "Subsubsection",ExpressionUUID->"9d213ed2-480f-e64e-a67b-64e5cada4c43"],
+Cell[CellGroupData[{
+Cell[2889, 81, 84, 0, 37, "Subsubsection",ExpressionUUID->"97733fc4-6825-5841-b44e-d153885b3bb7"],
+Cell[2976, 83, 117, 0, 35, "Text",ExpressionUUID->"131619a1-207b-1c40-a3c0-349cccc0c6e2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

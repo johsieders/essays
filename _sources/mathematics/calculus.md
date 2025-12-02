@@ -1,7 +1,12 @@
 # First Steps in Calculus
 
 
+
+
 > under construction
+
+
+
 ## Paradoxes
 
 ### Achilles and the Tortoise (Zeno)
@@ -9,10 +14,11 @@
 Imagine the tortoise and Achilles starting a race with the tortiose 10 metres in the lead, 
 and Achilles running ten times as fast as the tortoise.  
 By the time Achilles has covered 10 meters, the tortoise is 1 metre in the lead.  
-By the time Achilles has covered 11 meters, the tortoise is 1.1 metres in the lead.  
+By the time Achilles has covered 11 meters, the tortoise is 0.1 metres in the lead.  
+By the time Achilles has covered 11.1 meters, the tortoise is 0.01 metres in the lead.  
 And so on. Will Achilles ever overtake the tortoise?
 
-Of course, he will after 11.111... metres, because
+Of course, he will after 11.111... metres because
 
 ```{math}
 \sum_{k=0}^\infty \alpha^k = \frac{1}{1-\alpha}
@@ -20,7 +26,7 @@ Of course, he will after 11.111... metres, because
 which gives, with $\alpha = 1/10$:
 
 ```{math}
-10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + 1.111\ldots
+10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + \frac{10}{9} = 11.111\ldots
 ```
 
 What seemed paradoxical to Zeno is that the sum of an infinite number of terms could be finite.
@@ -31,17 +37,17 @@ Today infinite sums are well understood; there is nothing paradoxical about them
 ### The Standing Arrow (Zeno): 
 Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
 How can it ever move? The answer is given by the theory of integrals we are going to study in detail. 
-Here is just a short sketch: 
+Here is a short sketch: 
 Let $v(t)$ be the speed of the arrow at time $t$. 
 We divide a given time span $[a, b]$ into tiny, but finitely many 
 subintervals ${[t_k, t_{k+1}]}$.
-Then, the distance $D$ traveled in the interval $[a, b]$ is approximated to any accuracy by a so-called Riemann sum
+Then, the distance $d$ traveled in the time interval $[a, b]$ is approximated to any accuracy by the so-called Riemann sum
 
 ```{math}
-D \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)
+d \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)
 ```
 The first paradox was that a sum with an infinite number of terms could be finite.
-Now, the paradox is that the sum of a large number of arbitrarily small terms does not vanish.
+This paradox is that the sum of a large number of arbitrarily small terms does not vanish.
 It lies at the very heart of integration theory that such a sum can be assigned a meaningful value.
 
 ### What the Tortoise Said to Achilles (Lewis Carroll)
@@ -49,17 +55,17 @@ It lies at the very heart of integration theory that such a sum can be assigned 
 This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland. 
 It questions what mathematicians really do.
 Imagine the tortoise explaining a mathematical argument to Achilles.
-This is what it says, in the words of L. Carroll.
+This is what it says, in the words of L. Carroll:
 
 (A) Things that are equal to the same are equal to each other.   
 (B) The two sides of this Triangle are things that are equal to the same.   
-(C) If A and B are true, D must be true.   
+(C) If A and B are true, Z must be true.   
 (Z) The two sides of this Triangle are equal to each other.
 
 "You should call it D, not Z," said Achilles. "It comes next to the
 other three. If you accept A and B and C, you must accept Z."
 "And why must I?" "Because it follows logically from them. If A and B and C are true,
-must be true. You don't dispute that, I imagine?"
+Z must be true. You don't dispute that, I imagine?"
 
 "If A and B and C are true, Z must be true," the Tortoise thoughtfully
 repeated. "That's another Hypothetical, isn't it? And, if I failed to see
@@ -90,7 +96,7 @@ a necessary step, you see?" "I see," said Achilles; and there was a touch of sad
 
 So much from Lewis Carroll. With a touch of sadness, 
 I must admit that this paradox puts all mathematical reasoning at risk.
-How can we be sure that a proof is correct? Which rules do we apply, and who granted us the right to apply them?
+How can we be sure that a proof is correct? What rules do we apply, and who granted us the right to apply them?
 Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
 Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.
 
@@ -103,25 +109,25 @@ Every measurable function is nearly continuous.
 Every convergent sequence of measurable functions is nearly uniformly convergent.
 
 
-## Natural Numbers, Integers, Rationals
+## Naturals, Integers, Rationals
 
-### Natural Numbers
+### Naturals
 
 Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
 I don't know, and, honestly, I don't care too much. What seems clear to me is that there 
 must have been first humans, probably at different times and different locations, to grasp the concept of a number. 
 They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
 It took many millennia to formalize it. 
-Today we have the Peano axioms. They describe the set $\mathbb{N}$ of natural numbers perfectly for all mathematical purposes.
+Today, the Peano axioms perfectly describe the set $\mathbb{N}$ of natural numbers for all mathematical purposes.
 
 ````{prf:definition} Peano Axioms
 :label: def-peano-axioms
 
-1) $\mathbb{N}$ is **not empty**: $0 \in \mathbb{N}$
+1. $\mathbb{N}$ is **not empty**: $0 \in \mathbb{N}$
 
-2) The relation $=$ is an **equivalence relation** on $\mathbb{N}$.
+2. The relation $=$ is an **equivalence relation** on $\mathbb{N}$.
 
-3) Every natural number $n$ has exactly one **successor** $S(n)$, and every natural number $n$ except $0$ has exactly one **predecessor** $P(n)$.
+3. Every natural number $n$ has exactly one **successor** $S(n)$, and every natural number $n$ except $0$ has exactly one **predecessor** $P(n)$.
 The function $S$ 
 
 ```{math}
@@ -133,9 +139,9 @@ S:
     \end{array}
 \right .
 ```
-is a bijection, and $P = S^{-1}$ is its inverse. We normally write, of course, $n + 1$ and $n - 1$ to indicate successor and predecessor.
+&ensp; is a bijection, and $P = S^{-1}$ is its inverse. We normally write, of course, $n + 1$ and $n - 1$ to indicate successor and predecessor.
 
-4) **Induction**: If $\phi$ is a unary predicate such that
+4. **Induction**: If $\phi$ is a unary predicate such that
 $\phi(0)$ is true, and for every $n \in \mathbb{N}$, $\phi(n)$ being true implies that $\phi(S(n))$ is true,
 then $\phi(n)$ is true for every $n \in \mathbb{N}$.
 ````
@@ -154,7 +160,7 @@ it's still infinite: you never run out of natural numbers.
 The Peano axioms not only allow the definition of all basic arithmetical operations. 
 They form the foundation of number theory.
 
-### Integer Numbers
+### Integers
 
 The set $\mathbb{N}$ is a **semigroup with respect to addition** and a **semigroup with respect to multiplication**.
 But the equation $a + x = b$ is solvable in $\mathbb{N}$ only if $a \le b$. $\mathbb{N}$ lacks the negative numbers.
@@ -185,14 +191,14 @@ As any ring containing $\mathbb{N}$ must also contain the negative numbers $-\!\
 the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**.  
 
 
-### Rational Numbers
+### Rationals
 The set $\mathbb{Z}$ is a ring but 
 not a field because the equation $ax = 1$ is solvable in $\mathbb{Z}$ only for $a = 1$. $\mathbb{Z}$ lacks the fractions.
 
 We introduce the set $\mathbb{Q}$ of rationals as the **smallest field containing $\mathbb{Z}$**. 
 Again, the question remains whether such a field exists at all. 
 The answer is yes, it does, and it can be easily constructed.
-We introduce, for $a \ne 0$, the inverse $a^{-1} = 1/a$ as the unique solution of $ax = 1$ and define:
+We introduce, for $a \ne 0$, the inverse $a^{-1}$, or synonymously $1/a$, as the unique solution of $ax = 1$ and define:
 
 ```{math}
 &a a^{-1} = 1 \text{ for } a \in \mathbb{Z}-\{0\}
@@ -215,7 +221,7 @@ a b^{-1} &= (n n^{-1}) (ab^{-1}) \\
 &= (n a) (nb)^{-1}
 ```
 
-Continuing in this way, the definition of addition, subtraction and multiplication on $\mathbb{Q}$ is a straightforward exercise.
+Continuing in this way, the definition of addition, subtraction, multiplication, and division on $\mathbb{Q}$ is a straightforward exercise.
 With these operations in place, the set $\mathbb{Q}$ is a field.
 As any field containing $\mathbb{Z}$ must also contain the rationals, 
 the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**.  
@@ -223,14 +229,14 @@ the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**.
 
 ## Convergence, Completeness, and the Continuum
 
-What worked fine for integers and rationals proves to be more tricky for real numbers.
+What worked fine for integers and rationals proves to be more tricky for reals.
 The set $\mathbb{Q}$ is a field with many holes: the equation $x^2 = a$ is solvable in $\mathbb{Q}$ only for square numbers, but not for, say, $a=2$.
-$\mathbb{Q}$ famously does not contain$\sqrt 2, \pi, e$, and many more numbers.
+$\mathbb{Q}$ famously does not contain $\sqrt 2, \pi, e$, and many other numbers.
 It is tempting to introduce the set $\mathbb{R}$ of real numbers as the **smallest set containing $\mathbb{Q}$ with no holes**.
 While this definition captures the essence of the continuum, it lamentably lacks rigour. 
 The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
-The following definitions are, for now, restricted to rationals (even the epsilons are rational!), because that's all we have.
-But they are, of course, valid in any metric space.
+The following definitions are, for now, restricted to rationals (even the epsilons are rational!) because that's all we have.
+But the definitions remain valid, of course, in $\mathbb{R}$ and in any metric space.
 
 
 ````{prf:definition} Convergence of Sequences
@@ -277,16 +283,16 @@ We call a set $A$ complete, iff every Cauchy sequence converges.
 :label: thr-convergent-sequences
 
 **a)** Sum, difference, product, and quotient of convergent sequences are convergent and
-converge to the sum, difference, product, and quotient of their limits. For the denominator $\{x_n\}$ of a quotient we require that 
-$\lim_{n \to \infty} x_n \ne 0$.
+converge to the sum, difference, product, and quotient of their limits. For the denominator $\{y_n\}$ of a quotient we require that 
+$\lim_{n \to \infty} y_n \ne 0$.
 
 **b)** Sum, difference, product, and quotient of Cauchy sequences are Cauchy sequences.
-For the denominator  $\{y_n\}$ of a quotient we require that there be an $\epsilon > 0$ and a $n_0 \in \mathbb{N}$ such that 
+For the denominator  $\{y_n\}$ of a quotient we require an $\epsilon > 0$ and an $n_0 \in \mathbb{N}$ such that 
 $|y_n| > \epsilon$ for all $n > n_0$.
 ````
 ````{prf:proof} 
 
-We only prove that the quotient of two Cauchy sequences $\{x_n\}$, $\{y_n\}$.
+We only prove that the quotient of two Cauchy sequences $\{x_n\}$, $\{y_n\}$ is again a Cauchy sequence.
 
 As $\{|y_n|\}$ is positive and bounded, we can choose $\epsilon_0, n_0, M$ such that $\epsilon_0 \le |y_n| \le M$ for all $n > n_0$.
 Then:
@@ -311,7 +317,7 @@ The answer is yes, it does, and goes back to Cantor. He defined
 ```
 
 This reads as follows: $\mathbb{R}$ is the set of the equivalence classes of all Cauchy sequences, or, more informally:
-It is the set of whatever can be approximated by rationals. Example: 
+It is the set of whatever number can be approximated by rationals. Example: 
 The sequence $\{x_n\}$ defined by 
 
 ```{math}
@@ -319,45 +325,186 @@ x_0 &= 2 \\
 x_{n+1} &= x_n - \frac{2-x_n^2}{2x_n}
 ```
 is a Cauchy sequence in $\mathbb{Q}$ and converges to $\sqrt 2$ in $\mathbb{R}$.
-Cantor's construction identifies the sequence $\{x_n\}$ with its limit $\sqrt 2$, and we can write: $\{x_n\} = \sqrt 2$.
-All basic arithmetic can be extended to $\mathbb{R}$ along the following line:
+Cantor's construction identifies the sequence $\{x_n\}$ (and all sequences $\{y_n\}$ with $\{y_n\} \sim \{x_n\}$)
+with its limit $\sqrt 2$. The notation 
+
+```{math}
+\{x_n\} = \sqrt 2
+```
+is a shorthand representation of this fact.
+
+All basic arithmetic are extended to $\mathbb{R}$ in a natural way. Example:
 For $x = \{x_n\}$, $y = \{y_n\}$ we define:
 
 ```{math}
 x + y = \{x_n\} + \{y_n\}
 ```
 Thanks to {prf:ref}`thr-convergent-sequences` we know the meaning of $\{x_n\} + \{y_n\}$.
-Therefore, the set $\mathbb{R}$ is a field. The next theorem tells us that it is complete.
+Therefore, the set $\mathbb{R}$ is a field. 
+
+$\mathbb{R}$ not only inherits the basic arithmetics, but also the topology:
+We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
+an undertaking that involves a considerable number of epsilons.
+
+````{prf:definition} Convergence of Reals
+:label: def-convergence-reals
+
+Let $r, s$ be real numbers and $\{r_n\}_n$ a sequence of reals numbers.
+Here is how they are represented by their defining Cauchy series of rationals:
+
+```{math}
+r &= \{y_k\}_k
+
+s &= \{z_k\}_k
+
+r_n &= \{x_{n_k}\}_k
+
+\{r_n\}_n &= \{\{x_{n_k}\}\}_n
+```
+
+Each $r_n$ corresponds to (or: is represented by, can be identified with) a Cauchy sequence $\{x_{n_k}\}_k$, 
+and the sequence $\{r_n\}_n$ is itself a sequence of Cauchy sequences.
+This can be represented as a matrix, with a row for each $r_n$:
+
+```{math}
+r_1 & = \{x_{1_k}\} = \{x_{1_1}, x_{1_2}, \ldots, x_{1_k}, \ldots \} 
+
+r_2 & = \{x_{2_k}\} = \{x_{2_1}, x_{2_2}, \ldots, x_{2_k}, \ldots \} 
+
+&\vdots
+
+r_n & = \{x_{n_k}\} = \{x_{n_1}, x_{n_2}, \ldots, x_{n_k}, \ldots \}
+
+&\vdots
+```
+
+**a) Distance of reals**  
+We define what it means for a real number to be close to zero or to another real number:
+
+```{math}
+\left | r \right | < \epsilon &\Leftrightarrow \exists k_0(\epsilon): \forall k > k_0(\epsilon): \left | y_k \right | < \epsilon
+
+\left | r - s \right | < \epsilon &\Leftrightarrow \exists k_0(\epsilon): \forall k > k_0(\epsilon): \left | y_k - z_k \right | < \epsilon
+```
+
+Note that the equivalence of rational Cauchy sequences is same as the equality of the corresponding reals:
+```{math}
+r = s \Leftrightarrow \{y_k\}_k \sim \{z_k\}_k
+```
+
+
+**b) Convergence of real sequences**    
+We define what it means for a sequence of real numbers to converge to zero or to another real number:
+
+```{math}
+\lim_{n \to \infty} r_n = 0 &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \left | r_n \right | < \epsilon
+
+\lim_{n \to \infty} r_n = 0 &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \left | r_n - r \right | < \epsilon
+```
+which is the same as:
+
+```{math}
+\lim_{n \to \infty} r_n = 0 &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \forall n > n_0(\epsilon): \exists k_0(\epsilon, n): \forall k > k_0(\epsilon, n): \left | x_{n_k} \right | < \epsilon
+
+\lim_{n \to \infty} r_n = r &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \forall n > n_0(\epsilon): \exists k_0(\epsilon, n): \forall k > k_0(\epsilon, n): \left | x_{n_k} - y_k \right | < \epsilon
+```
+
+
+**c) Cauchy convergence of real sequences**  
+We define what it means for a sequence of real numbers to be a Cauchy sequence: The sequence $\{r_n\}_n = \{\{x_{n_k}\}\}_n$
+is a Cauchy sequence iff:
+
+```{math}
+\forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \left | r_n - r_m \right | < \epsilon
+```
+which is the same as:
+
+```{math}
+\forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \exists k_0(\epsilon, m, n): \forall k > k_0(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | < \epsilon
+```
+
+````
+
+We take as an example the sequences
+
+```{math}
+x_{n_0} &= 2 + \frac{1}{n} 
+
+x_{n_{k+1}} &= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n_k}}
+```
+
+For each $n \in \mathbb{N}$, $\{x_{n_k}\}_k$ is a Cauchy sequence in $\mathbb{Q}$ that converges in $\mathbb{R}$ to $\sqrt{2 + \frac{1}{n}}$ in $\mathbb{R}$.
 
 
 ````{prf:theorem} Completeness of $\mathbb{R}$
 :label: thr-R-completeness
 
-Any Cauchy sequence $\{x_n\}$ in $\mathbb{R}$ converges to itself:
+Every Cauchy sequence $\{r_n\}$ in $\mathbb{R}$ converges.
+So, $\mathbb{R}$ is complete.
 
-```{math}
-\lim_{n \to \infty}  \{x_n\} =  \{x_n\}
-```
-
-So, $\mathbb{R}$ is complete
 ````
 
 ````{prf:proof} 
-If $\{x_n\}$ happens to be rational, it converges, by construction of $\mathbb{R}$, to itself, and there is nothing to prove.
-If it doesn't, it's a Cauchy sequence of Cauchy sequences $\{x_{n_k}\}$. So, any two sequences $\{x_{m_k}\}, \{x_{n_k}\}$
-will get arbitrarily close:
+
+Let $\{r_n\}$ be a Cauchy sequence in $\mathbb{R}$.
+Every number $r_n$ in that sequence is represented by a Cauchy sequence $\{x_{n_k}\}$ of rationals:
 
 ```{math}
-\forall \epsilon > 0: \exists k_0(\epsilon): \forall k > k_0 : \left | x_{m_k} - x_{n_k} \right | < \epsilon
+r_n = \{x_{n_k}\}_k
+```
+Each $r_n$ being a Cauchy sequence, we get:
+ 
+```{math}
+\forall n \in \mathbb{N}, \epsilon > 0: \exists k_0(n, \epsilon): \forall k, j > k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | < \epsilon
+```
+The sequence  $\{r_n\}_n = \{\{x_{n_k}\}\}_n$ being a Cauchy sequence itself, we get: 
+ 
+```{math}
+\forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k > k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | < \epsilon
+```
+We conclude that the diagonal sequence  $\{x_{n_n}\}$ is also Cauchy sequence. 
+To this end, we choose $\epsilon >0$, $n, m > n_0(\epsilon)$, and $k > k_1(\epsilon, m, n)$ and get the inequality
+
+```{math}
+\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | < 3 \epsilon
 ```
 
-This is exactly the fact that $\{x_{m_k}\} \sim \{x_{n_k}\}$ for any $m, n$. In other words: 
-All elements of a Cauchy sequences of Cauchy sequences belong to the same
-equivalence class, the real number they are identified with. 
+So, the sequence $\{x_{n_n}\}$ represents a real number $r$:
+
+```{math}
+r = \{x_{n_n}\}
+```
+It remains to show that
+
+```{math}
+\lim_{n \to \infty}r_n = r
+```
+This is true because in  
+
+```{math}
+\forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k > k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | < \epsilon
+```
+we can choose $m$ as we like. Setting $m = k$ we get (compare {prf:ref}`def-convergence-reals`):
+
+```{math}
+\forall \epsilon > 0: \exists n_0(\epsilon): \forall n > n_0(\epsilon): \exists k_1(\epsilon, n): \forall k > k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | < \epsilon
+```
+
+which is what we want.
 ````
 
-As any field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
-it is indeed the **smallest field containing $\mathbb{Q}$**. Is 
+As any complete field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
+it is indeed the **smallest complete field containing $\mathbb{Q}$**. 
+
+
+## Compactness
+
+````{prf:definition} Accumulation Points, Closed Sets, Closure
+:label: def-closure
+
+todo
+
+````
 
 ````{prf:definition} Compactness
 :label: def-compactness
@@ -366,31 +513,29 @@ A set $A \subset \mathbb{R}$ is called **compact**,
 iff each bounded sequence of elements of A has a convergent subsequence.
 ````
 
-````{prf:definition} Completeness
-:label: def-completness
 
-A set $A \subset \mathbb{R}$ is called **complete**, 
-iff each Cauchy-sequence of elements of A is convergent.
-````
-
-````{prf:Lemma} Compactness Implies Completeness 
+````{prf:Lemma} Compact Sets 
 :label: lem-compactness-completeness
 
-Compact sets are complete.
-
+**a)** Compact sets are complete.
+**b)** Closed subsets of compact sets are compact.
 ````
 
 ````{prf:proof}
 
-Let $A \subset \mathbb{R}$ be compact and $\{x_n\}$ a Cauchy-sequence of elements of $A$. 
+a) Let $A \subset \mathbb{R}$ be compact and $\{x_n\}$ a Cauchy-sequence of elements of $A$. 
 Then, the set $\{x_n \mid n \in \mathbb{N} \}$ is bounded and has a subsequence that converges to some $x \in A$.
-Therefore $\{x_n\}$, being a Cauchy-sequence, converges itself to $x$. 
+Therefore $\{x_n\}$, being a Cauchy-sequence, converges itself to $x$.
+
+b) todo 
 ````
 
 ````{prf:theorem} Bolzano-Weierstrass
 :label: thr-bolzano-weierstrass
 
-Each closed interval $[a, b] \subset \mathbb{R}$ is compact (and complete).
+**a)** Every bounded and monotonous sequence of reals is convergent. 
+
+**b)** Each closed interval $[a, b] \subset \mathbb{R}$ is compact.
 ````
 
 ````{prf:proof} 
@@ -1425,26 +1570,7 @@ $$
 \left\lvert\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right\rvert<\epsilon
 $$
 
-[//]: # ()
-[//]: # (```{math})
 
-[//]: # ()
-[//]: # ()
-[//]: # (\{x_{1_k}\} &= \{x_{1_1}, x_{1_2}, \ldots, x_{1_k}, \ldots \} )
-
-[//]: # ()
-[//]: # (\{x_{2_k}\} &= \{x_{2_1}, x_{2_2}, \ldots, x_{2_k}, \ldots \} )
-
-[//]: # ()
-[//]: # (&\vdots)
-
-[//]: # ()
-[//]: # (\{x_{n_k}\} &= \{x_{n_1}, x_{n_2}, \ldots, x_{n_k}, \ldots \})
-
-[//]: # ()
-[//]: # (&\vdots)
-
-[//]: # (```)
 
 [//]: # ()
 [//]: # (Each sequence being a Cauchy sequence, we have, looking at {prf:ref}`equ-cauchy-cauchy` by row: )
