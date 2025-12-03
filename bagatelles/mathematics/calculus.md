@@ -4,6 +4,16 @@
 
 
 > under construction
+> 
+
+todo:
+
+Q countable
+
+R uncountable
+
+continuum hypothesis
+
 
 
 
@@ -57,6 +67,9 @@ It questions what mathematicians really do.
 Imagine the tortoise explaining a mathematical argument to Achilles.
 This is what it says, in the words of L. Carroll:
 
+:::{admonition} Lewis Carroll: "What the Tortoise Said to Achilles"
+:class: tip
+
 (A) Things that are equal to the same are equal to each other.   
 (B) The two sides of this Triangle are things that are equal to the same.   
 (C) If A and B are true, Z must be true.   
@@ -83,8 +96,8 @@ that you accept A and B and C and D, *of course* you accept Z."
 "Do I?" said the Tortoise innocently. "Let's make that quite clear.
 I accept A and B and C and D. Suppose I *still* refused to accept Z?"
 "Then Logic would take you by the throat and *force* you to do it!"
-Achilles triumphantly replied. "Logic would tell you, You can't help
-yourself. Now that you've accepted A and B and C and D, you must accept Z!" 
+Achilles triumphantly replied. "Logic would tell you, 'You can't help
+yourself. Now that you've accepted A and B and C and D, you must accept Z!' 
 So you've no choice, you see."
 "Whatever *Logic* is good enough to tell me is worth *writing down*," said
 the Tortoise. "So enter it in your book, please. We will call it
@@ -92,7 +105,23 @@ the Tortoise. "So enter it in your book, please. We will call it
 (E) If A and B and C and D are true, Z must be true."
 
 "Until I've granted *that*, of course I needn't grant Z. So it's quite
-a necessary step, you see?" "I see," said Achilles; and there was a touch of sadness in his tone.
+a *necessary* step, you see?" "I see," said Achilles; and there was a touch of sadness in his tone.
+
+Here narrator, having pressing business at the Bank, was obliged to leave the happy
+pair, and did not again pass the spot until some months afterwards. When he did so,
+Achilles was still seated on the back of the much-enduring Tortoise, and was writing
+in his notebook, which appeared to be nearly full. The Tortoise was saying, "Have
+you got that last step written down? Unless I've lost count, that makes a thousand
+and one. There are several million more to come. And would you mind, as a
+personal favour, considering what a lot of instructions this colloquy of ours will
+provide for the Logicians of the Nineteenth Century—would you mind adopting a
+pun that my cousin the Mock-Turtle will then make, and allowing yourself to be re-
+named *Taught-Us*?"
+"As you please!" replied the weary warrior, in the hollow tones of despair, as he
+buried his face in his hands. "Provided that you, for your part, will adopt a pun the
+Mock-Turtle never made, and allow yourself to be re-named *A Kill-Ease*!"
+
+:::
 
 So much from Lewis Carroll. With a touch of sadness, 
 I must admit that this paradox puts all mathematical reasoning at risk.
@@ -100,16 +129,13 @@ How can we be sure that a proof is correct? What rules do we apply, and who gran
 Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
 Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.
 
-### Littlewood's Principles
+## Introduction
 
-Every measurable set is nearly a finite union of intervals.
+This material has been published many times, see {cite}`heuser2009analysis1`, 
+{cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
+to name but a few prominent examples.
 
-Every measurable function is nearly continuous.
-
-Every convergent sequence of measurable functions is nearly uniformly convergent.
-
-
-## Naturals, Integers, Rationals
+## From Naturals to Reals
 
 ### Naturals
 
@@ -130,16 +156,17 @@ Today, the Peano axioms perfectly describe the set $\mathbb{N}$ of natural numbe
 3. Every natural number $n$ has exactly one **successor** $S(n)$, and every natural number $n$ except $0$ has exactly one **predecessor** $P(n)$.
 The function $S$ 
 
-```{math}
-S:  
-\left\{
-    \begin{array}{lr}
-        \mathbb{N} \to \mathbb{N} - \{0\} \\
-        n \mapsto S(n)
-    \end{array}
-\right .
-```
-&ensp; is a bijection, and $P = S^{-1}$ is its inverse. We normally write, of course, $n + 1$ and $n - 1$ to indicate successor and predecessor.
+   ```{math}
+   S:
+   \left\{
+       \begin{array}{lr}
+           \mathbb{N} \to \mathbb{N} - \{0\} \\
+           n \mapsto S(n)
+       \end{array}
+   \right .
+   ```
+
+   is a bijection, and $P = S^{-1}$ is its inverse. We normally write, of course, $n + 1$ and $n - 1$ to indicate successor and predecessor.
 
 4. **Induction**: If $\phi$ is a unary predicate such that
 $\phi(0)$ is true, and for every $n \in \mathbb{N}$, $\phi(n)$ being true implies that $\phi(S(n))$ is true,
@@ -163,7 +190,7 @@ They form the foundation of number theory.
 ### Integers
 
 The set $\mathbb{N}$ is a **semigroup with respect to addition** and a **semigroup with respect to multiplication**.
-But the equation $a + x = b$ is solvable in $\mathbb{N}$ only if $a \le b$. $\mathbb{N}$ lacks the negative numbers.
+However, $\mathbb{N}$ lacks the negative numbers: the equation $a + x = b$ is solvable in $\mathbb{N}$ only if $a \le b$. 
 
 We introduce the set $\mathbb{Z}$ of integers as the **smallest ring containing $\mathbb{N}$**. 
 While this definition is arguably concise and elegant, the question remains whether such a ring exists at all. 
@@ -193,7 +220,7 @@ the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**.
 
 ### Rationals
 The set $\mathbb{Z}$ is a ring but 
-not a field because the equation $ax = 1$ is solvable in $\mathbb{Z}$ only for $a = 1$. $\mathbb{Z}$ lacks the fractions.
+not a field. $\mathbb{Z}$ lacks the fractions: the equation $ax = 1$ is solvable in $\mathbb{Z}$ only for $a = 1$. 
 
 We introduce the set $\mathbb{Q}$ of rationals as the **smallest field containing $\mathbb{Z}$**. 
 Again, the question remains whether such a field exists at all. 
@@ -227,19 +254,19 @@ As any field containing $\mathbb{Z}$ must also contain the rationals,
 the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**.  
 
 
-## Convergence, Completeness, and the Continuum
+### Reals
 
 What worked fine for integers and rationals proves to be more tricky for reals.
 The set $\mathbb{Q}$ is a field with many holes: the equation $x^2 = a$ is solvable in $\mathbb{Q}$ only for square numbers, but not for, say, $a=2$.
 $\mathbb{Q}$ famously does not contain $\sqrt 2, \pi, e$, and many other numbers.
-It is tempting to introduce the set $\mathbb{R}$ of real numbers as the **smallest set containing $\mathbb{Q}$ with no holes**.
-While this definition captures the essence of the continuum, it lamentably lacks rigour. 
+It is tempting to think of the set $\mathbb{R}$ of real numbers as the **smallest set containing $\mathbb{Q}$ with no holes**.
+While this idea captures the essence of the continuum, it lamentably lacks rigour. 
 The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
 The following definitions are, for now, restricted to rationals (even the epsilons are rational!) because that's all we have.
 But the definitions remain valid, of course, in $\mathbb{R}$ and in any metric space.
 
 
-````{prf:definition} Convergence of Sequences
+````{prf:definition} Convergence of Rational Sequences
 :label: def-convergence
 
 **(a)**
@@ -248,26 +275,26 @@ We call a sequence $\{x_n\}$ **convergent to $x$**, written as
 ```{math}
 \lim_{n \to \infty} x_n = x
 ```
-iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for all $n \ge n_0$, we have
+iff $\left | x_n - x \right |$ becomes arbitrariliy small:
 
 ```{math}
-\lvert x_n - x \rvert < \epsilon
+\forall \epsilon > 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall n > n_0(\epsilon) : \left | x_n - x \right |  < \epsilon
 ```
 
 **(b)**
 We call a sequence $\{x_n\}$ a **Cauchy sequence**
-iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for all $n, m \ge n_0$, we have
+iff $\left | x_m - x_n \right |$ becomes arbitrariliy small:
 
 ```{math}
-\lvert x_n - x_m \rvert < \epsilon
+\forall \epsilon > 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall m, n > n_0(\epsilon) : \left | x_m - x_n \right |  < \epsilon
 ```
 
 **(c)**
 We call two Cauchy sequences $\{x_n\}, \{y_n\}$ **equivalent**
-iff, for every $\epsilon > 0$, there is a $n_0 \in \mathbb{N}$ such that, for all $n \ge n_0$, we have
+iff $\left | x_n - y_n \right |$ becomes arbitrariliy small:
 
 ```{math}
-\lvert x_n - y_n \rvert < \epsilon
+\forall \epsilon > 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall n > n_0(\epsilon) : \left | x_n - y_n \right |  < \epsilon
 ```
 This is written as:
 ```{math}
@@ -275,11 +302,11 @@ This is written as:
 ```
 
 **(d)**
-We call a set $A$ complete, iff every Cauchy sequence converges.
+We call a set $A$ complete iff every Cauchy sequence converges.
 ````
 
 
-````{prf:theorem} Sequences
+````{prf:theorem} Arithmetic on Sequences
 :label: thr-convergent-sequences
 
 **a)** Sum, difference, product, and quotient of convergent sequences are convergent and
@@ -317,7 +344,14 @@ The answer is yes, it does, and goes back to Cantor. He defined
 ```
 
 This reads as follows: $\mathbb{R}$ is the set of the equivalence classes of all Cauchy sequences, or, more informally:
-It is the set of whatever number can be approximated by rationals. Example: 
+It is the set of whatever number can be approximated by rationals. This gives us the following theorem for free:
+
+````{prf:theorem} Rationals and Reals
+:label: thr-rationals-reals
+Every real number can be approximated by rationals to any degree of precision.
+````
+
+Example: 
 The sequence $\{x_n\}$ defined by 
 
 ```{math}
@@ -339,14 +373,14 @@ For $x = \{x_n\}$, $y = \{y_n\}$ we define:
 ```{math}
 x + y = \{x_n\} + \{y_n\}
 ```
-Thanks to {prf:ref}`thr-convergent-sequences` we know the meaning of $\{x_n\} + \{y_n\}$.
+Thanks to {prf:ref}`thr-convergent-sequences` we know the meaning of $\{x_n\} + \{y_n\}$ and of all other arithmetic operations.
 Therefore, the set $\mathbb{R}$ is a field. 
 
-$\mathbb{R}$ not only inherits the basic arithmetics, but also the topology:
+$\mathbb{R}$ not only inherits the basic arithmetics but also the topology:
 We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
 an undertaking that involves a considerable number of epsilons.
 
-````{prf:definition} Convergence of Reals
+````{prf:definition} Convergence of Real Sequences
 :label: def-convergence-reals
 
 Let $r, s$ be real numbers and $\{r_n\}_n$ a sequence of reals numbers.
@@ -382,26 +416,27 @@ r_n & = \{x_{n_k}\} = \{x_{n_1}, x_{n_2}, \ldots, x_{n_k}, \ldots \}
 We define what it means for a real number to be close to zero or to another real number:
 
 ```{math}
-\left | r \right | < \epsilon &\Leftrightarrow \exists k_0(\epsilon): \forall k > k_0(\epsilon): \left | y_k \right | < \epsilon
+:label: def-convergence-reals-1
 
+\left | r \right | < \epsilon &\Leftrightarrow \exists k_0(\epsilon): \forall k > k_0(\epsilon): \left | y_k \right | < \epsilon \\
 \left | r - s \right | < \epsilon &\Leftrightarrow \exists k_0(\epsilon): \forall k > k_0(\epsilon): \left | y_k - z_k \right | < \epsilon
 ```
 
-Note that the equivalence of rational Cauchy sequences is same as the equality of the corresponding reals:
+Note that the equivalence of rational Cauchy sequences is the same as the equality of their corresponding reals:
 ```{math}
 r = s \Leftrightarrow \{y_k\}_k \sim \{z_k\}_k
 ```
 
-
-**b) Convergence of real sequences**    
+**b) Convergence of reals**    
 We define what it means for a sequence of real numbers to converge to zero or to another real number:
 
 ```{math}
-\lim_{n \to \infty} r_n = 0 &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \left | r_n \right | < \epsilon
-
-\lim_{n \to \infty} r_n = 0 &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \left | r_n - r \right | < \epsilon
+:label: def-convergence-reals-2
+\lim_{n \to \infty} r_n = 0 &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \forall n > n_0(\epsilon) \left | r_n \right | < \epsilon \\
+\lim_{n \to \infty} r_n = r &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \forall n > n_0(\epsilon) \left | r_n - r \right | < \epsilon
 ```
-which is the same as:
+
+Expanding statement {eq}`def-convergence-reals-2` with {eq}`def-convergence-reals-1`, gives us the long version:
 
 ```{math}
 \lim_{n \to \infty} r_n = 0 &\Leftrightarrow \forall \epsilon > 0: \exists n_0(\epsilon): \forall n > n_0(\epsilon): \exists k_0(\epsilon, n): \forall k > k_0(\epsilon, n): \left | x_{n_k} \right | < \epsilon
@@ -410,19 +445,19 @@ which is the same as:
 ```
 
 
-**c) Cauchy convergence of real sequences**  
+**c) Cauchy convergence of reals**  
 We define what it means for a sequence of real numbers to be a Cauchy sequence: The sequence $\{r_n\}_n = \{\{x_{n_k}\}\}_n$
 is a Cauchy sequence iff:
 
 ```{math}
+:label: def-convergence-reals-3
 \forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \left | r_n - r_m \right | < \epsilon
 ```
-which is the same as:
+Expanding statement {eq}`def-convergence-reals-3` with {eq}`def-convergence-reals-1`, gives us the long version:
 
 ```{math}
 \forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \exists k_0(\epsilon, m, n): \forall k > k_0(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | < \epsilon
 ```
-
 ````
 
 We take as an example the sequences
@@ -445,8 +480,9 @@ So, $\mathbb{R}$ is complete.
 ````
 
 ````{prf:proof} 
-
 Let $\{r_n\}$ be a Cauchy sequence in $\mathbb{R}$.
+We proceed in two steps: (1) We show that the diagonal sequence $r$ is a Cauchy sequence. (2) We show that $\{r_n\}$ converges to $r$.
+
 Every number $r_n$ in that sequence is represented by a Cauchy sequence $\{x_{n_k}\}$ of rationals:
 
 ```{math}
@@ -455,21 +491,26 @@ r_n = \{x_{n_k}\}_k
 Each $r_n$ being a Cauchy sequence, we get:
  
 ```{math}
+:label: thr-R-completeness-1
+
 \forall n \in \mathbb{N}, \epsilon > 0: \exists k_0(n, \epsilon): \forall k, j > k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | < \epsilon
 ```
 The sequence  $\{r_n\}_n = \{\{x_{n_k}\}\}_n$ being a Cauchy sequence itself, we get: 
  
 ```{math}
+:label: thr-R-completeness-2
+
 \forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k > k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | < \epsilon
 ```
 We conclude that the diagonal sequence  $\{x_{n_n}\}$ is also Cauchy sequence. 
-To this end, we choose $\epsilon >0$, $n, m > n_0(\epsilon)$, and $k > k_1(\epsilon, m, n)$ and get the inequality
+To this end, we choose $\epsilon >0$, $n, m > n_0(\epsilon)$, and $k > k_1(\epsilon, m, n)$ and, using inequality {eq}`thr-R-completeness-1` twice 
+and {eq}`thr-R-completeness-2` once, get the inequality:
 
 ```{math}
 \left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | < 3 \epsilon
 ```
 
-So, the sequence $\{x_{n_n}\}$ represents a real number $r$:
+So, the sequence $\{x_{n_n}\}$ is a Cauchy sequence and represents a real number $r$:
 
 ```{math}
 r = \{x_{n_n}\}
@@ -479,12 +520,8 @@ It remains to show that
 ```{math}
 \lim_{n \to \infty}r_n = r
 ```
-This is true because in  
-
-```{math}
-\forall \epsilon > 0: \exists n_0(\epsilon): \forall m, n > n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k > k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | < \epsilon
-```
-we can choose $m$ as we like. Setting $m = k$ we get (compare {prf:ref}`def-convergence-reals`):
+We observe that in statement {eq}`thr-R-completeness-2` we can choose $m$ as we like. 
+Setting $m = k$ we get (compare {prf:ref}`def-convergence-reals`):
 
 ```{math}
 \forall \epsilon > 0: \exists n_0(\epsilon): \forall n > n_0(\epsilon): \exists k_1(\epsilon, n): \forall k > k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | < \epsilon
@@ -492,12 +529,16 @@ we can choose $m$ as we like. Setting $m = k$ we get (compare {prf:ref}`def-conv
 
 which is what we want.
 ````
+This proof is extremely formal and straightforward, despite how scary the inequalities might look
+at first. The proof consists of two plugins: We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence, 
+and in statement {eq}`thr-R-completeness-2`, we replace the general $m$ with a specific choice — this is what "forall" is all about.
 
 As any complete field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
 it is indeed the **smallest complete field containing $\mathbb{Q}$**. 
+From now on, $\mathbb{R}$ will be our home. Whatever happens, happens in $\mathbb{R}$.
 
 
-## Compactness
+## Compact Sets
 
 ````{prf:definition} Accumulation Points, Closed Sets, Closure
 :label: def-closure
@@ -509,7 +550,7 @@ todo
 ````{prf:definition} Compactness
 :label: def-compactness
 
-A set $A \subset \mathbb{R}$ is called **compact**, 
+A set $A \subset \mathbb{R}$ is called **compact**
 iff each bounded sequence of elements of A has a convergent subsequence.
 ````
 
@@ -518,6 +559,7 @@ iff each bounded sequence of elements of A has a convergent subsequence.
 :label: lem-compactness-completeness
 
 **a)** Compact sets are complete.
+
 **b)** Closed subsets of compact sets are compact.
 ````
 
@@ -538,11 +580,41 @@ b) todo
 **b)** Each closed interval $[a, b] \subset \mathbb{R}$ is compact.
 ````
 
-````{prf:proof} 
+````{prf:proof}
 
-Todo
+ 
+**a)** Let $\{x_n\}$ be a non-decreasing bounded sequence with $s = \sup \{x_n |\mid n \in \mathbb{N} \}$.
+Then, by the definition of the supremum:
 
+```{math}
+\forall \epsilon > 0 : \exists n(\epsilon) : s - x_{n(\epsilon)} < \epsilon
+```
+hence, by monotony:
+```{math}
+\forall \epsilon > 0 : \exists n(\epsilon) :\forall n \ge n(\epsilon)  : s - x_{n} < \epsilon
+```
+The triangular inequality gives us, for $m,n > n(\epsilon)$
+
+```{math}
+ \left |x_{m} - x_{n} \right | \le \left |x_{m} - s \right | + \left |s - x_{n} \right | < 2\epsilon
+```
+hence:
+```{math}
+\forall \epsilon > 0 : \exists n(\epsilon) :\forall n, m \ge n(\epsilon)  : \left |x_{m} - x_{n} \right | < 2\epsilon
+```
+
+So, $\{x_n\}$ is a Cauchy sequence and converges to $s$ by construction.
+
+**b)** Let $[a, b] \subset \mathbb{R}$ be a closed interval and $\{x_n\}$ a sequence in $[a, b]$. We are going to show that
+$\{x_n\}$ contains a monotounous subsequence that is bounded because everything happens in $[a, b]$.  
+
+We call $m$ a *peak*, if $x_n < x_m$ for all $n > m$. If there are infinitely many peaks $\{m_k\}$ then $\{x_{m_k}\}$ is decreasing, 
+and we are done. If not, there is a last peak $m^*$, and an index $n_1 > m^*$ that is not a peak. 
+$n_1$ being not a peak, there must be an index $n_2 > n_1$ with $x_{n_2} > x_{n_1}$. And so on. 
+We end up with an increasing sequence $\{x_{n_k}\}$, which proves the theorem.
 ````
+
+## Functions
 
 ````{prf:definition} Sup Norm
 :label: def-sup-norm
@@ -554,8 +626,12 @@ The **sup norm** (or **uniform norm**) of $f$ is defined as:
 ```{math}
 \left \lVert f \right \rVert_{\infty} = \sup \{\lvert f(x) \rvert \mid x \in [a, b]\}
 ```
+````
 
-This is indeed a norm because:
+````{prf:remark} Sup Norm
+:label: rem-sup-norm
+
+The sup norm indeed a norm because:
 
 (i) $f = 0  \Leftrightarrow \left \lVert f \right \rVert_{\infty} = 0$
 
@@ -577,7 +653,7 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 \lim_{n \to \infty} \left | f_n(x) - f(x) \right | = 0
 ```
 
-**(b)** We say that $\lim_{n \to \infty} f_n = f$ **uniformly** if 
+**(b)** We say that $\lim_{n \to \infty} f_n = f$ **uniformly** iff 
 
 ```{math}
 \lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
@@ -591,17 +667,23 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 
 Let $f: [a, b] \to \mathbb{R}$ be a function.
 
-**(a)** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, 
-there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ whenever $\lvert h \rvert < \delta$.
+**(a)** $f$ is **continuous at $x \in [a, b]$** iff
 
-**(b)** $f$ is **continuous on $[a, b]$** if $f$ is continuous at each $x \in [a, b]$.
+```{math}
+\forall \epsilon > 0 : \exists \delta > 0 : \forall h \in [-\delta, \delta ]: \left | f(x + h) - f(x) \right | < \epsilon 
+```
 
-**(c)** $f$ is **uniformly continuous on $[a, b]$** if, for any $\epsilon > 0$, 
-there exists a $\delta > 0$ such that $\lvert f(x + h) - f(x) \rvert < \epsilon$ for all $x \in [a, b]$ 
-whenever $\lvert h \rvert < \delta$.
+**(b)** $f$ is **continuous on $[a, b]$** iff $f$ is continuous at each $x \in [a, b]$.
+
+**(c)** $f$ is **uniformly continuous on $[a, b]$** iff
+
+```{math}
+\forall \epsilon > 0 : \exists \delta > 0 : \forall x \in [a, b], h \in [-\delta, \delta]: \left | f(x + h) - f(x) \right | < \epsilon 
+```
+For $f$ to be uniformly continuous we require that one $\delta$ do the job for the whole interval $[a, b]$.
 ````
 
-````{prf:theorem} Continuous Functions on Compact Sets
+````{prf:theorem} Continuous Functions on Intervals
 :label: thr-continuity-on-compact-sets
 
 Let $f: [a, b] \to \mathbb{R}$ be continuous. Then:
@@ -649,7 +731,6 @@ and
 ```
 But $\{x_n\}$ has a subsequence $\{x_{n_k}\}$ that converges to some $x \in [a, b]$,
 and $\{y_{n_k}\}$ necessarily converges to the same $x$, So, $f$ is not continuous in $x$, which is a contradiction.
-
 ````
 
 ````{prf:theorem} Intermediate Value Theorem
@@ -665,6 +746,8 @@ Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 ````
 
 ````{prf:proof} 
+
+**TODO**
 
 The proof proceeds by halving intervals.
 We build two sequences $\{a_n\},\{b_n\}$ such that $\{a_n\} is
@@ -708,7 +791,6 @@ $\{f(x_n)\}$ converges to $f(x).
 
 ## Riemann-Integrable Functions
 
-
 ````{prf:definition} Riemann Integrals
 :label: def-riemann-integrals
 
@@ -731,14 +813,13 @@ and call
 ```{math}
 \int_a^b f(x) \, dx
 ```
-the **Riemann integral** of $f$ over $[a, b]$ 
-if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that for any Riemann sum $R(f, X, \xi)$ with $\mu(R) < \delta$
-it holds that
+the **Riemann integral** of $f$ over $[a, b]$ iff 
 
 ```{math}
-\left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | < \epsilon
+\forall \epsilon > 0$: \exists \delta > 0: \forall R(f, X, \xi) \text{ with } \mu(R) < \delta : \left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | < \epsilon
 ```
-In other words, Riemann sums can approximate Riemann integrals to arbitrary precision. We often write
+
+In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write
 
 ```{math}
 \int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
@@ -790,12 +871,11 @@ holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
 
 R-integrable functions are bounded on closed intervals
 (because Riemann sums are).
-
 ````
 
 Monotony leads us to an important theorem.
 
-````{prf:theorem} Mean Value Theorem
+````{prf:theorem} Mean Value Theorem of Integration
 :label: thr-mean-value
 
 Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
@@ -830,7 +910,6 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 
 & \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
 ```
-
 ````
 
 ````{prf:theorem} Properties of Riemann Integrals
@@ -905,7 +984,6 @@ which proves the continuity of $F$ at $x$
 
 
 **(e)**
-
 Let $\{f_n\}$ be a sequence of functions on $[a, b]$ that converges uniformly to $f$. Let $\epsilon >0$ and $n_0$ be such that, for $n \ge n_0$:
 
 ```{math}
@@ -952,12 +1030,16 @@ This proves that $f$ is R-integrable and:
 ```
 ````
 
+A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
+It is not integrable because on every interval you'll find Riemann sums equal to $0$, and others equal to $1$.
+We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.
+
 ````{prf:theorem} Riemann-Integrable Functions
 :label: thr-riemann-integrable-functions
 
-We consider functions on a closed interval.
+All functions are defined on a closed interval $[a, b]$.
 
-**(a)** Step functions are R-integrable
+**(a)** Step functions are R-integrable.
 
 **(b)** Let $f: [a, b] \to \mathbb{R}$ be a function such that, for any $\epsilon > 0$, 
 there are R-integrable functions $\phi, \psi$ with
@@ -974,12 +1056,15 @@ and
 
 Then $f$ is R-integrable
 
-**(c)** Monotonous functions are R-integrable
+**(c)** Monotonous functions are R-integrable.
 
-**(d)** Continuous functions are R-integrable
+**(d)** Continuous functions with countably many discontinuities are R-integrable.
+
+**(e) (Lebesgue Criterion)** Bounded functions are R-integrable iff their set of discontinuities has measure zero.
 ````
 
 ````{prf:proof} 
+The proof of (e) can be found in **citation needed**.
 
 **(a)**
 Let $\phi$ be a step function on $[a, b]$ with $\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})$. Then, obviously:
@@ -1020,28 +1105,7 @@ which can be made arbitrarily small. The assertion follows from (b).
 **(d)**
 Let $f$ be continuous on $[a, b]$. Then $f$ is uniformly continuous on $[a, b]$ by {prf:ref}`thr-continuity-on-compact-sets` 
 and is the uniform limit of step functions.
-
 ````
-
-
-
-A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
-
-
-````{prf:theorem} Lebesgue Criterion
-:label: thr-lebesgue-criterion
-
-Bounded functions are R-integrable iff their set of discontinuities has measure zero.
-
-````
-
-````{prf:proof} 
-
-todo
-
-
-````
-
 
 
 ## Differentiable Functions
@@ -1132,15 +1196,17 @@ todo
 Let $f, g \in C^1([a,b])$
 
 
-**(a)** Product Rule
-Let $f, g \in C^1([a,b])$. Then
+**(a) Product Rule**
+
+Let $f, g \in C^1([a,b])$. Then:
 
 ```{math}
 f'g' = f'g + fg'
 ```
 
-**(b)** Chain Rule
-Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then
+**(b) Chain Rule**
+
+Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then:
 
 ```{math}
 (f \circ g)' = (f' \circ g) \, g'
@@ -1172,7 +1238,7 @@ F(b) - F(a)  = \int_a^b f(y) \, dy
 ```
 
 **(b)**
-If $f$ is continuous in $x \in [a, b]$, then $F$ is differentiable at $x$ and it holds that
+If $f$ is continuous at $x \in [a, b]$, then $F$ is differentiable at $x$ and it holds that
 
 ```{math}
 F'(x) = f(x)
@@ -1186,36 +1252,32 @@ F' = f
 ```
 
 **(d)**
-The linear operators $\int$ and $\partial$ are inverse to each other.
+The linear operators $\int$ and $\partial$
 
 ```{math}
-
 \int : 
 \left\{
     \begin{array}{lr}
         C^0([a, b] \to C^1([a, b] \\
         f \mapsto F
     \end{array}
-\right\}
-
+\right .
 \\
-
+\\
 \partial : 
 \left\{
     \begin{array}{lr}
         C^1([a, b] \to C^0([a, b] \\
         F \mapsto f
     \end{array}
-\right\}
-
+\right .
 ```
+are inverse to each other:
 
 ```{math}
 
-\left( \int \partial \right) F = F
-
-\left( \partial \int \right) f = f
-
+&\int \partial F = F \\
+&\partial \int f = f
 ````
 
 ````{prf:proof}
@@ -1231,14 +1293,16 @@ todo
 Let $f, g \in C^1([a,b])$
 
 
-**(a)** Integration by Parts
+**(a) Integration by Parts**
+
 Let $f, g \in C^1([a,b])$. Then
 
 ```{math}
 \int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx
 ```
 
-**(b)** Substitution Rule
+**(b) Substitution Rule**
+
 Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b))$. Then
 
 ```{math}
@@ -1334,35 +1398,23 @@ $$
 ````
 
 
-
 ## Little o, Big O
 
 Little o means: $f$ tends to $0$ faster than $g$, or, equivalently, $f/g$ tends to $0$:
 
-$$
-f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
-$$
+```{math}
+&f = o(g) \Leftrightarrow \lim\frac{f(x)}{g(x)} = 0 \\ \\
+&f = o(1) \Leftrightarrow \lim f(x) = 0 \\ \\
+&f = o(x^n) \Leftrightarrow \lim \frac{f(x)}{x^n} = 0
+```
 
-$$
-f=o(1) \Longleftrightarrow \lim f(x) = 0 
-$$
+Big O means: $f$ grows not faster than $g$, or, equivalently, $f/g$ is bounded above:
 
-$$
-f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
-$$
-
-Big O means: $f$ grows not faster than $g$:
-
-$$
-f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
-$$
-$$
-f = O(1) \Longleftrightarrow f(x)\le C 
-$$
-
-$$
-f = O(x^n) \Longleftrightarrow f(x)\le C x^n
-$$
+```{math}
+&f = O(g) \Leftrightarrow \frac{f(x)}{g(x)} \le C \\ \\
+&f = O(1) \Leftrightarrow f(x)\le C \\ \\
+&f = O(x^n) \Leftrightarrow f(x)\le C x^n
+```
 
 
 ## References
@@ -1370,239 +1422,5 @@ $$
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-
-
-## archive
-
-### Trying MyST
-
-
-```{figure} https://github.com/rowanc1/pics/blob/main/mountains.png?raw=true
-:label: my-fig
-:align: center
-
-My **bold** mountain 🏔🚠.
-```
-
-This is a reference to [My Mountain](#my-fig)
-
-This is a reference to [Bolzano-Weierstrass](#thr-bolzano-weierstrass)
-
-This is a reference to ["{name}"](#thr-bolzano-weierstrass)
-
-This is a reference to {prf:ref}`Bolzano-Weierstrass <thr-bolzano-weierstrass>`
-
-This is a reference to {prf:ref}`"{name}" <thr-bolzano-weierstrass>`
-
-This is a reference to @thr-bolzano-weierstrass
-
----
-numbering:
-  box:
-    enabled: true
----
-
-:::{figure} westfield2.png
-:label: my-box
-:kind: box
-
-This figure will be numbered as "Box 1"
-:::
-
-:::{math}
-:enumerated: false
-Ax = b
-:::
-
-```{math}
-:enumerated: true
-Ax = b
-```
-
-```{math}
-:typst: root(3, x)
-\sqrt[3]{x}
-```
-
-```{math}
-:label: my_label
-By=c
-```
-
-This is a reference to {prf:ref}`my_label`
-
-This is a reference to {prf:ref}`My Label <my_label>`
-
-(my-paragraph)=
-This is just a paragraph!
-
-(my-points)=
-* Bullet
-* points
-
-Please see [this paragraph](#my-paragraph) and [these points](#my-points).
-
-```{math}
-\begin{equation}
-Y(i,k) = 
-\left\{
-    \begin{array}{lr}
-        ||R_{k}-R_{i}||^{2}, & \text{if } i \neq k\\
-        ||\triangle_{i}||^{2}, & \text{if } i\leq k
-    \end{array}
-\right\} = yz
-\end{equation}
-```
-
-
-```{math}
-Y(i,k) = 
-\left\{
-    \begin{array}{lr}
-        ||R_{k}-R_{i}||^{2}, & \text{if } i \neq k\\
-        ||\triangle_{i}||^{2}, & \text{if } i\leq k
-    \end{array}
-\right\} = yz
-```
-
-
-
-
-````{prf:proof}
-The properties (R1), (R2) and (R3) follow easily from (3), (R5) follows easily from (R4), and the proof of (R4) is the sting of this chapter. Let's
-do it in this order.
-(R1) We show that $f+g$ is integrable if $f$ and $g$ are. The proof follows a very simple pattern that often works: If $f$ and $g$ are integrable, 
-then there are step functions $\phi$, $\psi$, $\rho$, and $\sigma$ such that $\phi \le f \le \psi$ and $\rho \le g \le \sigma$. So
-
-$$
-\phi  + \rho \le f+g \le \psi  + \sigma
-$$
-
-and
-
-$$
-\int _a^b \psi(x)-\phi(x) \, dx < \epsilon  \text{ and } \int _a^b \rho (x)-\sigma(x) \, dx < \epsilon
-$$
-
-Using the additivity of the integral for step functions, we get:
-
-$$
-\int _a^b(\psi (x)+\rho (x))-(\phi (x)+\sigma (x))dx < 2 \epsilon
-$$
-
-Inequalities (4) and (5) show that $f+g$ is integrable. 
-The proof for the integrability of $\lambda f$ for $\lambda \in \mathbb{R}$ is analogous. 
-
-(R2) We show that a function continuous on $[a, b]$ is integrable. 
-Intervals in $\mathbb{R}$, rectangles in $\mathbb{R}^2$, cubes in $\mathbb{R}^3$ and $\mathbb{R}^k$. 
-The measure (or volume) $m[C]$ of a cube $C$ with edge length $\left[x_1, x_2, \dots,x_k\right]$ is:
-
-$$
-m[C] := x_1 x_2 \cdots x_k
-$$
-
-The characteristic function $X_A$ of a set $A$ is $1$ on $A$ and $0$ everywhere else.
-Step-functions take on finitely many values, are constant on cubes (of any size). 
-Let $\psi$ be a step function defined on disjoint cubes $C_i$
-with $\psi(x) = \psi_{i}$ on $C_{i}$, $(i=1,\dots, N)$. 
-The integral of $\psi$ is defined as:
-
-$$
-\int _{\mathbb{R}^k}\psi(x) \, dx := \sum _{i=1}^N \psi_i m\left[C_i\right]
-$$
-
-For stepwise functions $\psi$ and $\phi$, and from(XX) $\alpha, \beta \in \mathbb{R}$ it is clear that:
-
-$$
-\int _{\mathbb{R}^k}\alpha \phi(x) + \beta \psi (x) \, dx = \alpha \int_{\mathbb{R}^k}\phi(x) \, dx + \beta \int_{\mathbb{R}^k}\psi(x) \, dx
-$$
-
-For some functions $f$ it turns out that: 
-
-$$
-\sup_{\psi \le f}\int_{\mathbb{R}^k} \psi(x) \, dx = \inf _{\psi \ge f}\int_{\mathbb{R}^k} \psi(x) \, dx
-$$
-
-If this is true, $f$ is said to be Riemann-integrable (or integrable for short), and we define
-
-$$
-\int _{\mathbb{R}^k}f(x) \, dx := \sup _{\psi \le f}\int _{\mathbb{R}^k}\psi (x)dx = \inf _{\psi \ge f} \int _{\mathbb{R}^k} \psi(x) \, dx
-$$
-
-All step functions are obviously integrable, and so are continuous functions with compact support (proof!). A famous non-integrable function is the
-function $r$ defined on the interval $[0, 1]$ with $r(x) = 1$ if $x \in \mathbb{Q}$ and $0$ otherwise. 
-
-Let $\left(\psi _n\right)_{n\in \mathbb{N}}$ be a sequence of step functions converging uniformly towards some function $f$:
-
-$$
-\underset{n\to \infty }\lim \psi _n = f
-$$
-
-Then $f$ is integrable and it holds that
-
-$$
-\underset{n\to \infty }\lim \int_{\mathbb{R}^k} \psi_n(x) \, dx = \int _{\mathbb{R}^k}f(x) \, dx
-$$
-
-This can be seen as follows:
-
-to do!
-
-Now, let $f$ and $g$ be integrable and $\alpha, \beta \in \mathbb{R}$. Then $\alpha f + \beta g$ is integrable,
-and it holds that
-
-$$
-\int _{\mathbb{R}^n}\alpha f(x) + \beta g(x) \, dx = \alpha \int_{\mathbb{R}^n}f(x) \, dx + \beta \int_{\mathbb{R}^n}g(x) \, dx
-$$
-
-````
-
-
-An alternative definition of Riemann integrability is based on intermediate sums. 
-This needs some terminology: we call $\left\{x_1, x_2, \dots , x_n\right\}$ 
-a partition of $[a,b]$, $\min _{k =1,\dots ,n} \left\{x_k-x_{k-1}\right\}$ its granularity, 
-and $\left\{\xi_1, \xi_2, \dots,\xi_n\right\}$ a set of intermediate points with $\left.\xi_k\in \left[x_{k-1},x_k\right.\right), (k=1,\dots,n)$. 
-Here is the alternative definition: A function $f$ is R-integrable on $[a,b]$ iff, for any $\epsilon > 0$, 
-we can find a $\delta > 0$, such that for any partition with granularity less than $\delta$ and any set $\xi$ of intermediate points, we have:
-
-$$
-\left\lvert\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right\rvert<\epsilon
-$$
-
-
-
-[//]: # ()
-[//]: # (Each sequence being a Cauchy sequence, we have, looking at {prf:ref}`equ-cauchy-cauchy` by row: )
-
-[//]: # (```{math})
-
-[//]: # (\forall n, \epsilon > 0: \exists n_0&#40;n, \epsilon&#41;: \forall k, j > n_0 : \left | x_{n_k} - x_{n_j} \right | < \epsilon)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (The sequence  $\{\{x_k\}_n\}$ being a Cauchy sequence, we have, for a large enough $k$, looking at {prf:ref}`equ-cauchy-cauchy` by column: )
-
-[//]: # (```{math})
-
-[//]: # (\forall \epsilon > 0: \exists n_1&#40;\epsilon&#41;: \forall m, n > n_1:  \left | x_{n_k} - x_{m_k} \right | < \epsilon)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (We conclude that the diagonal sequence  $\{x_{n_n}\}$ is Cauchy sequence, thus element of $\mathbb{R}$ because the inequality)
-
-[//]: # ()
-[//]: # (```{math})
-
-[//]: # (\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | < 3 \epsilon)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (holds for large enough $k, m, n$.)
-
-
 
 <div style="margin-bottom: 100px;"></div>
