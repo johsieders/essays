@@ -638,18 +638,20 @@ The function <span class="math notranslate nohighlight">\(S\)</span></p>
 then <span class="math notranslate nohighlight">\(\phi(n)\)</span> is true for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p></li>
 </ol>
 </section>
-</div><p>So, in virtue of the Peano axioms we can start at <span class="math notranslate nohighlight">\(0\)</span> and,
+</div><p>The Peano axioms not only allow the definition of all basic arithmetical operations.
+They form the foundation of number theory.
+In virtue of the Peano axioms we can start at <span class="math notranslate nohighlight">\(0\)</span> and,
 applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.</p>
 <div class="proof definition admonition" id="def-infinity">
 <p class="admonition-title"><span class="caption-number">Definition 7 </span> (Infinity)</p>
 <section class="definition-content" id="proof-content">
-<p>A set <span class="math notranslate nohighlight">\(A\)</span> is infinite if there is an a proper subset <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to B\)</span>.</p>
+<p><strong>a)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>infinite</strong> if there is an a proper subset <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to B\)</span>.</p>
+<p><strong>b)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>countable</strong> if there is an injection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.
+This injection is often called an <em>enumeration</em>, a way of putting all elements of <span class="math notranslate nohighlight">\(A\)</span> in a sequential order.</p>
 </section>
 </div><p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is infinite because the successor function <span class="math notranslate nohighlight">\(S\)</span> is exactly such an injection, with <span class="math notranslate nohighlight">\(B = \mathbb{N} - \{0\}\)</span>.
 Another injection would be <span class="math notranslate nohighlight">\(\phi(n) = 10^n\)</span>, with <span class="math notranslate nohighlight">\(B = \{1, 10, 100, \ldots\}\)</span>. <span class="math notranslate nohighlight">\(B\)</span> is a set with huge gaps, and yet,
-it’s still infinite: you never run out of natural numbers.</p>
-<p>The Peano axioms not only allow the definition of all basic arithmetical operations.
-They form the foundation of number theory.</p>
+it’s still infinite: you never run out of natural numbers. Famous countable set are <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> to which we now turn.</p>
 </section>
 <section id="integers">
 <h3>Integers<a class="headerlink" href="#integers" title="Link to this heading">#</a></h3>
@@ -668,7 +670,8 @@ As an example, we explain how <span class="math notranslate nohighlight">\(a - b
 <p>Continuing in this way, the definition of addition, subtraction and multiplication on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a straightforward exercise.
 With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring.
 As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> must also contain the negative numbers <span class="math notranslate nohighlight">\(-\!\mathbb{N}\)</span>,
-the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.</p>
+the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
+<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is countable, the enumeration being <span class="math notranslate nohighlight">\({0, 1, -1, 2, -2, \ldots}\)</span>.</p>
 </section>
 <section id="rationals">
 <h3>Rationals<a class="headerlink" href="#rationals" title="Link to this heading">#</a></h3>
@@ -693,7 +696,8 @@ We introduce, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>,
 <p>Continuing in this way, the definition of addition, subtraction, multiplication, and division on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a straightforward exercise.
 With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field.
 As any field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> must also contain the rationals,
-the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.</p>
+the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
+<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is countable, the enumeration being <span class="math notranslate nohighlight">\({0, \frac{1}/{2}, \frac{1}/{3}, \frac{2}/{3}, \ldots}\)</span>.</p>
 </section>
 <section id="reals">
 <h3>Reals<a class="headerlink" href="#reals" title="Link to this heading">#</a></h3>

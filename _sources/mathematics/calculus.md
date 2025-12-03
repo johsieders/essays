@@ -172,20 +172,23 @@ The function $S$
 $\phi(0)$ is true, and for every $n \in \mathbb{N}$, $\phi(n)$ being true implies that $\phi(S(n))$ is true,
 then $\phi(n)$ is true for every $n \in \mathbb{N}$.
 ````
-So, in virtue of the Peano axioms we can start at $0$ and, 
+The Peano axioms not only allow the definition of all basic arithmetical operations. 
+They form the foundation of number theory.
+In virtue of the Peano axioms we can start at $0$ and, 
 applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.
 
 
 ````{prf:definition} Infinity
 :label: def-infinity
-A set $A$ is infinite if there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+**a)** A set $A$ is **infinite** if there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+
+**b)** A set $A$ is **countable** if there is an injection $\phi: A \to \mathbb{N}$. 
+This injection is often called an *enumeration*, a way of putting all elements of $A$ in a sequential order.
 ````
 The set $\mathbb{N}$ is infinite because the successor function $S$ is exactly such an injection, with $B = \mathbb{N} - \{0\}$.
 Another injection would be $\phi(n) = 10^n$, with $B = \{1, 10, 100, \ldots\}$. $B$ is a set with huge gaps, and yet, 
-it's still infinite: you never run out of natural numbers.
+it's still infinite: you never run out of natural numbers. Famous countable set are $\mathbb{Z}$ and $\mathbb{Q}$ to which we now turn.
 
-The Peano axioms not only allow the definition of all basic arithmetical operations. 
-They form the foundation of number theory.
 
 ### Integers
 
@@ -215,7 +218,8 @@ a - b = a + (-1)b = (-1)((-1)a + b) = (-1)(b - a) = - (b-a)
 Continuing in this way, the definition of addition, subtraction and multiplication on $\mathbb{Z}$ is a straightforward exercise.
 With these operations in place, the set $\mathbb{Z}$ is a ring.
 As any ring containing $\mathbb{N}$ must also contain the negative numbers $-\!\mathbb{N}$, 
-the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**.  
+the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**. 
+$\mathbb{Z}$ is countable, the enumeration being ${0, 1, -1, 2, -2, \ldots}$.
 
 
 ### Rationals
@@ -251,7 +255,8 @@ a b^{-1} &= (n n^{-1}) (ab^{-1}) \\
 Continuing in this way, the definition of addition, subtraction, multiplication, and division on $\mathbb{Q}$ is a straightforward exercise.
 With these operations in place, the set $\mathbb{Q}$ is a field.
 As any field containing $\mathbb{Z}$ must also contain the rationals, 
-the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**.  
+the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**. 
+$\mathbb{Q}$ is countable, the enumeration being ${0, \frac{1}/{2}, \frac{1}/{3}, \frac{2}/{3}, \ldots}$.
 
 
 ### Reals
