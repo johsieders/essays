@@ -58,12 +58,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"tex": {"tags": "ams"}, "chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/calculus';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Was the Empire Holy, Roman, or an Empire at All?" href="../history/8-holy_roman_empire.html" />
+    <link rel="next" title="Why Your Model Beats You: Bayesian Decision-Making Without Noise" href="bayesian-decisions.html" />
     <link rel="prev" title="First Steps in Arithmetic" href="arithmetic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -206,18 +206,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Probability &amp; Statistics</span></p>
-<ul class="nav bd-sidenav">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">First Steps in Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Number Theory</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics - Analysis</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">First Steps in Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -471,17 +465,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#littlewood-s-principles">Littlewood’s Principles</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals-integers-rationals">Naturals, Integers, Rationals</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-naturals-to-reals">From Naturals to Reals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reals">Reals</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-completeness-and-the-continuum">Convergence, Completeness, and the Continuum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness">Compactness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compact-sets">Compact Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
@@ -489,13 +484,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trying-myst">Trying MyST</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbering-box-enabled-true">numbering:
-box:
-enabled: true</a></li>
 </ul>
             </nav>
         </div>
@@ -512,6 +500,10 @@ enabled: true</a></li>
 <blockquote>
 <div><p>under construction</p>
 </div></blockquote>
+<p>todo:</p>
+<p>Q countable</p>
+<p>R uncountable</p>
+<p>continuum hypothesis</p>
 <section id="paradoxes">
 <h2>Paradoxes<a class="headerlink" href="#paradoxes" title="Link to this heading">#</a></h2>
 <section id="achilles-and-the-tortoise-zeno">
@@ -554,6 +546,8 @@ It lies at the very heart of integration theory that such a sum can be assigned 
 It questions what mathematicians really do.
 Imagine the tortoise explaining a mathematical argument to Achilles.
 This is what it says, in the words of L. Carroll:</p>
+<div class="tip admonition">
+<p class="admonition-title">Lewis Carroll: “What the Tortoise Said to Achilles”</p>
 <p>(A) Things that are equal to the same are equal to each other.<br />
 (B) The two sides of this Triangle are things that are equal to the same.<br />
 (C) If A and B are true, Z must be true.<br />
@@ -576,29 +570,43 @@ that you accept A and B and C and D, <em>of course</em> you accept Z.”
 “Do I?” said the Tortoise innocently. “Let’s make that quite clear.
 I accept A and B and C and D. Suppose I <em>still</em> refused to accept Z?”
 “Then Logic would take you by the throat and <em>force</em> you to do it!”
-Achilles triumphantly replied. “Logic would tell you, You can’t help
-yourself. Now that you’ve accepted A and B and C and D, you must accept Z!”
+Achilles triumphantly replied. “Logic would tell you, ‘You can’t help
+yourself. Now that you’ve accepted A and B and C and D, you must accept Z!’
 So you’ve no choice, you see.”
 “Whatever <em>Logic</em> is good enough to tell me is worth <em>writing down</em>,” said
 the Tortoise. “So enter it in your book, please. We will call it</p>
 <p>(E) If A and B and C and D are true, Z must be true.”</p>
 <p>“Until I’ve granted <em>that</em>, of course I needn’t grant Z. So it’s quite
-a necessary step, you see?” “I see,” said Achilles; and there was a touch of sadness in his tone.</p>
+a <em>necessary</em> step, you see?” “I see,” said Achilles; and there was a touch of sadness in his tone.</p>
+<p>Here narrator, having pressing business at the Bank, was obliged to leave the happy
+pair, and did not again pass the spot until some months afterwards. When he did so,
+Achilles was still seated on the back of the much-enduring Tortoise, and was writing
+in his notebook, which appeared to be nearly full. The Tortoise was saying, “Have
+you got that last step written down? Unless I’ve lost count, that makes a thousand
+and one. There are several million more to come. And would you mind, as a
+personal favour, considering what a lot of instructions this colloquy of ours will
+provide for the Logicians of the Nineteenth Century—would you mind adopting a
+pun that my cousin the Mock-Turtle will then make, and allowing yourself to be re-
+named <em>Taught-Us</em>?”
+“As you please!” replied the weary warrior, in the hollow tones of despair, as he
+buried his face in his hands. “Provided that you, for your part, will adopt a pun the
+Mock-Turtle never made, and allow yourself to be re-named <em>A Kill-Ease</em>!”</p>
+</div>
 <p>So much from Lewis Carroll. With a touch of sadness,
 I must admit that this paradox puts all mathematical reasoning at risk.
 How can we be sure that a proof is correct? What rules do we apply, and who granted us the right to apply them?
 Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
 Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.</p>
 </section>
-<section id="littlewood-s-principles">
-<h3>Littlewood’s Principles<a class="headerlink" href="#littlewood-s-principles" title="Link to this heading">#</a></h3>
-<p>Every measurable set is nearly a finite union of intervals.</p>
-<p>Every measurable function is nearly continuous.</p>
-<p>Every convergent sequence of measurable functions is nearly uniformly convergent.</p>
 </section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id2">[<a class="reference internal" href="#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id83" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id84" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
+to name but a few prominent examples.</p>
 </section>
-<section id="naturals-integers-rationals">
-<h2>Naturals, Integers, Rationals<a class="headerlink" href="#naturals-integers-rationals" title="Link to this heading">#</a></h2>
+<section id="from-naturals-to-reals">
+<h2>From Naturals to Reals<a class="headerlink" href="#from-naturals-to-reals" title="Link to this heading">#</a></h2>
 <section id="naturals">
 <h3>Naturals<a class="headerlink" href="#naturals" title="Link to this heading">#</a></h3>
 <p>Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
@@ -610,22 +618,21 @@ Today, the Peano axioms perfectly describe the set <span class="math notranslate
 <div class="proof definition admonition" id="def-peano-axioms">
 <p class="admonition-title"><span class="caption-number">Definition 6 </span> (Peano Axioms)</p>
 <section class="definition-content" id="proof-content">
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is <strong>not empty</strong>: <span class="math notranslate nohighlight">\(0 \in \mathbb{N}\)</span></p></li>
 <li><p>The relation <span class="math notranslate nohighlight">\(=\)</span> is an <strong>equivalence relation</strong> on <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>.</p></li>
 <li><p>Every natural number <span class="math notranslate nohighlight">\(n\)</span> has exactly one <strong>successor</strong> <span class="math notranslate nohighlight">\(S(n)\)</span>, and every natural number <span class="math notranslate nohighlight">\(n\)</span> except <span class="math notranslate nohighlight">\(0\)</span> has exactly one <strong>predecessor</strong> <span class="math notranslate nohighlight">\(P(n)\)</span>.
-The function <span class="math notranslate nohighlight">\(S\)</span></p></li>
-</ol>
+The function <span class="math notranslate nohighlight">\(S\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}S:  
+\[\begin{split}S:
 \left\{
     \begin{array}{lr}
         \mathbb{N} \to \mathbb{N} - \{0\} \\
         n \mapsto S(n)
     \end{array}
 \right .\end{split}\]</div>
-<p>  is a bijection, and <span class="math notranslate nohighlight">\(P = S^{-1}\)</span> is its inverse. We normally write, of course, <span class="math notranslate nohighlight">\(n + 1\)</span> and <span class="math notranslate nohighlight">\(n - 1\)</span> to indicate successor and predecessor.</p>
-<ol class="arabic simple" start="4">
+<p>is a bijection, and <span class="math notranslate nohighlight">\(P = S^{-1}\)</span> is its inverse. We normally write, of course, <span class="math notranslate nohighlight">\(n + 1\)</span> and <span class="math notranslate nohighlight">\(n - 1\)</span> to indicate successor and predecessor.</p>
+</li>
 <li><p><strong>Induction</strong>: If <span class="math notranslate nohighlight">\(\phi\)</span> is a unary predicate such that
 <span class="math notranslate nohighlight">\(\phi(0)\)</span> is true, and for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\phi(n)\)</span> being true implies that <span class="math notranslate nohighlight">\(\phi(S(n))\)</span> is true,
 then <span class="math notranslate nohighlight">\(\phi(n)\)</span> is true for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p></li>
@@ -647,7 +654,7 @@ They form the foundation of number theory.</p>
 <section id="integers">
 <h3>Integers<a class="headerlink" href="#integers" title="Link to this heading">#</a></h3>
 <p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is a <strong>semigroup with respect to addition</strong> and a <strong>semigroup with respect to multiplication</strong>.
-But the equation <span class="math notranslate nohighlight">\(a + x = b\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> only if <span class="math notranslate nohighlight">\(a \le b\)</span>. <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> lacks the negative numbers.</p>
+However, <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> lacks the negative numbers: the equation <span class="math notranslate nohighlight">\(a + x = b\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> only if <span class="math notranslate nohighlight">\(a \le b\)</span>.</p>
 <p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> of integers as the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
 While this definition is arguably concise and elegant, the question remains whether such a ring exists at all.
 The answer is yes, it does, and it can be easily constructed.
@@ -666,7 +673,7 @@ the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is inde
 <section id="rationals">
 <h3>Rationals<a class="headerlink" href="#rationals" title="Link to this heading">#</a></h3>
 <p>The set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring but
-not a field because the equation <span class="math notranslate nohighlight">\(ax = 1\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> only for <span class="math notranslate nohighlight">\(a = 1\)</span>. <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> lacks the fractions.</p>
+not a field. <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> lacks the fractions: the equation <span class="math notranslate nohighlight">\(ax = 1\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> only for <span class="math notranslate nohighlight">\(a = 1\)</span>.</p>
 <p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> of rationals as the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
 Again, the question remains whether such a field exists at all.
 The answer is yes, it does, and it can be easily constructed.
@@ -688,45 +695,44 @@ With these operations in place, the set <span class="math notranslate nohighligh
 As any field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> must also contain the rationals,
 the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.</p>
 </section>
-</section>
-<section id="convergence-completeness-and-the-continuum">
-<h2>Convergence, Completeness, and the Continuum<a class="headerlink" href="#convergence-completeness-and-the-continuum" title="Link to this heading">#</a></h2>
+<section id="reals">
+<h3>Reals<a class="headerlink" href="#reals" title="Link to this heading">#</a></h3>
 <p>What worked fine for integers and rationals proves to be more tricky for reals.
 The set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field with many holes: the equation <span class="math notranslate nohighlight">\(x^2 = a\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> only for square numbers, but not for, say, <span class="math notranslate nohighlight">\(a=2\)</span>.
 <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> famously does not contain <span class="math notranslate nohighlight">\(\sqrt 2, \pi, e\)</span>, and many other numbers.
-It is tempting to introduce the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of real numbers as the <strong>smallest set containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> with no holes</strong>.
-While this definition captures the essence of the continuum, it lamentably lacks rigour.
+It is tempting to think of the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of real numbers as the <strong>smallest set containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> with no holes</strong>.
+While this idea captures the essence of the continuum, it lamentably lacks rigour.
 The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
 The following definitions are, for now, restricted to rationals (even the epsilons are rational!) because that’s all we have.
 But the definitions remain valid, of course, in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and in any metric space.</p>
 <div class="proof definition admonition" id="def-convergence">
-<p class="admonition-title"><span class="caption-number">Definition 8 </span> (Convergence of Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Definition 8 </span> (Convergence of Rational Sequences)</p>
 <section class="definition-content" id="proof-content">
 <p><strong>(a)</strong>
 We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> <strong>convergent to <span class="math notranslate nohighlight">\(x\)</span></strong>, written as</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} x_n = x\]</div>
-<p>iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n \ge n_0\)</span>, we have</p>
+<p>iff <span class="math notranslate nohighlight">\(\left | x_n - x \right |\)</span> becomes arbitrariliy small:</p>
 <div class="math notranslate nohighlight">
-\[\lvert x_n - x \rvert &lt; \epsilon\]</div>
+\[\forall \epsilon &gt; 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall n &gt; n_0(\epsilon) : \left | x_n - x \right |  &lt; \epsilon\]</div>
 <p><strong>(b)</strong>
 We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a <strong>Cauchy sequence</strong>
-iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n, m \ge n_0\)</span>, we have</p>
+iff <span class="math notranslate nohighlight">\(\left | x_m - x_n \right |\)</span> becomes arbitrariliy small:</p>
 <div class="math notranslate nohighlight">
-\[\lvert x_n - x_m \rvert &lt; \epsilon\]</div>
+\[\forall \epsilon &gt; 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall m, n &gt; n_0(\epsilon) : \left | x_m - x_n \right |  &lt; \epsilon\]</div>
 <p><strong>(c)</strong>
 We call two Cauchy sequences <span class="math notranslate nohighlight">\(\{x_n\}, \{y_n\}\)</span> <strong>equivalent</strong>
-iff, for every <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there is a <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that, for all <span class="math notranslate nohighlight">\(n \ge n_0\)</span>, we have</p>
+iff <span class="math notranslate nohighlight">\(\left | x_n - y_n \right |\)</span> becomes arbitrariliy small:</p>
 <div class="math notranslate nohighlight">
-\[\lvert x_n - y_n \rvert &lt; \epsilon\]</div>
+\[\forall \epsilon &gt; 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall n &gt; n_0(\epsilon) : \left | x_n - y_n \right |  &lt; \epsilon\]</div>
 <p>This is written as:</p>
 <div class="math notranslate nohighlight">
 \[\{x_n\} \sim \{y_n\}\]</div>
 <p><strong>(d)</strong>
-We call a set <span class="math notranslate nohighlight">\(A\)</span> complete, iff every Cauchy sequence converges.</p>
+We call a set <span class="math notranslate nohighlight">\(A\)</span> complete iff every Cauchy sequence converges.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-convergent-sequences">
-<p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Arithmetic on Sequences)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Sum, difference, product, and quotient of convergent sequences are convergent and
 converge to the sum, difference, product, and quotient of their limits. For the denominator <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require that
@@ -751,7 +757,13 @@ The answer is yes, it does, and goes back to Cantor. He defined</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}&amp;\mathbb{S} = \text{ set of all Cauchy sequences in } \mathbb{Q}\\&amp;\mathbb{R} = \mathbb{S}/\sim\end{aligned}\end{align} \]</div>
 <p>This reads as follows: <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of the equivalence classes of all Cauchy sequences, or, more informally:
-It is the set of whatever number can be approximated by rationals. Example:
+It is the set of whatever number can be approximated by rationals. This gives us the following theorem for free:</p>
+<div class="proof theorem admonition" id="thr-rationals-reals">
+<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Rationals and Reals)</p>
+<section class="theorem-content" id="proof-content">
+<p>Every real number can be approximated by rationals to any degree of precision.</p>
+</section>
+</div><p>Example:
 The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x_0 &amp;= 2 \\
@@ -766,13 +778,13 @@ with its limit <span class="math notranslate nohighlight">\(\sqrt 2\)</span>. Th
 For <span class="math notranslate nohighlight">\(x = \{x_n\}\)</span>, <span class="math notranslate nohighlight">\(y = \{y_n\}\)</span> we define:</p>
 <div class="math notranslate nohighlight">
 \[x + y = \{x_n\} + \{y_n\}\]</div>
-<p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 11</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span>.
+<p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 11</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span> and of all other arithmetic operations.
 Therefore, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field.</p>
-<p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> not only inherits the basic arithmetics, but also the topology:
+<p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> not only inherits the basic arithmetics but also the topology:
 We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
 an undertaking that involves a considerable number of epsilons.</p>
 <div class="proof definition admonition" id="def-convergence-reals">
-<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Convergence of Reals)</p>
+<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Convergence of Real Sequences)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(r, s\)</span> be real numbers and <span class="math notranslate nohighlight">\(\{r_n\}_n\)</span> a sequence of reals numbers.
 Here is how they are represented by their defining Cauchy series of rationals:</p>
@@ -785,24 +797,26 @@ This can be represented as a matrix, with a row for each <span class="math notra
 \[ \begin{align}\begin{aligned}r_1 &amp; = \{x_{1_k}\} = \{x_{1_1}, x_{1_2}, \ldots, x_{1_k}, \ldots \} \\r_2 &amp; = \{x_{2_k}\} = \{x_{2_1}, x_{2_2}, \ldots, x_{2_k}, \ldots \} \\&amp;\vdots\\r_n &amp; = \{x_{n_k}\} = \{x_{n_1}, x_{n_2}, \ldots, x_{n_k}, \ldots \}\\&amp;\vdots\end{aligned}\end{align} \]</div>
 <p><strong>a) Distance of reals</strong><br />
 We define what it means for a real number to be close to zero or to another real number:</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon\\\left | r - s \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k - z_k \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
-<p>Note that the equivalence of rational Cauchy sequences is same as the equality of the corresponding reals:</p>
+<div class="math notranslate nohighlight" id="equation-def-convergence-reals-1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-def-convergence-reals-1" title="Link to this equation">#</a></span>\[\begin{split}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon \\
+\left | r - s \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k - z_k \right | &lt; \epsilon\end{split}\]</div>
+<p>Note that the equivalence of rational Cauchy sequences is the same as the equality of their corresponding reals:</p>
 <div class="math notranslate nohighlight">
 \[r = s \Leftrightarrow \{y_k\}_k \sim \{z_k\}_k\]</div>
-<p><strong>b) Convergence of real sequences</strong><br />
+<p><strong>b) Convergence of reals</strong><br />
 We define what it means for a sequence of real numbers to converge to zero or to another real number:</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \left | r_n \right | &lt; \epsilon\\\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \left | r_n - r \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
-<p>which is the same as:</p>
+<div class="math notranslate nohighlight" id="equation-def-convergence-reals-2">
+<span class="eqno">(11)<a class="headerlink" href="#equation-def-convergence-reals-2" title="Link to this equation">#</a></span>\[\begin{split}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n \right | &lt; \epsilon \\
+\lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n - r \right | &lt; \epsilon\end{split}\]</div>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-2">(11)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(10)</a>, gives us the long version:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} \right | &lt; \epsilon\\\lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} - y_k \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
-<p><strong>c) Cauchy convergence of real sequences</strong><br />
+<p><strong>c) Cauchy convergence of reals</strong><br />
 We define what it means for a sequence of real numbers to be a Cauchy sequence: The sequence <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span>
 is a Cauchy sequence iff:</p>
-<div class="math notranslate nohighlight">
-\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
-<p>which is the same as:</p>
+<div class="math notranslate nohighlight" id="equation-def-convergence-reals-3">
+<span class="eqno">(12)<a class="headerlink" href="#equation-def-convergence-reals-3" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-3">(12)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(10)</a>, gives us the long version:</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_0(\epsilon, m, n): \forall k &gt; k_0(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
 </section>
@@ -811,45 +825,50 @@ is a Cauchy sequence iff:</p>
 \[ \begin{align}\begin{aligned}x_{n_0} &amp;= 2 + \frac{1}{n} \\x_{n_{k+1}} &amp;= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n_k}}\end{aligned}\end{align} \]</div>
 <p>For each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span> is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> that converges in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\sqrt{2 + \frac{1}{n}}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 <div class="proof theorem admonition" id="thr-R-completeness">
-<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Completeness of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Completeness of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every Cauchy sequence <span class="math notranslate nohighlight">\(\{r_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> converges.
 So, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\{r_n\}\)</span> be a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
-Every number <span class="math notranslate nohighlight">\(r_n\)</span> in that sequence is represented by a Cauchy sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span> of rationals:</p>
+We proceed in two steps: (1) We show that the diagonal sequence <span class="math notranslate nohighlight">\(r\)</span> is a Cauchy sequence. (2) We show that <span class="math notranslate nohighlight">\(\{r_n\}\)</span> converges to <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>Every number <span class="math notranslate nohighlight">\(r_n\)</span> in that sequence is represented by a Cauchy sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span> of rationals:</p>
 <div class="math notranslate nohighlight">
 \[r_n = \{x_{n_k}\}_k\]</div>
 <p>Each <span class="math notranslate nohighlight">\(r_n\)</span> being a Cauchy sequence, we get:</p>
-<div class="math notranslate nohighlight">
-\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
+<div class="math notranslate nohighlight" id="equation-thr-r-completeness-1">
+<span class="eqno">(13)<a class="headerlink" href="#equation-thr-r-completeness-1" title="Link to this equation">#</a></span>\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
 <p>The sequence  <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span> being a Cauchy sequence itself, we get:</p>
-<div class="math notranslate nohighlight">
-\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+<div class="math notranslate nohighlight" id="equation-thr-r-completeness-2">
+<span class="eqno">(14)<a class="headerlink" href="#equation-thr-r-completeness-2" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
 <p>We conclude that the diagonal sequence  <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is also Cauchy sequence.
-To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and get the inequality</p>
+To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and, using inequality <a class="reference internal" href="#equation-thr-r-completeness-1">(13)</a> twice
+and <a class="reference internal" href="#equation-thr-r-completeness-2">(14)</a> once, get the inequality:</p>
 <div class="math notranslate nohighlight">
 \[\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | &lt; 3 \epsilon\]</div>
-<p>So, the sequence <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> represents a real number <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<p>So, the sequence <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is a Cauchy sequence and represents a real number <span class="math notranslate nohighlight">\(r\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[r = \{x_{n_n}\}\]</div>
 <p>It remains to show that</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty}r_n = r\]</div>
-<p>This is true because in</p>
-<div class="math notranslate nohighlight">
-\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
-<p>we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like. Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 9</a>):</p>
+<p>We observe that in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(14)</a> we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like.
+Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 9</a>):</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
 <p>which is what we want.</p>
 </div>
+<p>This proof is extremely formal and straightforward, despite how scary the inequalities might look
+at first. The proof consists of two plugins: We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
+and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(14)</a>, we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is what “forall” is all about.</p>
 <p>As any complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
-it is indeed the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.</p>
+it is indeed the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.
+From now on, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> will be our home. Whatever happens, happens in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 </section>
-<section id="compactness">
-<h2>Compactness<a class="headerlink" href="#compactness" title="Link to this heading">#</a></h2>
+</section>
+<section id="compact-sets">
+<h2>Compact Sets<a class="headerlink" href="#compact-sets" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-closure">
 <p class="admonition-title"><span class="caption-number">Definition 10 </span> (Accumulation Points, Closed Sets, Closure)</p>
 <section class="definition-content" id="proof-content">
@@ -858,14 +877,14 @@ it is indeed the <strong>smallest complete field containing <span class="math no
 </div><div class="proof definition admonition" id="def-compactness">
 <p class="admonition-title"><span class="caption-number">Definition 11 </span> (Compactness)</p>
 <section class="definition-content" id="proof-content">
-<p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>compact</strong>,
+<p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>compact</strong>
 iff each bounded sequence of elements of A has a convergent subsequence.</p>
 </section>
 </div><div class="proof lemma admonition" id="lem-compactness-completeness">
 <p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Compact Sets)</p>
 <section class="lemma-content" id="proof-content">
-<p><strong>a)</strong> Compact sets are complete.
-<strong>b)</strong> Closed subsets of compact sets are compact.</p>
+<p><strong>a)</strong> Compact sets are complete.</p>
+<p><strong>b)</strong> Closed subsets of compact sets are compact.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. a) Let <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> be compact and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a Cauchy-sequence of elements of <span class="math notranslate nohighlight">\(A\)</span>.
@@ -874,14 +893,37 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>b) todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-bolzano-weierstrass">
-<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Bolzano-Weierstrass)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Bolzano-Weierstrass)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Every bounded and monotonous sequence of reals is convergent.</p>
 <p><strong>b)</strong> Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Todo</p>
+<p>Proof.<br />
+<strong>a)</strong> Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing bounded sequence with <span class="math notranslate nohighlight">\(s = \sup \{x_n |\mid n \in \mathbb{N} \}\)</span>.
+Then, by the definition of the supremum:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists n(\epsilon) : s - x_{n(\epsilon)} &lt; \epsilon\]</div>
+<p>hence, by monotony:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists n(\epsilon) :\forall n \ge n(\epsilon)  : s - x_{n} &lt; \epsilon\]</div>
+<p>The triangular inequality gives us, for <span class="math notranslate nohighlight">\(m,n &gt; n(\epsilon)\)</span></p>
+<div class="math notranslate nohighlight">
+\[ \left |x_{m} - x_{n} \right | \le \left |x_{m} - s \right | + \left |s - x_{n} \right | &lt; 2\epsilon\]</div>
+<p>hence:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists n(\epsilon) :\forall n, m \ge n(\epsilon)  : \left |x_{m} - x_{n} \right | &lt; 2\epsilon\]</div>
+<p>So, <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is a Cauchy sequence and converges to <span class="math notranslate nohighlight">\(s\)</span> by construction.</p>
+<p><strong>b)</strong> Let <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> be a closed interval and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a sequence in <span class="math notranslate nohighlight">\([a, b]\)</span>. We are going to show that
+<span class="math notranslate nohighlight">\(\{x_n\}\)</span> contains a monotounous subsequence that is bounded because everything happens in <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>We call <span class="math notranslate nohighlight">\(m\)</span> a <em>peak</em>, if <span class="math notranslate nohighlight">\(x_n &lt; x_m\)</span> for all <span class="math notranslate nohighlight">\(n &gt; m\)</span>. If there are infinitely many peaks <span class="math notranslate nohighlight">\(\{m_k\}\)</span> then <span class="math notranslate nohighlight">\(\{x_{m_k}\}\)</span> is decreasing,
+and we are done. If not, there is a last peak <span class="math notranslate nohighlight">\(m^*\)</span>, and an index <span class="math notranslate nohighlight">\(n_1 &gt; m^*\)</span> that is not a peak.
+<span class="math notranslate nohighlight">\(n_1\)</span> being not a peak, there must be an index <span class="math notranslate nohighlight">\(n_2 &gt; n_1\)</span> with <span class="math notranslate nohighlight">\(x_{n_2} &gt; x_{n_1}\)</span>. And so on.
+We end up with an increasing sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span>, which proves the theorem.</p>
 </div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-sup-norm">
 <p class="admonition-title"><span class="caption-number">Definition 12 </span> (Sup Norm)</p>
 <section class="definition-content" id="proof-content">
@@ -889,7 +931,11 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>The <strong>sup norm</strong> (or <strong>uniform norm</strong>) of <span class="math notranslate nohighlight">\(f\)</span> is defined as:</p>
 <div class="math notranslate nohighlight">
 \[\left \lVert f \right \rVert_{\infty} = \sup \{\lvert f(x) \rvert \mid x \in [a, b]\}\]</div>
-<p>This is indeed a norm because:</p>
+</section>
+</div><div class="proof remark admonition" id="rem-sup-norm">
+<p class="admonition-title"><span class="caption-number">Remark 5 </span> (Sup Norm)</p>
+<section class="remark-content" id="proof-content">
+<p>The sup norm indeed a norm because:</p>
 <p>(i) <span class="math notranslate nohighlight">\(f = 0  \Leftrightarrow \left \lVert f \right \rVert_{\infty} = 0\)</span></p>
 <p>(ii) <span class="math notranslate nohighlight">\(\left \lVert \alpha f \right \rVert_{\infty} = \lvert\alpha\rvert \left \lVert  f \right \rVert_{\infty}\)</span></p>
 <p>(iii) <span class="math notranslate nohighlight">\(\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}\)</span></p>
@@ -902,7 +948,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>pointwise</strong> if, for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} \left | f_n(x) - f(x) \right | = 0\]</div>
-<p><strong>(b)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>uniformly</strong> if</p>
+<p><strong>(b)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>uniformly</strong> iff</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0\]</div>
 </section>
@@ -913,15 +959,17 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p class="admonition-title"><span class="caption-number">Definition 14 </span> (Continuity)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function.</p>
-<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
-there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
-<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> if <span class="math notranslate nohighlight">\(f\)</span> is continuous at each <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>.</p>
-<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
-there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\lvert f(x + h) - f(x) \rvert &lt; \epsilon\)</span> for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>
-whenever <span class="math notranslate nohighlight">\(\lvert h \rvert &lt; \delta\)</span>.</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span></strong> iff</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists \delta &gt; 0 : \forall h \in [-\delta, \delta ]: \left | f(x + h) - f(x) \right | &lt; \epsilon \]</div>
+<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> iff <span class="math notranslate nohighlight">\(f\)</span> is continuous at each <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>.</p>
+<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(f\)</span> is <strong>uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span></strong> iff</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists \delta &gt; 0 : \forall x \in [a, b], h \in [-\delta, \delta]: \left | f(x + h) - f(x) \right | &lt; \epsilon \]</div>
+<p>For <span class="math notranslate nohighlight">\(f\)</span> to be uniformly continuous we require that one <span class="math notranslate nohighlight">\(\delta\)</span> do the job for the whole interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-continuity-on-compact-sets">
-<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Continuous Functions on Compact Sets)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Continuous Functions on Intervals)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be continuous. Then:</p>
 <p><strong>(a)</strong> The continuous functions on <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^0([a, b])\)</span></p>
@@ -956,7 +1004,7 @@ Then there exist two sequences <span class="math notranslate nohighlight">\(\{x_
 and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessarily converges to the same <span class="math notranslate nohighlight">\(x\)</span>, So, <span class="math notranslate nohighlight">\(f\)</span> is not continuous in <span class="math notranslate nohighlight">\(x\)</span>, which is a contradiction.</p>
 </div>
 <div class="proof theorem admonition" id="thr-intermediate-value">
-<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Intermediate Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Intermediate Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function, and <span class="math notranslate nohighlight">\(\mu \in \mathbb{R}\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -964,7 +1012,8 @@ and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessaril
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The proof proceeds by halving intervals.
+<p>Proof. <strong>TODO</strong></p>
+<p>The proof proceeds by halving intervals.
 We build two sequences <span class="math notranslate nohighlight">\(\{a_n\},\{b_n\}\)</span> such that ${a_n} is</p>
 <div class="math notranslate nohighlight">
 \[f(a_n) \le \mu
@@ -1007,12 +1056,10 @@ be a set of intermediate points. A Riemann sum is defined as:</p>
 and call</p>
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) \, dx\]</div>
-<p>the <strong>Riemann integral</strong> of <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\([a, b]\)</span>
-if, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exists a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that for any Riemann sum <span class="math notranslate nohighlight">\(R(f, X, \xi)\)</span> with <span class="math notranslate nohighlight">\(\mu(R) &lt; \delta\)</span>
-it holds that</p>
+<p>the <strong>Riemann integral</strong> of <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\([a, b]\)</span> iff</p>
 <div class="math notranslate nohighlight">
-\[\left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | &lt; \epsilon\]</div>
-<p>In other words, Riemann sums can approximate Riemann integrals to arbitrary precision. We often write</p>
+\[\forall \epsilon &gt; 0$: \exists \delta &gt; 0: \forall R(f, X, \xi) \text{ with } \mu(R) &lt; \delta : \left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | &lt; \epsilon\]</div>
+<p>In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write</p>
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})\]</div>
 <p>as a short version of the exact definition, which lets us use finite sums instead of integrals.</p>
@@ -1029,7 +1076,7 @@ on the understanding that</p>
 <p>is used if the lower bound <span class="math notranslate nohighlight">\(a\)</span> is unimportant or not specified. Two primitives of an integrable function <span class="math notranslate nohighlight">\(f\)</span> differ by a constant only.</p>
 </section>
 </div><div class="proof remark admonition" id="rem-monotony-additivity-boundedness">
-<p class="admonition-title"><span class="caption-number">Remark 5 </span> (Monotony, Additivity, Boundedness)</p>
+<p class="admonition-title"><span class="caption-number">Remark 6 </span> (Monotony, Additivity, Boundedness)</p>
 <section class="remark-content" id="proof-content">
 <p>We state three obvious but important properties of Riemann integrals:</p>
 <p><strong>(a) Monotony</strong></p>
@@ -1046,7 +1093,7 @@ on the understanding that</p>
 </section>
 </div><p>Monotony leads us to an important theorem.</p>
 <div class="proof theorem admonition" id="thr-mean-value">
-<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Mean Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Mean Value Theorem of Integration)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
@@ -1057,7 +1104,7 @@ on the understanding that</p>
 \[\int_a^b f(x) \, dx= f(\xi) (b-a)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 15</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
+<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 16</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
 And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[m \le f(x) \le M \]</div>
@@ -1066,7 +1113,7 @@ And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <s
 \[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
 </div>
 <div class="proof theorem admonition" id="thr-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Properties of Riemann Integrals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Properties of Riemann Integrals)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
 <p><strong>(b)</strong> The mapping</p>
@@ -1111,8 +1158,8 @@ Then, <span class="math notranslate nohighlight">\(f\)</span> is bounded by some
 <div class="math notranslate nohighlight">
 \[\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M\]</div>
 <p>which proves the continuity of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span></p>
-<p><strong>(e)</strong></p>
-<p>Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>. Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> and <span class="math notranslate nohighlight">\(n_0\)</span> be such that, for <span class="math notranslate nohighlight">\(n \ge n_0\)</span>:</p>
+<p><strong>(e)</strong>
+Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>. Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> and <span class="math notranslate nohighlight">\(n_0\)</span> be such that, for <span class="math notranslate nohighlight">\(n \ge n_0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\left \lVert f_n - f \right \rVert_{\infty} &lt; \epsilon \]</div>
 <p>Let</p>
@@ -1139,11 +1186,14 @@ for any set of intermediate points <span class="math notranslate nohighlight">\(
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} \int_a^b f_n(y) \, dy = A = \int_a^b f(y) \, dy = \int_a^b \lim_{n \to \infty} f_n(y) \, dy \]</div>
 </div>
+<p>A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.
+It is not integrable because on every interval you’ll find Riemann sums equal to <span class="math notranslate nohighlight">\(0\)</span>, and others equal to <span class="math notranslate nohighlight">\(1\)</span>.
+We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.</p>
 <div class="proof theorem admonition" id="thr-riemann-integrable-functions">
-<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Riemann-Integrable Functions)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Riemann-Integrable Functions)</p>
 <section class="theorem-content" id="proof-content">
-<p>We consider functions on a closed interval.</p>
-<p><strong>(a)</strong> Step functions are R-integrable</p>
+<p>All functions are defined on a closed interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p><strong>(a)</strong> Step functions are R-integrable.</p>
 <p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function such that, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
 there are R-integrable functions <span class="math notranslate nohighlight">\(\phi, \psi\)</span> with</p>
 <div class="math notranslate nohighlight">
@@ -1152,11 +1202,13 @@ there are R-integrable functions <span class="math notranslate nohighlight">\(\p
 <div class="math notranslate nohighlight">
 \[\int_a^b (\psi(x) - \phi(x)) \, dx &lt; \epsilon.\]</div>
 <p>Then <span class="math notranslate nohighlight">\(f\)</span> is R-integrable</p>
-<p><strong>(c)</strong> Monotonous functions are R-integrable</p>
-<p><strong>(d)</strong> Continuous functions are R-integrable</p>
+<p><strong>(c)</strong> Monotonous functions are R-integrable.</p>
+<p><strong>(d)</strong> Continuous functions with countably many discontinuities are R-integrable.</p>
+<p><strong>(e) (Lebesgue Criterion)</strong> Bounded functions are R-integrable iff their set of discontinuities has measure zero.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>(a)</strong>
+<p>Proof. The proof of (e) can be found in <strong>citation needed</strong>.</p>
+<p><strong>(a)</strong>
 Let <span class="math notranslate nohighlight">\(\phi\)</span> be a step function on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})\)</span>. Then, obviously:</p>
 <div class="math notranslate nohighlight">
 \[\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k\]</div>
@@ -1180,17 +1232,8 @@ Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed
 &amp; = \frac{1}{n}(b-a)(f(b) - f(a))\end{split}\]</div>
 <p>which can be made arbitrarily small. The assertion follows from (b).</p>
 <p><strong>(d)</strong>
-Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem 14</a>
+Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem 15</a>
 and is the uniform limit of step functions.</p>
-</div>
-<p>A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
-<div class="proof theorem admonition" id="thr-lebesgue-criterion">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Lebesgue Criterion)</p>
-<section class="theorem-content" id="proof-content">
-<p>Bounded functions are R-integrable iff their set of discontinuities has measure zero.</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. todo</p>
 </div>
 </section>
 <section id="differentiable-functions">
@@ -1245,12 +1288,12 @@ and we can swap limit and differentiation:</p>
 <p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Differentiation Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
-<p><strong>(a)</strong> Product Rule
-Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
+<p><strong>(a) Product Rule</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
 \[f'g' = f'g + fg'\]</div>
-<p><strong>(b)</strong> Chain Rule
-Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([\min(f), \max(f)])\)</span>. Then</p>
+<p><strong>(b) Chain Rule</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([\min(f), \max(f)])\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
 \[(f \circ g)' = (f' \circ g) \, g'\]</div>
 </section>
@@ -1271,7 +1314,7 @@ Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <
 <div class="math notranslate nohighlight">
 \[F(b) - F(a)  = \int_a^b f(y) \, dy \]</div>
 <p><strong>(b)</strong>
-If <span class="math notranslate nohighlight">\(f\)</span> is continuous in <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(x\)</span> and it holds that</p>
+If <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(x\)</span> and it holds that</p>
 <div class="math notranslate nohighlight">
 \[F'(x) = f(x)\]</div>
 <p><strong>(c)</strong>
@@ -1279,24 +1322,28 @@ If <span class="math notranslate nohighlight">\(f\)</span> is continuous on <spa
 <div class="math notranslate nohighlight">
 \[F' = f\]</div>
 <p><strong>(d)</strong>
-The linear operators <span class="math notranslate nohighlight">\(\int\)</span> and <span class="math notranslate nohighlight">\(\partial\)</span> are inverse to each other.</p>
+The linear operators <span class="math notranslate nohighlight">\(\int\)</span> and <span class="math notranslate nohighlight">\(\partial\)</span></p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\begin{split}\int : 
+\[\begin{split}\int : 
 \left\{
     \begin{array}{lr}
         C^0([a, b] \to C^1([a, b] \\
         f \mapsto F
     \end{array}
-\right\}\end{split}\\\begin{split}\\\end{split}\\\begin{split}\partial : 
+\right .
+\\
+\\
+\partial : 
 \left\{
     \begin{array}{lr}
         C^1([a, b] \to C^0([a, b] \\
         F \mapsto f
     \end{array}
-\right\}
-\end{split}\end{aligned}\end{align} \]</div>
+\right .\end{split}\]</div>
+<p>are inverse to each other:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\left( \int \partial \right) F = F\\\left( \partial \int \right) f = f\end{aligned}\end{align} \]</div>
+\[\begin{split}&amp;\int \partial F = F \\
+&amp;\partial \int f = f\end{split}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. todo</p>
@@ -1305,12 +1352,12 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 <p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Integration Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
-<p><strong>(a)</strong> Integration by Parts
-Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
+<p><strong>(a) Integration by Parts</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
-<p><strong>(b)</strong> Substitution Rule
-Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b))\)</span>. Then</p>
+<p><strong>(b) Substitution Rule</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b))\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx\]</div>
 </section>
@@ -1381,180 +1428,37 @@ f(u) &amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^
 <h2>Little o, Big O<a class="headerlink" href="#little-o-big-o" title="Link to this heading">#</a></h2>
 <p>Little o means: <span class="math notranslate nohighlight">\(f\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span> faster than <span class="math notranslate nohighlight">\(g\)</span>, or, equivalently, <span class="math notranslate nohighlight">\(f/g\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
-\]</div>
+\[\begin{split}&amp;f = o(g) \Leftrightarrow \lim\frac{f(x)}{g(x)} = 0 \\ \\
+&amp;f = o(1) \Leftrightarrow \lim f(x) = 0 \\ \\
+&amp;f = o(x^n) \Leftrightarrow \lim \frac{f(x)}{x^n} = 0\end{split}\]</div>
+<p>Big O means: <span class="math notranslate nohighlight">\(f\)</span> grows not faster than <span class="math notranslate nohighlight">\(g\)</span>, or, equivalently, <span class="math notranslate nohighlight">\(f/g\)</span> is bounded above:</p>
 <div class="math notranslate nohighlight">
-\[
-f=o(1) \Longleftrightarrow \lim f(x) = 0 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
-\]</div>
-<p>Big O means: <span class="math notranslate nohighlight">\(f\)</span> grows not faster than <span class="math notranslate nohighlight">\(g\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-f = O(1) \Longleftrightarrow f(x)\le C 
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-f = O(x^n) \Longleftrightarrow f(x)\le C x^n
-\]</div>
+\[\begin{split}&amp;f = O(g) \Leftrightarrow \frac{f(x)}{g(x)} \le C \\ \\
+&amp;f = O(1) \Leftrightarrow f(x)\le C \\ \\
+&amp;f = O(x^n) \Leftrightarrow f(x)\le C x^n\end{split}\]</div>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<span class="target" id="id1"></span></section>
-<section id="archive">
-<h2>archive<a class="headerlink" href="#archive" title="Link to this heading">#</a></h2>
-<section id="trying-myst">
-<h3>Trying MyST<a class="headerlink" href="#trying-myst" title="Link to this heading">#</a></h3>
-<figure class="align-center" id="id77">
-<img alt="https://github.com/rowanc1/pics/blob/main/mountains.png?raw=true" src="https://github.com/rowanc1/pics/blob/main/mountains.png?raw=true" />
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">My <strong>bold</strong> mountain 🏔🚠.</span><a class="headerlink" href="#id77" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>This is a reference to <a class="reference internal" href="#my-fig"><span class="xref myst">My Mountain</span></a></p>
-<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass</span></a></p>
-<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">“{name}”</span></a></p>
-<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass">Bolzano-Weierstrass</a></p>
-<p>This is a reference to <a class="reference internal" href="#thr-bolzano-weierstrass">&quot;{name}&quot;</a></p>
-<p>This is a reference to &#64;thr-bolzano-weierstrass</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="numbering-box-enabled-true">
-<h2>numbering:
-box:
-enabled: true<a class="headerlink" href="#numbering-box-enabled-true" title="Link to this heading">#</a></h2>
-<figure class="align-default" id="id78">
-<img alt="../_images/westfield2.png" src="../_images/westfield2.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">This figure will be numbered as “Box 1”</span><a class="headerlink" href="#id78" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="math notranslate nohighlight">
-\[Ax = b\]</div>
-<div class="math notranslate nohighlight">
-\[Ax = b\]</div>
-<div class="math notranslate nohighlight">
-\[\sqrt[3]{x}\]</div>
-<div class="math notranslate nohighlight" id="equation-my-label">
-<span class="eqno">(10)<a class="headerlink" href="#equation-my-label" title="Link to this equation">#</a></span>\[By=c\]</div>
-<p>This is a reference to <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">my_label</span></code></p>
-<p>This is a reference to <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">My</span> <span class="pre">Label</span></code></p>
-<p id="my-paragraph">This is just a paragraph!</p>
-<ul class="simple" id="my-points">
-<li><p>Bullet</p></li>
-<li><p>points</p></li>
-</ul>
-<p>Please see <a class="reference internal" href="#my-paragraph">this paragraph</a> and <a class="reference internal" href="#my-points">these points</a>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{equation}
-Y(i,k) = 
-\left\{
-    \begin{array}{lr}
-        ||R_{k}-R_{i}||^{2}, &amp; \text{if } i \neq k\\
-        ||\triangle_{i}||^{2}, &amp; \text{if } i\leq k
-    \end{array}
-\right\} = yz
-\end{equation}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}Y(i,k) = 
-\left\{
-    \begin{array}{lr}
-        ||R_{k}-R_{i}||^{2}, &amp; \text{if } i \neq k\\
-        ||\triangle_{i}||^{2}, &amp; \text{if } i\leq k
-    \end{array}
-\right\} = yz\end{split}\]</div>
-<div class="proof admonition" id="proof">
-<p>Proof. The properties (R1), (R2) and (R3) follow easily from (3), (R5) follows easily from (R4), and the proof of (R4) is the sting of this chapter. Let’s
-do it in this order.
-(R1) We show that <span class="math notranslate nohighlight">\(f+g\)</span> is integrable if <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are. The proof follows a very simple pattern that often works: If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are integrable,
-then there are step functions <span class="math notranslate nohighlight">\(\phi\)</span>, <span class="math notranslate nohighlight">\(\psi\)</span>, <span class="math notranslate nohighlight">\(\rho\)</span>, and <span class="math notranslate nohighlight">\(\sigma\)</span> such that <span class="math notranslate nohighlight">\(\phi \le f \le \psi\)</span> and <span class="math notranslate nohighlight">\(\rho \le g \le \sigma\)</span>. So</p>
-<div class="math notranslate nohighlight">
-\[
-\phi  + \rho \le f+g \le \psi  + \sigma
-\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[
-\int _a^b \psi(x)-\phi(x) \, dx &lt; \epsilon  \text{ and } \int _a^b \rho (x)-\sigma(x) \, dx &lt; \epsilon
-\]</div>
-<p>Using the additivity of the integral for step functions, we get:</p>
-<div class="math notranslate nohighlight">
-\[
-\int _a^b(\psi (x)+\rho (x))-(\phi (x)+\sigma (x))dx &lt; 2 \epsilon
-\]</div>
-<p>Inequalities (4) and (5) show that <span class="math notranslate nohighlight">\(f+g\)</span> is integrable.
-The proof for the integrability of <span class="math notranslate nohighlight">\(\lambda f\)</span> for <span class="math notranslate nohighlight">\(\lambda \in \mathbb{R}\)</span> is analogous.</p>
-<p>(R2) We show that a function continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> is integrable.
-Intervals in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, rectangles in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>, cubes in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> and <span class="math notranslate nohighlight">\(\mathbb{R}^k\)</span>.
-The measure (or volume) <span class="math notranslate nohighlight">\(m[C]\)</span> of a cube <span class="math notranslate nohighlight">\(C\)</span> with edge length <span class="math notranslate nohighlight">\(\left[x_1, x_2, \dots,x_k\right]\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[
-m[C] := x_1 x_2 \cdots x_k
-\]</div>
-<p>The characteristic function <span class="math notranslate nohighlight">\(X_A\)</span> of a set <span class="math notranslate nohighlight">\(A\)</span> is <span class="math notranslate nohighlight">\(1\)</span> on <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(0\)</span> everywhere else.
-Step-functions take on finitely many values, are constant on cubes (of any size).
-Let <span class="math notranslate nohighlight">\(\psi\)</span> be a step function defined on disjoint cubes <span class="math notranslate nohighlight">\(C_i\)</span>
-with <span class="math notranslate nohighlight">\(\psi(x) = \psi_{i}\)</span> on <span class="math notranslate nohighlight">\(C_{i}\)</span>, <span class="math notranslate nohighlight">\((i=1,\dots, N)\)</span>.
-The integral of <span class="math notranslate nohighlight">\(\psi\)</span> is defined as:</p>
-<div class="math notranslate nohighlight">
-\[
-\int _{\mathbb{R}^k}\psi(x) \, dx := \sum _{i=1}^N \psi_i m\left[C_i\right]
-\]</div>
-<p>For stepwise functions <span class="math notranslate nohighlight">\(\psi\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>, and from(XX) <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span> it is clear that:</p>
-<div class="math notranslate nohighlight">
-\[
-\int _{\mathbb{R}^k}\alpha \phi(x) + \beta \psi (x) \, dx = \alpha \int_{\mathbb{R}^k}\phi(x) \, dx + \beta \int_{\mathbb{R}^k}\psi(x) \, dx
-\]</div>
-<p>For some functions <span class="math notranslate nohighlight">\(f\)</span> it turns out that:</p>
-<div class="math notranslate nohighlight">
-\[
-\sup_{\psi \le f}\int_{\mathbb{R}^k} \psi(x) \, dx = \inf _{\psi \ge f}\int_{\mathbb{R}^k} \psi(x) \, dx
-\]</div>
-<p>If this is true, <span class="math notranslate nohighlight">\(f\)</span> is said to be Riemann-integrable (or integrable for short), and we define</p>
-<div class="math notranslate nohighlight">
-\[
-\int _{\mathbb{R}^k}f(x) \, dx := \sup _{\psi \le f}\int _{\mathbb{R}^k}\psi (x)dx = \inf _{\psi \ge f} \int _{\mathbb{R}^k} \psi(x) \, dx
-\]</div>
-<p>All step functions are obviously integrable, and so are continuous functions with compact support (proof!). A famous non-integrable function is the
-function <span class="math notranslate nohighlight">\(r\)</span> defined on the interval <span class="math notranslate nohighlight">\([0, 1]\)</span> with <span class="math notranslate nohighlight">\(r(x) = 1\)</span> if <span class="math notranslate nohighlight">\(x \in \mathbb{Q}\)</span> and <span class="math notranslate nohighlight">\(0\)</span> otherwise.</p>
-<p>Let <span class="math notranslate nohighlight">\(\left(\psi _n\right)_{n\in \mathbb{N}}\)</span> be a sequence of step functions converging uniformly towards some function <span class="math notranslate nohighlight">\(f\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\underset{n\to \infty }\lim \psi _n = f
-\]</div>
-<p>Then <span class="math notranslate nohighlight">\(f\)</span> is integrable and it holds that</p>
-<div class="math notranslate nohighlight">
-\[
-\underset{n\to \infty }\lim \int_{\mathbb{R}^k} \psi_n(x) \, dx = \int _{\mathbb{R}^k}f(x) \, dx
-\]</div>
-<p>This can be seen as follows:</p>
-<p>to do!</p>
-<p>Now, let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be integrable and <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb{R}\)</span>. Then <span class="math notranslate nohighlight">\(\alpha f + \beta g\)</span> is integrable,
-and it holds that</p>
-<div class="math notranslate nohighlight">
-\[
-\int _{\mathbb{R}^n}\alpha f(x) + \beta g(x) \, dx = \alpha \int_{\mathbb{R}^n}f(x) \, dx + \beta \int_{\mathbb{R}^n}g(x) \, dx
-\]</div>
+<div class="docutils container" id="id5">
+<div role="list" class="citation-list">
+<div class="citation" id="id84" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Cou55</a><span class="fn-bracket">]</span></span>
+<p>Richard Courant. <em>Vorlesungen über Differential- und Integralrechnung</em>. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.</p>
 </div>
-<p>An alternative definition of Riemann integrability is based on intermediate sums.
-This needs some terminology: we call <span class="math notranslate nohighlight">\(\left\{x_1, x_2, \dots , x_n\right\}\)</span>
-a partition of <span class="math notranslate nohighlight">\([a,b]\)</span>, <span class="math notranslate nohighlight">\(\min _{k =1,\dots ,n} \left\{x_k-x_{k-1}\right\}\)</span> its granularity,
-and <span class="math notranslate nohighlight">\(\left\{\xi_1, \xi_2, \dots,\xi_n\right\}\)</span> a set of intermediate points with <span class="math notranslate nohighlight">\(\left.\xi_k\in \left[x_{k-1},x_k\right.\right), (k=1,\dots,n)\)</span>.
-Here is the alternative definition: A function <span class="math notranslate nohighlight">\(f\)</span> is R-integrable on <span class="math notranslate nohighlight">\([a,b]\)</span> iff, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
-we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, such that for any partition with granularity less than <span class="math notranslate nohighlight">\(\delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points, we have:</p>
-<div class="math notranslate nohighlight">
-\[
-\left\lvert\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right\rvert&lt;\epsilon
-\]</div>
+<div class="citation" id="id82" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">For16</a><span class="fn-bracket">]</span></span>
+<p>Otto Forster. <em>Analysis 1: Differential- und Integralrechnung einer Veränderlichen</em>. Springer Spektrum, 12th edition edition, 2016. First published 1976.</p>
+</div>
+<div class="citation" id="id81" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Heu09</a><span class="fn-bracket">]</span></span>
+<p>Harro Heuser. <em>Lehrbuch der Analysis Teil 1</em>. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.</p>
+</div>
+<div class="citation" id="id83" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Rud76</a><span class="fn-bracket">]</span></span>
+<p>Walter Rudin. <em>Principles of Mathematical Analysis</em>. McGraw-Hill, 3rd edition edition, 1976. First published 1953.</p>
+</div>
+</div>
+</div>
 <div style="margin-bottom: 100px;"></div>
 </section>
 </section>
@@ -1599,11 +1503,11 @@ we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span
       </div>
     </a>
     <a class="right-next"
-       href="../history/8-holy_roman_empire.html"
+       href="bayesian-decisions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Was the Empire Holy, Roman, or an Empire at All?</p>
+        <p class="prev-next-title">Why Your Model Beats You: Bayesian Decision-Making Without Noise</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1627,17 +1531,18 @@ we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#littlewood-s-principles">Littlewood’s Principles</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals-integers-rationals">Naturals, Integers, Rationals</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#from-naturals-to-reals">From Naturals to Reals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reals">Reals</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-completeness-and-the-continuum">Convergence, Completeness, and the Continuum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness">Compactness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compact-sets">Compact Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
@@ -1645,13 +1550,6 @@ we can find a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#archive">archive</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trying-myst">Trying MyST</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numbering-box-enabled-true">numbering:
-box:
-enabled: true</a></li>
 </ul>
   </nav></div>
 
