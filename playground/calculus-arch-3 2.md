@@ -1,0 +1,636 @@
+# First Steps in Calculus
+
+[aus differentials.nb 14.04.2025, Taylor V1, V2, V3]: #  
+
+
+> under construction
+ 
+## Bolzano-Weierstrass and Implications
+
+````{prf:definition} Compactness
+:label: def-compactness
+:nonumber:
+
+A set $A \subset \mathbb{R}$ is called **compact**, 
+iff each infinite bounded sequence of elements of A has an infinite convergent subsequence.
+
+````
+````{prf:theorem} Bolzano-Weierstrass
+:label: thr-bolzano-weierstrass
+:nonumber:
+
+Each closed interval $[a, b] \subset \mathbb{R}$ is compact.
+
+````
+
+````{prf:proof} 
+
+Todo
+
+````
+````{prf:definition} Sup Norm
+:label: def-sup-norm
+:nonumber:
+
+Let $f: [a, b] \to \mathbb{R}$ be a bounded function.
+
+The **sup norm** (or **uniform norm**) of $f$ is defined as:
+
+$$ 
+\left \lVert f \right \rVert_{\infty} = \sup \{|f(x)| \, | x \in [a, b]\}
+$$
+
+This is indeed a norm because:
+
+(i) $f = 0  \Leftrightarrow \left \lVert f \right \rVert_{\infty} = 0$
+
+(ii) $\left \lVert \alpha f \right \rVert_{\infty} = |\alpha| \left \lVert  f \right \rVert_{\infty}$
+
+(iii) $\left \lVert f + g \right \rVert_{\infty} \le \left \lVert f \right \rVert_{\infty} + \left \lVert g \right \rVert_{\infty}$
+````
+
+````{prf:definition} Convergence
+:label: def-convergence
+:nonumber:
+
+Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions, and $f: [a, b] \to \mathbb{R}$ another function.
+
+**(a) Pointwise convergence.** We say that $\lim_{n \to \infty} f_n = f$ **pointwise** if, for all $x \in [a, b]$, we have 
+
+$$
+\lim_{n \to \infty} f_n(x) = f(x)
+$$
+
+**(b) Uniform convergence.** We say that $\lim_{n \to \infty} f_n = f$ **uniformly** if 
+
+$$
+\lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
+$$
+
+````
+
+
+````{prf:definition} Continuity
+:label: def-continuity
+:nonumber:
+
+Let $f: [a, b] \to \mathbb{R}$ be a function.
+
+**(a) Point continuity.** $f$ is **continuous at $x \in [a, b]$** if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $|f(x + h) - f(x)| < \epsilon$ whenever $|h| < \delta$.
+
+**(b) Continuity.** $f$ is **continuous on $[a, b]$** if $f$ is continuous at each $x \in [a, b]$.
+
+**(c) Uniform continuity.** $f$ is *uniformly continuous on $[a, b]$* if, for any $\epsilon > 0$, there exists a $\delta > 0$ such that $|f(x + h) - f(x)| < \epsilon$ for all $x \in [a, b]$ whenever $|h| < \delta$.
+
+````
+
+
+````{prf:theorem} Continuous Functions on Compact Sets
+:label: thr-continuity-on-compact-sets
+:nonumber:
+
+Let $f: K \to \mathbb{R}$ be continuous, where $K$ is compact. Then:
+
+**(a) Uniform continuity.** The function $f$ is uniformly continuous on $K$.
+
+**(b) Fermat's Theorem** The function $f$ assumes its maximum and minimum on $K$.
+
+**(c) Limit preservation.** If $f_n: K \to \mathbb{R}$ is a sequence of continuous functions and $f_n \to f$ uniformly on $K$, 
+then $f$ is continuous on $K$.
+
+````
+
+````{prf:proof} 
+
+Todo
+
+````
+
+
+````{prf:theorem} Intermediate Value Theorem
+:label: thr-intermediate-value
+:nonumber:
+
+Let $f: [a, b] \to \mathbb{R}$ be a continuous function, and $\mu \in \mathbb{R}$ such that  
+
+$$
+\min  \{f(x)|x \in [a,b]\} \le \mu  \le \max  \{f(x)| x \in [a,b]\}
+$$
+
+Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
+````
+
+````{prf:proof} 
+
+The proof proceeds by halving intervals.
+````
+
+## Riemann Integrals
+
+
+````{prf:definition} Step Functions
+:label: def-step-functions
+:nonumber:
+
+We consider a closed interval $A = [a, b] \subset \mathbb{R}$.
+ 
+**(a) A **partition of A** is an increasing sequence $\left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$. 
+Its **granularity** is $\mu = \max \left\{|x_k - x_{k-1}|| k=1, \dots, n\right\}$. 
+
+**(b)A **step function** $\phi$ on an interval $[a, b]$ is defined by a partition $\left\{x_0, x_1, \dots, x_n\right\}$ 
+and values $\left\{\phi(x_0), \phi(x_1), \dots, \phi(x_n)\right\}$
+that is constant on the intervals $\left[x_{k-1}, x_k\right)$.
+Its **granularity** is the granularity of its partition.
+
+It is clear that the sum of two step functions is again a step function, 
+and the same is true for the product of a step function with a scalar. 
+So, the step functions on an interval $[a, b]$ for a vector space, written as $\mathcal{S}[a, b]$
+
+````
+
+
+````{prf:definition} Integrals over Step Functions
+
+:label: def-integrals-over-step-functions
+:nonumber:
+
+The **integral** of a step function $\phi$ on $[a, b]$ is defined as 
+
+$$
+\int_a^b \phi (x) \, dx= \sum _{k=1}^n \phi(x_k)
+$$
+
+
+The **integration functional**
+
+$$
+\int :\phi \mapsto \int_a^b \phi(x) \, dx
+$$
+
+is a linear mapping from $\mathcal{S}[a, b]$ to $\mathbb{R}$. The implications
+
+```{math}
+\phi \le \psi  \Rightarrow  \int_a^b \phi(x) \, dx \le \int _a^b\psi(x) \, dx
+```
+
+```{math}
+\int_a^b \phi(x) \, dx + \int_b^c \phi(x) \, dx = \int_a^c \phi(x) \, dx
+```
+
+hold for any two step functions  $\phi,\psi$.
+
+````
+
+
+
+
+
+
+### Functions that are Riemann-integrable but not regulated
+
+ ```{math}
+ f(x) = \begin{cases}
+  \sin(1/x) & \text{if } x \in (\text{Cantor set}) \\
+  0 & \text{otherwise}
+  \end{cases}
+ ```
+ The Characteristic Function of the Cantor Set
+
+  Let $C \subset [0,1]$ be the Cantor set (middle-thirds construction). Define:
+
+ ```{math}
+  \chi_C(x) = \begin{cases} 1 & \text{if } x \in C \\
+   0 & \text{if } x \notin C \end{cases}
+ ```
+
+
+### Integrable Functions
+
+{prf:ref}`thr-step-uniform-continuous` opens a cheap way to integrals over continuous functions:
+
+
+````{prf:definition} Integral over Continuous Functions
+:label: def-integral-continuous-functions
+
+Let $f: [a, b] \to \mathbb{R}$ be continuous, and  $(\phi_k)_{k \in \mathbb{N}}$
+
+````
+
+We extend the integration functional to a larger class of functions.
+Imagine a function $f$, defined on $[a,b]$, sandwiched between two arbitrarily close step functions $\phi, \psi$ :
+
+```{math}
+:label: sandwich-integral
+&\phi \le f \le \psi \\
+&\int _a^b \psi(x) -\phi(x) \, dx \lt \epsilon
+```
+
+If this can be done for any $\epsilon > 0$ then we say that $f$ is **Riemann-integrable** or **R-integrable** for
+short. This is definition is equivalent to:
+
+```{math}
+\sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \phi(x) \, dx
+```
+
+which allows us to define:
+
+```{math}
+:label: sup-inf-integral
+\int_a^b f(x) \, dx := \sup_{\phi \le f} \int _a^b \phi(x) \, dx  = \inf _{\psi \ge f} \int_a^b \phi (x) \, dx
+```
+
+Equation {eq}`sup-inf-integral` is a concise reformulation of {eq}`sandwich-integral`, there is nothing to prove. 
+
+
+### Properties of Riemann Integrals
+
+````{prf:theorem} Properties of Riemann Integrals
+:label: thr-riemann-integrals
+
+(a) The set $\mathcal{R}[a, b]$ of R-integrable functions is a vector space. The integration functional
+
+$$
+\int :f \mapsto \int_a^b f(x) \, dx
+$$
+
+is a linear mapping from $\mathcal{R}[a, b]$ to $\mathbb{R}$. 
+
+(b) The integration functional is monotone:
+
+$$
+f \le g \Rightarrow  \int_a^b f(x) \, dx \le \int _a^bg(x) \, dx
+$$
+
+holds for any two functions $f,g \in\mathcal{R}[a,b]$.
+
+(c) The uniform limit of R-integrable functions is R-integrable, 
+and we can swap limit and integral:
+
+$$
+\underset{n \to \infty} \lim \int_a^b f_n(x) \, dx = \int _a^b\underset{n \to \infty} \lim f_n(x)
+$$
+
+In other words: $\mathcal{R}[a, b]$ is closed under the maximum norm.
+````
+
+````{prf:proof} 
+
+todo
+
+````
+
+
+
+
+
+
+
+
+
+
+(R2) There are many R-integrable functions: step functions (by definition), 
+continuous functions (also with finitely many discontinuities), 
+monotone functions, the maximum, minimum, and product of R-integrable functions. 
+A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
+
+
+````{prf:proof}
+The properties (R1), (R2) and (R3) follow easily from (3), (R5) follows easily from (R4), and the proof of (R4) is the sting of this chapter. Let's
+do it in this order.
+(R1) We show that $f+g$ is integrable if $f$ and $g$ are. The proof follows a very simple pattern that often works: If $f$ and $g$ are integrable, 
+then there are step functions $\phi$, $\psi$, $\rho$, and $\sigma$ such that $\phi \le f \le \psi$ and $\rho \le g \le \sigma$. So
+
+$$
+\phi  + \rho \le f+g \le \psi  + \sigma
+$$
+
+and
+
+$$
+\int _a^b \psi(x)-\phi(x) \, dx < \epsilon  \text{ and } \int _a^b \rho (x)-\sigma(x) \, dx < \epsilon
+$$
+
+Using the additivity of the integral for step functions, we get:
+
+$$
+\int _a^b(\psi (x)+\rho (x))-(\phi (x)+\sigma (x))dx < 2 \epsilon
+$$
+
+Inequalities (4) and (5) show that $f+g$ is integrable. 
+The proof for the integrability of $\lambda f$ for $\lambda \in \mathbb{R}$ is analogous. 
+
+(R2) We show that a function continuous on $[a, b]$ is integrable. 
+Intervals in $\mathbb{R}$, rectangles in $\mathbb{R}^2$, cubes in $\mathbb{R}^3$ and $\mathbb{R}^k$. 
+The measure (or volume) $m[C]$ of a cube $C$ with edge length $\left[x_1, x_2, \dots,x_k\right]$ is:
+
+$$
+m[C] := x_1 x_2 \cdots x_k
+$$
+
+The characteristic function $X_A$ of a set $A$ is $1$ on $A$ and $0$ everywhere else.
+Step-functions take on finitely many values, are constant on cubes (of any size). 
+Let $\psi$ be a step function defined on disjoint cubes $C_i$
+with $\psi(x) = \psi_{i}$ on $C_{i}$, $(i=1,\dots, N)$. 
+The integral of $\psi$ is defined as:
+
+$$
+\int _{\mathbb{R}^k}\psi(x) \, dx := \sum _{i=1}^N \psi_i m\left[C_i\right]
+$$
+
+For stepwise functions $\psi$ and $\phi$, and from(XX) $\alpha, \beta \in \mathbb{R}$ it is clear that:
+
+$$
+\int _{\mathbb{R}^k}\alpha \phi(x) + \beta \psi (x) \, dx = \alpha \int_{\mathbb{R}^k}\phi(x) \, dx + \beta \int_{\mathbb{R}^k}\psi(x) \, dx
+$$
+
+For some functions $f$ it turns out that: 
+
+$$
+\sup_{\psi \le f}\int_{\mathbb{R}^k} \psi(x) \, dx = \inf _{\psi \ge f}\int_{\mathbb{R}^k} \psi(x) \, dx
+$$
+
+If this is true, $f$ is said to be Riemann-integrable (or integrable for short), and we define
+
+$$
+\int _{\mathbb{R}^k}f(x) \, dx := \sup _{\psi \le f}\int _{\mathbb{R}^k}\psi (x)dx = \inf _{\psi \ge f} \int _{\mathbb{R}^k} \psi(x) \, dx
+$$
+
+All step functions are obviously integrable, and so are continuous functions with compact support (proof!). A famous non-integrable function is the
+function $r$ defined on the interval $[0, 1]$ with $r(x) = 1$ if $x \in \mathbb{Q}$ and $0$ otherwise. 
+
+Let $\left(\psi _n\right)_{n\in \mathbb{N}}$ be a sequence of step functions converging uniformly towards some function $f$:
+
+$$
+\underset{n\to \infty }\lim \psi _n = f
+$$
+
+Then $f$ is integrable and it holds that
+
+$$
+\underset{n\to \infty }\lim \int_{\mathbb{R}^k} \psi_n(x) \, dx = \int _{\mathbb{R}^k}f(x) \, dx
+$$
+
+This can be seen as follows:
+
+to do!
+
+Now, let $f$ and $g$ be integrable and $\alpha, \beta \in \mathbb{R}$. Then $\alpha f + \beta g$ is integrable,
+and it holds that
+
+$$
+\int _{\mathbb{R}^n}\alpha f(x) + \beta g(x) \, dx = \alpha \int_{\mathbb{R}^n}f(x) \, dx + \beta \int_{\mathbb{R}^n}g(x) \, dx
+$$
+
+````
+
+````{prf:theorem} Mean Value Theorem
+:label: thr-mean-value
+:nonumber:
+
+Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
+
+Then there exists a $\xi \in [a, b]$ such that:
+
+$$
+\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
+$$
+
+With $\phi = 1$ we get:
+
+$$
+\int_a^b f(x) \, dx= f(\xi) (b-a)
+$$
+````
+
+````{prf:proof}
+From {prf:ref}`thr-mean-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
+And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
+
+$$
+m \le f(x) \le M 
+$$
+
+The rest is straightforward: multiply by $\phi(x)$ and integrate:
+
+$$
+m \phi(x) \le f(x) \phi(x) \le M \phi(x)
+$$
+$$
+m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
+$$
+$$
+\int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
+$$
+
+````
+
+An alternative definition of Riemann integrability is based on intermediate sums. 
+This needs some terminology: we call $\left\{x_1, x_2, \dots , x_n\right\}$ 
+a partition of $[a,b]$, $\min _{k =1,\dots ,n} \left\{x_k-x_{k-1}\right\}$ its granularity, 
+and $\left\{\xi_1, \xi_2, \dots,\xi_n\right\}$ a set of intermediate points with $\left.\xi_k\in \left[x_{k-1},x_k\right.\right), (k=1,\dots,n)$. 
+Here is the alternative definition: A function $f$ is R-integrable on $[a,b]$ iff, for any $\epsilon > 0$, 
+we can find a $\delta > 0$, such that for any partition with granularity less than $\delta$ and any set $\xi$ of intermediate points, we have:
+
+$$
+\left|\int_a^b f(x) \, dx - \sum _{k=1}^n f\left[\xi _k\right]\right|<\epsilon
+$$
+
+
+## Derivatives
+
+
+````{prf:definition} First Derivative
+:label: def-first-derivative
+:nonumber:
+
+Let $f:\mathbb{R}\rightarrow \mathbb{R}$
+
+$$
+f'(x) = \underset{h \to 0} \lim\frac{1}{h}(f(x+h)-f(x)) = \frac{d}{d \epsilon}f(x + \epsilon h)|_{\epsilon =0 }
+$$
+
+So:
+
+$$
+f(x+h) = f(x)+ f'(x)h + o(h)
+$$
+
+and the term $f'(x)h$ is a linear approximation of $f$ at $x$.
+```` 
+Derivatives are about local changes: How does a function $f$ behave in a neighbourhood of some point $x$? The Taylor series allows us to express
+$f(x+h)$ in terms of the higher derivatives of $f$ with arbitrary precision. It comes in three varieties that differ in the remainder term. In
+what follows, $A$ is an open interval, and $x, u \in A$.
+
+
+````{prf:theorem} Uniqueness of the Derivative
+:label: def-uniqueness-derivative
+:nonumber:
+The derivative is unique. 
+
+````
+````{prf:proof} 
+Assume that
+
+$$
+F(x+h)-F(x) = D(h) + o(h)
+
+F(x+h)-F(x) = E(h) + o(h)
+$$
+
+Then:
+
+$$
+D(h) + o(h) = E(h) + o(h)
+$$
+
+which shows that $D= E$.
+````
+
+## Main Theorem of Calculus
+
+## Taylor Theorem
+
+````{prf:theorem} Taylor V1
+:label: thr-taylor-v1
+:nonumber:
+
+Let $f \in  C^{n+1}(A)$. Then:
+
+$$
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
+$$
+````
+
+
+````{prf:theorem} Taylor V2
+:label: thr-taylor-v2
+:nonumber:
+Let $f \in  C^{n+1}(A)$. Then there exists a $\xi \in [x,u]$ such that:
+
+$$
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
+$$
+
+which is the same as $(h = u-x)$:
+
+$$
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
+$$
+````
+
+````{prf:theorem} Taylor V3
+:label: thr-taylor-v3
+:nonumber:
+
+Let $f \in  C^n(A)$. Then:
+
+$$
+f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(|x-a|)^n
+$$
+
+which is the same as $(h = u-x)$:
+
+$$
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(|h|^n) 
+$$
+
+````
+
+````{prf:proof}
+
+**V1:**
+
+Proof by induction, using the main theorem of integration and integration by parts:
+
+$$
+f(u) - f(x) &= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt
+
+& = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... }
+
+& =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
+$$
+
+**V2:** Using the mean value theorem, we find a $\xi \in [x, u]$ such that
+ 
+$$
+
+\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
+
+$$
+
+**V3**
+
+$$
+f(u) &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n
+
+&= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
+$$
+
+````
+
+
+````{prf:theorem} Uniqueness of the Derivative
+:label: def-unique-derivative
+:nonumber:
+The derivative is unique. 
+
+````
+````{prf:proof} 
+Assume that
+
+$$
+F(x+h)-F(x) = D(h) + o(h)
+
+F(x+h)-F(x) = E(h) + o(h)
+$$
+
+Then:
+
+$$
+D(h) + o(h) = E(h) + o(h)
+$$
+
+which shows that $D= E$.
+````
+
+
+
+## Little o, Big O
+
+Little o means: $f$ tends to $0$ faster than $g$, or, equivalently, $f/g$ tends to $0$:
+
+$$
+f=o(g) \Longleftrightarrow \lim\frac{f(x)}{g(x)} = 0  
+$$
+
+$$
+f=o(1) \Longleftrightarrow \lim f(x) = 0 
+$$
+
+$$
+f=o(x^n) \Longleftrightarrow \lim \frac{f(x)}{x^n} = 0
+$$
+
+Big O means: $f$ grows not faster than $g$:
+
+$$
+f = O(g) \Longleftrightarrow \frac{f(x)}{g(x)} \le C 
+$$
+$$
+f = O(1) \Longleftrightarrow f(x)\le C 
+$$
+
+$$
+f = O(x^n) \Longleftrightarrow f(x)\le C x^n
+$$
+
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+
+
+<div style="margin-bottom: 100px;"></div>

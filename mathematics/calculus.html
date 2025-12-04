@@ -508,18 +508,20 @@ document.write(`
 <h2>Paradoxes<a class="headerlink" href="#paradoxes" title="Link to this heading">#</a></h2>
 <section id="achilles-and-the-tortoise-zeno">
 <h3>Achilles and the Tortoise (Zeno)<a class="headerlink" href="#achilles-and-the-tortoise-zeno" title="Link to this heading">#</a></h3>
-<p>Imagine the tortoise and Achilles starting a race with the tortiose 10 metres in the lead,
+<p>Imagine the tortoise and Achilles starting a race with the tortiose <span class="math notranslate nohighlight">\(10\)</span> metres in the lead,
 and Achilles running ten times as fast as the tortoise.<br />
-By the time Achilles has covered 10 meters, the tortoise is 1 metre in the lead.<br />
-By the time Achilles has covered 11 meters, the tortoise is 0.1 metres in the lead.<br />
-By the time Achilles has covered 11.1 meters, the tortoise is 0.01 metres in the lead.<br />
+By the time Achilles has covered <span class="math notranslate nohighlight">\(10\)</span> meters, the tortoise is <span class="math notranslate nohighlight">\(1\)</span> metre in the lead.<br />
+By the time Achilles has covered <span class="math notranslate nohighlight">\(11\)</span> meters, the tortoise is <span class="math notranslate nohighlight">\(0.1\)</span> metres in the lead.<br />
+By the time Achilles has covered <span class="math notranslate nohighlight">\(11.1\)</span> meters, the tortoise is <span class="math notranslate nohighlight">\(0.01\)</span> metres in the lead.<br />
 And so on. Will Achilles ever overtake the tortoise?</p>
-<p>Of course, he will after 11.111… metres because</p>
+<p>Of course, he will after <span class="math notranslate nohighlight">\(11.111\ldots\)</span> metres because</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k=0}^\infty \alpha^k = \frac{1}{1-\alpha}\]</div>
 <p>which gives, with <span class="math notranslate nohighlight">\(\alpha = 1/10\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + \frac{10}{9} = 11.111\ldots\]</div>
+<p>Without Zeno, the computation would have been easier: Let <span class="math notranslate nohighlight">\(x(t) = 10t\)</span> be Achilles’ position at time <span class="math notranslate nohighlight">\(t\)</span>, and <span class="math notranslate nohighlight">\(y(t) = 10 + t\)</span> that of the tortoise.
+The equation <span class="math notranslate nohighlight">\(x(t) = y(t)\)</span> has the solution <span class="math notranslate nohighlight">\(t = 10/9 = 1.111 \ldots\)</span>.</p>
 <p>What seemed paradoxical to Zeno is that the sum of an infinite number of terms could be finite.
 However, all he did was a mental divison of a finite distance into infinitely
 many parts, the sum of which is obviously the distance given.
@@ -529,25 +531,26 @@ Today infinite sums are well understood; there is nothing paradoxical about them
 <h3>The Standing Arrow (Zeno):<a class="headerlink" href="#the-standing-arrow-zeno" title="Link to this heading">#</a></h3>
 <p>Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
 How can it ever move? The answer is given by the theory of integrals we are going to study in detail.
-Here is a short sketch:
+Here is a sketch:
 Let <span class="math notranslate nohighlight">\(v(t)\)</span> be the speed of the arrow at time <span class="math notranslate nohighlight">\(t\)</span>.
 We divide a given time span <span class="math notranslate nohighlight">\([a, b]\)</span> into tiny, but finitely many
 subintervals <span class="math notranslate nohighlight">\({[t_k, t_{k+1}]}\)</span>.
 Then, the distance <span class="math notranslate nohighlight">\(d\)</span> traveled in the time interval <span class="math notranslate nohighlight">\([a, b]\)</span> is approximated to any accuracy by the so-called Riemann sum</p>
 <div class="math notranslate nohighlight">
 \[d \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)\]</div>
-<p>The first paradox was that a sum with an infinite number of terms could be finite.
-This paradox is that the sum of a large number of arbitrarily small terms does not vanish.
-It lies at the very heart of integration theory that such a sum can be assigned a meaningful value.</p>
+<p>While the first paradox was that a sum with an infinite number of terms could be finite,
+this paradox is that the sum of a large number of arbitrarily small terms does not vanish.
+Assigning meaningful values to such sums is what integration theory is all about.</p>
 </section>
 <section id="what-the-tortoise-said-to-achilles-lewis-carroll">
 <h3>What the Tortoise Said to Achilles (Lewis Carroll)<a class="headerlink" href="#what-the-tortoise-said-to-achilles-lewis-carroll" title="Link to this heading">#</a></h3>
 <p>This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland.
 It questions what mathematicians really do.
 Imagine the tortoise explaining a mathematical argument to Achilles.
-This is what it says, in the words of L. Carroll:</p>
+This is what it says, in the words of Lewis Carroll:</p>
 <div class="tip admonition">
-<p class="admonition-title">Lewis Carroll: “What the Tortoise Said to Achilles”</p>
+<p class="admonition-title">What the Tortoise Said to Achilles</p>
+<p>Listen:</p>
 <p>(A) Things that are equal to the same are equal to each other.<br />
 (B) The two sides of this Triangle are things that are equal to the same.<br />
 (C) If A and B are true, Z must be true.<br />
@@ -578,9 +581,9 @@ the Tortoise. “So enter it in your book, please. We will call it</p>
 <p>(E) If A and B and C and D are true, Z must be true.”</p>
 <p>“Until I’ve granted <em>that</em>, of course I needn’t grant Z. So it’s quite
 a <em>necessary</em> step, you see?” “I see,” said Achilles; and there was a touch of sadness in his tone.</p>
-<p>Here narrator, having pressing business at the Bank, was obliged to leave the happy
+<p>Here the narrator, having pressing business at the Bank, was obliged to leave the happy
 pair, and did not again pass the spot until some months afterwards. When he did so,
-Achilles was still seated on the back of the much-enduring Tortoise, and was writing
+Achilles was still seated on the back of the much-enduring Tortoise and was writing
 in his notebook, which appeared to be nearly full. The Tortoise was saying, “Have
 you got that last step written down? Unless I’ve lost count, that makes a thousand
 and one. There are several million more to come. And would you mind, as a
@@ -641,7 +644,8 @@ then <span class="math notranslate nohighlight">\(\phi(n)\)</span> is true for e
 </div><p>The Peano axioms not only allow the definition of all basic arithmetical operations.
 They form the foundation of number theory.
 In virtue of the Peano axioms we can start at <span class="math notranslate nohighlight">\(0\)</span> and,
-applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.</p>
+applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.
+The following is a formal definition of infinity, with no handwaving, no dots, and no “and so on.”</p>
 <div class="proof definition admonition" id="def-infinity">
 <p class="admonition-title"><span class="caption-number">Definition 7 </span> (Infinity)</p>
 <section class="definition-content" id="proof-content">
@@ -650,8 +654,63 @@ applying the successor function, construct as many natural numbers as we like. T
 This injection is often called an <em>enumeration</em>, a way of putting all elements of <span class="math notranslate nohighlight">\(A\)</span> in a sequential order.</p>
 </section>
 </div><p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is infinite because the successor function <span class="math notranslate nohighlight">\(S\)</span> is exactly such an injection, with <span class="math notranslate nohighlight">\(B = \mathbb{N} - \{0\}\)</span>.
+That’s a formal version of Hilbert’s Hotel, which can always accommodate an extra guest by moving everyone else up one room.
 Another injection would be <span class="math notranslate nohighlight">\(\phi(n) = 10^n\)</span>, with <span class="math notranslate nohighlight">\(B = \{1, 10, 100, \ldots\}\)</span>. <span class="math notranslate nohighlight">\(B\)</span> is a set with huge gaps, and yet,
-it’s still infinite: you never run out of natural numbers. Famous countable set are <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> to which we now turn.</p>
+it’s still infinite: you never run out of natural numbers.</p>
+<div class="proof theorem admonition" id="thr-countable-uncountable">
+<p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Countable and Uncountable Sets)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>a)</strong> A countable union of countable sets is countable.</p>
+<p><strong>b)</strong> A finite crossproduct of countable sets is countable</p>
+<p><strong>c)</strong> Let <span class="math notranslate nohighlight">\(A\)</span> be any set. It is never possible to define an injection from the power set <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span> to <span class="math notranslate nohighlight">\(A\)</span>.
+Therefore, the power set of a countable set is always uncountable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We need two facts not proven here:</p>
+<ul class="simple">
+<li><p>There are infinitely many primes <span class="math notranslate nohighlight">\(p_1, p_2, \ldots\)</span>.</p></li>
+<li><p>Any natural number <span class="math notranslate nohighlight">\(a &gt; 1\)</span> can be uniquely decomposed
+into a product of primes: <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
+are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</span> are integers (that’s the fundamental theorem of arithmetic).</p></li>
+</ul>
+<p>Let <span class="math notranslate nohighlight">\(\{A_i\}\)</span> be a family of sets, countable for (a), finite for (b), and let</p>
+<div class="math notranslate nohighlight">
+\[\phi_i : A_i \to \mathbb{N}\]</div>
+<p>be the injection corresponding to <span class="math notranslate nohighlight">\(A_i\)</span>.</p>
+<p><strong>a)</strong> The function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi:
+\left\{
+   \begin{array}{lr}
+       \cup_i A_i  \to \mathbb{N} \\
+       a \mapsto p_i \phi_i(a) \text{ if } a \in A_i
+   \end{array}
+\right .\end{split}\]</div>
+<p>is an injection: The set <span class="math notranslate nohighlight">\(A_i\)</span> is mapped to the multiples of <span class="math notranslate nohighlight">\(p_i\)</span>.</p>
+<p><strong>b)</strong> The function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi:
+\left\{
+   \begin{array}{lr}
+       \prod_{i=1}^n A_i  \to \mathbb{N} \\
+       (a_1, a_2, \ldots, a_n) \mapsto \prod_{i=1}^n p_i^{\phi_i(a_i)}
+   \end{array}
+\right .\end{split}\]</div>
+<p>is an injection: Each <span class="math notranslate nohighlight">\((a_1, a_2, \ldots, a_n)\)</span> is mapped to the unique natural number whose decomposition
+is <span class="math notranslate nohighlight">\((\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))\)</span>.</p>
+<p><strong>c)</strong>
+Assume there is an injection</p>
+<div class="math notranslate nohighlight">
+\[\phi: \mathcal{P}(A) \to A\]</div>
+<p>The set</p>
+<div class="math notranslate nohighlight">
+\[K = \{\phi(B) \mid B \subseteq A, \phi(B) \notin B\}\]</div>
+<p>leads to a contradiction:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\phi(K) \in K \Rightarrow \phi(K) \notin K \\
+&amp;\phi(K) \notin K \Rightarrow \phi(K) \in K\end{split}\]</div>
+<p>This is the formal variant of the barber who shaves all men who do not shave themselves.</p>
+</div>
 </section>
 <section id="integers">
 <h3>Integers<a class="headerlink" href="#integers" title="Link to this heading">#</a></h3>
@@ -736,7 +795,7 @@ iff <span class="math notranslate nohighlight">\(\left | x_n - y_n \right |\)</s
 We call a set <span class="math notranslate nohighlight">\(A\)</span> complete iff every Cauchy sequence converges.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-convergent-sequences">
-<p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Arithmetic on Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Arithmetic on Sequences)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Sum, difference, product, and quotient of convergent sequences are convergent and
 converge to the sum, difference, product, and quotient of their limits. For the denominator <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require that
@@ -763,7 +822,7 @@ The answer is yes, it does, and goes back to Cantor. He defined</p>
 <p>This reads as follows: <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of the equivalence classes of all Cauchy sequences, or, more informally:
 It is the set of whatever number can be approximated by rationals. This gives us the following theorem for free:</p>
 <div class="proof theorem admonition" id="thr-rationals-reals">
-<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Rationals and Reals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Rationals and Reals)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every real number can be approximated by rationals to any degree of precision.</p>
 </section>
@@ -782,7 +841,7 @@ with its limit <span class="math notranslate nohighlight">\(\sqrt 2\)</span>. Th
 For <span class="math notranslate nohighlight">\(x = \{x_n\}\)</span>, <span class="math notranslate nohighlight">\(y = \{y_n\}\)</span> we define:</p>
 <div class="math notranslate nohighlight">
 \[x + y = \{x_n\} + \{y_n\}\]</div>
-<p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 11</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span> and of all other arithmetic operations.
+<p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 12</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span> and of all other arithmetic operations.
 Therefore, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field.</p>
 <p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> not only inherits the basic arithmetics but also the topology:
 We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
@@ -829,7 +888,7 @@ is a Cauchy sequence iff:</p>
 \[ \begin{align}\begin{aligned}x_{n_0} &amp;= 2 + \frac{1}{n} \\x_{n_{k+1}} &amp;= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n_k}}\end{aligned}\end{align} \]</div>
 <p>For each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span> is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> that converges in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\sqrt{2 + \frac{1}{n}}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 <div class="proof theorem admonition" id="thr-R-completeness">
-<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Completeness of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Completeness of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every Cauchy sequence <span class="math notranslate nohighlight">\(\{r_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> converges.
 So, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete.</p>
@@ -897,7 +956,7 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>b) todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-bolzano-weierstrass">
-<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Bolzano-Weierstrass)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Bolzano-Weierstrass)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Every bounded and monotonous sequence of reals is convergent.</p>
 <p><strong>b)</strong> Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact.</p>
@@ -973,7 +1032,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 <p>For <span class="math notranslate nohighlight">\(f\)</span> to be uniformly continuous we require that one <span class="math notranslate nohighlight">\(\delta\)</span> do the job for the whole interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-continuity-on-compact-sets">
-<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Continuous Functions on Intervals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Continuous Functions on Intervals)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be continuous. Then:</p>
 <p><strong>(a)</strong> The continuous functions on <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^0([a, b])\)</span></p>
@@ -1008,7 +1067,7 @@ Then there exist two sequences <span class="math notranslate nohighlight">\(\{x_
 and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessarily converges to the same <span class="math notranslate nohighlight">\(x\)</span>, So, <span class="math notranslate nohighlight">\(f\)</span> is not continuous in <span class="math notranslate nohighlight">\(x\)</span>, which is a contradiction.</p>
 </div>
 <div class="proof theorem admonition" id="thr-intermediate-value">
-<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Intermediate Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Intermediate Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function, and <span class="math notranslate nohighlight">\(\mu \in \mathbb{R}\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -1097,7 +1156,7 @@ on the understanding that</p>
 </section>
 </div><p>Monotony leads us to an important theorem.</p>
 <div class="proof theorem admonition" id="thr-mean-value">
-<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Mean Value Theorem of Integration)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Mean Value Theorem of Integration)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
@@ -1108,7 +1167,7 @@ on the understanding that</p>
 \[\int_a^b f(x) \, dx= f(\xi) (b-a)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 16</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
+<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 17</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
 And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[m \le f(x) \le M \]</div>
@@ -1117,7 +1176,7 @@ And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <s
 \[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
 </div>
 <div class="proof theorem admonition" id="thr-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Properties of Riemann Integrals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Properties of Riemann Integrals)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
 <p><strong>(b)</strong> The mapping</p>
@@ -1194,7 +1253,7 @@ for any set of intermediate points <span class="math notranslate nohighlight">\(
 It is not integrable because on every interval you’ll find Riemann sums equal to <span class="math notranslate nohighlight">\(0\)</span>, and others equal to <span class="math notranslate nohighlight">\(1\)</span>.
 We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.</p>
 <div class="proof theorem admonition" id="thr-riemann-integrable-functions">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Riemann-Integrable Functions)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Riemann-Integrable Functions)</p>
 <section class="theorem-content" id="proof-content">
 <p>All functions are defined on a closed interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <p><strong>(a)</strong> Step functions are R-integrable.</p>
@@ -1236,7 +1295,7 @@ Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed
 &amp; = \frac{1}{n}(b-a)(f(b) - f(a))\end{split}\]</div>
 <p>which can be made arbitrarily small. The assertion follows from (b).</p>
 <p><strong>(d)</strong>
-Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem 15</a>
+Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem 16</a>
 and is the uniform limit of step functions.</p>
 </div>
 </section>
@@ -1263,7 +1322,7 @@ and its derivative is continuous on <span class="math notranslate nohighlight">\
 A function is said to be <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable if <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-properties-derivatives">
-<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Properties of Derivatives)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Properties of Derivatives)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^1 ([a, b])\)</span>.
 Likewise, the <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a vector space, written as <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span>.</p>
@@ -1289,7 +1348,7 @@ and we can swap limit and differentiation:</p>
 <p>Proof. todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-differentiation-rules">
-<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Differentiation Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Differentiation Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a) Product Rule</strong></p>
@@ -1308,7 +1367,7 @@ and we can swap limit and differentiation:</p>
 <section id="main-theorem-of-calculus">
 <h2>Main Theorem of Calculus<a class="headerlink" href="#main-theorem-of-calculus" title="Link to this heading">#</a></h2>
 <div class="proof theorem admonition" id="thr-main-theorem-calculus">
-<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Main Theorem of Calculus)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Main Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span> and <span class="math notranslate nohighlight">\(F\)</span> be the <strong>primitive</strong> of <span class="math notranslate nohighlight">\(f\)</span>, defined by</p>
 <div class="math notranslate nohighlight">
@@ -1353,7 +1412,7 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 <p>Proof. todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
-<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Integration Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Integration Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a) Integration by Parts</strong></p>
@@ -1375,7 +1434,7 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 <span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term. In
 what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open interval, and <span class="math notranslate nohighlight">\(x, u \in A\)</span>.</p>
 <div class="proof theorem admonition" id="thr-taylor-v1">
-<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Taylor V1)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Taylor V1)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
@@ -1384,7 +1443,7 @@ f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n 
 \]</div>
 </section>
 </div><div class="proof theorem admonition" id="thr-taylor-v2">
-<p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Taylor V2)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Taylor V2)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,u]\)</span> such that:</p>
 <div class="math notranslate nohighlight">
@@ -1398,7 +1457,7 @@ f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{
 \]</div>
 </section>
 </div><div class="proof theorem admonition" id="thr-taylor-v3">
-<p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Taylor V3)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 27 </span> (Taylor V3)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in  C^n(A)\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
