@@ -21,14 +21,14 @@ continuum hypothesis
 
 ### Achilles and the Tortoise (Zeno)
 
-Imagine the tortoise and Achilles starting a race with the tortiose 10 metres in the lead, 
+Imagine the tortoise and Achilles starting a race with the tortiose $10$ metres in the lead, 
 and Achilles running ten times as fast as the tortoise.  
-By the time Achilles has covered 10 meters, the tortoise is 1 metre in the lead.  
-By the time Achilles has covered 11 meters, the tortoise is 0.1 metres in the lead.  
-By the time Achilles has covered 11.1 meters, the tortoise is 0.01 metres in the lead.  
+By the time Achilles has covered $10$ meters, the tortoise is $1$ metre in the lead.  
+By the time Achilles has covered $11$ meters, the tortoise is $0.1$ metres in the lead.  
+By the time Achilles has covered $11.1$ meters, the tortoise is $0.01$ metres in the lead.  
 And so on. Will Achilles ever overtake the tortoise?
 
-Of course, he will after 11.111... metres because
+Of course, he will after $11.111\ldots$ metres because
 
 ```{math}
 \sum_{k=0}^\infty \alpha^k = \frac{1}{1-\alpha}
@@ -38,6 +38,8 @@ which gives, with $\alpha = 1/10$:
 ```{math}
 10 + \sum_{k=0}^\infty \frac{1}{10^k} = 10 + \frac{10}{9} = 11.111\ldots
 ```
+Without Zeno, the computation would have been easier: Let $x(t) = 10t$ be Achilles' position at time $t$, and $y(t) = 10 + t$ that of the tortoise.
+The equation $x(t) = y(t)$ has the solution $t = 10/9 = 1.111 \ldots$.
 
 What seemed paradoxical to Zeno is that the sum of an infinite number of terms could be finite.
 However, all he did was a mental divison of a finite distance into infinitely 
@@ -47,7 +49,7 @@ Today infinite sums are well understood; there is nothing paradoxical about them
 ### The Standing Arrow (Zeno): 
 Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
 How can it ever move? The answer is given by the theory of integrals we are going to study in detail. 
-Here is a short sketch: 
+Here is a sketch: 
 Let $v(t)$ be the speed of the arrow at time $t$. 
 We divide a given time span $[a, b]$ into tiny, but finitely many 
 subintervals ${[t_k, t_{k+1}]}$.
@@ -56,19 +58,21 @@ Then, the distance $d$ traveled in the time interval $[a, b]$ is approximated to
 ```{math}
 d \approx \sum_{k=0}^n v(t_k) (t_{k+1} - t_k)
 ```
-The first paradox was that a sum with an infinite number of terms could be finite.
-This paradox is that the sum of a large number of arbitrarily small terms does not vanish.
-It lies at the very heart of integration theory that such a sum can be assigned a meaningful value.
+While the first paradox was that a sum with an infinite number of terms could be finite,
+this paradox is that the sum of a large number of arbitrarily small terms does not vanish. 
+Assigning meaningful values to such sums is what integration theory is all about.
 
 ### What the Tortoise Said to Achilles (Lewis Carroll)
 
 This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland. 
 It questions what mathematicians really do.
 Imagine the tortoise explaining a mathematical argument to Achilles.
-This is what it says, in the words of L. Carroll:
+This is what it says, in the words of Lewis Carroll:
 
-:::{admonition} Lewis Carroll: "What the Tortoise Said to Achilles"
+```{admonition} What the Tortoise Said to Achilles
 :class: tip
+
+Listen:
 
 (A) Things that are equal to the same are equal to each other.   
 (B) The two sides of this Triangle are things that are equal to the same.   
@@ -107,9 +111,9 @@ the Tortoise. "So enter it in your book, please. We will call it
 "Until I've granted *that*, of course I needn't grant Z. So it's quite
 a *necessary* step, you see?" "I see," said Achilles; and there was a touch of sadness in his tone.
 
-Here narrator, having pressing business at the Bank, was obliged to leave the happy
+Here the narrator, having pressing business at the Bank, was obliged to leave the happy
 pair, and did not again pass the spot until some months afterwards. When he did so,
-Achilles was still seated on the back of the much-enduring Tortoise, and was writing
+Achilles was still seated on the back of the much-enduring Tortoise and was writing
 in his notebook, which appeared to be nearly full. The Tortoise was saying, "Have
 you got that last step written down? Unless I've lost count, that makes a thousand
 and one. There are several million more to come. And would you mind, as a
@@ -120,8 +124,7 @@ named *Taught-Us*?"
 "As you please!" replied the weary warrior, in the hollow tones of despair, as he
 buried his face in his hands. "Provided that you, for your part, will adopt a pun the
 Mock-Turtle never made, and allow yourself to be re-named *A Kill-Ease*!"
-
-:::
+```
 
 So much from Lewis Carroll. With a touch of sadness, 
 I must admit that this paradox puts all mathematical reasoning at risk.
@@ -176,6 +179,7 @@ The Peano axioms not only allow the definition of all basic arithmetical operati
 They form the foundation of number theory.
 In virtue of the Peano axioms we can start at $0$ and, 
 applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.
+The following is a formal definition of infinity, with no handwaving, no dots, and no "and so on."
 
 
 ````{prf:definition} Infinity
@@ -186,9 +190,82 @@ applying the successor function, construct as many natural numbers as we like. T
 This injection is often called an *enumeration*, a way of putting all elements of $A$ in a sequential order.
 ````
 The set $\mathbb{N}$ is infinite because the successor function $S$ is exactly such an injection, with $B = \mathbb{N} - \{0\}$.
+That's a formal version of Hilbert's Hotel, which can always accommodate an extra guest by moving everyone else up one room. 
 Another injection would be $\phi(n) = 10^n$, with $B = \{1, 10, 100, \ldots\}$. $B$ is a set with huge gaps, and yet, 
-it's still infinite: you never run out of natural numbers. Famous countable set are $\mathbb{Z}$ and $\mathbb{Q}$ to which we now turn.
+it's still infinite: you never run out of natural numbers. 
 
+````{prf:theorem} Countable and Uncountable Sets
+:label: thr-countable-uncountable
+**a)** A countable union of countable sets is countable.
+
+**b)** A finite crossproduct of countable sets is countable
+
+**c)** Let $A$ be any set. It is never possible to define an injection from the power set $\mathcal{P}(A)$ to $A$.
+Therefore, the power set of a countable set is always uncountable.
+````
+````{prf:proof}
+We need two facts not proven here:
+ 
+* There are infinitely many primes $p_1, p_2, \ldots$.
+
+* Any natural number $a > 1$ can be uniquely decomposed 
+  into a product of primes: $a = \prod_{i=1}^n p_i^{\alpha_i}$ where $p_i$ 
+  are prime numbers and $\alpha_i$ are integers (that's the fundamental theorem of arithmetic).
+
+Let $\{A_i\}$ be a family of sets, countable for (a), finite for (b), and let
+
+```{math}
+\phi_i : A_i \to \mathbb{N}
+```
+be the injection corresponding to $A_i$. 
+
+**a)** The function
+
+```{math}
+\phi:
+\left\{
+   \begin{array}{lr}
+       \cup_i A_i  \to \mathbb{N} \\
+       a \mapsto p_i \phi_i(a) \text{ if } a \in A_i
+   \end{array}
+\right .
+```
+   
+is an injection: The set $A_i$ is mapped to the multiples of $p_i$.
+
+**b)** The function
+
+```{math}
+\phi:
+\left\{
+   \begin{array}{lr}
+       \prod_{i=1}^n A_i  \to \mathbb{N} \\
+       (a_1, a_2, \ldots, a_n) \mapsto \prod_{i=1}^n p_i^{\phi_i(a_i)}
+   \end{array}
+\right .
+```
+   
+is an injection: Each $(a_1, a_2, \ldots, a_n)$ is mapped to the unique natural number whose decomposition
+is $(\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))$.
+
+**c)** 
+Assume there is an injection
+```{math}
+\phi: \mathcal{P}(A) \to A
+```
+The set 
+
+```{math}
+K = \{\phi(B) \mid B \subseteq A, \phi(B) \notin B\}
+```
+leads to a contradiction:
+
+```{math}
+&\phi(K) \in K \Rightarrow \phi(K) \notin K \\
+&\phi(K) \notin K \Rightarrow \phi(K) \in K
+```
+This is the formal variant of the barber who shaves all men who do not shave themselves.
+````
 
 ### Integers
 

@@ -14,3 +14,13 @@ __pycache__/
 # IDE
 .idea/
 /playground/math-existence.pdf
+
+# macOS Finder duplicates (files ending in " 2", " 3", etc.)
+* 2.*
+* 3.*
+* 4.*
+* 5.*
+* 2
+* 3
+* 4
+* 5
