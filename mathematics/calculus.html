@@ -481,7 +481,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-theorem-of-calculus">Main Theorem of Calculus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-s-theorem">Taylor’s Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
@@ -500,10 +500,6 @@ document.write(`
 <blockquote>
 <div><p>under construction</p>
 </div></blockquote>
-<p>todo:</p>
-<p>Q countable</p>
-<p>R uncountable</p>
-<p>continuum hypothesis</p>
 <section id="paradoxes">
 <h2>Paradoxes<a class="headerlink" href="#paradoxes" title="Link to this heading">#</a></h2>
 <section id="achilles-and-the-tortoise-zeno">
@@ -649,8 +645,8 @@ The following is a formal definition of infinity, with no handwaving, no dots, a
 <div class="proof definition admonition" id="def-infinity">
 <p class="admonition-title"><span class="caption-number">Definition 7 </span> (Infinity)</p>
 <section class="definition-content" id="proof-content">
-<p><strong>a)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>infinite</strong> if there is an a proper subset <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to B\)</span>.</p>
-<p><strong>b)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>countable</strong> if there is an injection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.
+<p><strong>a)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>infinite</strong> iff there is an a proper subset <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to B\)</span>.</p>
+<p><strong>b)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>countable</strong> iff there is an injection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.
 This injection is often called an <em>enumeration</em>, a way of putting all elements of <span class="math notranslate nohighlight">\(A\)</span> in a sequential order.</p>
 </section>
 </div><p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is infinite because the successor function <span class="math notranslate nohighlight">\(S\)</span> is exactly such an injection, with <span class="math notranslate nohighlight">\(B = \mathbb{N} - \{0\}\)</span>.
@@ -662,18 +658,19 @@ it’s still infinite: you never run out of natural numbers.</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> A countable union of countable sets is countable.</p>
 <p><strong>b)</strong> A finite crossproduct of countable sets is countable</p>
-<p><strong>c)</strong> Let <span class="math notranslate nohighlight">\(A\)</span> be any set. It is never possible to define an injection from the power set <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span> to <span class="math notranslate nohighlight">\(A\)</span>.
+<p><strong>c)</strong> If <span class="math notranslate nohighlight">\(A\)</span> is countably infinite iff there is an injection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.</p>
+<p><strong>d)</strong> Let <span class="math notranslate nohighlight">\(A\)</span> be any set. It is never possible to define an injection from the power set <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span> to <span class="math notranslate nohighlight">\(A\)</span>.
 Therefore, the power set of a countable set is always uncountable.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We need two facts not proven here:</p>
-<ul class="simple">
+<p>Proof. The shortest and most convincing way to prove the assertion relies on two facts from elementary arithmetic:</p>
+<ol class="arabic simple">
 <li><p>There are infinitely many primes <span class="math notranslate nohighlight">\(p_1, p_2, \ldots\)</span>.</p></li>
 <li><p>Any natural number <span class="math notranslate nohighlight">\(a &gt; 1\)</span> can be uniquely decomposed
-into a product of primes: <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
-are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</span> are integers (that’s the fundamental theorem of arithmetic).</p></li>
-</ul>
-<p>Let <span class="math notranslate nohighlight">\(\{A_i\}\)</span> be a family of sets, countable for (a), finite for (b), and let</p>
+into a product of primes <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
+are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</span> are naturals (see <a class="reference internal" href="arithmetic.html#thr-fundamental">Theorem 6</a>)</p></li>
+</ol>
+<p>Let <span class="math notranslate nohighlight">\(\{A_i\}\)</span> be a family of sets, countable for assertion (a), finite for (b), and let</p>
 <div class="math notranslate nohighlight">
 \[\phi_i : A_i \to \mathbb{N}\]</div>
 <p>be the injection corresponding to <span class="math notranslate nohighlight">\(A_i\)</span>.</p>
@@ -699,17 +696,27 @@ are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</s
 <p>is an injection: Each <span class="math notranslate nohighlight">\((a_1, a_2, \ldots, a_n)\)</span> is mapped to the unique natural number whose decomposition
 is <span class="math notranslate nohighlight">\((\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))\)</span>.</p>
 <p><strong>c)</strong>
+<strong>TODO</strong></p>
+<p><strong>d)</strong>
 Assume there is an injection</p>
 <div class="math notranslate nohighlight">
 \[\phi: \mathcal{P}(A) \to A\]</div>
-<p>The set</p>
+<p>We investigate the set</p>
 <div class="math notranslate nohighlight">
-\[K = \{\phi(B) \mid B \subseteq A, \phi(B) \notin B\}\]</div>
-<p>leads to a contradiction:</p>
+\[K = \{\phi(U) \mid  U \subseteq A, U \ne \emptyset, \phi(U) \notin U\}\]</div>
+<p>If <span class="math notranslate nohighlight">\(K\)</span> were empty, we had</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\phi(K) \in K \Rightarrow \phi(K) \notin K \\
+\[\begin{split}&amp;\forall U \subseteq A, U \ne \emptyset: \phi(U) \in U \\
+\Rightarrow &amp;\forall a \in A: \phi(\{a\}) \in \{a\} \\
+\Rightarrow &amp;\forall a \in A: \phi(\{a\}) = a\end{split}\]</div>
+<p>But in this case, for any subset <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with two or more elements, there would be no room left for <span class="math notranslate nohighlight">\(\phi(U)\)</span>,
+since <span class="math notranslate nohighlight">\(\phi\)</span> is injective. Therefore, <span class="math notranslate nohighlight">\(K\)</span> is not empty, and we can ask if <span class="math notranslate nohighlight">\(\phi(K)\)</span> belongs to <span class="math notranslate nohighlight">\(K\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-countable-uncountable-1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-equ-countable-uncountable-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\phi(K) \in K \Rightarrow \phi(K) \notin K \\
 &amp;\phi(K) \notin K \Rightarrow \phi(K) \in K\end{split}\]</div>
-<p>This is the formal variant of the barber who shaves all men who do not shave themselves.</p>
+<p>This contradiction proves that there can be no injection from a power set of a set to the set itself.
+It is the formal variant of the barber who shaves all men who do not shave themselves.
+Note that, with <span class="math notranslate nohighlight">\(K\)</span> empty, contradiction <a class="reference internal" href="#equation-equ-countable-uncountable-1">(10)</a> would be meaningless: ex falso quodlibet.</p>
 </div>
 </section>
 <section id="integers">
@@ -730,7 +737,7 @@ As an example, we explain how <span class="math notranslate nohighlight">\(a - b
 With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring.
 As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> must also contain the negative numbers <span class="math notranslate nohighlight">\(-\!\mathbb{N}\)</span>,
 the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
-<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is countable, the enumeration being <span class="math notranslate nohighlight">\({0, 1, -1, 2, -2, \ldots}\)</span>.</p>
+<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is countable, since it is the union of two countable sets.</p>
 </section>
 <section id="rationals">
 <h3>Rationals<a class="headerlink" href="#rationals" title="Link to this heading">#</a></h3>
@@ -756,7 +763,7 @@ We introduce, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>,
 With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field.
 As any field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> must also contain the rationals,
 the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
-<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is countable, the enumeration being <span class="math notranslate nohighlight">\({0, \frac{1}/{2}, \frac{1}/{3}, \frac{2}/{3}, \ldots}\)</span>.</p>
+<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is countable, since it is the cross-product of two countable sets.</p>
 </section>
 <section id="reals">
 <h3>Reals<a class="headerlink" href="#reals" title="Link to this heading">#</a></h3>
@@ -861,7 +868,7 @@ This can be represented as a matrix, with a row for each <span class="math notra
 <p><strong>a) Distance of reals</strong><br />
 We define what it means for a real number to be close to zero or to another real number:</p>
 <div class="math notranslate nohighlight" id="equation-def-convergence-reals-1">
-<span class="eqno">(10)<a class="headerlink" href="#equation-def-convergence-reals-1" title="Link to this equation">#</a></span>\[\begin{split}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon \\
+<span class="eqno">(11)<a class="headerlink" href="#equation-def-convergence-reals-1" title="Link to this equation">#</a></span>\[\begin{split}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon \\
 \left | r - s \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k - z_k \right | &lt; \epsilon\end{split}\]</div>
 <p>Note that the equivalence of rational Cauchy sequences is the same as the equality of their corresponding reals:</p>
 <div class="math notranslate nohighlight">
@@ -869,17 +876,17 @@ We define what it means for a real number to be close to zero or to another real
 <p><strong>b) Convergence of reals</strong><br />
 We define what it means for a sequence of real numbers to converge to zero or to another real number:</p>
 <div class="math notranslate nohighlight" id="equation-def-convergence-reals-2">
-<span class="eqno">(11)<a class="headerlink" href="#equation-def-convergence-reals-2" title="Link to this equation">#</a></span>\[\begin{split}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n \right | &lt; \epsilon \\
+<span class="eqno">(12)<a class="headerlink" href="#equation-def-convergence-reals-2" title="Link to this equation">#</a></span>\[\begin{split}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n \right | &lt; \epsilon \\
 \lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n - r \right | &lt; \epsilon\end{split}\]</div>
-<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-2">(11)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(10)</a>, gives us the long version:</p>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-2">(12)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(11)</a>, gives us the long version:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} \right | &lt; \epsilon\\\lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} - y_k \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
 <p><strong>c) Cauchy convergence of reals</strong><br />
 We define what it means for a sequence of real numbers to be a Cauchy sequence: The sequence <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span>
 is a Cauchy sequence iff:</p>
 <div class="math notranslate nohighlight" id="equation-def-convergence-reals-3">
-<span class="eqno">(12)<a class="headerlink" href="#equation-def-convergence-reals-3" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
-<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-3">(12)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(10)</a>, gives us the long version:</p>
+<span class="eqno">(13)<a class="headerlink" href="#equation-def-convergence-reals-3" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-3">(13)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(11)</a>, gives us the long version:</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_0(\epsilon, m, n): \forall k &gt; k_0(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
 </section>
@@ -901,13 +908,13 @@ We proceed in two steps: (1) We show that the diagonal sequence <span class="mat
 \[r_n = \{x_{n_k}\}_k\]</div>
 <p>Each <span class="math notranslate nohighlight">\(r_n\)</span> being a Cauchy sequence, we get:</p>
 <div class="math notranslate nohighlight" id="equation-thr-r-completeness-1">
-<span class="eqno">(13)<a class="headerlink" href="#equation-thr-r-completeness-1" title="Link to this equation">#</a></span>\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
+<span class="eqno">(14)<a class="headerlink" href="#equation-thr-r-completeness-1" title="Link to this equation">#</a></span>\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
 <p>The sequence  <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span> being a Cauchy sequence itself, we get:</p>
 <div class="math notranslate nohighlight" id="equation-thr-r-completeness-2">
-<span class="eqno">(14)<a class="headerlink" href="#equation-thr-r-completeness-2" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-thr-r-completeness-2" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
 <p>We conclude that the diagonal sequence  <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is also Cauchy sequence.
-To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and, using inequality <a class="reference internal" href="#equation-thr-r-completeness-1">(13)</a> twice
-and <a class="reference internal" href="#equation-thr-r-completeness-2">(14)</a> once, get the inequality:</p>
+To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and, using inequality <a class="reference internal" href="#equation-thr-r-completeness-1">(14)</a> twice
+and <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a> once, get the inequality:</p>
 <div class="math notranslate nohighlight">
 \[\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | &lt; 3 \epsilon\]</div>
 <p>So, the sequence <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is a Cauchy sequence and represents a real number <span class="math notranslate nohighlight">\(r\)</span>:</p>
@@ -916,7 +923,7 @@ and <a class="reference internal" href="#equation-thr-r-completeness-2">(14)</a>
 <p>It remains to show that</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty}r_n = r\]</div>
-<p>We observe that in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(14)</a> we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like.
+<p>We observe that in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a> we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like.
 Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 9</a>):</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
@@ -924,7 +931,7 @@ Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (comp
 </div>
 <p>This proof is extremely formal and straightforward, despite how scary the inequalities might look
 at first. The proof consists of two plugins: We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
-and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(14)</a>, we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is what “forall” is all about.</p>
+and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a>, we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is what “forall” is all about.</p>
 <p>As any complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
 it is indeed the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.
 From now on, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> will be our home. Whatever happens, happens in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
@@ -1069,37 +1076,53 @@ and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessaril
 <div class="proof theorem admonition" id="thr-intermediate-value">
 <p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Intermediate Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function, and <span class="math notranslate nohighlight">\(\mu \in \mathbb{R}\)</span> such that</p>
+<p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function with <span class="math notranslate nohighlight">\(f(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &gt; 0\)</span>.
+Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = 0\)</span>.</p>
+<p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function and <span class="math notranslate nohighlight">\(\mu\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\min  \{f(x) \mid x \in [a,b]\} \le \mu  \le \max  \{f(x) \mid x \in [a,b]\}\]</div>
+\[\min\{f(x) \mid x \in [a, b]\} \le \mu \le \max\{f(x) \mid x \in [a, b]\}\]</div>
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>TODO</strong></p>
-<p>The proof proceeds by halving intervals.
-We build two sequences <span class="math notranslate nohighlight">\(\{a_n\},\{b_n\}\)</span> such that ${a_n} is</p>
+<p>Proof. <strong>(a)</strong> We build two bounded monotonous sequences <span class="math notranslate nohighlight">\(\{a_n\},\{b_n\}\)</span> and
+apply again <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass</span></a>:</p>
 <div class="math notranslate nohighlight">
-\[f(a_n) \le \mu
-f(b_n) \ge \mu\]</div>
-<p>sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(x) = \mu\)</span>.
-Let <span class="math notranslate nohighlight">\(x_0 = a, x_1 = b, x_2 = (x_0 + x_1)/2\)</span>. The general rule for <span class="math notranslate nohighlight">\(x_n\)</span> is:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}x_n = 
+\[ \begin{align}\begin{aligned}\begin{split}&amp;a_0 = a \\
+&amp;b_0 = b \\
+\\
+&amp;a_{n+1} = 
 \left\{
     \begin{array}{lr}
-        (x_{n-2} + x_{n-1})/2 &amp; \text{ if } f(x_{n-1}) &lt; \mu \\
-        x_{n-1} &amp; \text{ if } f(x_{n-1}) = \mu \\
-        (x_{n-3} + x_{n-1})/2 &amp; \text{ if } f(x_{n-1}) &gt; \mu
+        (a_n + b_n)/2 &amp; \text{ if } f((a_n + b_n)/2) &lt; 0 \\
+        a_n &amp; \text{ if } f((a_n + b_n)/2) \ge 0
     \end{array}
-\right .\end{split}\]</div>
-<p>We see that:</p>
+\right .  \\
+\\\end{split}\\\begin{split}&amp;b_{n+1} = 
+\left\{
+    \begin{array}{lr}
+        b_n &amp; \text{ if } f((a_n + b_n)/2) &lt; 0 \\
+        (a_n + b_n)/2 &amp; \text{ if } f((a_n + b_n)/2) \ge 0
+    \end{array}
+\right .\end{split}\end{aligned}\end{align} \]</div>
+<p>We observe that, for all <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-intermediate-value-1">
+<span class="eqno">(16)<a class="headerlink" href="#equation-equ-intermediate-value-1" title="Link to this equation">#</a></span>\[f(a_n) &lt; 0 \le f(b_n)\]</div>
+<p>and that the sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is non-descending, while <span class="math notranslate nohighlight">\(\{b_n\}\)</span> is non-increasing.
+Being bounded, both sequences converge, and their limits must be identical because:</p>
 <div class="math notranslate nohighlight">
-\[\left | x_n - x_{n-1} \rvert \le \lvert x_{n-1} - x_{n-2} \right | / 2 \]</div>
-<p>so, by induction:</p>
+\[\begin{split}b_{n+1} - a_{n+1}  &amp;= \frac{1}{2} b_{n} - a_{n} \\
+\Rightarrow b_{n} - a_{n}  &amp;= \frac{b-a}{2^n}\end{split}\]</div>
+<p>This limit is our <span class="math notranslate nohighlight">\(\xi\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\lvert x_n - x_{n-1} \rvert \le (b - a) / 2^{n-1} \]</div>
-<p>The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is a Cauchy sequence. Hence it converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, and, being continuous,
-<span class="math notranslate nohighlight">\(\{f(x_n)\}\)</span> converges to $f(x).</p>
+\[\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \xi\]</div>
+<p>Since <span class="math notranslate nohighlight">\(f\)</span> is continous in <span class="math notranslate nohighlight">\(\xi\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = f(\xi)\]</div>
+<p>But <span class="math notranslate nohighlight">\(f(\xi)\)</span> must be <span class="math notranslate nohighlight">\(0\)</span> because the inequalities <a class="reference internal" href="#equation-equ-intermediate-value-1">(16)</a> imply:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = 0\]</div>
+<p><strong>(b)</strong> follows from (a): Choose <span class="math notranslate nohighlight">\(a_0, b_0 \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(a_0) = \min\{f(x) \mid x \in [a, b]\}\)</span>
+and <span class="math notranslate nohighlight">\(f(b_0) = \max\{f(x) \mid x \in [a, b]\}\)</span>. Assume w.l.o.g. that <span class="math notranslate nohighlight">\(a_0 &lt; b_0\)</span> and replace <span class="math notranslate nohighlight">\(f\)</span> with <span class="math notranslate nohighlight">\(f - \mu\)</span>.</p>
 </div>
 </section>
 <section id="riemann-integrable-functions">
@@ -1118,10 +1141,10 @@ be a set of intermediate points. A Riemann sum is defined as:</p>
 <p><strong>(c) Riemann Integrals</strong>. We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>Riemann-integrable</strong>, or <strong>R-integrable</strong> for short,
 and call</p>
 <div class="math notranslate nohighlight">
-\[\int_a^b f(x) \, dx\]</div>
+\[A = \int_a^b f(x) \, dx\]</div>
 <p>the <strong>Riemann integral</strong> of <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\([a, b]\)</span> iff</p>
 <div class="math notranslate nohighlight">
-\[\forall \epsilon &gt; 0$: \exists \delta &gt; 0: \forall R(f, X, \xi) \text{ with } \mu(R) &lt; \delta : \left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | &lt; \epsilon\]</div>
+\[\forall \epsilon &gt; 0: \exists \delta &gt; 0: \forall X,\xi \text{ with } \mu(X) &lt; \delta : \left | A - R(f, X, \xi) \right | &lt; \epsilon\]</div>
 <p>In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write</p>
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})\]</div>
@@ -1155,7 +1178,7 @@ on the understanding that</p>
 (because Riemann sums are).</p>
 </section>
 </div><p>Monotony leads us to an important theorem.</p>
-<div class="proof theorem admonition" id="thr-mean-value">
+<div class="proof theorem admonition" id="thr-mean-value-integration">
 <p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Mean Value Theorem of Integration)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
@@ -1175,34 +1198,17 @@ And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <s
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
 </div>
-<div class="proof theorem admonition" id="thr-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Properties of Riemann Integrals)</p>
+<div class="proof theorem admonition" id="thr-triangular-inequality">
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Triangular Inequality for Integrals)</p>
 <section class="theorem-content" id="proof-content">
-<p><strong>(a)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
-<p><strong>(b)</strong> The mapping</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b :f \mapsto \int_a^b f(y) \, dy\]</div>
-<p>is called the <strong>integration functional</strong>. It is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
-<p><strong>(c)</strong> Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a, b])\)</span>. Then the following inequality holds:</p>
+<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a, b])\)</span>. Then the following inequality holds:</p>
 <div class="math notranslate nohighlight">
 \[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
-<p><strong>(d)</strong> The primitive of an R-integrable function is continuous. The mapping</p>
-<div class="math notranslate nohighlight">
-\[\int :f \mapsto \int_a^x f(y) \, dy\]</div>
-<p>is called the <strong>integration operator</strong>. It is a linear mapping from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^0([a, b])\)</span>.</p>
-<p><strong>(e)</strong> The <strong>uniform limit</strong> of R-integrable functions is R-integrable,
-or, equivalently: <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> is closed under the sup norm.
-We can swap limit and integral:</p>
-<div class="math notranslate nohighlight">
-\[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The assertions (a) and (b) are obvious.
-The proofs of (c) and (e) use the triangular inequality, and (d) follows from the fact that R-integrable functions are bounded.</p>
-<p><strong>(c)</strong>
-The idea is to approximate the integrals over <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(|f|\)</span> by a single partition.
-We apply the triangular inequality to the Riemann sums and, keeping track of the <span class="math notranslate nohighlight">\(\epsilon\)</span>, we transfer the result to the integrals.
-Let <span class="math notranslate nohighlight">\(X\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermnediate points, and <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> such that:</p>
+<p>Proof. We apply the triangular inequality to the Riemann sums and, keeping track of the <span class="math notranslate nohighlight">\(\epsilon\)</span>, we transfer the result to the integrals.
+To this end, we approximate the integrals over <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(|f|\)</span> by a single partition.</p>
+<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermnediate points, and <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> such that:</p>
 <div class="math notranslate nohighlight">
 \[\left | \int_a^b f(y) \, dy - \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | &lt; \epsilon\]</div>
 <p>and</p>
@@ -1215,13 +1221,48 @@ Let <span class="math notranslate nohighlight">\(X\)</span> be a partition of <s
 &amp; \le \sum_{k=0}^n \left | f(\xi_k) \right | (x_{k+1} - x_k)  + \epsilon \\
 &amp; \le \int_a^b \left | f(y) \right | \, dy  + 2 \epsilon \end{split}\]</div>
 <p>This is the assertion.</p>
-<p><strong>(d)</strong>
+</div>
+<div class="proof theorem admonition" id="thr-riemann-integrals">
+<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Properties of Riemann Integrals)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
+<p><strong>(b)</strong> The mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to \mathbb{R} \\
+        f \mapsto \int_a^b f(y) \, dy
+    \end{array}
+\right .\end{split}\]</div>
+<p>is a linear mapping, called the <strong>integration functional</strong>.</p>
+<p><strong>(c)</strong> The primitive of an R-integrable function is continuous. The mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to C^0([a, b]) \\
+        f \mapsto \int_a^x f(y) \, dy
+    \end{array}
+\right .\end{split}\]</div>
+<p>is a linear operator, called the <strong>integration operator</strong>.</p>
+<p><strong>(d)</strong> The <strong>uniform limit</strong> of R-integrable functions is R-integrable,
+or, equivalently: <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> is closed under the sup norm.
+We can swap limit and integral:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. The assertions (a) and (b) are obvious.
+The proof of (c) uses the <a class="reference internal" href="#thr-triangular-inequality"><span class="xref myst">Triangular Inequality for Integrals</span></a>, and
+the proof of (d) the standard one.</p>
+<p><strong>(c)</strong>
 Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be integrable,  and <span class="math notranslate nohighlight">\(F\)</span> a primitive of <span class="math notranslate nohighlight">\(f\)</span>.
 Then, <span class="math notranslate nohighlight">\(f\)</span> is bounded by some <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span>, and we have, for <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> and arbitrarily small <span class="math notranslate nohighlight">\(h\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M\]</div>
-<p>which proves the continuity of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span></p>
-<p><strong>(e)</strong>
+<p>which proves the continuity of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><strong>(d)</strong>
 Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>. Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> and <span class="math notranslate nohighlight">\(n_0\)</span> be such that, for <span class="math notranslate nohighlight">\(n \ge n_0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\left \lVert f_n - f \right \rVert_{\infty} &lt; \epsilon \]</div>
@@ -1253,7 +1294,7 @@ for any set of intermediate points <span class="math notranslate nohighlight">\(
 It is not integrable because on every interval you’ll find Riemann sums equal to <span class="math notranslate nohighlight">\(0\)</span>, and others equal to <span class="math notranslate nohighlight">\(1\)</span>.
 We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.</p>
 <div class="proof theorem admonition" id="thr-riemann-integrable-functions">
-<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Riemann-Integrable Functions)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Riemann-Integrable Functions)</p>
 <section class="theorem-content" id="proof-content">
 <p>All functions are defined on a closed interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <p><strong>(a)</strong> Step functions are R-integrable.</p>
@@ -1270,13 +1311,12 @@ there are R-integrable functions <span class="math notranslate nohighlight">\(\p
 <p><strong>(e) (Lebesgue Criterion)</strong> Bounded functions are R-integrable iff their set of discontinuities has measure zero.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The proof of (e) can be found in <strong>citation needed</strong>.</p>
-<p><strong>(a)</strong>
+<p>Proof. <strong>(a)</strong>
 Let <span class="math notranslate nohighlight">\(\phi\)</span> be a step function on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})\)</span>. Then, obviously:</p>
 <div class="math notranslate nohighlight">
 \[\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k\]</div>
 <p><strong>(b)</strong></p>
-<p>todo</p>
+<p><strong>TODO</strong></p>
 <p><strong>(c)</strong>
 Let <span class="math notranslate nohighlight">\(f\)</span> be monotonously non-decreasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can squeezed between two step functions, <span class="math notranslate nohighlight">\(\phi, \psi\)</span>,
 which are integrable as we know from (a).
@@ -1294,9 +1334,9 @@ Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed
 &amp; = \frac{1}{n}(b-a) \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
 &amp; = \frac{1}{n}(b-a)(f(b) - f(a))\end{split}\]</div>
 <p>which can be made arbitrarily small. The assertion follows from (b).</p>
-<p><strong>(d)</strong>
-Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thr-continuity-on-compact-sets">Theorem 16</a>
-and is the uniform limit of step functions.</p>
+<p><strong>(d)</strong></p>
+<p><strong>TODO</strong></p>
+<p><strong>(e)</strong> The proof can be found in <strong>citation needed</strong>.</p>
 </div>
 </section>
 <section id="differentiable-functions">
@@ -1322,7 +1362,7 @@ and its derivative is continuous on <span class="math notranslate nohighlight">\
 A function is said to be <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable if <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-properties-derivatives">
-<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Properties of Derivatives)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Properties of Derivatives)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^1 ([a, b])\)</span>.
 Likewise, the <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a vector space, written as <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span>.</p>
@@ -1345,10 +1385,50 @@ and we can swap limit and differentiation:</p>
 <p>This can be expressed as: <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span> is closed under the sup norm.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. todo</p>
+<p>Proof. <strong>TODO</strong></p>
+</div>
+<div class="proof theorem admonition" id="thr-mean-value-differentiation">
+<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Mean Value Theorem of Differentiation)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a) Minimum, Maximum</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f: [a,b] \to \mathbb{R}\)</span> be differentiable at <span class="math notranslate nohighlight">\(x \in (a,b)\)</span>.
+If <span class="math notranslate nohighlight">\(f\)</span> has a local minimum or maximum in <span class="math notranslate nohighlight">\(x\)</span> then <span class="math notranslate nohighlight">\(f'(x) = 0\)</span>.</p>
+<p><strong>(b) Rolle’s Theorem</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f: [a,b] \to \mathbb{R}\)</span> be continous and differentiable on <span class="math notranslate nohighlight">\((a,b)\)</span>.
+If <span class="math notranslate nohighlight">\(f(a) = f(b)\)</span>  then there is a <span class="math notranslate nohighlight">\(\xi \in (a,b)\)</span> with <span class="math notranslate nohighlight">\(f'(\xi) = 0\)</span>.</p>
+<p><strong>(c) Mean Value Theorem of Differentiation</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f: [a,b] \to \mathbb{R}\)</span> be continous and differentiable on <span class="math notranslate nohighlight">\((a,b)\)</span>
+Then there is a <span class="math notranslate nohighlight">\(\xi \in (a,b)\)</span> with:</p>
+<div class="math notranslate nohighlight">
+\[f'(\xi) = \frac{f(b) - f(a)}{b - a}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. <strong>(a)</strong> Let <span class="math notranslate nohighlight">\(x\)</span> be a local maximum. Then, for smalll <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[f(x+h) - f(x) \le 0\]</div>
+<p>This gives for <span class="math notranslate nohighlight">\(h&gt;0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{h}(f(x+h) - f(x)) \le 0\]</div>
+<p>and for <span class="math notranslate nohighlight">\(h&lt;0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{h}(f(x+h) - f(x)) \ge 0\]</div>
+<p>which implies:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{h \to 0}\frac{1}{h}(f(x+h) - f(x)) = 0\]</div>
+<p><strong>(b)</strong></p>
+<p><span class="math notranslate nohighlight">\(f\)</span> is either constant or it assumes its minimum and its maximum at some <span class="math notranslate nohighlight">\(\xi \in (a, b)\)</span>.
+We know from (a) that <span class="math notranslate nohighlight">\(f'(\xi) = 0\)</span>.</p>
+<p><strong>(c)</strong> We apply (b) to the function <span class="math notranslate nohighlight">\(g\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[g(x) = f(x) - \frac{f(b)- f(a)}{b - a}(x - a)\]</div>
+<p>We have <span class="math notranslate nohighlight">\(g(a) = g(b) = f(a)\)</span>, and the derivative is:</p>
+<div class="math notranslate nohighlight">
+\[g'(x) = f'(x) - \frac{f(b)- f(a)}{b - a}\]</div>
+<p>Through (b) we know that there is a <span class="math notranslate nohighlight">\(\xi \in (a, b)\)</span> with <span class="math notranslate nohighlight">\(g'(x) = 0\)</span>.
+This is the assertion.</p>
 </div>
 <div class="proof theorem admonition" id="thr-differentiation-rules">
-<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Differentiation Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Differentiation Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a) Product Rule</strong></p>
@@ -1361,30 +1441,32 @@ and we can swap limit and differentiation:</p>
 \[(f \circ g)' = (f' \circ g) \, g'\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. todo</p>
+<p>Proof. <strong>TODO</strong></p>
 </div>
 </section>
 <section id="main-theorem-of-calculus">
 <h2>Main Theorem of Calculus<a class="headerlink" href="#main-theorem-of-calculus" title="Link to this heading">#</a></h2>
 <div class="proof theorem admonition" id="thr-main-theorem-calculus">
-<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Main Theorem of Calculus)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Main Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span> and <span class="math notranslate nohighlight">\(F\)</span> be the <strong>primitive</strong> of <span class="math notranslate nohighlight">\(f\)</span>, defined by</p>
+<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span> and <span class="math notranslate nohighlight">\(F\)</span> be a <strong>primitive</strong> of <span class="math notranslate nohighlight">\(f\)</span>, defined by</p>
 <div class="math notranslate nohighlight">
-\[F(x) = \int_a^x f(y) \, dy \]</div>
+\[\begin{split}F(x) &amp;= \int_a^x f(y) \, dy \\
+F &amp;= \int f \end{split}\]</div>
 <p>Then:</p>
-<p><strong>(a)</strong></p>
-<div class="math notranslate nohighlight">
-\[F(b) - F(a)  = \int_a^b f(y) \, dy \]</div>
-<p><strong>(b)</strong>
-If <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(x\)</span> and it holds that</p>
-<div class="math notranslate nohighlight">
-\[F'(x) = f(x)\]</div>
-<p><strong>(c)</strong>
-If <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>, and it holds that</p>
+<p><strong>(a)</strong> If <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>, and it holds that</p>
 <div class="math notranslate nohighlight">
 \[F' = f\]</div>
-<p><strong>(d)</strong>
+<p>or, in operator notation:</p>
+<div class="math notranslate nohighlight">
+\[\partial \int f = f\]</div>
+<p><strong>(b)</strong> If <span class="math notranslate nohighlight">\(f\)</span> is differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f'(y) \, dy = f(b) - f(a)\]</div>
+<p>or, in operator notation:</p>
+<div class="math notranslate nohighlight">
+\[\int \partial f = f\]</div>
+<p><strong>(c)</strong>
 The linear operators <span class="math notranslate nohighlight">\(\int\)</span> and <span class="math notranslate nohighlight">\(\partial\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\int : 
@@ -1409,10 +1491,27 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 &amp;\partial \int f = f\end{split}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. todo</p>
+<p>Proof. <strong>(a)</strong>
+The proof relies on the <a class="reference internal" href="#thr-mean-value-integration"><span class="xref myst">Mean Value Theorem of Integration </span></a>.
+We prove in fact a slightly stronger assertion:</p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is continuous on a neighbourhood of <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, then <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(x\)</span> be such a point. Then, for any <span class="math notranslate nohighlight">\(h &gt; 0\)</span> we have:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{h}(F(x+h) - F(x)) = \int_x^{x+h} f(y) \, dy = \frac{1}{h} h f(\xi) = f(\xi)\]</div>
+<p>for some <span class="math notranslate nohighlight">\(\xi \in [x,x+h]\)</span>, and <span class="math notranslate nohighlight">\(f(\xi) \to f(x)\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span> since <span class="math notranslate nohighlight">\(f\)</span> is continuous near <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p><strong>(b)</strong> The proof relies on the <a class="reference internal" href="#thr-mean-value-differentiation"><span class="xref myst">Mean Value Theorem of Differentiation </span></a>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermediate points such that:</p>
+<div class="math notranslate nohighlight">
+\[f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}\]</div>
+<p>and we get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+&amp;= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
+&amp;= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
+&amp;= f(b) - f(a)\end{split}\]</div>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
-<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Integration Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Integration Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a) Integration by Parts</strong></p>
@@ -1425,66 +1524,46 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 \[\int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. todo</p>
+<p>Proof. <strong>TODO</strong></p>
 </div>
 </section>
-<section id="taylor-theorem">
-<h2>Taylor Theorem<a class="headerlink" href="#taylor-theorem" title="Link to this heading">#</a></h2>
+<section id="taylor-s-theorem">
+<h2>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Link to this heading">#</a></h2>
 <p>Derivatives are about local changes: How does a function <span class="math notranslate nohighlight">\(f\)</span> behave in a neighbourhood of some point <span class="math notranslate nohighlight">\(x\)</span>? The Taylor series allows us to express
 <span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term. In
 what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open interval, and <span class="math notranslate nohighlight">\(x, u \in A\)</span>.</p>
-<div class="proof theorem admonition" id="thr-taylor-v1">
-<p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Taylor V1)</p>
+<div class="proof theorem admonition" id="thr-taylor">
+<p class="admonition-title"><span class="caption-number">Theorem 27 </span> (Taylor’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
+<p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
-\[
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-\]</div>
-</section>
-</div><div class="proof theorem admonition" id="thr-taylor-v2">
-<p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Taylor V2)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,u]\)</span> such that:</p>
+\[f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt\]</div>
+<p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,u]\)</span> such that:</p>
 <div class="math notranslate nohighlight">
-\[
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
-\]</div>
+\[f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}\]</div>
 <p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
-\]</div>
-</section>
-</div><div class="proof theorem admonition" id="thr-taylor-v3">
-<p class="admonition-title"><span class="caption-number">Theorem 27 </span> (Taylor V3)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in  C^n(A)\)</span>. Then:</p>
+\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\]</div>
+<p><strong>(c)</strong>  Let <span class="math notranslate nohighlight">\(f \in  C^n(A)\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
-\[
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)
-\]</div>
+\[f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)\]</div>
 <p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)
-\]</div>
+\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>V1:</strong></p>
-<p>Proof by induction, using the main theorem of integration and integration by parts:</p>
+<p>Proof. <strong>(a)</strong> Proof by induction, using the main theorem of integration and integration by parts:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-f(u) - f(x) &amp;= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt\\&amp; = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... }\\&amp; =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-\end{aligned}\end{align} \]</div>
-<p><strong>V2:</strong> Using the mean value theorem, we find a <span class="math notranslate nohighlight">\(\xi \in [x, u]\)</span> such that</p>
+\[\begin{split}f(u) - f(x) &amp;= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt \\
+&amp; = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... } \\
+&amp; =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt\end{split}\]</div>
+<p><strong>(b)</strong> Using the mean value theorem, we find a <span class="math notranslate nohighlight">\(\xi \in [x, u]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}\]</div>
-<p><strong>V3</strong></p>
+<p><strong>(c)</strong></p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-f(u) &amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n\\&amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
-\end{aligned}\end{align} \]</div>
+\[\begin{split}f(u) &amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n \\
+&amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)\end{split}\]</div>
 </div>
 </section>
 <section id="little-o-big-o">
@@ -1610,7 +1689,7 @@ f(u) &amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main-theorem-of-calculus">Main Theorem of Calculus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-theorem">Taylor Theorem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-s-theorem">Taylor’s Theorem</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#little-o-big-o">Little o, Big O</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>

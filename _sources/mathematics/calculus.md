@@ -4,18 +4,6 @@
 
 
 > under construction
-> 
-
-todo:
-
-Q countable
-
-R uncountable
-
-continuum hypothesis
-
-
-
 
 ## Paradoxes
 
@@ -184,9 +172,9 @@ The following is a formal definition of infinity, with no handwaving, no dots, a
 
 ````{prf:definition} Infinity
 :label: def-infinity
-**a)** A set $A$ is **infinite** if there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+**a)** A set $A$ is **infinite** iff there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
 
-**b)** A set $A$ is **countable** if there is an injection $\phi: A \to \mathbb{N}$. 
+**b)** A set $A$ is **countable** iff there is an injection $\phi: A \to \mathbb{N}$. 
 This injection is often called an *enumeration*, a way of putting all elements of $A$ in a sequential order.
 ````
 The set $\mathbb{N}$ is infinite because the successor function $S$ is exactly such an injection, with $B = \mathbb{N} - \{0\}$.
@@ -200,19 +188,21 @@ it's still infinite: you never run out of natural numbers.
 
 **b)** A finite crossproduct of countable sets is countable
 
-**c)** Let $A$ be any set. It is never possible to define an injection from the power set $\mathcal{P}(A)$ to $A$.
+**c)** If $A$ is countably infinite iff there is an injection $\phi: A \to \mathbb{N}$. 
+
+**d)** Let $A$ be any set. It is never possible to define an injection from the power set $\mathcal{P}(A)$ to $A$.
 Therefore, the power set of a countable set is always uncountable.
 ````
 ````{prf:proof}
-We need two facts not proven here:
+The shortest and most convincing way to prove the assertion relies on two facts from elementary arithmetic:
  
-* There are infinitely many primes $p_1, p_2, \ldots$.
+1. There are infinitely many primes $p_1, p_2, \ldots$.
 
-* Any natural number $a > 1$ can be uniquely decomposed 
-  into a product of primes: $a = \prod_{i=1}^n p_i^{\alpha_i}$ where $p_i$ 
-  are prime numbers and $\alpha_i$ are integers (that's the fundamental theorem of arithmetic).
+2. Any natural number $a > 1$ can be uniquely decomposed
+  into a product of primes $a = \prod_{i=1}^n p_i^{\alpha_i}$ where $p_i$
+  are prime numbers and $\alpha_i$ are naturals (see {prf:ref}`thr-fundamental`)
 
-Let $\{A_i\}$ be a family of sets, countable for (a), finite for (b), and let
+Let $\{A_i\}$ be a family of sets, countable for assertion (a), finite for (b), and let
 
 ```{math}
 \phi_i : A_i \to \mathbb{N}
@@ -249,22 +239,36 @@ is an injection: Each $(a_1, a_2, \ldots, a_n)$ is mapped to the unique natural 
 is $(\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))$.
 
 **c)** 
+**TODO**
+
+**d)** 
 Assume there is an injection
 ```{math}
 \phi: \mathcal{P}(A) \to A
 ```
-The set 
+We investigate the set
 
 ```{math}
-K = \{\phi(B) \mid B \subseteq A, \phi(B) \notin B\}
+K = \{\phi(U) \mid  U \subseteq A, U \ne \emptyset, \phi(U) \notin U\}
 ```
-leads to a contradiction:
+If $K$ were empty, we had
 
 ```{math}
+&\forall U \subseteq A, U \ne \emptyset: \phi(U) \in U \\
+\Rightarrow &\forall a \in A: \phi(\{a\}) \in \{a\} \\
+\Rightarrow &\forall a \in A: \phi(\{a\}) = a
+```
+But in this case, for any subset $U$ of $A$ with two or more elements, there would be no room left for $\phi(U)$, 
+since $\phi$ is injective. Therefore, $K$ is not empty, and we can ask if $\phi(K)$ belongs to $K$:
+
+```{math}
+:label: equ-countable-uncountable-1
 &\phi(K) \in K \Rightarrow \phi(K) \notin K \\
 &\phi(K) \notin K \Rightarrow \phi(K) \in K
 ```
-This is the formal variant of the barber who shaves all men who do not shave themselves.
+This contradiction proves that there can be no injection from a power set of a set to the set itself.
+It is the formal variant of the barber who shaves all men who do not shave themselves.
+Note that, with $K$ empty, contradiction [](#equ-countable-uncountable-1) would be meaningless: ex falso quodlibet.
 ````
 
 ### Integers
@@ -296,7 +300,7 @@ Continuing in this way, the definition of addition, subtraction and multiplicati
 With these operations in place, the set $\mathbb{Z}$ is a ring.
 As any ring containing $\mathbb{N}$ must also contain the negative numbers $-\!\mathbb{N}$, 
 the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**. 
-$\mathbb{Z}$ is countable, the enumeration being ${0, 1, -1, 2, -2, \ldots}$.
+$\mathbb{Z}$ is countable, since it is the union of two countable sets.
 
 
 ### Rationals
@@ -333,7 +337,7 @@ Continuing in this way, the definition of addition, subtraction, multiplication,
 With these operations in place, the set $\mathbb{Q}$ is a field.
 As any field containing $\mathbb{Z}$ must also contain the rationals, 
 the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**. 
-$\mathbb{Q}$ is countable, the enumeration being ${0, \frac{1}/{2}, \frac{1}/{3}, \frac{2}/{3}, \ldots}$.
+$\mathbb{Q}$ is countable, since it is the cross-product of two countable sets.
 
 
 ### Reals
@@ -818,57 +822,68 @@ and $\{y_{n_k}\}$ necessarily converges to the same $x$, So, $f$ is not continuo
 ````{prf:theorem} Intermediate Value Theorem
 :label: thr-intermediate-value
 
-Let $f: [a, b] \to \mathbb{R}$ be a continuous function, and $\mu \in \mathbb{R}$ such that  
+**(a)** Let $f: [a, b] \to \mathbb{R}$ be a continuous function with $f(a) < 0$ and $f(b) > 0$.
+Then there exists a $\xi \in [a, b]$ such that $f(\xi) = 0$.
 
+**(b)** Let $f: [a, b] \to \mathbb{R}$ be a continuous function and $\mu$ such that
 ```{math}
-\min  \{f(x) \mid x \in [a,b]\} \le \mu  \le \max  \{f(x) \mid x \in [a,b]\}
+\min\{f(x) \mid x \in [a, b]\} \le \mu \le \max\{f(x) \mid x \in [a, b]\}
 ```
-
 Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 ````
-
 ````{prf:proof} 
-
-**TODO**
-
-The proof proceeds by halving intervals.
-We build two sequences $\{a_n\},\{b_n\}$ such that $\{a_n\} is
+**(a)** We build two bounded monotonous sequences $\{a_n\},\{b_n\}$ and 
+apply again [Bolzano-Weierstrass](#thr-bolzano-weierstrass):
 
 ```{math}
-f(a_n) \le \mu
-f(b_n) \ge \mu
-```
- 
- 
- sequence $\{x_n\}$ that converges to some $x \in [a, b]$ such that $f(x) = \mu$.
-Let $x_0 = a, x_1 = b, x_2 = (x_0 + x_1)/2$. The general rule for $x_n$ is:
-
-```{math}
-x_n = 
+&a_0 = a \\
+&b_0 = b \\
+\\
+&a_{n+1} = 
 \left\{
     \begin{array}{lr}
-        (x_{n-2} + x_{n-1})/2 & \text{ if } f(x_{n-1}) < \mu \\
-        x_{n-1} & \text{ if } f(x_{n-1}) = \mu \\
-        (x_{n-3} + x_{n-1})/2 & \text{ if } f(x_{n-1}) > \mu
+        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) < 0 \\
+        a_n & \text{ if } f((a_n + b_n)/2) \ge 0
+    \end{array}
+\right .  \\
+\\
+
+&b_{n+1} = 
+\left\{
+    \begin{array}{lr}
+        b_n & \text{ if } f((a_n + b_n)/2) < 0 \\
+        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) \ge 0
     \end{array}
 \right .
 ```
 
-We see that:
+We observe that, for all $n$:
 
 ```{math}
-\left | x_n - x_{n-1} \rvert \le \lvert x_{n-1} - x_{n-2} \right | / 2 
+:label: equ-intermediate-value-1
+f(a_n) < 0 \le f(b_n)
 ```
-
-so, by induction:
+and that the sequence $\{a_n\}$ is non-descending, while $\{b_n\}$ is non-increasing.
+Being bounded, both sequences converge, and their limits must be identical because:
 
 ```{math}
-\lvert x_n - x_{n-1} \rvert \le (b - a) / 2^{n-1} 
+b_{n+1} - a_{n+1}  &= \frac{1}{2} b_{n} - a_{n} \\
+\Rightarrow b_{n} - a_{n}  &= \frac{b-a}{2^n}
 ```
-
-The sequence $\{x_n\}$ is a Cauchy sequence. Hence it converges to some $x \in [a, b]$, and, being continuous,
-$\{f(x_n)\}$ converges to $f(x).
-
+This limit is our $\xi$: 
+```{math}
+\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \xi
+```
+Since $f$ is continous in $\xi$, we get:
+```{math}
+\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = f(\xi)
+```
+But $f(\xi)$ must be $0$ because the inequalities [xxx](#equ-intermediate-value-1) imply:
+```{math}
+\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = 0
+```
+**(b)** follows from (a): Choose $a_0, b_0 \in [a, b]$ such that $f(a_0) = \min\{f(x) \mid x \in [a, b]\}$
+and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ and replace $f$ with $f - \mu$.
 ````
 
 ## Riemann-Integrable Functions
@@ -893,12 +908,12 @@ The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity $\mu(X)$ of its
 and call
 
 ```{math}
-\int_a^b f(x) \, dx
+A = \int_a^b f(x) \, dx
 ```
 the **Riemann integral** of $f$ over $[a, b]$ iff 
 
 ```{math}
-\forall \epsilon > 0$: \exists \delta > 0: \forall R(f, X, \xi) \text{ with } \mu(R) < \delta : \left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | < \epsilon
+\forall \epsilon > 0: \exists \delta > 0: \forall X,\xi \text{ with } \mu(X) < \delta : \left | A - R(f, X, \xi) \right | < \epsilon
 ```
 
 In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write
@@ -958,7 +973,7 @@ R-integrable functions are bounded on closed intervals
 Monotony leads us to an important theorem.
 
 ````{prf:theorem} Mean Value Theorem of Integration
-:label: thr-mean-value
+:label: thr-mean-value-integration
 
 Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
 
@@ -994,48 +1009,21 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 ```
 ````
 
-````{prf:theorem} Properties of Riemann Integrals
-:label: thr-riemann-integrals
+````{prf:theorem} Triangular Inequality for Integrals
+:label: thr-triangular-inequality
 
-**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
 
-**(b)** The mapping
-
-```{math}
-\int_a^b :f \mapsto \int_a^b f(y) \, dy
-```
-is called the **integration functional**. It is a linear mapping from $\mathcal{R}([a, b])$ to $\mathbb{R}$.
-
-**(c)** Let $f \in \mathcal{R}([a, b])$. Then the following inequality holds:
+Let $f \in \mathcal{R}([a, b])$. Then the following inequality holds:
 
 ```{math}
 \left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
 ```
-
-**(d)** The primitive of an R-integrable function is continuous. The mapping
-
-```{math}
-\int :f \mapsto \int_a^x f(y) \, dy
-```
-is called the **integration operator**. It is a linear mapping from $\mathcal{R}([a, b])$ to $C^0([a, b])$.
-
-**(e)** The **uniform limit** of R-integrable functions is R-integrable,
-or, equivalently: $\mathcal{R}([a, b])$ is closed under the sup norm.
-We can swap limit and integral:
-
-```{math}
-\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
-```
 ````
 
 ````{prf:proof}
-
-The assertions (a) and (b) are obvious. 
-The proofs of (c) and (e) use the triangular inequality, and (d) follows from the fact that R-integrable functions are bounded.
-
-**(c)** 
-The idea is to approximate the integrals over $f$ and $|f|$ by a single partition. 
 We apply the triangular inequality to the Riemann sums and, keeping track of the $\epsilon$, we transfer the result to the integrals.
+To this end, we approximate the integrals over $f$ and $|f|$ by a single partition. 
+
 Let $X$ be a partition of $[a, b]$, $\{\xi_k\}$ a set of intermnediate points, and $\epsilon > 0$ such that: 
 
 ```{math}
@@ -1054,18 +1042,66 @@ This gives us:
 & \le \int_a^b \left | f(y) \right | \, dy  + 2 \epsilon 
 ```
 This is the assertion.
+````
 
-**(d)**
+
+````{prf:theorem} Properties of Riemann Integrals
+:label: thr-riemann-integrals
+
+**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
+
+**(b)** The mapping
+
+```{math}
+\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to \mathbb{R} \\
+        f \mapsto \int_a^b f(y) \, dy
+    \end{array}
+\right .
+```
+is a linear mapping, called the **integration functional**.
+
+**(c)** The primitive of an R-integrable function is continuous. The mapping
+
+```{math}
+
+\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to C^0([a, b]) \\
+        f \mapsto \int_a^x f(y) \, dy
+    \end{array}
+\right .
+```
+is a linear operator, called the **integration operator**.
+
+**(d)** The **uniform limit** of R-integrable functions is R-integrable,
+or, equivalently: $\mathcal{R}([a, b])$ is closed under the sup norm.
+We can swap limit and integral:
+
+```{math}
+\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
+```
+````
+
+````{prf:proof}
+
+The assertions (a) and (b) are obvious. 
+The proof of (c) uses the [Triangular Inequality for Integrals](#thr-triangular-inequality), and
+the proof of (d) the standard one.
+
+**(c)**
 Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
 Then, $f$ is bounded by some $M \in \mathbb{R}$, and we have, for $x \in [a, b]$ and arbitrarily small $h$:
 
 ```{math}
 \left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M
 ```
-which proves the continuity of $F$ at $x$
+which proves the continuity of $F$ at $x$.
 
-
-**(e)**
+**(d)**
 Let $\{f_n\}$ be a sequence of functions on $[a, b]$ that converges uniformly to $f$. Let $\epsilon >0$ and $n_0$ be such that, for $n \ge n_0$:
 
 ```{math}
@@ -1146,7 +1182,6 @@ Then $f$ is R-integrable
 ````
 
 ````{prf:proof} 
-The proof of (e) can be found in **citation needed**.
 
 **(a)**
 Let $\phi$ be a step function on $[a, b]$ with $\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})$. Then, obviously:
@@ -1157,7 +1192,7 @@ Let $\phi$ be a step function on $[a, b]$ with $\phi(x) = y_k \text{ for } x \in
 
 **(b)**
 
-todo
+**TODO**
 
 **(c)**
 Let $f$ be monotonously non-decreasing on $[a, b]$. Then $f$ can squeezed between two step functions, $\phi, \psi$,
@@ -1173,9 +1208,7 @@ Then, clearly:
 ```{math}
 \phi \le f \le \psi
 ```
-
 and
-
 ```{math}
 & \int_a^b (\psi(x) - \phi(x)) \, dx \\
 & = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
@@ -1185,13 +1218,14 @@ and
 which can be made arbitrarily small. The assertion follows from (b).
 
 **(d)**
-Let $f$ be continuous on $[a, b]$. Then $f$ is uniformly continuous on $[a, b]$ by {prf:ref}`thr-continuity-on-compact-sets` 
-and is the uniform limit of step functions.
+
+**TODO**
+
+
+**(e)** The proof can be found in **citation needed**.
 ````
 
-
 ## Differentiable Functions
-
 
 ````{prf:definition} Derivatives
 :label: def-derivatives
@@ -1204,7 +1238,6 @@ We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, 
 \lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)
 ```
 exists. $f'(x)$ is called the derivative of $f$ at $x$. We note that
-
 
 ```{math}
 f(x+h) = f(x) + f'(x) \, h + o(h)
@@ -1224,7 +1257,6 @@ and its derivative is continuous on $[a, b]$.
 **(d)** Higher order derivatives are analogously defined and denoted by $f', f'', f^{(3)}, \ldots,   f^{(n)}$.
 A function is said to be $n$ times continuously differentiable if $f^{(n)}$ is continuous on $[a, b]$. 
 ```` 
-
 
 ````{prf:theorem} Properties of Derivatives
 :label: thr-properties-derivatives
@@ -1267,8 +1299,72 @@ This can be expressed as: $C^n ([a, b])$ is closed under the sup norm.
 
 ````{prf:proof} 
 
-todo
+**TODO**
 
+````
+
+````{prf:theorem} Mean Value Theorem of Differentiation
+:label: thr-mean-value-differentiation
+
+
+**(a) Minimum, Maximum**
+
+Let $f: [a,b] \to \mathbb{R}$ be differentiable at $x \in (a,b)$.
+If $f$ has a local minimum or maximum in $x$ then $f'(x) = 0$.
+
+**(b) Rolle's Theorem**
+
+Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$.
+If $f(a) = f(b)$  then there is a $\xi \in (a,b)$ with $f'(\xi) = 0$.
+
+**(c) Mean Value Theorem of Differentiation**
+
+Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$
+Then there is a $\xi \in (a,b)$ with:
+
+```{math}
+f'(\xi) = \frac{f(b) - f(a)}{b - a}
+```
+````
+
+````{prf:proof} 
+
+**(a)** Let $x$ be a local maximum. Then, for smalll $h$:
+
+```{math}
+f(x+h) - f(x) \le 0
+```
+This gives for $h>0$
+
+```{math}
+\frac{1}{h}(f(x+h) - f(x)) \le 0
+```
+and for $h<0$
+```{math}
+\frac{1}{h}(f(x+h) - f(x)) \ge 0
+```
+which implies:
+
+```{math}
+\lim_{h \to 0}\frac{1}{h}(f(x+h) - f(x)) = 0
+```
+**(b)**
+
+$f$ is either constant or it assumes its minimum and its maximum at some $\xi \in (a, b)$.
+We know from (a) that $f'(\xi) = 0$.
+
+**(c)** We apply (b) to the function $g$ defined by
+
+```{math}
+g(x) = f(x) - \frac{f(b)- f(a)}{b - a}(x - a)
+```
+We have $g(a) = g(b) = f(a)$, and the derivative is:
+
+```{math}
+g'(x) = f'(x) - \frac{f(b)- f(a)}{b - a}
+```
+Through (b) we know that there is a $\xi \in (a, b)$ with $g'(x) = 0$. 
+This is the assertion.
 ````
 
 
@@ -1297,7 +1393,7 @@ Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then:
 
 ````{prf:proof} 
 
-todo
+**TODO**
 
 ````
 
@@ -1306,34 +1402,37 @@ todo
 ````{prf:theorem} Main Theorem of Calculus
 :label: thr-main-theorem-calculus
 
-Let $f \in \mathcal{R}([a,b])$ and $F$ be the **primitive** of $f$, defined by
+Let $f \in \mathcal{R}([a,b])$ and $F$ be a **primitive** of $f$, defined by
 
 ```{math}
-F(x) = \int_a^x f(y) \, dy 
+F(x) &= \int_a^x f(y) \, dy \\
+F &= \int f 
 ```
-
 Then:
 
-**(a)**
-```{math}
-F(b) - F(a)  = \int_a^b f(y) \, dy 
-```
-
-**(b)**
-If $f$ is continuous at $x \in [a, b]$, then $F$ is differentiable at $x$ and it holds that
-
-```{math}
-F'(x) = f(x)
-```
-
-**(c)**
-If $f$ is continuous on $[a, b]$, then $F$ is differentiable on $[a, b]$, and it holds that
+**(a)** If $f$ is continuous on $[a, b]$, then $F$ is differentiable on $[a, b]$, and it holds that
 
 ```{math}
 F' = f
 ```
+or, in operator notation:
 
-**(d)**
+```{math}
+\partial \int f = f
+```
+
+**(b)** If $f$ is differentiable on $[a, b]$, then
+
+```{math}
+\int_a^b f'(y) \, dy = f(b) - f(a)
+```
+or, in operator notation:
+
+```{math}
+\int \partial f = f
+```
+
+**(c)**
 The linear operators $\int$ and $\partial$
 
 ```{math}
@@ -1357,17 +1456,44 @@ The linear operators $\int$ and $\partial$
 are inverse to each other:
 
 ```{math}
-
 &\int \partial F = F \\
 &\partial \int f = f
+```
 ````
 
 ````{prf:proof}
 
-todo
+**(a)** 
+The proof relies on the [Mean Value Theorem of Integration ](#thr-mean-value-integration).
+We prove in fact a slightly stronger assertion:
+
+If $f$ is continuous on a neighbourhood of $x \in [a, b]$, then $F'(x) = f(x)$.
+
+Let $x$ be such a point. Then, for any $h > 0$ we have:
+```{math}
+
+\frac{1}{h}(F(x+h) - F(x)) = \int_x^{x+h} f(y) \, dy = \frac{1}{h} h f(\xi) = f(\xi)
+```
+for some $\xi \in [x,x+h]$, and $f(\xi) \to f(x)$ as $h \to 0$ since $f$ is continuous near $x$.
+
+**(b)** The proof relies on the [Mean Value Theorem of Differentiation ](#thr-mean-value-differentiation).
+
+Let $\{x_k\}$be a partition of $[a, b]$, and $\{\xi_k\}$ a set of intermediate points such that:
+
+```{math}
+f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}
+```
+and we get:
+
+```{math}
+\int_a^b f'(y) \, dy &\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+&= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
+&= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
+&= f(b) - f(a)
+```
+
 
 ````
-
 
 ````{prf:theorem} Integration Rules
 :label: thr-integration-rules
@@ -1394,89 +1520,70 @@ Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b))$. Then
 
 ````{prf:proof} 
 
-todo
-
+**TODO**
 ````
 
-## Taylor Theorem
+## Taylor's Theorem
 
 Derivatives are about local changes: How does a function $f$ behave in a neighbourhood of some point $x$? The Taylor series allows us to express
 $f(x+h)$ in terms of the higher derivatives of $f$ with arbitrary precision. It comes in three varieties that differ in the remainder term. In
 what follows, $A$ is an open interval, and $x, u \in A$.
 
-````{prf:theorem} Taylor V1
-:label: thr-taylor-v1
+````{prf:theorem} Taylor's Theorem
+:label: thr-taylor
 
-Let $f \in  C^{n+1}(A)$. Then:
+**(a)** Let $f \in  C^{n+1}(A)$. Then:
 
-$$
+```{math}
 f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-$$
-````
+```
 
+**(b)** Let $f \in  C^{n+1}(A)$. Then there exists a $\xi \in [x,u]$ such that:
 
-````{prf:theorem} Taylor V2
-:label: thr-taylor-v2
-Let $f \in  C^{n+1}(A)$. Then there exists a $\xi \in [x,u]$ such that:
-
-$$
+```{math}
 f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
-$$
+```
 
 which is the same as $(h = u-x)$:
 
-$$
+```{math}
 f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
-$$
-````
+```
 
-````{prf:theorem} Taylor V3
-:label: thr-taylor-v3
 
-Let $f \in  C^n(A)$. Then:
+**(c)**  Let $f \in  C^n(A)$. Then:
 
-$$
+```{math}
 f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)
-$$
+```
 
 which is the same as $(h = u-x)$:
 
-$$
+```{math}
 f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)
-$$
-
+```
 ````
 
 ````{prf:proof}
 
-**V1:**
+**(a)** Proof by induction, using the main theorem of integration and integration by parts:
 
-Proof by induction, using the main theorem of integration and integration by parts:
-
-$$
-f(u) - f(x) &= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt
-
-& = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... }
-
+```{math}
+f(u) - f(x) &= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt \\
+& = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... } \\
 & =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
-$$
+```
 
-**V2:** Using the mean value theorem, we find a $\xi \in [x, u]$ such that
- 
-$$
-
+**(b)** Using the mean value theorem, we find a $\xi \in [x, u]$ such that
+```{math}
 \frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
+```
 
-$$
-
-**V3**
-
-$$
-f(u) &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n
-
+**(c)**
+```{math}
+f(u) &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n \\
 &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
-$$
-
+```
 ````
 
 
