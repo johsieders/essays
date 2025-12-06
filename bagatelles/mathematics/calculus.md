@@ -908,12 +908,12 @@ The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity $\mu(X)$ of its
 and call
 
 ```{math}
-\int_a^b f(x) \, dx
+A = \int_a^b f(x) \, dx
 ```
 the **Riemann integral** of $f$ over $[a, b]$ iff 
 
 ```{math}
-\forall \epsilon > 0$: \exists \delta > 0: \forall R(f, X, \xi) \text{ with } \mu(R) < \delta : \left | \int_a^b f(x) \, dx - R(f, X, \xi) \right | < \epsilon
+\forall \epsilon > 0: \exists \delta > 0: \forall X,\xi \text{ with } \mu(X) < \delta : \left | A - R(f, X, \xi) \right | < \epsilon
 ```
 
 In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write
@@ -973,7 +973,7 @@ R-integrable functions are bounded on closed intervals
 Monotony leads us to an important theorem.
 
 ````{prf:theorem} Mean Value Theorem of Integration
-:label: thr-mean-value
+:label: thr-mean-value-integration
 
 Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
 
@@ -1009,48 +1009,21 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 ```
 ````
 
-````{prf:theorem} Properties of Riemann Integrals
-:label: thr-riemann-integrals
+````{prf:theorem} Triangular Inequality for Integrals
+:label: thr-triangular-inequality
 
-**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
 
-**(b)** The mapping
-
-```{math}
-\int_a^b :f \mapsto \int_a^b f(y) \, dy
-```
-is called the **integration functional**. It is a linear mapping from $\mathcal{R}([a, b])$ to $\mathbb{R}$.
-
-**(c)** Let $f \in \mathcal{R}([a, b])$. Then the following inequality holds:
+Let $f \in \mathcal{R}([a, b])$. Then the following inequality holds:
 
 ```{math}
 \left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
 ```
-
-**(d)** The primitive of an R-integrable function is continuous. The mapping
-
-```{math}
-\int :f \mapsto \int_a^x f(y) \, dy
-```
-is called the **integration operator**. It is a linear mapping from $\mathcal{R}([a, b])$ to $C^0([a, b])$.
-
-**(e)** The **uniform limit** of R-integrable functions is R-integrable,
-or, equivalently: $\mathcal{R}([a, b])$ is closed under the sup norm.
-We can swap limit and integral:
-
-```{math}
-\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
-```
 ````
 
 ````{prf:proof}
-
-The assertions (a) and (b) are obvious. 
-The proofs of (c) and (e) use the triangular inequality, and (d) follows from the fact that R-integrable functions are bounded.
-
-**(c)** 
-The idea is to approximate the integrals over $f$ and $|f|$ by a single partition. 
 We apply the triangular inequality to the Riemann sums and, keeping track of the $\epsilon$, we transfer the result to the integrals.
+To this end, we approximate the integrals over $f$ and $|f|$ by a single partition. 
+
 Let $X$ be a partition of $[a, b]$, $\{\xi_k\}$ a set of intermnediate points, and $\epsilon > 0$ such that: 
 
 ```{math}
@@ -1069,18 +1042,66 @@ This gives us:
 & \le \int_a^b \left | f(y) \right | \, dy  + 2 \epsilon 
 ```
 This is the assertion.
+````
 
-**(d)**
+
+````{prf:theorem} Properties of Riemann Integrals
+:label: thr-riemann-integrals
+
+**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
+
+**(b)** The mapping
+
+```{math}
+\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to \mathbb{R} \\
+        f \mapsto \int_a^b f(y) \, dy
+    \end{array}
+\right .
+```
+is a linear mapping, called the **integration functional**.
+
+**(c)** The primitive of an R-integrable function is continuous. The mapping
+
+```{math}
+
+\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to C^0([a, b]) \\
+        f \mapsto \int_a^x f(y) \, dy
+    \end{array}
+\right .
+```
+is a linear operator, called the **integration operator**.
+
+**(d)** The **uniform limit** of R-integrable functions is R-integrable,
+or, equivalently: $\mathcal{R}([a, b])$ is closed under the sup norm.
+We can swap limit and integral:
+
+```{math}
+\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
+```
+````
+
+````{prf:proof}
+
+The assertions (a) and (b) are obvious. 
+The proof of (c) uses the [Triangular Inequality for Integrals](#thr-triangular-inequality), and
+the proof of (d) the standard one.
+
+**(c)**
 Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
 Then, $f$ is bounded by some $M \in \mathbb{R}$, and we have, for $x \in [a, b]$ and arbitrarily small $h$:
 
 ```{math}
 \left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M
 ```
-which proves the continuity of $F$ at $x$
+which proves the continuity of $F$ at $x$.
 
-
-**(e)**
+**(d)**
 Let $\{f_n\}$ be a sequence of functions on $[a, b]$ that converges uniformly to $f$. Let $\epsilon >0$ and $n_0$ be such that, for $n \ge n_0$:
 
 ```{math}
@@ -1197,8 +1218,9 @@ and
 which can be made arbitrarily small. The assertion follows from (b).
 
 **(d)**
-Let $f$ be continuous on $[a, b]$. Then $f$ is uniformly continuous on $[a, b]$ by {prf:ref}`thr-continuity-on-compact-sets` 
-and is the uniform limit of step functions.
+
+**TODO**
+
 
 **(e)** The proof can be found in **citation needed**.
 ````
@@ -1281,6 +1303,70 @@ This can be expressed as: $C^n ([a, b])$ is closed under the sup norm.
 
 ````
 
+````{prf:theorem} Mean Value Theorem of Differentiation
+:label: thr-mean-value-differentiation
+
+
+**(a) Minimum, Maximum**
+
+Let $f: [a,b] \to \mathbb{R}$ be differentiable at $x \in (a,b)$.
+If $f$ has a local minimum or maximum in $x$ then $f'(x) = 0$.
+
+**(b) Rolle's Theorem**
+
+Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$.
+If $f(a) = f(b)$  then there is a $\xi \in (a,b)$ with $f'(\xi) = 0$.
+
+**(c) Mean Value Theorem of Differentiation**
+
+Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$
+Then there is a $\xi \in (a,b)$ with:
+
+```{math}
+f'(\xi) = \frac{f(b) - f(a)}{b - a}
+```
+````
+
+````{prf:proof} 
+
+**(a)** Let $x$ be a local maximum. Then, for smalll $h$:
+
+```{math}
+f(x+h) - f(x) \le 0
+```
+This gives for $h>0$
+
+```{math}
+\frac{1}{h}(f(x+h) - f(x)) \le 0
+```
+and for $h<0$
+```{math}
+\frac{1}{h}(f(x+h) - f(x)) \ge 0
+```
+which implies:
+
+```{math}
+\lim_{h \to 0}\frac{1}{h}(f(x+h) - f(x)) = 0
+```
+**(b)**
+
+$f$ is either constant or it assumes its minimum and its maximum at some $\xi \in (a, b)$.
+We know from (a) that $f'(\xi) = 0$.
+
+**(c)** We apply (b) to the function $g$ defined by
+
+```{math}
+g(x) = f(x) - \frac{f(b)- f(a)}{b - a}(x - a)
+```
+We have $g(a) = g(b) = f(a)$, and the derivative is:
+
+```{math}
+g'(x) = f'(x) - \frac{f(b)- f(a)}{b - a}
+```
+Through (b) we know that there is a $\xi \in (a, b)$ with $g'(x) = 0$. 
+This is the assertion.
+````
+
 
 ````{prf:theorem} Differentiation Rules
 :label: thr-differentiation-rules
@@ -1316,34 +1402,37 @@ Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then:
 ````{prf:theorem} Main Theorem of Calculus
 :label: thr-main-theorem-calculus
 
-Let $f \in \mathcal{R}([a,b])$ and $F$ be the **primitive** of $f$, defined by
+Let $f \in \mathcal{R}([a,b])$ and $F$ be a **primitive** of $f$, defined by
 
 ```{math}
-F(x) = \int_a^x f(y) \, dy 
+F(x) &= \int_a^x f(y) \, dy \\
+F &= \int f 
 ```
-
 Then:
 
-**(a)**
-```{math}
-F(b) - F(a)  = \int_a^b f(y) \, dy 
-```
-
-**(b)**
-If $f$ is continuous at $x \in [a, b]$, then $F$ is differentiable at $x$ and it holds that
-
-```{math}
-F'(x) = f(x)
-```
-
-**(c)**
-If $f$ is continuous on $[a, b]$, then $F$ is differentiable on $[a, b]$, and it holds that
+**(a)** If $f$ is continuous on $[a, b]$, then $F$ is differentiable on $[a, b]$, and it holds that
 
 ```{math}
 F' = f
 ```
+or, in operator notation:
 
-**(d)**
+```{math}
+\partial \int f = f
+```
+
+**(b)** If $f$ is differentiable on $[a, b]$, then
+
+```{math}
+\int_a^b f'(y) \, dy = f(b) - f(a)
+```
+or, in operator notation:
+
+```{math}
+\int \partial f = f
+```
+
+**(c)**
 The linear operators $\int$ and $\partial$
 
 ```{math}
@@ -1367,14 +1456,42 @@ The linear operators $\int$ and $\partial$
 are inverse to each other:
 
 ```{math}
-
 &\int \partial F = F \\
 &\partial \int f = f
+```
 ````
 
 ````{prf:proof}
 
-**TODO**
+**(a)** 
+The proof relies on the [Mean Value Theorem of Integration ](#thr-mean-value-integration).
+We prove in fact a slightly stronger assertion:
+
+If $f$ is continuous on a neighbourhood of $x \in [a, b]$, then $F'(x) = f(x)$.
+
+Let $x$ be such a point. Then, for any $h > 0$ we have:
+```{math}
+
+\frac{1}{h}(F(x+h) - F(x)) = \int_x^{x+h} f(y) \, dy = \frac{1}{h} h f(\xi) = f(\xi)
+```
+for some $\xi \in [x,x+h]$, and $f(\xi) \to f(x)$ as $h \to 0$ since $f$ is continuous near $x$.
+
+**(b)** The proof relies on the [Mean Value Theorem of Differentiation ](#thr-mean-value-differentiation).
+
+Let $\{x_k\}$be a partition of $[a, b]$, and $\{\xi_k\}$ a set of intermediate points such that:
+
+```{math}
+f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}
+```
+and we get:
+
+```{math}
+\int_a^b f'(y) \, dy &\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+&= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
+&= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
+&= f(b) - f(a)
+```
+
 
 ````
 
