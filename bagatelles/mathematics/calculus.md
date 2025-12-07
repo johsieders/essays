@@ -557,7 +557,7 @@ x_{n_{k+1}} &= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n
 For each $n \in \mathbb{N}$, $\{x_{n_k}\}_k$ is a Cauchy sequence in $\mathbb{Q}$ that converges in $\mathbb{R}$ to $\sqrt{2 + \frac{1}{n}}$ in $\mathbb{R}$.
 
 
-````{prf:theorem} Completeness of $\mathbb{R}$
+````{prf:theorem} $\mathbb{R} is Complete$
 :label: thr-R-completeness
 
 Every Cauchy sequence $\{r_n\}$ in $\mathbb{R}$ converges.
@@ -615,13 +615,45 @@ Setting $m = k$ we get (compare {prf:ref}`def-convergence-reals`):
 
 which is what we want.
 ````
-This proof is extremely formal and straightforward, despite how scary the inequalities might look
-at first. The proof consists of two plugins: We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence, 
-and in statement {eq}`thr-R-completeness-2`, we replace the general $m$ with a specific choice — this is what "forall" is all about.
+
+This proof, however dry or abstract it might appear, is straightforward. 
+Proofs are all about *applying* known results to obtain new ones. This is done twice:
+We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence, 
+and in statement {eq}`thr-R-completeness-2`, 
+we replace the general $m$ with a specific choice — this is how "forall" is meant to be employed.
+
+
+````{prf:theorem} $\mathbb{R}$ is uncountable
+
+:label: thr-R-uncountable
+
+**(a)**
+
+Let $B \ge 2$ be a natural number, the *basis*, $p/q$ a rational number and $n = \min\{ k \in \mathbb{N} \mid  p < qB^k \}$
+
+Every rational number $p/q$ can be approximated by a series
+```{math}
+\frac{p}{q} = \sum_{k=0}^infty a_{k} B^{n-k}
+```
+
+where $a_k \in \{0,1, \ldots, B-1\}$. For $B = 10$, these are the decimal fractions.
+
+**(b)**
+
+$\mathbb{R}$ is uncountable.
+````
+
+
+````{prf:proof} 
+
+
+````
 
 As any complete field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
 it is indeed the **smallest complete field containing $\mathbb{Q}$**. 
 From now on, $\mathbb{R}$ will be our home. Whatever happens, happens in $\mathbb{R}$.
+
+
 
 
 ## Compact Sets
@@ -667,8 +699,6 @@ b) todo
 ````
 
 ````{prf:proof}
-
- 
 **a)** Let $\{x_n\}$ be a non-decreasing bounded sequence with $s = \sup \{x_n |\mid n \in \mathbb{N} \}$.
 Then, by the definition of the supremum:
 
@@ -953,10 +983,15 @@ We state three obvious but important properties of Riemann integrals:
 ```{math}
 f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
 ```
-
 holds for any two functions $f,g \in \mathcal{R}([a,b])$.
 
-**(b) Additivity**
+**(b) Triangular Inequality**
+
+```{math}
+\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
+```
+
+**(c) Additivity**
 
 ```{math}
 \int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
@@ -964,7 +999,7 @@ holds for any two functions $f,g \in \mathcal{R}([a,b])$.
 
 holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
 
-**(c) Boundedness**
+**(e) Boundedness**
 
 R-integrable functions are bounded on closed intervals
 (because Riemann sums are).
@@ -1008,42 +1043,6 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 & \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
 ```
 ````
-
-````{prf:theorem} Triangular Inequality for Integrals
-:label: thr-triangular-inequality
-
-
-Let $f \in \mathcal{R}([a, b])$. Then the following inequality holds:
-
-```{math}
-\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
-```
-````
-
-````{prf:proof}
-We apply the triangular inequality to the Riemann sums and, keeping track of the $\epsilon$, we transfer the result to the integrals.
-To this end, we approximate the integrals over $f$ and $|f|$ by a single partition. 
-
-Let $X$ be a partition of $[a, b]$, $\{\xi_k\}$ a set of intermnediate points, and $\epsilon > 0$ such that: 
-
-```{math}
-\left | \int_a^b f(y) \, dy - \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | < \epsilon
-```
-and
-```{math}
-\left | \int_a^b |f(y)| \, dy - \sum_{k=0}^n |f(\xi_k)| (x_{k+1} - x_k) \right | < \epsilon
-```
-This gives us:
-
-```{math}
-& \left | \int_a^b f(y) \, dy \right | \\
-& \le \left | \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | + \epsilon \\
-& \le \sum_{k=0}^n \left | f(\xi_k) \right | (x_{k+1} - x_k)  + \epsilon \\
-& \le \int_a^b \left | f(y) \right | \, dy  + 2 \epsilon 
-```
-This is the assertion.
-````
-
 
 ````{prf:theorem} Properties of Riemann Integrals
 :label: thr-riemann-integrals
@@ -1405,31 +1404,20 @@ Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then:
 Let $f \in \mathcal{R}([a,b])$ and $F$ be a **primitive** of $f$, defined by
 
 ```{math}
-F(x) &= \int_a^x f(y) \, dy \\
-F &= \int f 
+F(x) = \int_a^x f(y) \, dy, \quad F = \int f 
 ```
 Then:
 
 **(a)** If $f$ is continuous on $[a, b]$, then $F$ is differentiable on $[a, b]$, and it holds that
 
 ```{math}
-F' = f
-```
-or, in operator notation:
-
-```{math}
-\partial \int f = f
+F' = f, \quad \partial \int f = f
 ```
 
 **(b)** If $f$ is differentiable on $[a, b]$, then
 
 ```{math}
-\int_a^b f'(y) \, dy = f(b) - f(a)
-```
-or, in operator notation:
-
-```{math}
-\int \partial f = f
+\int_a^b f'(y) \, dy = f(b) - f(a), \quad \int \partial f = f
 ```
 
 **(c)**
@@ -1456,8 +1444,7 @@ The linear operators $\int$ and $\partial$
 are inverse to each other:
 
 ```{math}
-&\int \partial F = F \\
-&\partial \int f = f
+\int \partial F = F, \quad \partial \int f = f
 ```
 ````
 
@@ -1478,6 +1465,7 @@ for some $\xi \in [x,x+h]$, and $f(\xi) \to f(x)$ as $h \to 0$ since $f$ is cont
 
 **(b)** The proof relies on the [Mean Value Theorem of Differentiation ](#thr-mean-value-differentiation).
 
+If $f$ is differentiable, then it is integrable.
 Let $\{x_k\}$be a partition of $[a, b]$, and $\{\xi_k\}$ a set of intermediate points such that:
 
 ```{math}
@@ -1486,11 +1474,16 @@ f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}
 and we get:
 
 ```{math}
+:label: equ-main-theorem-calculus-1
+
 \int_a^b f'(y) \, dy &\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
 &= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
 &= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
 &= f(b) - f(a)
 ```
+The final reasoning is standard: We choose partitions $\{x_k\}$ with arbitrarily small granularity. 
+The approximation in [](#equ-main-theorem-calculus-1) is thus driven to equality.
+This is our first encounter with the *collapsing sum pattern*, which features as a running gag in higher calculus. 
 
 
 ````
