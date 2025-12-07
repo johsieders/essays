@@ -895,7 +895,7 @@ is a Cauchy sequence iff:</p>
 \[ \begin{align}\begin{aligned}x_{n_0} &amp;= 2 + \frac{1}{n} \\x_{n_{k+1}} &amp;= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n_k}}\end{aligned}\end{align} \]</div>
 <p>For each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span> is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> that converges in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\sqrt{2 + \frac{1}{n}}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 <div class="proof theorem admonition" id="thr-R-completeness">
-<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Completeness of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (<span class="math notranslate nohighlight">\(\mathbb{R} is Complete\)</span>)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every Cauchy sequence <span class="math notranslate nohighlight">\(\{r_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> converges.
 So, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete.</p>
@@ -929,9 +929,27 @@ Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (comp
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
 <p>which is what we want.</p>
 </div>
-<p>This proof is extremely formal and straightforward, despite how scary the inequalities might look
-at first. The proof consists of two plugins: We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
-and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a>, we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is what “forall” is all about.</p>
+<p>This proof, however dry or abstract it might appear, is straightforward.
+Proofs are all about <em>applying</em> known results to obtain new ones. This is done twice:
+We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
+and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a>,
+we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is how “forall” is meant to be employed.</p>
+<div class="proof theorem admonition" id="theorem-8">
+<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable)</p>
+<section class="theorem-content" id="proof-content">
+<p>:label: thr-R-uncountable</p>
+<p><strong>(a)</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(B \ge 2\)</span> be a natural number, the <em>basis</em>, <span class="math notranslate nohighlight">\(p/q\)</span> a rational number and <span class="math notranslate nohighlight">\(n = \min\{ k \in \mathbb{N} \mid  p &lt; qB^k \}\)</span></p>
+<p>Every rational number <span class="math notranslate nohighlight">\(p/q\)</span> can be approximated by a series</p>
+<div class="math notranslate nohighlight">
+\[\frac{p}{q} = \sum_{k=0}^infty a_{k} B^{n-k}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_k \in \{0,1, \ldots, B-1\}\)</span>. For <span class="math notranslate nohighlight">\(B = 10\)</span>, these are the decimal fractions.</p>
+<p><strong>(b)</strong></p>
+<p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof.</p>
+</div>
 <p>As any complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
 it is indeed the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.
 From now on, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> will be our home. Whatever happens, happens in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
@@ -963,14 +981,13 @@ Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a
 <p>b) todo</p>
 </div>
 <div class="proof theorem admonition" id="thr-bolzano-weierstrass">
-<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Bolzano-Weierstrass)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Bolzano-Weierstrass)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Every bounded and monotonous sequence of reals is convergent.</p>
 <p><strong>b)</strong> Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof.<br />
-<strong>a)</strong> Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing bounded sequence with <span class="math notranslate nohighlight">\(s = \sup \{x_n |\mid n \in \mathbb{N} \}\)</span>.
+<p>Proof. <strong>a)</strong> Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing bounded sequence with <span class="math notranslate nohighlight">\(s = \sup \{x_n |\mid n \in \mathbb{N} \}\)</span>.
 Then, by the definition of the supremum:</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0 : \exists n(\epsilon) : s - x_{n(\epsilon)} &lt; \epsilon\]</div>
@@ -1039,7 +1056,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 <p>For <span class="math notranslate nohighlight">\(f\)</span> to be uniformly continuous we require that one <span class="math notranslate nohighlight">\(\delta\)</span> do the job for the whole interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-continuity-on-compact-sets">
-<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Continuous Functions on Intervals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Continuous Functions on Intervals)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be continuous. Then:</p>
 <p><strong>(a)</strong> The continuous functions on <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^0([a, b])\)</span></p>
@@ -1074,7 +1091,7 @@ Then there exist two sequences <span class="math notranslate nohighlight">\(\{x_
 and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessarily converges to the same <span class="math notranslate nohighlight">\(x\)</span>, So, <span class="math notranslate nohighlight">\(f\)</span> is not continuous in <span class="math notranslate nohighlight">\(x\)</span>, which is a contradiction.</p>
 </div>
 <div class="proof theorem admonition" id="thr-intermediate-value">
-<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Intermediate Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Intermediate Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function with <span class="math notranslate nohighlight">\(f(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &gt; 0\)</span>.
 Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = 0\)</span>.</p>
@@ -1169,17 +1186,20 @@ on the understanding that</p>
 <div class="math notranslate nohighlight">
 \[f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx\]</div>
 <p>holds for any two functions <span class="math notranslate nohighlight">\(f,g \in \mathcal{R}([a,b])\)</span>.</p>
-<p><strong>(b) Additivity</strong></p>
+<p><strong>(b) Triangular Inequality</strong></p>
+<div class="math notranslate nohighlight">
+\[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
+<p><strong>(c) Additivity</strong></p>
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx\]</div>
 <p>holds for any <span class="math notranslate nohighlight">\(f \in\mathcal{R}([a,c])\)</span> and any <span class="math notranslate nohighlight">\(b \in [a, c]\)</span>.</p>
-<p><strong>(c) Boundedness</strong></p>
+<p><strong>(e) Boundedness</strong></p>
 <p>R-integrable functions are bounded on closed intervals
 (because Riemann sums are).</p>
 </section>
 </div><p>Monotony leads us to an important theorem.</p>
 <div class="proof theorem admonition" id="thr-mean-value-integration">
-<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Mean Value Theorem of Integration)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Mean Value Theorem of Integration)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
@@ -1190,37 +1210,13 @@ on the understanding that</p>
 \[\int_a^b f(x) \, dx= f(\xi) (b-a)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 17</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
+<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 18</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
 And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[m \le f(x) \le M \]</div>
 <p>The rest is straightforward: multiply by <span class="math notranslate nohighlight">\(\phi(x)\)</span> and integrate:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
-</div>
-<div class="proof theorem admonition" id="thr-triangular-inequality">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Triangular Inequality for Integrals)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a, b])\)</span>. Then the following inequality holds:</p>
-<div class="math notranslate nohighlight">
-\[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. We apply the triangular inequality to the Riemann sums and, keeping track of the <span class="math notranslate nohighlight">\(\epsilon\)</span>, we transfer the result to the integrals.
-To this end, we approximate the integrals over <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(|f|\)</span> by a single partition.</p>
-<p>Let <span class="math notranslate nohighlight">\(X\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermnediate points, and <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[\left | \int_a^b f(y) \, dy - \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | &lt; \epsilon\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[\left | \int_a^b |f(y)| \, dy - \sum_{k=0}^n |f(\xi_k)| (x_{k+1} - x_k) \right | &lt; \epsilon\]</div>
-<p>This gives us:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}&amp; \left | \int_a^b f(y) \, dy \right | \\
-&amp; \le \left | \sum_{k=0}^n f(\xi_k) (x_{k+1} - x_k) \right | + \epsilon \\
-&amp; \le \sum_{k=0}^n \left | f(\xi_k) \right | (x_{k+1} - x_k)  + \epsilon \\
-&amp; \le \int_a^b \left | f(y) \right | \, dy  + 2 \epsilon \end{split}\]</div>
-<p>This is the assertion.</p>
 </div>
 <div class="proof theorem admonition" id="thr-riemann-integrals">
 <p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Properties of Riemann Integrals)</p>
@@ -1451,21 +1447,14 @@ This is the assertion.</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span> and <span class="math notranslate nohighlight">\(F\)</span> be a <strong>primitive</strong> of <span class="math notranslate nohighlight">\(f\)</span>, defined by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}F(x) &amp;= \int_a^x f(y) \, dy \\
-F &amp;= \int f \end{split}\]</div>
+\[F(x) = \int_a^x f(y) \, dy, \quad F = \int f \]</div>
 <p>Then:</p>
 <p><strong>(a)</strong> If <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>, and it holds that</p>
 <div class="math notranslate nohighlight">
-\[F' = f\]</div>
-<p>or, in operator notation:</p>
-<div class="math notranslate nohighlight">
-\[\partial \int f = f\]</div>
+\[F' = f, \quad \partial \int f = f\]</div>
 <p><strong>(b)</strong> If <span class="math notranslate nohighlight">\(f\)</span> is differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>, then</p>
 <div class="math notranslate nohighlight">
-\[\int_a^b f'(y) \, dy = f(b) - f(a)\]</div>
-<p>or, in operator notation:</p>
-<div class="math notranslate nohighlight">
-\[\int \partial f = f\]</div>
+\[\int_a^b f'(y) \, dy = f(b) - f(a), \quad \int \partial f = f\]</div>
 <p><strong>(c)</strong>
 The linear operators <span class="math notranslate nohighlight">\(\int\)</span> and <span class="math notranslate nohighlight">\(\partial\)</span></p>
 <div class="math notranslate nohighlight">
@@ -1487,8 +1476,7 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 \right .\end{split}\]</div>
 <p>are inverse to each other:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\int \partial F = F \\
-&amp;\partial \int f = f\end{split}\]</div>
+\[\int \partial F = F, \quad \partial \int f = f\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
@@ -1500,15 +1488,19 @@ We prove in fact a slightly stronger assertion:</p>
 \[\frac{1}{h}(F(x+h) - F(x)) = \int_x^{x+h} f(y) \, dy = \frac{1}{h} h f(\xi) = f(\xi)\]</div>
 <p>for some <span class="math notranslate nohighlight">\(\xi \in [x,x+h]\)</span>, and <span class="math notranslate nohighlight">\(f(\xi) \to f(x)\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span> since <span class="math notranslate nohighlight">\(f\)</span> is continuous near <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p><strong>(b)</strong> The proof relies on the <a class="reference internal" href="#thr-mean-value-differentiation"><span class="xref myst">Mean Value Theorem of Differentiation </span></a>.</p>
-<p>Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermediate points such that:</p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is differentiable, then it is integrable.
+Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermediate points such that:</p>
 <div class="math notranslate nohighlight">
 \[f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}\]</div>
 <p>and we get:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+<div class="math notranslate nohighlight" id="equation-equ-main-theorem-calculus-1">
+<span class="eqno">(17)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
 &amp;= f(b) - f(a)\end{split}\]</div>
+<p>The final reasoning is standard: We choose partitions <span class="math notranslate nohighlight">\(\{x_k\}\)</span> with arbitrarily small granularity.
+The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(17)</a> is thus driven to equality.
+This is our first encounter with the <em>collapsing sum pattern</em>, which features as a running gag in higher calculus.</p>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
 <p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Integration Rules)</p>
