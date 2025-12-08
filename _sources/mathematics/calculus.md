@@ -557,11 +557,10 @@ x_{n_{k+1}} &= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n
 For each $n \in \mathbb{N}$, $\{x_{n_k}\}_k$ is a Cauchy sequence in $\mathbb{Q}$ that converges in $\mathbb{R}$ to $\sqrt{2 + \frac{1}{n}}$ in $\mathbb{R}$.
 
 
-````{prf:theorem} $\mathbb{R} is Complete$
+````{prf:theorem} $\mathbb{R}$ is Complete
 :label: thr-R-completeness
 
 Every Cauchy sequence $\{r_n\}$ in $\mathbb{R}$ converges.
-So, $\mathbb{R}$ is complete.
 
 ````
 
@@ -624,18 +623,15 @@ we replace the general $m$ with a specific choice — this is how "forall" is me
 
 
 ````{prf:theorem} $\mathbb{R}$ is uncountable
-
 :label: thr-R-uncountable
 
 **(a)**
 
-Let $B \ge 2$ be a natural number, the *basis*, $p/q$ a rational number and $n = \min\{ k \in \mathbb{N} \mid  p < qB^k \}$
-
-Every rational number $p/q$ can be approximated by a series
+Let $B \ge 2$ be a natural number, the *basis*.
+Every rational number $p/q \in (0, 1)$ can be uniquely represented by a series
 ```{math}
-\frac{p}{q} = \sum_{k=0}^infty a_{k} B^{n-k}
+\frac{p}{q} = \sum_{k=0}^\infty \frac{a_k}{B^k}
 ```
-
 where $a_k \in \{0,1, \ldots, B-1\}$. For $B = 10$, these are the decimal fractions.
 
 **(b)**
@@ -643,9 +639,64 @@ where $a_k \in \{0,1, \ldots, B-1\}$. For $B = 10$, these are the decimal fracti
 $\mathbb{R}$ is uncountable.
 ````
 
-
 ````{prf:proof} 
+**(a)**
+We define the sequences $\{a_k\}, \{r_k\}$ by:
 
+```{math}
+&a_1 = pB // q \\
+&r_1 = pB \, \% \, q \\
+\\
+&a_{n+1} = r_n // q \\
+&r_{n+1} = r_n \, \% \, q
+```
+
+and prove by induction that, for any $n$:
+
+```{math}
+:label: equ-R-uncountable-1
+
+\frac{p}{q} = \sum_{k=0}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}
+```
+
+The definition of `%` and `//` implies: 
+
+```{math}
+pB &= (pB // q)q + pB \, \% \, q \\
+&=  qa_1 + r_1
+```
+
+Dividing by $qB$ gives the induction start:
+
+```{math}
+\frac{p}{q} = \frac{a_1}{B} + \frac{r_1}{qB}
+``` 
+The same trick works for any $n$:
+
+```{math}
+r_n B &= (r_nB // q)q + r_nB \, \% \, q \\
+&=  qa_{n+1} + r_{n+1}
+```
+Dividing by $qB^{n+1}$ gives:
+
+```{math}
+\frac{r_n}{qB^n} = \frac{a_{n+1}}{B^{n+1}} + \frac{r_{n+1}}{qB^{n+1}}
+```
+which proves the assertion when plugged into {eq}`equ-R-uncountable-1`.
+
+**(b)** The proof uses the famous diagonalization method. 
+We prove that it is impossible to enumerate the rationals in $(0,1)$ or in any other open interval.
+Assume that $\{x_n\}$ is such an enumeration and 
+
+```{math}
+x_n = \sum_{k=0}^\infty \frac{a_k}{2^k}
+```
+is the binary representation of $x_n$ as presented in (a).. Then 
+  
+```{math}
+y = \sum_{k=0}^\infty \frac{1- a_{k_k}}{2^k}
+```  
+cannot be one of the $x_n$.
 
 ````
 
