@@ -216,12 +216,12 @@ be the injection corresponding to $A_i$.
 \left\{
    \begin{array}{lr}
        \cup_i A_i  \to \mathbb{N} \\
-       a \mapsto p_i \phi_i(a) \text{ if } a \in A_i
+       a \mapsto p_i^{\phi_i(a)} \text{ if } a \in A_i
    \end{array}
 \right .
 ```
    
-is an injection: The set $A_i$ is mapped to the multiples of $p_i$.
+is an injection: The set $A_i$ is mapped to the powers of $p_i$.
 
 **b)** The function
 
@@ -628,20 +628,21 @@ we replace the general $m$ with a specific choice — this is how "forall" is me
 **(a)**
 
 Let $B \ge 2$ be a natural number, the *basis*.
-Every rational number $p/q \in (0, 1)$ can be uniquely represented by a series
+Every rational number $x = p/q \in [0, 1)$ can be represented by a series
+
 ```{math}
-\frac{p}{q} = \sum_{k=0}^\infty \frac{a_k}{B^k}
+\frac{p}{q} = \sum_{k=1}^\infty \frac{a_k}{B^k}
 ```
 where $a_k \in \{0,1, \ldots, B-1\}$. For $B = 10$, these are the decimal fractions.
 
 **(b)**
-
-$\mathbb{R}$ is uncountable.
+Every open interval of $\mathbb{R}$ is uncountable.
 ````
 
 ````{prf:proof} 
 **(a)**
-We define the sequences $\{a_k\}, \{r_k\}$ by:
+We are going to generalize the decimal expansion as it is taught at secondary schools.
+Look at the sequences $\{a_k\}, \{r_k\}$ defined by:
 
 ```{math}
 &a_1 = pB // q \\
@@ -651,14 +652,6 @@ We define the sequences $\{a_k\}, \{r_k\}$ by:
 &r_{n+1} = r_n \, \% \, q
 ```
 
-and prove by induction that, for any $n$:
-
-```{math}
-:label: equ-R-uncountable-1
-
-\frac{p}{q} = \sum_{k=0}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}
-```
-
 The definition of `%` and `//` implies: 
 
 ```{math}
@@ -666,38 +659,59 @@ pB &= (pB // q)q + pB \, \% \, q \\
 &=  qa_1 + r_1
 ```
 
-Dividing by $qB$ gives the induction start:
-
-```{math}
-\frac{p}{q} = \frac{a_1}{B} + \frac{r_1}{qB}
-``` 
-The same trick works for any $n$:
-
 ```{math}
 r_n B &= (r_nB // q)q + r_nB \, \% \, q \\
 &=  qa_{n+1} + r_{n+1}
 ```
-Dividing by $qB^{n+1}$ gives:
+
+Dividing by $qB$ or $qB^{n+1}$ resp. gives:
 
 ```{math}
-\frac{r_n}{qB^n} = \frac{a_{n+1}}{B^{n+1}} + \frac{r_{n+1}}{qB^{n+1}}
+\frac{p}{q} = \frac{a_1}{B} + \frac{r_1}{qB} 
 ```
-which proves the assertion when plugged into {eq}`equ-R-uncountable-1`.
+```{math}
+\frac{r_n}{qB^n} = \frac{a_{n+1}}{B^{n+1}} + \frac{r_{n+1}}{qB^{n+1}}
+``` 
+
+from which follows for any $n$:
+
+```{math}
+:label: equ-R-uncountable-1
+
+\frac{p}{q} = \sum_{k=1}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}
+```
 
 **(b)** The proof uses the famous diagonalization method. 
-We prove that it is impossible to enumerate the rationals in $(0,1)$ or in any other open interval.
+We prove in a first step that it is impossible to enumerate the rationals in $[0,1)$.
 Assume that $\{x_n\}$ is such an enumeration and 
 
 ```{math}
-x_n = \sum_{k=0}^\infty \frac{a_k}{2^k}
+x_n = \sum_{k=0}^\infty \frac{a_{n_k}}{2^k}
 ```
-is the binary representation of $x_n$ as presented in (a). Then 
+is the binary representation of $x_n$ as presented in part (a). Then 
   
 ```{math}
 y = \sum_{k=0}^\infty \frac{1- a_{k_k}}{2^k}
 ```  
-cannot be one of the $x_n$.
+cannot be one of the $x_n$ because $y = x_{n^*}$ for some $n^*$ 
+would imply:
 
+```{math}
+1 - a_{{n^*}_{n^*}} = a_{{n^*}_{n^*}}
+``` 
+But this is impossible, as $a_{{n^*}_{n^*}}$ is a natural number.
+
+To prove that any open interval $(a, b)$ is uncountable we use the injection:
+
+```{math}
+\phi:
+\left\{
+   \begin{array}{lr}
+       (0, 1) \to  (a, b) \\
+       x \mapsto a + x(b-a)
+   \end{array}
+\right .
+```
 ````
 
 As any complete field containing $\mathbb{Q}$ necessarily contains the set $\mathbb{R}$, 
@@ -1285,9 +1299,12 @@ We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, 
 **(a)** We say that $f$ is **differentiable** in $x \in [a, b]$ if the limit
 
 ```{math}
+:label: equ-derivatives-1
+
 \lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)
 ```
-exists. $f'(x)$ is called the derivative of $f$ at $x$. We note that
+exists. $f'(x)$ is called the derivative of $f$ at $x$.
+The statement {eq}`equ-derivatives-1`is equivalengt to
 
 ```{math}
 f(x+h) = f(x) + f'(x) \, h + o(h)
@@ -1421,29 +1438,94 @@ This is the assertion.
 ````{prf:theorem} Differentiation Rules
 :label: thr-differentiation-rules
 
-Let $f, g \in C^1([a,b])$
+**(a) Chain Rule**
 
+Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then:
 
-**(a) Product Rule**
+```{math}
+&(f \circ g)'(x) = (f' \circ g)(x) \, g'(x) \\
+\\
+&(f \circ g)' = (f' \circ g) \, g'
+```
+
+**(b) Quotient Rule**
+
+Let $f, g \in C^1([a,b])$, and $f'(x) \ne 0$ on $[a, b]$. Then:
+
+```{math}
+{f^{-1}}'(f(x)) = \frac{1}{f'(x)}
+```
+or, with $y = f(x)$:
+
+```{math}
+{f^{-1}}'(y) = \frac{1}{f'(f^{-1}(y)}
+```
+
+This is often abbreviated to
+
+```{math}
+{f^{-1}}' = \frac{1}{f'}
+```
+
+but you have to keep track of $x$ and $y$.
+
+**(c) Product Rule**
 
 Let $f, g \in C^1([a,b])$. Then:
 
 ```{math}
 f'g' = f'g + fg'
 ```
-
-**(b) Chain Rule**
-
-Let $f \in C^1([a,b])$ and $g \in C^1([\min(f), \max(f)])$. Then:
-
-```{math}
-(f \circ g)' = (f' \circ g) \, g'
-```
 ````
 
 ````{prf:proof} 
 
-**TODO**
+**(a)**
+Let $f, g$ be as above. We prove the assertion using the little-o-notation.
+We know that $g$ is differentiable at $x$, and $f$ at $g(x)$.
+
+```{math}
+(f \circ g)(x + h) &= f(g(x + h)) \\
+\\
+&= f(g(x) + g'(x)h + o(h)) \\
+\\
+&= f(g(x)) + f'(g(x))(g'(x)h + o(h)) + o(g'(x)h + o(h)) \\
+\\
+&= f(g(x)) + f'(g(x))g'(x)h + f'(g(x))o(h) + o(g'(x)h + o(h))
+```
+
+Observing that:
+```{math}
+f'(g(x))o(h) + o(g'(x)h + o(h)) = o(h) + o(h) + o(h) = o(h)
+```
+we get:
+```{math}
+(f \circ g)(x + h) = f(g(x)) + f'(g(x))g'(x)h + o(h)
+```
+which is what we want.
+
+
+**(b)**
+From
+
+```{math}
+(f^{-1} \circ f)'(x) = {f^{-1}}'(f(x))f'(x) = 1
+```
+we conclude:
+
+```{math}
+{f^{-1}}'(f(x)) = \frac{1}{f'(x)}
+```
+
+**(c)**
+Same procedure: $f$ and $g$ are differentiable, so:
+
+```{math}
+f(x+h)g(x+h) &= (f(x) + f'(x)h + o(h))(g(x) + g'(x)h + o(h)) \\
+\\
+  &= f(x)g(x) + (f'(x)g(x) + f(x)g'(x))h + o(h)
+```
+which is the desired result. 
 
 ````
 
