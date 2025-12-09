@@ -938,49 +938,60 @@ we replace the general <span class="math notranslate nohighlight">\(m\)</span> w
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(B \ge 2\)</span> be a natural number, the <em>basis</em>.
-Every rational number <span class="math notranslate nohighlight">\(p/q \in (0, 1)\)</span> can be uniquely represented by a series</p>
+Every rational number <span class="math notranslate nohighlight">\(x = p/q \in [0, 1)\)</span> can be represented by a series</p>
 <div class="math notranslate nohighlight">
-\[\frac{p}{q} = \sum_{k=0}^\infty \frac{a_k}{B^k}\]</div>
+\[\frac{p}{q} = \sum_{k=1}^\infty \frac{a_k}{B^k}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a_k \in \{0,1, \ldots, B-1\}\)</span>. For <span class="math notranslate nohighlight">\(B = 10\)</span>, these are the decimal fractions.</p>
-<p><strong>(b)</strong></p>
-<p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable.</p>
+<p><strong>(b)</strong>
+Every open interval of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
-We define the sequences <span class="math notranslate nohighlight">\(\{a_k\}, \{r_k\}\)</span> by:</p>
+We are going to generalize the decimal expansion as it is taught at secondary schools.
+Look at the sequences <span class="math notranslate nohighlight">\(\{a_k\}, \{r_k\}\)</span> defined by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;a_1 = pB // q \\
 &amp;r_1 = pB \, \% \, q \\
 \\
 &amp;a_{n+1} = r_n // q \\
 &amp;r_{n+1} = r_n \, \% \, q\end{split}\]</div>
-<p>and prove by induction that, for any <span class="math notranslate nohighlight">\(n\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-equ-r-uncountable-1">
-<span class="eqno">(16)<a class="headerlink" href="#equation-equ-r-uncountable-1" title="Link to this equation">#</a></span>\[\frac{p}{q} = \sum_{k=0}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}\]</div>
 <p>The definition of <code class="docutils literal notranslate"><span class="pre">%</span></code> and <code class="docutils literal notranslate"><span class="pre">//</span></code> implies:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}pB &amp;= (pB // q)q + pB \, \% \, q \\
 &amp;=  qa_1 + r_1\end{split}\]</div>
-<p>Dividing by <span class="math notranslate nohighlight">\(qB\)</span> gives the induction start:</p>
-<div class="math notranslate nohighlight">
-\[\frac{p}{q} = \frac{a_1}{B} + \frac{r_1}{qB}\]</div>
-<p>The same trick works for any <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}r_n B &amp;= (r_nB // q)q + r_nB \, \% \, q \\
 &amp;=  qa_{n+1} + r_{n+1}\end{split}\]</div>
-<p>Dividing by <span class="math notranslate nohighlight">\(qB^{n+1}\)</span> gives:</p>
+<p>Dividing by <span class="math notranslate nohighlight">\(qB\)</span> or <span class="math notranslate nohighlight">\(qB^{n+1}\)</span> resp. gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p}{q} = \frac{a_1}{B} + \frac{r_1}{qB} \]</div>
 <div class="math notranslate nohighlight">
 \[\frac{r_n}{qB^n} = \frac{a_{n+1}}{B^{n+1}} + \frac{r_{n+1}}{qB^{n+1}}\]</div>
-<p>which proves the assertion when plugged into <a class="reference internal" href="#equation-equ-r-uncountable-1">(16)</a>.</p>
+<p>from which follows for any <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-r-uncountable-1">
+<span class="eqno">(16)<a class="headerlink" href="#equation-equ-r-uncountable-1" title="Link to this equation">#</a></span>\[\frac{p}{q} = \sum_{k=1}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}\]</div>
 <p><strong>(b)</strong> The proof uses the famous diagonalization method.
-We prove that it is impossible to enumerate the rationals in <span class="math notranslate nohighlight">\((0,1)\)</span> or in any other open interval.
+We prove in a first step that it is impossible to enumerate the rationals in <span class="math notranslate nohighlight">\([0,1)\)</span>.
 Assume that <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is such an enumeration and</p>
 <div class="math notranslate nohighlight">
-\[x_n = \sum_{k=0}^\infty \frac{a_k}{2^k}\]</div>
-<p>is the binary representation of <span class="math notranslate nohighlight">\(x_n\)</span> as presented in (a).. Then</p>
+\[x_n = \sum_{k=0}^\infty \frac{a_{n_k}}{2^k}\]</div>
+<p>is the binary representation of <span class="math notranslate nohighlight">\(x_n\)</span> as presented in part (a). Then</p>
 <div class="math notranslate nohighlight">
 \[y = \sum_{k=0}^\infty \frac{1- a_{k_k}}{2^k}\]</div>
-<p>cannot be one of the <span class="math notranslate nohighlight">\(x_n\)</span>.</p>
+<p>cannot be one of the <span class="math notranslate nohighlight">\(x_n\)</span> because <span class="math notranslate nohighlight">\(y = x_{n^*}\)</span> for some <span class="math notranslate nohighlight">\(n^*\)</span>
+would imply:</p>
+<div class="math notranslate nohighlight">
+\[1 - a_{{n^*}_{n^*}} = a_{{n^*}_{n^*}}\]</div>
+<p>But this is impossible, as <span class="math notranslate nohighlight">\(a_{{n^*}_{n^*}}\)</span> is a natural number.</p>
+<p>To prove that any open interval <span class="math notranslate nohighlight">\((a, b)\)</span> is uncountable we use the injection:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi:
+\left\{
+   \begin{array}{lr}
+       (0, 1) \to  (a, b) \\
+       x \mapsto a + x(b-a)
+   \end{array}
+\right .\end{split}\]</div>
 </div>
 <p>As any complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
 it is indeed the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.
@@ -1374,9 +1385,10 @@ Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> in <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
-<div class="math notranslate nohighlight">
-\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
-<p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>. We note that</p>
+<div class="math notranslate nohighlight" id="equation-equ-derivatives-1">
+<span class="eqno">(18)<a class="headerlink" href="#equation-equ-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
+<p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.
+The statement <a class="reference internal" href="#equation-equ-derivatives-1">(18)</a>is equivalengt to</p>
 <div class="math notranslate nohighlight">
 \[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
 <p>which means that the term <span class="math notranslate nohighlight">\(f'(x) \, h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
@@ -1458,18 +1470,61 @@ This is the assertion.</p>
 <div class="proof theorem admonition" id="thr-differentiation-rules">
 <p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Differentiation Rules)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
-<p><strong>(a) Product Rule</strong></p>
+<p><strong>(a) Chain Rule</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([\min(f), \max(f)])\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;(f \circ g)'(x) = (f' \circ g)(x) \, g'(x) \\
+\\
+&amp;(f \circ g)' = (f' \circ g) \, g'\end{split}\]</div>
+<p><strong>(b) Quotient Rule</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>, and <span class="math notranslate nohighlight">\(f'(x) \ne 0\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[{f^{-1}}'(f(x)) = \frac{1}{f'(x)}\]</div>
+<p>or, with <span class="math notranslate nohighlight">\(y = f(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[{f^{-1}}'(y) = \frac{1}{f'(f^{-1}(y)}\]</div>
+<p>This is often abbreviated to</p>
+<div class="math notranslate nohighlight">
+\[{f^{-1}}' = \frac{1}{f'}\]</div>
+<p>but you have to keep track of <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p><strong>(c) Product Rule</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
 \[f'g' = f'g + fg'\]</div>
-<p><strong>(b) Chain Rule</strong></p>
-<p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([\min(f), \max(f)])\)</span>. Then:</p>
-<div class="math notranslate nohighlight">
-\[(f \circ g)' = (f' \circ g) \, g'\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>TODO</strong></p>
+<p>Proof. <strong>(a)</strong>
+Let <span class="math notranslate nohighlight">\(f, g\)</span> be as above. We prove the assertion using the little-o-notation.
+We know that <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(x\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(g(x)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(f \circ g)(x + h) &amp;= f(g(x + h)) \\
+\\
+&amp;= f(g(x) + g'(x)h + o(h)) \\
+\\
+&amp;= f(g(x)) + f'(g(x))(g'(x)h + o(h)) + o(g'(x)h + o(h)) \\
+\\
+&amp;= f(g(x)) + f'(g(x))g'(x)h + f'(g(x))o(h) + o(g'(x)h + o(h))\end{split}\]</div>
+<p>Observing that:</p>
+<div class="math notranslate nohighlight">
+\[f'(g(x))o(h) + o(g'(x)h + o(h)) = o(h) + o(h) + o(h) = o(h)\]</div>
+<p>we get:</p>
+<div class="math notranslate nohighlight">
+\[(f \circ g)(x + h) = f(g(x)) + f'(g(x))g'(x)h + o(h)\]</div>
+<p>which is what we want.</p>
+<p><strong>(b)</strong>
+From</p>
+<div class="math notranslate nohighlight">
+\[(f^{-1} \circ f)'(x) = {f^{-1}}'(f(x))f'(x) = 1\]</div>
+<p>we conclude:</p>
+<div class="math notranslate nohighlight">
+\[{f^{-1}}'(f(x)) = \frac{1}{f'(x)}\]</div>
+<p><strong>(c)</strong>
+Same procedure: <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are differentiable, so:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x+h)g(x+h) &amp;= (f(x) + f'(x)h + o(h))(g(x) + g'(x)h + o(h)) \\
+\\
+  &amp;= f(x)g(x) + (f'(x)g(x) + f(x)g'(x))h + o(h)\end{split}\]</div>
+<p>which is the desired result.</p>
 </div>
 </section>
 <section id="main-theorem-of-calculus">
@@ -1526,12 +1581,12 @@ Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition 
 \[f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}\]</div>
 <p>and we get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-main-theorem-calculus-1">
-<span class="eqno">(18)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+<span class="eqno">(19)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
 &amp;= f(b) - f(a)\end{split}\]</div>
 <p>The final reasoning is standard: We choose partitions <span class="math notranslate nohighlight">\(\{x_k\}\)</span> with arbitrarily small granularity.
-The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(18)</a> is thus driven to equality.
+The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(19)</a> is thus driven to equality.
 This is our first encounter with the <em>collapsing sum pattern</em>, which features as a running gag in higher calculus.</p>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
