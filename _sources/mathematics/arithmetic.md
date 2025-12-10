@@ -1,5 +1,6 @@
 # First Steps in Arithmetic
 
+*Johannes Siedersleben, October 2025*
 
 This note takes a deliberately short, constructive path through the core facts of elementary number theory—enough to make modular arithmetic usable, 
 computable, and conceptually clean. We begin with the integer division theorem and use it to formalize the operators `//` (integer quotient) and `%` (remainder). 
@@ -196,17 +197,17 @@ But we need to introduce some new concepts before we can get to that.
 ````{prf:definition}
 :label: primes
 
-(i) The *greatest common divisor* of two integers $a$ and $b$ is the largest 
+**(a)** The *greatest common divisor* of two integers $a$ and $b$ is the largest 
 non-negative integer $d$ such that $a \equiv 0 \bmod d$ and $b \equiv 0 \bmod d$. It is denoted 
 as $\gcd(a,b)$ or simply as $(a,b)$. Note that, for any integer $a$, $\gcd(a,0) = \gcd(0,a) = a$.
 
-(ii) The *least common multiple* of two integers $a$ and $b$ is the smallest non-negative 
+**(b)**  The *least common multiple* of two integers $a$ and $b$ is the smallest non-negative 
 integer $c$ such that $c \equiv 0 \bmod a$ and $c \equiv 0 \bmod b$. It is denoted as $\text{lcm}(a,b)$.  
 
-(iii) An integer $p$ is called *prime* if it is greater than 1 and has no divisors other than 1 and itself. 
+**(c)**  An integer $p$ is called *prime* if it is greater than 1 and has no divisors other than 1 and itself. 
 Two integers $a$ and $b$ are *coprime* iff $(a,b) = 1$. 
 
-(iv)   
+**(d)**   
 $U_m = \{a \in \mathbb{Z}| 1 \le a < m, (a,m) = 1 \}$  
 $\mathbb{Z}^\times_m = \{\overline{a}| a \in U_m \}$
 
@@ -216,6 +217,17 @@ $\phi(m) = |U_m| = |\mathbb{Z}^\times_m|$
 
 So, $\phi(p) = p - 1$ iff $p$ is prime.
 
+````
+
+````{prf:theorem}
+:label: thr-infinite-primes
+
+There are inifinitely many primes
+````
+
+````{prf:proof}
+
+**TODO**
 ````
 
 ````{prf:theorem}

@@ -212,10 +212,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics/calculus.html">First Steps in Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics/bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/calculus.html">First Steps in Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -409,7 +410,6 @@ document.write(`
    <a href="#cap-alg-euclid-extended"><strong>alg-euclid-extended</strong></a> | 
    <a href="#cap-cor-little-fermat"><strong>cor-little-fermat</strong></a> | 
    <a href="#cap-def-closure"><strong>def-closure</strong></a> | 
-   <a href="#cap-def-compactness"><strong>def-compactness</strong></a> | 
    <a href="#cap-def-congruences"><strong>def-congruences</strong></a> | 
    <a href="#cap-def-continuity"><strong>def-continuity</strong></a> | 
    <a href="#cap-def-convergence"><strong>def-convergence</strong></a> | 
@@ -422,6 +422,8 @@ document.write(`
    <a href="#cap-def-module"><strong>def-module</strong></a> | 
    <a href="#cap-def-peano-axioms"><strong>def-peano-axioms</strong></a> | 
    <a href="#cap-def-riemann-integrals"><strong>def-riemann-integrals</strong></a> | 
+   <a href="#cap-def-riemann-integrals-xxx"><strong>def-riemann-integrals-xxx</strong></a> | 
+   <a href="#cap-def-step-functions"><strong>def-step-functions</strong></a> | 
    <a href="#cap-def-sup-norm"><strong>def-sup-norm</strong></a> | 
    <a href="#cap-lem-compactness-completeness"><strong>lem-compactness-completeness</strong></a> | 
    <a href="#cap-lem-euclid-util"><strong>lem-euclid-util</strong></a> | 
@@ -429,10 +431,11 @@ document.write(`
    <a href="#cap-phi-prime"><strong>phi-prime</strong></a> | 
    <a href="#cap-primes"><strong>primes</strong></a> | 
    <a href="#cap-rem-carmichael"><strong>rem-carmichael</strong></a> | 
+   <a href="#cap-rem-continuum-hypothesis"><strong>rem-continuum-hypothesis</strong></a> | 
    <a href="#cap-rem-monotony-additivity-boundedness"><strong>rem-monotony-additivity-boundedness</strong></a> | 
    <a href="#cap-rem-sup-norm"><strong>rem-sup-norm</strong></a> | 
-   <a href="#cap-remark-14"><strong>remark-14</strong></a> | 
    <a href="#cap-remark-15"><strong>remark-15</strong></a> | 
+   <a href="#cap-remark-16"><strong>remark-16</strong></a> | 
    <a href="#cap-remark-3"><strong>remark-3</strong></a> | 
    <a href="#cap-thr-R-completeness"><strong>thr-R-completeness</strong></a> | 
    <a href="#cap-thr-R-uncountable"><strong>thr-R-uncountable</strong></a> | 
@@ -447,6 +450,7 @@ document.write(`
    <a href="#cap-thr-euler"><strong>thr-euler</strong></a> | 
    <a href="#cap-thr-fundamental"><strong>thr-fundamental</strong></a> | 
    <a href="#cap-thr-gcd-lcm"><strong>thr-gcd-lcm</strong></a> | 
+   <a href="#cap-thr-infinite-primes"><strong>thr-infinite-primes</strong></a> | 
    <a href="#cap-thr-integer-division"><strong>thr-integer-division</strong></a> | 
    <a href="#cap-thr-integration-rules"><strong>thr-integration-rules</strong></a> | 
    <a href="#cap-thr-intermediate-value"><strong>thr-intermediate-value</strong></a> | 
@@ -488,14 +492,6 @@ document.write(`
        <a href="mathematics/calculus.html#def-closure"><code class="xref">def-closure</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def-compactness"><td></td><td>
-       <strong>def-compactness</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="mathematics/calculus.html#def-compactness"><code class="xref">def-compactness</code></a> <em>(mathematics/calculus)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-congruences"><td></td><td>
        <strong>def-congruences</strong></td><td></td></tr>
      <tr>
@@ -517,7 +513,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-convergence"><code class="xref">def-convergence</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#def-convergence"><code class="xref">def-convergence</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-convergence-functions"><td></td><td>
@@ -533,7 +529,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-convergence-reals"><code class="xref">def-convergence-reals</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#def-convergence-reals"><code class="xref">def-convergence-reals</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-derivatives"><td></td><td>
@@ -557,7 +553,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-infinity"><code class="xref">def-infinity</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#def-infinity"><code class="xref">def-infinity</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-integer-division"><td></td><td>
@@ -581,7 +577,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-peano-axioms"><code class="xref">def-peano-axioms</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#def-peano-axioms"><code class="xref">def-peano-axioms</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-riemann-integrals"><td></td><td>
@@ -590,6 +586,22 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/calculus.html#def-riemann-integrals"><code class="xref">def-riemann-integrals</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-riemann-integrals-xxx"><td></td><td>
+       <strong>def-riemann-integrals-xxx</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#def-riemann-integrals-xxx"><code class="xref">def-riemann-integrals-xxx</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-step-functions"><td></td><td>
+       <strong>def-step-functions</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#def-step-functions"><code class="xref">def-step-functions</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-sup-norm"><td></td><td>
@@ -648,6 +660,14 @@ document.write(`
        <a href="mathematics/arithmetic.html#rem-carmichael"><code class="xref">rem-carmichael</code></a> <em>(mathematics/arithmetic)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rem-continuum-hypothesis"><td></td><td>
+       <strong>rem-continuum-hypothesis</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/numbers.html#rem-continuum-hypothesis"><code class="xref">rem-continuum-hypothesis</code></a> <em>(mathematics/numbers)</em></td><td>
+       <em>remark</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-monotony-additivity-boundedness"><td></td><td>
        <strong>rem-monotony-additivity-boundedness</strong></td><td></td></tr>
      <tr>
@@ -664,20 +684,20 @@ document.write(`
        <a href="mathematics/calculus.html#rem-sup-norm"><code class="xref">rem-sup-norm</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-14"><td></td><td>
-       <strong>remark-14</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="mathematics/arithmetic.html#remark-14"><code class="xref">remark-14</code></a> <em>(mathematics/arithmetic)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-15"><td></td><td>
        <strong>remark-15</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="mathematics/arithmetic.html#remark-15"><code class="xref">remark-15</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <em>remark</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-remark-16"><td></td><td>
+       <strong>remark-16</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#remark-16"><code class="xref">remark-16</code></a> <em>(mathematics/arithmetic)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-3"><td></td><td>
@@ -693,7 +713,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-R-completeness"><code class="xref">thr-R-completeness</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#thr-R-completeness"><code class="xref">thr-R-completeness</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-R-uncountable"><td></td><td>
@@ -701,7 +721,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-R-uncountable"><code class="xref">thr-R-uncountable</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#thr-R-uncountable"><code class="xref">thr-R-uncountable</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-bezout"><td></td><td>
@@ -741,7 +761,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-convergent-sequences"><code class="xref">thr-convergent-sequences</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#thr-convergent-sequences"><code class="xref">thr-convergent-sequences</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-countable-uncountable"><td></td><td>
@@ -749,7 +769,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-countable-uncountable"><code class="xref">thr-countable-uncountable</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#thr-countable-uncountable"><code class="xref">thr-countable-uncountable</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-differentiation-rules"><td></td><td>
@@ -790,6 +810,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/arithmetic.html#thr-gcd-lcm"><code class="xref">thr-gcd-lcm</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-infinite-primes"><td></td><td>
+       <strong>thr-infinite-primes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#thr-infinite-primes"><code class="xref">thr-infinite-primes</code></a> <em>(mathematics/arithmetic)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-integer-division"><td></td><td>
@@ -861,7 +889,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-rationals-reals"><code class="xref">thr-rationals-reals</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/numbers.html#thr-rationals-reals"><code class="xref">thr-rationals-reals</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-residue-class-ring"><td></td><td>

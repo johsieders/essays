@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>From Naturals to Reals &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/numbers';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="First Steps in Calculus" href="calculus.html" />
+    <link rel="prev" title="First Steps in Arithmetic" href="arithmetic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/numbers.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/numbers.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/mathematics/numbers.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>From Naturals to Reals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reals">Reals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="from-naturals-to-reals">
+<h1>From Naturals to Reals<a class="headerlink" href="#from-naturals-to-reals" title="Link to this heading">#</a></h1>
+<p><em>Johannes Siedersleben, December 2025</em></p>
+<blockquote>
+<div><p>under construction</p>
+</div></blockquote>
+<section id="what-the-tortoise-said-to-achilles-lewis-carroll">
+<h2>What the Tortoise Said to Achilles (Lewis Carroll)<a class="headerlink" href="#what-the-tortoise-said-to-achilles-lewis-carroll" title="Link to this heading">#</a></h2>
+<p>This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland.
+It questions what mathematicians really do.
+Imagine the tortoise explaining a mathematical argument to Achilles.
+This is what it says, in the words of Lewis Carroll:</p>
+<div class="tip admonition">
+<p class="admonition-title">What the Tortoise Said to Achilles</p>
+<p>Listen:</p>
+<p>(A) Things that are equal to the same are equal to each other.<br />
+(B) The two sides of this Triangle are things that are equal to the same.<br />
+(C) If A and B are true, Z must be true.<br />
+(Z) The two sides of this Triangle are equal to each other.</p>
+<p>“You should call it D, not Z,” said Achilles. “It comes next to the
+other three. If you accept A and B and C, you must accept Z.”
+“And why must I?” “Because it follows logically from them. If A and B and C are true,
+Z must be true. You don’t dispute that, I imagine?”</p>
+<p>“If A and B and C are true, Z must be true,” the Tortoise thoughtfully
+repeated. “That’s another Hypothetical, isn’t it? And, if I failed to see
+its truth, I might accept A and B and C, and <em>still</em> not accept Z, mightn’t I?”
+“You might,” the candid hero admitted, “though such obtuseness
+would certainly be phenomenal. Still, the event is <em>possible</em>. So I might
+ask you to grant one more Hypothetical!” “Very good. I’m quite willing to grant it,
+as soon as you’ve written it down. We will call it</p>
+<p>(D) If A and B and C are true, Z must be true.</p>
+<p>“Have you entered that in your notebook?” “I <em>have</em>!” Achilles joyfully exclaimed,
+as he ran the pencil into its sheath. “And at last we’ve got to the end of this ideal racecourse! Now
+that you accept A and B and C and D, <em>of course</em> you accept Z.”
+“Do I?” said the Tortoise innocently. “Let’s make that quite clear.
+I accept A and B and C and D. Suppose I <em>still</em> refused to accept Z?”
+“Then Logic would take you by the throat and <em>force</em> you to do it!”
+Achilles triumphantly replied. “Logic would tell you, ‘You can’t help
+yourself. Now that you’ve accepted A and B and C and D, you must accept Z!’
+So you’ve no choice, you see.”
+“Whatever <em>Logic</em> is good enough to tell me is worth <em>writing down</em>,” said
+the Tortoise. “So enter it in your book, please. We will call it</p>
+<p>(E) If A and B and C and D are true, Z must be true.”</p>
+<p>“Until I’ve granted <em>that</em>, of course I needn’t grant Z. So it’s quite
+a <em>necessary</em> step, you see?” “I see,” said Achilles; and there was a touch of sadness in his tone.</p>
+<p>Here the narrator, having pressing business at the Bank, was obliged to leave the happy
+pair, and did not again pass the spot until some months afterwards. When he did so,
+Achilles was still seated on the back of the much-enduring Tortoise and was writing
+in his notebook, which appeared to be nearly full. The Tortoise was saying, “Have
+you got that last step written down? Unless I’ve lost count, that makes a thousand
+and one. There are several million more to come. And would you mind, as a
+personal favour, considering what a lot of instructions this colloquy of ours will
+provide for the Logicians of the Nineteenth Century—would you mind adopting a
+pun that my cousin the Mock-Turtle will then make, and allowing yourself to be re-
+named <em>Taught-Us</em>?”
+“As you please!” replied the weary warrior, in the hollow tones of despair, as he
+buried his face in his hands. “Provided that you, for your part, will adopt a pun the
+Mock-Turtle never made, and allow yourself to be re-named <em>A Kill-Ease</em>!”</p>
+</div>
+<p>So much from Lewis Carroll. With a touch of sadness,
+I must admit that this paradox puts all mathematical reasoning at risk.
+How can we be sure that a proof is correct? What rules do we apply, and who granted us the right to apply them?
+Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
+Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.</p>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id2">[<a class="reference internal" href="#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id83" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id84" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
+to name but a few prominent examples.</p>
+</section>
+<section id="naturals">
+<h2>Naturals<a class="headerlink" href="#naturals" title="Link to this heading">#</a></h2>
+<p>Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
+I don’t know, and, honestly, I don’t care too much. What seems clear to me is that there
+must have been first humans, probably at different times and different locations, to grasp the concept of a number.
+They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
+It took many millennia to formalize it.
+Today, the Peano axioms perfectly describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers for all mathematical purposes.</p>
+<div class="proof definition admonition" id="def-peano-axioms">
+<p class="admonition-title"><span class="caption-number">Definition 6 </span> (Peano Axioms)</p>
+<section class="definition-content" id="proof-content">
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is <strong>not empty</strong>: <span class="math notranslate nohighlight">\(0 \in \mathbb{N}\)</span></p></li>
+<li><p>The relation <span class="math notranslate nohighlight">\(=\)</span> is an <strong>equivalence relation</strong> on <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>.</p></li>
+<li><p>Every natural number <span class="math notranslate nohighlight">\(n\)</span> has exactly one <strong>successor</strong> <span class="math notranslate nohighlight">\(S(n)\)</span>, and every natural number <span class="math notranslate nohighlight">\(n\)</span> except <span class="math notranslate nohighlight">\(0\)</span> has exactly one <strong>predecessor</strong> <span class="math notranslate nohighlight">\(P(n)\)</span>.
+The function <span class="math notranslate nohighlight">\(S\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S:
+\left\{
+    \begin{array}{lr}
+        \mathbb{N} \to \mathbb{N} - \{0\} \\
+        n \mapsto S(n)
+    \end{array}
+\right .\end{split}\]</div>
+<p>is a bijection, and <span class="math notranslate nohighlight">\(P = S^{-1}\)</span> is its inverse. We normally write, of course, <span class="math notranslate nohighlight">\(n + 1\)</span> and <span class="math notranslate nohighlight">\(n - 1\)</span> to indicate successor and predecessor.</p>
+</li>
+<li><p><strong>Induction</strong>: If <span class="math notranslate nohighlight">\(\phi\)</span> is a unary predicate such that
+<span class="math notranslate nohighlight">\(\phi(0)\)</span> is true, and for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\phi(n)\)</span> being true implies that <span class="math notranslate nohighlight">\(\phi(S(n))\)</span> is true,
+then <span class="math notranslate nohighlight">\(\phi(n)\)</span> is true for every <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p></li>
+</ol>
+</section>
+</div><p>The Peano axioms not only allow the definition of all basic arithmetical operations.
+They form the foundation of number theory.
+In virtue of the Peano axioms we can start at <span class="math notranslate nohighlight">\(0\)</span> and,
+applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.
+The following is a formal definition of infinity, with no handwaving, no dots, and no “and so on.”</p>
+<div class="proof definition admonition" id="def-infinity">
+<p class="admonition-title"><span class="caption-number">Definition 7 </span> (Infinity)</p>
+<section class="definition-content" id="proof-content">
+<p><strong>a)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>infinite</strong> iff there is an a proper subset <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to B\)</span>.</p>
+<p><strong>b)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>countable</strong> iff there is an injection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.
+This injection is often called an <em>enumeration</em>, a way of putting all elements of <span class="math notranslate nohighlight">\(A\)</span> in a sequential order.</p>
+</section>
+</div><p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is infinite because the successor function <span class="math notranslate nohighlight">\(S\)</span> is exactly such an injection, with <span class="math notranslate nohighlight">\(B = \mathbb{N} - \{0\}\)</span>.
+That’s a formal version of Hilbert’s Hotel, which can always accommodate an extra guest by moving everyone else up one room.
+Another injection would be <span class="math notranslate nohighlight">\(\phi(n) = 10^n\)</span>, with <span class="math notranslate nohighlight">\(B = \{1, 10, 100, \ldots\}\)</span>. <span class="math notranslate nohighlight">\(B\)</span> is a set with huge gaps, and yet,
+it’s still infinite: you never run out of natural numbers.</p>
+<div class="proof theorem admonition" id="thr-countable-uncountable">
+<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Countable and Uncountable Sets)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a)</strong> If <span class="math notranslate nohighlight">\(A\)</span> is infinite iff  <span class="math notranslate nohighlight">\(A - F \ne \emptyset\)</span> for any finite subset <span class="math notranslate nohighlight">\(F\)</span> of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>(b)</strong> If <span class="math notranslate nohighlight">\(A\)</span> is countably infinite iff there is an bijection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.</p>
+<p><strong>(c)</strong> A countable union of countable sets is countable.</p>
+<p><strong>(d)</strong> A finite crossproduct of countable sets is countable</p>
+<p><strong>(e)</strong> Let <span class="math notranslate nohighlight">\(A\)</span> be any set. It is never possible to define an injection from the power set <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span> to <span class="math notranslate nohighlight">\(A\)</span>.
+Therefore, the power set of a countable set is always uncountable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. <strong>(a)</strong> <strong>TODO</strong></p>
+<p><strong>(b)</strong> <strong>TODO</strong></p>
+<p><strong>(c, d)</strong></p>
+<p>The shortest way to prove assertions (c) and (d) relies on two facts from elementary arithmetic:</p>
+<ol class="arabic simple">
+<li><p>There are infinitely many primes <span class="math notranslate nohighlight">\(p_1, p_2, \ldots\)</span>.</p></li>
+<li><p>Any natural number <span class="math notranslate nohighlight">\(a &gt; 1\)</span> can be uniquely decomposed (see <a class="reference internal" href="arithmetic.html#thr-infinite-primes">Theorem 4</a>)
+into a product of primes <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
+are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</span> are naturals (see <a class="reference internal" href="arithmetic.html#thr-fundamental">Theorem 7</a>)</p></li>
+</ol>
+<p>Let <span class="math notranslate nohighlight">\(\{A_i\}\)</span> be a family of sets, countable for assertion (c), finite for (d), and let</p>
+<div class="math notranslate nohighlight">
+\[\phi_i : A_i \to \mathbb{N}\]</div>
+<p>be the injection corresponding to <span class="math notranslate nohighlight">\(A_i\)</span>.</p>
+<p>Countable Union: The function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi:
+\left\{
+   \begin{array}{lr}
+       \cup_i A_i  \to \mathbb{N} \\
+       a \mapsto p_i^{\phi_i(a)} \text{ if } a \in A_i
+   \end{array}
+\right .\end{split}\]</div>
+<p>is an injection: The set <span class="math notranslate nohighlight">\(A_i\)</span> is mapped to the powers of <span class="math notranslate nohighlight">\(p_i\)</span>.</p>
+<p>Finite Crossproduct: The function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi:
+\left\{
+   \begin{array}{lr}
+       \prod_{i=1}^n A_i  \to \mathbb{N} \\
+       (a_1, a_2, \ldots, a_n) \mapsto \prod_{i=1}^n p_i^{\phi_i(a_i)}
+   \end{array}
+\right .\end{split}\]</div>
+<p>is an injection: Each <span class="math notranslate nohighlight">\((a_1, a_2, \ldots, a_n)\)</span> is mapped to the unique natural number whose decomposition
+is <span class="math notranslate nohighlight">\((\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))\)</span>.</p>
+<p><strong>c)</strong>
+<strong>TODO</strong></p>
+<p><strong>d)</strong>
+Assume there is an injection</p>
+<div class="math notranslate nohighlight">
+\[\phi: \mathcal{P}(A) \to A\]</div>
+<p>We investigate the set</p>
+<div class="math notranslate nohighlight">
+\[K = \{\phi(U) \mid  U \subseteq A, U \ne \emptyset, \phi(U) \notin U\}\]</div>
+<p>If <span class="math notranslate nohighlight">\(K\)</span> were empty, we had</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\forall U \subseteq A, U \ne \emptyset: \phi(U) \in U \\
+\Rightarrow &amp;\forall a \in A: \phi(\{a\}) \in \{a\} \\
+\Rightarrow &amp;\forall a \in A: \phi(\{a\}) = a\end{split}\]</div>
+<p>But in this case, for any subset <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with two or more elements, there would be no room left for <span class="math notranslate nohighlight">\(\phi(U)\)</span>,
+since <span class="math notranslate nohighlight">\(\phi\)</span> is injective. Therefore, <span class="math notranslate nohighlight">\(K\)</span> is not empty, and we can ask if <span class="math notranslate nohighlight">\(\phi(K)\)</span> belongs to <span class="math notranslate nohighlight">\(K\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-countable-uncountable-1">
+<span class="eqno">(10)<a class="headerlink" href="#equation-equ-countable-uncountable-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\phi(K) \in K \Rightarrow \phi(K) \notin K \\
+&amp;\phi(K) \notin K \Rightarrow \phi(K) \in K\end{split}\]</div>
+<p>This contradiction proves that there can be no injection from a power set of a set to the set itself.
+It is the formal variant of the barber who shaves all men who do not shave themselves.
+Note that, with <span class="math notranslate nohighlight">\(K\)</span> empty, contradiction <a class="reference internal" href="#equation-equ-countable-uncountable-1">(10)</a> would be meaningless: ex falso quodlibet.</p>
+</div>
+<div class="proof remark admonition" id="rem-continuum-hypothesis">
+<p class="admonition-title"><span class="caption-number">Remark 5 </span> (Continuum Hypothesis)</p>
+<section class="remark-content" id="proof-content">
+<p><strong>TODO</strong></p>
+</section>
+</div></section>
+<section id="integers">
+<h2>Integers<a class="headerlink" href="#integers" title="Link to this heading">#</a></h2>
+<p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is a <strong>semigroup with respect to addition</strong> and a <strong>semigroup with respect to multiplication</strong>.
+However, <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> lacks the negative numbers: the equation <span class="math notranslate nohighlight">\(a + x = b\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> only if <span class="math notranslate nohighlight">\(a \le b\)</span>.</p>
+<p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> of integers as the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
+While this definition is arguably concise and elegant, the question remains whether such a ring exists at all.
+The answer is yes, it does, and it can be easily constructed.
+We introduce a new element <span class="math notranslate nohighlight">\(-1\)</span> as the unique solution of <span class="math notranslate nohighlight">\(1 + x = 0\)</span> and define:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}(-1) (-1) &amp;= 1\\-a &amp;= (-1) a \text{ for } a \in \mathbb{N}\\-\!\mathbb{N} &amp;= \{-a \mid a \in \mathbb{N} \}\\\mathbb{Z} &amp;= -\!\mathbb{N} \cup \mathbb{N} \end{aligned}\end{align} \]</div>
+<p>Starting from <span class="math notranslate nohighlight">\((-1) (-1) = 1\)</span>, the basic arithmetic operations are easily constructed.
+As an example, we explain how <span class="math notranslate nohighlight">\(a - b\)</span> can be given a meaning if <span class="math notranslate nohighlight">\(a &lt; b\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[a - b = a + (-1)b = (-1)((-1)a + b) = (-1)(b - a) = - (b-a)\]</div>
+<p>Continuing in this way, the definition of addition, subtraction and multiplication on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a straightforward exercise.
+With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring.
+As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> must also contain the negative numbers <span class="math notranslate nohighlight">\(-\!\mathbb{N}\)</span>,
+the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
+<span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is countable, since it is the union of two countable sets.</p>
+</section>
+<section id="rationals">
+<h2>Rationals<a class="headerlink" href="#rationals" title="Link to this heading">#</a></h2>
+<p>The set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring but
+not a field. <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> lacks the fractions: the equation <span class="math notranslate nohighlight">\(ax = 1\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> only for <span class="math notranslate nohighlight">\(a = 1\)</span>.</p>
+<p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> of rationals as the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
+Again, the question remains whether such a field exists at all.
+The answer is yes, it does, and it can be easily constructed.
+We introduce, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>, the inverse <span class="math notranslate nohighlight">\(a^{-1}\)</span>, or synonymously <span class="math notranslate nohighlight">\(1/a\)</span>, as the unique solution of <span class="math notranslate nohighlight">\(ax = 1\)</span> and define:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}&amp;a a^{-1} = 1 \text{ for } a \in \mathbb{Z}-\{0\}\\&amp;\mathbb{Q} = \{ab^{-1} \mid a \in \mathbb{Z}, b \in \mathbb{Z}-\{0\}\}\end{aligned}\end{align} \]</div>
+<p>Starting from <span class="math notranslate nohighlight">\(a a^{-1} = 1\)</span>, we derive, as an example, the multiplication rule:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;a a^{-1} = b b^{-1} = 1 \\
+&amp;\Rightarrow a a^{-1} b b^{-1} = (ab) (a^{-1} b^{-1}) = 1 \\
+&amp;\Rightarrow (ab)^{-1} = a^{-1} b^{-1} \\\end{split}\]</div>
+<p>and infer the cancellation law:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a b^{-1} &amp;= (n n^{-1}) (ab^{-1}) \\
+&amp;= (na) (n^{-1} b^{-1}) \\
+&amp;= (n a) (nb)^{-1}\end{split}\]</div>
+<p>Continuing in this way, the definition of addition, subtraction, multiplication, and division on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a straightforward exercise.
+With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field.
+As any field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> must also contain the rationals,
+the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is indeed the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
+<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is countable, since it is the cross-product of two countable sets.</p>
+</section>
+<section id="reals">
+<h2>Reals<a class="headerlink" href="#reals" title="Link to this heading">#</a></h2>
+<p>What worked fine for integers and rationals proves to be more tricky for reals.
+The set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field with many holes: the equation <span class="math notranslate nohighlight">\(x^2 = a\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> only for square numbers, but not for, say, <span class="math notranslate nohighlight">\(a=2\)</span>.
+<span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> famously does not contain <span class="math notranslate nohighlight">\(\sqrt 2, \pi, e\)</span>, and many other numbers.
+It is tempting to think of the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of real numbers as the <strong>smallest set containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> with no holes</strong>.
+While this idea captures the essence of the continuum, it lamentably lacks rigour.
+The rest of this section is about curing this defect. The key concept is the Cauchy sequence, a formalization of the idea of a hole.
+The following definitions are, for now, restricted to rationals (even the epsilons are rational!) because that’s all we have.
+But the definitions remain valid, of course, in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and in any metric space.</p>
+<div class="proof definition admonition" id="def-convergence">
+<p class="admonition-title"><span class="caption-number">Definition 8 </span> (Convergence of Rational Sequences)</p>
+<section class="definition-content" id="proof-content">
+<p><strong>(a)</strong>
+We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> <strong>convergent to <span class="math notranslate nohighlight">\(x\)</span></strong>, written as</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} x_n = x\]</div>
+<p>iff <span class="math notranslate nohighlight">\(\left | x_n - x \right |\)</span> becomes arbitrariliy small:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall n &gt; n_0(\epsilon) : \left | x_n - x \right |  &lt; \epsilon\]</div>
+<p><strong>(b)</strong>
+We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a <strong>Cauchy sequence</strong>
+iff <span class="math notranslate nohighlight">\(\left | x_m - x_n \right |\)</span> becomes arbitrariliy small:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall m, n &gt; n_0(\epsilon) : \left | x_m - x_n \right |  &lt; \epsilon\]</div>
+<p><strong>(c)</strong>
+We call two Cauchy sequences <span class="math notranslate nohighlight">\(\{x_n\}, \{y_n\}\)</span> <strong>equivalent</strong>
+iff <span class="math notranslate nohighlight">\(\left | x_n - y_n \right |\)</span> becomes arbitrariliy small:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0 : \exists n_0(\epsilon) \in \mathbb{N} : \forall n &gt; n_0(\epsilon) : \left | x_n - y_n \right |  &lt; \epsilon\]</div>
+<p>This is written as:</p>
+<div class="math notranslate nohighlight">
+\[\{x_n\} \sim \{y_n\}\]</div>
+<p><strong>(d)</strong>
+We call a set <span class="math notranslate nohighlight">\(A\)</span> complete iff every Cauchy sequence converges.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-convergent-sequences">
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Arithmetic on Sequences)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>a)</strong> Sum, difference, product, and quotient of convergent sequences are convergent and
+converge to the sum, difference, product, and quotient of their limits. For the denominator <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require that
+<span class="math notranslate nohighlight">\(\lim_{n \to \infty} y_n \ne 0\)</span>.</p>
+<p><strong>b)</strong> Sum, difference, product, and quotient of Cauchy sequences are Cauchy sequences.
+For the denominator  <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require an <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and an <span class="math notranslate nohighlight">\(n_0 \in \mathbb{N}\)</span> such that
+<span class="math notranslate nohighlight">\(|y_n| &gt; \epsilon\)</span> for all <span class="math notranslate nohighlight">\(n &gt; n_0\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only prove that the quotient of two Cauchy sequences <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, <span class="math notranslate nohighlight">\(\{y_n\}\)</span> is again a Cauchy sequence.</p>
+<p>As <span class="math notranslate nohighlight">\(\{|y_n|\}\)</span> is positive and bounded, we can choose <span class="math notranslate nohighlight">\(\epsilon_0, n_0, M\)</span> such that <span class="math notranslate nohighlight">\(\epsilon_0 \le |y_n| \le M\)</span> for all <span class="math notranslate nohighlight">\(n &gt; n_0\)</span>.
+Then:</p>
+<div class="math notranslate nohighlight">
+\[\left | \frac{x_n}{y_n} - \frac{x_m}{y_m} \right | = \left | \frac{x_n y_m - x_m y_n}{y_m y_n} \right | 
+\le \frac{1}{\epsilon_0^2} \left | x_n y_m - x_m y_n \right | \le \frac{M}{\epsilon_0^2} \left | x_n - x_m \right |\]</div>
+<p>This proves the assertion.</p>
+</div>
+<p>With these definitions, we can repeat the approach that worked for integers and rationals.
+We introduce the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> of reals as the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.
+As before, the question remains whether such a set exists at all.
+The answer is yes, it does, and goes back to Cantor. He defined</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}&amp;\mathbb{S} = \text{ set of all Cauchy sequences in } \mathbb{Q}\\&amp;\mathbb{R} = \mathbb{S}/\sim\end{aligned}\end{align} \]</div>
+<p>This reads as follows: <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of the equivalence classes of all Cauchy sequences, or, more informally:
+It is the set of whatever number can be approximated by rationals. This gives us the following theorem for free:</p>
+<div class="proof theorem admonition" id="thr-rationals-reals">
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Rationals and Reals)</p>
+<section class="theorem-content" id="proof-content">
+<p>Every real number can be approximated by rationals to any degree of precision.</p>
+</section>
+</div><p>Example:
+The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_0 &amp;= 2 \\
+x_{n+1} &amp;= x_n - \frac{2-x_n^2}{2x_n}\end{split}\]</div>
+<p>is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> and converges to <span class="math notranslate nohighlight">\(\sqrt 2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
+Cantor’s construction identifies the sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> (and all sequences <span class="math notranslate nohighlight">\(\{y_n\}\)</span> with <span class="math notranslate nohighlight">\(\{y_n\} \sim \{x_n\}\)</span>)
+with its limit <span class="math notranslate nohighlight">\(\sqrt 2\)</span>. The notation</p>
+<div class="math notranslate nohighlight">
+\[\{x_n\} = \sqrt 2\]</div>
+<p>is a shorthand representation of this fact.</p>
+<p>All basic arithmetic are extended to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> in a natural way. Example:
+For <span class="math notranslate nohighlight">\(x = \{x_n\}\)</span>, <span class="math notranslate nohighlight">\(y = \{y_n\}\)</span> we define:</p>
+<div class="math notranslate nohighlight">
+\[x + y = \{x_n\} + \{y_n\}\]</div>
+<p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 13</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span> and of all other arithmetic operations.
+Therefore, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field.</p>
+<p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> not only inherits the basic arithmetics but also the topology:
+We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
+an undertaking that involves a considerable number of epsilons.</p>
+<div class="proof definition admonition" id="def-convergence-reals">
+<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Convergence of Real Sequences)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(r, s\)</span> be real numbers and <span class="math notranslate nohighlight">\(\{r_n\}_n\)</span> a sequence of reals numbers.
+Here is how they are represented by their defining Cauchy series of rationals:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}r &amp;= \{y_k\}_k\\s &amp;= \{z_k\}_k\\r_n &amp;= \{x_{n_k}\}_k\\\{r_n\}_n &amp;= \{\{x_{n_k}\}\}_n\end{aligned}\end{align} \]</div>
+<p>Each <span class="math notranslate nohighlight">\(r_n\)</span> corresponds to (or: is represented by, can be identified with) a Cauchy sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span>,
+and the sequence <span class="math notranslate nohighlight">\(\{r_n\}_n\)</span> is itself a sequence of Cauchy sequences.
+This can be represented as a matrix, with a row for each <span class="math notranslate nohighlight">\(r_n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}r_1 &amp; = \{x_{1_k}\} = \{x_{1_1}, x_{1_2}, \ldots, x_{1_k}, \ldots \} \\r_2 &amp; = \{x_{2_k}\} = \{x_{2_1}, x_{2_2}, \ldots, x_{2_k}, \ldots \} \\&amp;\vdots\\r_n &amp; = \{x_{n_k}\} = \{x_{n_1}, x_{n_2}, \ldots, x_{n_k}, \ldots \}\\&amp;\vdots\end{aligned}\end{align} \]</div>
+<p><strong>a) Distance of reals</strong><br />
+We define what it means for a real number to be close to zero or to another real number:</p>
+<div class="math notranslate nohighlight" id="equation-def-convergence-reals-1">
+<span class="eqno">(11)<a class="headerlink" href="#equation-def-convergence-reals-1" title="Link to this equation">#</a></span>\[\begin{split}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon \\
+\left | r - s \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k - z_k \right | &lt; \epsilon\end{split}\]</div>
+<p>Note that the equivalence of rational Cauchy sequences is the same as the equality of their corresponding reals:</p>
+<div class="math notranslate nohighlight">
+\[r = s \Leftrightarrow \{y_k\}_k \sim \{z_k\}_k\]</div>
+<p><strong>b) Convergence of reals</strong><br />
+We define what it means for a sequence of real numbers to converge to zero or to another real number:</p>
+<div class="math notranslate nohighlight" id="equation-def-convergence-reals-2">
+<span class="eqno">(12)<a class="headerlink" href="#equation-def-convergence-reals-2" title="Link to this equation">#</a></span>\[\begin{split}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n \right | &lt; \epsilon \\
+\lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n - r \right | &lt; \epsilon\end{split}\]</div>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-2">(12)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(11)</a>, gives us the long version:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} \right | &lt; \epsilon\\\lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} - y_k \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
+<p><strong>c) Cauchy convergence of reals</strong><br />
+We define what it means for a sequence of real numbers to be a Cauchy sequence: The sequence <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span>
+is a Cauchy sequence iff:</p>
+<div class="math notranslate nohighlight" id="equation-def-convergence-reals-3">
+<span class="eqno">(13)<a class="headerlink" href="#equation-def-convergence-reals-3" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-3">(13)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(11)</a>, gives us the long version:</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_0(\epsilon, m, n): \forall k &gt; k_0(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+</section>
+</div><p>We take as an example the sequences</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}x_{n_0} &amp;= 2 + \frac{1}{n} \\x_{n_{k+1}} &amp;= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n_k}}\end{aligned}\end{align} \]</div>
+<p>For each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span> is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> that converges in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\sqrt{2 + \frac{1}{n}}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<div class="proof theorem admonition" id="thr-R-completeness">
+<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is Complete)</p>
+<section class="theorem-content" id="proof-content">
+<p>Every Cauchy sequence <span class="math notranslate nohighlight">\(\{r_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> converges.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\{r_n\}\)</span> be a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.
+We proceed in two steps: (1) We show that the diagonal sequence <span class="math notranslate nohighlight">\(r\)</span> is a Cauchy sequence. (2) We show that <span class="math notranslate nohighlight">\(\{r_n\}\)</span> converges to <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<p>Every number <span class="math notranslate nohighlight">\(r_n\)</span> in that sequence is represented by a Cauchy sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span> of rationals:</p>
+<div class="math notranslate nohighlight">
+\[r_n = \{x_{n_k}\}_k\]</div>
+<p>Each <span class="math notranslate nohighlight">\(r_n\)</span> being a Cauchy sequence, we get:</p>
+<div class="math notranslate nohighlight" id="equation-thr-r-completeness-1">
+<span class="eqno">(14)<a class="headerlink" href="#equation-thr-r-completeness-1" title="Link to this equation">#</a></span>\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
+<p>The sequence  <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span> being a Cauchy sequence itself, we get:</p>
+<div class="math notranslate nohighlight" id="equation-thr-r-completeness-2">
+<span class="eqno">(15)<a class="headerlink" href="#equation-thr-r-completeness-2" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+<p>We conclude that the diagonal sequence  <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is also Cauchy sequence.
+To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and, using inequality <a class="reference internal" href="#equation-thr-r-completeness-1">(14)</a> twice
+and <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a> once, get the inequality:</p>
+<div class="math notranslate nohighlight">
+\[\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | &lt; 3 \epsilon\]</div>
+<p>So, the sequence <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is a Cauchy sequence and represents a real number <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[r = \{x_{n_n}\}\]</div>
+<p>It remains to show that</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty}r_n = r\]</div>
+<p>We observe that in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a> we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like.
+Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 9</a>):</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
+<p>which is what we want.</p>
+</div>
+<p>This proof, however dry or abstract it might appear, is straightforward.
+Proofs are all about <em>applying</em> known results to obtain new ones. This is done twice:
+We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
+and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(15)</a>,
+we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is how “forall” is meant to be employed.</p>
+<div class="proof theorem admonition" id="thr-R-uncountable">
+<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a)</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(B \ge 2\)</span> be a natural number, the <em>basis</em>.
+Every rational number <span class="math notranslate nohighlight">\(x = p/q \in [0, 1)\)</span> can be represented by a series</p>
+<div class="math notranslate nohighlight">
+\[\frac{p}{q} = \sum_{k=1}^\infty \frac{a_k}{B^k}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_k \in \{0,1, \ldots, B-1\}\)</span>. For <span class="math notranslate nohighlight">\(B = 10\)</span>, these are the decimal fractions.</p>
+<p><strong>(b)</strong>
+Every open interval of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. <strong>(a)</strong>
+We are going to generalize the decimal expansion as it is taught at secondary schools.
+Look at the sequences <span class="math notranslate nohighlight">\(\{a_k\}, \{r_k\}\)</span> defined by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;a_1 = pB // q \\
+&amp;r_1 = pB \, \% \, q \\
+\\
+&amp;a_{n+1} = r_n // q \\
+&amp;r_{n+1} = r_n \, \% \, q\end{split}\]</div>
+<p>The definition of <code class="docutils literal notranslate"><span class="pre">%</span></code> and <code class="docutils literal notranslate"><span class="pre">//</span></code> implies:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}pB &amp;= (pB // q)q + pB \, \% \, q \\
+&amp;=  qa_1 + r_1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}r_n B &amp;= (r_nB // q)q + r_nB \, \% \, q \\
+&amp;=  qa_{n+1} + r_{n+1}\end{split}\]</div>
+<p>Dividing by <span class="math notranslate nohighlight">\(qB\)</span> or <span class="math notranslate nohighlight">\(qB^{n+1}\)</span> resp. gives:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p}{q} = \frac{a_1}{B} + \frac{r_1}{qB} \]</div>
+<div class="math notranslate nohighlight">
+\[\frac{r_n}{qB^n} = \frac{a_{n+1}}{B^{n+1}} + \frac{r_{n+1}}{qB^{n+1}}\]</div>
+<p>from which follows for any <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-r-uncountable-1">
+<span class="eqno">(16)<a class="headerlink" href="#equation-equ-r-uncountable-1" title="Link to this equation">#</a></span>\[\frac{p}{q} = \sum_{k=1}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}\]</div>
+<p><strong>(b)</strong> The proof uses the famous diagonalization method.
+We prove in a first step that it is impossible to enumerate the rationals in <span class="math notranslate nohighlight">\([0,1)\)</span>.
+Assume that <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is such an enumeration and</p>
+<div class="math notranslate nohighlight">
+\[x_n = \sum_{k=0}^\infty \frac{a_{n_k}}{2^k}\]</div>
+<p>is the binary representation of <span class="math notranslate nohighlight">\(x_n\)</span> as presented in part (a). Then</p>
+<div class="math notranslate nohighlight">
+\[y = \sum_{k=0}^\infty \frac{1- a_{k_k}}{2^k}\]</div>
+<p>cannot be one of the <span class="math notranslate nohighlight">\(x_n\)</span> because <span class="math notranslate nohighlight">\(y = x_{n^*}\)</span> for some <span class="math notranslate nohighlight">\(n^*\)</span>
+would imply:</p>
+<div class="math notranslate nohighlight">
+\[1 - a_{{n^*}_{n^*}} = a_{{n^*}_{n^*}}\]</div>
+<p>But this is impossible, as <span class="math notranslate nohighlight">\(a_{{n^*}_{n^*}}\)</span> is a natural number.</p>
+<p>To prove that any open interval <span class="math notranslate nohighlight">\((a, b)\)</span> is uncountable we use the injection:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi:
+\left\{
+   \begin{array}{lr}
+       (0, 1) \to  (a, b) \\
+       x \mapsto a + x(b-a)
+   \end{array}
+\right .\end{split}\]</div>
+</div>
+<p>As any complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> necessarily contains the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>,
+it is indeed the <strong>smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span></strong>.
+From now on, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> will be our home. Whatever happens, happens in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id5">
+<div role="list" class="citation-list">
+<div class="citation" id="id84" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Cou55</a><span class="fn-bracket">]</span></span>
+<p>Richard Courant. <em>Vorlesungen über Differential- und Integralrechnung</em>. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.</p>
+</div>
+<div class="citation" id="id82" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">For16</a><span class="fn-bracket">]</span></span>
+<p>Otto Forster. <em>Analysis 1: Differential- und Integralrechnung einer Veränderlichen</em>. Springer Spektrum, 12th edition edition, 2016. First published 1976.</p>
+</div>
+<div class="citation" id="id81" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Heu09</a><span class="fn-bracket">]</span></span>
+<p>Harro Heuser. <em>Lehrbuch der Analysis Teil 1</em>. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.</p>
+</div>
+<div class="citation" id="id83" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Rud76</a><span class="fn-bracket">]</span></span>
+<p>Walter Rudin. <em>Principles of Mathematical Analysis</em>. McGraw-Hill, 3rd edition edition, 1976. First published 1953.</p>
+</div>
+</div>
+</div>
+<div style="margin-bottom: 100px;"></div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./mathematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="arithmetic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">First Steps in Arithmetic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="calculus.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">First Steps in Calculus</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reals">Reals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

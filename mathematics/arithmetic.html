@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/arithmetic';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="First Steps in Calculus" href="calculus.html" />
-    <link rel="prev" title="Modern Physics: One-Pager" href="../physics/29-physics-one-page.html" />
+    <link rel="next" title="From Naturals to Reals" href="numbers.html" />
+    <link rel="prev" title="Baysian Tests" href="bayesian-tests.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -208,10 +208,11 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">First Steps in Arithmetic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -476,6 +477,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="first-steps-in-arithmetic">
 <h1>First Steps in Arithmetic<a class="headerlink" href="#first-steps-in-arithmetic" title="Link to this heading">#</a></h1>
+<p><em>Johannes Siedersleben, October 2025</em></p>
 <p>This note takes a deliberately short, constructive path through the core facts of elementary number theory—enough to make modular arithmetic usable,
 computable, and conceptually clean. We begin with the integer division theorem and use it to formalize the operators <code class="docutils literal notranslate"><span class="pre">//</span></code> (integer quotient) and <code class="docutils literal notranslate"><span class="pre">%</span></code> (remainder).
 From there, congruences are introduced as a <strong>logical</strong> relation (a statement with a truth value), in contrast to the <strong>numerical</strong> operators <code class="docutils literal notranslate"><span class="pre">//</span></code> and <code class="docutils literal notranslate"><span class="pre">%</span></code>.
@@ -608,29 +610,37 @@ then <span class="math notranslate nohighlight">\(c \equiv 0 \bmod b\)</span></p
 <p>Addition and multiplication operate on residue classes in much the same way as they do on integers.
 We now turn to the division of residue classes which requires a bit more attention.
 <a class="reference internal" href="#lem-euler">Lemma 2</a> is about the division of congruences.
-It includes the celebrated Euler’s Lemma, which is the key to <a class="reference internal" href="#thr-fundamental">Theorem 6</a>,
-the Fundamental Theorem of Arithmetic. <a class="reference internal" href="#thr-euler">Theorem 7</a> is a first approach to solving
+It includes the celebrated Euler’s Lemma, which is the key to <a class="reference internal" href="#thr-fundamental">Theorem 7</a>,
+the Fundamental Theorem of Arithmetic. <a class="reference internal" href="#thr-euler">Theorem 8</a> is a first approach to solving
 equations of the form <span class="math notranslate nohighlight">\(ax \equiv 1 \bmod m\)</span>, that is, finding the inverse modulo <span class="math notranslate nohighlight">\(m\)</span>.
 But we need to introduce some new concepts before we can get to that.</p>
 <div class="proof definition admonition" id="primes">
 <p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
 <section class="definition-content" id="proof-content">
-<p>(i) The <em>greatest common divisor</em> of two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the largest
+<p><strong>(a)</strong> The <em>greatest common divisor</em> of two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the largest
 non-negative integer <span class="math notranslate nohighlight">\(d\)</span> such that <span class="math notranslate nohighlight">\(a \equiv 0 \bmod d\)</span> and <span class="math notranslate nohighlight">\(b \equiv 0 \bmod d\)</span>. It is denoted
 as <span class="math notranslate nohighlight">\(\gcd(a,b)\)</span> or simply as <span class="math notranslate nohighlight">\((a,b)\)</span>. Note that, for any integer <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(\gcd(a,0) = \gcd(0,a) = a\)</span>.</p>
-<p>(ii) The <em>least common multiple</em> of two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the smallest non-negative
+<p><strong>(b)</strong>  The <em>least common multiple</em> of two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the smallest non-negative
 integer <span class="math notranslate nohighlight">\(c\)</span> such that <span class="math notranslate nohighlight">\(c \equiv 0 \bmod a\)</span> and <span class="math notranslate nohighlight">\(c \equiv 0 \bmod b\)</span>. It is denoted as <span class="math notranslate nohighlight">\(\text{lcm}(a,b)\)</span>.</p>
-<p>(iii) An integer <span class="math notranslate nohighlight">\(p\)</span> is called <em>prime</em> if it is greater than 1 and has no divisors other than 1 and itself.
+<p><strong>(c)</strong>  An integer <span class="math notranslate nohighlight">\(p\)</span> is called <em>prime</em> if it is greater than 1 and has no divisors other than 1 and itself.
 Two integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are <em>coprime</em> iff <span class="math notranslate nohighlight">\((a,b) = 1\)</span>.</p>
-<p>(iv)<br />
+<p><strong>(d)</strong><br />
 <span class="math notranslate nohighlight">\(U_m = \{a \in \mathbb{Z}| 1 \le a &lt; m, (a,m) = 1 \}\)</span><br />
 <span class="math notranslate nohighlight">\(\mathbb{Z}^\times_m = \{\overline{a}| a \in U_m \}\)</span></p>
 <p>(iv) The Euler function <span class="math notranslate nohighlight">\(\phi(m)\)</span> denotes the number of integers between 1 and <span class="math notranslate nohighlight">\(m\)</span> that are coprime to <span class="math notranslate nohighlight">\(m\)</span>:</p>
 <p><span class="math notranslate nohighlight">\(\phi(m) = |U_m| = |\mathbb{Z}^\times_m|\)</span></p>
 <p>So, <span class="math notranslate nohighlight">\(\phi(p) = p - 1\)</span> iff <span class="math notranslate nohighlight">\(p\)</span> is prime.</p>
 </section>
-</div><div class="proof theorem admonition" id="thr-gcd-lcm">
+</div><div class="proof theorem admonition" id="thr-infinite-primes">
 <p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>There are inifinitely many primes</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. <strong>TODO</strong></p>
+</div>
+<div class="proof theorem admonition" id="thr-gcd-lcm">
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>For any integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, we have</p>
 <p><span class="math notranslate nohighlight">\(\gcd(a,b) \cdot \text{lcm}(a,b) = a \cdot b\)</span>.</p>
@@ -641,7 +651,7 @@ It also holds that <span class="math notranslate nohighlight">\((a \cdot b) / \t
 and we get: <span class="math notranslate nohighlight">\(a \cdot b \le \gcd(a,b) \cdot \text{lcm}(a,b) \le a \cdot b\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="phi-prime">
-<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(p\)</span> be a prime and <span class="math notranslate nohighlight">\(\alpha\)</span> be a positive integer. Then:</p>
 <div class="math notranslate nohighlight" id="equation-equ-phi-prime">
@@ -670,7 +680,7 @@ which is the same as <span class="math notranslate nohighlight">\(a \equiv b \bm
 <p>(iii) is a reformulation of (ii).</p>
 </div>
 <div class="proof theorem admonition" id="thr-fundamental">
-<p class="admonition-title"><span class="caption-number">Theorem 6 </span> (Fundamental Theorem of Arithmetic)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 7 </span> (Fundamental Theorem of Arithmetic)</p>
 <section class="theorem-content" id="proof-content">
 <p>Any integer <span class="math notranslate nohighlight">\(a\)</span> with <span class="math notranslate nohighlight">\(|a| &gt; 1\)</span> can be uniquely decomposed
 into a product of primes: <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
@@ -692,7 +702,7 @@ Division by <span class="math notranslate nohighlight">\(p_1\)</span> gives <spa
 We repeat the procedure until we arrive at <span class="math notranslate nohighlight">\(\{p_1,...,p_n\} = \{q_1,...,q_n\}\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="thr-euler">
-<p class="admonition-title"><span class="caption-number">Theorem 7 </span> (Euler’s Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 8 </span> (Euler’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(m &gt; 1\)</span> be integers and <span class="math notranslate nohighlight">\((a, m) = 1\)</span>. Then <span class="math notranslate nohighlight">\(a^{\phi(m)} \equiv 1 \bmod m\)</span>.</p>
 </section>
@@ -711,7 +721,7 @@ So, all elements of <span class="math notranslate nohighlight">\(aU_m\)</span> a
 </div><div class="proof admonition" id="proof">
 <p>Proof. This is Euler’s theorem with <span class="math notranslate nohighlight">\(m = p\)</span> and <span class="math notranslate nohighlight">\(\phi(m) = p - 1\)</span>.</p>
 </div>
-<div class="proof remark admonition" id="remark-14">
+<div class="proof remark admonition" id="remark-15">
 <p class="admonition-title"><span class="caption-number">Remark 2 </span> (The Inverse of Euler’s Theorem is False)</p>
 <section class="remark-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(m\)</span> be coprime integers.
@@ -728,10 +738,10 @@ Let <span class="math notranslate nohighlight">\(d = \text{ord}_m(a)\)</span> an
 So, <span class="math notranslate nohighlight">\(\text{ord}_m(a)\)</span> divides <span class="math notranslate nohighlight">\(\phi(m)\)</span>. It can be computed using the relationship</p>
 <p><span class="math notranslate nohighlight">\(\text{ord}_m(a) = \min \{k \in \mathbb{N} | k | \phi(m) \ \text{and} \ a^k \equiv 1 \bmod m\}\)</span></p>
 </section>
-</div><div class="proof remark admonition" id="remark-15">
+</div><div class="proof remark admonition" id="remark-16">
 <p class="admonition-title"><span class="caption-number">Remark 3 </span> (Modular Inverses)</p>
 <section class="remark-content" id="proof-content">
-<p><a class="reference internal" href="#thr-euler">Theorem 7</a> is a first step towards modular inverses, because</p>
+<p><a class="reference internal" href="#thr-euler">Theorem 8</a> is a first step towards modular inverses, because</p>
 <p><span class="math notranslate nohighlight">\(a^{\phi(m)- k}a^k \equiv 1 \bmod m\)</span>,</p>
 <p>implies</p>
 <p><span class="math notranslate nohighlight">\(a^{-k} \equiv a^{\phi(m)- k} \bmod m\)</span>.</p>
@@ -776,7 +786,7 @@ for any <span class="math notranslate nohighlight">\(a\)</span>, <span class="ma
 </div><p>For any <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(v \in \mathbb{Z}\)</span>, the set <span class="math notranslate nohighlight">\(M = \{ux + vy | x, y \in \mathbb{Z}\}\)</span> is a module,
 the smallest module containing <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span>.</p>
 <div class="proof theorem admonition" id="thr-modules">
-<p class="admonition-title"><span class="caption-number">Theorem 8 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Every module <span class="math notranslate nohighlight">\(M\)</span> can be written as <span class="math notranslate nohighlight">\( M = d \ \mathbb{Z}\)</span> with <span class="math notranslate nohighlight">\(d = \min\{x \in M\ | x &gt; 0\}\)</span>.</p>
 </section>
@@ -829,7 +839,7 @@ From the definition it is clear that:</p>
 <p><span class="math notranslate nohighlight">\(a x_{n-1} + b y_{n-1} = r_{n-1} = (a, b)\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="thr-bezout">
-<p class="admonition-title"><span class="caption-number">Theorem 9 </span> (Bezout’s Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 10 </span> (Bezout’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, and <span class="math notranslate nohighlight">\(m\)</span> be  integers. Then:</p>
 <p>(i)
@@ -879,7 +889,7 @@ elements of <span class="math notranslate nohighlight">\(\mathbb{Z}_2^\times = \
 <span class="math notranslate nohighlight">\(\phi(6) = \phi(2) \ \phi(3) = 1 \cdot 2 = 2\)</span>.</p>
 <p>This is a simple, non-trivial instance of the Chinese Remainder Theorem.</p>
 <div class="proof theorem admonition" id="thr-chinese-remainder">
-<p class="admonition-title"><span class="caption-number">Theorem 10 </span> (Chinese Remainder Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 11 </span> (Chinese Remainder Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(m_1, m_2, \ldots, m_n\)</span> be pairwise coprime integers, that is <span class="math notranslate nohighlight">\((m_i, m_j) = 1\)</span> for <span class="math notranslate nohighlight">\(i \ne j\)</span>,<br />
 <span class="math notranslate nohighlight">\(m = m_1 m_2 \cdots m_n\)</span>,<br />
@@ -978,20 +988,20 @@ The inverse of <span class="math notranslate nohighlight">\(q_i \bmod m_i\)</spa
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../physics/29-physics-one-page.html"
+       href="bayesian-tests.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Modern Physics: One-Pager</p>
+        <p class="prev-next-title">Baysian Tests</p>
       </div>
     </a>
     <a class="right-next"
-       href="calculus.html"
+       href="numbers.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">First Steps in Calculus</p>
+        <p class="prev-next-title">From Naturals to Reals</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
