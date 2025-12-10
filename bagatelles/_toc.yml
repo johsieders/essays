@@ -45,14 +45,17 @@ parts:
         
   - caption: Mathematics
     chapters:
-      - file: mathematics/arithmetic
-        title: First Steps in Arithmetic
-      - file: mathematics/calculus
-        title: First Steps in Calculus
       - file: mathematics/bayesian-decisions
         title: Bayesian Decision-Making *
       - file: mathematics/bayesian-tests
         title: Bayesian Tests
+      - file: mathematics/arithmetic
+        title: First Steps in Arithmetic
+      - file: mathematics/numbers
+        title: From Naturals to Reals
+      - file: mathematics/calculus
+        title: First Steps in Calculus
+      
 
   - caption: History
     chapters:
