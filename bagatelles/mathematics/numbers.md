@@ -126,20 +126,31 @@ The following is a formal definition of infinity, with no handwaving, no dots, a
 
 ````{prf:definition} Infinity
 :label: def-infinity
-**a)** A set $A$ is **infinite** iff there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+**a)** A set $A$ is **finite** iff there is an $n \in \mathbb{N}$ and an injection $\phi: A \to \{0, 1, \ldots, n\}$.
 
-**b)** A set $A$ is **countable** iff there is an injection $\phi: A \to \mathbb{N}$. 
-This injection is often called an *enumeration*, a way of putting all elements of $A$ in a sequential order.
+**b)** A set $A$ is **infinite** iff there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+
+**c)** A set $A$ is **countable** iff there is an injection $\phi: A \to \mathbb{N}$. 
+This injection is often called an **enumeration**, a way of arranging all elements of $A$ in a sequential order.
 ````
 The set $\mathbb{N}$ is infinite because the successor function $S$ is exactly such an injection, with $B = \mathbb{N} - \{0\}$.
 That's a formal version of Hilbert's Hotel, which can always accommodate an extra guest by moving everyone else up one room. 
 Another injection would be $\phi(n) = 10^n$, with $B = \{1, 10, 100, \ldots\}$. $B$ is a set with huge gaps, and yet, 
 it's still infinite: you never run out of natural numbers. 
 
+The equivalence of **not finite** and **infinite** in {prf:ref}`def-infinity` is not obvious. 
+To prove it, we need a weak form of the axiom of choice.
+
+
+````{prf:definition} Axiom of Countable Chioce
+:label: def-axiom-countable-choice
+Every not finite set contains a countably infinite subset
+````
+
 ````{prf:theorem} Countable and Uncountable Sets
 :label: thr-countable-uncountable
 
-**(a)** If $A$ is infinite iff  $A - F \ne \emptyset$ for any finite subset $F$ of $A$.
+**(a)** If $A$ is infinite iff  it is not finite.
 
 **(b)** If $A$ is countably infinite iff there is an bijection $\phi: A \to \mathbb{N}$. 
 
@@ -152,19 +163,56 @@ Therefore, the power set of a countable set is always uncountable.
 ````
 ````{prf:proof}
 
-**(a)** **TODO**
+**(a)**
+Let $A$ be infinite and assume it to be finite. Let $\phi : A \to B$ as claimed above. 
+But $\left |\phi(A) \right | = \left | A \right | > \left | B \right | = \left | \phi(A) \right |$.
+So $A$ cannot be finite, it must be not finite.
 
-**(b)** **TODO**
+Let $A$ be not finite, and $\{a_0, a_1, \ldots \}$ be a countably infinite subset as granted by {prf:ref}`def-axiom-countable-choice`.
+The function $\phi$ defined by:
+
+```{math}
+\phi:
+\left\{
+   \begin{array}{l}
+       A &\to &A - \{a_0\} \\
+       a_k &\mapsto &a_{k+1} \text{ for } a_k \in \{a_0, a_1, \ldots \} \\
+       x &\mapsto &x \text{ for } x \notin \{a_0, a_1, \ldots \}
+   \end{array}
+\right .
+```
+
+is the desired injection.
+
+**(b)** If there is a bijection $\phi : A \to \mathbb{N}$, then $A$ is countable and infinite, hence countably infinite.
+
+Now, let $A$ be countably infinite and $\phi : A \to \mathbb{N}$ an injection. We set:
+
+```{math}
+&n_0 = \min \phi(A) \\
+&a_0 = \phi^{-1}(n_0) \\
+\\
+&n_k = \min \phi(A - \{a_0, a_1, \ldots, a_{k-1} \}) \\
+&a_k = \phi^{-1}(n_k) 
+```
+The function $\psi$ defined by:
+
+```{math}
+\psi(a_k) = k
+```
+is the desired bijection: it is defined for all $a_k$, it is an injection by construction, 
+and it is a surjection because of $\psi(A) = \mathbb{N}$.
+
 
 **(c, d)**
 
 The shortest way to prove assertions (c) and (d) relies on two facts from elementary arithmetic:
  
-1. There are infinitely many primes $p_1, p_2, \ldots$.
-
-2. Any natural number $a > 1$ can be uniquely decomposed (see {prf:ref}`thr-infinite-primes`)
+1. Any natural number $a > 1$ can be uniquely decomposed 
   into a product of primes $a = \prod_{i=1}^n p_i^{\alpha_i}$ where $p_i$
-  are prime numbers and $\alpha_i$ are naturals (see {prf:ref}`thr-fundamental`)
+  are prime numbers and $\alpha_i$ are naturals (see {prf:ref}`thr-fundamental`).
+  
+2. There are infinitely many primes $p_1, p_2, \ldots$ (see {prf:ref}`thr-infinite-primes`).
 
 Let $\{A_i\}$ be a family of sets, countable for assertion (c), finite for (d), and let
 
@@ -173,7 +221,7 @@ Let $\{A_i\}$ be a family of sets, countable for assertion (c), finite for (d), 
 ```
 be the injection corresponding to $A_i$. 
 
-Countable Union: The function
+**(c) Countable Union**: The function
 
 ```{math}
 \phi:
@@ -187,7 +235,7 @@ Countable Union: The function
    
 is an injection: The set $A_i$ is mapped to the powers of $p_i$.
 
-Finite Crossproduct: The function
+**(d) Finite Crossproduct**: The function
 
 ```{math}
 \phi:
@@ -202,10 +250,8 @@ Finite Crossproduct: The function
 is an injection: Each $(a_1, a_2, \ldots, a_n)$ is mapped to the unique natural number whose decomposition
 is $(\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))$.
 
-**c)** 
-**TODO**
 
-**d)** 
+**e)** 
 Assume there is an injection
 ```{math}
 \phi: \mathcal{P}(A) \to A
@@ -215,7 +261,7 @@ We investigate the set
 ```{math}
 K = \{\phi(U) \mid  U \subseteq A, U \ne \emptyset, \phi(U) \notin U\}
 ```
-If $K$ were empty, we had
+If $K$ were empty, we would have
 
 ```{math}
 &\forall U \subseteq A, U \ne \emptyset: \phi(U) \in U \\
@@ -235,19 +281,13 @@ It is the formal variant of the barber who shaves all men who do not shave thems
 Note that, with $K$ empty, contradiction [](#equ-countable-uncountable-1) would be meaningless: ex falso quodlibet.
 ````
 
-````{prf:remark} Continuum Hypothesis
-:label: rem-continuum-hypothesis
-
-**TODO**
-````
-
 ## Integers
 
 The set $\mathbb{N}$ is a **semigroup with respect to addition** and a **semigroup with respect to multiplication**.
 However, $\mathbb{N}$ lacks the negative numbers: the equation $a + x = b$ is solvable in $\mathbb{N}$ only if $a \le b$. 
 
 We introduce the set $\mathbb{Z}$ of integers as the **smallest ring containing $\mathbb{N}$**. 
-While this definition is arguably concise and elegant, the question remains whether such a ring exists at all. 
+While this definition is concise, perhaps even elegant, the question remains whether such a ring exists at all. 
 The answer is yes, it does, and it can be easily constructed.
 We introduce a new element $-1$ as the unique solution of $1 + x = 0$ and define:
 
@@ -298,9 +338,9 @@ Starting from $a a^{-1} = 1$, we derive, as an example, the multiplication rule:
 and infer the cancellation law:
 
 ```{math}
-a b^{-1} &= (n n^{-1}) (ab^{-1}) \\
-&= (na) (n^{-1} b^{-1}) \\
-&= (n a) (nb)^{-1}
+(n a) (nb)^{-1} &= (na) (n^{-1} b^{-1}) \\
+&= (n n^{-1}) (ab^{-1}) \\
+&= a b^{-1}
 ```
 
 Continuing in this way, the definition of addition, subtraction, multiplication, and division on $\mathbb{Q}$ is a straightforward exercise.
@@ -585,8 +625,8 @@ Setting $m = k$ we get (compare {prf:ref}`def-convergence-reals`):
 which is what we want.
 ````
 
-This proof, however dry or abstract it might appear, is straightforward. 
-Proofs are all about *applying* known results to obtain new ones. This is done twice:
+This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts. 
+Here, we do this twice:
 We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence, 
 and in statement {eq}`thr-R-completeness-2`, 
 we replace the general $m$ with a specific choice — this is how "forall" is meant to be employed.
@@ -688,6 +728,25 @@ As any complete field containing $\mathbb{Q}$ necessarily contains the set $\mat
 it is indeed the **smallest complete field containing $\mathbb{Q}$**. 
 From now on, $\mathbb{R}$ will be our home. Whatever happens, happens in $\mathbb{R}$.
 
+
+````{prf:remark} Continuum Hypothesis
+:label: rem-continuum-hypothesis
+
+Two sets are said to be **equinumerous**, or have the same **cardinality**, if there is a bijection between them. 
+{prf:ref}`thr-countable-uncountable` (b) tells us that all countably infinite sets share the same cardinality, 
+denoted as $\aleph_0$. {prf:ref}`thr-R-uncountable` tells us that $\mathbb{R}$ and $\mathcal{P}(\mathbb{N})$ have the same cardinality, 
+denoted as  $\mathfrak{c}$. {prf:ref}`thr-countable-uncountable` (e) tells us that, for any set $A$, 
+the cardinality of $\mathcal{P}(A)$ is always strictly higher than that of $A$. 
+And if two sets have the same cardinality, then their power sets necessarily do too. 
+This leads to an infinite sequence (i.e. a countable set) of 
+cardinalities: $\{\aleph_0, \aleph_1, \ldots \}$ with $\aleph_{n+1} = 2^{\aleph_n}$. Are there any others?
+
+The continuum hypothesis (abbreviated as **CH**) claims that there aren't. 
+If this is true, there is no cardinality between countable infinity $\aleph_0$ 
+and the continuum $\mathfrak{c} = \aleph_1 = 2^{\aleph_0}$. 
+CH is independent of the ZFC-Axioms: Both "ZFC + CH" and "ZFC + $\neg$ CH" are consistent, assuming ZFC is.
+But this is a different story, to be told in another paper.
+````
 
 
 ## References
