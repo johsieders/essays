@@ -610,7 +610,7 @@ then <span class="math notranslate nohighlight">\(c \equiv 0 \bmod b\)</span></p
 <p>Addition and multiplication operate on residue classes in much the same way as they do on integers.
 We now turn to the division of residue classes which requires a bit more attention.
 <a class="reference internal" href="#lem-euler">Lemma 2</a> is about the division of congruences.
-It includes the celebrated Euler’s Lemma, which is the key to <a class="reference internal" href="#thr-fundamental">Theorem 7</a>,
+It includes the celebrated Euler’s Lemma, which is the key to <a class="reference internal" href="#thr-fundamental">Theorem 6</a>,
 the Fundamental Theorem of Arithmetic. <a class="reference internal" href="#thr-euler">Theorem 8</a> is a first approach to solving
 equations of the form <span class="math notranslate nohighlight">\(ax \equiv 1 \bmod m\)</span>, that is, finding the inverse modulo <span class="math notranslate nohighlight">\(m\)</span>.
 But we need to introduce some new concepts before we can get to that.</p>
@@ -631,16 +631,8 @@ Two integers <span class="math notranslate nohighlight">\(a\)</span> and <span c
 <p><span class="math notranslate nohighlight">\(\phi(m) = |U_m| = |\mathbb{Z}^\times_m|\)</span></p>
 <p>So, <span class="math notranslate nohighlight">\(\phi(p) = p - 1\)</span> iff <span class="math notranslate nohighlight">\(p\)</span> is prime.</p>
 </section>
-</div><div class="proof theorem admonition" id="thr-infinite-primes">
+</div><div class="proof theorem admonition" id="thr-gcd-lcm">
 <p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>There are inifinitely many primes</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. <strong>TODO</strong></p>
-</div>
-<div class="proof theorem admonition" id="thr-gcd-lcm">
-<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>For any integers <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, we have</p>
 <p><span class="math notranslate nohighlight">\(\gcd(a,b) \cdot \text{lcm}(a,b) = a \cdot b\)</span>.</p>
@@ -651,7 +643,7 @@ It also holds that <span class="math notranslate nohighlight">\((a \cdot b) / \t
 and we get: <span class="math notranslate nohighlight">\(a \cdot b \le \gcd(a,b) \cdot \text{lcm}(a,b) \le a \cdot b\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="phi-prime">
-<p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(p\)</span> be a prime and <span class="math notranslate nohighlight">\(\alpha\)</span> be a positive integer. Then:</p>
 <div class="math notranslate nohighlight" id="equation-equ-phi-prime">
@@ -680,7 +672,7 @@ which is the same as <span class="math notranslate nohighlight">\(a \equiv b \bm
 <p>(iii) is a reformulation of (ii).</p>
 </div>
 <div class="proof theorem admonition" id="thr-fundamental">
-<p class="admonition-title"><span class="caption-number">Theorem 7 </span> (Fundamental Theorem of Arithmetic)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 6 </span> (Fundamental Theorem of Arithmetic)</p>
 <section class="theorem-content" id="proof-content">
 <p>Any integer <span class="math notranslate nohighlight">\(a\)</span> with <span class="math notranslate nohighlight">\(|a| &gt; 1\)</span> can be uniquely decomposed
 into a product of primes: <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
@@ -700,6 +692,24 @@ Then, again by Euler’s Lemma, <span class="math notranslate nohighlight">\(p_1
 and therefore <span class="math notranslate nohighlight">\(p_1 = q_j\)</span> because both numbers are prime.
 Division by <span class="math notranslate nohighlight">\(p_1\)</span> gives <span class="math notranslate nohighlight">\(\prod_{i=2}^n p_i^{\alpha_i} = \prod_{i=1, i\ne j}^n q_i^{\beta_i}\)</span>.
 We repeat the procedure until we arrive at <span class="math notranslate nohighlight">\(\{p_1,...,p_n\} = \{q_1,...,q_n\}\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="thr-infinite-primes">
+<p class="admonition-title"><span class="caption-number">Theorem 7 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>There are inifinitely many primes</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\{p_1, p_2, \ldots, p_n\}\)</span> be the first <span class="math notranslate nohighlight">\(n\)</span> primes and <span class="math notranslate nohighlight">\(q = \prod_{k=1}^n p_k\)</span>.
+We proceed by building another prime number <span class="math notranslate nohighlight">\(&gt; p_n\)</span>. We start by observing:</p>
+<div class="math notranslate nohighlight">
+\[q \equiv 0 \bmod p_k  \text{ for } k \le n\]</div>
+<p>hence:</p>
+<div class="math notranslate nohighlight" id="equation-equ-infinite-primes-1">
+<span class="eqno">(7)<a class="headerlink" href="#equation-equ-infinite-primes-1" title="Link to this equation">#</a></span>\[q + 1 \equiv 1 \bmod p_k  \text{ for } k \le n\]</div>
+<p>If <span class="math notranslate nohighlight">\(q + 1\)</span>  weren’t prime, we would have, according to <a class="reference internal" href="#thr-fundamental">Theorem 6</a>:</p>
+<div class="math notranslate nohighlight">
+\[q + 1 = \prod_{k=1}^n p_k^{\alpha_k}\]</div>
+<p>which contradicts <a class="reference internal" href="#equation-equ-infinite-primes-1">(7)</a>, and <span class="math notranslate nohighlight">\(q+1\)</span> must be prime.</p>
 </div>
 <div class="proof theorem admonition" id="thr-euler">
 <p class="admonition-title"><span class="caption-number">Theorem 8 </span> (Euler’s Theorem)</p>
@@ -753,11 +763,11 @@ So, <span class="math notranslate nohighlight">\(\text{ord}_m(a)\)</span> divide
 <p>Let <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(k &gt; 1\)</span> be integers. If <span class="math notranslate nohighlight">\(a^{m-1} \equiv k \bmod p\)</span> for some <span class="math notranslate nohighlight">\(a \in \mathbb{Z}\)</span>, then, by Euler’s theorem,
 <span class="math notranslate nohighlight">\(m\)</span> cannot be prime. But there are non-prime integers <span class="math notranslate nohighlight">\(n\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-equ-carmichael">
-<span class="eqno">(7)<a class="headerlink" href="#equation-equ-carmichael" title="Link to this equation">#</a></span>\[a^{n-1} \equiv 1 \bmod n\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-equ-carmichael" title="Link to this equation">#</a></span>\[a^{n-1} \equiv 1 \bmod n\]</div>
 <p>holds for at least one <span class="math notranslate nohighlight">\(a\)</span>.
-Integers <span class="math notranslate nohighlight">\(n\)</span> fullfilling <a class="reference internal" href="#equation-equ-carmichael">(7)</a> for all <span class="math notranslate nohighlight">\(a &lt; n\)</span> are called <em>Carmichael numbers</em>.
+Integers <span class="math notranslate nohighlight">\(n\)</span> fullfilling <a class="reference internal" href="#equation-equ-carmichael">(8)</a> for all <span class="math notranslate nohighlight">\(a &lt; n\)</span> are called <em>Carmichael numbers</em>.
 The smallest one is <span class="math notranslate nohighlight">\(561 = 3 \cdot 11 \cdot 17\)</span>. Testing for primes is notoriously difficult,
-but <a class="reference internal" href="#equation-equ-carmichael">(7)</a> provides a necessary condition for
+but <a class="reference internal" href="#equation-equ-carmichael">(8)</a> provides a necessary condition for
 primality. The idea is, for a given <span class="math notranslate nohighlight">\(m\)</span>, to test the congruence
 <span class="math notranslate nohighlight">\(a^{m-1} \equiv 1 \bmod m\)</span>
 for randomly chosen values of <span class="math notranslate nohighlight">\(a\)</span>. If the congruence is not satisfied for at least one <span class="math notranslate nohighlight">\(a\)</span>, then <span class="math notranslate nohighlight">\(m\)</span> is not prime.
@@ -774,7 +784,7 @@ Such an equation is equivalent to <span class="math notranslate nohighlight">\(a
 <section class="definition-content" id="proof-content">
 <p>An equation of the form</p>
 <div class="math notranslate nohighlight" id="equation-equ-diophantine">
-<span class="eqno">(8)<a class="headerlink" href="#equation-equ-diophantine" title="Link to this equation">#</a></span>\[ux + vy = m \]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-equ-diophantine" title="Link to this equation">#</a></span>\[ux + vy = m \]</div>
 <p>with <span class="math notranslate nohighlight">\(u, v, m \in \mathbb{Z}\)</span> is called a <em>Diophantine equation</em>.</p>
 </section>
 </div><div class="proof definition admonition" id="def-module">
@@ -896,7 +906,7 @@ elements of <span class="math notranslate nohighlight">\(\mathbb{Z}_2^\times = \
 <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> be integers such that <span class="math notranslate nohighlight">\((a_i, m_i) = 1\)</span> for all <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>(i) The system of congruences:</p>
 <div class="math notranslate nohighlight" id="equation-equ-congruences">
-<span class="eqno">(9)<a class="headerlink" href="#equation-equ-congruences" title="Link to this equation">#</a></span>\[ \begin{align}\begin{aligned}a_1 x \equiv 1 \bmod m_1,\\
+<span class="eqno">(10)<a class="headerlink" href="#equation-equ-congruences" title="Link to this equation">#</a></span>\[ \begin{align}\begin{aligned}a_1 x \equiv 1 \bmod m_1,\\
 a_2 x \equiv 1 \bmod m_2,\\
 \ldots       \\
 a_n x\equiv 1 \bmod m_n  
@@ -932,7 +942,7 @@ The inverse of <span class="math notranslate nohighlight">\(q_i \bmod m_i\)</spa
 <p><span class="math notranslate nohighlight">\(T: \mathbb{Z}^\times_m \to \mathbb{Z}^\times_{m_1} \times \mathbb{Z}^\times_{m_2} \cdots \times \mathbb{Z}^\times_{m_n}\)</span></p>
 <p>given by</p>
 <p><span class="math notranslate nohighlight">\(T(x) = (x \%m_1, x \%m_2, \ldots, x \%m_n)\)</span>,<br />
-<span class="math notranslate nohighlight">\(T^{-1}(a_1, a_2, \ldots, a_n) = \text{unique solution }x\)</span> of <a class="reference internal" href="#equation-equ-congruences">(9)</a></p>
+<span class="math notranslate nohighlight">\(T^{-1}(a_1, a_2, \ldots, a_n) = \text{unique solution }x\)</span> of <a class="reference internal" href="#equation-equ-congruences">(10)</a></p>
 <p>is an isomorphism.</p>
 <p>(iii) Immediate from (ii)</p>
 <p>(iv) Using equation <a class="reference internal" href="#equation-equ-phi-prime">(6)</a>, we get:</p>

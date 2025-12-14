@@ -693,7 +693,7 @@ We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, 
 \lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)
 ```
 exists. $f'(x)$ is called the derivative of $f$ at $x$.
-The statement {eq}`equ-derivatives-1`is equivalengt to
+The statement {eq}`equ-derivatives-1`is equivalent to
 
 ```{math}
 f(x+h) = f(x) + f'(x) \, h + o(h)

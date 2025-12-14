@@ -219,16 +219,6 @@ So, $\phi(p) = p - 1$ iff $p$ is prime.
 
 ````
 
-````{prf:theorem}
-:label: thr-infinite-primes
-
-There are inifinitely many primes
-````
-
-````{prf:proof}
-
-**TODO**
-````
 
 ````{prf:theorem}
 :label: thr-gcd-lcm
@@ -318,6 +308,34 @@ Division by $p_1$ gives $\prod_{i=2}^n p_i^{\alpha_i} = \prod_{i=1, i\ne j}^n q_
 We repeat the procedure until we arrive at $\{p_1,...,p_n\} = \{q_1,...,q_n\}$.
 ````
 
+
+````{prf:theorem}
+:label: thr-infinite-primes
+
+There are inifinitely many primes
+````
+
+````{prf:proof}
+Let $\{p_1, p_2, \ldots, p_n\}$ be the first $n$ primes and $q = \prod_{k=1}^n p_k$. 
+We proceed by building another prime number $> p_n$. We start by observing:
+
+```{math}
+q \equiv 0 \bmod p_k  \text{ for } k \le n
+```
+hence:
+
+```{math}
+:label: equ-infinite-primes-1
+q + 1 \equiv 1 \bmod p_k  \text{ for } k \le n
+```
+
+If $q + 1$  weren't prime, we would have, according to {prf:ref}`thr-fundamental`:
+
+```{math}
+q + 1 = \prod_{k=1}^n p_k^{\alpha_k}
+```
+which contradicts {eq}`equ-infinite-primes-1`, and $q+1$ must be prime.
+````
 
 ````{prf:theorem} Euler's Theorem
 :label: thr-euler
