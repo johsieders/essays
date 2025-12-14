@@ -593,13 +593,13 @@ The following is a formal definition of infinity, with no handwaving, no dots, a
 <p><strong>a)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>finite</strong> iff there is an <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to \{0, 1, \ldots, n\}\)</span>.</p>
 <p><strong>b)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>infinite</strong> iff there is an a proper subset <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to B\)</span>.</p>
 <p><strong>c)</strong> A set <span class="math notranslate nohighlight">\(A\)</span> is <strong>countable</strong> iff there is an injection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.
-This injection is often called an <em>enumeration</em>, a way of putting all elements of <span class="math notranslate nohighlight">\(A\)</span> in a sequential order.</p>
+This injection is often called an <strong>enumeration</strong>, a way of arranging all elements of <span class="math notranslate nohighlight">\(A\)</span> in a sequential order.</p>
 </section>
 </div><p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is infinite because the successor function <span class="math notranslate nohighlight">\(S\)</span> is exactly such an injection, with <span class="math notranslate nohighlight">\(B = \mathbb{N} - \{0\}\)</span>.
 That’s a formal version of Hilbert’s Hotel, which can always accommodate an extra guest by moving everyone else up one room.
 Another injection would be <span class="math notranslate nohighlight">\(\phi(n) = 10^n\)</span>, with <span class="math notranslate nohighlight">\(B = \{1, 10, 100, \ldots\}\)</span>. <span class="math notranslate nohighlight">\(B\)</span> is a set with huge gaps, and yet,
 it’s still infinite: you never run out of natural numbers.</p>
-<p>The equivalence of <strong>not finite</strong> and <strong>infinite</strong> in the above terms is not obvious.
+<p>The equivalence of <strong>not finite</strong> and <strong>infinite</strong> in <a class="reference internal" href="#def-infinity">Definition 7</a> is not obvious.
 To prove it, we need a weak form of the axiom of choice.</p>
 <div class="proof definition admonition" id="def-axiom-countable-choice">
 <p class="admonition-title"><span class="caption-number">Definition 8 </span> (Axiom of Countable Chioce)</p>
@@ -622,19 +622,19 @@ Let <span class="math notranslate nohighlight">\(A\)</span> be infinite and assu
 But <span class="math notranslate nohighlight">\(\left |\phi(A) \right | = \left | A \right | &gt; \left | B \right | = \left | \phi(A) \right |\)</span>.
 So <span class="math notranslate nohighlight">\(A\)</span> cannot be finite, it must be not finite.</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be not finite, and <span class="math notranslate nohighlight">\(\{a_0, a_1, \ldots \}\)</span> be a countably infinite subset as granted by <a class="reference internal" href="#def-axiom-countable-choice">Definition 8</a>.
-We define <span class="math notranslate nohighlight">\(\phi\)</span> as follows:</p>
+The function <span class="math notranslate nohighlight">\(\phi\)</span> defined by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi:
 \left\{
    \begin{array}{l}
-       A &amp;\to A - \{a_0\} \\
-       a_k &amp;\mapsto a_{k+1} \text{ for } a_k \in \{a_0, a_1, \ldots \} \\
-       x &amp;\mapsto x \text{ for } x \notin \{a_0, a_1, \ldots \}
+       A &amp;\to &amp;A - \{a_0\} \\
+       a_k &amp;\mapsto &amp;a_{k+1} \text{ for } a_k \in \{a_0, a_1, \ldots \} \\
+       x &amp;\mapsto &amp;x \text{ for } x \notin \{a_0, a_1, \ldots \}
    \end{array}
 \right .\end{split}\]</div>
-<p>This shows that <span class="math notranslate nohighlight">\(A\)</span> is infinite.</p>
+<p>is the desired injection.</p>
 <p><strong>(b)</strong> If there is a bijection <span class="math notranslate nohighlight">\(\phi : A \to \mathbb{N}\)</span>, then <span class="math notranslate nohighlight">\(A\)</span> is countable and infinite, hence countably infinite.</p>
-<p>Now, let <span class="math notranslate nohighlight">\(A\)</span> be countably infinite and <span class="math notranslate nohighlight">\(\phi : A \to \mathbb{N}\)</span> an injection. We define:</p>
+<p>Now, let <span class="math notranslate nohighlight">\(A\)</span> be countably infinite and <span class="math notranslate nohighlight">\(\phi : A \to \mathbb{N}\)</span> an injection. We set:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;n_0 = \min \phi(A) \\
 &amp;a_0 = \phi^{-1}(n_0) \\
@@ -658,7 +658,7 @@ are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</s
 <div class="math notranslate nohighlight">
 \[\phi_i : A_i \to \mathbb{N}\]</div>
 <p>be the injection corresponding to <span class="math notranslate nohighlight">\(A_i\)</span>.</p>
-<p>Countable Union: The function</p>
+<p><strong>(c) Countable Union</strong>: The function</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi:
 \left\{
@@ -668,7 +668,7 @@ are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</s
    \end{array}
 \right .\end{split}\]</div>
 <p>is an injection: The set <span class="math notranslate nohighlight">\(A_i\)</span> is mapped to the powers of <span class="math notranslate nohighlight">\(p_i\)</span>.</p>
-<p>Finite Crossproduct: The function</p>
+<p><strong>(d) Finite Crossproduct</strong>: The function</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi:
 \left\{
@@ -686,7 +686,7 @@ Assume there is an injection</p>
 <p>We investigate the set</p>
 <div class="math notranslate nohighlight">
 \[K = \{\phi(U) \mid  U \subseteq A, U \ne \emptyset, \phi(U) \notin U\}\]</div>
-<p>If <span class="math notranslate nohighlight">\(K\)</span> were empty, we had</p>
+<p>If <span class="math notranslate nohighlight">\(K\)</span> were empty, we would have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;\forall U \subseteq A, U \ne \emptyset: \phi(U) \in U \\
 \Rightarrow &amp;\forall a \in A: \phi(\{a\}) \in \{a\} \\
@@ -706,7 +706,7 @@ Note that, with <span class="math notranslate nohighlight">\(K\)</span> empty, c
 <p>The set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is a <strong>semigroup with respect to addition</strong> and a <strong>semigroup with respect to multiplication</strong>.
 However, <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> lacks the negative numbers: the equation <span class="math notranslate nohighlight">\(a + x = b\)</span> is solvable in <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> only if <span class="math notranslate nohighlight">\(a \le b\)</span>.</p>
 <p>We introduce the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> of integers as the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
-While this definition is arguably concise and elegant, the question remains whether such a ring exists at all.
+While this definition is concise, perhaps even elegant, the question remains whether such a ring exists at all.
 The answer is yes, it does, and it can be easily constructed.
 We introduce a new element <span class="math notranslate nohighlight">\(-1\)</span> as the unique solution of <span class="math notranslate nohighlight">\(1 + x = 0\)</span> and define:</p>
 <div class="math notranslate nohighlight">
@@ -738,9 +738,9 @@ We introduce, for <span class="math notranslate nohighlight">\(a \ne 0\)</span>,
 &amp;\Rightarrow (ab)^{-1} = a^{-1} b^{-1} \\\end{split}\]</div>
 <p>and infer the cancellation law:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}a b^{-1} &amp;= (n n^{-1}) (ab^{-1}) \\
-&amp;= (na) (n^{-1} b^{-1}) \\
-&amp;= (n a) (nb)^{-1}\end{split}\]</div>
+\[\begin{split}(n a) (nb)^{-1} &amp;= (na) (n^{-1} b^{-1}) \\
+&amp;= (n n^{-1}) (ab^{-1}) \\
+&amp;= a b^{-1}\end{split}\]</div>
 <p>Continuing in this way, the definition of addition, subtraction, multiplication, and division on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a straightforward exercise.
 With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a field.
 As any field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> must also contain the rationals,
@@ -910,8 +910,8 @@ Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (comp
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
 <p>which is what we want.</p>
 </div>
-<p>This proof, however dry or abstract it might appear, is straightforward.
-Proofs are all about <em>applying</em> known results to obtain new ones. This is done twice:
+<p>This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts
+Here, we do this twice:
 We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
 and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(16)</a>,
 we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is how “forall” is meant to be employed.</p>
@@ -991,8 +991,8 @@ This leads to an infinite sequence (i.e. a countable set) of
 cardinalities: <span class="math notranslate nohighlight">\(\{\aleph_0, \aleph_1, \ldots \}\)</span> with <span class="math notranslate nohighlight">\(\aleph_{n+1} = 2^{\aleph_n}\)</span>. Are there any others?</p>
 <p>The continuum hypothesis (abbreviated as <strong>CH</strong>) claims that there aren’t.
 If this is true, there is no cardinality between countable infinity <span class="math notranslate nohighlight">\(\aleph_0\)</span>
-and the continuum <span class="math notranslate nohighlight">\(\mathfrak{c} = \aleph_1 = 2^{\aleph_0}\)</span>.</p>
-<p>CH is independent of the ZFC-Axioms: Both “ZFC + CH” and “ZFC + <span class="math notranslate nohighlight">\(\neg\)</span> CH” are consistent, assuming ZFC is.
+and the continuum <span class="math notranslate nohighlight">\(\mathfrak{c} = \aleph_1 = 2^{\aleph_0}\)</span>.
+CH is independent of the ZFC-Axioms: Both “ZFC + CH” and “ZFC + <span class="math notranslate nohighlight">\(\neg\)</span> CH” are consistent, assuming ZFC is.
 But this is a different story, to be told in another paper.</p>
 </section>
 </div></section>
