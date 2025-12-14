@@ -3,8 +3,45 @@
 *Johannes Siedersleben, December 2025*
 
 
+## Introduction
 
-> under construction
+Hamlet has been interpreted countless times, and yet, whenever you read or watch it, you are likely to get new impressions, 
+new insights. Over and over again, its depth and beauty overwhelm you.
+
+The same is true of the path from naturals to reals, which lies at the very heart of mathematics. 
+It has been taught, presented, published countless times,
+and yet, every time I go over it (I can only speak for myself), I find new insights,
+and I am amazed by the clarity and elegance of this intellectual edifice. 
+
+What lies ahead is a fast track from naturals to reals. Starting with the naturals, 
+I introduce the integers as the smallest ring containing the naturals, 
+the rationals as the smallest field containing the integers, 
+and the reals as the smallest complete set containing the rationals.
+So, the reals are there, available and ready to be used as a starting point for further expeditions, 
+such as the calculus. Along the way, we encounter the concepts of countable and uncountable infinity, 
+and we end with an outlook on the continuum hypothesis.
+
+The naturals are a model of what can be counted, such as coins, fingers, or pebbles. 
+If you cut a pie into, say, eight pieces, you have done some rational arithmetic. 
+Naturals and rationals are an abstraction of some aspects of the world we encounter or perceive.
+Negative numbers are a bit more complicated: A debt, a negative temperature, is an abstraction itself.
+You can physically count the coins in your pocket but not the ones you owe your friend.
+The reals, the continuum, are quite different. The continuum is an abstraction of straight lines in space or time.
+However, quantum physics tells us that straight lines break down into discrete quanta when observed closely.
+And yet, the continuum is one of the most important and most useful abstractions ever conceived.
+
+Much of the material presented can be found in {cite}`heuser2009analysis1`, 
+{cite}`forster2016analysis1`, {cite}`stillwell2010roads`,
+to name but a few prominent examples.
+Why did I write this paper? The starting point was the idea of a fast track from naturals to reals, with all 
+difficulties included, but the boring parts sketched or omitted.
+The result is, hopefully, a roadmap you see before your eyes, easy to remember, you can talk about to a friend
+over a pint or two. It is, at best, a distilled version of what you find in the books cited. 
+
+The first section, Lewis Carroll's paradox, is a reflection about what mathematical reasoning really is.
+It is meant as a nudge to always take a step back and ask: What am I doing here? How do I know I am right?
+Never stop asking!
+
 
 ## What the Tortoise Said to Achilles (Lewis Carroll)
 
@@ -75,12 +112,6 @@ I must admit that this paradox puts all mathematical reasoning at risk.
 How can we be sure that a proof is correct? What rules do we apply, and who granted us the right to apply them?
 Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
 Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.
-
-## Introduction
-
-This material has been published many times, see {cite}`heuser2009analysis1`, 
-{cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
-to name but a few prominent examples.
 
 ## Naturals
 
@@ -306,7 +337,7 @@ As an example, we explain how $a - b$ can be given a meaning if $a < b$:
 ```{math}
 a - b = a + (-1)b = (-1)((-1)a + b) = (-1)(b - a) = - (b-a)
 ```
-Continuing in this way, the definition of addition, subtraction and multiplication on $\mathbb{Z}$ is a straightforward exercise.
+Continuing in this way, the definition of addition, subtraction, and multiplication on $\mathbb{Z}$ is a straightforward exercise.
 With these operations in place, the set $\mathbb{Z}$ is a ring.
 As any ring containing $\mathbb{N}$ must also contain the negative numbers $-\!\mathbb{N}$, 
 the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**. 
@@ -628,7 +659,7 @@ which is what we want.
 This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts. 
 Here, we do this twice:
 We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence, 
-and in statement {eq}`thr-R-completeness-2`, 
+and, in statement {eq}`thr-R-completeness-2`, 
 we replace the general $m$ with a specific choice — this is how "forall" is meant to be employed.
 
 
@@ -738,8 +769,8 @@ denoted as $\aleph_0$. {prf:ref}`thr-R-uncountable` tells us that $\mathbb{R}$ a
 denoted as  $\mathfrak{c}$. {prf:ref}`thr-countable-uncountable` (e) tells us that, for any set $A$, 
 the cardinality of $\mathcal{P}(A)$ is always strictly higher than that of $A$. 
 And if two sets have the same cardinality, then their power sets necessarily do too. 
-This leads to an infinite sequence (i.e. a countable set) of 
-cardinalities: $\{\aleph_0, \aleph_1, \ldots \}$ with $\aleph_{n+1} = 2^{\aleph_n}$. Are there any others?
+This leads to an infinite sequence of 
+cardinalities $\{\aleph_0, \aleph_1, \ldots \}$ with $\aleph_{n+1} = 2^{\aleph_n}$. Are there any others?
 
 The continuum hypothesis (abbreviated as **CH**) claims that there aren't. 
 If this is true, there is no cardinality between countable infinity $\aleph_0$ 
