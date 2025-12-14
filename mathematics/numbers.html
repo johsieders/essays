@@ -462,8 +462,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
@@ -483,9 +483,40 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="from-naturals-to-reals">
 <h1>From Naturals to Reals<a class="headerlink" href="#from-naturals-to-reals" title="Link to this heading">#</a></h1>
 <p><em>Johannes Siedersleben, December 2025</em></p>
-<blockquote>
-<div><p>under construction</p>
-</div></blockquote>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Hamlet has been interpreted countless times, and yet, whenever you read or watch it, you are likely to get new impressions,
+new insights. Over and over again, its depth and beauty overwhelm you.</p>
+<p>The same is true of the path from naturals to reals, which lies at the very heart of mathematics.
+It has been taught, presented, published countless times,
+and yet, every time I go over it (I can only speak for myself), I find new insights,
+and I am amazed by the clarity and elegance of this intellectual edifice.</p>
+<p>What lies ahead is a fast track from naturals to reals. Starting with the naturals,
+I introduce the integers as the smallest ring containing the naturals,
+the rationals as the smallest field containing the integers,
+and the reals as the smallest complete set containing the rationals.
+So, the reals are there, available and ready to be used as a starting point for further expeditions,
+such as the calculus. Along the way, we encounter the concepts of countable and uncountable infinity,
+and we end with an outlook on the continuum hypothesis.</p>
+<p>The naturals are a model of what can be counted, such as coins, fingers, or pebbles.
+If you cut a pie into, say, eight pieces, you have done some rational arithmetic.
+Naturals and rationals are an abstraction of some aspects of the world we encounter or perceive.
+Negative numbers are a bit more complicated: A debt, a negative temperature, is an abstraction itself.
+You can physically count the coins in your pocket but not the ones you owe your friend.
+The reals, the continuum, are quite different. The continuum is an abstraction of straight lines in space or time.
+However, quantum physics tells us that straight lines break down into discrete quanta when observed closely.
+And yet, the continuum is one of the most important and most useful abstractions ever conceived.</p>
+<p>Much of the material presented can be found in <span id="id1">[<a class="reference internal" href="#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id2">[<a class="reference internal" href="#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, <span id="id3">[<a class="reference internal" href="#id15" title="John Stillwell. Roads to Infinity: The Mathematics of Truth and Proof. A K Peters/CRC Press, 2010.">Stillwell, 2010</a>]</span>,
+to name but a few prominent examples.
+Why did I write this paper? The starting point was the idea of a fast track from naturals to reals, with all
+difficulties included, but the boring parts sketched or omitted.
+The result is, hopefully, a roadmap you see before your eyes, easy to remember, you can talk about to a friend
+over a pint or two. It is, at best, a distilled version of what you find in the books cited.</p>
+<p>The first section, Lewis Carroll’s paradox, is a reflection about what mathematical reasoning really is.
+It is meant as a nudge to always take a step back and ask: What am I doing here? How do I know I am right?
+Never stop asking!</p>
+</section>
 <section id="what-the-tortoise-said-to-achilles-lewis-carroll">
 <h2>What the Tortoise Said to Achilles (Lewis Carroll)<a class="headerlink" href="#what-the-tortoise-said-to-achilles-lewis-carroll" title="Link to this heading">#</a></h2>
 <p>This paradox sounds Greek, but it is in fact due to Lewis Carroll, the author of Alice in Wonderland.
@@ -544,12 +575,6 @@ I must admit that this paradox puts all mathematical reasoning at risk.
 How can we be sure that a proof is correct? What rules do we apply, and who granted us the right to apply them?
 Is there a formal, indisputable way of proving theorems, or is mathematics subject to some kind of majority decision?
 Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that is a different story.</p>
-</section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
-<span id="id2">[<a class="reference internal" href="#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id83" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id84" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
-to name but a few prominent examples.</p>
 </section>
 <section id="naturals">
 <h2>Naturals<a class="headerlink" href="#naturals" title="Link to this heading">#</a></h2>
@@ -715,7 +740,7 @@ We introduce a new element <span class="math notranslate nohighlight">\(-1\)</sp
 As an example, we explain how <span class="math notranslate nohighlight">\(a - b\)</span> can be given a meaning if <span class="math notranslate nohighlight">\(a &lt; b\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[a - b = a + (-1)b = (-1)((-1)a + b) = (-1)(b - a) = - (b-a)\]</div>
-<p>Continuing in this way, the definition of addition, subtraction and multiplication on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a straightforward exercise.
+<p>Continuing in this way, the definition of addition, subtraction, and multiplication on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a straightforward exercise.
 With these operations in place, the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a ring.
 As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> must also contain the negative numbers <span class="math notranslate nohighlight">\(-\!\mathbb{N}\)</span>,
 the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
@@ -910,10 +935,10 @@ Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (comp
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
 <p>which is what we want.</p>
 </div>
-<p>This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts
+<p>This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts.
 Here, we do this twice:
 We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
-and in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(16)</a>,
+and, in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(16)</a>,
 we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is how “forall” is meant to be employed.</p>
 <div class="proof theorem admonition" id="thr-R-uncountable">
 <p class="admonition-title"><span class="caption-number">Theorem 16 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable)</p>
@@ -987,8 +1012,8 @@ denoted as <span class="math notranslate nohighlight">\(\aleph_0\)</span>. <a cl
 denoted as  <span class="math notranslate nohighlight">\(\mathfrak{c}\)</span>. <a class="reference internal" href="#thr-countable-uncountable">Theorem 12</a> (e) tells us that, for any set <span class="math notranslate nohighlight">\(A\)</span>,
 the cardinality of <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span> is always strictly higher than that of <span class="math notranslate nohighlight">\(A\)</span>.
 And if two sets have the same cardinality, then their power sets necessarily do too.
-This leads to an infinite sequence (i.e. a countable set) of
-cardinalities: <span class="math notranslate nohighlight">\(\{\aleph_0, \aleph_1, \ldots \}\)</span> with <span class="math notranslate nohighlight">\(\aleph_{n+1} = 2^{\aleph_n}\)</span>. Are there any others?</p>
+This leads to an infinite sequence of
+cardinalities <span class="math notranslate nohighlight">\(\{\aleph_0, \aleph_1, \ldots \}\)</span> with <span class="math notranslate nohighlight">\(\aleph_{n+1} = 2^{\aleph_n}\)</span>. Are there any others?</p>
 <p>The continuum hypothesis (abbreviated as <strong>CH</strong>) claims that there aren’t.
 If this is true, there is no cardinality between countable infinity <span class="math notranslate nohighlight">\(\aleph_0\)</span>
 and the continuum <span class="math notranslate nohighlight">\(\mathfrak{c} = \aleph_1 = 2^{\aleph_0}\)</span>.
@@ -998,12 +1023,8 @@ But this is a different story, to be told in another paper.</p>
 </div></section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id5">
+<div class="docutils container" id="id4">
 <div role="list" class="citation-list">
-<div class="citation" id="id84" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Cou55</a><span class="fn-bracket">]</span></span>
-<p>Richard Courant. <em>Vorlesungen über Differential- und Integralrechnung</em>. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.</p>
-</div>
 <div class="citation" id="id82" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">For16</a><span class="fn-bracket">]</span></span>
 <p>Otto Forster. <em>Analysis 1: Differential- und Integralrechnung einer Veränderlichen</em>. Springer Spektrum, 12th edition edition, 2016. First published 1976.</p>
@@ -1012,9 +1033,9 @@ But this is a different story, to be told in another paper.</p>
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Heu09</a><span class="fn-bracket">]</span></span>
 <p>Harro Heuser. <em>Lehrbuch der Analysis Teil 1</em>. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.</p>
 </div>
-<div class="citation" id="id83" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Rud76</a><span class="fn-bracket">]</span></span>
-<p>Walter Rudin. <em>Principles of Mathematical Analysis</em>. McGraw-Hill, 3rd edition edition, 1976. First published 1953.</p>
+<div class="citation" id="id15" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Sti10</a><span class="fn-bracket">]</span></span>
+<p>John Stillwell. <em>Roads to Infinity: The Mathematics of Truth and Proof</em>. A K Peters/CRC Press, 2010.</p>
 </div>
 </div>
 </div>
@@ -1086,8 +1107,8 @@ But this is a different story, to be told in another paper.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-tortoise-said-to-achilles-lewis-carroll">What the Tortoise Said to Achilles (Lewis Carroll)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naturals">Naturals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers">Integers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rationals">Rationals</a></li>
