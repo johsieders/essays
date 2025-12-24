@@ -38,8 +38,8 @@ difficulties included, but the boring parts sketched or omitted.
 The result is, hopefully, a roadmap you see before your eyes, easy to remember, you can talk about to a friend
 over a pint or two. It is, at best, a distilled version of what you find in the books cited. 
 
-The first section, Lewis Carroll's paradox, is a reflection about what mathematical reasoning really is.
-It is meant as a nudge to always take a step back and ask: What am I doing here? How do I know I am right?
+The first section, Lewis Carroll's paradox, is a reflection about what mathematical reasoning really is, 
+meant as a nudge to always take a step back and ask: What am I doing here? How do I know I am right?
 Never stop asking!
 
 
@@ -117,22 +117,19 @@ Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that
 
 Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
 I don't know, and, honestly, I don't care too much. What seems clear to me is that there 
-must have been first humans, probably at different times and different locations, to grasp the concept of a number. 
-They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
-It took many millennia to formalize it. 
-Today, the Peano axioms perfectly describe the set $\mathbb{N}$ of natural numbers for all mathematical purposes.
+must have been first humans, probably at different times and different locations, to grasp the concept of a number.
+Today, many millennia later, the Peano axioms perfectly describe the set $\mathbb{N}$ of natural numbers for all mathematical purposes.
 
 ````{prf:definition} Peano Axioms
 :label: def-peano-axioms
 
 1. $\mathbb{N}$ is **not empty**: $0 \in \mathbb{N}$
 
-2. The relation $=$ is an **equivalence relation** on $\mathbb{N}$.
-
-3. Every natural number $n$ has exactly one **successor** $S(n)$, and every natural number $n$ except $0$ has exactly one **predecessor** $P(n)$.
+2. Every natural number $n$ has exactly one **successor** $S(n)$, 
+and every natural number $n$ except $0$ has exactly one **predecessor** $P(n)$.
 The function $S$ 
 
-   ```{math}
+  ```{math}
    S:
    \left\{
        \begin{array}{lr}
@@ -144,25 +141,62 @@ The function $S$
 
    is a bijection, and $P = S^{-1}$ is its inverse. We normally write, of course, $n + 1$ and $n - 1$ to indicate successor and predecessor.
 
-4. **Induction**: If $\phi$ is a unary predicate such that
+3. **Induction**: If $\phi$ is a unary predicate such that
 $\phi(0)$ is true, and for every $n \in \mathbb{N}$, $\phi(n)$ being true implies that $\phi(S(n))$ is true,
 then $\phi(n)$ is true for every $n \in \mathbb{N}$.
 ````
-The Peano axioms not only allow the definition of all basic arithmetical operations. 
-They form the foundation of number theory.
-In virtue of the Peano axioms we can start at $0$ and, 
-applying the successor function, construct as many natural numbers as we like. This opens the door to infinity.
+
+From these axioms, order, addition, and multiplication can be defined recursively:
+
+
+````{prf:definition} Addition, Multiplication, Ordering
+:label: def-add-mul-ord
+
+Let $n, m \in \mathbb{N}$.
+
+
+**a) Addition**
+
+```{math}
+&n + 0 = n \\
+&n + S(m) = S(n + m)
+```
+**b) Multiplication**
+```{math}
+
+&n \cdot 0 = 0 \\
+&n \cdot S(m) = n · m + n
+```
+
+**c) Ordering**
+
+```{math}
+m < n \Longleftrightarrow \exists k \in \mathbb{N}: k + m = n
+```
+With this ordering, $\mathbb{N}$ is a totally ordered set with lower bound $0$.
+````
+
+The Peano axioms characterize $\mathbb{N}$ *uniquely* up to isomorphism: 
+any two models satisfying these axioms are structurally identical.
+These axioms not only allow the definition of all basic arithmetical operations, 
+but are the foundation of number theory and open the door to infinity:
+We can start at $0$ and construct as many natural numbers as we like 
+by applying the successor function.
 The following is a formal definition of infinity, with no handwaving, no dots, and no "and so on."
 
 
 ````{prf:definition} Infinity
 :label: def-infinity
-**a)** A set $A$ is **finite** iff there is an $n \in \mathbb{N}$ and an injection $\phi: A \to \{0, 1, \ldots, n\}$.
 
-**b)** A set $A$ is **infinite** iff there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+Let $A$ be any set.
+ 
+**a)**$A$ is **finite** iff there is an $n \in \mathbb{N}$ and an injection $\phi: A \to \{0, 1, \ldots, n\}$.
 
-**c)** A set $A$ is **countable** iff there is an injection $\phi: A \to \mathbb{N}$. 
+**b)**$A$ is **countable** iff there is an injection $\phi: A \to \mathbb{N}$. 
 This injection is often called an **enumeration**, a way of arranging all elements of $A$ in a sequential order.
+
+**c)**$A$ is **infinite** iff there is an a proper subset $B$ of $A$ and an injection $\phi: A \to B$.
+
 ````
 The set $\mathbb{N}$ is infinite because the successor function $S$ is exactly such an injection, with $B = \mathbb{N} - \{0\}$.
 That's a formal version of Hilbert's Hotel, which can always accommodate an extra guest by moving everyone else up one room. 
@@ -315,10 +349,10 @@ Note that, with $K$ empty, contradiction [](#equ-countable-uncountable-1) would 
 ## Integers
 
 The set $\mathbb{N}$ is a **semigroup with respect to addition** and a **semigroup with respect to multiplication**.
-However, $\mathbb{N}$ lacks the negative numbers: the equation $a + x = b$ is solvable in $\mathbb{N}$ only if $a \le b$. 
+But $\mathbb{N}$ lacks the negative numbers: the equation $a + x = b$ is solvable in $\mathbb{N}$ only if $a \le b$. 
 
 We introduce the set $\mathbb{Z}$ of integers as the **smallest ring containing $\mathbb{N}$**. 
-While this definition is concise, perhaps even elegant, the question remains whether such a ring exists at all. 
+While this definition is concise, the question remains whether such a ring exists at all. 
 The answer is yes, it does, and it can be easily constructed.
 We introduce a new element $-1$ as the unique solution of $1 + x = 0$ and define:
 
@@ -344,42 +378,89 @@ the set $\mathbb{Z}$ is indeed the **smallest ring containing $\mathbb{N}$**.
 $\mathbb{Z}$ is countable, since it is the union of two countable sets.
 
 
+````{prf:definition} Ordering of Integers
+We extend the order on $\mathbb{N}$ to $\mathbb{Z}$ by setting, for $m, n \in \mathbb{N}$:
+
+```{math}
+&-n < 0 \\
+&-n < -m \Leftrightarrow m < n
+```
+
+With this ordering, $\mathbb{Z}$ is a totally ordered set  without lower or upper bound.
+````
+
+From now on, we take $\mathbb{N}$ as given, with its standard operations and ordering, and focus on how to extend it to $\mathbb{N}$, $\mathbb{Q}$,
+and ultimately $\mathbb{R}$. Our construction proceeds from here with $\mathbb{N}$ as the base case, 
+showing how successively richer number systems emerge through a consistent pattern of equivalence class constructions.
+
 ## Rationals
 The set $\mathbb{Z}$ is a ring but 
 not a field. $\mathbb{Z}$ lacks the fractions: the equation $ax = 1$ is solvable in $\mathbb{Z}$ only for $a = 1$. 
 
-We introduce the set $\mathbb{Q}$ of rationals as the **smallest field containing $\mathbb{Z}$**. 
+To this end, we introduce the set $\mathbb{Q}$ of rationals as the **smallest field containing $\mathbb{Z}$**. 
 Again, the question remains whether such a field exists at all. 
 The answer is yes, it does, and it can be easily constructed.
-We introduce, for $a \ne 0$, the inverse $a^{-1}$, or synonymously $1/a$, as the unique solution of $ax = 1$ and define:
+We introduce an equivalence relation on the set $\mathbb{Z} \times \mathbb{Z}-\{0\}$ as 
 
 ```{math}
-&a a^{-1} = 1 \text{ for } a \in \mathbb{Z}-\{0\}
-
-&\mathbb{Q} = \{ab^{-1} \mid a \in \mathbb{Z}, b \in \mathbb{Z}-\{0\}\}
+(a, b) \sim (c, d) \Longleftrightarrow ad = bc
 ```
-Starting from $a a^{-1} = 1$, we derive, as an example, the multiplication rule:
+and set 
 
 ```{math}
-&a a^{-1} = b b^{-1} = 1 \\
-&\Rightarrow a a^{-1} b b^{-1} = (ab) (a^{-1} b^{-1}) = 1 \\
-&\Rightarrow (ab)^{-1} = a^{-1} b^{-1} \\
+\mathbb{Q} = (\mathbb{Z} \times \mathbb{Z}-\{0\})/\sim
 ```
 
-and infer the cancellation law:
+This immediately gives the cancellation rule: 
 
 ```{math}
-(n a) (nb)^{-1} &= (na) (n^{-1} b^{-1}) \\
-&= (n n^{-1}) (ab^{-1}) \\
-&= a b^{-1}
+(a, b) \sim (c, d) \Longleftrightarrow (na, nb) \sim (c, d)
 ```
 
-Continuing in this way, the definition of addition, subtraction, multiplication, and division on $\mathbb{Q}$ is a straightforward exercise.
+Setting
+
+```{math}
+a^{-1} = \frac{1}{a} = (1, a)
+```
+
+we can easily define the well-known rules of rational arithmetic, such as: 
+
+```{math}
+&\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd} \\
+&\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}
+```
+
 With these operations in place, the set $\mathbb{Q}$ is a field.
 As any field containing $\mathbb{Z}$ must also contain the rationals, 
 the set $\mathbb{Q}$ is indeed the **smallest field containing $\mathbb{Z}$**. 
 $\mathbb{Q}$ is countable, since it is the cross-product of two countable sets.
 
+The **normal form** of a rational number $a/b$ requires $b > 0$ and $a, b$ coprime.
+
+
+````{prf:definition} Ordering of Rationals
+We extend the order on $\mathbb{Z}$ to $\mathbb{Q}$ by setting, for $a/b, c/d \in \mathbb{Q}$ in normal form:
+
+```{math}
+\frac{a}{b} < \frac{c}{d} \Longleftrightarrow ad < bc
+```
+
+With this ordering, $\mathbb{Q}$ is a totally ordered set  without lower or upper bound.
+````
+
+````{prf:theorem} Archimedean Property
+:label: thr-archimedean-property
+
+For any $q \in \mathbb{Q}$, there exists $n \in \mathbb{N}$  such that $n > q$.
+````
+````{prf:proof} 
+Write $q = a/b$ with $a, b \in \mathbb{Z}$ and $b > 0$.
+The assertion is obvious if $a \le 0$. If not, we have:
+
+```{math}
+\frac{a}{b} < \frac{a}{1} = a \in \mathbb{N}
+```
+````
 
 ## Reals
 
@@ -471,7 +552,7 @@ The answer is yes, it does, and goes back to Cantor. He defined
 ```
 
 This reads as follows: $\mathbb{R}$ is the set of the equivalence classes of all Cauchy sequences, or, more informally:
-It is the set of whatever number can be approximated by rationals. This gives us the following theorem for free:
+It is the set of whatever numbers that can be approximated by rationals. This gives us the following theorem for free:
 
 ````{prf:theorem} Rationals and Reals
 :label: thr-rationals-reals
@@ -656,11 +737,48 @@ Setting $m = k$ we get (compare {prf:ref}`def-convergence-reals`):
 which is what we want.
 ````
 
-This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts. 
-Here, we do this twice:
+This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts:
 We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence, 
 and, in statement {eq}`thr-R-completeness-2`, 
 we replace the general $m$ with a specific choice — this is how "forall" is meant to be employed.
+
+````{prf:definition} Ordering of Reals
+We extend the order on $\mathbb{Q}$ to $\mathbb{R}$ by setting, for $x = \{x_n\}, y = \{y_n\} \in \mathbb{R}$:
+
+```{math}
+a < b \Longleftrightarrow \exists n_0 \in \mathbb{N}: \forall n > n_0: a_n < b_n
+```
+
+With this ordering, $\mathbb{R}$ is a totally ordered set  without lower or upper bound.
+````
+
+````{prf:theorem} Nested Intervals
+:label: thr-nested-intervals
+
+Let $\{x_n\}$ be a non-decreasing, $\{y_n\}$ a non-increasing real sequence satisfying: 
+
+```{math}
+&\forall n \in \mathbb{N}: x_n \le y_n \\
+\\
+&\lim_{n \to \infty} (y_n - x_n) = 0
+```
+Then $\{x_n\}$ and $\{y_n\}$ converge to the same point:
+
+```{math}
+\lim_{n \to \infty} x_n = \lim_{n \to \infty} y_n
+```
+This means that the sequence of intervals $\{[x_n, y_n]\}$ contracts to one point.
+
+````
+
+````{prf:proof}
+We show that $\{x_n\}$ is a Cauchy sequence. Let $m > n$. Then:
+
+```{math}
+0 \le x_m - x_n \le y_n - x_n \to 0 \text{ for } n \to \infty
+```
+The sequence $\{y_n\}$ is a Cauchy sequence by the same argument, and their limits must coincide.
+````
 
 
 ````{prf:theorem} $\mathbb{R}$ is uncountable
