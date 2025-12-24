@@ -53,8 +53,6 @@ parts:
         title: First Steps in Arithmetic
       - file: mathematics/numbers
         title: From Naturals to Reals
-      - file: mathematics/numbers-claude
-        title: From Naturals to Reals (Claude)
       - file: mathematics/calculus
         title: First Steps in Calculus
 
