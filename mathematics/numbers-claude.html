@@ -1,0 +1,1439 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>From Naturals to Reals (CLAUDE) &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/numbers-claude';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="First Steps in Calculus" href="calculus.html" />
+    <link rel="prev" title="From Naturals to Reals" href="numbers.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">From Naturals to Reals (Claude)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/numbers-claude.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/numbers-claude.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/mathematics/numbers-claude.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>From Naturals to Reals (CLAUDE)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-claude">1 Introduction <strong>CLAUDE</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-claude">2 Natural Numbers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomatic-characterization">2.1 Axiomatic Characterization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theoretic-construction">2.2 Set-Theoretic Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#our-approach">2.3 Our Approach</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers-claude">3 Integers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">3.1 Motivation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construction">3.2 Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operations">3.3 Arithmetic Operations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedding-in">3.4 Embedding ℕ in ℤ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-equivalence-classes">3.5 Why Equivalence Classes?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-a-ring">3.6 ℤ as a Ring</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers-claude">4 Rational Numbers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.1 Motivation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.2 Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.3 Arithmetic Operations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.4 Embedding ℤ in ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-a-field">4.5 ℚ as a Field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordering-on">4.6 Ordering on ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#density-of">4.7 Density of ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-archimedean-property">4.8 The Archimedean Property</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-numbers-claude">5 Real Numbers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation-the-incompleteness-of">5.1 Motivation: The Incompleteness of ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cauchy-sequences">5.2 Cauchy Sequences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-of-cauchy-sequences">5.3 Equivalence of Cauchy Sequences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of">5.4 Definition of ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operations-on">5.5 Arithmetic Operations on ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.6 Embedding ℚ in ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.7 Ordering on ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-a-field">5.8 ℝ is a Field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#completeness-of">5.9 Completeness of ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-supremum-property">5.10 The Supremum Property</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-is-complete">5.11 Summary: ℝ is Complete</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-and-irrational-numbers-claude">6 Rational and Irrational Numbers  <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-vs-irrational">6.1 Rational vs. Irrational</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-irrational">6.2 √2 is Irrational</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebraic-and-transcendental-numbers">6.3 Algebraic and Transcendental Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cardinality-considerations">6.4 Cardinality Considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decimal-representations">6.5 Decimal Representations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-our-construction">6.6 Connection to Our Construction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="from-naturals-to-reals-claude">
+<h1>From Naturals to Reals (CLAUDE)<a class="headerlink" href="#from-naturals-to-reals-claude" title="Link to this heading">#</a></h1>
+<p><em>Johannes Siedersleben, December 2025</em></p>
+<section id="introduction-claude">
+<h2>1 Introduction <strong>CLAUDE</strong><a class="headerlink" href="#introduction-claude" title="Link to this heading">#</a></h2>
+<p>This paper constructs the real numbers ℝ starting from the natural numbers ℕ.
+Our goal is pedagogical clarity: we seek the most direct path to understanding the number system that underlies calculus and analysis.</p>
+<p>The construction follows a natural progression, each step remedying a deficiency in the previous system:</p>
+<ul class="simple">
+<li><p><strong>Natural numbers ℕ = {0, 1, 2, 3, …}</strong>: Our starting point, suitable for counting and basic arithmetic</p></li>
+<li><p><strong>Integers ℤ = {…, -2, -1, 0, 1, 2, …}</strong>: Extending ℕ by adjoining additive inverses, enabling unrestricted subtraction</p></li>
+<li><p><strong>Rational numbers ℚ</strong>: Extending ℤ by adjoining multiplicative inverses, enabling division (except by zero)</p></li>
+<li><p><strong>Real numbers ℝ</strong>: Completing ℚ by filling the “gaps” that prevent certain sequences from converging</p></li>
+</ul>
+<p>Why do we need these successive extensions? Each arises from solving equations that have no solution in the previous system:</p>
+<ul class="simple">
+<li><p>The equation <em>x + 3 = 1</em> has no solution in ℕ, but <em>x = -2</em> solves it in ℤ</p></li>
+<li><p>The equation <em>2x = 1</em> has no solution in ℤ, but <em>x = 1/2</em> solves it in ℚ</p></li>
+<li><p>The “equation” <em>x² = 2</em> has no solution in ℚ, but <em>x = √2</em> solves it in ℝ</p></li>
+</ul>
+<p>More subtly, certain Cauchy sequences in ℚ—sequences whose terms get arbitrarily close to each other—fail to converge to any rational number. Consider the sequence formed by truncating the decimal expansion of √2:</p>
+<p><em>1, 1.4, 1.41, 1.414, 1.4142, 1.41421, …</em></p>
+<p>Each term is rational, and the sequence becomes arbitrarily stable (Cauchy), yet it converges to no rational number. The real numbers are constructed precisely to ensure that such sequences <em>do</em> converge.</p>
+<p>This completeness property is essential for calculus. Without it, we cannot prove that:</p>
+<ul class="simple">
+<li><p>Continuous functions on closed intervals achieve their maximum values</p></li>
+<li><p>Monotone bounded sequences converge</p></li>
+<li><p>Power series have well-defined radii of convergence</p></li>
+<li><p>The intermediate value theorem holds</p></li>
+</ul>
+<p>Our construction achieves completeness <em>by construction</em> rather than by axiom.
+We define ℝ as equivalence classes of Cauchy sequences of rational numbers,
+ensuring that every Cauchy sequence in ℝ automatically converges (Theorem 5.2).
+The supremum property—often taken as an axiom characterizing ℝ—emerges as a theorem (Theorem 5.3), a consequence of Cauchy completeness.</p>
+<p>This approach emphasizes the constructive nature of the progression ℕ → ℤ → ℚ → ℝ, with each step following a similar pattern: we form equivalence classes of pairs (or sequences) from the previous system, defining operations that respect the equivalence relation. The result is the number system underlying modern analysis.</p>
+<p>We assume basic familiarity with set theory, functions, and elementary logic, but do not assume prior knowledge of real analysis. The paper is written for mathematically inclined readers who want to understand how the continuum arises from discrete beginnings.</p>
+</section>
+<section id="natural-numbers-claude">
+<h2>2 Natural Numbers <strong>CLAUDE</strong><a class="headerlink" href="#natural-numbers-claude" title="Link to this heading">#</a></h2>
+<p>The natural numbers ℕ = {0, 1, 2, 3, …} form our starting point. They arise naturally from counting and support the basic operations of addition and multiplication.</p>
+<section id="axiomatic-characterization">
+<h3>2.1 Axiomatic Characterization<a class="headerlink" href="#axiomatic-characterization" title="Link to this heading">#</a></h3>
+<p>The structure of ℕ can be characterized axiomatically through the Peano axioms:</p>
+<ol class="arabic simple">
+<li><p>0 is a natural number</p></li>
+<li><p>Every natural number <em>n</em> has a successor <em>S(n)</em></p></li>
+<li><p>0 is not the successor of any natural number</p></li>
+<li><p>If <em>S(n) = S(m)</em>, then <em>n = m</em> (successors are injective)</p></li>
+<li><p><strong>Induction axiom</strong>: If a set <em>A</em> contains 0, and whenever <em>A</em> contains <em>n</em> it also contains <em>S(n)</em>, then <em>A</em> contains all natural numbers</p></li>
+</ol>
+<p>From these axioms, addition and multiplication can be defined recursively:</p>
+<ul class="simple">
+<li><p><em>n + 0 = n</em> and <em>n + S(m) = S(n + m)</em></p></li>
+<li><p><em>n · 0 = 0</em> and <em>n · S(m) = n · m + n</em></p></li>
+</ul>
+<p>The Peano axioms characterize ℕ <em>uniquely</em> up to isomorphism: any two models satisfying these axioms are structurally identical.</p>
+</section>
+<section id="set-theoretic-construction">
+<h3>2.2 Set-Theoretic Construction<a class="headerlink" href="#set-theoretic-construction" title="Link to this heading">#</a></h3>
+<p>While the Peano axioms characterize ℕ abstractly, we can also <em>construct</em> ℕ within set theory. Various constructions exist, the most common being von Neumann’s approach:</p>
+<ul class="simple">
+<li><p>0 := ∅ (the empty set)</p></li>
+<li><p>1 := {0} = {∅}</p></li>
+<li><p>2 := {0, 1} = {∅, {∅}}</p></li>
+<li><p>3 := {0, 1, 2} = {∅, {∅}, {∅, {∅}}}</p></li>
+<li><p>In general: <em>S(n) := n ∪ {n}</em></p></li>
+</ul>
+<p>This construction realizes ℕ as ω, the first infinite ordinal in ZF set theory. The Peano axioms can then be verified as theorems about ω.</p>
+</section>
+<section id="our-approach">
+<h3>2.3 Our Approach<a class="headerlink" href="#our-approach" title="Link to this heading">#</a></h3>
+<p>For our purposes—constructing the reals from the naturals—the set-theoretic details of <em>how</em> ℕ is built from ∅ obscure
+rather than illuminate the path forward. What matters is that ℕ exists as a mathematical structure satisfying the Peano axioms.</p>
+<p><strong>We therefore take ℕ as given</strong>, with its standard operations and ordering, and focus on how to extend it to ℤ, ℚ,
+and ultimately ℝ. Readers interested in the foundational construction of ℕ from pure set theory may consult standard texts on axiomatic set theory.
+Our construction proceeds from here with ℕ as the base case,
+showing how successively richer number systems emerge through a consistent pattern of equivalence class constructions.</p>
+</section>
+</section>
+<section id="integers-claude">
+<h2>3 Integers <strong>CLAUDE</strong><a class="headerlink" href="#integers-claude" title="Link to this heading">#</a></h2>
+<section id="motivation">
+<h3>3.1 Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h3>
+<p>The natural numbers have a fundamental limitation: subtraction is not always possible. We can compute <em>5 - 3 = 2</em> within ℕ, but <em>3 - 5</em> has no natural number solution. More generally, the equation <em>x + b = a</em> has a solution in ℕ if and only if <em>a ≥ b</em>.</p>
+<p>This deficiency prevents ℕ from forming a <em>ring</em>—an algebraic structure where addition and multiplication behave nicely, and every element has an additive inverse. To remedy this, we construct the integers ℤ by formally adjoining negative numbers to ℕ, ensuring that every element has an additive inverse and subtraction is always possible.</p>
+</section>
+<section id="construction">
+<h3>3.2 Construction<a class="headerlink" href="#construction" title="Link to this heading">#</a></h3>
+<p>Our strategy is to represent an integer as the “formal difference” of two natural numbers. The integer -2, for instance, can be thought of as 3 - 5, or equally well as 1 - 3, or 0 - 2. All these pairs represent the same integer because they have the same “signed distance.”</p>
+<p><strong>Definition 3.1</strong>: Define an equivalence relation ~ on ℕ × ℕ by:
+<em>(a, b) ~ (c, d)  ⟺  a + d = b + c</em></p>
+<p><strong>Intuition</strong>: The pair <em>(a, b)</em> represents the formal difference <em>a - b</em>. Two pairs <em>(a, b)</em> and <em>(c, d)</em> represent the same integer when <em>a - b = c - d</em>, which (avoiding subtraction in ℕ) translates to <em>a + d = b + c</em>.</p>
+<p><strong>Examples</strong>:</p>
+<ul class="simple">
+<li><p><em>(5, 3) ~ (7, 5) ~ (2, 0)</em> all represent the integer +2</p></li>
+<li><p><em>(3, 5) ~ (1, 3) ~ (0, 2)</em> all represent the integer -2</p></li>
+<li><p><em>(4, 4) ~ (7, 7) ~ (0, 0)</em> all represent the integer 0</p></li>
+</ul>
+<p><strong>Lemma 3.1</strong>: The relation ~ is an equivalence relation.</p>
+<p><em>Proof</em>: We verify the three required properties:</p>
+<ul>
+<li><p><strong>Reflexive</strong>: <em>(a, b) ~ (a, b)</em> since <em>a + b = b + a</em> (commutativity in ℕ)</p></li>
+<li><p><strong>Symmetric</strong>: If <em>(a, b) ~ (c, d)</em>, then <em>a + d = b + c</em>, hence <em>c + b = d + a</em> (commutativity), so <em>(c, d) ~ (a, b)</em></p></li>
+<li><p><strong>Transitive</strong>: Suppose <em>(a, b) ~ (c, d)</em> and <em>(c, d) ~ (e, f)</em>. Then:</p>
+<ul class="simple">
+<li><p><em>a + d = b + c</em></p></li>
+<li><p><em>c + f = d + e</em></p></li>
+</ul>
+<p>Adding these equations: <em>(a + d) + (c + f) = (b + c) + (d + e)</em></p>
+<p>Simplifying: <em>a + d + c + f = b + c + d + e</em></p>
+<p>Canceling <em>c + d</em> from both sides: <em>a + f = b + e</em></p>
+<p>Therefore <em>(a, b) ~ (e, f)</em>. ∎</p>
+</li>
+</ul>
+<p><strong>Definition 3.2</strong>: The set of integers is ℤ := (ℕ × ℕ) / ~, the set of equivalence classes under ~.</p>
+<p>We denote the equivalence class of <em>(a, b)</em> by [<em>(a, b)</em>] or simply [(a, b)].</p>
+</section>
+<section id="arithmetic-operations">
+<h3>3.3 Arithmetic Operations<a class="headerlink" href="#arithmetic-operations" title="Link to this heading">#</a></h3>
+<p>We define addition and multiplication on ℤ by operating on representatives:</p>
+<p><strong>Definition 3.3</strong>:</p>
+<ul class="simple">
+<li><p>Addition: [(a, b)] + [(c, d)] := [(a + c, b + d)]</p></li>
+<li><p>Multiplication: [(a, b)] · [(c, d)] := [(ac + bd, ad + bc)]</p></li>
+</ul>
+<p><strong>Well-definedness</strong>: These operations must not depend on the choice of representatives. We verify this for addition (multiplication is similar):</p>
+<p>Suppose [(a, b)] = [(a’, b’)] and [(c, d)] = [(c’, d’)]. Then <em>a + b’ = a’ + b</em> and <em>c + d’ = c’ + d</em>.</p>
+<p>We need to show [(a + c, b + d)] = [(a’ + c’, b’ + d’)], i.e., that <em>(a + c) + (b’ + d’) = (a’ + c’) + (b + d)</em>.</p>
+<p>Indeed:
+<em>(a + c) + (b’ + d’) = (a + b’) + (c + d’) = (a’ + b) + (c’ + d) = (a’ + c’) + (b + d)</em></p>
+<p>using the assumed equivalences and commutativity of addition in ℕ. ∎</p>
+</section>
+<section id="embedding-in">
+<h3>3.4 Embedding ℕ in ℤ<a class="headerlink" href="#embedding-in" title="Link to this heading">#</a></h3>
+<p><strong>Definition 3.4</strong>: Define <em>φ: ℕ → ℤ</em> by <em>φ(n) := [(n, 0)]</em>.</p>
+<p><strong>Lemma 3.2</strong>: The map <em>φ</em> is an injective ring homomorphism, i.e.:</p>
+<ul class="simple">
+<li><p><em>φ(m + n) = φ(m) + φ(n)</em></p></li>
+<li><p><em>φ(m · n) = φ(m) · φ(n)</em></p></li>
+<li><p><em>φ(0) = 0_ℤ</em> and <em>φ(1) = 1_ℤ</em></p></li>
+<li><p>If <em>φ(m) = φ(n)</em>, then <em>m = n</em></p></li>
+</ul>
+<p><em>Proof</em>:</p>
+<ul class="simple">
+<li><p>Addition: <em>φ(m + n) = [(m + n, 0)] = [(m, 0)] + [(n, 0)] = φ(m) + φ(n)</em></p></li>
+<li><p>Multiplication: <em>φ(m · n) = [(mn, 0)] = [(m·n + 0·0, m·0 + 0·n)] = [(m, 0)] · [(n, 0)] = φ(m) · φ(n)</em></p></li>
+<li><p>Identities: <em>φ(0) = [(0, 0)] = 0_ℤ</em> and <em>φ(1) = [(1, 0)] = 1_ℤ</em></p></li>
+<li><p>Injectivity: If <em>φ(m) = φ(n)</em>, then [(m, 0)] = [(n, 0)], so <em>m + 0 = n + 0</em>, hence <em>m = n</em>. ∎</p></li>
+</ul>
+<p>This embedding allows us to view ℕ as a subset of ℤ, writing <em>n</em> instead of <em>φ(n)</em> = [(n, 0)]. Under this identification:</p>
+<ul class="simple">
+<li><p>Natural numbers become non-negative integers</p></li>
+<li><p>The integer [(a, b)] can be written as <em>a - b</em> (where - now denotes subtraction in ℤ)</p></li>
+<li><p>In particular, [(0, n)] = <em>0 - n = -n</em> represents the negative integers</p></li>
+</ul>
+</section>
+<section id="why-equivalence-classes">
+<h3>3.5 Why Equivalence Classes?<a class="headerlink" href="#why-equivalence-classes" title="Link to this heading">#</a></h3>
+<p>This construction might seem unnecessarily abstract—why not simply define ℤ = {…, -2, -1, 0, 1, 2, …} directly?</p>
+<p>The equivalence class approach reveals a fundamental principle: <strong>we construct ℤ by formally adjoining solutions to equations we couldn’t solve in ℕ</strong>. Each equivalence class [(a, b)] represents the “formal solution” to <em>x + b = a</em>.</p>
+<p>This same principle will guide us from ℤ to ℚ (adjoining solutions to <em>bx = a</em>) and from ℚ to ℝ (adjoining limits of Cauchy sequences). The pattern—form pairs (or sequences), define equivalence, define operations on representatives—recurs throughout our construction.</p>
+</section>
+<section id="as-a-ring">
+<h3>3.6 ℤ as a Ring<a class="headerlink" href="#as-a-ring" title="Link to this heading">#</a></h3>
+<p><strong>Theorem 3.1</strong>: ℤ is a commutative ring with identity, and it is the <em>smallest</em> such ring containing ℕ (up to isomorphism).</p>
+<p><em>Proof sketch</em>:</p>
+<ul>
+<li><p><strong>ℤ is a ring</strong>: One verifies that addition and multiplication satisfy the ring axioms (associativity, distributivity, existence of additive identity 0 and inverses, etc.). These follow from the corresponding properties in ℕ and the definitions of operations on equivalence classes.</p></li>
+<li><p><strong>Additive inverses</strong>: For any [(a, b)] ∈ ℤ, we have [(a, b)] + [(b, a)] = [(a + b, b + a)] = [(a + b, a + b)] = [(0, 0)] = 0. Thus -[(a, b)] = [(b, a)], confirming that every element has an additive inverse.</p></li>
+<li><p><strong>Minimality</strong>: Suppose <em>R</em> is any ring containing ℕ (via some embedding). Since <em>R</em> is a ring, it must contain additive inverses of all natural numbers, hence must contain all integers (as differences of naturals). More precisely, any ring homomorphism <em>ψ: ℤ → R</em> extending the embedding of ℕ must satisfy:</p>
+<p><em>ψ([(a, b)]) = ψ([(a, 0)] - [(b, 0)]) = ψ([(a, 0)]) - ψ([(b, 0)]) = a - b</em></p>
+<p>where <em>a, b</em> on the right are viewed as elements of <em>R</em>. This formula uniquely determines <em>ψ</em>, proving minimality. ∎</p>
+</li>
+</ul>
+<p><strong>Remark</strong>: The minimality property means ℤ is the “free” or “universal” solution to the problem “adjoin additive inverses to ℕ.” Any other ring containing ℕ must contain a copy of ℤ.</p>
+</section>
+</section>
+<section id="rational-numbers-claude">
+<h2>4 Rational Numbers <strong>CLAUDE</strong><a class="headerlink" href="#rational-numbers-claude" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>4.1 Motivation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Just as ℕ lacks additive inverses, the integers ℤ lack multiplicative inverses. We can solve the equation <em>2x = 6</em> in ℤ (obtaining <em>x = 3</em>), but <em>2x = 1</em> has no integer solution. More generally, <em>bx = a</em> has a solution in ℤ if and only if <em>b</em> divides <em>a</em>.</p>
+<p>To enable unrestricted division (except by zero), we construct the rational numbers ℚ by formally adjoining fractions—multiplicative inverses of non-zero integers. This extends ℤ to a <em>field</em>, where every non-zero element has a multiplicative inverse.</p>
+</section>
+<section id="id2">
+<h3>4.2 Construction<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Our strategy mirrors the construction of ℤ: we represent a rational number as a “formal quotient” of two integers. The rational 1/2, for instance, can be thought of as the quotient of 1 and 2, or equally well as 2 and 4, or 3 and 6. All these pairs represent the same rational number because they represent the same “ratio.”</p>
+<p>However, we cannot simply define ℚ as the set of pairs (a, b) with <em>b ≠ 0</em>, because different pairs should represent the same rational number. We need an equivalence relation that captures when two pairs represent the same ratio:</p>
+<p><strong>Definition 4.1</strong>: Define an equivalence relation ~ on ℤ × ℤ* (where ℤ* = ℤ \ {0}) by:</p>
+<p><em>(a, b) ~ (c, d)  ⟺  ad = bc</em></p>
+<p><strong>Intuition</strong>: The pair <em>(a, b)</em> represents the formal quotient <em>a/b</em>. Two pairs <em>(a, b)</em> and <em>(c, d)</em> represent the same rational when <em>a/b = c/d</em>, which translates to <em>ad = bc</em> (cross-multiplication).</p>
+<p><strong>Examples</strong>:</p>
+<ul class="simple">
+<li><p><em>(1, 2) ~ (2, 4) ~ (3, 6) ~ (-1, -2)</em> all represent 1/2</p></li>
+<li><p><em>(3, 4) ~ (6, 8) ~ (-3, -4)</em> all represent 3/4</p></li>
+<li><p><em>(5, 1) ~ (10, 2) ~ (-5, -1)</em> all represent the integer 5</p></li>
+<li><p><em>(0, 1) ~ (0, 5) ~ (0, -3)</em> all represent 0</p></li>
+</ul>
+<p><strong>Lemma 4.1</strong>: The relation ~ is an equivalence relation.</p>
+<p><em>Proof</em>: We verify the three properties:</p>
+<ul>
+<li><p><strong>Reflexive</strong>: <em>(a, b) ~ (a, b)</em> since <em>ab = ba</em></p></li>
+<li><p><strong>Symmetric</strong>: If <em>(a, b) ~ (c, d)</em>, then <em>ad = bc</em>, hence <em>cb = da</em> (commutativity), so <em>(c, d) ~ (a, b)</em></p></li>
+<li><p><strong>Transitive</strong>: Suppose <em>(a, b) ~ (c, d)</em> and <em>(c, d) ~ (e, f)</em>. Then:</p>
+<ul class="simple">
+<li><p><em>ad = bc</em></p></li>
+<li><p><em>cf = de</em></p></li>
+</ul>
+<p>Multiplying the first equation by <em>f</em> and the second by <em>b</em>:</p>
+<ul class="simple">
+<li><p><em>adf = bcf</em></p></li>
+<li><p><em>bcf = bde</em></p></li>
+</ul>
+<p>Therefore <em>adf = bde</em>.</p>
+<p>Since <em>d ≠ 0</em> (as <em>(c, d) ∈ ℤ × ℤ</em>*), we can cancel <em>d</em> from both sides: <em>af = be</em>.</p>
+<p>Hence <em>(a, b) ~ (e, f)</em>. ∎</p>
+</li>
+</ul>
+<p><strong>Definition 4.2</strong>: The set of rational numbers is ℚ := (ℤ × ℤ*) / ~, the set of equivalence classes under ~.</p>
+<p>We denote the equivalence class of <em>(a, b)</em> by [<em>(a, b)</em>] or [(a, b)], and often write <em>a/b</em> for this equivalence class once we’ve embedded ℚ as an extension of ℤ.</p>
+</section>
+<section id="id3">
+<h3>4.3 Arithmetic Operations<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><strong>Definition 4.3</strong>:</p>
+<ul class="simple">
+<li><p><strong>Addition</strong>: [(a, b)] + [(c, d)] := [(ad + bc, bd)]</p></li>
+<li><p><strong>Multiplication</strong>: [(a, b)] · [(c, d)] := [(ac, bd)]</p></li>
+</ul>
+<p><strong>Intuition</strong>: These definitions follow the familiar rules for adding and multiplying fractions:</p>
+<ul class="simple">
+<li><p><em>a/b + c/d = (ad + bc)/(bd)</em></p></li>
+<li><p><em>(a/b) · (c/d) = (ac)/(bd)</em></p></li>
+</ul>
+<p><strong>Well-definedness</strong>: We must verify that these operations don’t depend on the choice of representatives. We check addition (multiplication is similar):</p>
+<p>Suppose [(a, b)] = [(a’, b’)] and [(c, d)] = [(c’, d’)]. Then <em>ab’ = a’b</em> and <em>cd’ = c’d</em>.</p>
+<p>We need to show [(ad + bc, bd)] = [(a’d’ + b’c’, b’d’)], i.e., that <em>(ad + bc)(b’d’) = bd(a’d’ + b’c’)</em>.</p>
+<p>Expanding both sides:</p>
+<ul class="simple">
+<li><p>Left: <em>(ad + bc)(b’d’) = adb’d’ + bcb’d’</em></p></li>
+<li><p>Right: <em>bd(a’d’ + b’c’) = bda’d’ + bdb’c’</em></p></li>
+</ul>
+<p>Using <em>ab’ = a’b</em>: <em>adb’d’ = a’bdd’ = a’bd’d</em>
+Using <em>cd’ = c’d</em>: <em>bcb’d’ = bb’c’d = bdb’c’</em></p>
+<p>Therefore both sides equal <em>bda’d’ + bdb’c’</em>, confirming well-definedness. ∎</p>
+</section>
+<section id="id4">
+<h3>4.4 Embedding ℤ in ℚ<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p><strong>Definition 4.4</strong>: Define <em>φ: ℤ → ℚ</em> by <em>φ(n) := [(n, 1)]</em>.</p>
+<p><strong>Lemma 4.2</strong>: The map <em>φ</em> is an injective ring homomorphism.</p>
+<p><em>Proof</em>:</p>
+<ul class="simple">
+<li><p>Addition: <em>φ(m + n) = [(m + n, 1)] = [(m·1 + n·1, 1·1)] = [(m, 1)] + [(n, 1)] = φ(m) + φ(n)</em></p></li>
+<li><p>Multiplication: <em>φ(m · n) = [(mn, 1)] = [(m·n, 1·1)] = [(m, 1)] · [(n, 1)] = φ(m) · φ(n)</em></p></li>
+<li><p>Identities: <em>φ(0) = [(0, 1)] = 0_ℚ</em> and <em>φ(1) = [(1, 1)] = 1_ℚ</em></p></li>
+<li><p>Injectivity: If <em>φ(m) = φ(n)</em>, then [(m, 1)] = [(n, 1)], so <em>m·1 = n·1</em>, hence <em>m = n</em>. ∎</p></li>
+</ul>
+<p>This embedding allows us to view ℤ as a subset of ℚ, identifying the integer <em>n</em> with the rational <em>n/1</em>. Under this identification:</p>
+<ul class="simple">
+<li><p>The rational [(a, b)] can be written as <em>a/b</em> (using division in ℚ)</p></li>
+<li><p>Every rational is the quotient of two integers</p></li>
+<li><p>The familiar fraction notation becomes rigorous</p></li>
+</ul>
+</section>
+<section id="as-a-field">
+<h3>4.5 ℚ as a Field<a class="headerlink" href="#as-a-field" title="Link to this heading">#</a></h3>
+<p><strong>Theorem 4.1</strong>: ℚ is a field, and it is the <em>smallest</em> field containing ℤ (up to isomorphism).</p>
+<p><em>Proof sketch</em>:</p>
+<ul>
+<li><p><strong>ℚ is a commutative ring</strong>: The ring axioms follow from the definitions and the ring structure of ℤ (verified by routine calculations).</p></li>
+<li><p><strong>Multiplicative inverses</strong>: For any non-zero [(a, b)] ∈ ℚ, we have <em>a ≠ 0</em> (since if <em>a = 0</em>, then [(a, b)] = [(0, b)] = 0_ℚ). Thus <em>(b, a) ∈ ℤ × ℤ</em>*, and:</p>
+<p>[(a, b)] · [(b, a)] = [(ab, ba)] = [(ab, ab)] = [(1, 1)] = 1_ℚ</p>
+<p>Therefore the multiplicative inverse of [(a, b)] is [(b, a)], confirming that ℚ is a field.</p>
+</li>
+<li><p><strong>Minimality</strong>: Any field <em>F</em> containing ℤ must contain quotients <em>a/b</em> for all <em>a ∈ ℤ</em> and <em>b ∈ ℤ</em>* (since fields have multiplicative inverses). Thus <em>F</em> contains all of ℚ. More precisely, any field homomorphism <em>ψ: ℚ → F</em> extending the embedding of ℤ must satisfy:</p>
+<p><em>ψ([(a, b)]) = ψ(a) · ψ(b)⁻¹ = a · b⁻¹</em></p>
+<p>where the right side is computed in <em>F</em>. This uniquely determines <em>ψ</em>. ∎</p>
+</li>
+</ul>
+<p><strong>Remark</strong>: The minimality means ℚ is the “field of fractions” of ℤ—the universal solution to “adjoin multiplicative inverses to ℤ.”</p>
+</section>
+<section id="ordering-on">
+<h3>4.6 Ordering on ℚ<a class="headerlink" href="#ordering-on" title="Link to this heading">#</a></h3>
+<p><strong>Definition 4.5</strong>: Define an order on ℚ by:</p>
+<p>[(a, b)] &lt; [(c, d)] ⟺ (ad &lt; bc in ℤ if <em>bd &gt; 0</em>) or (ad &gt; bc in ℤ if <em>bd &lt; 0</em>)</p>
+<p>Equivalently, after choosing representatives with positive denominators: [(a, b)] &lt; [(c, d)] ⟺ ad &lt; bc (with <em>b, d &gt; 0</em>).</p>
+<p>This ordering extends the ordering on ℤ and makes ℚ an <em>ordered field</em>: it is compatible with addition and multiplication by positive elements.</p>
+</section>
+<section id="density-of">
+<h3>4.7 Density of ℚ<a class="headerlink" href="#density-of" title="Link to this heading">#</a></h3>
+<p><strong>Theorem 4.2</strong> (Density): Between any two distinct rational numbers lies another rational number. In fact, infinitely many rationals lie between any two distinct rationals.</p>
+<p><em>Proof</em>: Let <em>p, q ∈ ℚ</em> with <em>p &lt; q</em>. Then <em>(p + q)/2</em> is rational (since ℚ is closed under addition and division), and:</p>
+<p><em>p &lt; (p + q)/2 &lt; q</em></p>
+<p>(The inequalities follow from <em>p &lt; q</em> by adding <em>p</em> to both sides, then dividing by 2.)</p>
+<p>For infinitely many: the rationals <em>p + (q - p)/n</em> for <em>n = 2, 3, 4, …</em> all lie strictly between <em>p</em> and <em>q</em>. ∎</p>
+<p><strong>Remark on density</strong>: This density property might suggest that ℚ “fills the number line”—that there are no gaps. This intuition is misleading, as we’ll see when we construct ℝ.</p>
+<p>Consider the set <em>A = {r ∈ ℚ : r² &lt; 2}</em>. This set is bounded above (e.g., by 2), and by density, <em>A</em> has rationals arbitrarily close to √2. Yet <em>A</em> has no <em>largest</em> element in ℚ—there is a “gap” at √2. The rationals are dense, but not <em>complete</em>: Cauchy sequences of rationals need not converge to rationals.</p>
+<p>This incompleteness is precisely what motivates our construction of ℝ.</p>
+</section>
+<section id="the-archimedean-property">
+<h3>4.8 The Archimedean Property<a class="headerlink" href="#the-archimedean-property" title="Link to this heading">#</a></h3>
+<p><strong>Theorem 4.3</strong> (Archimedean Property): For any <em>q ∈ ℚ</em>, there exists <em>n ∈ ℕ</em> such that <em>n &gt; q</em>.</p>
+<p><em>Proof</em>: Write <em>q = a/b</em> with <em>a, b ∈ ℤ</em> and <em>b &gt; 0</em>. If <em>a ≤ 0</em>, then any <em>n ∈ ℕ</em> with <em>n ≥ 1</em> satisfies <em>n &gt; q</em>. If <em>a &gt; 0</em>, then <em>n = a + b</em> works, since:</p>
+<p><em>n = a + b &gt; a = a/b · b ≥ a/b = q</em> ∎</p>
+<p><strong>Remark</strong>: This property states that ℚ has no “infinitely large” elements—no matter how large a rational number is, some natural number exceeds it. This will be important when we prove properties of ℝ in the next section.</p>
+</section>
+</section>
+<section id="real-numbers-claude">
+<h2>5 Real Numbers <strong>CLAUDE</strong><a class="headerlink" href="#real-numbers-claude" title="Link to this heading">#</a></h2>
+<section id="motivation-the-incompleteness-of">
+<h3>5.1 Motivation: The Incompleteness of ℚ<a class="headerlink" href="#motivation-the-incompleteness-of" title="Link to this heading">#</a></h3>
+<p>Despite its density, ℚ has fundamental “gaps”—points where sequences converge but have no rational limit. Consider the sequence obtained by truncating the decimal expansion of √2:</p>
+<p><em>x₁ = 1</em>
+<em>x₂ = 1.4 = 14/10</em>
+<em>x₃ = 1.41 = 141/100</em>
+<em>x₄ = 1.414 = 1414/1000</em>
+<em>x₅ = 1.4142 = 14142/10000</em>
+<em>…</em></p>
+<p>Each term is rational. Moreover, the sequence becomes arbitrarily stable: for sufficiently large <em>n</em> and <em>m</em>, the terms <em>xₙ</em> and <em>xₘ</em> are arbitrarily close to each other. Such sequences are called <em>Cauchy sequences</em>.</p>
+<p>Yet this Cauchy sequence converges to no rational number. If it did converge to some <em>r ∈ ℚ</em>, then <em>r² = 2</em> (since <em>xₙ²</em> approaches 2), contradicting Theorem 6.1 which shows √2 is irrational. The sequence “wants to converge” to √2, but this limit does not exist in ℚ—there is a gap in the rationals at √2.</p>
+<p>This phenomenon is not isolated. Consider:</p>
+<ul class="simple">
+<li><p>The sequence <em>sₙ = 1 + 1/2 + 1/4 + … + 1/2ⁿ</em> is Cauchy in ℚ but converges to 2, which happens to be rational</p></li>
+<li><p>The sequence <em>eₙ = (1 + 1/n)ⁿ</em> is Cauchy in ℚ but converges to <em>e</em>, which is irrational (transcendental, in fact)</p></li>
+<li><p>The decimal expansions of π, e, and most real numbers yield Cauchy sequences of rationals with no rational limit</p></li>
+</ul>
+<p><strong>The problem</strong>: ℚ is not <em>complete</em>—Cauchy sequences in ℚ need not converge to elements of ℚ.</p>
+<p><strong>The solution</strong>: Construct ℝ by formally adjoining limits to all Cauchy sequences. Just as we constructed ℚ by formally adjoining quotients (formal solutions to <em>bx = a</em>), we construct ℝ by formally adjoining limits (formal solutions to “where does this Cauchy sequence converge?”).</p>
+<p>This completeness is essential for calculus and analysis. Without it, we cannot prove:</p>
+<ul class="simple">
+<li><p>The <strong>Intermediate Value Theorem</strong>: continuous functions on [a, b] achieve all values between f(a) and f(b)</p></li>
+<li><p>The <strong>Extreme Value Theorem</strong>: continuous functions on [a, b] achieve maximum and minimum values</p></li>
+<li><p><strong>Convergence of series</strong>: power series, Fourier series, and other infinite sums have well-defined limits</p></li>
+<li><p><strong>Existence of solutions</strong>: many differential equations and optimization problems require limits of approximating sequences</p></li>
+</ul>
+<p>Our construction will ensure that ℝ is complete <em>by construction</em> rather than by assumption.</p>
+</section>
+<section id="cauchy-sequences">
+<h3>5.2 Cauchy Sequences<a class="headerlink" href="#cauchy-sequences" title="Link to this heading">#</a></h3>
+<p><strong>Definition 5.1</strong>: A sequence <em>(xₙ)</em> of rational numbers is a <em>Cauchy sequence</em> if for every <em>ε &gt; 0</em> (with <em>ε ∈ ℚ</em>), there exists <em>N ∈ ℕ</em> such that for all <em>n, m &gt; N</em>:</p>
+<p><em>|xₙ - xₘ| &lt; ε</em></p>
+<p><strong>Intuition</strong>: A sequence is Cauchy if its terms eventually cluster arbitrarily closely together. The “eventual clustering” is what makes the sequence “want to converge”—it’s trying to approach some limit, whether or not that limit exists in ℚ.</p>
+<p><strong>Examples</strong>:</p>
+<ol class="arabic">
+<li><p><strong>Constant sequence</strong>: <em>xₙ = 5</em> for all <em>n</em>. This is Cauchy (trivially), since <em>|xₙ - xₘ| = 0 &lt; ε</em> for all <em>n, m</em>.</p></li>
+<li><p><strong>Geometric series</strong>: <em>xₙ = 1 + 1/2 + 1/4 + … + 1/2ⁿ = 2 - 1/2ⁿ</em>. For <em>n &gt; m</em>:</p>
+<p><em>|xₙ - xₘ| = |1/2ᵐ - 1/2ⁿ| = 1/2ᵐ(1 - 1/2ⁿ⁻ᵐ) &lt; 1/2ᵐ</em></p>
+<p>Given <em>ε &gt; 0</em>, choose <em>N</em> such that <em>1/2ᴺ &lt; ε</em>. Then for all <em>n, m &gt; N</em>, we have <em>|xₙ - xₘ| &lt; ε</em>.</p>
+</li>
+<li><p><strong>√2 approximation</strong>: The sequence <em>x₁ = 1, x₂ = 1.4, x₃ = 1.41, …</em> defined by decimal truncation is Cauchy. For <em>n &gt; m</em>, we have <em>|xₙ - xₘ| &lt; 10⁻ᵐ</em>, which can be made arbitrarily small.</p></li>
+<li><p><strong>Non-example</strong>: <em>xₙ = 1 + 1/2 + 1/3 + … + 1/n</em> (harmonic series) is NOT Cauchy. For instance:</p>
+<p><em>x₂ₙ - xₙ = 1/(n+1) + 1/(n+2) + … + 1/(2n) ≥ n · 1/(2n) = 1/2</em></p>
+<p>So the terms don’t cluster together—the gaps remain bounded away from zero.</p>
+</li>
+</ol>
+<p><strong>Basic properties of Cauchy sequences</strong>:</p>
+<p><strong>Lemma 5.1</strong>: Every Cauchy sequence in ℚ is bounded.</p>
+<p><em>Proof</em>: Let <em>(xₙ)</em> be Cauchy. Taking <em>ε = 1</em>, there exists <em>N</em> such that <em>|xₙ - xₘ| &lt; 1</em> for all <em>n, m &gt; N</em>.</p>
+<p>In particular, <em>|xₙ - xₙ₊₁| &lt; 1</em> for all <em>n &gt; N</em>, so <em>|xₙ| &lt; |xₙ₊₁| + 1</em> for all <em>n &gt; N</em>.</p>
+<p>Let <em>M = max{|x₁|, |x₂|, …, |xₙ|, |xₙ₊₁| + 1}</em>. Then <em>|xₙ| ≤ M</em> for all <em>n</em>. ∎</p>
+<p><strong>Notation</strong>: Let <em>C(ℚ)</em> denote the set of all Cauchy sequences of rational numbers.</p>
+</section>
+<section id="equivalence-of-cauchy-sequences">
+<h3>5.3 Equivalence of Cauchy Sequences<a class="headerlink" href="#equivalence-of-cauchy-sequences" title="Link to this heading">#</a></h3>
+<p>Our strategy is to define ℝ as equivalence classes of Cauchy sequences, just as we defined ℚ as equivalence classes of pairs of integers. But when should two Cauchy sequences be considered “equivalent”?</p>
+<p><strong>Intuition</strong>: Two Cauchy sequences should represent the same real number if they “converge to the same place”—that is, if their difference converges to zero.</p>
+<p><strong>Definition 5.2</strong>: Two Cauchy sequences <em>(xₙ)</em> and <em>(yₙ)</em> are <em>equivalent</em>, written <em>(xₙ) ~ (yₙ)</em>, if:</p>
+<p><em>lim_{n→∞} (xₙ - yₙ) = 0</em></p>
+<p>More precisely: for every <em>ε &gt; 0</em>, there exists <em>N ∈ ℕ</em> such that for all <em>n &gt; N</em>:</p>
+<p><em>|xₙ - yₙ| &lt; ε</em></p>
+<p><strong>Examples</strong>:</p>
+<ol class="arabic simple">
+<li><p>The sequences <em>(1, 1.4, 1.41, 1.414, …)</em> and <em>(2, 1.5, 1.42, 1.415, …)</em> are equivalent, since both represent √2 and their difference approaches 0.</p></li>
+<li><p>The sequences <em>(1, 1, 1, 1, …)</em> and <em>(1 + 1/2, 1 + 1/4, 1 + 1/8, …)</em> are NOT equivalent, since the first approaches 1 while the second approaches 2.</p></li>
+<li><p>The constant sequences <em>(3, 3, 3, …)</em> and <em>(3.01, 3.001, 3.0001, …)</em> are equivalent—both represent the real number 3.</p></li>
+</ol>
+<p><strong>Lemma 5.2</strong>: The relation ~ is an equivalence relation on <em>C(ℚ)</em>.</p>
+<p><em>Proof</em>:</p>
+<ul>
+<li><p><strong>Reflexive</strong>: <em>(xₙ) ~ (xₙ)</em> since <em>|xₙ - xₙ| = 0 &lt; ε</em> for all <em>n</em> and all <em>ε &gt; 0</em>.</p></li>
+<li><p><strong>Symmetric</strong>: If <em>(xₙ) ~ (yₙ)</em>, then for all <em>ε &gt; 0</em>, there exists <em>N</em> such that <em>|xₙ - yₙ| &lt; ε</em> for all <em>n &gt; N</em>. But <em>|yₙ - xₙ| = |xₙ - yₙ| &lt; ε</em>, so <em>(yₙ) ~ (xₙ)</em>.</p></li>
+<li><p><strong>Transitive</strong>: Suppose <em>(xₙ) ~ (yₙ)</em> and <em>(yₙ) ~ (zₙ)</em>. Let <em>ε &gt; 0</em>. Then:</p>
+<ul class="simple">
+<li><p>There exists <em>N₁</em> such that <em>|xₙ - yₙ| &lt; ε/2</em> for all <em>n &gt; N₁</em></p></li>
+<li><p>There exists <em>N₂</em> such that <em>|yₙ - zₙ| &lt; ε/2</em> for all <em>n &gt; N₂</em></p></li>
+</ul>
+<p>Let <em>N = max{N₁, N₂}</em>. For all <em>n &gt; N</em>:</p>
+<p><em>|xₙ - zₙ| = |(xₙ - yₙ) + (yₙ - zₙ)| ≤ |xₙ - yₙ| + |yₙ - zₙ| &lt; ε/2 + ε/2 = ε</em></p>
+<p>Therefore <em>(xₙ) ~ (zₙ)</em>. ∎</p>
+</li>
+</ul>
+</section>
+<section id="definition-of">
+<h3>5.4 Definition of ℝ<a class="headerlink" href="#definition-of" title="Link to this heading">#</a></h3>
+<p><strong>Definition 5.3</strong>: The set of real numbers is:</p>
+<p><em>ℝ := C(ℚ) / ~</em></p>
+<p>the set of equivalence classes of Cauchy sequences of rational numbers under the equivalence relation ~.</p>
+<p>We denote the equivalence class of a Cauchy sequence <em>(xₙ)</em> by [<em>(xₙ)</em>] or [xₙ].</p>
+<p><strong>Fundamental principle</strong>: Each real number IS an equivalence class of Cauchy sequences. The real number √2, for instance, is the equivalence class of all Cauchy sequences that “converge to √2”, including:</p>
+<ul class="simple">
+<li><p><em>(1, 1.4, 1.41, 1.414, …)</em></p></li>
+<li><p><em>(1, 1.41, 1.414, 1.4142, …)</em> (converging faster)</p></li>
+<li><p><em>(2, 1.5, 1.42, 1.415, …)</em> (approaching from above)</p></li>
+<li><p>And infinitely many others</p></li>
+</ul>
+<p>All these sequences are equivalent because their differences approach 0.</p>
+</section>
+<section id="arithmetic-operations-on">
+<h3>5.5 Arithmetic Operations on ℝ<a class="headerlink" href="#arithmetic-operations-on" title="Link to this heading">#</a></h3>
+<p>To define arithmetic on ℝ, we operate on representative sequences:</p>
+<p><strong>Definition 5.4</strong>:</p>
+<ul class="simple">
+<li><p><strong>Addition</strong>: [xₙ] + [yₙ] := [xₙ + yₙ]</p></li>
+<li><p><strong>Multiplication</strong>: [xₙ] · [yₙ] := [xₙ · yₙ]</p></li>
+</ul>
+<p><strong>Intuition</strong>: To add two real numbers, choose representative Cauchy sequences and add them term-by-term. The result is another Cauchy sequence, whose equivalence class is the sum.</p>
+<p><strong>Well-definedness</strong>: We must verify:</p>
+<ol class="arabic simple">
+<li><p>If <em>(xₙ)</em> and <em>(yₙ)</em> are Cauchy, then <em>(xₙ + yₙ)</em> and <em>(xₙ · yₙ)</em> are Cauchy</p></li>
+<li><p>The operations don’t depend on choice of representatives</p></li>
+</ol>
+<p><strong>Lemma 5.3</strong> (Sums and products of Cauchy sequences are Cauchy):</p>
+<p>(a) If <em>(xₙ)</em> and <em>(yₙ)</em> are Cauchy, then <em>(xₙ + yₙ)</em> is Cauchy.</p>
+<p><em>Proof</em>: Let <em>ε &gt; 0</em>. Since <em>(xₙ)</em> and <em>(yₙ)</em> are Cauchy:</p>
+<ul class="simple">
+<li><p>There exists <em>N₁</em> such that <em>|xₙ - xₘ| &lt; ε/2</em> for all <em>n, m &gt; N₁</em></p></li>
+<li><p>There exists <em>N₂</em> such that <em>|yₙ - yₘ| &lt; ε/2</em> for all <em>n, m &gt; N₂</em></p></li>
+</ul>
+<p>Let <em>N = max{N₁, N₂}</em>. For all <em>n, m &gt; N</em>:</p>
+<p><em>|(xₙ + yₙ) - (xₘ + yₘ)| = |(xₙ - xₘ) + (yₙ - yₘ)| ≤ |xₙ - xₘ| + |yₙ - yₘ| &lt; ε/2 + ε/2 = ε</em> ∎</p>
+<p>(b) If <em>(xₙ)</em> and <em>(yₙ)</em> are Cauchy, then <em>(xₙ · yₙ)</em> is Cauchy.</p>
+<p><em>Proof</em>: By Lemma 5.1, both sequences are bounded: <em>|xₙ| ≤ M</em> and <em>|yₙ| ≤ M</em> for all <em>n</em> and some <em>M &gt; 0</em>.</p>
+<p>Let <em>ε &gt; 0</em>. Since <em>(xₙ)</em> and <em>(yₙ)</em> are Cauchy:</p>
+<ul class="simple">
+<li><p>There exists <em>N₁</em> such that <em>|xₙ - xₘ| &lt; ε/(2M)</em> for all <em>n, m &gt; N₁</em></p></li>
+<li><p>There exists <em>N₂</em> such that <em>|yₙ - yₘ| &lt; ε/(2M)</em> for all <em>n, m &gt; N₂</em></p></li>
+</ul>
+<p>Let <em>N = max{N₁, N₂}</em>. For all <em>n, m &gt; N</em>:</p>
+<p><em>|xₙyₙ - xₘyₘ| = |xₙyₙ - xₙyₘ + xₙyₘ - xₘyₘ|</em>
+<em>= |xₙ(yₙ - yₘ) + yₘ(xₙ - xₘ)|</em>
+<em>≤ |xₙ||yₙ - yₘ| + |yₘ||xₙ - xₘ|</em>
+<em>≤ M · ε/(2M) + M · ε/(2M) = ε</em> ∎</p>
+<p><strong>Lemma 5.4</strong> (Independence of representatives): If <em>(xₙ) ~ (x’ₙ)</em> and <em>(yₙ) ~ (y’ₙ)</em>, then:</p>
+<ul class="simple">
+<li><p><em>(xₙ + yₙ) ~ (x’ₙ + y’ₙ)</em></p></li>
+<li><p><em>(xₙ · yₙ) ~ (x’ₙ · y’ₙ)</em></p></li>
+</ul>
+<p><em>Proof of addition</em>: We need to show *|(xₙ + yₙ) - (x’ₙ + y’ₙ)| → 0$.</p>
+<p>Let <em>ε &gt; 0</em>. Since <em>(xₙ) ~ (x’ₙ)</em> and <em>(yₙ) ~ (y’ₙ)</em>:</p>
+<ul class="simple">
+<li><p>There exists <em>N₁</em> such that <em>|xₙ - x’ₙ| &lt; ε/2</em> for all <em>n &gt; N₁</em></p></li>
+<li><p>There exists <em>N₂</em> such that <em>|yₙ - y’ₙ| &lt; ε/2</em> for all <em>n &gt; N₂</em></p></li>
+</ul>
+<p>Let <em>N = max{N₁, N₂}</em>. For all <em>n &gt; N</em>:</p>
+<p><em>|(xₙ + yₙ) - (x’ₙ + y’ₙ)| = |(xₙ - x’ₙ) + (yₙ - y’ₙ)| ≤ |xₙ - x’ₙ| + |yₙ - y’ₙ| &lt; ε/2 + ε/2 = ε</em> ∎</p>
+<p><em>Proof of multiplication</em>: Similar, using boundedness. [Details omitted for brevity.] ∎</p>
+</section>
+<section id="id5">
+<h3>5.6 Embedding ℚ in ℝ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p><strong>Definition 5.5</strong>: Define <em>φ: ℚ → ℝ</em> by <em>φ(r) := [(r, r, r, …]</em>, the equivalence class of the constant sequence at <em>r</em>.</p>
+<p><strong>Lemma 5.5</strong>: The map <em>φ</em> is an injective field homomorphism.</p>
+<p><em>Proof</em>:</p>
+<ul class="simple">
+<li><p><strong>Addition</strong>: The constant sequence at <em>r + s</em> equals the sum of constant sequences at <em>r</em> and <em>s</em> term-by-term.</p></li>
+<li><p><strong>Multiplication</strong>: Similarly for products.</p></li>
+<li><p><strong>Injectivity</strong>: If <em>φ(r) = φ(s)</em>, then the constant sequences at <em>r</em> and <em>s</em> are equivalent, so <em>|r - s| &lt; ε</em> for all <em>ε &gt; 0</em>, hence <em>r = s</em>. ∎</p></li>
+</ul>
+<p>This embedding allows us to view ℚ as a subset of ℝ, identifying the rational <em>r</em> with the equivalence class of constant sequences [(r, r, r, …)].</p>
+<p>Under this identification:</p>
+<ul class="simple">
+<li><p>Rational numbers become specific real numbers (those representable by constant Cauchy sequences)</p></li>
+<li><p>Every real number can be approximated arbitrarily closely by rationals (by choosing any representative Cauchy sequence)</p></li>
+<li><p>The real number [xₙ] can be thought of as lim xₙ, the “limit” the sequence is trying to reach</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>5.7 Ordering on ℝ<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p><strong>Definition 5.6</strong>: Define an order on ℝ by: [xₙ] &lt; [yₙ] if there exists <em>ε &gt; 0</em> and <em>N ∈ ℕ</em> such that for all <em>n &gt; N</em>:</p>
+<p><em>yₙ - xₙ &gt; ε</em></p>
+<p><strong>Intuition</strong>: [xₙ] &lt; [yₙ] if the sequences are eventually separated by a positive gap—<em>(yₙ)</em> is eventually and persistently larger than <em>(xₙ)</em>.</p>
+<p>This definition is independent of representatives and extends the ordering on ℚ. It makes ℝ an <em>ordered field</em>.</p>
+<p><strong>Remark</strong>: Some care is needed in verifying well-definedness and the trichotomy property (<em>exactly one</em> of [xₙ] &lt; [yₙ], [xₙ] = [yₙ], or [xₙ] &gt; [yₙ] holds). We omit the technical details.</p>
+</section>
+<section id="is-a-field">
+<h3>5.8 ℝ is a Field<a class="headerlink" href="#is-a-field" title="Link to this heading">#</a></h3>
+<p><strong>Theorem 5.1</strong>: ℝ is an ordered field containing ℚ as an ordered subfield.</p>
+<p><em>Proof sketch</em>:</p>
+<ul class="simple">
+<li><p>The field axioms (associativity, commutativity, distributivity, identities, inverses) follow from the corresponding properties of ℚ and the definitions of operations on equivalence classes.</p></li>
+<li><p>The additive identity is <em>0_ℝ = [(0, 0, 0, …)]</em></p></li>
+<li><p>The multiplicative identity is <em>1_ℝ = [(1, 1, 1, …)]</em></p></li>
+<li><p>The additive inverse of [xₙ] is [−xₙ]</p></li>
+<li><p>For multiplicative inverses: if [xₙ] ≠ 0, then <em>(xₙ)</em> is eventually bounded away from 0 (there exist <em>ε &gt; 0</em> and <em>N</em> such that <em>|xₙ| &gt; ε</em> for all <em>n &gt; N</em>). We can then define the inverse as [1/xₙ] (taking 1/xₙ only for <em>n &gt; N</em> where it’s defined, and extending arbitrarily for smaller <em>n</em>).</p></li>
+<li><p>The ordering properties follow from Definition 5.6. ∎</p></li>
+</ul>
+</section>
+<section id="completeness-of">
+<h3>5.9 Completeness of ℝ<a class="headerlink" href="#completeness-of" title="Link to this heading">#</a></h3>
+<p>We now prove the fundamental property distinguishing ℝ from ℚ:</p>
+<p><strong>Theorem 5.2</strong> (Cauchy Completeness): Every Cauchy sequence in ℝ converges to an element of ℝ.</p>
+<p><strong>This is the key result</strong>: It shows that ℝ has no “gaps”—every sequence that should converge does converge, to an element of ℝ. This property comes <em>for free</em> from our construction—it’s not an axiom we assume, but a theorem we prove.</p>
+<p><em>Proof</em>: Let <em>(rₙ)</em> be a Cauchy sequence in ℝ, where each <em>rₙ = [x^(n)_k]</em> for some Cauchy sequence <em>(x^(n)<em>k)</em>{k=1}^∞</em> of rationals.</p>
+<p><strong>Step 1</strong>: Construct a “diagonal” Cauchy sequence of rationals.</p>
+<p>For each <em>n</em>, choose a rational <em>qₙ</em> from the equivalence class <em>rₙ</em> such that <em>qₙ</em> is “close” to the Cauchy sequence representing <em>rₙ</em>. More precisely:</p>
+<p>Since <em>(rₙ)</em> is Cauchy in ℝ, for each <em>m</em> there exists <em>N_m</em> such that for all <em>n, n’ &gt; N_m</em>:</p>
+<p><em>|rₙ - rₙ’| &lt; 1/m</em> (in ℝ)</p>
+<p>This means the Cauchy sequences representing <em>rₙ</em> and <em>rₙ’</em> are close, so we can find rationals <em>qₙ</em> from each that are close to each other.</p>
+<p>Formally: for each <em>n</em>, choose <em>k_n</em> large enough that:</p>
+<ul class="simple">
+<li><p><em>|x^(n)<em>{k_n} - x^(n)</em>{k_{n+1}}| &lt; 1/n</em> (within the <em>n</em>-th Cauchy sequence)</p></li>
+<li><p>The choice ensures the sequence <em>(qₙ) := (x^(n)_{k_n})</em> inherits the Cauchy property</p></li>
+</ul>
+<p>Let <em>qₙ := x^(n)_{k_n}</em>. By the Cauchy property of <em>(rₙ)</em> and careful choice of <em>k_n</em>, the sequence <em>(qₙ)</em> is Cauchy in ℚ.</p>
+<p><strong>Step 2</strong>: The limit is <em>r := [qₙ]</em>.</p>
+<p>We claim that <em>rₙ → r</em> in ℝ, that is, for every <em>ε &gt; 0</em>, there exists <em>N</em> such that for all <em>n &gt; N</em>:</p>
+<p><em>|rₙ - r| &lt; ε</em></p>
+<p>This follows because <em>rₙ = [x^(n)_k]</em> and <em>r = [qₙ]</em> are close when <em>qₙ</em> is chosen from (or very close to) the <em>n</em>-th equivalence class.</p>
+<p>[The full technical details involve careful bookkeeping of indices and epsilon management, which we omit for clarity.] ∎</p>
+<p><strong>Interpretation</strong>: This theorem says that ℝ contains limits of all its Cauchy sequences. There are no “missing points” in ℝ the way √2 was missing from ℚ. The construction of ℝ as equivalence classes of Cauchy sequences <em>automatically</em> ensures this completeness—we didn’t have to assume it as an axiom; it’s built into the definition.</p>
+</section>
+<section id="the-supremum-property">
+<h3>5.10 The Supremum Property<a class="headerlink" href="#the-supremum-property" title="Link to this heading">#</a></h3>
+<p>The Cauchy completeness (Theorem 5.2) is one characterization of completeness. Another crucial property is the <em>supremum property</em>: every bounded non-empty set has a least upper bound. We now show this is a <em>consequence</em> of our construction, not an additional axiom.</p>
+<p><strong>Definition 5.7</strong>: Let <em>A ⊆ ℝ</em> be non-empty.</p>
+<ul class="simple">
+<li><p>An element <em>b ∈ ℝ</em> is an <em>upper bound</em> of <em>A</em> if <em>a ≤ b</em> for all <em>a ∈ A</em></p></li>
+<li><p><em>A</em> is <em>bounded above</em> if it has at least one upper bound</p></li>
+<li><p>The <em>supremum</em> of <em>A</em>, denoted <em>sup(A)</em>, is the <em>least</em> upper bound: <em>sup(A) ≤ b</em> for every upper bound <em>b</em> of <em>A</em></p></li>
+</ul>
+<p><strong>Theorem 5.3</strong> (Supremum Property): Every non-empty subset of ℝ that is bounded above has a supremum in ℝ.</p>
+<p><strong>Significance</strong>: This property is often taken as an <em>axiom</em> characterizing ℝ in alternative approaches (Dedekind cuts, axiomatic characterization). In our construction, it emerges as a <em>theorem</em>—a consequence of Cauchy completeness.</p>
+<p><em>Proof</em>: Let <em>A ⊆ ℝ</em> be non-empty and bounded above. We construct <em>sup(A)</em> explicitly as the limit of a Cauchy sequence.</p>
+<p><strong>Step 1</strong> (Bisection construction):</p>
+<ul class="simple">
+<li><p>Choose any <em>a₀ ∈ A</em> and any upper bound <em>b₀</em> of <em>A</em></p></li>
+<li><p>We have <em>a₀ ≤ b₀</em></p></li>
+<li><p>Consider the midpoint <em>m₀ = (a₀ + b₀)/2</em></p></li>
+<li><p>If <em>m₀</em> is an upper bound of <em>A</em>, set <em>a₁ = a₀</em> and <em>b₁ = m₀</em></p></li>
+<li><p>Otherwise, there exists <em>a₁ ∈ A</em> with <em>a₁ &gt; m₀</em>; set <em>b₁ = b₀</em></p></li>
+<li><p>Continue this process: at each stage, partition <em>[aₙ, bₙ]</em> and choose the half that “brackets” the supremum</p></li>
+</ul>
+<p>More precisely, define sequences <em>(aₙ)</em> and <em>(bₙ)</em> recursively:</p>
+<ul class="simple">
+<li><p><em>a₀ ∈ A</em>, <em>b₀</em> is an upper bound of <em>A</em></p></li>
+<li><p><em>mₙ = (aₙ + bₙ)/2</em></p></li>
+<li><p>If <em>mₙ</em> is an upper bound of <em>A</em>: set <em>aₙ₊₁ = aₙ</em>, <em>bₙ₊₁ = mₙ</em></p></li>
+<li><p>Otherwise: choose <em>aₙ₊₁ ∈ A</em> with <em>aₙ₊₁ &gt; mₙ</em>, and set <em>bₙ₊₁ = bₙ</em></p></li>
+</ul>
+<p><strong>Step 2</strong> (Properties of the construction):</p>
+<p>The sequences <em>(aₙ)</em> and <em>(bₙ)</em> satisfy:</p>
+<ul class="simple">
+<li><p><em>aₙ ∈ A</em> or <em>aₙ</em> is arbitrarily close to elements of <em>A</em> (specifically, elements greater than <em>aₙ</em> exist in <em>A</em> within distance <em>bₙ - aₙ</em>)</p></li>
+<li><p><em>bₙ</em> is an upper bound of <em>A</em> for all <em>n</em></p></li>
+<li><p><em>aₙ ≤ aₙ₊₁ ≤ bₙ₊₁ ≤ bₙ</em> (sequences are monotone)</p></li>
+<li><p><em>bₙ - aₙ = (b₀ - a₀)/2ⁿ → 0</em> (intervals halve at each step)</p></li>
+</ul>
+<p><strong>Step 3</strong> (Both sequences are Cauchy):</p>
+<p>For <em>n &gt; m</em>:
+<em>|aₙ - aₘ| ≤ bₘ - aₘ = (b₀ - a₀)/2ᵐ</em>
+<em>|bₙ - bₘ| ≤ bₘ - aₘ = (b₀ - a₀)/2ᵐ</em></p>
+<p>Given <em>ε &gt; 0</em>, choose <em>N</em> such that <em>(b₀ - a₀)/2ᴺ &lt; ε</em>. Then for all <em>n, m &gt; N</em>, we have <em>|aₙ - aₘ| &lt; ε</em> and <em>|bₙ - bₘ| &lt; ε</em>.</p>
+<p>Both sequences are Cauchy.</p>
+<p><strong>Step 4</strong> (Convergence to the same limit):</p>
+<p>Since <em>bₙ - aₙ → 0</em>, the sequences <em>(aₙ)</em> and <em>(bₙ)</em> are equivalent (represent the same real number).</p>
+<p>By Theorem 5.2 (Cauchy completeness), both sequences converge in ℝ. Let:</p>
+<p><em>s := lim aₙ = lim bₙ = [aₙ] = [bₙ]</em></p>
+<p><strong>Step 5</strong> (<em>s</em> is the supremum):</p>
+<p>We must show:</p>
+<ol class="arabic simple">
+<li><p><em>s</em> is an upper bound of <em>A</em></p></li>
+<li><p><em>s</em> is the <em>least</em> upper bound</p></li>
+</ol>
+<p>(1) <em>s</em> is an upper bound: For any <em>a ∈ A</em>, we have <em>a ≤ bₙ</em> for all <em>n</em> (since <em>bₙ</em> is an upper bound of <em>A</em>). Taking limits, <em>a ≤ lim bₙ = s</em>.</p>
+<p>(2) <em>s</em> is the least upper bound: Suppose <em>t &lt; s</em> is another upper bound of <em>A</em>. Then <em>s - t &gt; 0</em>.</p>
+<p>Since <em>aₙ → s</em>, there exists <em>N</em> such that <em>aₙ &gt; s - (s - t)/2 = (s + t)/2 &gt; t</em> for all <em>n &gt; N</em>.</p>
+<p>But <em>aₙ ∈ A</em> or is arbitrarily close to elements of <em>A</em> greater than <em>aₙ</em>, so there exist elements of <em>A</em> greater than <em>t</em>, contradicting that <em>t</em> is an upper bound.</p>
+<p>Therefore no upper bound is smaller than <em>s</em>, so <em>s = sup(A)</em>. ∎</p>
+<p><strong>Remark</strong>: This proof is constructive—given a bounded non-empty set <em>A</em>, we can explicitly construct <em>sup(A)</em> via the bisection procedure, which generates a Cauchy sequence converging to the supremum. The supremum property is thus a <em>consequence</em> of Cauchy completeness, not an independent axiom.</p>
+</section>
+<section id="summary-is-complete">
+<h3>5.11 Summary: ℝ is Complete<a class="headerlink" href="#summary-is-complete" title="Link to this heading">#</a></h3>
+<p>We have shown that ℝ, constructed as equivalence classes of Cauchy sequences of rationals, has two fundamental completeness properties:</p>
+<ol class="arabic simple">
+<li><p><strong>Cauchy completeness</strong> (Theorem 5.2): Every Cauchy sequence in ℝ converges to an element of ℝ</p></li>
+<li><p><strong>Supremum property</strong> (Theorem 5.3): Every bounded non-empty subset of ℝ has a supremum in ℝ</p></li>
+</ol>
+<p>These properties are <em>equivalent</em> characterizations of completeness and distinguish ℝ from ℚ. Both properties are <em>theorems</em> in our construction, not axioms. The completeness of ℝ emerges naturally from the definition of ℝ as the “completion” of ℚ via Cauchy sequences.</p>
+<p>This completeness makes ℝ the foundation for calculus and analysis:</p>
+<ul class="simple">
+<li><p>Limits of functions are well-defined</p></li>
+<li><p>Derivatives and integrals exist</p></li>
+<li><p>Infinite series have well-defined sums (or diverge clearly)</p></li>
+<li><p>Continuous functions on closed intervals achieve maxima and minima</p></li>
+<li><p>The Intermediate Value Theorem holds</p></li>
+</ul>
+<p>The journey from ℕ to ℝ is complete: we have constructed the continuum that underlies analysis.</p>
+</section>
+</section>
+<section id="rational-and-irrational-numbers-claude">
+<h2>6 Rational and Irrational Numbers  <strong>CLAUDE</strong><a class="headerlink" href="#rational-and-irrational-numbers-claude" title="Link to this heading">#</a></h2>
+<p>Having constructed ℝ as the completion of ℚ, we can now classify real numbers based on their relationship to ℚ and to polynomial equations.</p>
+<section id="rational-vs-irrational">
+<h3>6.1 Rational vs. Irrational<a class="headerlink" href="#rational-vs-irrational" title="Link to this heading">#</a></h3>
+<p><strong>Definition 6.1</strong>: A real number <em>r ∈ ℝ</em> is:</p>
+<ul class="simple">
+<li><p><em>Rational</em> if <em>r ∈ ℚ</em> (i.e., <em>r = a/b</em> for some <em>a, b ∈ ℤ</em> with <em>b ≠ 0</em>)</p></li>
+<li><p><em>Irrational</em> if <em>r ∈ ℝ \ ℚ</em> (i.e., <em>r</em> is not rational)</p></li>
+</ul>
+<p>The distinction is fundamental: rational numbers can be represented exactly as fractions, while irrational numbers cannot. Every irrational number requires an infinite non-repeating decimal expansion (or equivalently, a non-constant Cauchy sequence for its representation).</p>
+<p><strong>Examples of irrational numbers</strong>:</p>
+<ul class="simple">
+<li><p>√2, √3, √5 (square roots of non-perfect-squares)</p></li>
+<li><p>∛2, ∛3 (cube roots of non-perfect-cubes)</p></li>
+<li><p>π (the ratio of a circle’s circumference to its diameter)</p></li>
+<li><p>e (the base of natural logarithms)</p></li>
+</ul>
+<p>The existence of irrational numbers was discovered by ancient Greek mathematicians (Pythagoreans, circa 500 BCE) and initially caused philosophical crisis—they believed all numbers should be expressible as ratios of integers.</p>
+</section>
+<section id="is-irrational">
+<h3>6.2 √2 is Irrational<a class="headerlink" href="#is-irrational" title="Link to this heading">#</a></h3>
+<p>We prove that √2 exists in ℝ and is irrational, confirming that the Cauchy sequence <em>(1, 1.4, 1.41, 1.414, …)</em> from our earlier examples truly represents a “new” number not present in ℚ.</p>
+<p><strong>Theorem 6.1</strong>: There exists a unique positive real number <em>x</em> such that <em>x² = 2</em>, and this number is irrational.</p>
+<p><em>Proof</em>:</p>
+<p><strong>Existence</strong>: Consider the set <em>A = {r ∈ ℚ : r &gt; 0 and r² &lt; 2}</em>.</p>
+<ul class="simple">
+<li><p><em>A</em> is non-empty: <em>1 ∈ A</em> since <em>1² = 1 &lt; 2</em></p></li>
+<li><p><em>A</em> is bounded above: <em>2</em> is an upper bound, since for <em>r ≥ 2</em> we have <em>r² ≥ 4 &gt; 2</em></p></li>
+</ul>
+<p>By Theorem 5.3, <em>A</em> has a supremum in ℝ. Let <em>x = sup(A)</em>.</p>
+<p>We claim <em>x² = 2</em>. Suppose not.</p>
+<p><strong>Case 1</strong>: Suppose <em>x² &lt; 2</em>. Let <em>ε = 2 - x²</em> &gt; 0. For sufficiently small <em>h &gt; 0</em>:</p>
+<p><em>(x + h)² = x² + 2xh + h² &lt; x² + ε = 2</em></p>
+<p>(choosing <em>h</em> such that <em>2xh + h² &lt; ε</em>). Then <em>x + h ∈ A</em>, contradicting that <em>x</em> is an upper bound of <em>A</em>.</p>
+<p><strong>Case 2</strong>: Suppose <em>x² &gt; 2</em>. Let <em>ε = x² - 2</em> &gt; 0. For sufficiently small <em>h &gt; 0</em>:</p>
+<p><em>(x - h)² = x² - 2xh + h² &gt; x² - ε = 2</em></p>
+<p>Then for any <em>r ∈ A</em>, we have <em>r² &lt; 2 &lt; (x - h)²</em>, so <em>r &lt; x - h</em>. Thus <em>x - h</em> is an upper bound of <em>A</em>, contradicting that <em>x</em> is the <em>least</em> upper bound.</p>
+<p>Therefore <em>x² = 2</em>.</p>
+<p><strong>Uniqueness</strong>: If <em>y² = 2</em> and <em>y &gt; 0</em>, then <em>0 = x² - y² = (x - y)(x + y)</em>. Since <em>x + y &gt; 0</em>, we have <em>x = y</em>.</p>
+<p>We denote this unique positive real number by <em>√2</em>.</p>
+<p><strong>Irrationality</strong>: We prove √2 ∉ ℚ by contradiction. Suppose <em>√2 = a/b</em> where <em>a, b ∈ ℤ</em> with <em>b ≠ 0</em>. We may assume <em>gcd(a, b) = 1</em> (reduce to lowest terms).</p>
+<p>Then:
+<em>(a/b)² = 2</em>
+<em>a² = 2b²</em></p>
+<p>Therefore <em>a²</em> is even, which implies <em>a</em> is even (since odd² is odd). Write <em>a = 2k</em> for some <em>k ∈ ℤ</em>.</p>
+<p>Substituting:
+<em>(2k)² = 2b²</em>
+<em>4k² = 2b²</em>
+<em>2k² = b²</em></p>
+<p>Therefore <em>b²</em> is even, which implies <em>b</em> is even.</p>
+<p>But now both <em>a</em> and <em>b</em> are even, contradicting <em>gcd(a, b) = 1</em>.</p>
+<p>Therefore √2 is irrational. ∎</p>
+<p><strong>Remark</strong>: This proof shows that the “gap” at √2 in ℚ (discussed in Section 4.7 and 5.1) is genuine—no rational number has square 2. The Cauchy sequence <em>(1, 1.4, 1.41, …)</em> of rationals converges to an irrational number, demonstrating concretely why ℚ is incomplete and ℝ is necessary.</p>
+</section>
+<section id="algebraic-and-transcendental-numbers">
+<h3>6.3 Algebraic and Transcendental Numbers<a class="headerlink" href="#algebraic-and-transcendental-numbers" title="Link to this heading">#</a></h3>
+<p>We can further classify real numbers based on their relationship to polynomial equations:</p>
+<p><strong>Definition 6.2</strong>: A real number <em>r ∈ ℝ</em> is:</p>
+<ul>
+<li><p><em>Algebraic</em> if it is a root of some non-zero polynomial with integer coefficients, i.e., if there exist <em>a₀, a₁, …, aₙ ∈ ℤ</em> (not all zero) such that:</p>
+<p><em>aₙrⁿ + aₙ₋₁rⁿ⁻¹ + … + a₁r + a₀ = 0</em></p>
+</li>
+<li><p><em>Transcendental</em> if it is not algebraic</p></li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<p><strong>Algebraic numbers</strong> include:</p>
+<ul class="simple">
+<li><p>All rational numbers <em>a/b</em> (roots of <em>bx - a = 0</em>)</p></li>
+<li><p>√2 (root of <em>x² - 2 = 0</em>)</p></li>
+<li><p>∛5 (root of <em>x³ - 5 = 0</em>)</p></li>
+<li><p>(1 + √5)/2 (the golden ratio, root of <em>x² - x - 1 = 0</em>)</p></li>
+<li><p><em>i</em> = √(-1) (root of <em>x² + 1 = 0</em>, though <em>i ∉ ℝ</em>)</p></li>
+</ul>
+<p><strong>Transcendental numbers</strong> include:</p>
+<ul class="simple">
+<li><p>π (proven by Lindemann, 1882)</p></li>
+<li><p>e (proven by Hermite, 1873)</p></li>
+<li><p>e^π and π^e (consequences of the Lindemann-Weierstrass theorem)</p></li>
+</ul>
+<p><strong>Hierarchy</strong>:
+<em>ℕ ⊂ ℤ ⊂ ℚ ⊂ Algebraic numbers ⊂ ℝ</em></p>
+<p>Each inclusion is proper (strict subset).</p>
+</section>
+<section id="cardinality-considerations">
+<h3>6.4 Cardinality Considerations<a class="headerlink" href="#cardinality-considerations" title="Link to this heading">#</a></h3>
+<p>The algebraic and transcendental numbers differ not just qualitatively but also in “size” (cardinality):</p>
+<p><strong>Theorem 6.2</strong> (Cantor): The algebraic numbers are countable, i.e., there exists a bijection between the algebraic numbers and ℕ.</p>
+<p><em>Proof sketch</em>: Each polynomial with integer coefficients can be encoded by a finite tuple of integers (its coefficients). The set of such tuples is countable (countable unions of countable sets). Each polynomial has finitely many roots. Therefore the set of all algebraic numbers is a countable union of finite sets, hence countable. ∎</p>
+<p><strong>Theorem 6.3</strong> (Cantor): The real numbers ℝ are uncountable.</p>
+<p><em>Proof</em>: This follows from Cantor’s diagonal argument. Suppose <em>ℝ</em> were countable. Then the interval <em>(0, 1)</em> would be countable. List its elements as:</p>
+<p><em>r₁, r₂, r₃, …</em></p>
+<p>Write each in decimal form:
+<em>r₁ = 0.d₁₁d₁₂d₁₃…</em>
+<em>r₂ = 0.d₂₁d₂₂d₂₃…</em>
+<em>r₃ = 0.d₃₁d₃₂d₃₃…</em>
+<em>…</em></p>
+<p>Construct a new number <em>r = 0.e₁e₂e₃…</em> where <em>eₙ</em> is chosen to differ from <em>dₙₙ</em> (and avoiding 0 and 9 to handle non-uniqueness of decimal representations).</p>
+<p>Then <em>r ∈ (0, 1)</em> but <em>r ≠ rₙ</em> for any <em>n</em> (since <em>r</em> differs from <em>rₙ</em> in the <em>n</em>-th decimal place), contradicting that the list includes all elements of <em>(0, 1)</em>.</p>
+<p>Therefore ℝ is uncountable. ∎</p>
+<p><strong>Corollary 6.1</strong>: The transcendental numbers are uncountable.</p>
+<p><em>Proof</em>: ℝ = Algebraic ∪ Transcendental. Since ℝ is uncountable and Algebraic is countable, Transcendental must be uncountable (otherwise their union would be countable). ∎</p>
+<p><strong>Remarkable consequence</strong>: “Most” real numbers are transcendental! In the sense of cardinality, the algebraic numbers (including all rationals) form a “negligibly small” subset of ℝ, while transcendental numbers form the “vast majority.” Yet transcendental numbers are notoriously difficult to identify—proving that specific numbers like π or e are transcendental requires deep results.</p>
+</section>
+<section id="decimal-representations">
+<h3>6.5 Decimal Representations<a class="headerlink" href="#decimal-representations" title="Link to this heading">#</a></h3>
+<p><strong>Theorem 6.4</strong>: Every real number has a decimal representation, and:</p>
+<ul class="simple">
+<li><p>A real number is rational if and only if its decimal representation is eventually periodic (repeating)</p></li>
+<li><p>A real number is irrational if and only if its decimal representation is non-repeating</p></li>
+</ul>
+<p><em>Proof sketch</em>:</p>
+<ul>
+<li><p><strong>Existence of decimal representation</strong>: For any <em>r ∈ ℝ</em>, we can construct its decimal expansion by repeatedly partitioning intervals, similar to the bisection construction in Theorem 5.3.</p></li>
+<li><p><strong>Rational ⟹ periodic</strong>: If <em>r = a/b</em> with <em>gcd(a, b) = 1</em>, perform long division. Since there are only finitely many possible remainders (<em>0, 1, 2, …, b-1</em>), the remainders must eventually repeat, causing the decimal expansion to repeat.</p></li>
+<li><p><strong>Periodic ⟹ rational</strong>: If <em>r = 0.d₁d₂…dₖ(dₖ₊₁…dₖ₊ₚ)(dₖ₊₁…dₖ₊ₚ)…</em> is eventually periodic, then:</p>
+<p><em>r = (finite part) + (repeating part)/(10^k(10^p - 1))</em></p>
+<p>which is a sum of rationals, hence rational. ∎</p>
+</li>
+</ul>
+<p><strong>Examples</strong>:</p>
+<ul class="simple">
+<li><p><em>1/3 = 0.333… = 0.3̄</em> (periodic, period 1)</p></li>
+<li><p><em>1/7 = 0.142857142857… = 0.142857̄</em> (periodic, period 6)</p></li>
+<li><p><em>√2 = 1.41421356…</em> (non-repeating, irrational)</p></li>
+<li><p><em>π = 3.14159265…</em> (non-repeating, irrational and transcendental)</p></li>
+</ul>
+<p>This theorem provides a practical characterization: to check if a real number (given by its decimal expansion) is rational, look for a repeating pattern.</p>
+</section>
+<section id="connection-to-our-construction">
+<h3>6.6 Connection to Our Construction<a class="headerlink" href="#connection-to-our-construction" title="Link to this heading">#</a></h3>
+<p>The theorems in this section illuminate the structure of ℝ as constructed in Section 5:</p>
+<ol class="arabic simple">
+<li><p><strong>Rational numbers</strong> are those real numbers representable by <em>constant</em> Cauchy sequences: <em>r = [r, r, r, …]</em> for <em>r ∈ ℚ</em>.</p></li>
+<li><p><strong>Irrational numbers</strong> require <em>non-constant</em> Cauchy sequences for their representation. For instance, √2 = [(1, 1.4, 1.41, 1.414, …)].</p></li>
+<li><p><strong>The completeness of ℝ</strong> ensures that every Cauchy sequence converges, whether to a rational or irrational limit. This is what distinguishes ℝ from ℚ: ℚ contains only the rational limits, while ℝ contains all limits.</p></li>
+<li><p><strong>Uncountability of ℝ</strong> versus countability of ℚ shows that “most” real numbers are irrational—the construction ℝ = C(ℚ)/~ produces vastly more equivalence classes than there are rational numbers.</p></li>
+</ol>
+<p>The distinction between rational and irrational, algebraic and transcendental, is now rigorously grounded in the structure of ℝ we have constructed.</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<span class="target" id="id7"></span><div style="margin-bottom: 100px;"></div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./mathematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="numbers.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">From Naturals to Reals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="calculus.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">First Steps in Calculus</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-claude">1 Introduction <strong>CLAUDE</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-numbers-claude">2 Natural Numbers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#axiomatic-characterization">2.1 Axiomatic Characterization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-theoretic-construction">2.2 Set-Theoretic Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#our-approach">2.3 Our Approach</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integers-claude">3 Integers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">3.1 Motivation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construction">3.2 Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operations">3.3 Arithmetic Operations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#embedding-in">3.4 Embedding ℕ in ℤ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-equivalence-classes">3.5 Why Equivalence Classes?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-a-ring">3.6 ℤ as a Ring</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-numbers-claude">4 Rational Numbers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.1 Motivation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.2 Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.3 Arithmetic Operations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.4 Embedding ℤ in ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-a-field">4.5 ℚ as a Field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordering-on">4.6 Ordering on ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#density-of">4.7 Density of ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-archimedean-property">4.8 The Archimedean Property</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-numbers-claude">5 Real Numbers <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation-the-incompleteness-of">5.1 Motivation: The Incompleteness of ℚ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cauchy-sequences">5.2 Cauchy Sequences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-of-cauchy-sequences">5.3 Equivalence of Cauchy Sequences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of">5.4 Definition of ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operations-on">5.5 Arithmetic Operations on ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.6 Embedding ℚ in ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.7 Ordering on ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-a-field">5.8 ℝ is a Field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#completeness-of">5.9 Completeness of ℝ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-supremum-property">5.10 The Supremum Property</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-is-complete">5.11 Summary: ℝ is Complete</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-and-irrational-numbers-claude">6 Rational and Irrational Numbers  <strong>CLAUDE</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-vs-irrational">6.1 Rational vs. Irrational</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-irrational">6.2 √2 is Irrational</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algebraic-and-transcendental-numbers">6.3 Algebraic and Transcendental Numbers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cardinality-considerations">6.4 Cardinality Considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decimal-representations">6.5 Decimal Representations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-our-construction">6.6 Connection to Our Construction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
