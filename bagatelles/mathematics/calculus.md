@@ -429,10 +429,25 @@ and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ 
 ## Riemann-Integrable Functions
 
 
-````{prf:definition} Integrals over Step Functions
-:label: def-riemann-integrals
+````{prf:definition} Step Functions
+:label: def-step-functions
 
-**TODO**
+We consider a closed interval $[a, b] \subset \mathbb{R}$.
+
+**(a)**
+A **partition** of $[a, b]$ is a strictly increasing sequence $X = \left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$.
+Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$. 
+
+**(b)**
+A function $\phi: [a, b] \to \mathbb{R}$ is called a **step function** iff it is constant on each interval  $[x_k, x_{k+1})$
+of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$.
+
+**(c)**
+Let $\phi$ be a step function on  $[a, b]$. We define the **integral** of $\phi$ over $[a, b]$ as:
+
+```{math}
+\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)
+```
 
 ````
 
@@ -440,17 +455,12 @@ and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ 
 :label: def-riemann-integrals
 
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$. 
-We say that $f$ is **Riemann-integrable**, or **R-integrable** for short, iff $f$ can be sqeezed between two step functions.
-For any $\epsilon > 0$ there are step functions $\phi, \psi$ such that:
+We say that $f$ is **Riemann-integrable**, or **R-integrable** for short, iff $f$ can be sqeezed between two step functions, that is:
 
 ```{math}
-\phi(x) \le f(x) \le \psi(x) \text{ for } x \in  [a, b] 
+\sup \{\int_a^b \phi(x) \, dx \mid \phi \le f\} = \inf \{\int_a^b \psi(x) \, dx \mid \psi \ge f\}
 ```
-and:
 
-```{math}
-\int_a^b \psi(x) \, dx - \int_a^b \phi(x) \, dx < \epsilon
-```
 In this case, we define
 
 ```{math}
@@ -458,36 +468,31 @@ In this case, we define
 ```
 ````
 
-
-````{prf:definition} Riemann Integrals XXX
-:label: def-riemann-integrals-xxx
-
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$. 
- 
-**(a) Partitions**. A **partition of $[a, b]$** is a strictly increasing sequence $X = \left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$.
-Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$. 
+This {prf:ref}`def-riemann-integrals` is intuitive but rarely used. 
+An alternative characterization of Riemann integrability is based on Riemann sums.
 
 
+````{prf:definition} Riemann Sums
+:label: def-riemann-sums
 
-
-**(b) Riemann Sums**. Let $X$ be a partition of $[a, b]$, and $\{\xi_k \in [x_k, x_{k-1}] \mid k = 1, \ldots, n\}$ 
-be a set of intermediate points. A Riemann sum is defined as:
+Let $X$ be a partition of $[a, b]$, and $\{\xi_k \in [x_k, x_{k-1}] \mid k = 1, \ldots, n\}$ 
+be a set of intermediate points. A **Riemann sum** is defined as:
 
 ```{math}
 R(f, X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
 The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity $\mu(X)$ of its partition.
+````
 
-**(c) Riemann Integrals**. We say that $f$ is **Riemann-integrable**, or **R-integrable** for short,
-and call
+````{prf:theorem} Riemann Integrals
+:label: thr-riemann-integrals
+
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
+{prf:ref}`def-riemann-integrals` is equivalent to the following statement:
 
 ```{math}
-A = \int_a^b f(x) \, dx
-```
-the **Riemann integral** of $f$ over $[a, b]$ iff 
-
-```{math}
-\forall \epsilon > 0: \exists \delta > 0: \forall X,\xi \text{ with } \mu(X) < \delta : \left | A - R(f, X, \xi) \right | < \epsilon
+:label: equ-riemann-integrals-1
+\forall \epsilon > 0: \exists \delta > 0: \forall X,\xi \text{ with } \mu(X) < \delta : \left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | < \epsilon
 ```
 
 In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write
@@ -495,14 +500,33 @@ In other words, Riemann sums approximate Riemann integrals to arbitrary precisio
 ```{math}
 \int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
-as a short version of the exact definition, which lets us use finite sums instead of integrals.
+as a short version of the exact definition. Whenever we prove theorems on Riemann integrals, 
+we are allowed to replace the integrals with Riemann sums of arbitrarily small granularity. 
+````
 
-**(d) Riemann Primitives**. Let $f \in \mathcal{R}([a,b])$. The function $F$ defined by
+````{prf:proof} 
+Let statement {eq}`equ-riemann-integrals-1` hold. We observe that, for any step function $\phi$:
+
+```{math}
+\int_a^b \phi(x) \, dx =R(\phi, X, \xi)
+```
+
+whenever $\phi$ is constant on all intervals $[x_k, x_{k+1})$ of $X$. This implies:
+
+```{math}
+\sup_{\phi \le f} R(\phi, X, \xi) \le \sup_{\phi \le f} \int_a^b \phi(x) \, dx  \le \inf_{\psi \ge f} \int_a^b \psi(x) \, dx \le  \inf_{\psi \ge f} R(\psi, X, \xi) 
+```
+````
+
+````{prf:definition} Riemann Primitives
+:label: thr-riemann-primitives
+
+Let $f \in \mathcal{R}([a,b])$. The function $F$ defined by
 
 ```{math}
 F(x) = \int_a^x f(y) \, dy 
 ```
-is called the Riemann-primitive (or primitive) of $f$,
+is called the **Riemann-primitive** (or primitive) of $f$,
 on the understanding that
 
 ```{math}
@@ -516,6 +540,7 @@ F = \int f(y) \, dy
 ```
 is used if the lower bound $a$ is unimportant or not specified. Two primitives of an integrable function $f$ differ by a constant only.
 ````
+
 
 ````{prf:remark} Monotony, Additivity, Boundedness 
 :label: rem-monotony-additivity-boundedness
