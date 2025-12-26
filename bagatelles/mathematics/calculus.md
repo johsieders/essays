@@ -2,8 +2,11 @@
 
 *Johannes Siedersleben, December 2025*
 
+## Introduction
 
-> under construction
+This material has been published many times, see {cite}`heuser2009analysis1`, 
+{cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
+to name but a few prominent examples.
 
 ## Paradoxes
 
@@ -51,36 +54,96 @@ this paradox is that the sum of a large number of arbitrarily small terms does n
 Assigning meaningful values to such sums is what integration theory is all about.
 
 
-## Introduction
+## Topology of $\mathbb{R}$
 
-This material has been published many times, see {cite}`heuser2009analysis1`, 
-{cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
-to name but a few prominent examples.
+````{prf:definition} Topology of $\mathbb{R}$
+:label: def-topology-R
+Let $A \subseteq \mathbb{R}$ and $a \in A$.
+
+**(a) Accumulation Points, Closure, Closed Sets**
+
+We call $a$ an **accumulation point** of $A$, iff
+
+```{math}
+\forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset
+```
+The **closure** of $A$, denoted be $\bar{A}$, is the set of all accumulation points of $A$.
+We clearly have $A \subseteq \bar{A}$.
+The set $A$ is **closed** iff $\bar{A} = A$
+
+**(b) Inner Points, Interior, Open Sets**
+
+We call $a$ an **inner point** of $A$, iff
+
+```{math}
+\exists \epsilon > 0: U_{\epsilon}(a) \subseteq A
+```
+The **interior** of $A$, denoted be $A°$, is the set of all interior points of $A$.
+We clearly have $A° \subseteq A$.
+The set $A$ is **open** iff $A° = A$.
+````
+
+````{prf:Lemma} Open Sets, Closed Sets
+:label: lem-open-closed
+Let $A \subseteq \mathbb{R}$. 
+
+$A$ is open iff $A^c$ is closed,   
+$A$ is closed iff $A^c$ is open.
+````
+
+````{prf:proof}
+Let $A$ be open, and $a \notin A$. Then, for all $\epsilon > 0$ it holds that $U_{\epsilon}(a) \cap A^c \neq \emptyset$.
+Therefore $a \in \overline{A^c}$.
+
+Let $A$ be closed, and $a \notin A$. Then there is an $\epsilon > 0$ such that $U_{\epsilon}(a) \cap A = \emptyset$ or,
+equivalently, $U_{\epsilon}(a) \subseteq A^c$. Therefore $a \in (A^c)°$.
+````
+
+
+````{prf:theorem} Nested Intervals
+:label: thr-nested-intervals
+
+Let $\{x_n\}$ be a non-decreasing, $\{y_n\}$ a non-increasing real sequence satisfying: 
+
+```{math}
+:label: equ-nested-intervals-1
+
+&\forall n \in \mathbb{N}: x_n \le y_n \\
+\\
+&\lim_{n \to \infty} (y_n - x_n) = 0
+```
+Then $\{x_n\}$ and $\{y_n\}$ converge to the same point:
+
+```{math}
+\lim_{n \to \infty} x_n = \lim_{n \to \infty} y_n
+```
+This means that the sequence of intervals $\{[x_n, y_n]\}$ contracts to one point.
+````
+
+````{prf:proof}
+We show that $\{x_n\}$ is a Cauchy sequence. For $m > n$, we have:
+
+```{math}
+x_n \le x_m \le y_m \le y_n
+```
+so:
+
+```{math}
+0 \le x_m - x_n \le y_n - x_n
+```
+which is what we want because of {eq}`equ-nested-intervals-1`.
+The sequence $\{y_n\}$ is a Cauchy sequence by the same argument, 
+and the limits of $\{x_n\}$ and $\{y_n\}$ coincide, again because of {eq}`equ-nested-intervals-1`.
+````
+
 
 ## Compact Sets
 
-````{prf:definition} Topology of \mathbb{R}
-:label: def-closure
+````{prf:definition} Compact Sets
+:label: def-compact
 
-**(a) Accumulation Points**
-todo
-
-**(b) Closed Sets**
-todo
-
-**(c) Open Sets**
-todo
-
-**(c) Sets of Measure Zero**
-todo
-
-**(d) Closure**
-todo
-
-**(e) Compact Sets**
 A set $A \subset \mathbb{R}$ is called **compact**
 iff each bounded sequence of elements of A has a convergent subsequence.
-
 ````
 
 
@@ -96,13 +159,51 @@ iff each bounded sequence of elements of A has a convergent subsequence.
 
 ````{prf:proof}
 
-**a)** Let $A \subset \mathbb{R}$ be compact and $\{x_n\}$ a Cauchy-sequence of elements of $A$. 
+**a)** Let $A \subseteq \mathbb{R}$ be compact and $\{x_n\}$ a Cauchy-sequence of elements of $A$. 
 Then, the set $\{x_n \mid n \in \mathbb{N} \}$ is bounded and has a subsequence that converges to some $x \in A$.
 Therefore $\{x_n\}$, being a Cauchy-sequence, converges itself to $x$.
 
-**b)** todo
+**b)** Let $A \subseteq \mathbb{R}$ be complete, $B \subseteq A$ be closed, and $\{x_n\}$ a Cauchy-sequence of elements of $B$.
+Then $\{x_n\}$ converges because $A$ is complete, and it converges to some $x \in B$, because $B$ is closed.
 
-**c)** todo 
+**c)** Let $A \subseteq \mathbb{R}$ be compact, $B \subseteq A$ be closed, and $\{x_n\}$ a sequence of elements of $B$.
+Then $\{x_n\}$ has a convergent subsequence because $A$ is compact, 
+and this subsequence converges to some $x \in B$, because $B$ is closed.
+````
+
+````{prf:theorem} Supremum, Infimum
+:label: thr-supremum-infimum
+
+Let $A \subset \mathbb{R}$ bounded above. Then there is a least upper bound of $A$, called supremum of $A$, or $\sup A$.  
+Let $A \subset \mathbb{R}$ bounded below. Then there is a greatest lower bound of $A$, called infimum of $A$, or $\inf A$. 
+````
+````{prf:proof} 
+We prove the assertion for the supremum. Let $b_0$ be an upper bound of $A$ and $a_0 \in A$ any element.
+We define nested intervals $\{[a_n, b_n]\}$ as follows:
+
+```{math}
+\\
+&a_{n+1} = 
+\left\{
+    \begin{array}{lr}
+        a_n & \text{ if } (a_n + b_n)/2 \notin A \\
+        (a_n + b_n)/2 & \text{ if } (a_n + b_n)/2 \in A 
+    \end{array}
+\right .  \\
+\\
+
+&b_{n+1} = 
+\left\{
+    \begin{array}{lr}
+        (a_n + b_n)/2 & \text{ if } (a_n + b_n)/2 \notin A \\
+        b_n & \text{ if } (a_n + b_n)/2 \in A
+    \end{array}
+\right .
+```
+
+The sequence $\{[a_n, b_n]\}$ fulfills the prereqisites of {prf:ref}`thr-nested-intervals`. It therefore contracts
+to some point $b$ which is an upper bound of $A$ because all $b_n$ are. And no upper bound of $A$ can be smaller than $b$
+because, for any $\epsilon > 0$, there are $a_n \in A$ with $a_n > b - \epsilon$.
 ````
 
 ````{prf:theorem} Bolzano-Weierstrass
@@ -114,8 +215,9 @@ Therefore $\{x_n\}$, being a Cauchy-sequence, converges itself to $x$.
 ````
 
 ````{prf:proof}
-**a)** Let $\{x_n\}$ be a non-decreasing bounded sequence with $s = \sup \{x_n |\mid n \in \mathbb{N} \}$.
-Then, by the definition of the supremum:
+**a)** Let $\{x_n\}$ be a non-decreasing bounded sequence with $s = \sup \{x_n \mid n \in \mathbb{N} \}$. 
+This supremum exists thanks to {prf:ref}`thr-supremum-infimum`. We show that $\{x_n\}$ is a Cauchy-sequence.
+By the definition:
 
 ```{math}
 \forall \epsilon > 0 : \exists n(\epsilon) : s - x_{n(\epsilon)} < \epsilon
@@ -281,9 +383,9 @@ Then there exists a $\xi \in [a, b]$ such that $f(\xi) = 0$.
 ```
 Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 ````
-````{prf:proof} 
-**(a)** We build two bounded monotonous sequences $\{a_n\},\{b_n\}$ and 
-apply again [Bolzano-Weierstrass](#thr-bolzano-weierstrass):
+````{prf:proof}
+ 
+**(a)** We define nested intervals $\{[a_n, b_n]\}$ as follows: 
 
 ```{math}
 &a_0 = a \\
@@ -292,8 +394,8 @@ apply again [Bolzano-Weierstrass](#thr-bolzano-weierstrass):
 &a_{n+1} = 
 \left\{
     \begin{array}{lr}
-        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) < 0 \\
-        a_n & \text{ if } f((a_n + b_n)/2) \ge 0
+        a_n & \text{ if } f((a_n + b_n)/2) \ge 0 \\
+        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) < 0
     \end{array}
 \right .  \\
 \\
@@ -301,37 +403,25 @@ apply again [Bolzano-Weierstrass](#thr-bolzano-weierstrass):
 &b_{n+1} = 
 \left\{
     \begin{array}{lr}
-        b_n & \text{ if } f((a_n + b_n)/2) < 0 \\
-        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) \ge 0
+        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) \ge 0 \\
+        b_n & \text{ if } f((a_n + b_n)/2) < 0
     \end{array}
 \right .
 ```
 
-We observe that, for all $n$:
+Th sequence $\{[a_n, b_n]\}$ fulfills the prerequisites of {prf:ref}`thr-nested-intervals`.
+It therefore contracts to some point $\xi \in [a, b]$. We observe that, for all $n$:
 
 ```{math}
-:label: equ-intermediate-value-1
 f(a_n) < 0 \le f(b_n)
 ```
-and that the sequence $\{a_n\}$ is non-descending, while $\{b_n\}$ is non-increasing.
-Being bounded, both sequences converge, and their limits must be identical because:
+
+This implies, because $f$ is continuous:
 
 ```{math}
-b_{n+1} - a_{n+1}  &= \frac{1}{2} b_{n} - a_{n} \\
-\Rightarrow b_{n} - a_{n}  &= \frac{b-a}{2^n}
+f(\xi) = 0
 ```
-This limit is our $\xi$: 
-```{math}
-\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \xi
-```
-Since $f$ is continous in $\xi$, we get:
-```{math}
-\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = f(\xi)
-```
-But $f(\xi)$ must be $0$ because the inequalities [xxx](#equ-intermediate-value-1) imply:
-```{math}
-\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = 0
-```
+
 **(b)** follows from (a): Choose $a_0, b_0 \in [a, b]$ such that $f(a_0) = \min\{f(x) \mid x \in [a, b]\}$
 and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ and replace $f$ with $f - \mu$.
 ````
