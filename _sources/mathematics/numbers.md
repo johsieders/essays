@@ -117,10 +117,8 @@ Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that
 
 Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
 I don't know, and, honestly, I don't care too much. What seems clear to me is that there 
-must have been first humans, probably at different times and different locations, to grasp the concept of a number. 
-They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
-It took many millennia to formalize it. 
-Today, the Peano axioms perfectly describe the set $\mathbb{N}$ of natural numbers for all mathematical purposes.
+must have been first humans, probably at different times and different locations, to grasp the concept of a number.
+Today, many millennia later, the Peano axioms perfectly describe the set $\mathbb{N}$ of natural numbers for all mathematical purposes.
 
 ````{prf:definition} Peano Axioms
 :label: def-peano-axioms
@@ -190,7 +188,8 @@ The following is a formal definition of infinity, with no handwaving, no dots, a
 ````{prf:definition} Infinity
 :label: def-infinity
 
-Let $A$ be any set. 
+Let $A$ be any set.
+ 
 **a)**$A$ is **finite** iff there is an $n \in \mathbb{N}$ and an injection $\phi: A \to \{0, 1, \ldots, n\}$.
 
 **b)**$A$ is **countable** iff there is an injection $\phi: A \to \mathbb{N}$. 
@@ -230,7 +229,7 @@ Therefore, the power set of a countable set is always uncountable.
 ````{prf:proof}
 
 **(a)**
-Let $A$ be infinite and assume it to be finite. Let $\phi : A \to B$ as claimed above. 
+Let $A$ be infinite and assume it to be finite. Let $\phi : A \to B$ as claimed in {prf:ref}`def-infinity`. 
 But $\left |\phi(A) \right | = \left | A \right | > \left | B \right | = \left | \phi(A) \right |$.
 So $A$ cannot be finite, it must be not finite.
 
@@ -299,7 +298,7 @@ be the injection corresponding to $A_i$.
 \right .
 ```
    
-is an injection: The set $A_i$ is mapped to the powers of $p_i$.
+is an injection: The set $A_i$ is mapped to the powers of $p_i$ (we are using {prf:ref}`thr-infinite-primes`).
 
 **(d) Finite Crossproduct**: The function
 
@@ -314,7 +313,7 @@ is an injection: The set $A_i$ is mapped to the powers of $p_i$.
 ```
    
 is an injection: Each $(a_1, a_2, \ldots, a_n)$ is mapped to the unique natural number whose decomposition
-is $(\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))$.
+is $(\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))$ (we are using {prf:ref}`thr-fundamental`).
 
 
 **e)** 
@@ -390,8 +389,9 @@ We extend the order on $\mathbb{N}$ to $\mathbb{Z}$ by setting, for $m, n \in \m
 With this ordering, $\mathbb{Z}$ is a totally ordered set  without lower or upper bound.
 ````
 
-From now on, we take $\mathbb{N}$ as given, with its standard operations and ordering, and focus on how to extend it to $\mathbb{N}$, $\mathbb{Q}$,
-and ultimately $\mathbb{R}$. Our construction proceeds from here with $\mathbb{N}$ as the base case, 
+From now on, we take $\mathbb{Z}$ as given, with its standard operations and ordering, 
+and focus on how to extend it to $\mathbb{Q}$,
+and $\mathbb{R}$. Our construction proceeds from here with $\mathbb{Z}$ as the base case, 
 showing how successively richer number systems emerge through a consistent pattern of equivalence class constructions.
 
 ## Rationals
@@ -401,7 +401,7 @@ not a field. $\mathbb{Z}$ lacks the fractions: the equation $ax = 1$ is solvable
 To this end, we introduce the set $\mathbb{Q}$ of rationals as the **smallest field containing $\mathbb{Z}$**. 
 Again, the question remains whether such a field exists at all. 
 The answer is yes, it does, and it can be easily constructed.
-We introduce an equivalence relation on the set $\mathbb{Z} \times \mathbb{Z}-\{0\}$ as 
+We introduce an equivalence relation on the set $\mathbb{Z} \times (\mathbb{Z}-\{0\})$ as 
 
 ```{math}
 (a, b) \sim (c, d) \Longleftrightarrow ad = bc
@@ -409,7 +409,7 @@ We introduce an equivalence relation on the set $\mathbb{Z} \times \mathbb{Z}-\{
 and set 
 
 ```{math}
-\mathbb{Q} = (\mathbb{Z} \times \mathbb{Z}-\{0\})/\sim
+\mathbb{Q} = (\mathbb{Z} \times (\mathbb{Z}-\{0\}))/\sim
 ```
 
 This immediately gives the cancellation rule: 
@@ -455,12 +455,8 @@ With this ordering, $\mathbb{Q}$ is a totally ordered set  without lower or uppe
 For any $q \in \mathbb{Q}$, there exists $n \in \mathbb{N}$  such that $n > q$.
 ````
 ````{prf:proof} 
-Write $q = a/b$ with $a, b \in \mathbb{Z}$ and $b > 0$.
-The assertion is obvious if $a \le 0$. If not, we have:
-
-```{math}
-\frac{a}{b} < \frac{a}{1} = a \in \mathbb{N}
-```
+Write $q = a/b$ in normal form, so $b > 0$. 
+The assertion follows from $a/b < a$.
 ````
 
 ## Reals
@@ -747,11 +743,14 @@ we replace the general $m$ with a specific choice — this is how "forall" is me
 We extend the order on $\mathbb{Q}$ to $\mathbb{R}$ by setting, for $x = \{x_n\}, y = \{y_n\} \in \mathbb{R}$:
 
 ```{math}
-a < b \Longleftrightarrow \exists n_0 \in \mathbb{N}: \forall n > n_0: a_n < b_n
+a < b \Longleftrightarrow \exists n_0 \in \mathbb{N}: \forall n > n_0: x_n < y_n
 ```
 
 With this ordering, $\mathbb{R}$ is a totally ordered set  without lower or upper bound.
 ````
+
+We close this chapter with a note about the uncountability of the real numbers 
+and a glimpse at the continuum hypothesis.
 
 ````{prf:theorem} $\mathbb{R}$ is uncountable
 :label: thr-R-uncountable

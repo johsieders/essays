@@ -69,7 +69,7 @@ We call $a$ an **accumulation point** of $A$, iff
 ```
 The **closure** of $A$, denoted be $\bar{A}$, is the set of all accumulation points of $A$.
 We clearly have $A \subseteq \bar{A}$.
-The set $A$ is **closed** iff $\bar{A} = A$.
+The set $A$ is **closed** iff $\bar{A} = A$
 
 **(b) Inner Points, Interior, Open Sets**
 
@@ -126,7 +126,7 @@ We show that $\{x_n\}$ is a Cauchy sequence. For $m > n$, we have:
 ```{math}
 x_n \le x_m \le y_m \le y_n
 ```
-Subtracting $x_n$ gives:
+so:
 
 ```{math}
 0 \le x_m - x_n \le y_n - x_n
@@ -291,6 +291,11 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 ```{math}
 \lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
 ```
+
+````{prf:definition} Step Functions
+:label: def-step-functions
+
+**TODO**
 ````
 
 ## Continuous Functions
@@ -348,12 +353,11 @@ such that $ \lvert f_n(x+h) - f_n(x) \rvert < \epsilon$ whenever $\lvert h \rver
 **(c)**
 We prove the assertion for the maximum. Let $M = \sup\{f(x) \mid x \in [a, b] \}$. Then, for each $n \in \mathbb{N}$, 
 there is a $x_n \in [a, b]$ such that $M - f(x_n) < 1/n$.
-The sequence $\{x_n\}$ has a subsequence that converges to some $x \in [a, b]$
-because $[a, b]$ is compact, and we have $f(x) = M$ because $f$ is continuous at $x$.
+The sequence $\{x_n\}$ has a subsequence that converges to some $x \in [a, b]$, and we have $f(x) = M$ because $f$ is continuous at $x$.
 
 **(d)** 
-We prove the assertion by contradiction. Assume $f$ to be not uniformly continuous. 
-Then, for any $\epsilon > 0$, there exist two sequences $\{x_n\}, \{y_n\}$ such that
+We prove the assertion by contradiction. Assume $f$ to be not uniformly continuous. Take any $\epsilon > 0$. 
+Then there exist two sequences $\{x_n\}, \{y_n\}$ such that
 
 ```{math}
 \lvert x_n - y_n \rvert < \frac{1}{n}
@@ -425,44 +429,107 @@ and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ 
 ## Riemann-Integrable Functions
 
 
-````{prf:definition} Riemann Integrals by Riemann Sums
-:label: def-riemann-integrals
+````{prf:definition} Step Functions
+:label: def-step-functions
 
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
+We consider a closed interval $[a, b] \subset \mathbb{R}$.
 
 **(a)**
 A **partition** of $[a, b]$ is a strictly increasing sequence $X = \left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$.
-Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$.
-A sequence $\xi = \left\{\xi_0, \xi_1, \dots, \xi_{n-1}\right\}$ with $\xi_k \in [x_{k-1}, x_k)$ is called a **set of intermediate points**  of $X$.
+Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$. 
 
 **(b)**
-The **Riemann sum** of $f, X, \xi$ is defined as: 
+A function $\phi: [a, b] \to \mathbb{R}$ is called a **step function** iff it is constant on each interval  $[x_k, x_{k+1})$
+of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$.
+
+**(c)**
+Let $\phi$ be a step function on  $[a, b]$. We define the **integral** of $\phi$ over $[a, b]$ as:
+
+```{math}
+\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)
+```
+````
+
+````{prf:definition} Riemann Integrals
+:label: def-riemann-integrals
+
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$. 
+We say that $f$ is **Riemann-integrable**, or **R-integrable** for short, iff $f$ can be sqeezed between two step functions, that is:
+
+```{math}
+\sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\phi \le f} \int_a^b \psi(x) \, dx
+```
+
+In this case, we define
+
+```{math}
+\int_a^b f(x) \, dx = \sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\phi \le f} \int_a^b \psi(x) \, dx
+```
+````
+
+This {prf:ref}`def-riemann-integrals` is intuitive but rarely used. 
+An alternative characterization of Riemann integrability is based on Riemann sums.
+
+
+````{prf:definition} Riemann Sums
+:label: def-riemann-sums
+
+Let $X$ be a partition of $[a, b]$, and $\{\xi_k \in [x_k, x_{k-1}] \mid k = 1, \ldots, n\}$ 
+be a set of intermediate points. A **Riemann sum** is defined as:
 
 ```{math}
 R(f, X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
+The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity $\mu(X)$ of its partition.
+````
 
-**(c)**
-We say that $f$ is **Riemann-integrable**, or **R-integrable** for short, 
-iff there is a $A \in \mathbb{R}$ such that:
+````{prf:theorem} Riemann Integrals
+:label: thr-riemann-integrals
 
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
+The following statements are equivalent:
+
+**(a)**
 ```{math}
-\forall \epsilon > 0: \exists \delta > 0: \left | A - R(f, X, \xi) \right | < \epsilon
+:label: equ-riemann-integrals-1
+\sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\phi \le f} \int_a^b \psi(x) \, dx
 ```
-for all partitions $X$ with $\mu(X) < \delta$ and any set $\xi$ of intermediate points of $X$.
 
-In this case, we define:
-
+**(b)** There is a real number $A$ such that:
 ```{math}
-\int_a^b f(x) \, dx = A
+:label: equ-riemann-integrals-2
+
+\forall \epsilon > 0: \exists \delta > 0: \forall X,\xi \text{ with } \mu(X) < \delta : \left | A - R(f, X, \xi) \right | < \epsilon
 ```
-In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write:
+
+In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write
 
 ```{math}
 \int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
 as a short version of the exact definition. Whenever we prove theorems on Riemann integrals, 
-we are allowed to replace the integrals with Riemann sums of sufficiently small granularity. 
+we are allowed to replace the integrals with Riemann sums of arbitrarily small granularity. 
+````
+
+````{prf:proof} 
+Let statement {eq}`equ-riemann-integrals-1` hold. We observe that, for any step function $\phi$:
+
+
+
+
+
+
+Let statement {eq}`equ-riemann-integrals-2` hold. We observe that, for any step function $\phi$:
+
+```{math}
+\int_a^b \phi(x) \, dx =R(\phi, X, \xi)
+```
+
+whenever $\phi$ is constant on all intervals $[x_k, x_{k+1})$ of $X$. This implies:
+
+```{math}
+\sup_{\phi \le f} R(\phi, X, \xi) \le \sup_{\phi \le f} \int_a^b \phi(x) \, dx  \le \inf_{\psi \ge f} \int_a^b \psi(x) \, dx \le  \inf_{\psi \ge f} R(\psi, X, \xi) 
+```
 ````
 
 ````{prf:definition} Riemann Primitives
@@ -485,55 +552,82 @@ The notation
 ```{math}
 F = \int f(y) \, dy
 ```
-is used if the lower bound $a$ is unimportant or not specified. 
-Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`rem-obvious-properties`(c)).
+is used if the lower bound $a$ is unimportant or not specified. Two primitives of an integrable function $f$ differ by a constant only.
 ````
 
 
-````{prf:remark} Obvious Properties of Riemann Integrals
-:label: rem-obvious-properties
+````{prf:remark} Monotony, Additivity, Boundedness 
+:label: rem-monotony-additivity-boundedness
 
-We state five obvious but important properties of Riemann integrals.
+We state three obvious but important properties of Riemann integrals:
 
-**(a) Boundedness**
-
-R-integrable functions are bounded on closed intervals
-(because Riemann sums are).
-
-**(b) Monotony**
+**(a) Monotony**
 
 ```{math}
 f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
 ```
 holds for any two functions $f,g \in \mathcal{R}([a,b])$.
 
-**(c) Additivity**
-
-```{math}
-\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
-```
-holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
-
-**(d) Triangular Inequality**
-
-If $f$ is integrable, then so is $|f|$, and it holds that:
+**(b) Triangular Inequality**
 
 ```{math}
 \left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
 ```
 
-**(e) Linearity**
-
-If $f, g$ are integrable, then so is $f + \alpha g$ ($\alpha \in \mathbb{R}$), and it holds that:
+**(c) Additivity**
 
 ```{math}
-\int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx
+\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
+```
+
+holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
+
+**(e) Boundedness**
+
+R-integrable functions are bounded on closed intervals
+(because Riemann sums are).
+````
+
+Monotony leads us to an important theorem.
+
+````{prf:theorem} Mean Value Theorem of Integration
+:label: thr-mean-value-integration
+
+Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
+
+Then there exists a $\xi \in [a, b]$ such that:
+
+```{math}
+\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
+```
+
+With $\phi = 1$ we get:
+
+```{math}
+\int_a^b f(x) \, dx= f(\xi) (b-a)
 ```
 ````
 
+````{prf:proof}
+From {prf:ref}`thr-intermediate-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
+And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
 
+```{math}
+m \le f(x) \le M 
+```
 
-````{prf:theorem} Less Obvious Properties of Riemann Integrals
+The rest is straightforward: multiply by $\phi(x)$ and integrate:
+
+```{math}
+& m \phi(x) \le f(x) \phi(x) \le M \phi(x)
+
+& \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
+
+& \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
+```
+````
+
+````{prf:theorem} Properties of Riemann Integrals
 :label: thr-riemann-integrals
 
 **(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
@@ -576,9 +670,9 @@ We can swap limit and integral:
 
 ````{prf:proof}
 
-The assertions (a) and (b) are a reformulation of {prf:ref}`rem-obvious-properties`(e). 
-The proof of (c) uses {prf:ref}`rem-obvious-properties`(d), and
-the proof of (d) uses the triangular inequality several times.
+The assertions (a) and (b) are obvious. 
+The proof of (c) uses the [Triangular Inequality for Integrals](#thr-triangular-inequality), and
+the proof of (d) the standard one.
 
 **(c)**
 Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
@@ -626,7 +720,7 @@ Then
 &\left | A - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
 & \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
 & \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right |  + \sum_{k=0}^{n-1} |f_n(\xi_k) - f(\xi_k)| (x_{k+1}-x_k) \\
-& < \epsilon + \epsilon + (b-a) \epsilon
+& < \epsilon + (b-a) \epsilon + (b-a) \epsilon
 ```
 
 This proves that $f$ is R-integrable and:
@@ -638,157 +732,6 @@ This proves that $f$ is R-integrable and:
 
 A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
 It is not integrable because on every interval you'll find Riemann sums equal to $0$, and others equal to $1$.
-
-
-````{prf:definition} Step Functions
-:label: def-step-functions
-
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a partition $X$ of $[a, b]$.
-
-A function $\phi: [a, b] \to \mathbb{R}$ is called a **step function** iff it is constant on each interval $[x_k, x_{k+1})$
-of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$. If the step function $\phi$ is given, 
-the associate partition is called $X_{\phi}$. A Riemann sum $R(\phi, X_{\phi}, \xi)$ does not depend on $\xi$, and we can define:
-
-```{math}
-R(\phi) = R(\phi, X_{\phi}, x)= \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)
-```
-````
-
-````{prf:theorem} Riemann Integrals by Step Functions
-:label: thr-riemann-integrals
-
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
-
-Theorem: $f$ is R-integrable iff
-
-```{math}
-:label: equ-riemann-integrals-1
-\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)
-```
-where $\phi$ and $\psi$ range over all step functions on $[a, b]$. In this case, we have:
-
-
-```{math}
-:label: equ-riemann-integrals-2
-\int_a^b f(x) \, dx = \sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \psi(x) \, dx
-```
-````
-
-````{prf:proof} 
-**Part One:** We show that {eq}`equ-riemann-integrals-1` and {eq}`equ-riemann-integrals-2` hold if $f$ is R-integrable.
-
-Take any $\epsilon > 0$ and let $X$ be a partition such that: 
-
-```{math}
-:label: equ-riemann-integrals-3
-\left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | < \epsilon
-```
-for any set $\xi$ of intermediate points of $X$. We define step functions $\phi$ and $\psi$ that will do the job. Let
-
-```{math}
-&u_k = \inf \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
-&v_k = \sup \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
-\\
-&\phi(x) = u_k \text{ if } x \in [x_{k+1}, x_k) \\
-&\psi(x) = v_k \text{ if } x \in [x_{k+1}, x_k) \\
-```
-The suprema and infima exist because $f$ is bounded. We conclude:
-
-```{math}
-\phi - \epsilon \le f \le \psi + \epsilon
-```
-from which it follows that:
-
-```{math}
-R(\phi) - \epsilon(b-a) \le R(f, X, \xi) \le R(\psi) + \epsilon(b-a)
-```
-for any partition $X$ and and any set $\xi$ of intermediate points of $X$.
-Combining this with {eq}`equ-riemann-integrals-3`, we get:
-
-```{math}
-R(\phi) - \epsilon - \epsilon(b-a) \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon + \epsilon(b-a)
-```
-for any $\epsilon > 0$ and this is what we want.
-
-**Part Two:** We show that $f$ is R-integrable if {eq}`equ-riemann-integrals-1` holds.
-
-Take any $\epsilon > 0$ and choose step functions $\phi, \psi$ on $[a, b]$ that squeeze $f$ from below and above:
-
-```{math}
-&\phi \le f \le \psi \\
-&R(\psi) - R(\phi ) \le \epsilon
-```
-We assume w.l.o.g. that $\phi$ and $\psi$ share the same partition $T = \{t_0, t_1, \ldots, t_m \}$. 
-We'll produce a $\delta > 0$ such that:
-
-```{math}
-:label: equ-riemann-integrals-4
-R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon
-```
-for any partition $X$ with $\mu(X) < \delta$ and any set $\xi$ of intermediate points of $X$.
-
-To this end we define a step function $\rho$ by:
- 
-```{math}
-\rho(x) = f(\xi_k) \text{ if } x \in [x_k, x_{k+1})
-```
-Note that:
-
-```{math}
-:label: equ-riemann-integrals-4a
-R(\rho) = R(f, X, \xi)
-```
-
-Let $U$ be the union of all the intervals in $X$ that fit into one of the intervals in $T$, and $V$ the complement of $U$.
-
-```{math}
-&K = \{k < n \mid \exists j < m: [x_k, x_{k+1}) \subseteq [t_j, t_{j+1}) \} \\
-&U = \bigcup_{k \in K} [x_k, x_{k+1}) \\
-&V = \bigcup_{k \notin K} [x_k, x_{k+1}) 
-```
-The crucial observation is that $V$ can contain at most $m$ intervals, so the length of $V$ is bounded by $m\delta$.
-Note that $m$ is fixed and that we are free to choose $\delta$.
-
-We have on $U$, by definition of $\rho$:
- 
-```{math}
-:label: equ-riemann-integrals-5
-\phi(x) \le \rho(x) \le \psi(x)
-```
-
-And, since $f$ is bounded, there is an $M \in \mathbb{R}$ such that we have on $V$:
-```{math}
-:label: equ-riemann-integrals-6
-\phi(x) - M \le \rho(x) \le \psi(x) + M
-```
-
-Summing over {eq}`equ-riemann-integrals-5` gives:
-```{math}
-:label: equ-riemann-integrals-7
-\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) 
-```
-and over {eq}`equ-riemann-integrals-6`:
-
-```{math}
-:label: equ-riemann-integrals-8
-&\sum_{k \notin K} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \le \sum_{k \notin K} \rho(x_k)(x_{k+1} - x_k) \\
-&\le \sum_{k \notin K} \psi(x_k)(x_{k+1} - x_k) + Mm\delta
-```
-
-These inequalities are combined to:
-
-```{math}
-R(\phi) - Mm\delta \le R(\rho) \le R(\psi) + Mm\delta
-```
-Remembering {eq}`equ-riemann-integrals-4a` and setting $\delta = \epsilon/Mm$,
-we arrive at the desired result:
-
-```{math}
-R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon 
-```
-````
-
-
 We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.
 
 ````{prf:theorem} Riemann-Integrable Functions
@@ -796,18 +739,44 @@ We now introduce some criteria of Riemann integrability, with the Lebesgue Crite
 
 All functions are defined on a closed interval $[a, b]$.
 
-**(a)** Monotonous functions are R-integrable.
+**(a)** Step functions are R-integrable.
 
-**(b)** Continuous functions are R-integrable.
+**(b)** Let $f: [a, b] \to \mathbb{R}$ be a function such that, for any $\epsilon > 0$, 
+there are R-integrable functions $\phi, \psi$ with
 
-**(c)** Continuous functions with countably many discontinuities are R-integrable.
+```{math}
+\phi \le f \le \psi
+```
 
-**(d) (Lebesgue Criterion)** Bounded functions are R-integrable iff their set of discontinuities has measure zero.
+and
+
+```{math}
+\int_a^b (\psi(x) - \phi(x)) \, dx < \epsilon.
+```
+
+Then $f$ is R-integrable
+
+**(c)** Monotonous functions are R-integrable.
+
+**(d)** Continuous functions with countably many discontinuities are R-integrable.
+
+**(e) (Lebesgue Criterion)** Bounded functions are R-integrable iff their set of discontinuities has measure zero.
 ````
 
 ````{prf:proof} 
 
 **(a)**
+Let $\phi$ be a step function on $[a, b]$ with $\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})$. Then, obviously:
+
+```{math}
+\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k
+``` 
+
+**(b)**
+
+**TODO**
+
+**(c)**
 Let $f$ be monotonously non-decreasing on $[a, b]$. Then $f$ can squeezed between two step functions, $\phi, \psi$,
 which are integrable as we know from (a).
 Let $n \in \mathbb{N}$ fixed and $x_k = a + \frac{k}{n}(b-a)$. We set:
@@ -837,46 +806,6 @@ which can be made arbitrarily small. The assertion follows from (b).
 
 **(e)** The proof can be found in **citation needed**.
 ````
-
-Monotony leads us to an important theorem.
-
-````{prf:theorem} Mean Value Theorem of Integration
-:label: thr-mean-value-integration
-
-Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
-
-Then there exists a $\xi \in [a, b]$ such that:
-
-```{math}
-\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
-```
-
-With $\phi = 1$ we get:
-
-```{math}
-\int_a^b f(x) \, dx= f(\xi) (b-a)
-```
-````
-
-````{prf:proof}
-From {prf:ref}`thr-intermediate-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
-And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
-
-```{math}
-m \le f(x) \le M 
-```
-
-The rest is straightforward: multiply by $\phi(x)$ and integrate:
-
-```{math}
-& m \phi(x) \le f(x) \phi(x) \le M \phi(x)
-
-& \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
-
-& \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
-```
-````
-
 
 ## Differentiable Functions
 

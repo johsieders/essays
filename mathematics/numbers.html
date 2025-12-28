@@ -581,9 +581,7 @@ Here, formal logic – the Gödel-Tarski stuff – comes to our rescue, but that
 <p>Where do natural numbers come from? Who invented them? Did they preexist in some kind of Platonian heaven?
 I don’t know, and, honestly, I don’t care too much. What seems clear to me is that there
 must have been first humans, probably at different times and different locations, to grasp the concept of a number.
-They realized that five fingers, five pebbles, and five trees share the property of fiveness, and so a new, powerful concept was born.
-It took many millennia to formalize it.
-Today, the Peano axioms perfectly describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers for all mathematical purposes.</p>
+Today, many millennia later, the Peano axioms perfectly describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers for all mathematical purposes.</p>
 <div class="proof definition admonition" id="def-peano-axioms">
 <p class="admonition-title"><span class="caption-number">Definition 6 </span> (Peano Axioms)</p>
 <section class="definition-content" id="proof-content">
@@ -636,8 +634,8 @@ The following is a formal definition of infinity, with no handwaving, no dots, a
 <div class="proof definition admonition" id="def-infinity">
 <p class="admonition-title"><span class="caption-number">Definition 8 </span> (Infinity)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be any set.
-<strong>a)</strong><span class="math notranslate nohighlight">\(A\)</span> is <strong>finite</strong> iff there is an <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to \{0, 1, \ldots, n\}\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be any set.</p>
+<p><strong>a)</strong><span class="math notranslate nohighlight">\(A\)</span> is <strong>finite</strong> iff there is an <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to \{0, 1, \ldots, n\}\)</span>.</p>
 <p><strong>b)</strong><span class="math notranslate nohighlight">\(A\)</span> is <strong>countable</strong> iff there is an injection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.
 This injection is often called an <strong>enumeration</strong>, a way of arranging all elements of <span class="math notranslate nohighlight">\(A\)</span> in a sequential order.</p>
 <p><strong>c)</strong><span class="math notranslate nohighlight">\(A\)</span> is <strong>infinite</strong> iff there is an a proper subset <span class="math notranslate nohighlight">\(B\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to B\)</span>.</p>
@@ -665,7 +663,7 @@ Therefore, the power set of a countable set is always uncountable.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
-Let <span class="math notranslate nohighlight">\(A\)</span> be infinite and assume it to be finite. Let <span class="math notranslate nohighlight">\(\phi : A \to B\)</span> as claimed above.
+Let <span class="math notranslate nohighlight">\(A\)</span> be infinite and assume it to be finite. Let <span class="math notranslate nohighlight">\(\phi : A \to B\)</span> as claimed in <a class="reference internal" href="#def-infinity">Definition 8</a>.
 But <span class="math notranslate nohighlight">\(\left |\phi(A) \right | = \left | A \right | &gt; \left | B \right | = \left | \phi(A) \right |\)</span>.
 So <span class="math notranslate nohighlight">\(A\)</span> cannot be finite, it must be not finite.</p>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be not finite, and <span class="math notranslate nohighlight">\(\{a_0, a_1, \ldots \}\)</span> be a countably infinite subset as granted by <a class="reference internal" href="#def-axiom-countable-choice">Definition 9</a>.
@@ -714,7 +712,7 @@ are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</s
        a \mapsto p_i^{\phi_i(a)} \text{ if } a \in A_i
    \end{array}
 \right .\end{split}\]</div>
-<p>is an injection: The set <span class="math notranslate nohighlight">\(A_i\)</span> is mapped to the powers of <span class="math notranslate nohighlight">\(p_i\)</span>.</p>
+<p>is an injection: The set <span class="math notranslate nohighlight">\(A_i\)</span> is mapped to the powers of <span class="math notranslate nohighlight">\(p_i\)</span> (we are using <a class="reference internal" href="arithmetic.html#thr-infinite-primes">Theorem 7</a>).</p>
 <p><strong>(d) Finite Crossproduct</strong>: The function</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi:
@@ -725,7 +723,7 @@ are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</s
    \end{array}
 \right .\end{split}\]</div>
 <p>is an injection: Each <span class="math notranslate nohighlight">\((a_1, a_2, \ldots, a_n)\)</span> is mapped to the unique natural number whose decomposition
-is <span class="math notranslate nohighlight">\((\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))\)</span>.</p>
+is <span class="math notranslate nohighlight">\((\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))\)</span> (we are using <a class="reference internal" href="arithmetic.html#thr-fundamental">Theorem 6</a>).</p>
 <p><strong>e)</strong>
 Assume there is an injection</p>
 <div class="math notranslate nohighlight">
@@ -776,8 +774,9 @@ the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is inde
 &amp;-n &lt; -m \Leftrightarrow m &lt; n\end{split}\]</div>
 <p>With this ordering, <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is a totally ordered set  without lower or upper bound.</p>
 </section>
-</div><p>From now on, we take <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> as given, with its standard operations and ordering, and focus on how to extend it to <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>,
-and ultimately <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Our construction proceeds from here with <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> as the base case,
+</div><p>From now on, we take <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> as given, with its standard operations and ordering,
+and focus on how to extend it to <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>,
+and <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Our construction proceeds from here with <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> as the base case,
 showing how successively richer number systems emerge through a consistent pattern of equivalence class constructions.</p>
 </section>
 <section id="rationals">
@@ -787,12 +786,12 @@ not a field. <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> la
 <p>To this end, we introduce the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> of rationals as the <strong>smallest field containing <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span></strong>.
 Again, the question remains whether such a field exists at all.
 The answer is yes, it does, and it can be easily constructed.
-We introduce an equivalence relation on the set <span class="math notranslate nohighlight">\(\mathbb{Z} \times \mathbb{Z}-\{0\}\)</span> as</p>
+We introduce an equivalence relation on the set <span class="math notranslate nohighlight">\(\mathbb{Z} \times (\mathbb{Z}-\{0\})\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[(a, b) \sim (c, d) \Longleftrightarrow ad = bc\]</div>
 <p>and set</p>
 <div class="math notranslate nohighlight">
-\[\mathbb{Q} = (\mathbb{Z} \times \mathbb{Z}-\{0\})/\sim\]</div>
+\[\mathbb{Q} = (\mathbb{Z} \times (\mathbb{Z}-\{0\}))/\sim\]</div>
 <p>This immediately gives the cancellation rule:</p>
 <div class="math notranslate nohighlight">
 \[(a, b) \sim (c, d) \Longleftrightarrow (na, nb) \sim (c, d)\]</div>
@@ -822,10 +821,8 @@ the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is inde
 <p>For any <span class="math notranslate nohighlight">\(q \in \mathbb{Q}\)</span>, there exists <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>  such that <span class="math notranslate nohighlight">\(n &gt; q\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Write <span class="math notranslate nohighlight">\(q = a/b\)</span> with <span class="math notranslate nohighlight">\(a, b \in \mathbb{Z}\)</span> and <span class="math notranslate nohighlight">\(b &gt; 0\)</span>.
-The assertion is obvious if <span class="math notranslate nohighlight">\(a \le 0\)</span>. If not, we have:</p>
-<div class="math notranslate nohighlight">
-\[\frac{a}{b} &lt; \frac{a}{1} = a \in \mathbb{N}\]</div>
+<p>Proof. Write <span class="math notranslate nohighlight">\(q = a/b\)</span> in normal form, so <span class="math notranslate nohighlight">\(b &gt; 0\)</span>.
+The assertion follows from <span class="math notranslate nohighlight">\(a/b &lt; a\)</span>.</p>
 </div>
 </section>
 <section id="reals">
@@ -1000,10 +997,12 @@ we replace the general <span class="math notranslate nohighlight">\(m\)</span> w
 <section class="definition-content" id="proof-content">
 <p>We extend the order on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by setting, for <span class="math notranslate nohighlight">\(x = \{x_n\}, y = \{y_n\} \in \mathbb{R}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[a &lt; b \Longleftrightarrow \exists n_0 \in \mathbb{N}: \forall n &gt; n_0: a_n &lt; b_n\]</div>
+\[a &lt; b \Longleftrightarrow \exists n_0 \in \mathbb{N}: \forall n &gt; n_0: x_n &lt; y_n\]</div>
 <p>With this ordering, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a totally ordered set  without lower or upper bound.</p>
 </section>
-</div><div class="proof theorem admonition" id="thr-R-uncountable">
+</div><p>We close this chapter with a note about the uncountability of the real numbers
+and a glimpse at the continuum hypothesis.</p>
+<div class="proof theorem admonition" id="thr-R-uncountable">
 <p class="admonition-title"><span class="caption-number">Theorem 17 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong></p>

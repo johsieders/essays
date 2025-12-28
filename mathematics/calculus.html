@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Was the Empire Holy, Roman, or an Empire at All?" href="../history/8-holy_roman_empire.html" />
-    <link rel="prev" title="From Naturals to Reals (CLAUDE)" href="numbers-claude.html" />
+    <link rel="prev" title="From Naturals to Reals" href="numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -212,7 +212,6 @@
 <li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numbers.html">From Naturals to Reals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numbers-claude.html">From Naturals to Reals (Claude)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">First Steps in Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
@@ -463,12 +462,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoxes">Paradoxes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topology-of-mathbb-r">Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compact-sets">Compact Sets</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
@@ -492,9 +492,12 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="first-steps-in-calculus">
 <h1>First Steps in Calculus<a class="headerlink" href="#first-steps-in-calculus" title="Link to this heading">#</a></h1>
 <p><em>Johannes Siedersleben, December 2025</em></p>
-<blockquote>
-<div><p>under construction</p>
-</div></blockquote>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id82" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id2">[<a class="reference internal" href="#id83" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id84" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id85" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
+to name but a few prominent examples.</p>
+</section>
 <section id="paradoxes">
 <h2>Paradoxes<a class="headerlink" href="#paradoxes" title="Link to this heading">#</a></h2>
 <section id="achilles-and-the-tortoise-zeno">
@@ -534,54 +537,129 @@ this paradox is that the sum of a large number of arbitrarily small terms does n
 Assigning meaningful values to such sums is what integration theory is all about.</p>
 </section>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="numbers.html#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
-<span id="id2">[<a class="reference internal" href="numbers.html#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id84" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id85" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
-to name but a few prominent examples.</p>
+<section id="topology-of-mathbb-r">
+<h2>Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span><a class="headerlink" href="#topology-of-mathbb-r" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-topology-R">
+<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(a \in A\)</span>.</p>
+<p><strong>(a) Accumulation Points, Closure, Closed Sets</strong></p>
+<p>We call <span class="math notranslate nohighlight">\(a\)</span> an <strong>accumulation point</strong> of <span class="math notranslate nohighlight">\(A\)</span>, iff</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: U_{\epsilon}(a) \cap A \neq \emptyset\]</div>
+<p>The <strong>closure</strong> of <span class="math notranslate nohighlight">\(A\)</span>, denoted be <span class="math notranslate nohighlight">\(\bar{A}\)</span>, is the set of all accumulation points of <span class="math notranslate nohighlight">\(A\)</span>.
+We clearly have <span class="math notranslate nohighlight">\(A \subseteq \bar{A}\)</span>.
+The set <span class="math notranslate nohighlight">\(A\)</span> is <strong>closed</strong> iff <span class="math notranslate nohighlight">\(\bar{A} = A\)</span>.</p>
+<p><strong>(b) Inner Points, Interior, Open Sets</strong></p>
+<p>We call <span class="math notranslate nohighlight">\(a\)</span> an <strong>inner point</strong> of <span class="math notranslate nohighlight">\(A\)</span>, iff</p>
+<div class="math notranslate nohighlight">
+\[\exists \epsilon &gt; 0: U_{\epsilon}(a) \subseteq A\]</div>
+<p>The <strong>interior</strong> of <span class="math notranslate nohighlight">\(A\)</span>, denoted be <span class="math notranslate nohighlight">\(A°\)</span>, is the set of all interior points of <span class="math notranslate nohighlight">\(A\)</span>.
+We clearly have <span class="math notranslate nohighlight">\(A° \subseteq A\)</span>.
+The set <span class="math notranslate nohighlight">\(A\)</span> is <strong>open</strong> iff <span class="math notranslate nohighlight">\(A° = A\)</span>.</p>
+</section>
+</div><div class="proof lemma admonition" id="lem-open-closed">
+<p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Open Sets, Closed Sets)</p>
+<section class="lemma-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(A\)</span> is open iff <span class="math notranslate nohighlight">\(A^c\)</span> is closed,<br />
+<span class="math notranslate nohighlight">\(A\)</span> is closed iff <span class="math notranslate nohighlight">\(A^c\)</span> is open.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(A\)</span> be open, and <span class="math notranslate nohighlight">\(a \notin A\)</span>. Then, for all <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> it holds that <span class="math notranslate nohighlight">\(U_{\epsilon}(a) \cap A^c \neq \emptyset\)</span>.
+Therefore <span class="math notranslate nohighlight">\(a \in \overline{A^c}\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be closed, and <span class="math notranslate nohighlight">\(a \notin A\)</span>. Then there is an <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(U_{\epsilon}(a) \cap A = \emptyset\)</span> or,
+equivalently, <span class="math notranslate nohighlight">\(U_{\epsilon}(a) \subseteq A^c\)</span>. Therefore <span class="math notranslate nohighlight">\(a \in (A^c)°\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="thr-nested-intervals">
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Nested Intervals)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing, <span class="math notranslate nohighlight">\(\{y_n\}\)</span> a non-increasing real sequence satisfying:</p>
+<div class="math notranslate nohighlight" id="equation-equ-nested-intervals-1">
+<span class="eqno">(18)<a class="headerlink" href="#equation-equ-nested-intervals-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\forall n \in \mathbb{N}: x_n \le y_n \\
+\\
+&amp;\lim_{n \to \infty} (y_n - x_n) = 0\end{split}\]</div>
+<p>Then <span class="math notranslate nohighlight">\(\{x_n\}\)</span> and <span class="math notranslate nohighlight">\(\{y_n\}\)</span> converge to the same point:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} x_n = \lim_{n \to \infty} y_n\]</div>
+<p>This means that the sequence of intervals <span class="math notranslate nohighlight">\(\{[x_n, y_n]\}\)</span> contracts to one point.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We show that <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is a Cauchy sequence. For <span class="math notranslate nohighlight">\(m &gt; n\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[x_n \le x_m \le y_m \le y_n\]</div>
+<p>Subtracting <span class="math notranslate nohighlight">\(x_n\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[0 \le x_m - x_n \le y_n - x_n\]</div>
+<p>which is what we want because of <a class="reference internal" href="#equation-equ-nested-intervals-1">(18)</a>.
+The sequence <span class="math notranslate nohighlight">\(\{y_n\}\)</span> is a Cauchy sequence by the same argument,
+and the limits of <span class="math notranslate nohighlight">\(\{x_n\}\)</span> and <span class="math notranslate nohighlight">\(\{y_n\}\)</span> coincide, again because of <a class="reference internal" href="#equation-equ-nested-intervals-1">(18)</a>.</p>
+</div>
 </section>
 <section id="compact-sets">
 <h2>Compact Sets<a class="headerlink" href="#compact-sets" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="def-closure">
-<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Topology of \mathbb{R})</p>
+<div class="proof definition admonition" id="def-compact">
+<p class="admonition-title"><span class="caption-number">Definition 16 </span> (Compact Sets)</p>
 <section class="definition-content" id="proof-content">
-<p><strong>(a) Accumulation Points</strong>
-todo</p>
-<p><strong>(b) Closed Sets</strong>
-todo</p>
-<p><strong>(c) Open Sets</strong>
-todo</p>
-<p><strong>(c) Sets of Measure Zero</strong>
-todo</p>
-<p><strong>(d) Closure</strong>
-todo</p>
-<p><strong>(e) Compact Sets</strong>
-A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>compact</strong>
+<p>A set <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> is called <strong>compact</strong>
 iff each bounded sequence of elements of A has a convergent subsequence.</p>
 </section>
 </div><div class="proof lemma admonition" id="lem-compactness-completeness">
-<p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Completeness, Compactness)</p>
+<p class="admonition-title"><span class="caption-number">Lemma 4 </span> (Completeness, Compactness)</p>
 <section class="lemma-content" id="proof-content">
 <p><strong>a)</strong> Compact sets are complete.</p>
 <p><strong>b)</strong> Closed subsets of complete sets are complete.</p>
 <p><strong>c)</strong> Closed subsets of compact sets are compact.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>a)</strong> Let <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> be compact and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a Cauchy-sequence of elements of <span class="math notranslate nohighlight">\(A\)</span>.
+<p>Proof. <strong>a)</strong> Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> be compact and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a Cauchy-sequence of elements of <span class="math notranslate nohighlight">\(A\)</span>.
 Then, the set <span class="math notranslate nohighlight">\(\{x_n \mid n \in \mathbb{N} \}\)</span> is bounded and has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in A\)</span>.
 Therefore <span class="math notranslate nohighlight">\(\{x_n\}\)</span>, being a Cauchy-sequence, converges itself to <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p><strong>b)</strong> todo</p>
-<p><strong>c)</strong> todo</p>
+<p><strong>b)</strong> Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> be complete, <span class="math notranslate nohighlight">\(B \subseteq A\)</span> be closed, and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a Cauchy-sequence of elements of <span class="math notranslate nohighlight">\(B\)</span>.
+Then <span class="math notranslate nohighlight">\(\{x_n\}\)</span> converges because <span class="math notranslate nohighlight">\(A\)</span> is complete, and it converges to some <span class="math notranslate nohighlight">\(x \in B\)</span>, because <span class="math notranslate nohighlight">\(B\)</span> is closed.</p>
+<p><strong>c)</strong> Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> be compact, <span class="math notranslate nohighlight">\(B \subseteq A\)</span> be closed, and <span class="math notranslate nohighlight">\(\{x_n\}\)</span> a sequence of elements of <span class="math notranslate nohighlight">\(B\)</span>.
+Then <span class="math notranslate nohighlight">\(\{x_n\}\)</span> has a convergent subsequence because <span class="math notranslate nohighlight">\(A\)</span> is compact,
+and this subsequence converges to some <span class="math notranslate nohighlight">\(x \in B\)</span>, because <span class="math notranslate nohighlight">\(B\)</span> is closed.</p>
+</div>
+<div class="proof theorem admonition" id="thr-supremum-infimum">
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Supremum, Infimum)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> bounded above. Then there is a least upper bound of <span class="math notranslate nohighlight">\(A\)</span>, called supremum of <span class="math notranslate nohighlight">\(A\)</span>, or <span class="math notranslate nohighlight">\(\sup A\)</span>.<br />
+Let <span class="math notranslate nohighlight">\(A \subset \mathbb{R}\)</span> bounded below. Then there is a greatest lower bound of <span class="math notranslate nohighlight">\(A\)</span>, called infimum of <span class="math notranslate nohighlight">\(A\)</span>, or <span class="math notranslate nohighlight">\(\inf A\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We prove the assertion for the supremum. Let <span class="math notranslate nohighlight">\(b_0\)</span> be an upper bound of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(a_0 \in A\)</span> any element.
+We define nested intervals <span class="math notranslate nohighlight">\(\{[a_n, b_n]\}\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}\\
+&amp;a_{n+1} = 
+\left\{
+    \begin{array}{lr}
+        a_n &amp; \text{ if } (a_n + b_n)/2 \notin A \\
+        (a_n + b_n)/2 &amp; \text{ if } (a_n + b_n)/2 \in A 
+    \end{array}
+\right .  \\
+\\\end{split}\\\begin{split}&amp;b_{n+1} = 
+\left\{
+    \begin{array}{lr}
+        (a_n + b_n)/2 &amp; \text{ if } (a_n + b_n)/2 \notin A \\
+        b_n &amp; \text{ if } (a_n + b_n)/2 \in A
+    \end{array}
+\right .\end{split}\end{aligned}\end{align} \]</div>
+<p>The sequence <span class="math notranslate nohighlight">\(\{[a_n, b_n]\}\)</span> fulfills the prereqisites of <a class="reference internal" href="#thr-nested-intervals">Theorem 18</a>. It therefore contracts
+to some point <span class="math notranslate nohighlight">\(b\)</span> which is an upper bound of <span class="math notranslate nohighlight">\(A\)</span> because all <span class="math notranslate nohighlight">\(b_n\)</span> are. And no upper bound of <span class="math notranslate nohighlight">\(A\)</span> can be smaller than <span class="math notranslate nohighlight">\(b\)</span>
+because, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there are <span class="math notranslate nohighlight">\(a_n \in A\)</span> with <span class="math notranslate nohighlight">\(a_n &gt; b - \epsilon\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="thr-bolzano-weierstrass">
-<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Bolzano-Weierstrass)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Bolzano-Weierstrass)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Every bounded and monotonous sequence of reals is convergent.</p>
 <p><strong>b)</strong> Each closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> is compact.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>a)</strong> Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing bounded sequence with <span class="math notranslate nohighlight">\(s = \sup \{x_n |\mid n \in \mathbb{N} \}\)</span>.
-Then, by the definition of the supremum:</p>
+<p>Proof. <strong>a)</strong> Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing bounded sequence with <span class="math notranslate nohighlight">\(s = \sup \{x_n \mid n \in \mathbb{N} \}\)</span>.
+This supremum exists thanks to <a class="reference internal" href="#thr-supremum-infimum">Theorem 19</a>. We show that <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is a Cauchy-sequence.
+By the definition:</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0 : \exists n(\epsilon) : s - x_{n(\epsilon)} &lt; \epsilon\]</div>
 <p>hence, by monotony:</p>
@@ -605,7 +683,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-sup-norm">
-<p class="admonition-title"><span class="caption-number">Definition 16 </span> (Sup Norm)</p>
+<p class="admonition-title"><span class="caption-number">Definition 17 </span> (Sup Norm)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a bounded function.</p>
 <p>The <strong>sup norm</strong> (or <strong>uniform norm</strong>) of <span class="math notranslate nohighlight">\(f\)</span> is defined as:</p>
@@ -622,7 +700,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 <p>The proofs are trivial.</p>
 </section>
 </div><div class="proof definition admonition" id="def-convergence-functions">
-<p class="admonition-title"><span class="caption-number">Definition 17 </span> (Convergence of Functions)</p>
+<p class="admonition-title"><span class="caption-number">Definition 18 </span> (Convergence of Functions)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f_n: [a, b] \to \mathbb{R}\)</span> <span class="math notranslate nohighlight">\((n \in \mathbb{N})\)</span> be a sequence of functions, and <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> another function.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>pointwise</strong> if, for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, we have</p>
@@ -631,12 +709,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 <p><strong>(b)</strong> We say that <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n = f\)</span> <strong>uniformly</strong> iff</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0\]</div>
-<div class="proof definition admonition" id="def-step-functions">
-<p class="admonition-title"><span class="caption-number">Definition 18 </span> (Step Functions)</p>
-<section class="definition-content" id="proof-content">
-<p><strong>TODO</strong></p>
 </section>
-</div></section>
 </div></section>
 <section id="continuous-functions">
 <h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Link to this heading">#</a></h2>
@@ -654,7 +727,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 <p>For <span class="math notranslate nohighlight">\(f\)</span> to be uniformly continuous we require that one <span class="math notranslate nohighlight">\(\delta\)</span> do the job for the whole interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-continuity-on-compact-sets">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Continuous Functions on Intervals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Continuous Functions on Intervals)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be continuous. Then:</p>
 <p><strong>(a)</strong> The continuous functions on <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^0([a, b])\)</span></p>
@@ -676,10 +749,11 @@ such that <span class="math notranslate nohighlight">\( \lvert f_n(x+h) - f_n(x)
 <p><strong>(c)</strong>
 We prove the assertion for the maximum. Let <span class="math notranslate nohighlight">\(M = \sup\{f(x) \mid x \in [a, b] \}\)</span>. Then, for each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>,
 there is a <span class="math notranslate nohighlight">\(x_n \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(M - f(x_n) &lt; 1/n\)</span>.
-The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, and we have <span class="math notranslate nohighlight">\(f(x) = M\)</span> because <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+The sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> has a subsequence that converges to some <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>
+because <span class="math notranslate nohighlight">\([a, b]\)</span> is compact, and we have <span class="math notranslate nohighlight">\(f(x) = M\)</span> because <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p><strong>(d)</strong>
-We prove the assertion by contradiction. Assume <span class="math notranslate nohighlight">\(f\)</span> to be not uniformly continuous. Take any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>.
-Then there exist two sequences <span class="math notranslate nohighlight">\(\{x_n\}, \{y_n\}\)</span> such that</p>
+We prove the assertion by contradiction. Assume <span class="math notranslate nohighlight">\(f\)</span> to be not uniformly continuous.
+Then, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>, there exist two sequences <span class="math notranslate nohighlight">\(\{x_n\}, \{y_n\}\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\lvert x_n - y_n \rvert &lt; \frac{1}{n}\]</div>
 <p>and</p>
@@ -689,7 +763,7 @@ Then there exist two sequences <span class="math notranslate nohighlight">\(\{x_
 and <span class="math notranslate nohighlight">\(\{y_{n_k}\}\)</span> necessarily converges to the same <span class="math notranslate nohighlight">\(x\)</span>, So, <span class="math notranslate nohighlight">\(f\)</span> is not continuous in <span class="math notranslate nohighlight">\(x\)</span>, which is a contradiction.</p>
 </div>
 <div class="proof theorem admonition" id="thr-intermediate-value">
-<p class="admonition-title"><span class="caption-number">Theorem 20 </span> (Intermediate Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Intermediate Value Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a continuous function with <span class="math notranslate nohighlight">\(f(a) &lt; 0\)</span> and <span class="math notranslate nohighlight">\(f(b) &gt; 0\)</span>.
 Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = 0\)</span>.</p>
@@ -699,8 +773,7 @@ Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\
 <p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>(a)</strong> We build two bounded monotonous sequences <span class="math notranslate nohighlight">\(\{a_n\},\{b_n\}\)</span> and
-apply again <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass</span></a>:</p>
+<p>Proof. <strong>(a)</strong> We define nested intervals <span class="math notranslate nohighlight">\(\{[a_n, b_n]\}\)</span> as follows:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\begin{split}&amp;a_0 = a \\
 &amp;b_0 = b \\
@@ -708,34 +781,24 @@ apply again <a class="reference internal" href="#thr-bolzano-weierstrass"><span 
 &amp;a_{n+1} = 
 \left\{
     \begin{array}{lr}
-        (a_n + b_n)/2 &amp; \text{ if } f((a_n + b_n)/2) &lt; 0 \\
-        a_n &amp; \text{ if } f((a_n + b_n)/2) \ge 0
+        a_n &amp; \text{ if } f((a_n + b_n)/2) \ge 0 \\
+        (a_n + b_n)/2 &amp; \text{ if } f((a_n + b_n)/2) &lt; 0
     \end{array}
 \right .  \\
 \\\end{split}\\\begin{split}&amp;b_{n+1} = 
 \left\{
     \begin{array}{lr}
-        b_n &amp; \text{ if } f((a_n + b_n)/2) &lt; 0 \\
-        (a_n + b_n)/2 &amp; \text{ if } f((a_n + b_n)/2) \ge 0
+        (a_n + b_n)/2 &amp; \text{ if } f((a_n + b_n)/2) \ge 0 \\
+        b_n &amp; \text{ if } f((a_n + b_n)/2) &lt; 0
     \end{array}
 \right .\end{split}\end{aligned}\end{align} \]</div>
-<p>We observe that, for all <span class="math notranslate nohighlight">\(n\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-equ-intermediate-value-1">
-<span class="eqno">(18)<a class="headerlink" href="#equation-equ-intermediate-value-1" title="Link to this equation">#</a></span>\[f(a_n) &lt; 0 \le f(b_n)\]</div>
-<p>and that the sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is non-descending, while <span class="math notranslate nohighlight">\(\{b_n\}\)</span> is non-increasing.
-Being bounded, both sequences converge, and their limits must be identical because:</p>
+<p>Th sequence <span class="math notranslate nohighlight">\(\{[a_n, b_n]\}\)</span> fulfills the prerequisites of <a class="reference internal" href="#thr-nested-intervals">Theorem 18</a>.
+It therefore contracts to some point <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span>. We observe that, for all <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}b_{n+1} - a_{n+1}  &amp;= \frac{1}{2} b_{n} - a_{n} \\
-\Rightarrow b_{n} - a_{n}  &amp;= \frac{b-a}{2^n}\end{split}\]</div>
-<p>This limit is our <span class="math notranslate nohighlight">\(\xi\)</span>:</p>
+\[f(a_n) &lt; 0 \le f(b_n)\]</div>
+<p>This implies, because <span class="math notranslate nohighlight">\(f\)</span> is continuous:</p>
 <div class="math notranslate nohighlight">
-\[\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \xi\]</div>
-<p>Since <span class="math notranslate nohighlight">\(f\)</span> is continous in <span class="math notranslate nohighlight">\(\xi\)</span>, we get:</p>
-<div class="math notranslate nohighlight">
-\[\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = f(\xi)\]</div>
-<p>But <span class="math notranslate nohighlight">\(f(\xi)\)</span> must be <span class="math notranslate nohighlight">\(0\)</span> because the inequalities <a class="reference internal" href="#equation-equ-intermediate-value-1">(18)</a> imply:</p>
-<div class="math notranslate nohighlight">
-\[\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = 0\]</div>
+\[f(\xi) = 0\]</div>
 <p><strong>(b)</strong> follows from (a): Choose <span class="math notranslate nohighlight">\(a_0, b_0 \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(a_0) = \min\{f(x) \mid x \in [a, b]\}\)</span>
 and <span class="math notranslate nohighlight">\(f(b_0) = \max\{f(x) \mid x \in [a, b]\}\)</span>. Assume w.l.o.g. that <span class="math notranslate nohighlight">\(a_0 &lt; b_0\)</span> and replace <span class="math notranslate nohighlight">\(f\)</span> with <span class="math notranslate nohighlight">\(f - \mu\)</span>.</p>
 </div>
@@ -743,101 +806,74 @@ and <span class="math notranslate nohighlight">\(f(b_0) = \max\{f(x) \mid x \in 
 <section id="riemann-integrable-functions">
 <h2>Riemann-Integrable Functions<a class="headerlink" href="#riemann-integrable-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Definition 21 </span> (Integrals over Step Functions)</p>
-<section class="definition-content" id="proof-content">
-<p><strong>TODO</strong></p>
-</section>
-</div><div class="proof definition admonition" id="def-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Definition 21 </span> (Riemann Integrals)</p>
-<section class="definition-content" id="proof-content">
-<p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.
-We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>Riemann-integrable</strong>, or <strong>R-integrable</strong> for short, iff <span class="math notranslate nohighlight">\(f\)</span> can be sqeezed between two step functions.
-For any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> there are step functions <span class="math notranslate nohighlight">\(\phi, \psi\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[\phi(x) \le f(x) \le \psi(x) \text{ for } x \in  [a, b] \]</div>
-<p>and:</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b \psi(x) \, dx - \int_a^b \phi(x) \, dx &lt; \epsilon\]</div>
-<p>In this case, we define</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b f(x) \, dx = \sup \{\int_a^b \phi(x) \, dx \mid \phi \le f\} = \inf \{\int_a^b \psi(x) \, dx \mid \psi \ge f\}\]</div>
-</section>
-</div><div class="proof definition admonition" id="def-riemann-integrals-xxx">
-<p class="admonition-title"><span class="caption-number">Definition 22 </span> (Riemann Integrals XXX)</p>
+<p class="admonition-title"><span class="caption-number">Definition 20 </span> (Riemann Integrals by Riemann Sums)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
-<p><strong>(a) Partitions</strong>. A <strong>partition of <span class="math notranslate nohighlight">\([a, b]\)</span></strong> is a strictly increasing sequence <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> with <span class="math notranslate nohighlight">\(a = x_0\)</span>,  <span class="math notranslate nohighlight">\(b = x_n\)</span>.
-Its <strong>granularity</strong> is <span class="math notranslate nohighlight">\(\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}\)</span>.</p>
-<p><strong>(b) Riemann Sums</strong>. Let <span class="math notranslate nohighlight">\(X\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\{\xi_k \in [x_k, x_{k-1}] \mid k = 1, \ldots, n\}\)</span>
-be a set of intermediate points. A Riemann sum is defined as:</p>
+<p><strong>(a)</strong>
+A <strong>partition</strong> of <span class="math notranslate nohighlight">\([a, b]\)</span> is a strictly increasing sequence <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> with <span class="math notranslate nohighlight">\(a = x_0\)</span>,  <span class="math notranslate nohighlight">\(b = x_n\)</span>.
+Its <strong>granularity</strong> is <span class="math notranslate nohighlight">\(\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}\)</span>.
+A sequence <span class="math notranslate nohighlight">\(\xi = \left\{\xi_0, \xi_1, \dots, \xi_{n-1}\right\}\)</span> with <span class="math notranslate nohighlight">\(\xi_k \in [x_{k-1}, x_k)\)</span> is called a <strong>set of intermediate points</strong>  of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p><strong>(b)</strong>
+The <strong>Riemann sum</strong> of <span class="math notranslate nohighlight">\(f, X, \xi\)</span> is defined as:</p>
 <div class="math notranslate nohighlight">
 \[R(f, X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})\]</div>
-<p>The granularity <span class="math notranslate nohighlight">\(\mu(R)\)</span> of a Riemann sum <span class="math notranslate nohighlight">\(R\)</span> is the granularity <span class="math notranslate nohighlight">\(\mu(X)\)</span> of its partition.</p>
-<p><strong>(c) Riemann Integrals</strong>. We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>Riemann-integrable</strong>, or <strong>R-integrable</strong> for short,
-and call</p>
+<p><strong>(c)</strong>
+We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>Riemann-integrable</strong>, or <strong>R-integrable</strong> for short,
+iff there is a <span class="math notranslate nohighlight">\(A \in \mathbb{R}\)</span> such that:</p>
 <div class="math notranslate nohighlight">
-\[A = \int_a^b f(x) \, dx\]</div>
-<p>the <strong>Riemann integral</strong> of <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\([a, b]\)</span> iff</p>
+\[\forall \epsilon &gt; 0: \exists \delta &gt; 0: \left | A - R(f, X, \xi) \right | &lt; \epsilon\]</div>
+<p>for all partitions <span class="math notranslate nohighlight">\(X\)</span> with <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>In this case, we define:</p>
 <div class="math notranslate nohighlight">
-\[\forall \epsilon &gt; 0: \exists \delta &gt; 0: \forall X,\xi \text{ with } \mu(X) &lt; \delta : \left | A - R(f, X, \xi) \right | &lt; \epsilon\]</div>
-<p>In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write</p>
+\[\int_a^b f(x) \, dx = A\]</div>
+<p>In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write:</p>
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})\]</div>
-<p>as a short version of the exact definition, which lets us use finite sums instead of integrals.</p>
-<p><strong>(d) Riemann Primitives</strong>. Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span>. The function <span class="math notranslate nohighlight">\(F\)</span> defined by</p>
+<p>as a short version of the exact definition. Whenever we prove theorems on Riemann integrals,
+we are allowed to replace the integrals with Riemann sums of sufficiently small granularity.</p>
+</section>
+</div><div class="proof definition admonition" id="thr-riemann-primitives">
+<p class="admonition-title"><span class="caption-number">Definition 21 </span> (Riemann Primitives)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span>. The function <span class="math notranslate nohighlight">\(F\)</span> defined by</p>
 <div class="math notranslate nohighlight">
 \[F(x) = \int_a^x f(y) \, dy \]</div>
-<p>is called the Riemann-primitive (or primitive) of <span class="math notranslate nohighlight">\(f\)</span>,
+<p>is called the <strong>Riemann-primitive</strong> (or primitive) of <span class="math notranslate nohighlight">\(f\)</span>,
 on the understanding that</p>
 <div class="math notranslate nohighlight">
 \[F(a) = \int_a^a f(x) \, dx = 0\]</div>
 <p>The notation</p>
 <div class="math notranslate nohighlight">
 \[F = \int f(y) \, dy\]</div>
-<p>is used if the lower bound <span class="math notranslate nohighlight">\(a\)</span> is unimportant or not specified. Two primitives of an integrable function <span class="math notranslate nohighlight">\(f\)</span> differ by a constant only.</p>
+<p>is used if the lower bound <span class="math notranslate nohighlight">\(a\)</span> is unimportant or not specified.
+Two primitives of an integrable function <span class="math notranslate nohighlight">\(f\)</span> differ only by a constant (see <a class="reference internal" href="#rem-obvious-properties">Remark 7</a>(c)).</p>
 </section>
-</div><div class="proof remark admonition" id="rem-monotony-additivity-boundedness">
-<p class="admonition-title"><span class="caption-number">Remark 7 </span> (Monotony, Additivity, Boundedness)</p>
+</div><div class="proof remark admonition" id="rem-obvious-properties">
+<p class="admonition-title"><span class="caption-number">Remark 7 </span> (Obvious Properties of Riemann Integrals)</p>
 <section class="remark-content" id="proof-content">
-<p>We state three obvious but important properties of Riemann integrals:</p>
-<p><strong>(a) Monotony</strong></p>
+<p>We state five obvious but important properties of Riemann integrals.</p>
+<p><strong>(a) Boundedness</strong></p>
+<p>R-integrable functions are bounded on closed intervals
+(because Riemann sums are).</p>
+<p><strong>(b) Monotony</strong></p>
 <div class="math notranslate nohighlight">
 \[f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx\]</div>
 <p>holds for any two functions <span class="math notranslate nohighlight">\(f,g \in \mathcal{R}([a,b])\)</span>.</p>
-<p><strong>(b) Triangular Inequality</strong></p>
-<div class="math notranslate nohighlight">
-\[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
 <p><strong>(c) Additivity</strong></p>
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx\]</div>
 <p>holds for any <span class="math notranslate nohighlight">\(f \in\mathcal{R}([a,c])\)</span> and any <span class="math notranslate nohighlight">\(b \in [a, c]\)</span>.</p>
-<p><strong>(e) Boundedness</strong></p>
-<p>R-integrable functions are bounded on closed intervals
-(because Riemann sums are).</p>
+<p><strong>(d) Triangular Inequality</strong></p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is integrable, then so is <span class="math notranslate nohighlight">\(|f|\)</span>, and it holds that:</p>
+<div class="math notranslate nohighlight">
+\[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
+<p><strong>(e) Linearity</strong></p>
+<p>If <span class="math notranslate nohighlight">\(f, g\)</span> are integrable, then so is <span class="math notranslate nohighlight">\(f + \alpha g\)</span> (<span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>), and it holds that:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx\]</div>
 </section>
-</div><p>Monotony leads us to an important theorem.</p>
-<div class="proof theorem admonition" id="thr-mean-value-integration">
-<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Mean Value Theorem of Integration)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
-<p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx\]</div>
-<p>With <span class="math notranslate nohighlight">\(\phi = 1\)</span> we get:</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b f(x) \, dx= f(\xi) (b-a)\]</div>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 20</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
-And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[m \le f(x) \le M \]</div>
-<p>The rest is straightforward: multiply by <span class="math notranslate nohighlight">\(\phi(x)\)</span> and integrate:</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
-</div>
-<div class="proof theorem admonition" id="thr-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Theorem 22 </span> (Properties of Riemann Integrals)</p>
+</div><div class="proof theorem admonition" id="thr-riemann-integrals">
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Less Obvious Properties of Riemann Integrals)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
 <p><strong>(b)</strong> The mapping</p>
@@ -867,9 +903,9 @@ We can swap limit and integral:</p>
 \[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The assertions (a) and (b) are obvious.
-The proof of (c) uses the <a class="reference internal" href="#thr-triangular-inequality"><span class="xref myst">Triangular Inequality for Integrals</span></a>, and
-the proof of (d) the standard one.</p>
+<p>Proof. The assertions (a) and (b) are a reformulation of <a class="reference internal" href="#rem-obvious-properties">Remark 7</a>(e).
+The proof of (c) uses <a class="reference internal" href="#rem-obvious-properties">Remark 7</a>(d), and
+the proof of (d) uses the triangular inequality several times.</p>
 <p><strong>(c)</strong>
 Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be integrable,  and <span class="math notranslate nohighlight">\(F\)</span> a primitive of <span class="math notranslate nohighlight">\(f\)</span>.
 Then, <span class="math notranslate nohighlight">\(f\)</span> is bounded by some <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span>, and we have, for <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> and arbitrarily small <span class="math notranslate nohighlight">\(h\)</span>:</p>
@@ -899,39 +935,113 @@ for any set of intermediate points <span class="math notranslate nohighlight">\(
 \[\begin{split}&amp;\left | A - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
 &amp; \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
 &amp; \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right |  + \sum_{k=0}^{n-1} |f_n(\xi_k) - f(\xi_k)| (x_{k+1}-x_k) \\
-&amp; &lt; \epsilon + (b-a) \epsilon + (b-a) \epsilon\end{split}\]</div>
+&amp; &lt; \epsilon + \epsilon + (b-a) \epsilon\end{split}\]</div>
 <p>This proves that <span class="math notranslate nohighlight">\(f\)</span> is R-integrable and:</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} \int_a^b f_n(y) \, dy = A = \int_a^b f(y) \, dy = \int_a^b \lim_{n \to \infty} f_n(y) \, dy \]</div>
 </div>
 <p>A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.
-It is not integrable because on every interval you’ll find Riemann sums equal to <span class="math notranslate nohighlight">\(0\)</span>, and others equal to <span class="math notranslate nohighlight">\(1\)</span>.
-We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.</p>
+It is not integrable because on every interval you’ll find Riemann sums equal to <span class="math notranslate nohighlight">\(0\)</span>, and others equal to <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<div class="proof definition admonition" id="def-step-functions">
+<p class="admonition-title"><span class="caption-number">Definition 22 </span> (Step Functions)</p>
+<section class="definition-content" id="proof-content">
+<p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a partition <span class="math notranslate nohighlight">\(X\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>A function <span class="math notranslate nohighlight">\(\phi: [a, b] \to \mathbb{R}\)</span> is called a <strong>step function</strong> iff it is constant on each interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</span>
+of some partition <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>. If the step function <span class="math notranslate nohighlight">\(\phi\)</span> is given,
+the associate partition is called <span class="math notranslate nohighlight">\(X_{\phi}\)</span>. A Riemann sum <span class="math notranslate nohighlight">\(R(\phi, X_{\phi}, \xi)\)</span> does not depend on <span class="math notranslate nohighlight">\(\xi\)</span>, and we can define:</p>
+<div class="math notranslate nohighlight">
+\[R(\phi) = R(\phi, X_{\phi}, x)= \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thr-riemann-integrals">
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Riemann Integrals by Step Functions)</p>
+<section class="theorem-content" id="proof-content">
+<p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
+<p>Theorem: <span class="math notranslate nohighlight">\(f\)</span> is R-integrable iff</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-1">
+<span class="eqno">(19)<a class="headerlink" href="#equation-equ-riemann-integrals-1" title="Link to this equation">#</a></span>\[\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>. In this case, we have:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-2">
+<span class="eqno">(20)<a class="headerlink" href="#equation-equ-riemann-integrals-2" title="Link to this equation">#</a></span>\[\int_a^b f(x) \, dx = \sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \psi(x) \, dx\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. <strong>Part One:</strong> We show that <a class="reference internal" href="#equation-equ-riemann-integrals-1">(19)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-2">(20)</a> hold if <span class="math notranslate nohighlight">\(f\)</span> is R-integrable.</p>
+<p>Take any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and let <span class="math notranslate nohighlight">\(X\)</span> be a partition such that:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-3">
+<span class="eqno">(21)<a class="headerlink" href="#equation-equ-riemann-integrals-3" title="Link to this equation">#</a></span>\[\left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | &lt; \epsilon\]</div>
+<p>for any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>. We define step functions <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> that will do the job. Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;u_k = \inf \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
+&amp;v_k = \sup \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
+\\
+&amp;\phi(x) = u_k \text{ if } x \in [x_{k+1}, x_k) \\
+&amp;\psi(x) = v_k \text{ if } x \in [x_{k+1}, x_k) \\\end{split}\]</div>
+<p>The suprema and infima exist because <span class="math notranslate nohighlight">\(f\)</span> is bounded. We conclude:</p>
+<div class="math notranslate nohighlight">
+\[\phi - \epsilon \le f \le \psi + \epsilon\]</div>
+<p>from which it follows that:</p>
+<div class="math notranslate nohighlight">
+\[R(\phi) - \epsilon(b-a) \le R(f, X, \xi) \le R(\psi) + \epsilon(b-a)\]</div>
+<p>for any partition <span class="math notranslate nohighlight">\(X\)</span> and and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>.
+Combining this with <a class="reference internal" href="#equation-equ-riemann-integrals-3">(21)</a>, we get:</p>
+<div class="math notranslate nohighlight">
+\[R(\phi) - \epsilon - \epsilon(b-a) \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon + \epsilon(b-a)\]</div>
+<p>for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and this is what we want.</p>
+<p><strong>Part Two:</strong> We show that <span class="math notranslate nohighlight">\(f\)</span> is R-integrable if <a class="reference internal" href="#equation-equ-riemann-integrals-1">(19)</a> holds.</p>
+<p>Take any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and choose step functions <span class="math notranslate nohighlight">\(\phi, \psi\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> that squeeze <span class="math notranslate nohighlight">\(f\)</span> from below and above:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\phi \le f \le \psi \\
+&amp;R(\psi) - R(\phi ) \le \epsilon\end{split}\]</div>
+<p>We assume w.l.o.g. that <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> share the same partition <span class="math notranslate nohighlight">\(T = \{t_0, t_1, \ldots, t_m \}\)</span>.
+We’ll produce a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-4">
+<span class="eqno">(22)<a class="headerlink" href="#equation-equ-riemann-integrals-4" title="Link to this equation">#</a></span>\[R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon\]</div>
+<p>for any partition <span class="math notranslate nohighlight">\(X\)</span> with <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>To this end we define a step function <span class="math notranslate nohighlight">\(\rho\)</span> by:</p>
+<div class="math notranslate nohighlight">
+\[\rho(x) = f(\xi_k) \text{ if } x \in [x_k, x_{k+1})\]</div>
+<p>Note that:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-4a">
+<span class="eqno">(23)<a class="headerlink" href="#equation-equ-riemann-integrals-4a" title="Link to this equation">#</a></span>\[R(\rho) = R(f, X, \xi)\]</div>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be the union of all the intervals in <span class="math notranslate nohighlight">\(X\)</span> that fit into one of the intervals in <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(V\)</span> the complement of <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;K = \{k &lt; n \mid \exists j &lt; m: [x_k, x_{k+1}) \subseteq [t_j, t_{j+1}) \} \\
+&amp;U = \bigcup_{k \in K} [x_k, x_{k+1}) \\
+&amp;V = \bigcup_{k \notin K} [x_k, x_{k+1}) \end{split}\]</div>
+<p>The crucial observation is that <span class="math notranslate nohighlight">\(V\)</span> can contain at most <span class="math notranslate nohighlight">\(m\)</span> intervals, so the length of <span class="math notranslate nohighlight">\(V\)</span> is bounded by <span class="math notranslate nohighlight">\(m\delta\)</span>.
+Note that <span class="math notranslate nohighlight">\(m\)</span> is fixed and that we are free to choose <span class="math notranslate nohighlight">\(\delta\)</span>.</p>
+<p>We have on <span class="math notranslate nohighlight">\(U\)</span>, by definition of <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-5">
+<span class="eqno">(24)<a class="headerlink" href="#equation-equ-riemann-integrals-5" title="Link to this equation">#</a></span>\[\phi(x) \le \rho(x) \le \psi(x)\]</div>
+<p>And, since <span class="math notranslate nohighlight">\(f\)</span> is bounded, there is an <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span> such that we have on <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-6">
+<span class="eqno">(25)<a class="headerlink" href="#equation-equ-riemann-integrals-6" title="Link to this equation">#</a></span>\[\phi(x) - M \le \rho(x) \le \psi(x) + M\]</div>
+<p>Summing over <a class="reference internal" href="#equation-equ-riemann-integrals-5">(24)</a> gives:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-7">
+<span class="eqno">(26)<a class="headerlink" href="#equation-equ-riemann-integrals-7" title="Link to this equation">#</a></span>\[\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) \]</div>
+<p>and over <a class="reference internal" href="#equation-equ-riemann-integrals-6">(25)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-8">
+<span class="eqno">(27)<a class="headerlink" href="#equation-equ-riemann-integrals-8" title="Link to this equation">#</a></span>\[\begin{split}&amp;\sum_{k \notin K} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \le \sum_{k \notin K} \rho(x_k)(x_{k+1} - x_k) \\
+&amp;\le \sum_{k \notin K} \psi(x_k)(x_{k+1} - x_k) + Mm\delta\end{split}\]</div>
+<p>These inequalities are combined to:</p>
+<div class="math notranslate nohighlight">
+\[R(\phi) - Mm\delta \le R(\rho) \le R(\psi) + Mm\delta\]</div>
+<p>Remembering <a class="reference internal" href="#equation-equ-riemann-integrals-4a">(23)</a> and setting <span class="math notranslate nohighlight">\(\delta = \epsilon/Mm\)</span>,
+we arrive at the desired result:</p>
+<div class="math notranslate nohighlight">
+\[R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon \]</div>
+</div>
+<p>We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.</p>
 <div class="proof theorem admonition" id="thr-riemann-integrable-functions">
-<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Riemann-Integrable Functions)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Riemann-Integrable Functions)</p>
 <section class="theorem-content" id="proof-content">
 <p>All functions are defined on a closed interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-<p><strong>(a)</strong> Step functions are R-integrable.</p>
-<p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function such that, for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>,
-there are R-integrable functions <span class="math notranslate nohighlight">\(\phi, \psi\)</span> with</p>
-<div class="math notranslate nohighlight">
-\[\phi \le f \le \psi\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b (\psi(x) - \phi(x)) \, dx &lt; \epsilon.\]</div>
-<p>Then <span class="math notranslate nohighlight">\(f\)</span> is R-integrable</p>
-<p><strong>(c)</strong> Monotonous functions are R-integrable.</p>
-<p><strong>(d)</strong> Continuous functions with countably many discontinuities are R-integrable.</p>
-<p><strong>(e) (Lebesgue Criterion)</strong> Bounded functions are R-integrable iff their set of discontinuities has measure zero.</p>
+<p><strong>(a)</strong> Monotonous functions are R-integrable.</p>
+<p><strong>(b)</strong> Continuous functions are R-integrable.</p>
+<p><strong>(c)</strong> Continuous functions with countably many discontinuities are R-integrable.</p>
+<p><strong>(d) (Lebesgue Criterion)</strong> Bounded functions are R-integrable iff their set of discontinuities has measure zero.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
-Let <span class="math notranslate nohighlight">\(\phi\)</span> be a step function on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})\)</span>. Then, obviously:</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k\]</div>
-<p><strong>(b)</strong></p>
-<p><strong>TODO</strong></p>
-<p><strong>(c)</strong>
 Let <span class="math notranslate nohighlight">\(f\)</span> be monotonously non-decreasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can squeezed between two step functions, <span class="math notranslate nohighlight">\(\phi, \psi\)</span>,
 which are integrable as we know from (a).
 Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed and <span class="math notranslate nohighlight">\(x_k = a + \frac{k}{n}(b-a)\)</span>. We set:</p>
@@ -952,6 +1062,27 @@ Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed
 <p><strong>TODO</strong></p>
 <p><strong>(e)</strong> The proof can be found in <strong>citation needed</strong>.</p>
 </div>
+<p>Monotony leads us to an important theorem.</p>
+<div class="proof theorem admonition" id="thr-mean-value-integration">
+<p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Mean Value Theorem of Integration)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f,\phi : [a, b] \to \mathbb{R}\)</span> be continuous functions with <span class="math notranslate nohighlight">\(\phi \ge 0\)</span>.</p>
+<p>Then there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx\]</div>
+<p>With <span class="math notranslate nohighlight">\(\phi = 1\)</span> we get:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) \, dx= f(\xi) (b-a)\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. From <a class="reference internal" href="#thr-intermediate-value">Theorem 22</a> we know that there exists a <span class="math notranslate nohighlight">\(\xi \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(\xi) = \mu\)</span>.
+And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <span class="math notranslate nohighlight">\([a,b]\)</span>, we have, for <span class="math notranslate nohighlight">\(x \in [a,b]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m \le f(x) \le M \]</div>
+<p>The rest is straightforward: multiply by <span class="math notranslate nohighlight">\(\phi(x)\)</span> and integrate:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}&amp; m \phi(x) \le f(x) \phi(x) \le M \phi(x)\\&amp; \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx \\&amp; \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   \end{aligned}\end{align} \]</div>
+</div>
 </section>
 <section id="differentiable-functions">
 <h2>Differentiable Functions<a class="headerlink" href="#differentiable-functions" title="Link to this heading">#</a></h2>
@@ -959,11 +1090,11 @@ Let <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> fixed
 <p class="admonition-title"><span class="caption-number">Definition 23 </span> (Derivatives)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>.</p>
-<p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> in <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
+<p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1">
-<span class="eqno">(19)<a class="headerlink" href="#equation-equ-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
+<span class="eqno">(28)<a class="headerlink" href="#equation-equ-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
 <p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.
-The statement <a class="reference internal" href="#equation-equ-derivatives-1">(19)</a>is equivalent to</p>
+The statement <a class="reference internal" href="#equation-equ-derivatives-1">(28)</a> is equivalent to</p>
 <div class="math notranslate nohighlight">
 \[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
 <p>which means that the term <span class="math notranslate nohighlight">\(f'(x) \, h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
@@ -977,7 +1108,7 @@ and its derivative is continuous on <span class="math notranslate nohighlight">\
 A function is said to be <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable if <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-properties-derivatives">
-<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Properties of Derivatives)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 27 </span> (Properties of Derivatives)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> The continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(C^1 ([a, b])\)</span>.
 Likewise, the <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a vector space, written as <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span>.</p>
@@ -1003,7 +1134,7 @@ and we can swap limit and differentiation:</p>
 <p>Proof. <strong>TODO</strong></p>
 </div>
 <div class="proof theorem admonition" id="thr-mean-value-differentiation">
-<p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Mean Value Theorem of Differentiation)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 28 </span> (Mean Value Theorem of Differentiation)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a) Minimum, Maximum</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f: [a,b] \to \mathbb{R}\)</span> be differentiable at <span class="math notranslate nohighlight">\(x \in (a,b)\)</span>.
@@ -1030,8 +1161,8 @@ Then there is a <span class="math notranslate nohighlight">\(\xi \in (a,b)\)</sp
 <p>which implies:</p>
 <div class="math notranslate nohighlight">
 \[\lim_{h \to 0}\frac{1}{h}(f(x+h) - f(x)) = 0\]</div>
-<p><strong>(b)</strong></p>
-<p><span class="math notranslate nohighlight">\(f\)</span> is either constant or it assumes its minimum and its maximum at some <span class="math notranslate nohighlight">\(\xi \in (a, b)\)</span>.
+<p><strong>(b)</strong>
+<span class="math notranslate nohighlight">\(f\)</span> is either constant or it assumes its minimum and its maximum at some <span class="math notranslate nohighlight">\(\xi \in (a, b)\)</span>.
 We know from (a) that <span class="math notranslate nohighlight">\(f'(\xi) = 0\)</span>.</p>
 <p><strong>(c)</strong> We apply (b) to the function <span class="math notranslate nohighlight">\(g\)</span> defined by</p>
 <div class="math notranslate nohighlight">
@@ -1043,7 +1174,7 @@ We know from (a) that <span class="math notranslate nohighlight">\(f'(\xi) = 0\)
 This is the assertion.</p>
 </div>
 <div class="proof theorem admonition" id="thr-differentiation-rules">
-<p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Differentiation Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 29 </span> (Differentiation Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a) Chain Rule</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([\min(f), \max(f)])\)</span>. Then:</p>
@@ -1105,7 +1236,7 @@ Same procedure: <span class="math notranslate nohighlight">\(f\)</span> and <spa
 <section id="main-theorem-of-calculus">
 <h2>Main Theorem of Calculus<a class="headerlink" href="#main-theorem-of-calculus" title="Link to this heading">#</a></h2>
 <div class="proof theorem admonition" id="thr-main-theorem-calculus">
-<p class="admonition-title"><span class="caption-number">Theorem 27 </span> (Main Theorem of Calculus)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 30 </span> (Main Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span> and <span class="math notranslate nohighlight">\(F\)</span> be a <strong>primitive</strong> of <span class="math notranslate nohighlight">\(f\)</span>, defined by</p>
 <div class="math notranslate nohighlight">
@@ -1156,16 +1287,16 @@ Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition 
 \[f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}\]</div>
 <p>and we get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-main-theorem-calculus-1">
-<span class="eqno">(20)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+<span class="eqno">(29)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
 &amp;= f(b) - f(a)\end{split}\]</div>
 <p>The final reasoning is standard: We choose partitions <span class="math notranslate nohighlight">\(\{x_k\}\)</span> with arbitrarily small granularity.
-The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(20)</a> is thus driven to equality.
+The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(29)</a> is thus driven to equality.
 This is our first encounter with the <em>collapsing sum pattern</em>, which features as a running gag in higher calculus.</p>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
-<p class="admonition-title"><span class="caption-number">Theorem 28 </span> (Integration Rules)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 31 </span> (Integration Rules)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a) Integration by Parts</strong></p>
@@ -1187,7 +1318,7 @@ This is our first encounter with the <em>collapsing sum pattern</em>, which feat
 <span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term. In
 what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open interval, and <span class="math notranslate nohighlight">\(x, u \in A\)</span>.</p>
 <div class="proof theorem admonition" id="thr-taylor">
-<p class="admonition-title"><span class="caption-number">Theorem 29 </span> (Taylor’s Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 32 </span> (Taylor’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
@@ -1290,12 +1421,12 @@ what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="numbers-claude.html"
+       href="numbers.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">From Naturals to Reals (CLAUDE)</p>
+        <p class="prev-next-title">From Naturals to Reals</p>
       </div>
     </a>
     <a class="right-next"
@@ -1323,12 +1454,13 @@ what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoxes">Paradoxes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topology-of-mathbb-r">Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compact-sets">Compact Sets</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>

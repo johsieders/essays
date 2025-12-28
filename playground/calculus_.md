@@ -54,51 +54,7 @@ this paradox is that the sum of a large number of arbitrarily small terms does n
 Assigning meaningful values to such sums is what integration theory is all about.
 
 
-## Topology of $\mathbb{R}$
-
-````{prf:definition} Topology of $\mathbb{R}$
-:label: def-topology-R
-Let $A \subseteq \mathbb{R}$ and $a \in A$.
-
-**(a) Accumulation Points, Closure, Closed Sets**
-
-We call $a$ an **accumulation point** of $A$, iff
-
-```{math}
-\forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset
-```
-The **closure** of $A$, denoted be $\bar{A}$, is the set of all accumulation points of $A$.
-We clearly have $A \subseteq \bar{A}$.
-The set $A$ is **closed** iff $\bar{A} = A$.
-
-**(b) Inner Points, Interior, Open Sets**
-
-We call $a$ an **inner point** of $A$, iff
-
-```{math}
-\exists \epsilon > 0: U_{\epsilon}(a) \subseteq A
-```
-The **interior** of $A$, denoted be $A°$, is the set of all interior points of $A$.
-We clearly have $A° \subseteq A$.
-The set $A$ is **open** iff $A° = A$.
-````
-
-````{prf:Lemma} Open Sets, Closed Sets
-:label: lem-open-closed
-Let $A \subseteq \mathbb{R}$. 
-
-$A$ is open iff $A^c$ is closed,   
-$A$ is closed iff $A^c$ is open.
-````
-
-````{prf:proof}
-Let $A$ be open, and $a \notin A$. Then, for all $\epsilon > 0$ it holds that $U_{\epsilon}(a) \cap A^c \neq \emptyset$.
-Therefore $a \in \overline{A^c}$.
-
-Let $A$ be closed, and $a \notin A$. Then there is an $\epsilon > 0$ such that $U_{\epsilon}(a) \cap A = \emptyset$ or,
-equivalently, $U_{\epsilon}(a) \subseteq A^c$. Therefore $a \in (A^c)°$.
-````
-
+## Preliminaries
 
 ````{prf:theorem} Nested Intervals
 :label: thr-nested-intervals
@@ -126,7 +82,7 @@ We show that $\{x_n\}$ is a Cauchy sequence. For $m > n$, we have:
 ```{math}
 x_n \le x_m \le y_m \le y_n
 ```
-Subtracting $x_n$ gives:
+so:
 
 ```{math}
 0 \le x_m - x_n \le y_n - x_n
@@ -136,10 +92,48 @@ The sequence $\{y_n\}$ is a Cauchy sequence by the same argument,
 and the limits of $\{x_n\}$ and $\{y_n\}$ coincide, again because of {eq}`equ-nested-intervals-1`.
 ````
 
+````{prf:definition} Topology of $\mathbb{R}$
+:label: def-topology-R
+Let $A \subseteq \mathbb{R}$ and $a \in A$.
+
+**(a) Accumulation Points, Closure, Closed Sets**
+
+We call $a$ an **accumulation point** of $A$, iff
+
+```{math}
+\forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset
+```
+The **closure** of $A$, denoted be $\bar{A}$, is the set of all accumulation points of $A$.
+We clearly have $A \subseteq \bar{A}$.
+The set $A$ is **closed** iff $\bar{A} = A$
+
+**(b) Inner Points, Interior, Open Sets**
+
+We call $a$ an **inner point** of $A$, iff
+
+```{math}
+\exists \epsilon > 0: U_{\epsilon}(a) \subseteq A
+```
+The **interior** of $A$, denoted be $A°$, is the set of all interior points of $A$.
+We clearly have $A° \subseteq A$.
+The set $A$ is **open** iff $A° = A$
+````
+
+````{prf:Lemma} Open Sets, Closed Sets
+:label: lem-open-closed
+
+Let $A \subseteq \mathbb{R}$. 
+
+$A$ is open iff $A^c$ is closed, 
+$A$ is closed iff $A^c$ is open
+````
+````{prf:proof}
+
+````
 
 ## Compact Sets
 
-````{prf:definition} Compact Sets
+````{prf:definition} Topology of \mathbb{R}
 :label: def-compact
 
 A set $A \subset \mathbb{R}$ is called **compact**
@@ -159,51 +153,13 @@ iff each bounded sequence of elements of A has a convergent subsequence.
 
 ````{prf:proof}
 
-**a)** Let $A \subseteq \mathbb{R}$ be compact and $\{x_n\}$ a Cauchy-sequence of elements of $A$. 
+**a)** Let $A \subset \mathbb{R}$ be compact and $\{x_n\}$ a Cauchy-sequence of elements of $A$. 
 Then, the set $\{x_n \mid n \in \mathbb{N} \}$ is bounded and has a subsequence that converges to some $x \in A$.
 Therefore $\{x_n\}$, being a Cauchy-sequence, converges itself to $x$.
 
-**b)** Let $A \subseteq \mathbb{R}$ be complete, $B \subseteq A$ be closed, and $\{x_n\}$ a Cauchy-sequence of elements of $B$.
-Then $\{x_n\}$ converges because $A$ is complete, and it converges to some $x \in B$, because $B$ is closed.
+**b)** todo
 
-**c)** Let $A \subseteq \mathbb{R}$ be compact, $B \subseteq A$ be closed, and $\{x_n\}$ a sequence of elements of $B$.
-Then $\{x_n\}$ has a convergent subsequence because $A$ is compact, 
-and this subsequence converges to some $x \in B$, because $B$ is closed.
-````
-
-````{prf:theorem} Supremum, Infimum
-:label: thr-supremum-infimum
-
-Let $A \subset \mathbb{R}$ bounded above. Then there is a least upper bound of $A$, called supremum of $A$, or $\sup A$.  
-Let $A \subset \mathbb{R}$ bounded below. Then there is a greatest lower bound of $A$, called infimum of $A$, or $\inf A$. 
-````
-````{prf:proof} 
-We prove the assertion for the supremum. Let $b_0$ be an upper bound of $A$ and $a_0 \in A$ any element.
-We define nested intervals $\{[a_n, b_n]\}$ as follows:
-
-```{math}
-\\
-&a_{n+1} = 
-\left\{
-    \begin{array}{lr}
-        a_n & \text{ if } (a_n + b_n)/2 \notin A \\
-        (a_n + b_n)/2 & \text{ if } (a_n + b_n)/2 \in A 
-    \end{array}
-\right .  \\
-\\
-
-&b_{n+1} = 
-\left\{
-    \begin{array}{lr}
-        (a_n + b_n)/2 & \text{ if } (a_n + b_n)/2 \notin A \\
-        b_n & \text{ if } (a_n + b_n)/2 \in A
-    \end{array}
-\right .
-```
-
-The sequence $\{[a_n, b_n]\}$ fulfills the prereqisites of {prf:ref}`thr-nested-intervals`. It therefore contracts
-to some point $b$ which is an upper bound of $A$ because all $b_n$ are. And no upper bound of $A$ can be smaller than $b$
-because, for any $\epsilon > 0$, there are $a_n \in A$ with $a_n > b - \epsilon$.
+**c)** todo 
 ````
 
 ````{prf:theorem} Bolzano-Weierstrass
@@ -215,9 +171,8 @@ because, for any $\epsilon > 0$, there are $a_n \in A$ with $a_n > b - \epsilon$
 ````
 
 ````{prf:proof}
-**a)** Let $\{x_n\}$ be a non-decreasing bounded sequence with $s = \sup \{x_n \mid n \in \mathbb{N} \}$. 
-This supremum exists thanks to {prf:ref}`thr-supremum-infimum`. We show that $\{x_n\}$ is a Cauchy-sequence.
-By the definition:
+**a)** Let $\{x_n\}$ be a non-decreasing bounded sequence with $s = \sup \{x_n |\mid n \in \mathbb{N} \}$.
+Then, by the definition of the supremum:
 
 ```{math}
 \forall \epsilon > 0 : \exists n(\epsilon) : s - x_{n(\epsilon)} < \epsilon
@@ -291,6 +246,11 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 ```{math}
 \lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
 ```
+
+````{prf:definition} Step Functions
+:label: def-step-functions
+
+**TODO**
 ````
 
 ## Continuous Functions
@@ -348,12 +308,11 @@ such that $ \lvert f_n(x+h) - f_n(x) \rvert < \epsilon$ whenever $\lvert h \rver
 **(c)**
 We prove the assertion for the maximum. Let $M = \sup\{f(x) \mid x \in [a, b] \}$. Then, for each $n \in \mathbb{N}$, 
 there is a $x_n \in [a, b]$ such that $M - f(x_n) < 1/n$.
-The sequence $\{x_n\}$ has a subsequence that converges to some $x \in [a, b]$
-because $[a, b]$ is compact, and we have $f(x) = M$ because $f$ is continuous at $x$.
+The sequence $\{x_n\}$ has a subsequence that converges to some $x \in [a, b]$, and we have $f(x) = M$ because $f$ is continuous at $x$.
 
 **(d)** 
-We prove the assertion by contradiction. Assume $f$ to be not uniformly continuous. 
-Then, for any $\epsilon > 0$, there exist two sequences $\{x_n\}, \{y_n\}$ such that
+We prove the assertion by contradiction. Assume $f$ to be not uniformly continuous. Take any $\epsilon > 0$. 
+Then there exist two sequences $\{x_n\}, \{y_n\}$ such that
 
 ```{math}
 \lvert x_n - y_n \rvert < \frac{1}{n}
@@ -379,9 +338,9 @@ Then there exists a $\xi \in [a, b]$ such that $f(\xi) = 0$.
 ```
 Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 ````
-````{prf:proof}
- 
-**(a)** We define nested intervals $\{[a_n, b_n]\}$ as follows: 
+````{prf:proof} 
+**(a)** We build two bounded monotonous sequences $\{a_n\},\{b_n\}$ and 
+apply again [Bolzano-Weierstrass](#thr-bolzano-weierstrass):
 
 ```{math}
 &a_0 = a \\
@@ -390,8 +349,8 @@ Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 &a_{n+1} = 
 \left\{
     \begin{array}{lr}
-        a_n & \text{ if } f((a_n + b_n)/2) \ge 0 \\
-        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) < 0
+        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) < 0 \\
+        a_n & \text{ if } f((a_n + b_n)/2) \ge 0
     \end{array}
 \right .  \\
 \\
@@ -399,25 +358,37 @@ Then there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
 &b_{n+1} = 
 \left\{
     \begin{array}{lr}
-        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) \ge 0 \\
-        b_n & \text{ if } f((a_n + b_n)/2) < 0
+        b_n & \text{ if } f((a_n + b_n)/2) < 0 \\
+        (a_n + b_n)/2 & \text{ if } f((a_n + b_n)/2) \ge 0
     \end{array}
 \right .
 ```
 
-Th sequence $\{[a_n, b_n]\}$ fulfills the prerequisites of {prf:ref}`thr-nested-intervals`.
-It therefore contracts to some point $\xi \in [a, b]$. We observe that, for all $n$:
+We observe that, for all $n$:
 
 ```{math}
+:label: equ-intermediate-value-1
 f(a_n) < 0 \le f(b_n)
 ```
-
-This implies, because $f$ is continuous:
+and that the sequence $\{a_n\}$ is non-descending, while $\{b_n\}$ is non-increasing.
+Being bounded, both sequences converge, and their limits must be identical because:
 
 ```{math}
-f(\xi) = 0
+b_{n+1} - a_{n+1}  &= \frac{1}{2} b_{n} - a_{n} \\
+\Rightarrow b_{n} - a_{n}  &= \frac{b-a}{2^n}
 ```
-
+This limit is our $\xi$: 
+```{math}
+\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = \xi
+```
+Since $f$ is continous in $\xi$, we get:
+```{math}
+\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = f(\xi)
+```
+But $f(\xi)$ must be $0$ because the inequalities [xxx](#equ-intermediate-value-1) imply:
+```{math}
+\lim_{n \to \infty} f(a_n) = \lim_{n \to \infty} f(b_n) = 0
+```
 **(b)** follows from (a): Choose $a_0, b_0 \in [a, b]$ such that $f(a_0) = \min\{f(x) \mid x \in [a, b]\}$
 and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ and replace $f$ with $f - \mu$.
 ````
@@ -425,55 +396,80 @@ and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ 
 ## Riemann-Integrable Functions
 
 
-````{prf:definition} Riemann Integrals by Riemann Sums
+````{prf:definition} Integrals over Step Functions
 :label: def-riemann-integrals
 
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
+**TODO**
 
-**(a)**
-A **partition** of $[a, b]$ is a strictly increasing sequence $X = \left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$.
-Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$.
-A sequence $\xi = \left\{\xi_0, \xi_1, \dots, \xi_{n-1}\right\}$ with $\xi_k \in [x_{k-1}, x_k)$ is called a **set of intermediate points**  of $X$.
+````
 
-**(b)**
-The **Riemann sum** of $f, X, \xi$ is defined as: 
+````{prf:definition} Riemann Integrals
+:label: def-riemann-integrals
+
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$. 
+We say that $f$ is **Riemann-integrable**, or **R-integrable** for short, iff $f$ can be sqeezed between two step functions.
+For any $\epsilon > 0$ there are step functions $\phi, \psi$ such that:
+
+```{math}
+\phi(x) \le f(x) \le \psi(x) \text{ for } x \in  [a, b] 
+```
+and:
+
+```{math}
+\int_a^b \psi(x) \, dx - \int_a^b \phi(x) \, dx < \epsilon
+```
+In this case, we define
+
+```{math}
+\int_a^b f(x) \, dx = \sup \{\int_a^b \phi(x) \, dx \mid \phi \le f\} = \inf \{\int_a^b \psi(x) \, dx \mid \psi \ge f\}
+```
+````
+
+
+````{prf:definition} Riemann Integrals XXX
+:label: def-riemann-integrals-xxx
+
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$. 
+ 
+**(a) Partitions**. A **partition of $[a, b]$** is a strictly increasing sequence $X = \left\{x_0, x_1, \dots, x_n\right\}$ with $a = x_0$,  $b = x_n$.
+Its **granularity** is $\mu(X) = \max \left\{\lvert x_k - x_{k-1} \rvert \mid k=1, \dots, n\right\}$. 
+
+
+
+
+**(b) Riemann Sums**. Let $X$ be a partition of $[a, b]$, and $\{\xi_k \in [x_k, x_{k-1}] \mid k = 1, \ldots, n\}$ 
+be a set of intermediate points. A Riemann sum is defined as:
 
 ```{math}
 R(f, X, \xi) = \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
+The granularity $\mu(R)$ of a Riemann sum $R$ is the granularity $\mu(X)$ of its partition.
 
-**(c)**
-We say that $f$ is **Riemann-integrable**, or **R-integrable** for short, 
-iff there is a $A \in \mathbb{R}$ such that:
-
-```{math}
-\forall \epsilon > 0: \exists \delta > 0: \left | A - R(f, X, \xi) \right | < \epsilon
-```
-for all partitions $X$ with $\mu(X) < \delta$ and any set $\xi$ of intermediate points of $X$.
-
-In this case, we define:
+**(c) Riemann Integrals**. We say that $f$ is **Riemann-integrable**, or **R-integrable** for short,
+and call
 
 ```{math}
-\int_a^b f(x) \, dx = A
+A = \int_a^b f(x) \, dx
 ```
-In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write:
+the **Riemann integral** of $f$ over $[a, b]$ iff 
+
+```{math}
+\forall \epsilon > 0: \exists \delta > 0: \forall X,\xi \text{ with } \mu(X) < \delta : \left | A - R(f, X, \xi) \right | < \epsilon
+```
+
+In other words, Riemann sums approximate Riemann integrals to arbitrary precision. We often write
 
 ```{math}
 \int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
-as a short version of the exact definition. Whenever we prove theorems on Riemann integrals, 
-we are allowed to replace the integrals with Riemann sums of sufficiently small granularity. 
-````
+as a short version of the exact definition, which lets us use finite sums instead of integrals.
 
-````{prf:definition} Riemann Primitives
-:label: thr-riemann-primitives
-
-Let $f \in \mathcal{R}([a,b])$. The function $F$ defined by
+**(d) Riemann Primitives**. Let $f \in \mathcal{R}([a,b])$. The function $F$ defined by
 
 ```{math}
 F(x) = \int_a^x f(y) \, dy 
 ```
-is called the **Riemann-primitive** (or primitive) of $f$,
+is called the Riemann-primitive (or primitive) of $f$,
 on the understanding that
 
 ```{math}
@@ -485,55 +481,81 @@ The notation
 ```{math}
 F = \int f(y) \, dy
 ```
-is used if the lower bound $a$ is unimportant or not specified. 
-Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`rem-obvious-properties`(c)).
+is used if the lower bound $a$ is unimportant or not specified. Two primitives of an integrable function $f$ differ by a constant only.
 ````
 
+````{prf:remark} Monotony, Additivity, Boundedness 
+:label: rem-monotony-additivity-boundedness
 
-````{prf:remark} Obvious Properties of Riemann Integrals
-:label: rem-obvious-properties
+We state three obvious but important properties of Riemann integrals:
 
-We state five obvious but important properties of Riemann integrals.
-
-**(a) Boundedness**
-
-R-integrable functions are bounded on closed intervals
-(because Riemann sums are).
-
-**(b) Monotony**
+**(a) Monotony**
 
 ```{math}
 f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
 ```
 holds for any two functions $f,g \in \mathcal{R}([a,b])$.
 
-**(c) Additivity**
-
-```{math}
-\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
-```
-holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
-
-**(d) Triangular Inequality**
-
-If $f$ is integrable, then so is $|f|$, and it holds that:
+**(b) Triangular Inequality**
 
 ```{math}
 \left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
 ```
 
-**(e) Linearity**
-
-If $f, g$ are integrable, then so is $f + \alpha g$ ($\alpha \in \mathbb{R}$), and it holds that:
+**(c) Additivity**
 
 ```{math}
-\int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx
+\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
+```
+
+holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
+
+**(e) Boundedness**
+
+R-integrable functions are bounded on closed intervals
+(because Riemann sums are).
+````
+
+Monotony leads us to an important theorem.
+
+````{prf:theorem} Mean Value Theorem of Integration
+:label: thr-mean-value-integration
+
+Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
+
+Then there exists a $\xi \in [a, b]$ such that:
+
+```{math}
+\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
+```
+
+With $\phi = 1$ we get:
+
+```{math}
+\int_a^b f(x) \, dx= f(\xi) (b-a)
 ```
 ````
 
+````{prf:proof}
+From {prf:ref}`thr-intermediate-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
+And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
 
+```{math}
+m \le f(x) \le M 
+```
 
-````{prf:theorem} Less Obvious Properties of Riemann Integrals
+The rest is straightforward: multiply by $\phi(x)$ and integrate:
+
+```{math}
+& m \phi(x) \le f(x) \phi(x) \le M \phi(x)
+
+& \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
+
+& \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
+```
+````
+
+````{prf:theorem} Properties of Riemann Integrals
 :label: thr-riemann-integrals
 
 **(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
@@ -576,9 +598,9 @@ We can swap limit and integral:
 
 ````{prf:proof}
 
-The assertions (a) and (b) are a reformulation of {prf:ref}`rem-obvious-properties`(e). 
-The proof of (c) uses {prf:ref}`rem-obvious-properties`(d), and
-the proof of (d) uses the triangular inequality several times.
+The assertions (a) and (b) are obvious. 
+The proof of (c) uses the [Triangular Inequality for Integrals](#thr-triangular-inequality), and
+the proof of (d) the standard one.
 
 **(c)**
 Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
@@ -626,7 +648,7 @@ Then
 &\left | A - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
 & \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
 & \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right |  + \sum_{k=0}^{n-1} |f_n(\xi_k) - f(\xi_k)| (x_{k+1}-x_k) \\
-& < \epsilon + \epsilon + (b-a) \epsilon
+& < \epsilon + (b-a) \epsilon + (b-a) \epsilon
 ```
 
 This proves that $f$ is R-integrable and:
@@ -638,157 +660,6 @@ This proves that $f$ is R-integrable and:
 
 A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
 It is not integrable because on every interval you'll find Riemann sums equal to $0$, and others equal to $1$.
-
-
-````{prf:definition} Step Functions
-:label: def-step-functions
-
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a partition $X$ of $[a, b]$.
-
-A function $\phi: [a, b] \to \mathbb{R}$ is called a **step function** iff it is constant on each interval $[x_k, x_{k+1})$
-of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$. If the step function $\phi$ is given, 
-the associate partition is called $X_{\phi}$. A Riemann sum $R(\phi, X_{\phi}, \xi)$ does not depend on $\xi$, and we can define:
-
-```{math}
-R(\phi) = R(\phi, X_{\phi}, x)= \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)
-```
-````
-
-````{prf:theorem} Riemann Integrals by Step Functions
-:label: thr-riemann-integrals
-
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
-
-Theorem: $f$ is R-integrable iff
-
-```{math}
-:label: equ-riemann-integrals-1
-\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)
-```
-where $\phi$ and $\psi$ range over all step functions on $[a, b]$. In this case, we have:
-
-
-```{math}
-:label: equ-riemann-integrals-2
-\int_a^b f(x) \, dx = \sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \psi(x) \, dx
-```
-````
-
-````{prf:proof} 
-**Part One:** We show that {eq}`equ-riemann-integrals-1` and {eq}`equ-riemann-integrals-2` hold if $f$ is R-integrable.
-
-Take any $\epsilon > 0$ and let $X$ be a partition such that: 
-
-```{math}
-:label: equ-riemann-integrals-3
-\left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | < \epsilon
-```
-for any set $\xi$ of intermediate points of $X$. We define step functions $\phi$ and $\psi$ that will do the job. Let
-
-```{math}
-&u_k = \inf \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
-&v_k = \sup \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
-\\
-&\phi(x) = u_k \text{ if } x \in [x_{k+1}, x_k) \\
-&\psi(x) = v_k \text{ if } x \in [x_{k+1}, x_k) \\
-```
-The suprema and infima exist because $f$ is bounded. We conclude:
-
-```{math}
-\phi - \epsilon \le f \le \psi + \epsilon
-```
-from which it follows that:
-
-```{math}
-R(\phi) - \epsilon(b-a) \le R(f, X, \xi) \le R(\psi) + \epsilon(b-a)
-```
-for any partition $X$ and and any set $\xi$ of intermediate points of $X$.
-Combining this with {eq}`equ-riemann-integrals-3`, we get:
-
-```{math}
-R(\phi) - \epsilon - \epsilon(b-a) \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon + \epsilon(b-a)
-```
-for any $\epsilon > 0$ and this is what we want.
-
-**Part Two:** We show that $f$ is R-integrable if {eq}`equ-riemann-integrals-1` holds.
-
-Take any $\epsilon > 0$ and choose step functions $\phi, \psi$ on $[a, b]$ that squeeze $f$ from below and above:
-
-```{math}
-&\phi \le f \le \psi \\
-&R(\psi) - R(\phi ) \le \epsilon
-```
-We assume w.l.o.g. that $\phi$ and $\psi$ share the same partition $T = \{t_0, t_1, \ldots, t_m \}$. 
-We'll produce a $\delta > 0$ such that:
-
-```{math}
-:label: equ-riemann-integrals-4
-R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon
-```
-for any partition $X$ with $\mu(X) < \delta$ and any set $\xi$ of intermediate points of $X$.
-
-To this end we define a step function $\rho$ by:
- 
-```{math}
-\rho(x) = f(\xi_k) \text{ if } x \in [x_k, x_{k+1})
-```
-Note that:
-
-```{math}
-:label: equ-riemann-integrals-4a
-R(\rho) = R(f, X, \xi)
-```
-
-Let $U$ be the union of all the intervals in $X$ that fit into one of the intervals in $T$, and $V$ the complement of $U$.
-
-```{math}
-&K = \{k < n \mid \exists j < m: [x_k, x_{k+1}) \subseteq [t_j, t_{j+1}) \} \\
-&U = \bigcup_{k \in K} [x_k, x_{k+1}) \\
-&V = \bigcup_{k \notin K} [x_k, x_{k+1}) 
-```
-The crucial observation is that $V$ can contain at most $m$ intervals, so the length of $V$ is bounded by $m\delta$.
-Note that $m$ is fixed and that we are free to choose $\delta$.
-
-We have on $U$, by definition of $\rho$:
- 
-```{math}
-:label: equ-riemann-integrals-5
-\phi(x) \le \rho(x) \le \psi(x)
-```
-
-And, since $f$ is bounded, there is an $M \in \mathbb{R}$ such that we have on $V$:
-```{math}
-:label: equ-riemann-integrals-6
-\phi(x) - M \le \rho(x) \le \psi(x) + M
-```
-
-Summing over {eq}`equ-riemann-integrals-5` gives:
-```{math}
-:label: equ-riemann-integrals-7
-\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) 
-```
-and over {eq}`equ-riemann-integrals-6`:
-
-```{math}
-:label: equ-riemann-integrals-8
-&\sum_{k \notin K} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \le \sum_{k \notin K} \rho(x_k)(x_{k+1} - x_k) \\
-&\le \sum_{k \notin K} \psi(x_k)(x_{k+1} - x_k) + Mm\delta
-```
-
-These inequalities are combined to:
-
-```{math}
-R(\phi) - Mm\delta \le R(\rho) \le R(\psi) + Mm\delta
-```
-Remembering {eq}`equ-riemann-integrals-4a` and setting $\delta = \epsilon/Mm$,
-we arrive at the desired result:
-
-```{math}
-R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon 
-```
-````
-
-
 We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.
 
 ````{prf:theorem} Riemann-Integrable Functions
@@ -796,18 +667,44 @@ We now introduce some criteria of Riemann integrability, with the Lebesgue Crite
 
 All functions are defined on a closed interval $[a, b]$.
 
-**(a)** Monotonous functions are R-integrable.
+**(a)** Step functions are R-integrable.
 
-**(b)** Continuous functions are R-integrable.
+**(b)** Let $f: [a, b] \to \mathbb{R}$ be a function such that, for any $\epsilon > 0$, 
+there are R-integrable functions $\phi, \psi$ with
 
-**(c)** Continuous functions with countably many discontinuities are R-integrable.
+```{math}
+\phi \le f \le \psi
+```
 
-**(d) (Lebesgue Criterion)** Bounded functions are R-integrable iff their set of discontinuities has measure zero.
+and
+
+```{math}
+\int_a^b (\psi(x) - \phi(x)) \, dx < \epsilon.
+```
+
+Then $f$ is R-integrable
+
+**(c)** Monotonous functions are R-integrable.
+
+**(d)** Continuous functions with countably many discontinuities are R-integrable.
+
+**(e) (Lebesgue Criterion)** Bounded functions are R-integrable iff their set of discontinuities has measure zero.
 ````
 
 ````{prf:proof} 
 
 **(a)**
+Let $\phi$ be a step function on $[a, b]$ with $\phi(x) = y_k \text{ for } x \in [x_k, x_{k+1})$. Then, obviously:
+
+```{math}
+\int_a^b \phi(x) \, dx = \sum_{k=0}^{n-1} y_k
+``` 
+
+**(b)**
+
+**TODO**
+
+**(c)**
 Let $f$ be monotonously non-decreasing on $[a, b]$. Then $f$ can squeezed between two step functions, $\phi, \psi$,
 which are integrable as we know from (a).
 Let $n \in \mathbb{N}$ fixed and $x_k = a + \frac{k}{n}(b-a)$. We set:
@@ -838,46 +735,6 @@ which can be made arbitrarily small. The assertion follows from (b).
 **(e)** The proof can be found in **citation needed**.
 ````
 
-Monotony leads us to an important theorem.
-
-````{prf:theorem} Mean Value Theorem of Integration
-:label: thr-mean-value-integration
-
-Let $f,\phi : [a, b] \to \mathbb{R}$ be continuous functions with $\phi \ge 0$.
-
-Then there exists a $\xi \in [a, b]$ such that:
-
-```{math}
-\int _a^b f(x) \phi(x) \, dx = f(\xi) \int _a^b \phi(x) \, dx
-```
-
-With $\phi = 1$ we get:
-
-```{math}
-\int_a^b f(x) \, dx= f(\xi) (b-a)
-```
-````
-
-````{prf:proof}
-From {prf:ref}`thr-intermediate-value` we know that there exists a $\xi \in [a, b]$ such that $f(\xi) = \mu$.
-And, $f$ being bounded on $[a,b]$, we have, for $x \in [a,b]$: 
-
-```{math}
-m \le f(x) \le M 
-```
-
-The rest is straightforward: multiply by $\phi(x)$ and integrate:
-
-```{math}
-& m \phi(x) \le f(x) \phi(x) \le M \phi(x)
-
-& \Rightarrow  m \int_a^b \phi(x) \, dx \le \int_a^b f(x) \phi(x) \, dx \le  M \int_a^b \phi(x) \, dx 
-
-& \Rightarrow  \int _a^b f(x) \phi(x) \, dx = \mu \int_a^b \phi(x) \, dx = f(\xi) \int_a^b \phi(x) \, dx   
-```
-````
-
-
 ## Differentiable Functions
 
 ````{prf:definition} Derivatives
@@ -885,7 +742,7 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, b] \rightarrow \mathbb{R}$.
 
-**(a)** We say that $f$ is **differentiable** at $x \in [a, b]$ if the limit
+**(a)** We say that $f$ is **differentiable** in $x \in [a, b]$ if the limit
 
 ```{math}
 :label: equ-derivatives-1
@@ -893,7 +750,7 @@ We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, 
 \lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)
 ```
 exists. $f'(x)$ is called the derivative of $f$ at $x$.
-The statement {eq}`equ-derivatives-1` is equivalent to
+The statement {eq}`equ-derivatives-1`is equivalent to
 
 ```{math}
 f(x+h) = f(x) + f'(x) \, h + o(h)
@@ -1005,6 +862,7 @@ which implies:
 \lim_{h \to 0}\frac{1}{h}(f(x+h) - f(x)) = 0
 ```
 **(b)**
+
 $f$ is either constant or it assumes its minimum and its maximum at some $\xi \in (a, b)$.
 We know from (a) that $f'(\xi) = 0$.
 
