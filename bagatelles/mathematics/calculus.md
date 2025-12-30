@@ -7,18 +7,17 @@
 Calculus is all about infinitesimally small numbers, a subject the Greeks didn't understand.
 Zeno's paradoxes aren't paradoxes anymore; today, they are easily explained (see [Paradoxes](#Paradoxes))
 
-In the paper [From Naturals to Reals]() we present $\mathbb{R}$ as the smallest complete field containing $\mathbb{Q}$: 
+In our paper [From Naturals to Reals]() we present $\mathbb{R}$ as the smallest complete field containing $\mathbb{Q}$: 
 There are no holes in $\mathbb{R}$, every Cauchy sequence converges.
-The idea of this introduction is to present a short path (perhaps the shortest?) 
-from the real numbers to two pivotal results:
+The idea of this introduction is to present a straight path with no gaps from the real numbers to two pivotal results:
 
 1. The [Main Theorem of Calculus](thr-main-theorem-calculus), which states that differentiation and integration are inverse operations.
 2. [Taylor's Theorem](#thr-taylor).
 
 I was led by three rules:
 
-1. No detours, no embellishments. Every definition, every theorem serves a purpose. 
-2. Full proofs whenever it's not obvious.
+1. No detours, no blind alleys, no embellishments. Every definition, every theorem serves a purpose. 
+2. Full proofs whenever it's not obvious. The chain of reasoning is complete from the start to the end.
 3. No proofs whenever it's obvious. 
 
 
@@ -29,6 +28,10 @@ and the spaces $C^n([a, b])$ of $n$ times continuously differentiable functions 
 The differential operator **$\partial$** moves functions down from $C^n([a, b])$ to $C^{n-1}([a, b])$, 
 and the integral operator **$\int$** moves them up from $C^{n}([a, b])$ to $C^{n+1}([a, b])$ 
 and from $\mathcal{R}([a, b])$ to $C^{0}([a, b])$.
+
+XXX diagram vector spaces XXX
+
+XXX diagram chapters XXX
 
 Here is the roadmap: After revising the topology of $\mathbb{R}$ we study compact sets 
 and prove the [Bolzano-Weierstrass theorem](#thr-bolzano-weierstrass), 
