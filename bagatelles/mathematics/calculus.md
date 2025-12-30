@@ -60,14 +60,14 @@ Assigning meaningful values to such sums is what integration theory is all about
 :label: def-topology-R
 Let $A \subseteq \mathbb{R}$ and $a \in A$.
 
-**(a) Accumulation Points, Closure, Closed Sets**
+**(a) Limit Points, Closure, Closed Sets**
 
-We call $a$ an **accumulation point** of $A$, iff
+We call $a$ an **limit point** of $A$, iff
 
 ```{math}
 \forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset
 ```
-The **closure** of $A$, denoted be $\bar{A}$, is the set of all accumulation points of $A$.
+The **closure** of $A$, denoted be $\bar{A}$, is the set of all limit points of $A$.
 We clearly have $A \subseteq \bar{A}$.
 The set $A$ is **closed** iff $\bar{A} = A$.
 
@@ -461,7 +461,9 @@ In other words, Riemann sums approximate Riemann integrals to arbitrary precisio
 ```{math}
 \int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
-as a short version of the exact definition. Whenever we prove theorems on Riemann integrals, 
+as a short version of the exact definition. This should be read as follows: 
+For sufficiently fine-grained partitions $X$, the difference between the left and right sides becomes arbitrarily small 
+for any set $\xi$ of intermediate points. Whenever we prove theorems on Riemann integrals, 
 we are allowed to replace the integrals with Riemann sums of sufficiently small granularity. 
 ````
 
@@ -486,12 +488,12 @@ The notation
 F = \int f(y) \, dy
 ```
 is used if the lower bound $a$ is unimportant or not specified. 
-Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`rem-obvious-properties`(c)).
+Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`thr-obvious-properties`(c)).
 ````
 
 
-````{prf:remark} Obvious Properties of Riemann Integrals
-:label: rem-obvious-properties
+````{prf:theorem} Obvious Properties of Riemann Integrals
+:label: thr-obvious-properties
 
 We state five obvious but important properties of Riemann integrals.
 
@@ -531,10 +533,8 @@ If $f, g$ are integrable, then so is $f + \alpha g$ ($\alpha \in \mathbb{R}$), a
 ```
 ````
 
-
-
 ````{prf:theorem} Less Obvious Properties of Riemann Integrals
-:label: thr-riemann-integrals
+:label: thr-less-obvious-properties
 
 **(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
 
@@ -576,13 +576,11 @@ We can swap limit and integral:
 
 ````{prf:proof}
 
-The assertions (a) and (b) are a reformulation of {prf:ref}`rem-obvious-properties`(e). 
-The proof of (c) uses {prf:ref}`rem-obvious-properties`(d), and
-the proof of (d) uses the triangular inequality several times.
+The assertions (a) and (b) are a reformulation of {prf:ref}`thr-obvious-properties`(e).
 
 **(c)**
 Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
-Then, $f$ is bounded by some $M \in \mathbb{R}$, and we have, for $x \in [a, b]$ and arbitrarily small $h$:
+Then, $f$ is bounded by some $M \in \mathbb{R}$, and by {prf:ref}`thr-obvious-properties`(d), we have for $x \in [a, b]$ and arbitrarily small $h$:
 
 ```{math}
 \left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M
@@ -639,6 +637,10 @@ This proves that $f$ is R-integrable and:
 A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
 It is not integrable because on every interval you'll find Riemann sums equal to $0$, and others equal to $1$.
 
+Riemann sums are just one of two methods of introducing Riemann integrals. The other method is based on step functions. 
+It turns out that Riemann sums are useful for the famous integral theorems 
+while step functions are often useful to show the integrability of certain functions, e.g. continuous functions.
+
 
 ````{prf:definition} Step Functions
 :label: def-step-functions
@@ -646,8 +648,8 @@ It is not integrable because on every interval you'll find Riemann sums equal to
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a partition $X$ of $[a, b]$.
 
 A function $\phi: [a, b] \to \mathbb{R}$ is called a **step function** iff it is constant on each interval $[x_k, x_{k+1})$
-of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$. If the step function $\phi$ is given, 
-the associate partition is called $X_{\phi}$. A Riemann sum $R(\phi, X_{\phi}, \xi)$ does not depend on $\xi$, and we can define:
+of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$. This partition is called $X_{\phi}$, the associated ppartition of $\phi$.
+A Riemann sum $R(\phi, X_{\phi}, \xi)$ does not depend on $\xi$, and we can define:
 
 ```{math}
 R(\phi) = R(\phi, X_{\phi}, x)= \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)
@@ -667,48 +669,53 @@ Theorem: $f$ is R-integrable iff
 ```
 where $\phi$ and $\psi$ range over all step functions on $[a, b]$. In this case, we have:
 
-
 ```{math}
 :label: equ-riemann-integrals-2
-\int_a^b f(x) \, dx = \sup_{\phi \le f} \int_a^b \phi(x) \, dx = \inf_{\psi \ge f} \int_a^b \psi(x) \, dx
+\int_a^b f(x) \, dx = \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)
 ```
 ````
 
 ````{prf:proof} 
 **Part One:** We show that {eq}`equ-riemann-integrals-1` and {eq}`equ-riemann-integrals-2` hold if $f$ is R-integrable.
 
-Take any $\epsilon > 0$ and let $X$ be a partition such that: 
+Take any $\epsilon > 0$. Since $f$ is integrable, there is a partition $X$ such that: 
 
 ```{math}
 :label: equ-riemann-integrals-3
 \left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | < \epsilon
 ```
-for any set $\xi$ of intermediate points of $X$. We define step functions $\phi$ and $\psi$ that will do the job. Let
+for any set $\xi$ of intermediate points of $X$. We are done if we can produce step functions $\phi$ and $\psi$ such that: 
 
 ```{math}
-&u_k = \inf \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
-&v_k = \sup \{f(x) \mid x \in [x_{k+1}, x_k)\} \\
+:label: equ-riemann-integrals-3a
+R(\phi) - \epsilon \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon 
+```
+Here they are:
+
+```{math}
+&u_k = \inf \{f(x) \mid x \in [x_{k}, x_{k+1})\} \\
+&v_k = \sup \{f(x) \mid x \in [x_{k}, x_{k+1})\} \\
 \\
-&\phi(x) = u_k \text{ if } x \in [x_{k+1}, x_k) \\
-&\psi(x) = v_k \text{ if } x \in [x_{k+1}, x_k) \\
+&\phi(x) = u_k \text{ if } x \in [x_{k}, x_{k+1}) \\
+&\psi(x) = v_k \text{ if } x \in [x_{k}, x_{k+1}) \\
 ```
 The suprema and infima exist because $f$ is bounded. We conclude:
 
 ```{math}
-\phi - \epsilon \le f \le \psi + \epsilon
+\phi  \le f \le \psi 
 ```
 from which it follows that:
 
 ```{math}
-R(\phi) - \epsilon(b-a) \le R(f, X, \xi) \le R(\psi) + \epsilon(b-a)
+R(\phi)  \le R(f, X, \xi) \le R(\psi) 
 ```
 for any partition $X$ and and any set $\xi$ of intermediate points of $X$.
 Combining this with {eq}`equ-riemann-integrals-3`, we get:
 
 ```{math}
-R(\phi) - \epsilon - \epsilon(b-a) \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon + \epsilon(b-a)
+R(\phi) - \epsilon  \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon
 ```
-for any $\epsilon > 0$ and this is what we want.
+for any $\epsilon > 0$ and this is {eq}`equ-riemann-integrals-3a`, the inequality we are after.
 
 **Part Two:** We show that $f$ is R-integrable if {eq}`equ-riemann-integrals-1` holds.
 
@@ -719,7 +726,7 @@ Take any $\epsilon > 0$ and choose step functions $\phi, \psi$ on $[a, b]$ that 
 &R(\psi) - R(\phi ) \le \epsilon
 ```
 We assume w.l.o.g. that $\phi$ and $\psi$ share the same partition $T = \{t_0, t_1, \ldots, t_m \}$. 
-We'll produce a $\delta > 0$ such that:
+We are done if we can produce a $\delta > 0$ such that:
 
 ```{math}
 :label: equ-riemann-integrals-4
@@ -727,10 +734,23 @@ R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon
 ```
 for any partition $X$ with $\mu(X) < \delta$ and any set $\xi$ of intermediate points of $X$.
 
-To this end we define a step function $\rho$ by:
+Here is the key idea: We are given $\epsilon$ and $T$. We choose a partition $X$ with small $\delta = \mu(X)$. 
+Each X-interval $[x_k, x_{k+1})$ either fits into one of the T-intervals:
+
+```{math}
+[x_k, x_{k+1}) \subseteq [t_j, t_{j+1})
+```
+or it straddles one of the $t_j$:
+
+```{math}
+x_k \le  t_j \le x_{k+1}
+```
+The latter case occurs at most $m$ times because there are $m$ points in $T$. 
+
+We define a step function $\rho$ by:
  
 ```{math}
-\rho(x) = f(\xi_k) \text{ if } x \in [x_k, x_{k+1})
+\rho(x) = f(\xi_k) \text{ for } x \in [x_k, x_{k+1})
 ```
 Note that:
 
@@ -743,102 +763,181 @@ Let $U$ be the union of all the intervals in $X$ that fit into one of the interv
 
 ```{math}
 &K = \{k < n \mid \exists j < m: [x_k, x_{k+1}) \subseteq [t_j, t_{j+1}) \} \\
+&L = \{k < n \mid k \notin K \} \\
 &U = \bigcup_{k \in K} [x_k, x_{k+1}) \\
-&V = \bigcup_{k \notin K} [x_k, x_{k+1}) 
+&V = \bigcup_{k \in L} [x_k, x_{k+1}) 
 ```
-The crucial observation is that $V$ can contain at most $m$ intervals, so the length of $V$ is bounded by $m\delta$.
-Note that $m$ is fixed and that we are free to choose $\delta$.
 
-We have on $U$, by definition of $\rho$:
+We have for $x \in [x_k, x_{k+1}) \subseteq [t_j, t_{j+1})$:
  
 ```{math}
-:label: equ-riemann-integrals-5
-\phi(x) \le \rho(x) \le \psi(x)
+\phi(x) = \phi(\xi_k) \le f(\xi_k) = \rho(x) \le \psi(\xi_k) = \psi(x)
 ```
 
+Therefore, we have on $U$:
+
+```{math}
+:label: equ-riemann-integrals-5a
+\phi(x) \le \rho(x) \le  \psi(x)
+```
+
+The length of $V$ is bounded by $m\delta$ because $V$ contains at most $m$ intervals, and the length of each interval is less or equal $\delta$.
 And, since $f$ is bounded, there is an $M \in \mathbb{R}$ such that we have on $V$:
+
 ```{math}
 :label: equ-riemann-integrals-6
 \phi(x) - M \le \rho(x) \le \psi(x) + M
 ```
 
-Summing over {eq}`equ-riemann-integrals-5` gives:
+Summing over {eq}`equ-riemann-integrals-5a` gives:
 ```{math}
 :label: equ-riemann-integrals-7
 \sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) 
 ```
-and over {eq}`equ-riemann-integrals-6`:
+
+Summing over {eq}`equ-riemann-integrals-6` gives:
 
 ```{math}
 :label: equ-riemann-integrals-8
-&\sum_{k \notin K} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \le \sum_{k \notin K} \rho(x_k)(x_{k+1} - x_k) \\
-&\le \sum_{k \notin K} \psi(x_k)(x_{k+1} - x_k) + Mm\delta
+&\sum_{k \in L} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \\
+&\le \sum_{k \in L} \rho(x_k)(x_{k+1} - x_k) \\
+&\le \sum_{k \in L} \psi(x_k)(x_{k+1} - x_k) + Mm\delta
 ```
 
-These inequalities are combined to:
+The inequalities {eq}`equ-riemann-integrals-7` and {eq}`equ-riemann-integrals-8` are combined to:
 
 ```{math}
 R(\phi) - Mm\delta \le R(\rho) \le R(\psi) + Mm\delta
 ```
 Remembering {eq}`equ-riemann-integrals-4a` and setting $\delta = \epsilon/Mm$,
-we arrive at the desired result:
+we arrive at {eq}`equ-riemann-integrals-4`, the desired result:
 
 ```{math}
 R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon 
 ```
 ````
 
-
-We now introduce some criteria of Riemann integrability, with the Lebesgue Criterion as the ultimate result.
+We now introduce some criteria of Riemann integrability. The proofs use step functions rather than Riemann sums.
 
 ````{prf:theorem} Riemann-Integrable Functions
 :label: thr-riemann-integrable-functions
 
 All functions are defined on a closed interval $[a, b]$.
 
-**(a)** Monotonous functions are R-integrable.
+**(a)** Step functions are R-integrable and, for any step function $\phi$ we have:
 
-**(b)** Continuous functions are R-integrable.
+```{math}
+R(\phi) = \int_a^b \phi(x) \, dx
+```
 
-**(c)** Continuous functions with countably many discontinuities are R-integrable.
+**(b)** Monotonous functions are R-integrable.
 
-**(d) (Lebesgue Criterion)** Bounded functions are R-integrable iff their set of discontinuities has measure zero.
+**(c)** Continuous functions are R-integrable.
+
+**(d)** Let $f$ be bounded and continuous except on a set $D$. 
+If $D$ has finitely many limit points, then $f$ is R-integrable. 
 ````
 
 ````{prf:proof} 
-
-**(a)**
-Let $f$ be monotonously non-decreasing on $[a, b]$. Then $f$ can squeezed between two step functions, $\phi, \psi$,
-which are integrable as we know from (a).
-Let $n \in \mathbb{N}$ fixed and $x_k = a + \frac{k}{n}(b-a)$. We set:
+**(a)** This follows from {prf:ref}`thr-riemann-integrals`. We clearly have:
 
 ```{math}
-& \phi(x) = f(x_k) \text{ for } x \in [x_k, x_{k+1}) \\
-& \psi(x) = f(x_{k+1}) \text{ for } x \in [x_k, x_{k+1})
+\sup_{\varphi \le \phi} R(\varphi) = R(\phi) = \inf_{\psi \ge \phi} R(\psi)
 ``` 
-Then, clearly:
+
+The proofs of **(b), (c), (d)** are very similar. 
+$f$ can always be squeezed between two suitable step functions $\phi, \psi$.
+Here they are:
+
+Take any $\epsilon > 0$, let $X$ be a partition, and $\delta = \mu(X)$. 
+We set for $k = 0, \ldots, n-1$:
 
 ```{math}
-\phi \le f \le \psi
-```
-and
+& \phi(x) = \inf \{f(x) \mid x \in [x_k, x_{k+1}) \} \\
+& \psi(x) = \sup \{f(x) \mid x \in [x_k, x_{k+1}) \}
+``` 
+The suprema and infima exist because $f$ is bounded.
+ 
+**(b)** Let $f$ be non-decreasing. We get:
+
 ```{math}
-& \int_a^b (\psi(x) - \phi(x)) \, dx \\
-& = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
-& = \frac{1}{n}(b-a) \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
-& = \frac{1}{n}(b-a)(f(b) - f(a))
+:label: equ-riemann-integrable-functions-1
+&R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
+&\le \delta \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
+&= \delta (f(b) - f(a)) < \epsilon
 ```
-which can be made arbitrarily small. The assertion follows from (b).
+if $\delta < \epsilon /(f(b) - f(a))$.
 
-**(d)**
+**(c)** Let $f$ be continuous. Then it is uniformly continuous on $[a, b]$ and there is a $\delta > 0$ such that,
+for all $k$, $\psi(x_k) - \phi(x_{k}) < \epsilon$ if $\mu(X) < \delta$. We get:
 
-**TODO**
+```{math}
+:label: equ-riemann-integrable-functions-2
+&R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \\
+&< \epsilon \sum_{k=0}^{n-1} (x_{k+1} - x_k) \\
+&= \epsilon (b - a)
+```
 
+In {eq}`equ-riemann-integrable-functions-1` and {eq}`equ-riemann-integrable-functions-2` we encounter **collapsing sums**, 
+which are a recurrent pattern in the theory of integrals.
 
-**(e)** The proof can be found in **citation needed**.
+**(d)** Let $f$ be bounded, continuous and $D$ the set of points where $f$ is discontinous. 
+We assume that $D$ has only one limit point $d^*$. If there is more than one, 
+simply partition $[a, b]$ into as many subintervals with one limit point in each.
+
+We split the interval $[a, b]$ into a "good" set $U$ and a "bad" set $V$, as we did
+in the proof of {prf:ref}`thr-riemann-integrals`.  
+
+```{math}
+&K = \{k < n \mid D \cap [x_k, x_{k+1}) = \emptyset \} \\
+&L = \{k < n \mid k \notin K \} \\
+&U = \bigcup_{k \in K} [x_k, x_{k+1}) \\
+&V = \bigcup_{k \in L} [x_k, x_{k+1})
+```
+
+Since $f$ is uniformly continuous on $U$, there is a $\delta > 0$ such that,
+for all $k \in K$, $\psi(x_k) - \phi(x_{k}) < \epsilon$ if $\mu(X) < \delta$. We have on $U$:
+
+```{math}
+:label: equ-riemann-integrable-functions-3
+\sum_{k\in K} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a)
+```
+Since $|d - d^*| < \delta$ for all but finitely many $d \in D$, 
+all but finitely many elements of $D$ are convened in just one interval $[x_k, x_{k+1})$, 
+however small $\delta$ is. Therefore the number of elements of $L$, say $m$, is finite.
+And $|f|$ is bounded by some real number $M$. We have on $V$:
+
+```{math}
+:label: equ-riemann-integrable-functions-4
+\sum_{k\in L} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \delta m M
+```
+Adding {eq}`equ-riemann-integrable-functions-3` and {eq}`equ-riemann-integrable-functions-4` gives us:
+
+```{math}
+\sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a) + \delta m M \\
+```
+
+or:
+
+```{math}
+R(\psi) - R(\phi) \le \epsilon (b-a) + \delta m M
+```
+Setting $\delta = \epsilon/mM$ gives us what we want.
 ````
 
-Monotony leads us to an important theorem.
+````{prf:remark} Lebesgue Criterion
+:label: rem-lebesgue-criterion
+
+The story of {prf:ref}`thr-riemann-integrable-functions` doesn't end here. 
+The ultimate result is the Lebesgue Criterion, the proof of which is too lengthy for this short introduction. To state it, we first need a definition:
+
+A set $A \subset \mathbb{R}$ has **measure zero**, iff, for any $\epsilon > 0$ there is a covering $C$ of $A$ with $|C| < \epsilon$.
+
+Here is the **Lebesgue Criterion**:
+
+Bounded functions are R-integrable iff their set of discontinuities has measure zero.
+````
+
 
 ````{prf:theorem} Mean Value Theorem of Integration
 :label: thr-mean-value-integration
@@ -941,11 +1040,13 @@ Higher order differential operators $\partial^n$ are analogouosly defined.
 and we can swap limit and differentiation:
 
 ```{math}
+:label: equ-properties-derivatives-1
 \lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n
 ```
 Likewise, we have:
 
 ```{math}
+:label: equ-properties-derivatives-2
 \lim_{n \to \infty} \partial^n f_n = \partial^n \lim_{n \to \infty} f_n
 ```
 
@@ -955,8 +1056,30 @@ This can be expressed as: $C^n ([a, b])$ is closed under the sup norm.
 
 ````{prf:proof} 
 
-**TODO**
+Assertions **(a)** and **(b)** are obvious.
 
+**(c)** Let $\{f_n\}$ be a sequence in $C^1([a, b])$ that converges uniformly to $f$. 
+We have for any $\epsilon > 0$ and large $n$:
+
+```{math}
+&f(x+h) - f(x) \\
+&= (f(x+h) - f_n(x+h))  + (f_n(x+h) - f_n(x))  + (f_n(x) - f(x))  \\
+&= (f(x+h) - f_n(x+h))  + (hf'_n(x) +o(h))  + (f_n(x) - f(x))
+```
+thus:
+
+```{math}
+\left | f(x+h) - f(x) - hf'_n(x) \right | \le  \epsilon +  o(h) + \epsilon 
+```
+
+It follows that:
+
+```{math}
+\lim_{n \to \infty} f'_n = f'
+```
+
+which is {eq}`equ-properties-derivatives-1`. 
+To prove equation {eq}`equ-properties-derivatives-2`, apply {eq}`equ-properties-derivatives-1` to $f'$.
 ````
 
 ````{prf:theorem} Mean Value Theorem of Differentiation
@@ -1172,7 +1295,7 @@ are inverse to each other:
 ````{prf:proof}
 
 **(a)** 
-The proof relies on the [Mean Value Theorem of Integration ](#thr-mean-value-integration).
+The proof relies on the [Mean Value Theorem of Integration](#thr-mean-value-integration).
 We prove in fact a slightly stronger assertion:
 
 If $f$ is continuous on a neighbourhood of $x \in [a, b]$, then $F'(x) = f(x)$.
@@ -1225,7 +1348,7 @@ Let $f, g \in C^1([a,b])$. Then
 
 **(b) Substitution Rule**
 
-Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b))$. Then
+Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b)])$. Then
 
 ```{math}
 \int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx
@@ -1234,7 +1357,29 @@ Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b))$. Then
 
 ````{prf:proof} 
 
-**TODO**
+**(a)** We know from {prf:ref}`thr-differentiation-rules` that:
+```{math}
+(fg)' = f'g + fg'
+```
+
+and with {prf:ref}`thr-main-theorem-calculus` we conclude:
+
+```{math}
+f \, g \vert^b_a = \int_a^b (fg)'(x) \, dx  = \int_a^b f'(x)g(x) \, dx  + \int_a^b f(x)g'(x) \, dx
+```
+
+**(b)** We know from {prf:ref}`thr-differentiation-rules` that:
+```{math}
+(f\circ g)'(x) = f'(g(x))g'(x)
+```
+
+and with {prf:ref}`thr-main-theorem-calculus` we conclude:
+
+```{math}
+&f \circ g \vert^b_a = f(g(b)) - f(g(a)) = \int_{g(a)}^{g(b)} f'(y) \, dy \\
+&= \int_a^b (f\circ g)'(x) \, dx  = \int_a^b f'(g(x))g'(x) \, dx
+```
+
 ````
 
 ## Taylor's Theorem
