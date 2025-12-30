@@ -4,6 +4,56 @@
 
 ## Introduction
 
+Calculus is all about infinitesimally small numbers, something the Greeks didn't understand.
+Zeno's paradoxes aren't paradoxes anymore; today, they are easily explained (see [Paradoxes](#Paradoxes))
+
+In [From Naturals to Reals]() we show that $\mathbb{R}$ is a field, 
+and that it is complete: there are no holes, every Cauchy sequence converges.
+The idea of this introduction is to present a short path (perhaps the shortest?) 
+from the real numbers to two pivotal results:
+
+1. The [Main Theorem of Calculus](thr-main-theorem-calculus), which states that differentiation and integration are inverse operations.
+2. [Taylor's Theorem](#thr-taylor).
+
+I was led by three rules:
+
+1. No detours, no decorations. Every definition, every theorem serves a purpose. 
+2. Full proofs whenever it's not obvious.
+3. No proofs whenever it's obvious. 
+
+
+An exception to rule (1) is the remark about the [Lebesgue Criterion](rem-lebesgue-criterion), too interesting to be passed over.
+We only consider finite intervals $[a, b]$ for no other reason than to keep the paper short.
+The backbone of our story are the vector spaces $\mathcal{R}([a, b])$ of Riemann-integrable functions, 
+and $C^n([a, b])$ of $n$ times continuously differentiable functions $n \ge 0$. 
+The differential operator **$\partial$** moves functions down from $C^n([a, b])$ to $C^{n-1}([a, b])$, 
+and the integral operator **$\int$** moves them up from $C^{n}([a, b])$ to $C^{n+1}([a, b])$ 
+and from $\mathcal{R}([a, b])$ to $C^{0}([a, b])$.
+
+Here is the roadmap: After a short revision of the topology of $\mathbb{R}$ we study compact sets 
+and prove the [Theorem of Bolzano-Weierstrass](#thr-bolzano-weierstrass), 
+which is indispensable whenever sequences are supposed to converge. 
+
+We then turn to [continuous functions](#`Continuous Functions`),
+which are a vector space closed under the sup-norm. A key result is the [intermediate value theorem](thr-intermediate-value).
+
+Riemann integrals, the next stage can be introduced by Riemann sums, or by step functions.
+We show the equivalence of these approaches. 
+They are equally useful; we use one or the other, depending on the context.
+Riemann-integrable functions form a vector space closed under the sup-norm. 
+A key result is the [mean value theorem of integration](thr-mean-value-integration), which depends on the intermediate value theorem.
+
+The chapter on differentiable functions is independent of integrals.
+We prove the well-known derivation rules 
+and show that the $C^{n}([a, b])$ are vector spaces closed under the sup-norm.
+A key result is the [mean value theorem of differentiation](thr-mean-value-ifferentiation), which depends on the intermediate value theorem.
+
+Integration and differentiation are then merged into the [Main Theorem of Calculus](thr-main-theorem-calculus). 
+Its proof is a simple application of the mean value theorems of integration and differentiation. 
+The integration rules follow effortlessly from the differentiation rules and the Main Theorem.
+
+The apogee of this short paper is [Taylor's theorem](), proven by a simple application of integration by parts.
+ 
 This material has been published many times, see {cite}`heuser2009analysis1`, 
 {cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
 to name but a few prominent examples.
@@ -1348,7 +1398,7 @@ Let $f, g \in C^1([a,b])$. Then
 
 **(b) Substitution Rule**
 
-Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b))$. Then
+Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b)])$. Then
 
 ```{math}
 \int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx

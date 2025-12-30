@@ -494,6 +494,47 @@ document.write(`
 <p><em>Johannes Siedersleben, December 2025</em></p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Calculus is all about infinitesimally small numbers, something the Greeks didn’t understand.
+Zeno’s paradoxes aren’t paradoxes anymore; today, they are easily explained (see <a class="reference internal" href="#Paradoxes"><span class="xref myst">Paradoxes</span></a>)</p>
+<p>In <a class="reference internal" href="#"><span class="xref myst">From Naturals to Reals</span></a> we show that <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field,
+and that it is complete: there are no holes, every Cauchy sequence converges.
+The idea of this introduction is to present a short path (perhaps the shortest?)
+from the real numbers to two pivotal results:</p>
+<ol class="arabic simple">
+<li><p>The <a class="reference internal" href="#thr-main-theorem-calculus"><span class="xref myst">Main Theorem of Calculus</span></a>, which states that differentiation and integration are inverse operations.</p></li>
+<li><p><a class="reference internal" href="#thr-taylor"><span class="xref myst">Taylor’s Theorem</span></a>.</p></li>
+</ol>
+<p>I was led by three rules:</p>
+<ol class="arabic simple">
+<li><p>No detours, no decorations. Every definition, every theorem serves a purpose.</p></li>
+<li><p>Full proofs whenever it’s not obvious.</p></li>
+<li><p>No proofs whenever it’s obvious.</p></li>
+</ol>
+<p>An exception to rule (1) is the remark about the <a class="reference internal" href="#rem-lebesgue-criterion"><span class="xref myst">Lebesgue Criterion</span></a>, too interesting to be passed over.
+We only consider finite intervals <span class="math notranslate nohighlight">\([a, b]\)</span> for no other reason than to keep the paper short.
+The backbone of our story are the vector spaces <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> of Riemann-integrable functions,
+and <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> of <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions <span class="math notranslate nohighlight">\(n \ge 0\)</span>.
+The differential operator <strong><span class="math notranslate nohighlight">\(\partial\)</span></strong> moves functions down from <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n-1}([a, b])\)</span>,
+and the integral operator <strong><span class="math notranslate nohighlight">\(\int\)</span></strong> moves them up from <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n+1}([a, b])\)</span>
+and from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{0}([a, b])\)</span>.</p>
+<p>Here is the roadmap: After a short revision of the topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> we study compact sets
+and prove the <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Theorem of Bolzano-Weierstrass</span></a>,
+which is indispensable whenever sequences are supposed to converge.</p>
+<p>We then turn to [continuous functions](#<code class="docutils literal notranslate"><span class="pre">Continuous</span> <span class="pre">Functions</span></code>),
+which are a vector space closed under the sup-norm. A key result is the <a class="reference internal" href="#thr-intermediate-value"><span class="xref myst">intermediate value theorem</span></a>.</p>
+<p>Riemann integrals, the next stage can be introduced by Riemann sums, or by step functions.
+We show the equivalence of these approaches.
+They are equally useful; we use one or the other, depending on the context.
+Riemann-integrable functions form a vector space closed under the sup-norm.
+A key result is the <a class="reference internal" href="#thr-mean-value-integration"><span class="xref myst">mean value theorem of integration</span></a>, which depends on the intermediate value theorem.</p>
+<p>The chapter on differentiable functions is independent of integrals.
+We prove the well-known derivation rules
+and show that the <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> are vector spaces closed under the sup-norm.
+A key result is the <a class="reference internal" href="#thr-mean-value-ifferentiation"><span class="xref myst">mean value theorem of differentiation</span></a>, which depends on the intermediate value theorem.</p>
+<p>Integration and differentiation are then merged into the <a class="reference internal" href="#thr-main-theorem-calculus"><span class="xref myst">Main Theorem of Calculus</span></a>.
+Its proof is a simple application of the mean value theorems of integration and differentiation.
+The integration rules follow effortlessly from the differentiation rules and the Main Theorem.</p>
+<p>The apogee of this short paper is <a class="reference internal" href="#"><span class="xref myst">Taylor’s theorem</span></a>, proven by a simple application of integration by parts.</p>
 <p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id82" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
 <span id="id2">[<a class="reference internal" href="#id83" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id84" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id85" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
 to name but a few prominent examples.</p>
@@ -1380,7 +1421,7 @@ This is our first encounter with the <em>collapsing sum pattern</em>, which feat
 <div class="math notranslate nohighlight">
 \[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
 <p><strong>(b) Substitution Rule</strong></p>
-<p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b))\)</span>. Then</p>
+<p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b)])\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx\]</div>
 </section>
