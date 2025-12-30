@@ -463,14 +463,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoxes">Paradoxes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeno-s-paradoxes">Zeno’s Paradoxes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise">Achilles and the Tortoise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow">The Standing Arrow</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topology-of-mathbb-r">Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compact-sets">Compact Sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
@@ -494,10 +493,10 @@ document.write(`
 <p><em>Johannes Siedersleben, December 2025</em></p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>Calculus is all about infinitesimally small numbers, something the Greeks didn’t understand.
+<p>Calculus is all about infinitesimally small numbers, a subject the Greeks didn’t understand.
 Zeno’s paradoxes aren’t paradoxes anymore; today, they are easily explained (see <a class="reference internal" href="#Paradoxes"><span class="xref myst">Paradoxes</span></a>)</p>
-<p>In <a class="reference internal" href="#"><span class="xref myst">From Naturals to Reals</span></a> we show that <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field,
-and that it is complete: there are no holes, every Cauchy sequence converges.
+<p>In the paper <a class="reference internal" href="#"><span class="xref myst">From Naturals to Reals</span></a> we present <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> as the smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>:
+There are no holes in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, every Cauchy sequence converges.
 The idea of this introduction is to present a short path (perhaps the shortest?)
 from the real numbers to two pivotal results:</p>
 <ol class="arabic simple">
@@ -506,43 +505,43 @@ from the real numbers to two pivotal results:</p>
 </ol>
 <p>I was led by three rules:</p>
 <ol class="arabic simple">
-<li><p>No detours, no decorations. Every definition, every theorem serves a purpose.</p></li>
+<li><p>No detours, no embellishments. Every definition, every theorem serves a purpose.</p></li>
 <li><p>Full proofs whenever it’s not obvious.</p></li>
 <li><p>No proofs whenever it’s obvious.</p></li>
 </ol>
-<p>An exception to rule (1) is the remark about the <a class="reference internal" href="#rem-lebesgue-criterion"><span class="xref myst">Lebesgue Criterion</span></a>, too interesting to be passed over.
+<p>An exception to rule (1) is the remark about the <a class="reference internal" href="#rem-lebesgue-criterion"><span class="xref myst">Lebesgue Criterion</span></a>, as it is too interesting to be passed over.
 We only consider finite intervals <span class="math notranslate nohighlight">\([a, b]\)</span> for no other reason than to keep the paper short.
-The backbone of our story are the vector spaces <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> of Riemann-integrable functions,
-and <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> of <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions <span class="math notranslate nohighlight">\(n \ge 0\)</span>.
+The backbone of our story is formed by the vector spaces <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> of Riemann-integrable functions,
+and the spaces <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> of <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions (<span class="math notranslate nohighlight">\(n \ge 0\)</span>).
 The differential operator <strong><span class="math notranslate nohighlight">\(\partial\)</span></strong> moves functions down from <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n-1}([a, b])\)</span>,
 and the integral operator <strong><span class="math notranslate nohighlight">\(\int\)</span></strong> moves them up from <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n+1}([a, b])\)</span>
 and from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{0}([a, b])\)</span>.</p>
-<p>Here is the roadmap: After a short revision of the topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> we study compact sets
-and prove the <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Theorem of Bolzano-Weierstrass</span></a>,
+<p>Here is the roadmap: After revising the topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> we study compact sets
+and prove the <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass theorem</span></a>,
 which is indispensable whenever sequences are supposed to converge.</p>
 <p>We then turn to [continuous functions](#<code class="docutils literal notranslate"><span class="pre">Continuous</span> <span class="pre">Functions</span></code>),
-which are a vector space closed under the sup-norm. A key result is the <a class="reference internal" href="#thr-intermediate-value"><span class="xref myst">intermediate value theorem</span></a>.</p>
-<p>Riemann integrals, the next stage can be introduced by Riemann sums, or by step functions.
-We show the equivalence of these approaches.
-They are equally useful; we use one or the other, depending on the context.
-Riemann-integrable functions form a vector space closed under the sup-norm.
-A key result is the <a class="reference internal" href="#thr-mean-value-integration"><span class="xref myst">mean value theorem of integration</span></a>, which depends on the intermediate value theorem.</p>
+which form a vector space closed under the sup-norm. A key result is the <a class="reference internal" href="#thr-intermediate-value"><span class="xref myst">intermediate value theorem</span></a>.</p>
+<p>Riemann integrals, in the next stage, can be introduced by either Riemann sums or step functions.
+We show the equivalence of these two approaches.
+Both  are equally useful; we use whichever is more appropriate.
+Riemann-integrable functions also form a vector space that is closed under the sup-norm.
+A key result is the <a class="reference internal" href="#thr-mean-value-integration"><span class="xref myst">mean value theorem of integration</span></a>, which relies on the intermediate value theorem.</p>
 <p>The chapter on differentiable functions is independent of integrals.
 We prove the well-known derivation rules
-and show that the <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> are vector spaces closed under the sup-norm.
+and show that the spaces <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> are vector spaces closed under the sup-norm.
 A key result is the <a class="reference internal" href="#thr-mean-value-ifferentiation"><span class="xref myst">mean value theorem of differentiation</span></a>, which depends on the intermediate value theorem.</p>
-<p>Integration and differentiation are then merged into the <a class="reference internal" href="#thr-main-theorem-calculus"><span class="xref myst">Main Theorem of Calculus</span></a>.
+<p>Integration and differentiation are then combined in the <a class="reference internal" href="#thr-main-theorem-calculus"><span class="xref myst">Main Theorem of Calculus</span></a>.
 Its proof is a simple application of the mean value theorems of integration and differentiation.
-The integration rules follow effortlessly from the differentiation rules and the Main Theorem.</p>
-<p>The apogee of this short paper is <a class="reference internal" href="#"><span class="xref myst">Taylor’s theorem</span></a>, proven by a simple application of integration by parts.</p>
+The integration rules then follow effortlessly from the differentiation rules and the Main Theorem.</p>
+<p>The apogee of this short paper is <a class="reference internal" href="#thr-taylor"><span class="xref myst">Taylor’s theorem</span></a>, which is proven by a simple application of integration by parts.</p>
 <p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id82" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
 <span id="id2">[<a class="reference internal" href="#id83" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id84" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id85" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
 to name but a few prominent examples.</p>
 </section>
-<section id="paradoxes">
-<h2>Paradoxes<a class="headerlink" href="#paradoxes" title="Link to this heading">#</a></h2>
-<section id="achilles-and-the-tortoise-zeno">
-<h3>Achilles and the Tortoise (Zeno)<a class="headerlink" href="#achilles-and-the-tortoise-zeno" title="Link to this heading">#</a></h3>
+<section id="zeno-s-paradoxes">
+<h2>Zeno’s Paradoxes<a class="headerlink" href="#zeno-s-paradoxes" title="Link to this heading">#</a></h2>
+<section id="achilles-and-the-tortoise">
+<h3>Achilles and the Tortoise<a class="headerlink" href="#achilles-and-the-tortoise" title="Link to this heading">#</a></h3>
 <p>Imagine the tortoise and Achilles starting a race with the tortiose <span class="math notranslate nohighlight">\(10\)</span> metres in the lead,
 and Achilles running ten times as fast as the tortoise.<br />
 By the time Achilles has covered <span class="math notranslate nohighlight">\(10\)</span> meters, the tortoise is <span class="math notranslate nohighlight">\(1\)</span> metre in the lead.<br />
@@ -562,8 +561,8 @@ However, all he did was a mental divison of a finite distance into infinitely
 many parts, the sum of which is obviously the distance given.
 Today infinite sums are well understood; there is nothing paradoxical about them.</p>
 </section>
-<section id="the-standing-arrow-zeno">
-<h3>The Standing Arrow (Zeno):<a class="headerlink" href="#the-standing-arrow-zeno" title="Link to this heading">#</a></h3>
+<section id="the-standing-arrow">
+<h3>The Standing Arrow<a class="headerlink" href="#the-standing-arrow" title="Link to this heading">#</a></h3>
 <p>Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
 How can it ever move? The answer is given by the theory of integrals we are going to study in detail.
 Here is a sketch:
@@ -721,8 +720,8 @@ and we are done. If not, there is a last peak <span class="math notranslate nohi
 We end up with an increasing sequence <span class="math notranslate nohighlight">\(\{x_{n_k}\}\)</span>, which proves the theorem.</p>
 </div>
 </section>
-<section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<section id="continuous-functions">
+<h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-sup-norm">
 <p class="admonition-title"><span class="caption-number">Definition 17 </span> (Sup Norm)</p>
 <section class="definition-content" id="proof-content">
@@ -751,10 +750,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0\]</div>
 </section>
-</div></section>
-<section id="continuous-functions">
-<h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="def-continuity">
+</div><div class="proof definition admonition" id="def-continuity">
 <p class="admonition-title"><span class="caption-number">Definition 19 </span> (Continuity)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be a function.</p>
@@ -1584,14 +1580,13 @@ what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paradoxes">Paradoxes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise-zeno">Achilles and the Tortoise (Zeno)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow-zeno">The Standing Arrow (Zeno):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeno-s-paradoxes">Zeno’s Paradoxes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#achilles-and-the-tortoise">Achilles and the Tortoise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standing-arrow">The Standing Arrow</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topology-of-mathbb-r">Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compact-sets">Compact Sets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-functions">Continuous Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#riemann-integrable-functions">Riemann-Integrable Functions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentiable-functions">Differentiable Functions</a></li>
