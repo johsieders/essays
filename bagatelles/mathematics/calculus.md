@@ -4,11 +4,11 @@
 
 ## Introduction
 
-Calculus is all about infinitesimally small numbers, something the Greeks didn't understand.
+Calculus is all about infinitesimally small numbers, a subject the Greeks didn't understand.
 Zeno's paradoxes aren't paradoxes anymore; today, they are easily explained (see [Paradoxes](#Paradoxes))
 
-In [From Naturals to Reals]() we show that $\mathbb{R}$ is a field, 
-and that it is complete: there are no holes, every Cauchy sequence converges.
+In the paper [From Naturals to Reals]() we present $\mathbb{R}$ as the smallest complete field containing $\mathbb{Q}$: 
+There are no holes in $\mathbb{R}$, every Cauchy sequence converges.
 The idea of this introduction is to present a short path (perhaps the shortest?) 
 from the real numbers to two pivotal results:
 
@@ -17,50 +17,50 @@ from the real numbers to two pivotal results:
 
 I was led by three rules:
 
-1. No detours, no decorations. Every definition, every theorem serves a purpose. 
+1. No detours, no embellishments. Every definition, every theorem serves a purpose. 
 2. Full proofs whenever it's not obvious.
 3. No proofs whenever it's obvious. 
 
 
-An exception to rule (1) is the remark about the [Lebesgue Criterion](rem-lebesgue-criterion), too interesting to be passed over.
+An exception to rule (1) is the remark about the [Lebesgue Criterion](rem-lebesgue-criterion), as it is too interesting to be passed over.
 We only consider finite intervals $[a, b]$ for no other reason than to keep the paper short.
-The backbone of our story are the vector spaces $\mathcal{R}([a, b])$ of Riemann-integrable functions, 
-and $C^n([a, b])$ of $n$ times continuously differentiable functions $n \ge 0$. 
+The backbone of our story is formed by the vector spaces $\mathcal{R}([a, b])$ of Riemann-integrable functions, 
+and the spaces $C^n([a, b])$ of $n$ times continuously differentiable functions ($n \ge 0$). 
 The differential operator **$\partial$** moves functions down from $C^n([a, b])$ to $C^{n-1}([a, b])$, 
 and the integral operator **$\int$** moves them up from $C^{n}([a, b])$ to $C^{n+1}([a, b])$ 
 and from $\mathcal{R}([a, b])$ to $C^{0}([a, b])$.
 
-Here is the roadmap: After a revision of the topology of $\mathbb{R}$ we study compact sets 
-and prove the [Theorem of Bolzano-Weierstrass](#thr-bolzano-weierstrass), 
+Here is the roadmap: After revising the topology of $\mathbb{R}$ we study compact sets 
+and prove the [Bolzano-Weierstrass theorem](#thr-bolzano-weierstrass), 
 which is indispensable whenever sequences are supposed to converge. 
 
 We then turn to [continuous functions](#`Continuous Functions`),
-which are a vector space closed under the sup-norm. A key result is the [intermediate value theorem](thr-intermediate-value).
+which form a vector space closed under the sup-norm. A key result is the [intermediate value theorem](thr-intermediate-value).
 
-Riemann integrals, the next stage, can be introduced by Riemann sums, or by step functions.
-We show the equivalence of these approaches. 
-They are equally useful; we use one or the other, depending on the context.
-Riemann-integrable functions form a vector space closed under the sup-norm. 
-A key result is the [mean value theorem of integration](thr-mean-value-integration), which depends on the intermediate value theorem.
+Riemann integrals, in the next stage, can be introduced by either Riemann sums or step functions.
+We show the equivalence of these two approaches. 
+Both  are equally useful; we use whichever is more appropriate.
+Riemann-integrable functions also form a vector space that is closed under the sup-norm. 
+A key result is the [mean value theorem of integration](thr-mean-value-integration), which relies on the intermediate value theorem.
 
 The chapter on differentiable functions is independent of integrals.
 We prove the well-known derivation rules 
-and show that the $C^{n}([a, b])$ are vector spaces closed under the sup-norm.
+and show that the spaces $C^{n}([a, b])$ are vector spaces closed under the sup-norm.
 A key result is the [mean value theorem of differentiation](thr-mean-value-ifferentiation), which depends on the intermediate value theorem.
 
-Integration and differentiation are then merged into the [Main Theorem of Calculus](thr-main-theorem-calculus). 
+Integration and differentiation are then combined in the [Main Theorem of Calculus](thr-main-theorem-calculus). 
 Its proof is a simple application of the mean value theorems of integration and differentiation. 
-The integration rules follow effortlessly from the differentiation rules and the Main Theorem.
+The integration rules then follow effortlessly from the differentiation rules and the Main Theorem.
 
-The apogee of this short paper is [Taylor's theorem](), proven by a simple application of integration by parts.
+The apogee of this short paper is [Taylor's theorem](thr-taylor), which is proven by a simple application of integration by parts.
  
 This material has been published many times, see {cite}`heuser2009analysis1`, 
 {cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
 to name but a few prominent examples.
 
-## Paradoxes
+## Zeno's Paradoxes
 
-### Achilles and the Tortoise (Zeno)
+### Achilles and the Tortoise
 
 Imagine the tortoise and Achilles starting a race with the tortiose $10$ metres in the lead, 
 and Achilles running ten times as fast as the tortoise.  
@@ -87,7 +87,7 @@ However, all he did was a mental divison of a finite distance into infinitely
 many parts, the sum of which is obviously the distance given.
 Today infinite sums are well understood; there is nothing paradoxical about them.
 
-### The Standing Arrow (Zeno): 
+### The Standing Arrow
 Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
 How can it ever move? The answer is given by the theory of integrals we are going to study in detail. 
 Here is a sketch: 
@@ -297,7 +297,7 @@ $n_1$ being not a peak, there must be an index $n_2 > n_1$ with $x_{n_2} > x_{n_
 We end up with an increasing sequence $\{x_{n_k}\}$, which proves the theorem.
 ````
 
-## Functions
+## Continuous Functions
 
 ````{prf:definition} Sup Norm
 :label: def-sup-norm
@@ -342,8 +342,6 @@ Let $f_n: [a, b] \to \mathbb{R}$ $(n \in \mathbb{N})$ be a sequence of functions
 \lim_{n \to \infty} {\left \lVert f_n - f \right \rVert_{\infty}} = 0
 ```
 ````
-
-## Continuous Functions
 
 ````{prf:definition} Continuity
 :label: def-continuity
