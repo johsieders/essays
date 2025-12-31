@@ -1,3 +1,4 @@
+(naturals-to-reals)=
 # From Naturals to Reals
 
 *Johannes Siedersleben, December 2025*
