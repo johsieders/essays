@@ -1454,7 +1454,22 @@ f(x) = \lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} \left ( f_n(a) + \int_a^
 
 Therefore, again by the {prf:ref}`main theorem of calculus (a) <thr-main-theorem-calculus>`, $f$ is differentiable and $f' = g$.
 ````
+````{prf:remark} Counterexample
+:label: rem-counterexample
 
+The uniform limit of continuously differentiable functions is emphatically not always differentiable.
+A simple example is:
+
+```{math}
+f_n(x) = \sqrt{x^2 + \frac{1}{n}}
+```
+
+The uniform limit is the absolute value function that features a corner at $0$.
+
+```{math}
+\lim_{n \to \infty} f_n(x) = |x|
+```
+````
 
 (taylor-theorem)=
 ## Taylor's Theorem
