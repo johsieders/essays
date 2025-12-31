@@ -5,14 +5,16 @@
 ## Introduction
 
 Calculus is all about infinitesimally small numbers, a subject the Greeks didn't understand.
-Zeno's paradoxes aren't paradoxes anymore; today, they are easily explained (see [Paradoxes](#Paradoxes))
+Zeno's paradoxes aren't paradoxes anymore; today, they are easily explained (see {ref}`Zeno Paradoxes <zeno-paradoxes>`).
 
-In our paper [From Naturals to Reals]() we present $\mathbb{R}$ as the smallest complete field containing $\mathbb{Q}$: 
-There are no holes in $\mathbb{R}$, every Cauchy sequence converges.
-The idea of this introduction is to present a straight path with no gaps from the real numbers to two pivotal results:
+In the companion paper {ref}`From Naturals to Reals <naturals-to-reals>`, we present $\mathbb{R}$ as the smallest complete field containing $\mathbb{Q}$: 
+There are no holes in $\mathbb{R}$, every Cauchy sequence converges. That is the starting point of this paper.
+It presents a straight path with no gaps to two pivotal results:
 
 1. The [Main Theorem of Calculus](thr-main-theorem-calculus), which states that differentiation and integration are inverse operations.
 2. [Taylor's Theorem](#thr-taylor).
+
+These results will, in turn, be the starting point of future papers.
 
 I was led by three rules:
 
@@ -21,46 +23,62 @@ I was led by three rules:
 3. No proofs whenever it's obvious. 
 
 
-An exception to rule (1) is the remark about the [Lebesgue Criterion](rem-lebesgue-criterion), as it is too interesting to be passed over.
-We only consider finite intervals $[a, b]$ for no other reason than to keep the paper short.
+
+What is obvious? Mathematicians are notorious for calling everything easy, obvious or plain. 
+I remember Donald Knuth's classification of exercises from 00 to 50 with a shudder. Here is my take on it:
+
+* Proving the linearity of differentiation or integration is a useful exercise, but it is boring and not illuminating. I left it out.
+* Proving the differentiation rules with the {ref}`little-o notation <little-o-big-O>` is an effortless delight.
+* Proving that the Riemann integral of a uniform limit is the limit of the integrals requires some effort, but this does not diminish the pleasure.
+* Proving the equivalence of Riemann sums and step functions requires considerable attention, but again, the pleasure far outweighs the trouble.
+* Proving the {prf:ref}`Lebesgue criterion <rem-lebesgue-criterion>` is hard work. I left the proof out, but the criterion is too interesting to be passed over. 
+  This is the only exception to rule (1).
+
+We restrict ourselves to finite intervals $[a, b]$ for no other reason than to keep the paper short.
 The backbone of our story is formed by the vector spaces $\mathcal{R}([a, b])$ of Riemann-integrable functions, 
-and the spaces $C^n([a, b])$ of $n$ times continuously differentiable functions ($n \ge 0$). 
+and the spaces $C^n([a, b])$ of $n$ times continuously differentiable functions. 
 The differential operator **$\partial$** moves functions down from $C^n([a, b])$ to $C^{n-1}([a, b])$, 
-and the integral operator **$\int$** moves them up from $C^{n}([a, b])$ to $C^{n+1}([a, b])$ 
-and from $\mathcal{R}([a, b])$ to $C^{0}([a, b])$.
+and the integral operator **$\int$** moves them up from $\mathcal{R}([a, b])$ to $C^{0}([a, b])$ and from $C^{n}([a, b])$ to $C^{n+1}([a, b])$.
 
 XXX diagram vector spaces XXX
 
 XXX diagram chapters XXX
 
-Here is the roadmap: After revising the topology of $\mathbb{R}$ we study compact sets 
+Here is the roadmap: After revising the {ref}`topology <topology-of-r>` of $\mathbb{R}$ 
+we study {ref}`compact sets <compact-sets>` 
 and prove the [Bolzano-Weierstrass theorem](#thr-bolzano-weierstrass), 
 which is indispensable whenever sequences are supposed to converge. 
 
-We then turn to [continuous functions](#`Continuous Functions`),
-which form a vector space closed under the sup-norm. A key result is the [intermediate value theorem](thr-intermediate-value).
+We then turn to {ref}`continuous functions <continuous-functions>`. On compact sets, they are uniformly continuous and 
+form a vector space closed under the sup-norm. A key result is the {prf:ref}`intermediate value theorem <thr-intermediate-value>`.
 
-Riemann integrals, in the next stage, can be introduced by either Riemann sums or step functions.
+The next two chapters are independent and can be read in any order.
+
+{ref}`Riemann integrals <riemann-integrable-functions>` can be introduced 
+by either {prf:ref}`Riemann sums <def-riemann-integrals>` or {prf:ref}`step functions <def-step-functions>`.
 We show the equivalence of these two approaches. 
-Both  are equally useful; we use whichever is more appropriate.
-Riemann-integrable functions also form a vector space that is closed under the sup-norm. 
-A key result is the [mean value theorem of integration](thr-mean-value-integration), which relies on the intermediate value theorem.
-
-The chapter on differentiable functions is independent of integrals.
-We prove the well-known derivation rules 
-and show that the spaces $C^{n}([a, b])$ are vector spaces closed under the sup-norm.
-A key result is the [mean value theorem of differentiation](thr-mean-value-ifferentiation), which depends on the intermediate value theorem.
+They are equally important; we will use whichever is more appropriate later on.
+Riemann-integrable functions also form a vector space closed under the sup-norm. 
+A key result is the {prf:ref}`mean value theorem of integration <thr-mean-value-integration>`, which depends on the intermediate value theorem.
+ 
+In the chapter on {ref}`differentiable functions <differentiable-functions>`, 
+we prove the well-known {prf:ref}`differentiation rules <thr-differentiation-rules>`
+and show that the spaces $C^{n}([a, b])$ are vector spaces that is not closed under the sup-norm: 
+the uniform limit of continuously differentiable functions is not necessarily differentiable.
+A key result is the {prf:ref}`mean value theorem of differentiation <thr-mean-value-differentiation>`, 
+which also depends on the intermediate value theorem.
 
 Integration and differentiation are then combined in the [Main Theorem of Calculus](thr-main-theorem-calculus). 
 Its proof is a simple application of the mean value theorems of integration and differentiation. 
-The integration rules then follow effortlessly from the differentiation rules and the Main Theorem.
+The {prf:ref}`integration rules <thr-integration-rules>` then follow effortlessly from the differentiation rules and the Main Theorem.
 
-The apogee of this short paper is [Taylor's theorem](thr-taylor), which is proven by a simple application of integration by parts.
+The apogee of this short paper is {prf:ref}`Taylor's theorem <thr-taylor>`, which is proven by a simple application of integration by parts.
  
 This material has been published many times, see {cite}`heuser2009analysis1`, 
 {cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
 to name but a few prominent examples.
 
+(zeno-paradoxes)=
 ## Zeno's Paradoxes
 
 ### Achilles and the Tortoise
@@ -106,7 +124,7 @@ While the first paradox was that a sum with an infinite number of terms could be
 this paradox is that the sum of a large number of arbitrarily small terms does not vanish. 
 Assigning meaningful values to such sums is what integration theory is all about.
 
-
+(topology-of-r)=
 ## Topology of $\mathbb{R}$
 
 ````{prf:definition} Topology of $\mathbb{R}$
@@ -189,7 +207,7 @@ The sequence $\{y_n\}$ is a Cauchy sequence by the same argument,
 and the limits of $\{x_n\}$ and $\{y_n\}$ coincide, again because of {eq}`equ-nested-intervals-1`.
 ````
 
-
+(compact-sets)=
 ## Compact Sets
 
 ````{prf:definition} Compact Sets
@@ -300,6 +318,7 @@ $n_1$ being not a peak, there must be an index $n_2 > n_1$ with $x_{n_2} > x_{n_
 We end up with an increasing sequence $\{x_{n_k}\}$, which proves the theorem.
 ````
 
+(continuous-functions)=
 ## Continuous Functions
 
 ````{prf:definition} Sup Norm
@@ -473,8 +492,8 @@ f(\xi) = 0
 and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ and replace $f$ with $f - \mu$.
 ````
 
+(riemann-integrable-functions)=
 ## Riemann-Integrable Functions
-
 
 ````{prf:definition} Riemann Integrals by Riemann Sums
 :label: def-riemann-integrals
@@ -513,8 +532,10 @@ In other words, Riemann sums approximate Riemann integrals to arbitrary precisio
 \int_a^b f(x) \, dx \approx \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1} - x_{k})
 ```
 as a short version of the exact definition. This should be read as follows: 
-For sufficiently fine-grained partitions $X$, the difference between the left and right sides becomes arbitrarily small 
-for any set $\xi$ of intermediate points. Whenever we prove theorems on Riemann integrals, 
+"For sufficiently fine-grained partitions $X$, the difference between the left and right sides becomes arbitrarily small 
+for any set $\xi$ of intermediate points." 
+
+Whenever we prove theorems on Riemann integrals, 
 we are allowed to replace the integrals with Riemann sums of sufficiently small granularity. 
 ````
 
@@ -539,14 +560,14 @@ The notation
 F = \int f(y) \, dy
 ```
 is used if the lower bound $a$ is unimportant or not specified. 
-Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`thr-obvious-properties`(c)).
+Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`additivity <thr-properties-riemann>`).
 ````
 
 
-````{prf:theorem} Obvious Properties of Riemann Integrals
-:label: thr-obvious-properties
+````{prf:theorem} Properties of Riemann Integrals
+:label: thr-properties-riemann
 
-We state five obvious but important properties of Riemann integrals.
+We state some obvious but important properties of Riemann integrals.
 
 **(a) Boundedness**
 
@@ -560,19 +581,20 @@ f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
 ```
 holds for any two functions $f,g \in \mathcal{R}([a,b])$.
 
-**(c) Additivity**
-
-```{math}
-\int_a^b f(x) \, dx + \int_b^c f(x) \, dx = \int_a^c f(x) \, dx
-```
-holds for any $f \in\mathcal{R}([a,c])$ and any $b \in [a, c]$.
-
-**(d) Triangular Inequality**
+**(c) Triangular Inequality**
 
 If $f$ is integrable, then so is $|f|$, and it holds that:
 
 ```{math}
 \left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
+```
+
+**(d) Additivity**
+
+Let $f$ be integrable, and $c \in [a, b]$. Then it holds that:
+
+```{math}
+\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx
 ```
 
 **(e) Linearity**
@@ -582,27 +604,10 @@ If $f, g$ are integrable, then so is $f + \alpha g$ ($\alpha \in \mathbb{R}$), a
 ```{math}
 \int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx
 ```
-````
 
-````{prf:theorem} Less Obvious Properties of Riemann Integrals
-:label: thr-less-obvious-properties
+**(f)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
 
-**(a)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
-
-**(b)** The mapping
-
-```{math}
-\int : 
-\left\{
-    \begin{array}{lr}
-        \mathcal{R}([a, b]) \to \mathbb{R} \\
-        f \mapsto \int_a^b f(y) \, dy
-    \end{array}
-\right .
-```
-is a linear mapping, called the **integration functional**.
-
-**(c)** The primitive of an R-integrable function is continuous. The mapping
+**(g)** The primitive of an R-integrable function is continuous. The mapping
 
 ```{math}
 
@@ -616,82 +621,36 @@ is a linear mapping, called the **integration functional**.
 ```
 is a linear operator, called the **integration operator**.
 
-**(d)** The **uniform limit** of R-integrable functions is R-integrable,
-or, equivalently: $\mathcal{R}([a, b])$ is closed under the sup norm.
-We can swap limit and integral:
+The mapping
 
 ```{math}
-\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
+\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to \mathbb{R} \\
+        f \mapsto \int_a^b f(y) \, dy
+    \end{array}
+\right .
 ```
+is a linear mapping, called the **integration functional**.
+
 ````
 
 ````{prf:proof}
+We only prove **(f)**.
 
-The assertions (a) and (b) are a reformulation of {prf:ref}`thr-obvious-properties`(e).
-
-**(c)**
 Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
-Then, $f$ is bounded by some $M \in \mathbb{R}$, and by {prf:ref}`thr-obvious-properties`(d), we have for $x \in [a, b]$ and arbitrarily small $h$:
+Then, $f$ is bounded by some $M \in \mathbb{R}$, and by the triangular inequality (c), we have for $x \in [a, b]$ and arbitrarily small $h$:
 
 ```{math}
 \left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M
 ```
 which proves the continuity of $F$ at $x$.
-
-**(d)**
-Let $\{f_n\}$ be a sequence of functions on $[a, b]$ that converges uniformly to $f$. Let $\epsilon >0$ and $n_0$ be such that, for $n \ge n_0$:
-
-```{math}
-\left \lVert f_n - f \right \rVert_{\infty} < \epsilon 
-```
-
-Let 
-
-```{math}
-A_n = \int_a^b f_n(y) \, dy 
-```
-We have, for large $n, m$:
-
-```{math}
-\left | A_n - A_m \right | \le \int_a^b \left | f_n(y) - f_m(y) \right |  \, dy \le (b - a) \epsilon
-```
-
-So, the sequence $\{A_n\}$ is a Cauchy sequence, converges to some value $A$, and:
-
-```{math}
-\left | A_n - A \right | \le \epsilon
-```
-for some large, fixed $n$.
-As $f_n$ is R-integrable we can choose a partition $X$ of $[a, b]$ such that, 
-for any set of intermediate points $\{\xi_k\}$, we have:
-
-```{math}
-\left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right | < \epsilon
-```
-
-Then
-
-```{math}
-&\left | A - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
-& \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f(\xi_k)(x_{k+1}-x_k) \right | \\
-& \le \left | A - A_n \right | + \left | A_n - \sum_{k=0}^{n-1} f_n(\xi_k)(x_{k+1}-x_k) \right |  + \sum_{k=0}^{n-1} |f_n(\xi_k) - f(\xi_k)| (x_{k+1}-x_k) \\
-& < \epsilon + \epsilon + (b-a) \epsilon
-```
-
-This proves that $f$ is R-integrable and:
-
-```{math}
-\lim_{n \to \infty} \int_a^b f_n(y) \, dy = A = \int_a^b f(y) \, dy = \int_a^b \lim_{n \to \infty} f_n(y) \, dy 
-```
 ````
 
-A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
-It is not integrable because on every interval you'll find Riemann sums equal to $0$, and others equal to $1$.
-
-Riemann sums are just one of two methods of introducing Riemann integrals. The other method is based on step functions. 
-It turns out that Riemann sums are useful for the famous integral theorems 
-while step functions are often useful to show the integrability of certain functions, e.g. continuous functions.
-
+Riemann sums are one of two methods of introducing Riemann integrals. The other method is based on step functions. 
+It turns out that Riemann sums are useful for the famous integral theorems, 
+while step functions come in when we show the integrability of certain functions.
 
 ````{prf:definition} Step Functions
 :label: def-step-functions
@@ -699,8 +658,8 @@ while step functions are often useful to show the integrability of certain funct
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a partition $X$ of $[a, b]$.
 
 A function $\phi: [a, b] \to \mathbb{R}$ is called a **step function** iff it is constant on each interval $[x_k, x_{k+1})$
-of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$. This partition is called $X_{\phi}$, the associated ppartition of $\phi$.
-A Riemann sum $R(\phi, X_{\phi}, \xi)$ does not depend on $\xi$, and we can define:
+of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$. This partition is called $X_{\phi}$, the associated partition of $\phi$.
+A Riemann sum $R(\phi, X_{\phi}, \xi)$ of a step function $\phi$ does not depend on $\xi$, and we can define:
 
 ```{math}
 R(\phi) = R(\phi, X_{\phi}, x)= \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)
@@ -758,10 +717,11 @@ The suprema and infima exist because $f$ is bounded. We conclude:
 from which it follows that:
 
 ```{math}
+:label: equ-riemann-integrals-3b
 R(\phi)  \le R(f, X, \xi) \le R(\psi) 
 ```
 for any partition $X$ and and any set $\xi$ of intermediate points of $X$.
-Combining this with {eq}`equ-riemann-integrals-3`, we get:
+Combining {eq}`equ-riemann-integrals-3b` with {eq}`equ-riemann-integrals-3`, we get:
 
 ```{math}
 R(\phi) - \epsilon  \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon
@@ -785,7 +745,9 @@ R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon
 ```
 for any partition $X$ with $\mu(X) < \delta$ and any set $\xi$ of intermediate points of $X$.
 
-Here is the key idea: We are given $\epsilon$ and $T$. We choose a partition $X$ with small $\delta = \mu(X)$. 
+The key idea is to split $[a, b]$ into a "good" set $U$ and a "bad" set $V$ and to make $V$ arbitrarily small.
+
+We are given $\epsilon$ and $T$. We choose a partition $X$ with small $\delta = \mu(X)$. 
 Each X-interval $[x_k, x_{k+1})$ either fits into one of the T-intervals:
 
 ```{math}
@@ -796,7 +758,7 @@ or it straddles one of the $t_j$:
 ```{math}
 x_k \le  t_j \le x_{k+1}
 ```
-The latter case occurs at most $m$ times because there are $m$ points in $T$. 
+The latter case occurs at most $m$ times because there are exactly $m$ points in $T$. 
 
 We define a step function $\rho$ by:
  
@@ -832,18 +794,18 @@ Therefore, we have on $U$:
 \phi(x) \le \rho(x) \le  \psi(x)
 ```
 
+Summing over {eq}`equ-riemann-integrals-5a` gives:
+```{math}
+:label: equ-riemann-integrals-7
+\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) 
+```
+
 The length of $V$ is bounded by $m\delta$ because $V$ contains at most $m$ intervals, and the length of each interval is less or equal $\delta$.
 And, since $f$ is bounded, there is an $M \in \mathbb{R}$ such that we have on $V$:
 
 ```{math}
 :label: equ-riemann-integrals-6
 \phi(x) - M \le \rho(x) \le \psi(x) + M
-```
-
-Summing over {eq}`equ-riemann-integrals-5a` gives:
-```{math}
-:label: equ-riemann-integrals-7
-\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) 
 ```
 
 Summing over {eq}`equ-riemann-integrals-6` gives:
@@ -868,6 +830,9 @@ R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon
 ```
 ````
 
+A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
+It is not integrable because on every interval you'll find Riemann sums equal to $0$, and others equal to $1$.
+
 We now introduce some criteria of Riemann integrability. The proofs use step functions rather than Riemann sums.
 
 ````{prf:theorem} Riemann-Integrable Functions
@@ -885,8 +850,8 @@ R(\phi) = \int_a^b \phi(x) \, dx
 
 **(c)** Continuous functions are R-integrable.
 
-**(d)** Let $f$ be bounded and continuous except on a set $D$. 
-If $D$ has finitely many limit points, then $f$ is R-integrable. 
+**(d)** Let $f$ be bounded and continuous except on a set $D$ that is the finite union of converging sequences.
+Then $f$ is R-integrable. 
 ````
 
 ````{prf:proof} 
@@ -907,8 +872,14 @@ We set for $k = 0, \ldots, n-1$:
 & \phi(x) = \inf \{f(x) \mid x \in [x_k, x_{k+1}) \} \\
 & \psi(x) = \sup \{f(x) \mid x \in [x_k, x_{k+1}) \}
 ``` 
-The suprema and infima exist because $f$ is bounded.
- 
+The suprema and infima exist because $f$ is bounded. For (a), (b), and (c), we have to show that: 
+
+```{math}
+R(\psi) - R(\phi) < \epsilon
+```
+if $\mu(X)$ is sufficiently small.
+
+
 **(b)** Let $f$ be non-decreasing. We get:
 
 ```{math}
@@ -934,7 +905,7 @@ which are a recurrent pattern in the theory of integrals.
 
 **(d)** Let $f$ be bounded, continuous and $D$ the set of points where $f$ is discontinous. 
 We assume that $D$ has only one limit point $d^*$. If there is more than one, 
-simply partition $[a, b]$ into as many subintervals with one limit point in each.
+simply divide $[a, b]$ into as many subintervals with one limit point in each.
 
 We split the interval $[a, b]$ into a "good" set $U$ and a "bad" set $V$, as we did
 in the proof of {prf:ref}`thr-riemann-integrals`.  
@@ -954,7 +925,7 @@ for all $k \in K$, $\psi(x_k) - \phi(x_{k}) < \epsilon$ if $\mu(X) < \delta$. We
 \sum_{k\in K} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a)
 ```
 Since $|d - d^*| < \delta$ for all but finitely many $d \in D$, 
-all but finitely many elements of $D$ are convened in just one interval $[x_k, x_{k+1})$, 
+all but finitely many elements of $D$ are assembled in just one interval $[x_k, x_{k+1})$, 
 however small $\delta$ is. Therefore the number of elements of $L$, say $m$, is finite.
 And $|f|$ is bounded by some real number $M$. We have on $V$:
 
@@ -989,6 +960,53 @@ Here is the **Lebesgue Criterion**:
 Bounded functions are R-integrable iff their set of discontinuities has measure zero.
 ````
 
+
+````{prf:theorem} Uniform Limit of Riemann Integrable Functions
+:label: thr-limit-riemann-integrable
+
+The **uniform limit** of R-integrable functions is R-integrable,
+or, equivalently: $\mathcal{R}([a, b])$ is closed under the sup norm.
+We can swap limit and integral:
+
+```{math}
+:label: thr-limit-riemann-integrable-1
+\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx
+```
+````
+
+````{prf:proof}
+
+Let $\{f_n\}$ be a sequence of R-integrable functions on $[a, b]$ that converges uniformly to $f$.
+Let $\epsilon >0$ and $n_0$ be such that, for $n \ge n_0$:
+
+```{math}
+\left \lVert f_n - f \right \rVert_{\infty} < \epsilon 
+```
+
+which implies for any partition $X$ and any set $\xi$ of intermediate points:
+
+```{math}
+\left | R(f_n, X, \xi) - R(f, X, \xi) \right |  < \epsilon (b - a)
+```
+
+Let $\phi_n, \psi_n$ be step functions such that 
+
+```{math}
+&\phi_n \le f_n \le \psi_n \\
+&R(\psi) - R(\phi) < \epsilon
+```
+which implies:
+
+```{math}
+R(\phi) - \epsilon (b-a) \le R(f, X, \xi) \le  R(\psi) + \epsilon (b-a)
+```
+whenever $X$ is as least as fine grained as $X_{\phi}$ and $X_{\psi}$. 
+This proves that $f$ is integrable. Equation {eq}`thr-limit-riemann-integrable-1` follows from:
+
+```{math}
+\left | \int_a^b f_n(x) \, dx - \int_a^b f(x) \, dx \right | \le \int_a^b \left | f_n(x) - f(x) \right | \, dx \le (b - a) \left \lVert f_n - f \right \rVert_{\infty}
+```
+````
 
 ````{prf:theorem} Mean Value Theorem of Integration
 :label: thr-mean-value-integration
@@ -1027,7 +1045,7 @@ The rest is straightforward: multiply by $\phi(x)$ and integrate:
 ```
 ````
 
-
+(differentiable-functions)=
 ## Differentiable Functions
 
 ````{prf:definition} Derivatives
@@ -1046,7 +1064,8 @@ exists. $f'(x)$ is called the derivative of $f$ at $x$.
 The statement {eq}`equ-derivatives-1` is equivalent to
 
 ```{math}
-f(x+h) = f(x) + f'(x) \, h + o(h)
+:label: equ-derivatives-1a
+f(x+h) - f(x) = f'(x) \, h + o(h)
 ```
 
 which means that the term $f'(x) \, h$ is a linear approximation of $f$ at $x$.
@@ -1073,129 +1092,36 @@ Likewise, the $n$ times continuously differentiable functions over $[a, b]$ form
 **(b)** The mapping
 
 ```{math}
-\partial :f \mapsto f'
+\partial : 
+\left \{
+    \begin{array}{lr}
+        C^1 ([a, b]) \to C^0([a, b]) \\
+        f \mapsto f'
+    \end{array}
+\right .
 ```
 
-is called the **differential operator**. It is a linear mapping from $C^1 ([a, b])$ to $C^0 ([a, b])$.
+is a linear mapping, called the **differential operator**.
 
 Likewise, the mapping
 
 ```{math}
-\partial^2 :f \mapsto f''
+\partial^2 : 
+\left \{
+    \begin{array}{lr}
+        C^2 ([a, b]) \to C^0([a, b]) \\
+        f \mapsto f''
+    \end{array}
+\right .
 ```
 
-is called the **differential operator of second order**. It is a linear mapping from $C^2 ([a, b])$ to $C^0 ([a, b])$.
-Higher order differential operators $\partial^n$ are analogouosly defined.
-
-**(c)** The **uniform limit** of differentiable functions is differentiable, 
-and we can swap limit and differentiation:
-
-```{math}
-:label: equ-properties-derivatives-1
-\lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n
-```
-Likewise, we have:
-
-```{math}
-:label: equ-properties-derivatives-2
-\lim_{n \to \infty} \partial^n f_n = \partial^n \lim_{n \to \infty} f_n
-```
-
-This can be expressed as: $C^n ([a, b])$ is closed under the sup norm.
-
+is again a linear mapping, called the **differential operator of second order**.
+Higher order differential operators $\partial^n$ are analogously defined.
 ````
 
 ````{prf:proof} 
-
-Assertions **(a)** and **(b)** are obvious.
-
-**(c)** Let $\{f_n\}$ be a sequence in $C^1([a, b])$ that converges uniformly to $f$. 
-We have for any $\epsilon > 0$ and large $n$:
-
-```{math}
-&f(x+h) - f(x) \\
-&= (f(x+h) - f_n(x+h))  + (f_n(x+h) - f_n(x))  + (f_n(x) - f(x))  \\
-&= (f(x+h) - f_n(x+h))  + (hf'_n(x) +o(h))  + (f_n(x) - f(x))
-```
-thus:
-
-```{math}
-\left | f(x+h) - f(x) - hf'_n(x) \right | \le  \epsilon +  o(h) + \epsilon 
-```
-
-It follows that:
-
-```{math}
-\lim_{n \to \infty} f'_n = f'
-```
-
-which is {eq}`equ-properties-derivatives-1`. 
-To prove equation {eq}`equ-properties-derivatives-2`, apply {eq}`equ-properties-derivatives-1` to $f'$.
+omitted
 ````
-
-````{prf:theorem} Mean Value Theorem of Differentiation
-:label: thr-mean-value-differentiation
-
-
-**(a) Minimum, Maximum**
-
-Let $f: [a,b] \to \mathbb{R}$ be differentiable at $x \in (a,b)$.
-If $f$ has a local minimum or maximum in $x$ then $f'(x) = 0$.
-
-**(b) Rolle's Theorem**
-
-Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$.
-If $f(a) = f(b)$  then there is a $\xi \in (a,b)$ with $f'(\xi) = 0$.
-
-**(c) Mean Value Theorem of Differentiation**
-
-Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$
-Then there is a $\xi \in (a,b)$ with:
-
-```{math}
-f'(\xi) = \frac{f(b) - f(a)}{b - a}
-```
-````
-
-````{prf:proof} 
-
-**(a)** Let $x$ be a local maximum. Then, for smalll $h$:
-
-```{math}
-f(x+h) - f(x) \le 0
-```
-This gives for $h>0$
-
-```{math}
-\frac{1}{h}(f(x+h) - f(x)) \le 0
-```
-and for $h<0$
-```{math}
-\frac{1}{h}(f(x+h) - f(x)) \ge 0
-```
-which implies:
-
-```{math}
-\lim_{h \to 0}\frac{1}{h}(f(x+h) - f(x)) = 0
-```
-**(b)**
-$f$ is either constant or it assumes its minimum and its maximum at some $\xi \in (a, b)$.
-We know from (a) that $f'(\xi) = 0$.
-
-**(c)** We apply (b) to the function $g$ defined by
-
-```{math}
-g(x) = f(x) - \frac{f(b)- f(a)}{b - a}(x - a)
-```
-We have $g(a) = g(b) = f(a)$, and the derivative is:
-
-```{math}
-g'(x) = f'(x) - \frac{f(b)- f(a)}{b - a}
-```
-Through (b) we know that there is a $\xi \in (a, b)$ with $g'(x) = 0$. 
-This is the assertion.
-````
-
 
 ````{prf:theorem} Differentiation Rules
 :label: thr-differentiation-rules
@@ -1288,9 +1214,71 @@ f(x+h)g(x+h) &= (f(x) + f'(x)h + o(h))(g(x) + g'(x)h + o(h)) \\
   &= f(x)g(x) + (f'(x)g(x) + f(x)g'(x))h + o(h)
 ```
 which is the desired result. 
-
 ````
 
+````{prf:theorem} Mean Value Theorem of Differentiation
+:label: thr-mean-value-differentiation
+
+**(a) Minimum, Maximum**
+
+Let $f: [a,b] \to \mathbb{R}$ be differentiable at $x \in (a,b)$.
+If $f$ has a local minimum or maximum in $x$ then $f'(x) = 0$.
+
+**(b) Rolle's Theorem**
+
+Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$.
+If $f(a) = f(b)$  then there is a $\xi \in (a,b)$ with $f'(\xi) = 0$.
+
+**(c) Mean Value Theorem of Differentiation**
+
+Let $f: [a,b] \to \mathbb{R}$ be continous and differentiable on $(a,b)$
+Then there is a $\xi \in (a,b)$ with:
+
+```{math}
+f'(\xi) = \frac{f(b) - f(a)}{b - a}
+```
+````
+
+````{prf:proof} 
+
+**(a)** Let $x$ be a local maximum. Then, for smalll $h$:
+
+```{math}
+f(x+h) - f(x) \le 0
+```
+This gives for $h>0$
+
+```{math}
+\frac{1}{h}(f(x+h) - f(x)) \le 0
+```
+and for $h<0$
+```{math}
+\frac{1}{h}(f(x+h) - f(x)) \ge 0
+```
+which implies:
+
+```{math}
+\lim_{h \to 0}\frac{1}{h}(f(x+h) - f(x)) = 0
+```
+**(b)**
+$f$ is either constant or it assumes its minimum and its maximum at some $\xi \in (a, b)$.
+We know from (a) that $f'(\xi) = 0$.
+
+**(c)** We apply (b) to the function $g$ defined by
+
+```{math}
+g(x) = f(x) - \frac{f(b)- f(a)}{b - a}(x - a)
+```
+We have $g(a) = g(b) = f(a)$, and the derivative is:
+
+```{math}
+g'(x) = f'(x) - \frac{f(b)- f(a)}{b - a}
+```
+Through (b) we know that there is a $\xi \in (a, b)$ with $g'(x) = 0$. 
+This is the assertion.
+````
+
+(main-theorem-of-calculus)=
 ## Main Theorem of Calculus
 
 ````{prf:theorem} Main Theorem of Calculus
@@ -1346,7 +1334,7 @@ are inverse to each other:
 ````{prf:proof}
 
 **(a)** 
-The proof relies on the [Mean Value Theorem of Integration](#thr-mean-value-integration).
+The proof relies on the [mean value theorem of integration](#thr-mean-value-integration).
 We prove in fact a slightly stronger assertion:
 
 If $f$ is continuous on a neighbourhood of $x \in [a, b]$, then $F'(x) = f(x)$.
@@ -1358,7 +1346,7 @@ Let $x$ be such a point. Then, for any $h > 0$ we have:
 ```
 for some $\xi \in [x,x+h]$, and $f(\xi) \to f(x)$ as $h \to 0$ since $f$ is continuous near $x$.
 
-**(b)** The proof relies on the [Mean Value Theorem of Differentiation ](#thr-mean-value-differentiation).
+**(b)** The proof relies on the [mean value theorem of differentiation ](#thr-mean-value-differentiation).
 
 If $f$ is differentiable, then it is integrable.
 Let $\{x_k\}$be a partition of $[a, b]$, and $\{\xi_k\}$ a set of intermediate points such that:
@@ -1377,10 +1365,8 @@ and we get:
 &= f(b) - f(a)
 ```
 The final reasoning is standard: We choose partitions $\{x_k\}$ with arbitrarily small granularity. 
-The approximation in [](#equ-main-theorem-calculus-1) is thus driven to equality.
-This is our first encounter with the *collapsing sum pattern*, which features as a running gag in higher calculus. 
-
-
+The approximation in {eq}`equ-main-theorem-calculus-1` is thus driven to equality.
+The last equation in {eq}`equ-main-theorem-calculus-1` is again the **collapsing sum pattern**. 
 ````
 
 ````{prf:theorem} Integration Rules
@@ -1399,7 +1385,7 @@ Let $f, g \in C^1([a,b])$. Then
 
 **(b) Substitution Rule**
 
-Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b)])$. Then
+Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b)])$ with $g' \neq 0$. Then
 
 ```{math}
 \int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx
@@ -1407,7 +1393,6 @@ Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b)])$. Then
 ````
 
 ````{prf:proof} 
-
 **(a)** We know from {prf:ref}`thr-differentiation-rules` that:
 ```{math}
 (fg)' = f'g + fg'
@@ -1427,12 +1412,51 @@ f \, g \vert^b_a = \int_a^b (fg)'(x) \, dx  = \int_a^b f'(x)g(x) \, dx  + \int_a
 and with {prf:ref}`thr-main-theorem-calculus` we conclude:
 
 ```{math}
-&f \circ g \vert^b_a = f(g(b)) - f(g(a)) = \int_{g(a)}^{g(b)} f'(y) \, dy \\
-&= \int_a^b (f\circ g)'(x) \, dx  = \int_a^b f'(g(x))g'(x) \, dx
+&f \circ g \vert_u^v  = \int_{u}^{v} (f \circ g)'(x) \, dx = \int_u^v f'(g(x))g'(x) \, dx \\
+                     &= f(g(v)) - f(g(u)) = \int_{g(u)}^{g(v)} f'(y) \, dy 
 ```
+Setting $a = g(u), b = g(v)$ gives us:
+
+```{math}
+\int_a^b f'(y) \, dy  = \int_{g^{-1}(a)}^{g^{-1}(b)} f'(g(x))g'(x) \, dx
+```
+
 
 ````
 
+````{prf:theorem} Limit of Differentiable Functions
+:label: thr-limit-differentiable-functions
+
+Let $\{f_n\}$ converge pointwise to some function $f$, with $f_n \in C^1([a,b])$.  
+Let $\{f'_n\}$ converge uniformly to some function $g$. Then $f$ is differentiable, and $g = f'$, or:
+
+```{math}
+\lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n
+```
+
+where the limit is uniform.
+````
+
+
+````{prf:proof} 
+
+From the {prf:ref}`main theorem of calculus (a) <thr-main-theorem-calculus>` we get, since all $f'_n$ are continuous:
+
+```{math}
+f_n(x) = f_n(a) + \int_a^x f'_n(y) \, dy
+```
+
+From {prf:ref}`thr-limit-riemann-integrable` we get, since the convergence of $\{f'_n\}$ is uniform::
+
+```{math}
+f(x) = \lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} \left ( f_n(a) + \int_a^x f'_n(y) \, dy \right )= f(a) + \int_a^x g(y) \, dy
+```
+
+Therefore, again by the {prf:ref}`main theorem of calculus (a) <thr-main-theorem-calculus>`, $f$ is differentiable and $f' = g$.
+````
+
+
+(taylor-theorem)=
 ## Taylor's Theorem
 
 Derivatives are about local changes: How does a function $f$ behave in a neighbourhood of some point $x$? The Taylor series allows us to express
@@ -1496,7 +1520,7 @@ f(u) &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)
 ```
 ````
 
-
+(little-o-big-O)=
 ## Little o, Big O
 
 Little o means: $f$ tends to $0$ faster than $g$, or, equivalently, $f/g$ tends to $0$:
@@ -1523,3 +1547,47 @@ Big O means: $f$ grows not faster than $g$, or, equivalently, $f/g$ is bounded a
 ```
 
 <div style="margin-bottom: 100px;"></div>
+
+
+
+
+**(c)** The **uniform limit** of differentiable functions is differentiable, 
+and we can swap limit and differentiation:
+
+```{math}
+:label: equ-properties-derivatives-1
+\lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n
+```
+Likewise, we have:
+
+```{math}
+:label: equ-properties-derivatives-2
+\lim_{n \to \infty} \partial^n f_n = \partial^n \lim_{n \to \infty} f_n
+```
+
+This can be expressed as: $C^n ([a, b])$ is closed under the sup norm.
+
+
+
+**(c)** Let $\{f_n\}$ be a sequence in $C^1([a, b])$ that converges uniformly to $f$. 
+We have for any $\epsilon > 0$ and large $n$:
+
+```{math}
+&f(x+h) - f(x) \\
+&= (f(x+h) - f_n(x+h))  + (f_n(x+h) - f_n(x))  + (f_n(x) - f(x))  \\
+&= hf'_n(x) + o(h) + (f(x+h) - f_n(x+h)) + (f_n(x) - f(x))
+```
+Letting $n \to \infty$ gives
+
+```{math}
+f(x+h) - f(x) = hf'(x) + o(h)
+```
+
+It follows that:
+
+```{math}
+\lim_{n \to \infty} f'_n = f'
+```
+
+which is {eq}`equ-properties-derivatives-1`. 
+To prove equation {eq}`equ-properties-derivatives-2`, apply {eq}`equ-properties-derivatives-1` to $f'$.
