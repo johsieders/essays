@@ -1459,7 +1459,18 @@ Let <span class="math notranslate nohighlight">\(\{f'_n\}\)</span> converge unif
 \[f(x) = \lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} \left ( f_n(a) + \int_a^x f'_n(y) \, dy \right )= f(a) + \int_a^x g(y) \, dy\]</div>
 <p>Therefore, again by the <a class="reference internal" href="#thr-main-theorem-calculus">main theorem of calculus (a)</a>, <span class="math notranslate nohighlight">\(f\)</span> is differentiable and <span class="math notranslate nohighlight">\(f' = g\)</span>.</p>
 </div>
+<div class="proof remark admonition" id="rem-counterexample">
+<p class="admonition-title"><span class="caption-number">Remark 8 </span> (A Counterexample)</p>
+<section class="remark-content" id="proof-content">
+<p>The uniform limit of continuously differentiable functions is emphatically not always differentiable.
+A simple example is:</p>
+<div class="math notranslate nohighlight">
+\[f_n(x) = \sqrt{x^2 + \frac{1}{n}}\]</div>
+<p>The uniform limit is the absolute value function that features a corner at <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} f_n(x) = |x|\]</div>
 </section>
+</div></section>
 <section id="taylor-s-theorem">
 <span id="taylor-theorem"></span><h2>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Link to this heading">#</a></h2>
 <p>Derivatives are about local changes: How does a function <span class="math notranslate nohighlight">\(f\)</span> behave in a neighbourhood of some point <span class="math notranslate nohighlight">\(x\)</span>? The Taylor series allows us to express
