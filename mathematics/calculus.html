@@ -490,11 +490,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="first-steps-in-calculus">
 <h1>First Steps in Calculus<a class="headerlink" href="#first-steps-in-calculus" title="Link to this heading">#</a></h1>
-<p><em>Johannes Siedersleben, December 2025</em></p>
+<p><em>Johannes Siedersleben, January 2026</em></p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>Calculus is all about infinitesimally small numbers, a subject the Greeks didn’t understand.
-Zeno’s paradoxes aren’t paradoxes anymore; today, they are easily explained (see <a class="reference internal" href="#zeno-paradoxes"><span class="std std-ref">Zeno Paradoxes</span></a>).</p>
+<p>“All men are mortal. Socrates is a man, so Socrates is mortal.”
+Here, we are <strong>applying</strong> a true statement (“all men are mortal”) to a particular object (“Socrates”),
+and arriving at the conclusion “Socrates is mortal”, another true statement.
+Are you impressed? Probably not. Let’s try something better.</p>
+<p>“A function is differentiable if the differential quotient exists.”
+<strong>Applying</strong> this definition (a true statement) to the product of two differentiable functions
+produces the product rule in two lines of straightforward calculations, proving
+that the product is indeed differentiable (another true statement). <strong>Integrating the product rule</strong> gives
+the integration-by-parts rule. Taylor’s towering theorem is proven by <strong>applying</strong> integration by parts as many times as you like
+or are allowed to, and this is how the power series in Taylor’s formula originates.
+What does it mean to “integrate the product rule”? This is another way of saying “<strong>apply</strong>
+the main theorem of integration”. To prove the latter, you <strong>apply</strong> the mean value theorems
+of integration and differentiation, and you prove these by <strong>applying</strong> the intermediate value theorem
+which, in turn, is proven by <strong>applying</strong> the theorem on nested intervals, which you prove by <strong>applying</strong>
+the theorem of Bolzano-Weierstrass. And this relies on the fact that <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete.</p>
 <p>In the companion paper <a class="reference internal" href="numbers.html#naturals-to-reals"><span class="std std-ref">From Naturals to Reals</span></a>, we present <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> as the smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>:
 There are no holes in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, every Cauchy sequence converges. That is the starting point of this paper.
 It presents a straight path with no gaps to two pivotal results:</p>
@@ -503,29 +516,32 @@ It presents a straight path with no gaps to two pivotal results:</p>
 <li><p><a class="reference internal" href="#thr-taylor"><span class="xref myst">Taylor’s Theorem</span></a>.</p></li>
 </ol>
 <p>These results will, in turn, be the starting point of future papers.</p>
-<p>I was led by three rules:</p>
+<p>I was led by these rules:</p>
 <ol class="arabic simple">
 <li><p>No detours, no blind alleys, no embellishments. Every definition, every theorem serves a purpose.</p></li>
-<li><p>Full proofs whenever it’s not obvious. The chain of reasoning is complete from the start to the end.</p></li>
-<li><p>No proofs whenever it’s obvious.</p></li>
+<li><p>No proofs whenever it’s obvious. Example: Proving the linearity of differentiation or integration is a useful exercise, but it is boring and unilluminating. I left it out.</p></li>
+<li><p>No proofs when they are not part of the story. Example: Proving the <a class="reference internal" href="#rem-lebesgue-criterion">Lebesgue criterion</a> is hard work and not essential for what follows.
+I left the proof out, but the criterion is too interesting to be passed over.</p></li>
+<li><p>Full proofs otherwise. The chain of reasoning is complete from the start to the end. This was the point of my opening example.</p></li>
 </ol>
-<p>What is obvious? Mathematicians are notorious for calling everything easy, obvious or plain.
-I remember Donald Knuth’s classification of exercises from 00 to 50 with a shudder. Here is my take on it:</p>
-<ul class="simple">
-<li><p>Proving the linearity of differentiation or integration is a useful exercise, but it is boring and not illuminating. I left it out.</p></li>
-<li><p>Proving the differentiation rules with the <a class="reference internal" href="#little-o-big-o"><span class="std std-ref">little-o notation</span></a> is an effortless delight.</p></li>
-<li><p>Proving that the Riemann integral of a uniform limit is the limit of the integrals requires some effort, but this does not diminish the pleasure.</p></li>
-<li><p>Proving the equivalence of Riemann sums and step functions requires considerable attention, but again, the pleasure far outweighs the trouble.</p></li>
-<li><p>Proving the <a class="reference internal" href="#rem-lebesgue-criterion">Lebesgue criterion</a> is hard work. I left the proof out, but the criterion is too interesting to be passed over.
-This is the only exception to rule (1).</p></li>
-</ul>
 <p>We restrict ourselves to finite intervals <span class="math notranslate nohighlight">\([a, b]\)</span> for no other reason than to keep the paper short.
 The backbone of our story is formed by the vector spaces <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> of Riemann-integrable functions,
 and the spaces <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> of <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions.
-The differential operator <strong><span class="math notranslate nohighlight">\(\partial\)</span></strong> moves functions down from <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n-1}([a, b])\)</span>,
-and the integral operator <strong><span class="math notranslate nohighlight">\(\int\)</span></strong> moves them up from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{0}([a, b])\)</span> and from <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n+1}([a, b])\)</span>.</p>
-<p>XXX diagram vector spaces XXX</p>
-<p>XXX diagram chapters XXX</p>
+The integral operator <strong><span class="math notranslate nohighlight">\(\int\)</span></strong> shifts functions to the right from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{0}([a, b])\)</span> and further on to <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span>,
+and the differential operator <strong><span class="math notranslate nohighlight">\(\partial\)</span></strong> shifts them to the left from <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n-1}([a, b])\)</span>, see <a class="reference internal" href="#diagram-1.png"><span class="xref myst">The Backbone</span></a>.</p>
+<p>Note: I prefer the symbol <span class="math notranslate nohighlight">\(\partial\)</span> for the differential operator over the more frequent <span class="math notranslate nohighlight">\(D\)</span>.</p>
+<figure class="align-center" id="id92">
+<img alt="../_images/calculus-diagram-1.png" src="../_images/calculus-diagram-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The Backbone</span><a class="headerlink" href="#id92" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id93">
+<img alt="../_images/calculus-diagram-2.png" src="../_images/calculus-diagram-2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The Roadmap</span><a class="headerlink" href="#id93" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Here is the roadmap: After revising the <a class="reference internal" href="#topology-of-r"><span class="std std-ref">topology</span></a> of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>
 we study <a class="reference internal" href="#compact-sets"><span class="std std-ref">compact sets</span></a>
 and prove the <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass theorem</span></a>,
@@ -536,18 +552,18 @@ form a vector space closed under the sup-norm. A key result is the <a class="ref
 <p><a class="reference internal" href="#riemann-integrable-functions"><span class="std std-ref">Riemann integrals</span></a> can be introduced
 by either <a class="reference internal" href="#def-riemann-integrals">Riemann sums</a> or <a class="reference internal" href="#def-step-functions">step functions</a>.
 We show the equivalence of these two approaches.
-They are equally important; we will use whichever is more appropriate later on.
+They are equally important; later on, we will use whichever is more appropriate.
 Riemann-integrable functions also form a vector space closed under the sup-norm.
 A key result is the <a class="reference internal" href="#thr-mean-value-integration">mean value theorem of integration</a>, which depends on the intermediate value theorem.</p>
 <p>In the chapter on <a class="reference internal" href="#differentiable-functions"><span class="std std-ref">differentiable functions</span></a>,
-we prove the well-known <a class="reference internal" href="#thr-differentiation-rules">differentiation rules</a>
-and show that the spaces <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> are vector spaces that is not closed under the sup-norm:
-the uniform limit of continuously differentiable functions is not necessarily differentiable.
+we prove the well-known <a class="reference internal" href="#thr-differentiation-rules">differentiation rules</a>.
 A key result is the <a class="reference internal" href="#thr-mean-value-differentiation">mean value theorem of differentiation</a>,
 which also depends on the intermediate value theorem.</p>
 <p>Integration and differentiation are then combined in the <a class="reference internal" href="#thr-main-theorem-calculus"><span class="xref myst">Main Theorem of Calculus</span></a>.
 Its proof is a simple application of the mean value theorems of integration and differentiation.
-The <a class="reference internal" href="#thr-integration-rules">integration rules</a> then follow effortlessly from the differentiation rules and the Main Theorem.</p>
+The <a class="reference internal" href="#thr-integration-rules">integration rules</a> then follow effortlessly from the differentiation rules and the Main Theorem.
+We see that, for the limit of differentiable functions to be differentiable, the <strong>derivatives</strong> must be uniformly convergent;
+the vector spaces <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> are <strong>not</strong> closed under the sup-norm.</p>
 <p>The apogee of this short paper is <a class="reference internal" href="#thr-taylor">Taylor's theorem</a>, which is proven by a simple application of integration by parts.</p>
 <p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id88" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
 <span id="id2">[<a class="reference internal" href="#id89" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id90" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id91" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
@@ -555,6 +571,8 @@ to name but a few prominent examples.</p>
 </section>
 <section id="zeno-s-paradoxes">
 <span id="zeno-paradoxes"></span><h2>Zeno’s Paradoxes<a class="headerlink" href="#zeno-s-paradoxes" title="Link to this heading">#</a></h2>
+<p>Calculus is all about infinitesimally small numbers, a subject the Greeks didn’t understand.
+Zeno’s paradoxes aren’t paradoxes anymore; today, they are easily explained.</p>
 <section id="achilles-and-the-tortoise">
 <h3>Achilles and the Tortoise<a class="headerlink" href="#achilles-and-the-tortoise" title="Link to this heading">#</a></h3>
 <p>Imagine the tortoise and Achilles starting a race with the tortiose <span class="math notranslate nohighlight">\(10\)</span> metres in the lead,
@@ -1460,7 +1478,7 @@ Let <span class="math notranslate nohighlight">\(\{f'_n\}\)</span> converge unif
 <p>Therefore, again by the <a class="reference internal" href="#thr-main-theorem-calculus">main theorem of calculus (a)</a>, <span class="math notranslate nohighlight">\(f\)</span> is differentiable and <span class="math notranslate nohighlight">\(f' = g\)</span>.</p>
 </div>
 <div class="proof remark admonition" id="rem-counterexample">
-<p class="admonition-title"><span class="caption-number">Remark 8 </span> (A Counterexample)</p>
+<p class="admonition-title"><span class="caption-number">Remark 8 </span> (Counterexample)</p>
 <section class="remark-content" id="proof-content">
 <p>The uniform limit of continuously differentiable functions is emphatically not always differentiable.
 A simple example is:</p>
