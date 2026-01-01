@@ -1,11 +1,25 @@
 # First Steps in Calculus
 
-*Johannes Siedersleben, December 2025*
+*Johannes Siedersleben, January 2026*
 
 ## Introduction
 
-Calculus is all about infinitesimally small numbers, a subject the Greeks didn't understand.
-Zeno's paradoxes aren't paradoxes anymore; today, they are easily explained (see {ref}`Zeno Paradoxes <zeno-paradoxes>`).
+"All men are mortal. Socrates is a man, so Socrates is mortal." 
+Here, we are **applying** a true statement ("all men are mortal") to a particular object ("Socrates"), 
+and arriving at the conclusion "Socrates is mortal", another true statement.
+Are you impressed? Probably not. Let's try something better.
+
+"A function is differentiable if the differential quotient exists."
+**Applying** this definition (a true statement) to the product of two differentiable functions 
+produces the product rule in two lines of straightforward calculations, proving
+that the product is indeed differentiable (another true statement). **Integrating the product rule** gives
+the integration-by-parts rule. Taylor's towering theorem is proven by **applying** integration by parts as many times as you like
+or are allowed to, and this is how the power series in Taylor's formula originates.
+What does it mean to "integrate the product rule"? This is another way of saying "**apply**
+the main theorem of integration". To prove the latter, you **apply** the mean value theorems 
+of integration and differentiation, and you prove these by **applying** the intermediate value theorem
+which, in turn, is proven by **applying** the theorem on nested intervals, which you prove by **applying**
+the theorem of Bolzano-Weierstrass. And this relies on the fact that $\mathbb{R}$ is complete.
 
 In the companion paper {ref}`From Naturals to Reals <naturals-to-reals>`, we present $\mathbb{R}$ as the smallest complete field containing $\mathbb{Q}$: 
 There are no holes in $\mathbb{R}$, every Cauchy sequence converges. That is the starting point of this paper.
@@ -14,35 +28,37 @@ It presents a straight path with no gaps to two pivotal results:
 1. The [Main Theorem of Calculus](thr-main-theorem-calculus), which states that differentiation and integration are inverse operations.
 2. [Taylor's Theorem](#thr-taylor).
 
-These results will, in turn, be the starting point of future papers.
+These results will, in turn, be the starting point of future papers. 
 
-I was led by three rules:
+I was led by these rules:
 
-1. No detours, no blind alleys, no embellishments. Every definition, every theorem serves a purpose. 
-2. Full proofs whenever it's not obvious. The chain of reasoning is complete from the start to the end.
-3. No proofs whenever it's obvious. 
-
-
-
-What is obvious? Mathematicians are notorious for calling everything easy, obvious or plain. 
-I remember Donald Knuth's classification of exercises from 00 to 50 with a shudder. Here is my take on it:
-
-* Proving the linearity of differentiation or integration is a useful exercise, but it is boring and not illuminating. I left it out.
-* Proving the differentiation rules with the {ref}`little-o notation <little-o-big-O>` is an effortless delight.
-* Proving that the Riemann integral of a uniform limit is the limit of the integrals requires some effort, but this does not diminish the pleasure.
-* Proving the equivalence of Riemann sums and step functions requires considerable attention, but again, the pleasure far outweighs the trouble.
-* Proving the {prf:ref}`Lebesgue criterion <rem-lebesgue-criterion>` is hard work. I left the proof out, but the criterion is too interesting to be passed over. 
-  This is the only exception to rule (1).
+1. No detours, no blind alleys, no embellishments. Every definition, every theorem serves a purpose.
+2. No proofs whenever it's obvious. Example: Proving the linearity of differentiation or integration is a useful exercise, but it is boring and unilluminating. I left it out.
+3. No proofs when they are not part of the story. Example: Proving the {prf:ref}`Lebesgue criterion <rem-lebesgue-criterion>` is hard work and not essential for what follows.
+   I left the proof out, but the criterion is too interesting to be passed over.
+4. Full proofs otherwise. The chain of reasoning is complete from the start to the end. This was the point of my opening example.
 
 We restrict ourselves to finite intervals $[a, b]$ for no other reason than to keep the paper short.
 The backbone of our story is formed by the vector spaces $\mathcal{R}([a, b])$ of Riemann-integrable functions, 
-and the spaces $C^n([a, b])$ of $n$ times continuously differentiable functions. 
-The differential operator **$\partial$** moves functions down from $C^n([a, b])$ to $C^{n-1}([a, b])$, 
-and the integral operator **$\int$** moves them up from $\mathcal{R}([a, b])$ to $C^{0}([a, b])$ and from $C^{n}([a, b])$ to $C^{n+1}([a, b])$.
+and the spaces $C^n([a, b])$ of $n$ times continuously differentiable functions.
+The integral operator **$\int$** shifts functions to the right from $\mathcal{R}([a, b])$ to $C^{0}([a, b])$ and further on to $C^{n}([a, b])$, 
+and the differential operator **$\partial$** shifts them to the left from $C^n([a, b])$ to $C^{n-1}([a, b])$, see [The Backbone](#diagram-1.png).
 
-XXX diagram vector spaces XXX
+Note: I prefer the symbol $\partial$ for the differential operator over the more frequent $D$. 
 
-XXX diagram chapters XXX
+```{figure} calculus-diagram-1.png
+:label: diagram-1
+:align: center
+
+The Backbone
+```
+
+```{figure} calculus-diagram-2.png
+:label: diagram-2
+:align: center
+
+The Roadmap
+```
 
 Here is the roadmap: After revising the {ref}`topology <topology-of-r>` of $\mathbb{R}$ 
 we study {ref}`compact sets <compact-sets>` 
@@ -57,20 +73,20 @@ The next two chapters are independent and can be read in any order.
 {ref}`Riemann integrals <riemann-integrable-functions>` can be introduced 
 by either {prf:ref}`Riemann sums <def-riemann-integrals>` or {prf:ref}`step functions <def-step-functions>`.
 We show the equivalence of these two approaches. 
-They are equally important; we will use whichever is more appropriate later on.
+They are equally important; later on, we will use whichever is more appropriate.
 Riemann-integrable functions also form a vector space closed under the sup-norm. 
 A key result is the {prf:ref}`mean value theorem of integration <thr-mean-value-integration>`, which depends on the intermediate value theorem.
  
 In the chapter on {ref}`differentiable functions <differentiable-functions>`, 
-we prove the well-known {prf:ref}`differentiation rules <thr-differentiation-rules>`
-and show that the spaces $C^{n}([a, b])$ are vector spaces that is not closed under the sup-norm: 
-the uniform limit of continuously differentiable functions is not necessarily differentiable.
+we prove the well-known {prf:ref}`differentiation rules <thr-differentiation-rules>`.
 A key result is the {prf:ref}`mean value theorem of differentiation <thr-mean-value-differentiation>`, 
 which also depends on the intermediate value theorem.
 
 Integration and differentiation are then combined in the [Main Theorem of Calculus](thr-main-theorem-calculus). 
 Its proof is a simple application of the mean value theorems of integration and differentiation. 
 The {prf:ref}`integration rules <thr-integration-rules>` then follow effortlessly from the differentiation rules and the Main Theorem.
+We see that, for the limit of differentiable functions to be differentiable, the **derivatives** must be uniformly convergent;
+the vector spaces $C^{n}([a, b])$ are **not** closed under the sup-norm.
 
 The apogee of this short paper is {prf:ref}`Taylor's theorem <thr-taylor>`, which is proven by a simple application of integration by parts.
  
@@ -78,8 +94,12 @@ This material has been published many times, see {cite}`heuser2009analysis1`,
 {cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
 to name but a few prominent examples.
 
+
 (zeno-paradoxes)=
 ## Zeno's Paradoxes
+
+Calculus is all about infinitesimally small numbers, a subject the Greeks didn’t understand. 
+Zeno’s paradoxes aren’t paradoxes anymore; today, they are easily explained.
 
 ### Achilles and the Tortoise
 
