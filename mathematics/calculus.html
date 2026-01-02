@@ -205,6 +205,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/newton.html">Newton</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="current nav bd-sidenav">
@@ -639,20 +640,17 @@ The set <span class="math notranslate nohighlight">\(A\)</span> is <strong>open<
 <section class="lemma-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span>. Then:</p>
 <div class="math notranslate nohighlight">
-\[A' = \bar{A} - A\]</div>
+\[A' \subseteq \bar{A}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(a \in \bar{A} - A\)</span>. Assume that <span class="math notranslate nohighlight">\(a \in \bar{A}^c\)</span>. Then:</p>
+<p>Proof. Let <span class="math notranslate nohighlight">\(a \in A' - A\)</span>. Then, by definition:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\exists \epsilon &gt; 0: U_{\epsilon}(a) \subseteq \bar{A}^c \\
-&amp;\Longrightarrow U_{\epsilon}(a) \cap \bar{A} = \emptyset\end{split}\]</div>
-<p>which is a contradiction. So, <span class="math notranslate nohighlight">\(a \in \bar{A}\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(a \in A' - A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> closed, and <span class="math notranslate nohighlight">\(A \subseteq B\)</span>. Then <span class="math notranslate nohighlight">\(B^c\)</span> is open and we have:</p>
+\[\forall \epsilon &gt; 0: U_{\epsilon}(a) \cap A \neq \emptyset\]</div>
+<p>Let <span class="math notranslate nohighlight">\(B \supseteq A\)</span> be closed, so <span class="math notranslate nohighlight">\(B^c \subseteq A^c\)</span> is open. Assume that <span class="math notranslate nohighlight">\(a \in B^c\)</span>. Then, by definition:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\forall \epsilon &gt; 0: U_{\epsilon}(a) \cap A \neq \emptyset \\
-&amp;\Longrightarrow \forall \epsilon &gt; 0: U_{\epsilon}(a) \not\subseteq B^c \\
-&amp;\Longrightarrow a \notin B^c \\
-&amp;\Longrightarrow a \in B\end{split}\]</div>
+\[\exists \epsilon &gt; 0: U_{\epsilon}(a) \subseteq B^c \subseteq A^c\]</div>
+<p>which implies the contradiction <span class="math notranslate nohighlight">\(U_{\epsilon}(a) \cap A = \emptyset\)</span>,
+therefore <span class="math notranslate nohighlight">\(a \in B\)</span> for every closed superset of <span class="math notranslate nohighlight">\(A\)</span>, hence <span class="math notranslate nohighlight">\(a \in \bar{A}\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="thr-nested-intervals">
 <p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Nested Intervals)</p>

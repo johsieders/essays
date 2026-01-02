@@ -14,7 +14,17 @@ instances, but they are never perfectly round. Archimedes' formula is exact for 
 but approximate otherwise. As Einstein sadly commented {cite}`einstein1950laws`: As far as the laws of mathematics refer to reality,
 they are not certain; and as far as they are certain, they do not refer to reality.
 
-Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less particles with positive mass, and calculated how they move {cite}`susskind2014classical`. Raindrops, apples, and planets are tangible instances, but of course they do have shape, volume and many other properties. Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise. Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity. This is the stage, and the actors are volume-less particles. You need at least one of them; if there are many, it's called statistical mechanics. Newtonian mechanics is a model (in the mind, on paper, or on a computer) that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop is completely unaware of Newton's laws, raindrops have always fallen in the same way. Newton's laws have less effect on objects in motion than a thermometer has on temperature.
+Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. 
+He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less 
+particles with positive mass, and calculated how they move {cite}`susskind2014classical`. 
+aindrops, apples, and planets are tangible instances, but of course they do have shape, volume and many other properties. 
+Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise. 
+Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity. 
+This is the stage, and the actors are volume-less particles. You need at least one of them; if there are many, 
+it's called statistical mechanics. Newtonian mechanics is a model (in the mind, on paper, or on a computer) 
+that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop 
+is completely unaware of Newton's laws, raindrops have always fallen in the same way. Newton's laws have less effect 
+on objects in motion than a thermometer has on temperature.
 
 Imagine Einstein (1905) studying two or more particles moving at high relative speed, a case where classical
 mechanics fails {cite}`susskind2017special`. He kept the Newtonian theatre (four-dimensional space-time and particles), and included the speed
