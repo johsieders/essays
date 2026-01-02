@@ -9,32 +9,34 @@ Here, we are **applying** a true statement ("all men are mortal") to a particula
 and arriving at the conclusion "Socrates is mortal", another true statement.
 Are you impressed? Probably not. Let's try something better.
 
-"A function is differentiable if the differential quotient exists."
+"A function is differentiable if the {prf:ref}`derivative <def-derivatives>` exists."
 **Applying** this definition (a true statement) to the product of two differentiable functions 
-produces the product rule in two lines of straightforward calculations, proving
+produces the {prf:ref}`product rule  <thr-differentiation-rules>` in two lines of straightforward calculations, proving
 that the product is indeed differentiable (another true statement). **Integrating the product rule** gives
-the integration-by-parts rule. Taylor's towering theorem is proven by **applying** integration by parts as many times as you like
+the {prf:ref}`integration-by-parts rule <thr-integration-rules>`.
+{prf:ref}`Taylor's theorem <thr-taylor>` is proven by **applying** integration by parts as many times as you like
 or are allowed to, and this is how the power series in Taylor's formula originates.
-What does it mean to "integrate the product rule"? This is another way of saying "**apply**
-the main theorem of integration". To prove the latter, you **apply** the mean value theorems 
-of integration and differentiation, and you prove these by **applying** the intermediate value theorem
-which, in turn, is proven by **applying** the theorem on nested intervals, which you prove by **applying**
-the theorem of Bolzano-Weierstrass. And this relies on the fact that $\mathbb{R}$ is complete.
+What does it mean to "integrate the product rule"? This is another way of saying "**apply** the {prf:ref}`main theorem of calculus <thr-main-theorem-calculus>`. 
+To prove the latter, you **apply** the {prf:ref}`mean value theorem of integration <thr-mean-value-integration>`
+and that of {prf:ref}`differentiation <thr-mean-value-differentiation>`, 
+and you prove these by **applying** the {prf:ref}`intermediate value theorem <thr-intermediate-value>` 
+which, in turn, is proven by **applying** the {prf:ref}`theorem on nested intervals <thr-nested-intervals>`,
+which you prove by **applying** the {prf:ref}`theorem of Bolzano-Weierstrass <thr-bolzano-weierstrass>`. 
+And this relies on the fact that $\mathbb{R}$ is complete: there are no holes in $\mathbb{R}$, every Cauchy sequence converges.
 
-In the companion paper {ref}`From Naturals to Reals <naturals-to-reals>`, we present $\mathbb{R}$ as the smallest complete field containing $\mathbb{Q}$: 
-There are no holes in $\mathbb{R}$, every Cauchy sequence converges. That is the starting point of this paper.
-It presents a straight path with no gaps to two pivotal results:
+In the companion paper {ref}`From Naturals to Reals <naturals-to-reals>`, we present $\mathbb{R}$ as the smallest complete field containing the rationals $\mathbb{Q}$.
+This paper presents a straight path with no gaps from the starting point ($\mathbb{R}$ is complete) to two pivotal results:
 
-1. The [Main Theorem of Calculus](thr-main-theorem-calculus), which states that differentiation and integration are inverse operations.
-2. [Taylor's Theorem](#thr-taylor).
+1. The {prf:ref}`mean value theorem of integration <thr-mean-value-integration>`, which states that differentiation and integration are inverse operations.
+2. {prf:ref}`Taylor's theorem <thr-taylor>`.
 
 These results will, in turn, be the starting point of future papers. 
 
 I was led by these rules:
 
 1. No detours, no blind alleys, no embellishments. Every definition, every theorem serves a purpose.
-2. No proofs whenever it's obvious. Example: Proving the linearity of differentiation or integration is a useful exercise, but it is boring and unilluminating. I left it out.
-3. No proofs when they are not part of the story. Example: Proving the {prf:ref}`Lebesgue criterion <rem-lebesgue-criterion>` is hard work and not essential for what follows.
+2. No proof when it's obvious. Example: Proving the linearity of differentiation or integration is a useful exercise, but it is boring and unilluminating. I left it out.
+3. No proof when it's not part of the story. Example: Proving the {prf:ref}`Lebesgue criterion <rem-lebesgue-criterion>` is hard work and not essential for what follows.
    I left the proof out, but the criterion is too interesting to be passed over.
 4. Full proofs otherwise. The chain of reasoning is complete from the start to the end. This was the point of my opening example.
 
@@ -60,9 +62,9 @@ The Backbone
 The Roadmap
 ```
 
-Here is the roadmap: After revising the {ref}`topology <topology-of-r>` of $\mathbb{R}$ 
-we study {ref}`compact sets <compact-sets>` 
-and prove the [Bolzano-Weierstrass theorem](#thr-bolzano-weierstrass), 
+Here is the roadmap: After warming up with {ref}`Zeno's paradoxes <zeno-paradoxes>`, we study the {ref}`topology <topology-of-r>` of $\mathbb{R}$ and
+{ref}`compact sets <compact-sets>` 
+including the {prf:ref}`Bolzano-Weierstrass theorem <thr-bolzano-weierstrass>`, 
 which is indispensable whenever sequences are supposed to converge. 
 
 We then turn to {ref}`continuous functions <continuous-functions>`. On compact sets, they are uniformly continuous and 
@@ -71,7 +73,7 @@ form a vector space closed under the sup-norm. A key result is the {prf:ref}`int
 The next two chapters are independent and can be read in any order.
 
 {ref}`Riemann integrals <riemann-integrable-functions>` can be introduced 
-by either {prf:ref}`Riemann sums <def-riemann-integrals>` or {prf:ref}`step functions <def-step-functions>`.
+by either {prf:ref}`Riemann sums <def-riemann-integrals-sums>` or {prf:ref}`step functions <def-step-functions>`.
 We show the equivalence of these two approaches. 
 They are equally important; later on, we will use whichever is more appropriate.
 Riemann-integrable functions also form a vector space closed under the sup-norm. 
@@ -82,17 +84,16 @@ we prove the well-known {prf:ref}`differentiation rules <thr-differentiation-rul
 A key result is the {prf:ref}`mean value theorem of differentiation <thr-mean-value-differentiation>`, 
 which also depends on the intermediate value theorem.
 
-Integration and differentiation are then combined in the [Main Theorem of Calculus](thr-main-theorem-calculus). 
+Integration and differentiation are then combined in the {prf:ref}`mean value theorem of integration <thr-mean-value-integration>`. 
 Its proof is a simple application of the mean value theorems of integration and differentiation. 
-The {prf:ref}`integration rules <thr-integration-rules>` then follow effortlessly from the differentiation rules and the Main Theorem.
+The {prf:ref}`integration rules <thr-integration-rules>` then follow effortlessly from the differentiation rules and the main theorem.
 We see that, for the limit of differentiable functions to be differentiable, the **derivatives** must be uniformly convergent;
 the vector spaces $C^{n}([a, b])$ are **not** closed under the sup-norm.
 
 The apogee of this short paper is {prf:ref}`Taylor's theorem <thr-taylor>`, which is proven by a simple application of integration by parts.
  
-This material has been published many times, see {cite}`heuser2009analysis1`, 
-{cite}`forster2016analysis1`,{cite}`rudin1976principles`,{cite}`courant1955differential`, 
-to name but a few prominent examples.
+This material has been published many times, see {cite}`courant1955differential`, {cite}`rudin1976principles`, {cite}`heuser2009analysis1`, 
+{cite}`forster2016analysis1`, to name but a few prominent examples.
 
 
 (zeno-paradoxes)=
@@ -151,18 +152,7 @@ Assigning meaningful values to such sums is what integration theory is all about
 :label: def-topology-R
 Let $A \subseteq \mathbb{R}$ and $a \in A$.
 
-**(a) Limit Points, Closure, Closed Sets**
-
-We call $a$ an **limit point** of $A$, iff
-
-```{math}
-\forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset
-```
-The **closure** of $A$, denoted be $\bar{A}$, is the set of all limit points of $A$.
-We clearly have $A \subseteq \bar{A}$.
-The set $A$ is **closed** iff $\bar{A} = A$.
-
-**(b) Inner Points, Interior, Open Sets**
+**(a) Inner Points, Interior, Open Sets**
 
 We call $a$ an **inner point** of $A$, iff
 
@@ -172,22 +162,53 @@ We call $a$ an **inner point** of $A$, iff
 The **interior** of $A$, denoted be $A°$, is the set of all interior points of $A$.
 We clearly have $A° \subseteq A$.
 The set $A$ is **open** iff $A° = A$.
+
+**(b) Limit Points, Closure, Closed Sets**
+
+We call $a$ an **limit point** of $A$, iff
+
+```{math}
+\forall \epsilon > 0: U_{\epsilon}(a)- \{a\} \cap A \neq \emptyset
+```
+This can expressed as: $a$ is the limit of a sequence $\{a_n\}$ of points in $A$ with $a_n \neq a$.
+
+The set of limit points of $A$ is denoted by $A'$.
+
+The set $A$ is **closed** iff its complement $A^c$ is open.
+
+The **closure** of $A$, denoted by $\bar{A}$, is the smallest closed set containing $A$
+
+We clearly have $A \subseteq \bar{A}$.
+
 ````
 
-````{prf:Lemma} Open Sets, Closed Sets
+````{prf:Lemma} Limit Points
 :label: lem-open-closed
-Let $A \subseteq \mathbb{R}$. 
+Let $A \subseteq \mathbb{R}$. Then:
 
-$A$ is open iff $A^c$ is closed,   
-$A$ is closed iff $A^c$ is open.
+```{math}
+A' = \bar{A} - A
+```
 ````
 
 ````{prf:proof}
-Let $A$ be open, and $a \notin A$. Then, for all $\epsilon > 0$ it holds that $U_{\epsilon}(a) \cap A^c \neq \emptyset$.
-Therefore $a \in \overline{A^c}$.
 
-Let $A$ be closed, and $a \notin A$. Then there is an $\epsilon > 0$ such that $U_{\epsilon}(a) \cap A = \emptyset$ or,
-equivalently, $U_{\epsilon}(a) \subseteq A^c$. Therefore $a \in (A^c)°$.
+Let $a \in \bar{A} - A$. Assume that $a \in \bar{A}^c$. Then:
+
+```{math}
+&\exists \epsilon > 0: U_{\epsilon}(a) \subseteq \bar{A}^c \\
+&\Longrightarrow U_{\epsilon}(a) \cap \bar{A} = \emptyset
+```
+which is a contradiction. So, $a \in \bar{A}$.
+
+Let $a \in A' - A$, $B$ closed, and $A \subseteq B$. Then $B^c$ is open and we have:
+
+```{math}
+&\forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset \\
+&\Longrightarrow \forall \epsilon > 0: U_{\epsilon}(a) \not\subseteq B^c \\
+&\Longrightarrow a \notin B^c \\
+&\Longrightarrow a \in B
+```
 ````
 
 
@@ -515,8 +536,14 @@ and $f(b_0) = \max\{f(x) \mid x \in [a, b]\}$. Assume w.l.o.g. that $a_0 < b_0$ 
 (riemann-integrable-functions)=
 ## Riemann-Integrable Functions
 
+There are (at least) two equivalent ways of introducing Riemann integrals: One is based on Riemann sums (or intermediate sums), 
+the other on step functions (or lower and upper sums). While these approaches look very similar, 
+their equivalence, shown in {prf:ref}`thr-riemann-integrals`, is not obvious.
+Step functions are useful when we prove the integrability of certain functions, 
+and Riemann sums are needed for the main theorem of calculus and, later on, for the famous integral theorems of Gauss and Stokes.
+
 ````{prf:definition} Riemann Integrals by Riemann Sums
-:label: def-riemann-integrals
+:label: def-riemann-integrals-sums
 
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
 
@@ -559,150 +586,46 @@ Whenever we prove theorems on Riemann integrals,
 we are allowed to replace the integrals with Riemann sums of sufficiently small granularity. 
 ````
 
-````{prf:definition} Riemann Primitives
-:label: thr-riemann-primitives
-
-Let $f \in \mathcal{R}([a,b])$. The function $F$ defined by
-
-```{math}
-F(x) = \int_a^x f(y) \, dy 
-```
-is called the **Riemann-primitive** (or primitive) of $f$,
-on the understanding that
-
-```{math}
-F(a) = \int_a^a f(x) \, dx = 0
-```
-
-The notation 
-
-```{math}
-F = \int f(y) \, dy
-```
-is used if the lower bound $a$ is unimportant or not specified. 
-Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`additivity <thr-properties-riemann>`).
-````
-
-
-````{prf:theorem} Properties of Riemann Integrals
-:label: thr-properties-riemann
-
-We state some obvious but important properties of Riemann integrals.
-
-**(a) Boundedness**
-
-R-integrable functions are bounded on closed intervals
-(because Riemann sums are).
-
-**(b) Monotony**
-
-```{math}
-f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
-```
-holds for any two functions $f,g \in \mathcal{R}([a,b])$.
-
-**(c) Triangular Inequality**
-
-If $f$ is integrable, then so is $|f|$, and it holds that:
-
-```{math}
-\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
-```
-
-**(d) Additivity**
-
-Let $f$ be integrable, and $c \in [a, b]$. Then it holds that:
-
-```{math}
-\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx
-```
-
-**(e) Linearity**
-
-If $f, g$ are integrable, then so is $f + \alpha g$ ($\alpha \in \mathbb{R}$), and it holds that:
-
-```{math}
-\int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx
-```
-
-**(f)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
-
-**(g)** The primitive of an R-integrable function is continuous. The mapping
-
-```{math}
-
-\int : 
-\left\{
-    \begin{array}{lr}
-        \mathcal{R}([a, b]) \to C^0([a, b]) \\
-        f \mapsto \int_a^x f(y) \, dy
-    \end{array}
-\right .
-```
-is a linear operator, called the **integration operator**.
-
-The mapping
-
-```{math}
-\int : 
-\left\{
-    \begin{array}{lr}
-        \mathcal{R}([a, b]) \to \mathbb{R} \\
-        f \mapsto \int_a^b f(y) \, dy
-    \end{array}
-\right .
-```
-is a linear mapping, called the **integration functional**.
-
-````
-
-````{prf:proof}
-We only prove **(f)**.
-
-Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
-Then, $f$ is bounded by some $M \in \mathbb{R}$, and by the triangular inequality (c), we have for $x \in [a, b]$ and arbitrarily small $h$:
-
-```{math}
-\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M
-```
-which proves the continuity of $F$ at $x$.
-````
-
-Riemann sums are one of two methods of introducing Riemann integrals. The other method is based on step functions. 
-It turns out that Riemann sums are useful for the famous integral theorems, 
-while step functions come in when we show the integrability of certain functions.
-
-````{prf:definition} Step Functions
+````{prf:definition} Riemann Integrals by Step Functions
 :label: def-step-functions
 
 We consider a closed interval $[a, b] \subset \mathbb{R}$ and a partition $X$ of $[a, b]$.
 
+**(a)**
 A function $\phi: [a, b] \to \mathbb{R}$ is called a **step function** iff it is constant on each interval $[x_k, x_{k+1})$
 of some partition $X = \left\{x_0, x_1, \dots, x_n\right\}$ of $[a, b]$. This partition is called $X_{\phi}$, the associated partition of $\phi$.
-A Riemann sum $R(\phi, X_{\phi}, \xi)$ of a step function $\phi$ does not depend on $\xi$, and we can define:
+
+**(b)**
+The Riemann sum $R(\phi, X_{\phi}, \xi)$ of a step function $\phi$ does not depend on $\xi$, and we can define:
 
 ```{math}
 R(\phi) = R(\phi, X_{\phi}, x)= \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)
 ```
-````
 
-````{prf:theorem} Riemann Integrals by Step Functions
-:label: thr-riemann-integrals
-
-We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
-
-Theorem: $f$ is R-integrable iff
+**(c)**
+We say that $f$ is **S-integrable**, iff 
 
 ```{math}
 :label: equ-riemann-integrals-1
 \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)
 ```
-where $\phi$ and $\psi$ range over all step functions on $[a, b]$. In this case, we have:
+where $\phi$ and $\psi$ range over all step functions on $[a, b]$. 
+````
+
+````{prf:theorem} Equivalence of R- and S-Integrals
+:label: thr-riemann-integrals
+
+We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f: [a, b] \to \mathbb{R}$.
+
+Theorem: $f$ is R-integrable iff it is S-integrable. In this case, we have:
 
 ```{math}
 :label: equ-riemann-integrals-2
 \int_a^b f(x) \, dx = \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)
 ```
+where $\phi$ and $\psi$ range over all step functions on $[a, b]$.
+ 
+This equivalence allows us to forget the term "S-integrability".
 ````
 
 ````{prf:proof} 
@@ -853,6 +776,116 @@ R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon
 A famous non-integrable function is the *Dirichlet function*, which is $1$ for rational numbers and $0$ otherwise.
 It is not integrable because on every interval you'll find Riemann sums equal to $0$, and others equal to $1$.
 
+````{prf:definition} Riemann Primitives
+:label: thr-riemann-primitives
+
+Let $f \in \mathcal{R}([a,b])$. The function $F$ defined by
+
+```{math}
+F(x) = \int_a^x f(y) \, dy 
+```
+is called the **Riemann-primitive** (or primitive) of $f$,
+on the understanding that
+
+```{math}
+F(a) = \int_a^a f(x) \, dx = 0
+```
+
+The notation 
+
+```{math}
+F = \int f(y) \, dy
+```
+is used if the lower bound $a$ is unimportant or not specified. 
+Two primitives of an integrable function $f$ differ only by a constant (see {prf:ref}`additivity <thr-properties-riemann>`).
+````
+
+
+````{prf:theorem} Properties of Riemann Integrals
+:label: thr-properties-riemann
+
+We state some obvious but important properties of Riemann integrals.
+
+**(a) Boundedness**
+
+R-integrable functions are bounded on closed intervals
+(because Riemann sums are).
+
+**(b) Monotony**
+
+```{math}
+f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx
+```
+holds for any two functions $f,g \in \mathcal{R}([a,b])$.
+
+**(c) Triangular Inequality**
+
+If $f$ is integrable, then so is $|f|$, and it holds that:
+
+```{math}
+\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy 
+```
+
+**(d) Additivity**
+
+Let $f$ be integrable, and $c \in [a, b]$. Then it holds that:
+
+```{math}
+\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx
+```
+
+**(e) Linearity**
+
+If $f, g$ are integrable, then so is $f + \alpha g$ ($\alpha \in \mathbb{R}$), and it holds that:
+
+```{math}
+\int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx
+```
+
+**(f)** The R-integrable functions over $[a, b]$ form a **vector space**, written as $\mathcal{R}([a, b])$.
+
+**(g)** The primitive of an R-integrable function is continuous. The mapping
+
+```{math}
+
+\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to C^0([a, b]) \\
+        f \mapsto \int_a^x f(y) \, dy
+    \end{array}
+\right .
+```
+is a linear operator, called the **integration operator**.
+
+The mapping
+
+```{math}
+\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to \mathbb{R} \\
+        f \mapsto \int_a^b f(y) \, dy
+    \end{array}
+\right .
+```
+is a linear mapping, called the **integration functional**.
+
+````
+
+````{prf:proof}
+We only prove **(g)**.
+
+Let $f: [a, b] \to \mathbb{R}$ be integrable,  and $F$ a primitive of $f$.
+Then, $f$ is bounded by some $M \in \mathbb{R}$, and by the triangular inequality (c), we have for $x \in [a, b]$ and arbitrarily small $h$:
+
+```{math}
+\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M
+```
+which proves the continuity of $F$ at $x$.
+````
+
+
 We now introduce some criteria of Riemann integrability. The proofs use step functions rather than Riemann sums.
 
 ````{prf:theorem} Riemann-Integrable Functions
@@ -870,7 +903,7 @@ R(\phi) = \int_a^b \phi(x) \, dx
 
 **(c)** Continuous functions are R-integrable.
 
-**(d)** Let $f$ be bounded and continuous except on a set $D$ that is the finite union of converging sequences.
+**(d)** Let $f$ be bounded and continuous except on a set $D$ with a finite number of limit points.
 Then $f$ is R-integrable. 
 ````
 
@@ -1080,15 +1113,28 @@ We consider a closed interval $[a, b] \subset \mathbb{R}$ and a function $f:[a, 
 
 \lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)
 ```
-exists. $f'(x)$ is called the derivative of $f$ at $x$.
+exists. $f'(x)$ is called the derivative of $f$ at $x$. We often use the notation:
+
+```{math}
+:label: equ-derivatives-0
+
+\frac{df}{dx} =  f'(x)
+```
 The statement {eq}`equ-derivatives-1` is equivalent to
 
 ```{math}
 :label: equ-derivatives-1a
-f(x+h) - f(x) = f'(x) \, h + o(h)
+f(x+h) = f(x) + f'(x) \, h + o(h)
 ```
 
 which means that the term $f'(x) \, h$ is a linear approximation of $f$ at $x$.
+The derivative is fully determined by equation {eq}`equ-derivatives-1a`. From
+ 
+```{math}
+:label: equ-derivatives-1b
+f(x+h) = f(x) + y \, h + o(h)
+```
+for some value $y$ we can conclude that $y = f'(x)$.
 
 **(c)** We say that $f$ is **continuously differentiable** at $x \in [a, b]$ if it is differentiable at $x$
 and its derivative $f'$ is continuous at $x$.
@@ -1399,7 +1445,9 @@ Let $f, g \in C^1([a,b])$
 
 Let $f, g \in C^1([a,b])$. Then
 
+(integration-by-parts)=
 ```{math}
+:label: thr-integration-rules-1
 \int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx
 ```
 
@@ -1495,63 +1543,58 @@ The uniform limit is the absolute value function that features a corner at $0$.
 ## Taylor's Theorem
 
 Derivatives are about local changes: How does a function $f$ behave in a neighbourhood of some point $x$? The Taylor series allows us to express
-$f(x+h)$ in terms of the higher derivatives of $f$ with arbitrary precision. It comes in three varieties that differ in the remainder term. In
-what follows, $A$ is an open interval, and $x, u \in A$.
+$f(x+h)$ in terms of the higher derivatives of $f$ with arbitrary precision. It comes in three varieties that differ in the remainder term.
 
 ````{prf:theorem} Taylor's Theorem
 :label: thr-taylor
 
-**(a)** Let $f \in  C^{n+1}(A)$. Then:
+Let $[a, b]$ be a finite interval $f \in  C^{n+1}([a, b])$, $x \in (a, b)$ and $h$ so small that $x+h \in [a, b]$. Then:
+
+**(a)** 
 
 ```{math}
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
+:label: thr-taylor-a
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(h)^k + \frac{1}{n!}\int _x^{x+h} (x+h-t)^n f^{(n+1)}(t) \, dt
 ```
 
-**(b)** Let $f \in  C^{n+1}(A)$. Then there exists a $\xi \in [x,u]$ such that:
+**(b)** There exists a $\xi \in [x-h,x+h]$ such that:
 
 ```{math}
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
-```
-
-which is the same as $(h = u-x)$:
-
-```{math}
+:label: thr-taylor-b
 f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}
 ```
 
-
-**(c)**  Let $f \in  C^n(A)$. Then:
-
-```{math}
-f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)
-```
-
-which is the same as $(h = u-x)$:
+**(c)**
 
 ```{math}
-f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)
+:label: thr-taylor-c
+f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(h^n)
 ```
 ````
 
 ````{prf:proof}
 
-**(a)** Proof by induction, using the main theorem of integration and integration by parts:
+**(a)** The proof is by induction, using the main theorem of integration and integration by parts. We set $u = x+h$.
 
 ```{math}
 f(u) - f(x) &= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt \\
+& = -(u-t)f'(t) \lvert_x^u + \int _x^u(u-t)f''(t)dt \\
 & = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... } \\
 & =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt
 ```
+We obtain equation {eq}`thr-taylor-a` by replacing $u$ with $h = u-x$.
 
-**(b)** Using the mean value theorem, we find a $\xi \in [x, u]$ such that
+**(b)** Using the {prf:ref}`mean value theorem of integration <thr-mean-value-integration>`, we find a $\xi \in [x-h, x+h]$ such that
 ```{math}
 \frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}
 ```
+We obtain equation {eq}`thr-taylor-b` again by replacing $u$ with $h = u-x$.
 
 **(c)**
+This follows from (b), because:
+
 ```{math}
-f(u) &= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n \\
-&= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)
+\frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1} = o(h^n)
 ```
 ````
 
@@ -1582,47 +1625,3 @@ Big O means: $f$ grows not faster than $g$, or, equivalently, $f/g$ is bounded a
 ```
 
 <div style="margin-bottom: 100px;"></div>
-
-
-
-
-**(c)** The **uniform limit** of differentiable functions is differentiable, 
-and we can swap limit and differentiation:
-
-```{math}
-:label: equ-properties-derivatives-1
-\lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n
-```
-Likewise, we have:
-
-```{math}
-:label: equ-properties-derivatives-2
-\lim_{n \to \infty} \partial^n f_n = \partial^n \lim_{n \to \infty} f_n
-```
-
-This can be expressed as: $C^n ([a, b])$ is closed under the sup norm.
-
-
-
-**(c)** Let $\{f_n\}$ be a sequence in $C^1([a, b])$ that converges uniformly to $f$. 
-We have for any $\epsilon > 0$ and large $n$:
-
-```{math}
-&f(x+h) - f(x) \\
-&= (f(x+h) - f_n(x+h))  + (f_n(x+h) - f_n(x))  + (f_n(x) - f(x))  \\
-&= hf'_n(x) + o(h) + (f(x+h) - f_n(x+h)) + (f_n(x) - f(x))
-```
-Letting $n \to \infty$ gives
-
-```{math}
-f(x+h) - f(x) = hf'(x) + o(h)
-```
-
-It follows that:
-
-```{math}
-\lim_{n \to \infty} f'_n = f'
-```
-
-which is {eq}`equ-properties-derivatives-1`. 
-To prove equation {eq}`equ-properties-derivatives-2`, apply {eq}`equ-properties-derivatives-1` to $f'$.

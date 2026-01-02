@@ -497,30 +497,32 @@ document.write(`
 Here, we are <strong>applying</strong> a true statement (“all men are mortal”) to a particular object (“Socrates”),
 and arriving at the conclusion “Socrates is mortal”, another true statement.
 Are you impressed? Probably not. Let’s try something better.</p>
-<p>“A function is differentiable if the differential quotient exists.”
+<p>“A function is differentiable if the <a class="reference internal" href="#def-derivatives">derivative</a> exists.”
 <strong>Applying</strong> this definition (a true statement) to the product of two differentiable functions
-produces the product rule in two lines of straightforward calculations, proving
+produces the <a class="reference internal" href="#thr-differentiation-rules">product rule</a> in two lines of straightforward calculations, proving
 that the product is indeed differentiable (another true statement). <strong>Integrating the product rule</strong> gives
-the integration-by-parts rule. Taylor’s towering theorem is proven by <strong>applying</strong> integration by parts as many times as you like
+the <a class="reference internal" href="#thr-integration-rules">integration-by-parts rule</a>.
+<a class="reference internal" href="#thr-taylor">Taylor's theorem</a> is proven by <strong>applying</strong> integration by parts as many times as you like
 or are allowed to, and this is how the power series in Taylor’s formula originates.
-What does it mean to “integrate the product rule”? This is another way of saying “<strong>apply</strong>
-the main theorem of integration”. To prove the latter, you <strong>apply</strong> the mean value theorems
-of integration and differentiation, and you prove these by <strong>applying</strong> the intermediate value theorem
-which, in turn, is proven by <strong>applying</strong> the theorem on nested intervals, which you prove by <strong>applying</strong>
-the theorem of Bolzano-Weierstrass. And this relies on the fact that <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete.</p>
-<p>In the companion paper <a class="reference internal" href="numbers.html#naturals-to-reals"><span class="std std-ref">From Naturals to Reals</span></a>, we present <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> as the smallest complete field containing <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>:
-There are no holes in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, every Cauchy sequence converges. That is the starting point of this paper.
-It presents a straight path with no gaps to two pivotal results:</p>
+What does it mean to “integrate the product rule”? This is another way of saying “<strong>apply</strong> the <a class="reference internal" href="#thr-main-theorem-calculus">main theorem of calculus</a>.
+To prove the latter, you <strong>apply</strong> the <a class="reference internal" href="#thr-mean-value-integration">mean value theorem of integration</a>
+and that of <a class="reference internal" href="#thr-mean-value-differentiation">differentiation</a>,
+and you prove these by <strong>applying</strong> the <a class="reference internal" href="#thr-intermediate-value">intermediate value theorem</a>
+which, in turn, is proven by <strong>applying</strong> the <a class="reference internal" href="#thr-nested-intervals">theorem on nested intervals</a>,
+which you prove by <strong>applying</strong> the <a class="reference internal" href="#thr-bolzano-weierstrass">theorem of Bolzano-Weierstrass</a>.
+And this relies on the fact that <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete: there are no holes in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, every Cauchy sequence converges.</p>
+<p>In the companion paper <a class="reference internal" href="numbers.html#naturals-to-reals"><span class="std std-ref">From Naturals to Reals</span></a>, we present <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> as the smallest complete field containing the rationals <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>.
+This paper presents a straight path with no gaps from the starting point (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is complete) to two pivotal results:</p>
 <ol class="arabic simple">
-<li><p>The <a class="reference internal" href="#thr-main-theorem-calculus"><span class="xref myst">Main Theorem of Calculus</span></a>, which states that differentiation and integration are inverse operations.</p></li>
-<li><p><a class="reference internal" href="#thr-taylor"><span class="xref myst">Taylor’s Theorem</span></a>.</p></li>
+<li><p>The <a class="reference internal" href="#thr-mean-value-integration">mean value theorem of integration</a>, which states that differentiation and integration are inverse operations.</p></li>
+<li><p><a class="reference internal" href="#thr-taylor">Taylor's theorem</a>.</p></li>
 </ol>
 <p>These results will, in turn, be the starting point of future papers.</p>
 <p>I was led by these rules:</p>
 <ol class="arabic simple">
 <li><p>No detours, no blind alleys, no embellishments. Every definition, every theorem serves a purpose.</p></li>
-<li><p>No proofs whenever it’s obvious. Example: Proving the linearity of differentiation or integration is a useful exercise, but it is boring and unilluminating. I left it out.</p></li>
-<li><p>No proofs when they are not part of the story. Example: Proving the <a class="reference internal" href="#rem-lebesgue-criterion">Lebesgue criterion</a> is hard work and not essential for what follows.
+<li><p>No proof when it’s obvious. Example: Proving the linearity of differentiation or integration is a useful exercise, but it is boring and unilluminating. I left it out.</p></li>
+<li><p>No proof when it’s not part of the story. Example: Proving the <a class="reference internal" href="#rem-lebesgue-criterion">Lebesgue criterion</a> is hard work and not essential for what follows.
 I left the proof out, but the criterion is too interesting to be passed over.</p></li>
 <li><p>Full proofs otherwise. The chain of reasoning is complete from the start to the end. This was the point of my opening example.</p></li>
 </ol>
@@ -542,15 +544,15 @@ and the differential operator <strong><span class="math notranslate nohighlight"
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">The Roadmap</span><a class="headerlink" href="#id93" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Here is the roadmap: After revising the <a class="reference internal" href="#topology-of-r"><span class="std std-ref">topology</span></a> of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>
-we study <a class="reference internal" href="#compact-sets"><span class="std std-ref">compact sets</span></a>
-and prove the <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass theorem</span></a>,
+<p>Here is the roadmap: After warming up with <a class="reference internal" href="#zeno-paradoxes"><span class="std std-ref">Zeno’s paradoxes</span></a>, we study the <a class="reference internal" href="#topology-of-r"><span class="std std-ref">topology</span></a> of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and
+<a class="reference internal" href="#compact-sets"><span class="std std-ref">compact sets</span></a>
+including the <a class="reference internal" href="#thr-bolzano-weierstrass">Bolzano-Weierstrass theorem</a>,
 which is indispensable whenever sequences are supposed to converge.</p>
 <p>We then turn to <a class="reference internal" href="#continuous-functions"><span class="std std-ref">continuous functions</span></a>. On compact sets, they are uniformly continuous and
 form a vector space closed under the sup-norm. A key result is the <a class="reference internal" href="#thr-intermediate-value">intermediate value theorem</a>.</p>
 <p>The next two chapters are independent and can be read in any order.</p>
 <p><a class="reference internal" href="#riemann-integrable-functions"><span class="std std-ref">Riemann integrals</span></a> can be introduced
-by either <a class="reference internal" href="#def-riemann-integrals">Riemann sums</a> or <a class="reference internal" href="#def-step-functions">step functions</a>.
+by either <a class="reference internal" href="#def-riemann-integrals-sums">Riemann sums</a> or <a class="reference internal" href="#def-step-functions">step functions</a>.
 We show the equivalence of these two approaches.
 They are equally important; later on, we will use whichever is more appropriate.
 Riemann-integrable functions also form a vector space closed under the sup-norm.
@@ -559,15 +561,14 @@ A key result is the <a class="reference internal" href="#thr-mean-value-integrat
 we prove the well-known <a class="reference internal" href="#thr-differentiation-rules">differentiation rules</a>.
 A key result is the <a class="reference internal" href="#thr-mean-value-differentiation">mean value theorem of differentiation</a>,
 which also depends on the intermediate value theorem.</p>
-<p>Integration and differentiation are then combined in the <a class="reference internal" href="#thr-main-theorem-calculus"><span class="xref myst">Main Theorem of Calculus</span></a>.
+<p>Integration and differentiation are then combined in the <a class="reference internal" href="#thr-mean-value-integration">mean value theorem of integration</a>.
 Its proof is a simple application of the mean value theorems of integration and differentiation.
-The <a class="reference internal" href="#thr-integration-rules">integration rules</a> then follow effortlessly from the differentiation rules and the Main Theorem.
+The <a class="reference internal" href="#thr-integration-rules">integration rules</a> then follow effortlessly from the differentiation rules and the main theorem.
 We see that, for the limit of differentiable functions to be differentiable, the <strong>derivatives</strong> must be uniformly convergent;
 the vector spaces <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> are <strong>not</strong> closed under the sup-norm.</p>
 <p>The apogee of this short paper is <a class="reference internal" href="#thr-taylor">Taylor's theorem</a>, which is proven by a simple application of integration by parts.</p>
-<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id88" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
-<span id="id2">[<a class="reference internal" href="#id89" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>,<span id="id3">[<a class="reference internal" href="#id90" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>,<span id="id4">[<a class="reference internal" href="#id91" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>,
-to name but a few prominent examples.</p>
+<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id91" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>, <span id="id2">[<a class="reference internal" href="#id90" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>, <span id="id3">[<a class="reference internal" href="#id88" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id4">[<a class="reference internal" href="#id89" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, to name but a few prominent examples.</p>
 </section>
 <section id="zeno-s-paradoxes">
 <span id="zeno-paradoxes"></span><h2>Zeno’s Paradoxes<a class="headerlink" href="#zeno-s-paradoxes" title="Link to this heading">#</a></h2>
@@ -616,33 +617,42 @@ Assigning meaningful values to such sums is what integration theory is all about
 <p class="admonition-title"><span class="caption-number">Definition 15 </span> (Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(a \in A\)</span>.</p>
-<p><strong>(a) Limit Points, Closure, Closed Sets</strong></p>
-<p>We call <span class="math notranslate nohighlight">\(a\)</span> an <strong>limit point</strong> of <span class="math notranslate nohighlight">\(A\)</span>, iff</p>
-<div class="math notranslate nohighlight">
-\[\forall \epsilon &gt; 0: U_{\epsilon}(a) \cap A \neq \emptyset\]</div>
-<p>The <strong>closure</strong> of <span class="math notranslate nohighlight">\(A\)</span>, denoted be <span class="math notranslate nohighlight">\(\bar{A}\)</span>, is the set of all limit points of <span class="math notranslate nohighlight">\(A\)</span>.
-We clearly have <span class="math notranslate nohighlight">\(A \subseteq \bar{A}\)</span>.
-The set <span class="math notranslate nohighlight">\(A\)</span> is <strong>closed</strong> iff <span class="math notranslate nohighlight">\(\bar{A} = A\)</span>.</p>
-<p><strong>(b) Inner Points, Interior, Open Sets</strong></p>
+<p><strong>(a) Inner Points, Interior, Open Sets</strong></p>
 <p>We call <span class="math notranslate nohighlight">\(a\)</span> an <strong>inner point</strong> of <span class="math notranslate nohighlight">\(A\)</span>, iff</p>
 <div class="math notranslate nohighlight">
 \[\exists \epsilon &gt; 0: U_{\epsilon}(a) \subseteq A\]</div>
 <p>The <strong>interior</strong> of <span class="math notranslate nohighlight">\(A\)</span>, denoted be <span class="math notranslate nohighlight">\(A°\)</span>, is the set of all interior points of <span class="math notranslate nohighlight">\(A\)</span>.
 We clearly have <span class="math notranslate nohighlight">\(A° \subseteq A\)</span>.
 The set <span class="math notranslate nohighlight">\(A\)</span> is <strong>open</strong> iff <span class="math notranslate nohighlight">\(A° = A\)</span>.</p>
+<p><strong>(b) Limit Points, Closure, Closed Sets</strong></p>
+<p>We call <span class="math notranslate nohighlight">\(a\)</span> an <strong>limit point</strong> of <span class="math notranslate nohighlight">\(A\)</span>, iff</p>
+<div class="math notranslate nohighlight">
+\[\forall \epsilon &gt; 0: U_{\epsilon}(a)- \{a\} \cap A \neq \emptyset\]</div>
+<p>This can expressed as: <span class="math notranslate nohighlight">\(a\)</span> is the limit of a sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> of points in <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(a_n \neq a\)</span>.</p>
+<p>The set of limit points of <span class="math notranslate nohighlight">\(A\)</span> is denoted by <span class="math notranslate nohighlight">\(A'\)</span>.</p>
+<p>The set <span class="math notranslate nohighlight">\(A\)</span> is <strong>closed</strong> iff its complement <span class="math notranslate nohighlight">\(A^c\)</span> is open.</p>
+<p>The <strong>closure</strong> of <span class="math notranslate nohighlight">\(A\)</span>, denoted by <span class="math notranslate nohighlight">\(\bar{A}\)</span>, is the smallest closed set containing <span class="math notranslate nohighlight">\(A\)</span></p>
+<p>We clearly have <span class="math notranslate nohighlight">\(A \subseteq \bar{A}\)</span>.</p>
 </section>
 </div><div class="proof lemma admonition" id="lem-open-closed">
-<p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Open Sets, Closed Sets)</p>
+<p class="admonition-title"><span class="caption-number">Lemma 3 </span> (Limit Points)</p>
 <section class="lemma-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(A\)</span> is open iff <span class="math notranslate nohighlight">\(A^c\)</span> is closed,<br />
-<span class="math notranslate nohighlight">\(A\)</span> is closed iff <span class="math notranslate nohighlight">\(A^c\)</span> is open.</p>
+<p>Let <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[A' = \bar{A} - A\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(A\)</span> be open, and <span class="math notranslate nohighlight">\(a \notin A\)</span>. Then, for all <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> it holds that <span class="math notranslate nohighlight">\(U_{\epsilon}(a) \cap A^c \neq \emptyset\)</span>.
-Therefore <span class="math notranslate nohighlight">\(a \in \overline{A^c}\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be closed, and <span class="math notranslate nohighlight">\(a \notin A\)</span>. Then there is an <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(U_{\epsilon}(a) \cap A = \emptyset\)</span> or,
-equivalently, <span class="math notranslate nohighlight">\(U_{\epsilon}(a) \subseteq A^c\)</span>. Therefore <span class="math notranslate nohighlight">\(a \in (A^c)°\)</span>.</p>
+<p>Proof. Let <span class="math notranslate nohighlight">\(a \in \bar{A} - A\)</span>. Assume that <span class="math notranslate nohighlight">\(a \in \bar{A}^c\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\exists \epsilon &gt; 0: U_{\epsilon}(a) \subseteq \bar{A}^c \\
+&amp;\Longrightarrow U_{\epsilon}(a) \cap \bar{A} = \emptyset\end{split}\]</div>
+<p>which is a contradiction. So, <span class="math notranslate nohighlight">\(a \in \bar{A}\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(a \in A' - A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> closed, and <span class="math notranslate nohighlight">\(A \subseteq B\)</span>. Then <span class="math notranslate nohighlight">\(B^c\)</span> is open and we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\forall \epsilon &gt; 0: U_{\epsilon}(a) \cap A \neq \emptyset \\
+&amp;\Longrightarrow \forall \epsilon &gt; 0: U_{\epsilon}(a) \not\subseteq B^c \\
+&amp;\Longrightarrow a \notin B^c \\
+&amp;\Longrightarrow a \in B\end{split}\]</div>
 </div>
 <div class="proof theorem admonition" id="thr-nested-intervals">
 <p class="admonition-title"><span class="caption-number">Theorem 18 </span> (Nested Intervals)</p>
@@ -875,7 +885,12 @@ and <span class="math notranslate nohighlight">\(f(b_0) = \max\{f(x) \mid x \in 
 </section>
 <section id="riemann-integrable-functions">
 <span id="id7"></span><h2>Riemann-Integrable Functions<a class="headerlink" href="#riemann-integrable-functions" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="def-riemann-integrals">
+<p>There are (at least) two equivalent ways of introducing Riemann integrals: One is based on Riemann sums (or intermediate sums),
+the other on step functions (or lower and upper sums). While these approaches look very similar,
+their equivalence, shown in <a class="reference internal" href="#thr-riemann-integrals">Theorem 23</a>, is not obvious.
+Step functions are useful when we prove the integrability of certain functions,
+and Riemann sums are needed for the main theorem of calculus and, later on, for the famous integral theorems of Gauss and Stokes.</p>
+<div class="proof definition admonition" id="def-riemann-integrals-sums">
 <p class="admonition-title"><span class="caption-number">Definition 20 </span> (Riemann Integrals by Riemann Sums)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
@@ -905,98 +920,32 @@ for any set <span class="math notranslate nohighlight">\(\xi\)</span> of interme
 <p>Whenever we prove theorems on Riemann integrals,
 we are allowed to replace the integrals with Riemann sums of sufficiently small granularity.</p>
 </section>
-</div><div class="proof definition admonition" id="thr-riemann-primitives">
-<p class="admonition-title"><span class="caption-number">Definition 21 </span> (Riemann Primitives)</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span>. The function <span class="math notranslate nohighlight">\(F\)</span> defined by</p>
-<div class="math notranslate nohighlight">
-\[F(x) = \int_a^x f(y) \, dy \]</div>
-<p>is called the <strong>Riemann-primitive</strong> (or primitive) of <span class="math notranslate nohighlight">\(f\)</span>,
-on the understanding that</p>
-<div class="math notranslate nohighlight">
-\[F(a) = \int_a^a f(x) \, dx = 0\]</div>
-<p>The notation</p>
-<div class="math notranslate nohighlight">
-\[F = \int f(y) \, dy\]</div>
-<p>is used if the lower bound <span class="math notranslate nohighlight">\(a\)</span> is unimportant or not specified.
-Two primitives of an integrable function <span class="math notranslate nohighlight">\(f\)</span> differ only by a constant (see <a class="reference internal" href="#thr-properties-riemann">additivity</a>).</p>
-</section>
-</div><div class="proof theorem admonition" id="thr-properties-riemann">
-<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Properties of Riemann Integrals)</p>
-<section class="theorem-content" id="proof-content">
-<p>We state some obvious but important properties of Riemann integrals.</p>
-<p><strong>(a) Boundedness</strong></p>
-<p>R-integrable functions are bounded on closed intervals
-(because Riemann sums are).</p>
-<p><strong>(b) Monotony</strong></p>
-<div class="math notranslate nohighlight">
-\[f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx\]</div>
-<p>holds for any two functions <span class="math notranslate nohighlight">\(f,g \in \mathcal{R}([a,b])\)</span>.</p>
-<p><strong>(c) Triangular Inequality</strong></p>
-<p>If <span class="math notranslate nohighlight">\(f\)</span> is integrable, then so is <span class="math notranslate nohighlight">\(|f|\)</span>, and it holds that:</p>
-<div class="math notranslate nohighlight">
-\[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
-<p><strong>(d) Additivity</strong></p>
-<p>Let <span class="math notranslate nohighlight">\(f\)</span> be integrable, and <span class="math notranslate nohighlight">\(c \in [a, b]\)</span>. Then it holds that:</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx\]</div>
-<p><strong>(e) Linearity</strong></p>
-<p>If <span class="math notranslate nohighlight">\(f, g\)</span> are integrable, then so is <span class="math notranslate nohighlight">\(f + \alpha g\)</span> (<span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>), and it holds that:</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx\]</div>
-<p><strong>(f)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
-<p><strong>(g)</strong> The primitive of an R-integrable function is continuous. The mapping</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\int : 
-\left\{
-    \begin{array}{lr}
-        \mathcal{R}([a, b]) \to C^0([a, b]) \\
-        f \mapsto \int_a^x f(y) \, dy
-    \end{array}
-\right .\end{split}\]</div>
-<p>is a linear operator, called the <strong>integration operator</strong>.</p>
-<p>The mapping</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\int : 
-\left\{
-    \begin{array}{lr}
-        \mathcal{R}([a, b]) \to \mathbb{R} \\
-        f \mapsto \int_a^b f(y) \, dy
-    \end{array}
-\right .\end{split}\]</div>
-<p>is a linear mapping, called the <strong>integration functional</strong>.</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. We only prove <strong>(f)</strong>.</p>
-<p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be integrable,  and <span class="math notranslate nohighlight">\(F\)</span> a primitive of <span class="math notranslate nohighlight">\(f\)</span>.
-Then, <span class="math notranslate nohighlight">\(f\)</span> is bounded by some <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span>, and by the triangular inequality (c), we have for <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> and arbitrarily small <span class="math notranslate nohighlight">\(h\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M\]</div>
-<p>which proves the continuity of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
-</div>
-<p>Riemann sums are one of two methods of introducing Riemann integrals. The other method is based on step functions.
-It turns out that Riemann sums are useful for the famous integral theorems,
-while step functions come in when we show the integrability of certain functions.</p>
-<div class="proof definition admonition" id="def-step-functions">
-<p class="admonition-title"><span class="caption-number">Definition 22 </span> (Step Functions)</p>
+</div><div class="proof definition admonition" id="def-step-functions">
+<p class="admonition-title"><span class="caption-number">Definition 21 </span> (Riemann Integrals by Step Functions)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a partition <span class="math notranslate nohighlight">\(X\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-<p>A function <span class="math notranslate nohighlight">\(\phi: [a, b] \to \mathbb{R}\)</span> is called a <strong>step function</strong> iff it is constant on each interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</span>
-of some partition <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>. This partition is called <span class="math notranslate nohighlight">\(X_{\phi}\)</span>, the associated partition of <span class="math notranslate nohighlight">\(\phi\)</span>.
-A Riemann sum <span class="math notranslate nohighlight">\(R(\phi, X_{\phi}, \xi)\)</span> of a step function <span class="math notranslate nohighlight">\(\phi\)</span> does not depend on <span class="math notranslate nohighlight">\(\xi\)</span>, and we can define:</p>
+<p><strong>(a)</strong>
+A function <span class="math notranslate nohighlight">\(\phi: [a, b] \to \mathbb{R}\)</span> is called a <strong>step function</strong> iff it is constant on each interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</span>
+of some partition <span class="math notranslate nohighlight">\(X = \left\{x_0, x_1, \dots, x_n\right\}\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>. This partition is called <span class="math notranslate nohighlight">\(X_{\phi}\)</span>, the associated partition of <span class="math notranslate nohighlight">\(\phi\)</span>.</p>
+<p><strong>(b)</strong>
+The Riemann sum <span class="math notranslate nohighlight">\(R(\phi, X_{\phi}, \xi)\)</span> of a step function <span class="math notranslate nohighlight">\(\phi\)</span> does not depend on <span class="math notranslate nohighlight">\(\xi\)</span>, and we can define:</p>
 <div class="math notranslate nohighlight">
 \[R(\phi) = R(\phi, X_{\phi}, x)= \sum_{k=0}^{n-1} \phi(x_k)(x_{k+1} - x_k)\]</div>
-</section>
-</div><div class="proof theorem admonition" id="thr-riemann-integrals">
-<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Riemann Integrals by Step Functions)</p>
-<section class="theorem-content" id="proof-content">
-<p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
-<p>Theorem: <span class="math notranslate nohighlight">\(f\)</span> is R-integrable iff</p>
+<p><strong>(c)</strong>
+We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S-integrable</strong>, iff</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-1">
 <span class="eqno">(19)<a class="headerlink" href="#equation-equ-riemann-integrals-1" title="Link to this equation">#</a></span>\[\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>. In this case, we have:</p>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-riemann-integrals">
+<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Equivalence of R- and S-Integrals)</p>
+<section class="theorem-content" id="proof-content">
+<p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
+<p>Theorem: <span class="math notranslate nohighlight">\(f\)</span> is R-integrable iff it is S-integrable. In this case, we have:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-2">
 <span class="eqno">(20)<a class="headerlink" href="#equation-equ-riemann-integrals-2" title="Link to this equation">#</a></span>\[\int_a^b f(x) \, dx = \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>This equivalence allows us to forget the term “S-integrability”.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>Part One:</strong> We show that <a class="reference internal" href="#equation-equ-riemann-integrals-1">(19)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-2">(20)</a> hold if <span class="math notranslate nohighlight">\(f\)</span> is R-integrable.</p>
@@ -1083,6 +1032,75 @@ we arrive at <a class="reference internal" href="#equation-equ-riemann-integrals
 </div>
 <p>A famous non-integrable function is the <em>Dirichlet function</em>, which is <span class="math notranslate nohighlight">\(1\)</span> for rational numbers and <span class="math notranslate nohighlight">\(0\)</span> otherwise.
 It is not integrable because on every interval you’ll find Riemann sums equal to <span class="math notranslate nohighlight">\(0\)</span>, and others equal to <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<div class="proof definition admonition" id="thr-riemann-primitives">
+<p class="admonition-title"><span class="caption-number">Definition 22 </span> (Riemann Primitives)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f \in \mathcal{R}([a,b])\)</span>. The function <span class="math notranslate nohighlight">\(F\)</span> defined by</p>
+<div class="math notranslate nohighlight">
+\[F(x) = \int_a^x f(y) \, dy \]</div>
+<p>is called the <strong>Riemann-primitive</strong> (or primitive) of <span class="math notranslate nohighlight">\(f\)</span>,
+on the understanding that</p>
+<div class="math notranslate nohighlight">
+\[F(a) = \int_a^a f(x) \, dx = 0\]</div>
+<p>The notation</p>
+<div class="math notranslate nohighlight">
+\[F = \int f(y) \, dy\]</div>
+<p>is used if the lower bound <span class="math notranslate nohighlight">\(a\)</span> is unimportant or not specified.
+Two primitives of an integrable function <span class="math notranslate nohighlight">\(f\)</span> differ only by a constant (see <a class="reference internal" href="#thr-properties-riemann">additivity</a>).</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-properties-riemann">
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span> (Properties of Riemann Integrals)</p>
+<section class="theorem-content" id="proof-content">
+<p>We state some obvious but important properties of Riemann integrals.</p>
+<p><strong>(a) Boundedness</strong></p>
+<p>R-integrable functions are bounded on closed intervals
+(because Riemann sums are).</p>
+<p><strong>(b) Monotony</strong></p>
+<div class="math notranslate nohighlight">
+\[f \le g  \Rightarrow  \int_a^b f(x) \, dx \le \int _a^b g(x) \, dx\]</div>
+<p>holds for any two functions <span class="math notranslate nohighlight">\(f,g \in \mathcal{R}([a,b])\)</span>.</p>
+<p><strong>(c) Triangular Inequality</strong></p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is integrable, then so is <span class="math notranslate nohighlight">\(|f|\)</span>, and it holds that:</p>
+<div class="math notranslate nohighlight">
+\[\left | \int_a^b f(y) \, dy \right | \le \int_a^b \left | f(y) \right | \, dy \]</div>
+<p><strong>(d) Additivity</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be integrable, and <span class="math notranslate nohighlight">\(c \in [a, b]\)</span>. Then it holds that:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx\]</div>
+<p><strong>(e) Linearity</strong></p>
+<p>If <span class="math notranslate nohighlight">\(f, g\)</span> are integrable, then so is <span class="math notranslate nohighlight">\(f + \alpha g\)</span> (<span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>), and it holds that:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) + \alpha g(x) \, dx = \int_a^b f(x) \, dx + \alpha \int_a^b g(x) \, dx\]</div>
+<p><strong>(f)</strong> The R-integrable functions over <span class="math notranslate nohighlight">\([a, b]\)</span> form a <strong>vector space</strong>, written as <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span>.</p>
+<p><strong>(g)</strong> The primitive of an R-integrable function is continuous. The mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to C^0([a, b]) \\
+        f \mapsto \int_a^x f(y) \, dy
+    \end{array}
+\right .\end{split}\]</div>
+<p>is a linear operator, called the <strong>integration operator</strong>.</p>
+<p>The mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int : 
+\left\{
+    \begin{array}{lr}
+        \mathcal{R}([a, b]) \to \mathbb{R} \\
+        f \mapsto \int_a^b f(y) \, dy
+    \end{array}
+\right .\end{split}\]</div>
+<p>is a linear mapping, called the <strong>integration functional</strong>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only prove <strong>(g)</strong>.</p>
+<p>Let <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span> be integrable,  and <span class="math notranslate nohighlight">\(F\)</span> a primitive of <span class="math notranslate nohighlight">\(f\)</span>.
+Then, <span class="math notranslate nohighlight">\(f\)</span> is bounded by some <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span>, and by the triangular inequality (c), we have for <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> and arbitrarily small <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\left | F(x+h) -  F(x) \right | = \left | \int_x^{x+h} f(y) \, dy \right | \le  \int_x^{x+h} \left | f(y) \right | \, dy \le h M\]</div>
+<p>which proves the continuity of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</div>
 <p>We now introduce some criteria of Riemann integrability. The proofs use step functions rather than Riemann sums.</p>
 <div class="proof theorem admonition" id="thr-riemann-integrable-functions">
 <p class="admonition-title"><span class="caption-number">Theorem 25 </span> (Riemann-Integrable Functions)</p>
@@ -1093,11 +1111,11 @@ It is not integrable because on every interval you’ll find Riemann sums equal 
 \[R(\phi) = \int_a^b \phi(x) \, dx\]</div>
 <p><strong>(b)</strong> Monotonous functions are R-integrable.</p>
 <p><strong>(c)</strong> Continuous functions are R-integrable.</p>
-<p><strong>(d)</strong> Let <span class="math notranslate nohighlight">\(f\)</span> be bounded and continuous except on a set <span class="math notranslate nohighlight">\(D\)</span> that is the finite union of converging sequences.
+<p><strong>(d)</strong> Let <span class="math notranslate nohighlight">\(f\)</span> be bounded and continuous except on a set <span class="math notranslate nohighlight">\(D\)</span> with a finite number of limit points.
 Then <span class="math notranslate nohighlight">\(f\)</span> is R-integrable.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>(a)</strong> This follows from <a class="reference internal" href="#thr-riemann-integrals">Theorem 24</a>. We clearly have:</p>
+<p>Proof. <strong>(a)</strong> This follows from <a class="reference internal" href="#thr-riemann-integrals">Theorem 23</a>. We clearly have:</p>
 <div class="math notranslate nohighlight">
 \[\sup_{\varphi \le \phi} R(\varphi) = R(\phi) = \inf_{\psi \ge \phi} R(\psi)\]</div>
 <p>The proofs of <strong>(b), (c), (d)</strong> are very similar.
@@ -1130,7 +1148,7 @@ which are a recurrent pattern in the theory of integrals.</p>
 We assume that <span class="math notranslate nohighlight">\(D\)</span> has only one limit point <span class="math notranslate nohighlight">\(d^*\)</span>. If there is more than one,
 simply divide <span class="math notranslate nohighlight">\([a, b]\)</span> into as many subintervals with one limit point in each.</p>
 <p>We split the interval <span class="math notranslate nohighlight">\([a, b]\)</span> into a “good” set <span class="math notranslate nohighlight">\(U\)</span> and a “bad” set <span class="math notranslate nohighlight">\(V\)</span>, as we did
-in the proof of <a class="reference internal" href="#thr-riemann-integrals">Theorem 24</a>.</p>
+in the proof of <a class="reference internal" href="#thr-riemann-integrals">Theorem 23</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;K = \{k &lt; n \mid D \cap [x_k, x_{k+1}) = \emptyset \} \\
 &amp;L = \{k &lt; n \mid k \notin K \} \\
@@ -1222,11 +1240,17 @@ And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <s
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1">
 <span class="eqno">(35)<a class="headerlink" href="#equation-equ-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
-<p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.
-The statement <a class="reference internal" href="#equation-equ-derivatives-1">(35)</a> is equivalent to</p>
+<p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>. We often use the notation:</p>
+<div class="math notranslate nohighlight" id="equation-equ-derivatives-0">
+<span class="eqno">(36)<a class="headerlink" href="#equation-equ-derivatives-0" title="Link to this equation">#</a></span>\[\frac{df}{dx} =  f'(x)\]</div>
+<p>The statement <a class="reference internal" href="#equation-equ-derivatives-1">(35)</a> is equivalent to</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1a">
-<span class="eqno">(36)<a class="headerlink" href="#equation-equ-derivatives-1a" title="Link to this equation">#</a></span>\[f(x+h) - f(x) = f'(x) \, h + o(h)\]</div>
-<p>which means that the term <span class="math notranslate nohighlight">\(f'(x) \, h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<span class="eqno">(37)<a class="headerlink" href="#equation-equ-derivatives-1a" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
+<p>which means that the term <span class="math notranslate nohighlight">\(f'(x) \, h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.
+The derivative is fully determined by equation <a class="reference internal" href="#equation-equ-derivatives-1a">(37)</a>. From</p>
+<div class="math notranslate nohighlight" id="equation-equ-derivatives-1b">
+<span class="eqno">(38)<a class="headerlink" href="#equation-equ-derivatives-1b" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + y \, h + o(h)\]</div>
+<p>for some value <span class="math notranslate nohighlight">\(y\)</span> we can conclude that <span class="math notranslate nohighlight">\(y = f'(x)\)</span>.</p>
 <p><strong>(c)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuously differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if it is differentiable at <span class="math notranslate nohighlight">\(x\)</span>
 and its derivative <span class="math notranslate nohighlight">\(f'\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p><strong>(b)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> on <span class="math notranslate nohighlight">\([a, b]\)</span> if it is differentiable for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>.
@@ -1420,13 +1444,13 @@ Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition 
 \[f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}\]</div>
 <p>and we get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-main-theorem-calculus-1">
-<span class="eqno">(37)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+<span class="eqno">(39)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
 &amp;= f(b) - f(a)\end{split}\]</div>
 <p>The final reasoning is standard: We choose partitions <span class="math notranslate nohighlight">\(\{x_k\}\)</span> with arbitrarily small granularity.
-The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(37)</a> is thus driven to equality.
-The last equation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(37)</a> is again the <strong>collapsing sum pattern</strong>.</p>
+The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(39)</a> is thus driven to equality.
+The last equation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(39)</a> is again the <strong>collapsing sum pattern</strong>.</p>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
 <p class="admonition-title"><span class="caption-number">Theorem 32 </span> (Integration Rules)</p>
@@ -1434,8 +1458,8 @@ The last equation in <a class="reference internal" href="#equation-equ-main-theo
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span></p>
 <p><strong>(a) Integration by Parts</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
-<div class="math notranslate nohighlight">
-\[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
+<div class="math notranslate nohighlight" id="equation-thr-integration-rules-1">
+<span id="integration-by-parts"></span><span class="eqno">(40)<a class="headerlink" href="#equation-thr-integration-rules-1" title="Link to this equation">#</a></span>\[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
 <p><strong>(b) Substitution Rule</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b)])\)</span> with <span class="math notranslate nohighlight">\(g' \neq 0\)</span>. Then</p>
 <div class="math notranslate nohighlight">
@@ -1492,40 +1516,37 @@ A simple example is:</p>
 <section id="taylor-s-theorem">
 <span id="taylor-theorem"></span><h2>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Link to this heading">#</a></h2>
 <p>Derivatives are about local changes: How does a function <span class="math notranslate nohighlight">\(f\)</span> behave in a neighbourhood of some point <span class="math notranslate nohighlight">\(x\)</span>? The Taylor series allows us to express
-<span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term. In
-what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open interval, and <span class="math notranslate nohighlight">\(x, u \in A\)</span>.</p>
+<span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term.</p>
 <div class="proof theorem admonition" id="thr-taylor">
 <p class="admonition-title"><span class="caption-number">Theorem 34 </span> (Taylor’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
-<p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then:</p>
-<div class="math notranslate nohighlight">
-\[f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt\]</div>
-<p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f \in  C^{n+1}(A)\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,u]\)</span> such that:</p>
-<div class="math notranslate nohighlight">
-\[f(u)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}\]</div>
-<p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\]</div>
-<p><strong>(c)</strong>  Let <span class="math notranslate nohighlight">\(f \in  C^n(A)\)</span>. Then:</p>
-<div class="math notranslate nohighlight">
-\[f(u)=\sum _{k=0}^n \frac{f^{(k)}(a)}{k!}(x-a)^k+o(\lvert x-a\rvert^n)\]</div>
-<p>which is the same as <span class="math notranslate nohighlight">\((h = u-x)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(\lvert h\rvert^n)\]</div>
+<p>Let <span class="math notranslate nohighlight">\([a, b]\)</span> be a finite interval <span class="math notranslate nohighlight">\(f \in  C^{n+1}([a, b])\)</span>, <span class="math notranslate nohighlight">\(x \in (a, b)\)</span> and <span class="math notranslate nohighlight">\(h\)</span> so small that <span class="math notranslate nohighlight">\(x+h \in [a, b]\)</span>. Then:</p>
+<p><strong>(a)</strong></p>
+<div class="math notranslate nohighlight" id="equation-thr-taylor-a">
+<span class="eqno">(41)<a class="headerlink" href="#equation-thr-taylor-a" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(h)^k + \frac{1}{n!}\int _x^{x+h} (x+h-t)^n f^{(n+1)}(t) \, dt\]</div>
+<p><strong>(b)</strong> There exists a <span class="math notranslate nohighlight">\(\xi \in [x-h,x+h]\)</span> such that:</p>
+<div class="math notranslate nohighlight" id="equation-thr-taylor-b">
+<span class="eqno">(42)<a class="headerlink" href="#equation-thr-taylor-b" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\]</div>
+<p><strong>(c)</strong></p>
+<div class="math notranslate nohighlight" id="equation-thr-taylor-c">
+<span class="eqno">(43)<a class="headerlink" href="#equation-thr-taylor-c" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(h^n)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>(a)</strong> Proof by induction, using the main theorem of integration and integration by parts:</p>
+<p>Proof. <strong>(a)</strong> The proof is by induction, using the main theorem of integration and integration by parts. We set <span class="math notranslate nohighlight">\(u = x+h\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f(u) - f(x) &amp;= \int _x^u f'(t)dt  = - \int _x^u\frac{d(u-t)}{dt}f'(t)dt \\
+&amp; = -(u-t)f'(t) \lvert_x^u + \int _x^u(u-t)f''(t)dt \\
 &amp; = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... } \\
 &amp; =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt\end{split}\]</div>
-<p><strong>(b)</strong> Using the mean value theorem, we find a <span class="math notranslate nohighlight">\(\xi \in [x, u]\)</span> such that</p>
+<p>We obtain equation <a class="reference internal" href="#equation-thr-taylor-a">(41)</a> by replacing <span class="math notranslate nohighlight">\(u\)</span> with <span class="math notranslate nohighlight">\(h = u-x\)</span>.</p>
+<p><strong>(b)</strong> Using the <a class="reference internal" href="#thr-mean-value-integration">mean value theorem of integration</a>, we find a <span class="math notranslate nohighlight">\(\xi \in [x-h, x+h]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}\]</div>
-<p><strong>(c)</strong></p>
+<p>We obtain equation <a class="reference internal" href="#equation-thr-taylor-b">(42)</a> again by replacing <span class="math notranslate nohighlight">\(u\)</span> with <span class="math notranslate nohighlight">\(h = u-x\)</span>.</p>
+<p><strong>(c)</strong>
+This follows from (b), because:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f(u) &amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{f^{(n)}(\xi) - f^{(n)}(x)}{n!}(u-x)^n \\
-&amp;= \sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + o((u-x)^n)\end{split}\]</div>
+\[\frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1} = o(h^n)\]</div>
 </div>
 </section>
 <section id="little-o-big-o">
@@ -1546,46 +1567,24 @@ what follows, <span class="math notranslate nohighlight">\(A\)</span> is an open
 <div class="docutils container" id="id11">
 <div role="list" class="citation-list">
 <div class="citation" id="id91" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Cou55</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Cou55</a><span class="fn-bracket">]</span></span>
 <p>Richard Courant. <em>Vorlesungen über Differential- und Integralrechnung</em>. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.</p>
 </div>
 <div class="citation" id="id89" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">For16</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">For16</a><span class="fn-bracket">]</span></span>
 <p>Otto Forster. <em>Analysis 1: Differential- und Integralrechnung einer Veränderlichen</em>. Springer Spektrum, 12th edition edition, 2016. First published 1976.</p>
 </div>
 <div class="citation" id="id88" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Heu09</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Heu09</a><span class="fn-bracket">]</span></span>
 <p>Harro Heuser. <em>Lehrbuch der Analysis Teil 1</em>. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.</p>
 </div>
 <div class="citation" id="id90" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Rud76</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Rud76</a><span class="fn-bracket">]</span></span>
 <p>Walter Rudin. <em>Principles of Mathematical Analysis</em>. McGraw-Hill, 3rd edition edition, 1976. First published 1953.</p>
 </div>
 </div>
 </div>
 <div style="margin-bottom: 100px;"></div>
-<p><strong>(c)</strong> The <strong>uniform limit</strong> of differentiable functions is differentiable,
-and we can swap limit and differentiation:</p>
-<div class="math notranslate nohighlight" id="equation-equ-properties-derivatives-1">
-<span class="eqno">(38)<a class="headerlink" href="#equation-equ-properties-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{n \to \infty} \partial f_n = \partial \lim_{n \to \infty} f_n\]</div>
-<p>Likewise, we have:</p>
-<div class="math notranslate nohighlight" id="equation-equ-properties-derivatives-2">
-<span class="eqno">(39)<a class="headerlink" href="#equation-equ-properties-derivatives-2" title="Link to this equation">#</a></span>\[\lim_{n \to \infty} \partial^n f_n = \partial^n \lim_{n \to \infty} f_n\]</div>
-<p>This can be expressed as: <span class="math notranslate nohighlight">\(C^n ([a, b])\)</span> is closed under the sup norm.</p>
-<p><strong>(c)</strong> Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence in <span class="math notranslate nohighlight">\(C^1([a, b])\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.
-We have for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and large <span class="math notranslate nohighlight">\(n\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}&amp;f(x+h) - f(x) \\
-&amp;= (f(x+h) - f_n(x+h))  + (f_n(x+h) - f_n(x))  + (f_n(x) - f(x))  \\
-&amp;= hf'_n(x) + o(h) + (f(x+h) - f_n(x+h)) + (f_n(x) - f(x))\end{split}\]</div>
-<p>Letting <span class="math notranslate nohighlight">\(n \to \infty\)</span> gives</p>
-<div class="math notranslate nohighlight">
-\[f(x+h) - f(x) = hf'(x) + o(h)\]</div>
-<p>It follows that:</p>
-<div class="math notranslate nohighlight">
-\[\lim_{n \to \infty} f'_n = f'\]</div>
-<p>which is <a class="reference internal" href="#equation-equ-properties-derivatives-1">(38)</a>.
-To prove equation <a class="reference internal" href="#equation-equ-properties-derivatives-2">(39)</a>, apply <a class="reference internal" href="#equation-equ-properties-derivatives-1">(38)</a> to <span class="math notranslate nohighlight">\(f'\)</span>.</p>
 </section>
 </section>
 
