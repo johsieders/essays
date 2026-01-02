@@ -187,28 +187,24 @@ We clearly have $A \subseteq \bar{A}$.
 Let $A \subseteq \mathbb{R}$. Then:
 
 ```{math}
-A' = \bar{A} - A
+A' \subseteq \bar{A}
 ```
 ````
 
 ````{prf:proof}
 
-Let $a \in \bar{A} - A$. Assume that $a \in \bar{A}^c$. Then:
+Let $a \in A' - A$. Then, by definition:
 
 ```{math}
-&\exists \epsilon > 0: U_{\epsilon}(a) \subseteq \bar{A}^c \\
-&\Longrightarrow U_{\epsilon}(a) \cap \bar{A} = \emptyset
+\forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset
 ```
-which is a contradiction. So, $a \in \bar{A}$.
-
-Let $a \in A' - A$, $B$ be closed, and $A \subseteq B$. Then $B^c$ is open and we have:
+Let $B \supseteq A$ be closed, so $B^c \subseteq A^c$ is open. Assume that $a \in B^c$. Then, by definition:
 
 ```{math}
-&\forall \epsilon > 0: U_{\epsilon}(a) \cap A \neq \emptyset \\
-&\Longrightarrow \forall \epsilon > 0: U_{\epsilon}(a) \not\subseteq B^c \\
-&\Longrightarrow a \notin B^c \\
-&\Longrightarrow a \in B
+\exists \epsilon > 0: U_{\epsilon}(a) \subseteq B^c \subseteq A^c
 ```
+which implies the contradiction $U_{\epsilon}(a) \cap A = \emptyset$, 
+therefore $a \in B$ for every closed superset of $A$, hence $a \in \bar{A}$.
 ````
 
 

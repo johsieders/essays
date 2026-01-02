@@ -42,6 +42,8 @@ parts:
         title: Physics Roadmap
       - file: physics/29-physics-one-page
         title: Modern Physics One-Pager
+      - file: physics/newton
+        title: Newton
         
   - caption: Mathematics
     chapters:
