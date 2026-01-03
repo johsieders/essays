@@ -467,14 +467,17 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-newtonian-theatre">The Newtonian Theatre</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lagrangian">The Lagrangian</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plain-vanilla-lagrangian">Plain Vanilla Lagrangian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-v-lagrangian">T-V Lagrangian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-lagrangian">Standard Lagrangian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-fall">Free Fall</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke">Hooke</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-energy-hamiltonian">Conservation of Energy, Hamiltonian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-catalogue-of-lagrangians">A Catalogue of Lagrangians</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke">Hooke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hooke</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendulum">Pendulum</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catenary">Catenary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field">Magnetic Field</a></li>
@@ -521,7 +524,7 @@ trigonometry).</p></li>
 <h2>The Newtonian Theatre<a class="headerlink" href="#the-newtonian-theatre" title="Link to this heading">#</a></h2>
 <p>Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity.
 He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less
-particles with positive mass, and calculated how they move <span id="id1">[<a class="reference internal" href="#id34" title="Leonard Susskind and George Hrabovsky. Classical Mechanics: The Theoretical Minimum. Basic Books, 2014.">Susskind and Hrabovsky, 2014</a>]</span>.
+particles with positive mass, and calculated how they move <span id="id1">[<a class="reference internal" href="#id35" title="Leonard Susskind and George Hrabovsky. Classical Mechanics: The Theoretical Minimum. Basic Books, 2014.">Susskind and Hrabovsky, 2014</a>]</span>.
 aindrops, apples, and planets are tangible instances, but of course they do have shape, volume and many other properties.
 Newton’s equations of motion are exact for particles (which aren’t real), but approximate otherwise.
 Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity.
@@ -559,22 +562,109 @@ Transformation)</p></li>
 </section>
 <section id="the-lagrangian">
 <h2>The Lagrangian<a class="headerlink" href="#the-lagrangian" title="Link to this heading">#</a></h2>
+<p>There is a function <span class="math notranslate nohighlight">\(L(x, \dot{x})\)</span> which is, somehow, a measure
+for the mess caused by a particle that moves at speed <span class="math notranslate nohighlight">\(\dot{x}(t)\)</span> through point <span class="math notranslate nohighlight">\(x(t)\)</span>.
+Here is the principle of least action:</p>
+<p>The particle moves in such a way that the action <span class="math notranslate nohighlight">\(A[x]\)</span> defined by</p>
+<div class="math notranslate nohighlight" id="equation-least-action-x">
+<span id="least-action"></span><span class="eqno">(1)<a class="headerlink" href="#equation-least-action-x" title="Link to this equation">#</a></span>\[A[x] = \int_a^b L(x, \dot{x}) \, dt \]</div>
+<p>is minimized. It is understood that the particle moves from the position <span class="math notranslate nohighlight">\(x(a)\)</span> to <span class="math notranslate nohighlight">\(x(b)\)</span>.
+We are minimizing over all continuous functions</p>
 <div class="math notranslate nohighlight">
-\[A[x] = \int L(x, \dot{x}) \, dt \longrightarrow \min!\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{d}{dt} \frac{\partial L}{\partial \dot{x}} = \frac{\partial L}{\partial x}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}&amp; p = \frac{\partial L}{\partial \dot{x}} \\
+\[\begin{split}&amp;x: \left\{
+    \begin{array}{lr}
+        [a, b] \rightarrow \mathbb{R}^3\\
+        x \mapsto x(t)
+    \end{array}
+\right .\end{split}\]</div>
+<p>We will show that all functions <span class="math notranslate nohighlight">\(x\)</span> that minimize the <a class="reference internal" href="#least-action"><span class="std std-ref">least action</span></a>
+solve the Euler-Lagrange equation:</p>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange">
+<span class="eqno">(3)<a class="headerlink" href="#equation-euler-lagrange" title="Link to this equation">#</a></span>\[\frac{d}{dt} \frac{\partial L}{\partial \dot{x}} = \frac{\partial L}{\partial x}\]</div>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange">
+<span class="eqno">(3)<a class="headerlink" href="#equation-euler-lagrange" title="Link to this equation">#</a></span>\[\partial_t \, \partial_\dot{x} L = \partial_x L\]</div>
+<p>The converse, however, is not true.</p>
+<p>For a given Lagrangian, the quantities <strong>force</strong> and <strong>momentum</strong> are defined by:</p>
+<div class="math notranslate nohighlight" id="equation-force-momentum">
+<span class="eqno">(4)<a class="headerlink" href="#equation-force-momentum" title="Link to this equation">#</a></span>\[\begin{split}&amp; p = \frac{\partial L}{\partial \dot{x}} \\
 \\
-&amp; F = \frac{\partial L}{\partial x} \\
-\\
-&amp; \dot {p} = F\end{split}\]</div>
-<section id="plain-vanilla-lagrangian">
-<h3>Plain Vanilla Lagrangian<a class="headerlink" href="#plain-vanilla-lagrangian" title="Link to this heading">#</a></h3>
+&amp; F = \frac{\partial L}{\partial x}\end{split}\]</div>
+<p>which reduces the Euler-Lagrange equation to</p>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange-short">
+<span class="eqno">(5)<a class="headerlink" href="#equation-euler-lagrange-short" title="Link to this equation">#</a></span>\[\dot {p} = F\]</div>
+<p>Force and momentum are the link between the Lagrangian and observed reality:
+If you have an idea of force and momentum, you get the Lagrangian by integration.
+If you have an idea of the Lagrangian, you get force and momentum by differentiation,
+and can compare these with your measurements.</p>
+<section id="t-v-lagrangian">
+<h3>T-V Lagrangian<a class="headerlink" href="#t-v-lagrangian" title="Link to this heading">#</a></h3>
+<p>Lagrangian:</p>
+<div class="math notranslate nohighlight" id="equation-lagrange-t-v">
+<span class="eqno">(10)<a class="headerlink" href="#equation-lagrange-t-v" title="Link to this equation">#</a></span>\[L(x, \dot{x}) = T(\dot{x}) - V(x)\]</div>
+<p>Force:</p>
+<div class="math notranslate nohighlight" id="equation-force-t-v">
+<span class="eqno">(7)<a class="headerlink" href="#equation-force-t-v" title="Link to this equation">#</a></span>\[\begin{split}F = -\partial V = 
+-\begin{bmatrix}
+\partial V / \partial x \\
+\partial V / \partial y \\
+\partial V / \partial z \\
+\end{bmatrix}\end{split}\]</div>
+<p>Momentum:</p>
+<div class="math notranslate nohighlight" id="equation-momentum-t-v">
+<span class="eqno">(8)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
+\begin{bmatrix}
+\partial T / \partial \dot{x} \\
+\partial T / \partial \dot{y} \\
+\partial T / \partial \dot{z} \\
+\end{bmatrix}\end{split}\]</div>
+<p>Euler-Lagrange</p>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange-t-v">
+<span class="eqno">(9)<a class="headerlink" href="#equation-euler-lagrange-t-v" title="Link to this equation">#</a></span>\[\partial_t \, \partial T = -\partial V\]</div>
+</section>
+<section id="standard-lagrangian">
+<h3>Standard Lagrangian<a class="headerlink" href="#standard-lagrangian" title="Link to this heading">#</a></h3>
+<p>Lagrangian:</p>
+<div class="math notranslate nohighlight" id="equation-lagrange-t-v">
+<span class="eqno">(10)<a class="headerlink" href="#equation-lagrange-t-v" title="Link to this equation">#</a></span>\[L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)\]</div>
+<p>Force:</p>
 <div class="math notranslate nohighlight">
-\[L(x, \dot{x}) = T(\dot{x}) - V(x)\]</div>
+\[F = -\partial V\]</div>
+<p>Momentum:</p>
 <div class="math notranslate nohighlight">
-\[T(\dot{x}) = \frac{1}{2}m\dot{x}^2\]</div>
+\[p = \partial T = m \dot{x}\]</div>
+<p>Euler-Lagrange:</p>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange-standard">
+<span class="eqno">(11)<a class="headerlink" href="#equation-euler-lagrange-standard" title="Link to this equation">#</a></span>\[m \ddot{x} = -\partial V\]</div>
+</section>
+<section id="free-fall">
+<h3>Free Fall<a class="headerlink" href="#free-fall" title="Link to this heading">#</a></h3>
+<p>Lagrangian:</p>
+<div class="math notranslate nohighlight" id="equation-lagrange-free-fall">
+<span class="eqno">(12)<a class="headerlink" href="#equation-lagrange-free-fall" title="Link to this equation">#</a></span>\[L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - gx\]</div>
+<p>Force:</p>
+<div class="math notranslate nohighlight">
+\[F = g\]</div>
+<p>Momentum:</p>
+<div class="math notranslate nohighlight">
+\[p = \partial T = m \dot{x}\]</div>
+<p>Euler-Lagrange:</p>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange-free-fall">
+<span class="eqno">(13)<a class="headerlink" href="#equation-euler-lagrange-free-fall" title="Link to this equation">#</a></span>\[m \ddot{x} = g\]</div>
+</section>
+<section id="hooke">
+<h3>Hooke<a class="headerlink" href="#hooke" title="Link to this heading">#</a></h3>
+<p>Lagrangian:</p>
+<div class="math notranslate nohighlight" id="equation-lagrange-hooke">
+<span class="eqno">(14)<a class="headerlink" href="#equation-lagrange-hooke" title="Link to this equation">#</a></span>\[L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{k}{2}mx^2\]</div>
+<p>Force:</p>
+<div class="math notranslate nohighlight">
+\[F = kx\]</div>
+<p>Momentum:</p>
+<div class="math notranslate nohighlight">
+\[p = \partial T = m \dot{x}\]</div>
+<p>Euler-Lagrange:</p>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange-hooke">
+<span class="eqno">(15)<a class="headerlink" href="#equation-euler-lagrange-hooke" title="Link to this equation">#</a></span>\[m \ddot{x} = -kx\]</div>
 </section>
 </section>
 <section id="conservation-of-momentum">
@@ -585,15 +675,22 @@ Transformation)</p></li>
 <section id="conservation-of-energy-hamiltonian">
 <h2>Conservation of Energy, Hamiltonian<a class="headerlink" href="#conservation-of-energy-hamiltonian" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
-\[H + L = \dot{x} \, p\]</div>
+\[H(x, p) + L(x, \dot{x}) = p \, \dot{x}\]</div>
 <div class="math notranslate nohighlight">
-\[E = H(x, p)\]</div>
+\[\begin{split}&amp;\partial_x H = - \dot{p} \\
+\\
+&amp;\partial_p H = \dot{x} \\
+\\
+&amp;\{\cdot, H\} = \frac{d}{dt}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;E(t) = H(x(t), p(t)) \\
+&amp;\partial_t E = \partial_t H(x, p) \\
+&amp;= \partial_x H \dot{x} + \partial_p H \dot{p} \\
+&amp;= \dot{p} \dot{x} - \dot{x} \dot{p} = 0\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;\frac{\partial H}{\partial x} = - \dot{p} \\
 \\
-&amp;\frac{\partial H}{\partial p} = \dot{x} \\
-\\
-&amp;\{\cdot, H\} = \frac{d}{dt}\end{split}\]</div>
+&amp;\frac{\partial H}{\partial p} = \dot{x} \\\end{split}\]</div>
 </section>
 <section id="conservation-of-information-gibbs-liouville">
 <h2>Conservation of Information, Gibbs-Liouville<a class="headerlink" href="#conservation-of-information-gibbs-liouville" title="Link to this heading">#</a></h2>
@@ -606,8 +703,8 @@ Transformation)</p></li>
 </section>
 <section id="a-catalogue-of-lagrangians">
 <h2>A Catalogue of Lagrangians<a class="headerlink" href="#a-catalogue-of-lagrangians" title="Link to this heading">#</a></h2>
-<section id="hooke">
-<h3>Hooke<a class="headerlink" href="#hooke" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h3>Hooke<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 </section>
 <section id="pendulum">
 <h3>Pendulum<a class="headerlink" href="#pendulum" title="Link to this heading">#</a></h3>
@@ -651,9 +748,9 @@ acceleration). Their levitation is mostly due to centrifugal force.</p></li>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id2">
+<div class="docutils container" id="id3">
 <div role="list" class="citation-list">
-<div class="citation" id="id34" role="doc-biblioentry">
+<div class="citation" id="id35" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">SH14</a><span class="fn-bracket">]</span></span>
 <p>Leonard Susskind and George Hrabovsky. <em>Classical Mechanics: The Theoretical Minimum</em>. Basic Books, 2014.</p>
 </div>
@@ -731,14 +828,17 @@ acceleration). Their levitation is mostly due to centrifugal force.</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-newtonian-theatre">The Newtonian Theatre</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lagrangian">The Lagrangian</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plain-vanilla-lagrangian">Plain Vanilla Lagrangian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-v-lagrangian">T-V Lagrangian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-lagrangian">Standard Lagrangian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#free-fall">Free Fall</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke">Hooke</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-energy-hamiltonian">Conservation of Energy, Hamiltonian</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-catalogue-of-lagrangians">A Catalogue of Lagrangians</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke">Hooke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Hooke</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pendulum">Pendulum</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catenary">Catenary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field">Magnetic Field</a></li>

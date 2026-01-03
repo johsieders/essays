@@ -408,6 +408,7 @@ document.write(`
    <h1>Proof Index</h1>
 
    <div class="modindex-jumpbox">
+   <a href="#cap-alg-euclid-extended"><strong>alg-euclid-extended</strong></a> | 
    <a href="#cap-cor-little-fermat"><strong>cor-little-fermat</strong></a> | 
    <a href="#cap-def-add-mul-ord"><strong>def-add-mul-ord</strong></a> | 
    <a href="#cap-def-axiom-countable-choice"><strong>def-axiom-countable-choice</strong></a> | 
@@ -418,8 +419,10 @@ document.write(`
    <a href="#cap-def-convergence-functions"><strong>def-convergence-functions</strong></a> | 
    <a href="#cap-def-convergence-reals"><strong>def-convergence-reals</strong></a> | 
    <a href="#cap-def-derivatives"><strong>def-derivatives</strong></a> | 
+   <a href="#cap-def-diophantine"><strong>def-diophantine</strong></a> | 
    <a href="#cap-def-infinity"><strong>def-infinity</strong></a> | 
    <a href="#cap-def-integer-division"><strong>def-integer-division</strong></a> | 
+   <a href="#cap-def-module"><strong>def-module</strong></a> | 
    <a href="#cap-def-peano-axioms"><strong>def-peano-axioms</strong></a> | 
    <a href="#cap-def-riemann-integrals-sums"><strong>def-riemann-integrals-sums</strong></a> | 
    <a href="#cap-def-step-functions"><strong>def-step-functions</strong></a> | 
@@ -445,7 +448,9 @@ document.write(`
    <a href="#cap-thr-R-completeness"><strong>thr-R-completeness</strong></a> | 
    <a href="#cap-thr-R-uncountable"><strong>thr-R-uncountable</strong></a> | 
    <a href="#cap-thr-archimedean-property"><strong>thr-archimedean-property</strong></a> | 
+   <a href="#cap-thr-bezout"><strong>thr-bezout</strong></a> | 
    <a href="#cap-thr-bolzano-weierstrass"><strong>thr-bolzano-weierstrass</strong></a> | 
+   <a href="#cap-thr-chinese-remainder"><strong>thr-chinese-remainder</strong></a> | 
    <a href="#cap-thr-continuity-on-compact-sets"><strong>thr-continuity-on-compact-sets</strong></a> | 
    <a href="#cap-thr-convergent-sequences"><strong>thr-convergent-sequences</strong></a> | 
    <a href="#cap-thr-countable-uncountable"><strong>thr-countable-uncountable</strong></a> | 
@@ -463,6 +468,7 @@ document.write(`
    <a href="#cap-thr-main-theorem-calculus"><strong>thr-main-theorem-calculus</strong></a> | 
    <a href="#cap-thr-mean-value-differentiation"><strong>thr-mean-value-differentiation</strong></a> | 
    <a href="#cap-thr-mean-value-integration"><strong>thr-mean-value-integration</strong></a> | 
+   <a href="#cap-thr-modules"><strong>thr-modules</strong></a> | 
    <a href="#cap-thr-nested-intervals"><strong>thr-nested-intervals</strong></a> | 
    <a href="#cap-thr-properties-derivatives"><strong>thr-properties-derivatives</strong></a> | 
    <a href="#cap-thr-properties-riemann"><strong>thr-properties-riemann</strong></a> | 
@@ -476,6 +482,14 @@ document.write(`
    </div>
 
    <table class="indextable modindextable">
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-alg-euclid-extended"><td></td><td>
+       <strong>alg-euclid-extended</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#alg-euclid-extended"><code class="xref">alg-euclid-extended</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <em>algorithm</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-little-fermat"><td></td><td>
        <strong>cor-little-fermat</strong></td><td></td></tr>
@@ -557,6 +571,14 @@ document.write(`
        <a href="mathematics/calculus.html#def-derivatives"><code class="xref">def-derivatives</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-diophantine"><td></td><td>
+       <strong>def-diophantine</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#def-diophantine"><code class="xref">def-diophantine</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-infinity"><td></td><td>
        <strong>def-infinity</strong></td><td></td></tr>
      <tr>
@@ -571,6 +593,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/arithmetic.html#def-integer-division"><code class="xref">def-integer-division</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-module"><td></td><td>
+       <strong>def-module</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#def-module"><code class="xref">def-module</code></a> <em>(mathematics/arithmetic)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-peano-axioms"><td></td><td>
@@ -773,12 +803,28 @@ document.write(`
        <a href="mathematics/numbers.html#thr-archimedean-property"><code class="xref">thr-archimedean-property</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-bezout"><td></td><td>
+       <strong>thr-bezout</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#thr-bezout"><code class="xref">thr-bezout</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-bolzano-weierstrass"><td></td><td>
        <strong>thr-bolzano-weierstrass</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="mathematics/calculus.html#thr-bolzano-weierstrass"><code class="xref">thr-bolzano-weierstrass</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-chinese-remainder"><td></td><td>
+       <strong>thr-chinese-remainder</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#thr-chinese-remainder"><code class="xref">thr-chinese-remainder</code></a> <em>(mathematics/arithmetic)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-continuity-on-compact-sets"><td></td><td>
@@ -915,6 +961,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/calculus.html#thr-mean-value-integration"><code class="xref">thr-mean-value-integration</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-modules"><td></td><td>
+       <strong>thr-modules</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/arithmetic.html#thr-modules"><code class="xref">thr-modules</code></a> <em>(mathematics/arithmetic)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-nested-intervals"><td></td><td>

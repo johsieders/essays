@@ -71,31 +71,197 @@ field?
 
 ## The Lagrangian
 
+There is a function $L(x, \dot{x})$ which is, somehow, a measure 
+for the mess caused by a particle that moves at speed $\dot{x}(t)$ through point $x(t)$.
+Here is the principle of least action:
+
+The particle moves in such a way that the action $A[x]$ defined by
+
+(least-action)=
 ```{math}
-A[x] = \int L(x, \dot{x}) \, dt \longrightarrow \min!
+:label: least-action-x
+A[x] = \int_a^b L(x, \dot{x}) \, dt 
 ```
 
+is minimized. It is understood that the particle moves from the position $x(a)$ to $x(b)$. 
+We are minimizing over all continuous functions 
+
 ```{math}
+&x: \left\{
+    \begin{array}{lr}
+        [a, b] \rightarrow \mathbb{R}^3\\
+        x \mapsto x(t)
+    \end{array}
+\right .
+```
+
+We will show that all functions $x$ that minimize the {ref}`least action <least-action>`
+solve the Euler-Lagrange equation:
+
+```{math}
+:label: euler-lagrange
 \frac{d}{dt} \frac{\partial L}{\partial \dot{x}} = \frac{\partial L}{\partial x}
 ```
 
 ```{math}
-& p = \frac{\partial L}{\partial \dot{x}} \\
-\\
-& F = \frac{\partial L}{\partial x} \\
-\\
-& \dot {p} = F
+:label: euler-lagrange
+\partial_t \, \partial_\dot{x} L = \partial_x L
 ```
 
-### Plain Vanilla Lagrangian
+The converse, however, is not true. 
+
+For a given Lagrangian, the quantities **force** and **momentum** are defined by:
 
 ```{math}
+:label: force-momentum
+
+& p = \frac{\partial L}{\partial \dot{x}} \\
+\\
+& F = \frac{\partial L}{\partial x}
+```
+which reduces the Euler-Lagrange equation to
+
+```{math}
+:label: euler-lagrange-short
+
+\dot {p} = F
+```
+Force and momentum are the link between the Lagrangian and observed reality:
+If you have an idea of force and momentum, you get the Lagrangian by integration. 
+If you have an idea of the Lagrangian, you get force and momentum by differentiation, 
+and can compare these with your measurements.
+
+
+
+### T-V Lagrangian
+
+Lagrangian:
+
+```{math}
+:label: lagrange-t-v
 L(x, \dot{x}) = T(\dot{x}) - V(x)
 ```
 
+Force:
+
 ```{math}
-T(\dot{x}) = \frac{1}{2}m\dot{x}^2
+:label: force-t-v
+
+F = -\partial V = 
+-\begin{bmatrix}
+\partial V / \partial x \\
+\partial V / \partial y \\
+\partial V / \partial z \\
+\end{bmatrix}
 ```
+Momentum:
+
+```{math}
+:label: momentum-t-v
+
+p = \partial T = 
+\begin{bmatrix}
+\partial T / \partial \dot{x} \\
+\partial T / \partial \dot{y} \\
+\partial T / \partial \dot{z} \\
+\end{bmatrix}
+```
+
+Euler-Lagrange
+
+```{math}
+:label: euler-lagrange-t-v
+
+\partial_t \, \partial T = -\partial V
+```
+
+### Standard Lagrangian
+
+Lagrangian:
+
+```{math}
+:label: lagrange-t-v
+L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)
+```
+
+Force:
+
+```{math}
+F = -\partial V
+```
+
+Momentum:
+
+```{math}
+p = \partial T = m \dot{x}
+```
+
+Euler-Lagrange:
+
+```{math}
+:label: euler-lagrange-standard
+
+m \ddot{x} = -\partial V
+```
+
+### Free Fall
+
+Lagrangian:
+
+```{math}
+:label: lagrange-free-fall
+L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - gx
+```
+
+Force:
+
+```{math}
+F = g
+```
+
+Momentum:
+
+```{math}
+p = \partial T = m \dot{x}
+```
+
+Euler-Lagrange:
+
+```{math}
+:label: euler-lagrange-free-fall
+
+m \ddot{x} = g
+```
+
+### Hooke
+
+Lagrangian:
+
+```{math}
+:label: lagrange-hooke
+L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{k}{2}mx^2
+```
+
+Force:
+
+```{math}
+F = kx
+```
+
+Momentum:
+
+```{math}
+p = \partial T = m \dot{x}
+```
+
+Euler-Lagrange:
+
+```{math}
+:label: euler-lagrange-hooke
+
+m \ddot{x} = -kx
+```
+
 
 ## Conservation of Momentum
 
@@ -106,20 +272,31 @@ T(\dot{x}) = \frac{1}{2}m\dot{x}^2
 ## Conservation of Energy, Hamiltonian
 
 ```{math}
-H + L = \dot{x} \, p
+H(x, p) + L(x, \dot{x}) = p \, \dot{x}
 ```
 
 ```{math}
-E = H(x, p)
+&\partial_x H = - \dot{p} \\
+\\
+&\partial_p H = \dot{x} \\
+\\
+&\{\cdot, H\} = \frac{d}{dt}
+```
+
+```{math}
+&E(t) = H(x(t), p(t)) \\
+&\partial_t E = \partial_t H(x, p) \\
+&= \partial_x H \dot{x} + \partial_p H \dot{p} \\
+&= \dot{p} \dot{x} - \dot{x} \dot{p} = 0
 ```
 
 ```{math}
 &\frac{\partial H}{\partial x} = - \dot{p} \\
 \\
 &\frac{\partial H}{\partial p} = \dot{x} \\
-\\
-&\{\cdot, H\} = \frac{d}{dt}
 ```
+
+
 
 ## Conservation of Information, Gibbs-Liouville
 
