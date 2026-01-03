@@ -110,7 +110,7 @@ solve the Euler-Lagrange equation:
 
 The converse, however, is not true. 
 
-For a given Lagrangian, the quantities **force** and **momentum** are defined by:
+For a given Lagrangian $L$, the quantities **force** and **momentum** are defined by:
 
 ```{math}
 :label: force-momentum
@@ -149,9 +149,9 @@ Force:
 
 F = -\partial V = 
 -\begin{bmatrix}
-\partial V / \partial x \\
-\partial V / \partial y \\
-\partial V / \partial z \\
+\partial_1 V  \\
+\partial_2 V  \\
+\partial_3 V  \\
 \end{bmatrix}
 ```
 Momentum:
@@ -161,9 +161,31 @@ Momentum:
 
 p = \partial T = 
 \begin{bmatrix}
-\partial T / \partial \dot{x} \\
-\partial T / \partial \dot{y} \\
-\partial T / \partial \dot{z} \\
+\partial_{\dot{x}} T \\
+\partial_{\dot{y}} T \\
+\partial_{\dot{z}} T \\
+\end{bmatrix}
+```
+
+```{math}
+:label: momentum-t-v
+
+p = \partial T = 
+\begin{bmatrix}
+\partial_1 T  \\
+\partial_2 T  \\
+\partial_3 T  \\
+\end{bmatrix}
+```
+
+```{math}
+:label: momentum-t-v-dot
+
+\dot{p} = \partial_t \, \partial T = \partial \dot{T} = 
+\begin{bmatrix}
+\partial_1 \dot{T} \\
+\partial_2 \dot{T}  \\
+\partial_3 \dot{T}  \\
 \end{bmatrix}
 ```
 
@@ -172,7 +194,7 @@ Euler-Lagrange
 ```{math}
 :label: euler-lagrange-t-v
 
-\partial_t \, \partial T = -\partial V
+\partial \dot{T} = -\partial V
 ```
 
 ### Standard Lagrangian
@@ -193,7 +215,8 @@ F = -\partial V
 Momentum:
 
 ```{math}
-p = \partial T = m \dot{x}
+& p = \partial T = m \dot{x} \\
+& \dot{p} = m \ddot{x} \\
 ```
 
 Euler-Lagrange:
@@ -204,62 +227,159 @@ Euler-Lagrange:
 m \ddot{x} = -\partial V
 ```
 
+### General Case
+
+```{list-table} General Case
+:header-rows: 1
+:name: tab-general-case
+:widths: 25 50 25
+
+* - Property
+  - Expression
+  - Notes
+* - Lagrangian
+  - $L(x, \dot{x})$ any continuous function 
+  - defined on $[a, b]$
+* - Force
+  - $F = -\partial_x L $
+  -
+* - Momentum
+  - $p = \partial_{\dot{x}} L$
+  - 
+* - Euler-Lagrange
+  - $\partial_t \partial_{\dot{x}} L = \partial V$
+  -
+```
+
+
+### T, V
+
+```{list-table} T, V
+:header-rows: 1
+:name: tab-t-v
+:widths: 25 50 25
+
+* - Property
+  - Expression
+  - Notes
+* - Lagrangian
+  - $L(x, \dot{x}) = T(\dot{x}) - V(x)$
+  -
+* - Force
+  - $F = -\partial V$
+  -
+* - Momentum
+  - $p = \partial T$
+  - $\dot{p} = \partial \dot{T}$
+* - Euler-Lagrange
+  - $\partial \dot{T} = -\partial V$
+  -
+```
+
+
+### Standard Lagrangian
+
+```{list-table} Standard Lagrangian
+:header-rows: 1
+:name: tab-standard-lagrangian
+:widths: 25 50 25
+
+* - Property
+  - Expression
+  - Notes
+* - Lagrangian
+  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)$
+  -
+* - Force
+  - $F = -\partial V$
+  -
+* - Momentum
+  - $p = m \dot{x}$
+  - $\dot{p} = m \ddot{x}$
+* - Euler-Lagrange
+  - $\ddot{x} = -V$
+  -
+```
+
+### Constant Motion
+
+```{list-table} Constant Motion
+:header-rows: 1
+:name: tab-constant-motion
+:widths: 25 50 25
+
+* - Property
+  - Expression
+  - Notes
+* - Lagrangian
+  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2$
+  - potential = 0
+* - Force
+  - $0$
+  -
+* - Momentum
+  - $p = m \dot{x}$
+  -
+* - Euler-Lagrange
+  - $\ddot{x} = 0$
+  -
+* - Solution
+  - $x(t) = vt$
+  - $v = \text{const}$
+```
+
 ### Free Fall
 
-Lagrangian:
+```{list-table} Free Fall
+:header-rows: 1
+:name: tab-free-fall
+:widths: 25 50 25
 
-```{math}
-:label: lagrange-free-fall
-L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - gx
-```
-
-Force:
-
-```{math}
-F = g
-```
-
-Momentum:
-
-```{math}
-p = \partial T = m \dot{x}
-```
-
-Euler-Lagrange:
-
-```{math}
-:label: euler-lagrange-free-fall
-
-m \ddot{x} = g
+* - Property
+  - Expression
+  - Notes
+* - Lagrangian
+  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - gm \begin{bmatrix} 0 \\ x_2  \end{bmatrix}$
+  - $x = \begin{bmatrix} x_1 \\ x_2  \end{bmatrix}$
+* - Force
+  - $-gm \begin{bmatrix} 0 \\ 1  \end{bmatrix}$
+  -
+* - Momentum
+  - $p = m \dot{x}$
+  - $\dot{p} = m \ddot{x}$
+* - Euler-Lagrange
+  - $\ddot{x} = -g\begin{bmatrix} 0 \\ 1  \end{bmatrix}$
+  -
+* - Solution
+  - $x(t) = -g/2 \, \begin{bmatrix} 0 \\ t^2  \end{bmatrix}$
+  - 
 ```
 
 ### Hooke
 
-Lagrangian:
+```{list-table} Hooke
+:header-rows: 1
+:name: tab-hooke
+:widths: 25 50 25
 
-```{math}
-:label: lagrange-hooke
-L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{k}{2}mx^2
-```
-
-Force:
-
-```{math}
-F = kx
-```
-
-Momentum:
-
-```{math}
-p = \partial T = m \dot{x}
-```
-
-Euler-Lagrange:
-
-```{math}
-:label: euler-lagrange-hooke
-
-m \ddot{x} = -kx
+* - Property
+  - Expression
+  - Notes
+* - Lagrangian
+  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{k}{2}mx^2$
+  - 
+* - Force
+  - $F = -kx$
+  -
+* - Momentum
+  - $p = m \dot{x}$
+  - $\dot{p} = m \ddot{x}$
+* - Euler-Lagrange
+  - $\ddot{x} = -\omega^2 x $
+  - $\omega = \sqrt{\frac{k}{m}}$
+* - Solution
+  - $x(t) = A \cos \omega t + B \cos \omega t$
+  - 
 ```
 
 
