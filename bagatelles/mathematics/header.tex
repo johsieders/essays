@@ -1,0 +1,25 @@
+\usepackage{fancyhdr}
+\usepackage{datetime}
+\usepackage{fmtcount}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% Better spacing
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% Better table formatting
+\renewcommand{\arraystretch}{1.3}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhead[L]{\small\itshape Why Your Model Beats You}
+\fancyhead[R]{\small\itshape J. Siedersleben}
+\fancyfoot[C]{\thepage}
+
+% Section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{1em}{}
