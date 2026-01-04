@@ -31,21 +31,6 @@ of antiquity.
 trigonometry).
 
 
-## The Newtonian Theatre 
-
-Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. 
-He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less 
-particles with positive mass, and calculated how they move {cite}`susskind2014classical`. 
-aindrops, apples, and planets are tangible instances, but of course they do have shape, volume and many other properties. 
-Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise. 
-Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity. 
-This is the stage, and the actors are volume-less particles. You need at least one of them; if there are many, 
-it's called statistical mechanics. Newtonian mechanics is a model (in the mind, on paper, or on a computer) 
-that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop 
-is completely unaware of Newton's laws, raindrops have always fallen in the same way. Newton's laws have less effect 
-on objects in motion than a thermometer has on temperature.
-
-
 ## Classical Mechanics
 
 What’s the Problem: How do particles move in a field (spring, gravitational
@@ -71,45 +56,118 @@ field?
 
 ## The Lagrangian
 
-There is a function $L(x, \dot{x})$ which is, somehow, a measure 
-for the mess caused by a particle that moves at speed $\dot{x}(t)$ through point $x(t)$.
-Here is the principle of least action:
+Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. 
+He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less 
+particles with positive mass, and calculated how they move {cite}`susskind2014classical`. 
+aindrops, apples, and planets are tangible instances, but of course they do have shape, volume, and many other properties. 
+Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise. 
+Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity. 
+This is the stage, and the actors are volume-less particles. You need at least one of them; if there are many, 
+it's called statistical mechanics. Newtonian mechanics is a model (in the mind, on paper, or on a computer) 
+that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop 
+is completely unaware of Newton's laws, raindrops have always fallen in the same way. Newton's laws have less effect 
+on objects in motion than a thermometer has on temperature.
 
-The particle moves in such a way that the action $A[x]$ defined by
-
-(least-action)=
-```{math}
-:label: least-action-x
-A[x] = \int_a^b L(x, \dot{x}) \, dt 
-```
-
-is minimized. It is understood that the particle moves from the position $x(a)$ to $x(b)$. 
-We are minimizing over all continuous functions 
-
-```{math}
-&x: \left\{
-    \begin{array}{lr}
-        [a, b] \rightarrow \mathbb{R}^3\\
-        x \mapsto x(t)
-    \end{array}
-\right .
-```
-
-We will show that all functions $x$ that minimize the {ref}`least action <least-action>`
-solve the Euler-Lagrange equation:
+In Newtonian physics, we study volumeless particles with positive mass that travel through space along a trajectory described 
+by a differentiable function $x: [0, T] \rightarrow \mathbb{R}^3$. The interval $[0, T]$
+can extend over microseconds or millennia, but is always finite. Starting at zero is just for notational convenience. 
+$x(t)$ is the position in space of the particle at time $t$, 
+$\dot{x}(t)$ its velocity. We write:
 
 ```{math}
-:label: euler-lagrange
-\frac{d}{dt} \frac{\partial L}{\partial \dot{x}} = \frac{\partial L}{\partial x}
+x = \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3
+    \end{bmatrix} \text{ and } \dot{x} = \begin{bmatrix}
+        \dot{x}_1 \\
+        \dot{x}_2 \\
+        \dot{x}_3 
+    \end{bmatrix}
 ```
+
+This is the standard case. There are variations: When the particle travels along a straight line, 
+we choose this direction as the basis vector. This reduces $x$ to a vector of dimension one. 
+When the particle moves on a plane, $x$ is reduced to two dimensions.
+When we study two or more particles at a time, say two, $x$ becomes a vector of dimension six, and we 
+face a small notational challenge, for instance: 
+
+```{math}
+x^2 = \sum_{k=1}^6 x_k^2 = (x_{(1)})^2 + (x_{(2)})^2
+```
+where:
+
+```{math}
+x_{(1)} = \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3
+     \end{bmatrix} \text{ and  }     
+x_{(2)} = \begin{bmatrix}
+        x_4 \\
+        x_5 \\
+        x_6
+     \end{bmatrix}
+```
+
+In general, dealing with two or more particles is surprisingly inconspicuous: we keep writing $x$, whatever the dimension; 
+most formulae remain valid regardless of the dimension of $x$. Notice will be given if they don't.
+
+The **Lagrangian** is any differentiable function $L(x, \dot{x}) \rightarrow \mathbb{R}$ that is a measure 
+of the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
+The total mess along $x$ is called the **action** and is defined by:
+
+```{math}
+:label: least-action
+A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt 
+```
+Now, consider a particle that travels from some point $a$ to another point $b$. 
+For any given Lagrangian $L$, we can seek trajectories $x$ that minimize the action $A$
+subject to border conditions such as $x(0) = a$, $x(T) = b$.
+We call such an $x$ minimal with respect to $L$ or **$L$-minimal**.
+
+A **principle** is something that has been observed for ages and is taken for granted without further proof. 
+A famous example is the fact that the speed of light is the same for all observers.
+We are going to state the **principle of least action**, which is perhaps the most fundamental of all.
+It governs all movements, from leaves whirling in the wind to rockets flying to Mars. Here it is:
+
+````{prf:definition} Principle of Least Action
+:label: def-least-action
+For every problem in physics, from free fall to magnetic fields, there is a Lagrangian
+such that L-minimal trajectories describe exactly what happens in reality.
+````
+
+````{prf:theorem} Euler-Lagrange
+:label: def-euler-lagrange
+
+Let $L$ be a Lagrangian, and $x$ be L-minimal. Then $x$ solves the **Euler-Lagrange equation**
 
 ```{math}
 :label: euler-lagrange
 \partial_t \, \partial_\dot{x} L = \partial_x L
 ```
+The converse is not true.
+The Euler-Lagrange equation is also known as the **equation of motion** of classical mechanics.
+````
+The theorem of Euler-Lagrange is a sophisticated variant of the fact that the derivative of a function vanishes at its extrema,
+see {prf:ref}`thr-mean-value-differentiation`. 
 
-The converse, however, is not true. 
+The usual reasoning is as follows: Solving the Euler–Lagrange equation yields many solutions 
+that differ by one or more integration constants. Use the boundary conditions to assign appropriate values to these and ensure 
+that your solution is indeed L-minimal.
 
+
+````{prf:proof}
+
+todo
+
+````
+
+
+The link between the Lagrangian and observed reality is established by the following definition:
+
+````{prf:definition} Force and Momentum
+:label: def-least-action
 For a given Lagrangian $L$, the quantities **force** and **momentum** are defined by:
 
 ```{math}
@@ -126,23 +184,69 @@ which reduces the Euler-Lagrange equation to
 
 \dot {p} = F
 ```
-Force and momentum are the link between the Lagrangian and observed reality:
+````
 If you have an idea of force and momentum, you get the Lagrangian by integration. 
 If you have an idea of the Lagrangian, you get force and momentum by differentiation, 
-and can compare these with your measurements.
+and can compare these with your measurements. The good news is that today, 
+Lagrangians are well-known, they are only a dozen or so, and many of them follow simple patterns.
+We can just use them and get quickly to our results.
+If, for whatever reason, you need a hitherto unknown Lagrangian, follow Susskinds advice: 
+guess it, buy it, or steal it! (see {cite}`susskind2014classical`, p. 999). 
+
+This world of volumeless particles, trajectories, and Lagrangians is a purely mathematical realm
+that I call **Newton's world**. No one has ever seen volumenless particles,
+and the idea of one time dimension plus three space dimensions extending to infinity 
+contradicts the theory of relativity. Newton's world is a **model** of ours, extremely useful, but inaccurate and counterintuitive.
+It abstracts away what is unimportant (the volume of particles) 
+and idealizes to keep the math simple (straight lines extending to infinity
+rather than curved space). Within Newton's world, we can use mathematics — particularly calculus — 
+to derive a multitude of results that are true in the mathematical sense, but few of which have any bearing on our world.
+However, if they do, they will only ever be approximate as long as 
+particles move much more slowly than light. 
+Newtonian mechanics becomes outright wrong when particles move fast.
+
+The concept of Lagrangians is strange. You can choose any function as your preferred Lagrangian, plug it into Euler-Lagrange, 
+and develop your own physics from here.
+Unfortunately, your results are unlikely to have a counterpart in the real world, so nobody will be interested.
+But if you do have a counterpart, and observed particles follow your equations of motion with reasonable accuracy,
+then your Lagrangian is likely to be the good one. Some years or decades later, your equations will be endorsed
+by the community of physicists. But there will never be a proof in any mathematical sense.
+
+Here is our roadmap: We are going to present some key Lagrangians that cover systems ranging from free fall to magnetic fields.
+Each time, we will employ the same procedure: We plug the Lagrangian into the Euler-Lagrange equation, 
+solve it, and interpret the result.
 
 
 
-### T-V Lagrangian
 
-Lagrangian:
+### Hamilton, Conservation of Energy
 
 ```{math}
-:label: lagrange-t-v
-L(x, \dot{x}) = T(\dot{x}) - V(x)
+H(x, p) + L(x, \dot{x}) = p \, \dot{x}
 ```
 
-Force:
+```{math}
+&\partial_x H = - \dot{p} \\
+\\
+&\partial_p H = \dot{x} \\
+\\
+&\{\cdot, H\} = \frac{d}{dt}
+```
+
+```{math}
+&E(t) = H(x(t), p(t)) \\
+&\partial_t E = \partial_t H(x, p) \\
+&= \partial_x H \dot{x} + \partial_p H \dot{p} \\
+&= \dot{p} \dot{x} - \dot{x} \dot{p} = 0
+```
+
+```{math}
+&\frac{\partial H}{\partial x} = - \dot{p} \\
+\\
+&\frac{\partial H}{\partial p} = \dot{x} \\
+```
+
+
 
 ```{math}
 :label: force-t-v
@@ -189,44 +293,6 @@ p = \partial T =
 \end{bmatrix}
 ```
 
-Euler-Lagrange
-
-```{math}
-:label: euler-lagrange-t-v
-
-\partial \dot{T} = -\partial V
-```
-
-### Standard Lagrangian
-
-Lagrangian:
-
-```{math}
-:label: lagrange-t-v
-L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)
-```
-
-Force:
-
-```{math}
-F = -\partial V
-```
-
-Momentum:
-
-```{math}
-& p = \partial T = m \dot{x} \\
-& \dot{p} = m \ddot{x} \\
-```
-
-Euler-Lagrange:
-
-```{math}
-:label: euler-lagrange-standard
-
-m \ddot{x} = -\partial V
-```
-
 ### General Case
 
 ```{list-table} General Case
@@ -236,19 +302,22 @@ m \ddot{x} = -\partial V
 
 * - Property
   - Expression
-  - Notes
+  - Comment
 * - Lagrangian
-  - $L(x, \dot{x})$ any continuous function 
-  - defined on $[a, b]$
+  - $L(x, \dot{x})$
+  - a differentiable function 
 * - Force
-  - $F = -\partial_x L $
-  -
+  - $F = \partial_x L $
+  - 
 * - Momentum
   - $p = \partial_{\dot{x}} L$
-  - 
+  - $\dot{p} = \partial_t \partial_{\dot{x}} L$
 * - Euler-Lagrange
-  - $\partial_t \partial_{\dot{x}} L = \partial V$
-  -
+  - $\partial_t \partial_{\dot{x}} L = \partial_x L$
+  - $\dot{p} = F$
+* - Energy
+  - $H(x, p) = \dot{x}(p) p - L(x, \dot{x}(p)) $
+  - $L(x, \dot{x}) = \dot{x} p(\dot{x})  - H(x, p(\dot{x}))$
 ```
 
 
@@ -261,7 +330,7 @@ m \ddot{x} = -\partial V
 
 * - Property
   - Expression
-  - Notes
+  - Comment
 * - Lagrangian
   - $L(x, \dot{x}) = T(\dot{x}) - V(x)$
   -
@@ -273,7 +342,10 @@ m \ddot{x} = -\partial V
   - $\dot{p} = \partial \dot{T}$
 * - Euler-Lagrange
   - $\partial \dot{T} = -\partial V$
-  -
+  - $\dot{p} = F$
+* - Energy
+  - $H(x, p) = T(\dot{x}(p)) + V(x) $
+  - $L(x, \dot{x}) =  H(x, p(\dot{x})$
 ```
 
 
@@ -286,7 +358,7 @@ m \ddot{x} = -\partial V
 
 * - Property
   - Expression
-  - Notes
+  - Comment
 * - Lagrangian
   - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - V(x)$
   -
@@ -298,7 +370,10 @@ m \ddot{x} = -\partial V
   - $\dot{p} = m \ddot{x}$
 * - Euler-Lagrange
   - $\ddot{x} = -V$
-  -
+  - $\dot{p} = F$
+* - Energy
+  - $H(x, p) = \frac{p^2}{2m} + V(x)$
+  - $= \frac{1}{2}m\dot{x}^2 + V(x)$  
 ```
 
 ### Constant Motion
@@ -310,7 +385,7 @@ m \ddot{x} = -\partial V
 
 * - Property
   - Expression
-  - Notes
+  - Comment
 * - Lagrangian
   - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2$
   - potential = 0
@@ -319,41 +394,48 @@ m \ddot{x} = -\partial V
   -
 * - Momentum
   - $p = m \dot{x}$
-  -
+  - $\dot{p} = m \ddot{x}$
 * - Euler-Lagrange
   - $\ddot{x} = 0$
   -
 * - Solution
   - $x(t) = vt$
   - $v = \text{const}$
+* - Energy
+  - $H(x, p) = \frac{p^2}{2m}$
+  - $= \frac{1}{2}m\dot{x}^2$
 ```
 
-### Free Fall
+### Constant Acceleration
 
-```{list-table} Free Fall
+```{list-table} Constant Acceleration
 :header-rows: 1
-:name: tab-free-fall
+:name: tab-constant-motion
 :widths: 25 50 25
 
 * - Property
   - Expression
-  - Notes
+  - Comment
 * - Lagrangian
-  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - gm \begin{bmatrix} 0 \\ x_2  \end{bmatrix}$
-  - $x = \begin{bmatrix} x_1 \\ x_2  \end{bmatrix}$
+  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - amx$
+  - $a$ = acceleration
 * - Force
-  - $-gm \begin{bmatrix} 0 \\ 1  \end{bmatrix}$
+  - $-am$
   -
 * - Momentum
   - $p = m \dot{x}$
   - $\dot{p} = m \ddot{x}$
 * - Euler-Lagrange
-  - $\ddot{x} = -g\begin{bmatrix} 0 \\ 1  \end{bmatrix}$
+  - $\ddot{x} = -a$
   -
 * - Solution
-  - $x(t) = -g/2 \, \begin{bmatrix} 0 \\ t^2  \end{bmatrix}$
-  - 
+  - $x(t) = \frac{1}{2} a \, t^2$
+  - $\dot{p} = F$
+* - Energy
+  - $H(x, p) = \frac{p^2}{2m} + amx$
+  - $= \frac{1}{2}m\dot{x}^2 + amx$
 ```
+
 
 ### Hooke
 
@@ -364,7 +446,7 @@ m \ddot{x} = -\partial V
 
 * - Property
   - Expression
-  - Notes
+  - Comment
 * - Lagrangian
   - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{k}{2}mx^2$
   - 
@@ -378,8 +460,41 @@ m \ddot{x} = -\partial V
   - $\ddot{x} = -\omega^2 x $
   - $\omega = \sqrt{\frac{k}{m}}$
 * - Solution
-  - $x(t) = A \cos \omega t + B \cos \omega t$
-  - 
+  - $x(t) = a \sin \omega t + b \cos \omega t$
+  - $a = x(\frac{\pi}{2}), b = x(0)$
+* - Energy
+  - $H(x, p) = \frac{p^2}{2m} + \frac{k}{2}mx^2$
+  - $= \frac{1}{2}m\dot{x}^2 + \frac{k}{2}mx^2$ 
+```
+
+### Catenary
+
+
+### Magnetic Field
+
+```{list-table} Magnetic Field
+:header-rows: 1
+:name: tab-hooke
+:widths: 25 50 25
+
+* - Property
+  - Expression
+  - Comment
+* - Lagrangian
+  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 + qA(x)\dot{x}$
+  - $B = \partial \times A$
+* - Force
+  - $F = q \partial_x A \dot{x} $
+  -
+* - Momentum
+  - $p = m \dot{x} + qA(x)$
+  - $\dot{p} = m \ddot{x} + q \partial_x A \dot{x}$
+* - Euler-Lagrange
+  - $\ddot{x} = \frac{q}{m}(\ddot{x} \times B)$
+  - $= \frac{q}{m} ((\partial_x A)^T - \partial_x A) \dot{x}$
+* - Energy
+  - $H(x, p) = \frac{1}{2m} (p- qA)^2$
+  - $= \frac{1}{2}m\dot{x}^2$ 
 ```
 
 
@@ -389,32 +504,8 @@ m \ddot{x} = -\partial V
 \sum_{k=1}^n \dot {p_k} = \sum_{k=1}^n F_k
 ```
 
-## Conservation of Energy, Hamiltonian
 
-```{math}
-H(x, p) + L(x, \dot{x}) = p \, \dot{x}
-```
 
-```{math}
-&\partial_x H = - \dot{p} \\
-\\
-&\partial_p H = \dot{x} \\
-\\
-&\{\cdot, H\} = \frac{d}{dt}
-```
-
-```{math}
-&E(t) = H(x(t), p(t)) \\
-&\partial_t E = \partial_t H(x, p) \\
-&= \partial_x H \dot{x} + \partial_p H \dot{p} \\
-&= \dot{p} \dot{x} - \dot{x} \dot{p} = 0
-```
-
-```{math}
-&\frac{\partial H}{\partial x} = - \dot{p} \\
-\\
-&\frac{\partial H}{\partial p} = \dot{x} \\
-```
 
 
 
@@ -428,24 +519,6 @@ H(x, p) + L(x, \dot{x}) = p \, \dot{x}
 \end{bmatrix} = 0
 ```
 
-## A Catalogue of Lagrangians
-
-### Hooke
-
-
-### Pendulum
-
-```{math}
-L(x, \dot{x}) = \frac{1}{2}m \dot{x}^2 - \frac{k}{2}x^2
-```
-
-### Catenary
-
-### Magnetic Field
-
-```{math}
-L(x, \dot{x}) = \frac{1}{2}m \dot{x}^2 + A \dot{x}
-```
 
 ## A Note on Trains, Elevators, and Spaceships
 * Train
