@@ -881,7 +881,6 @@ Then, $f$ is bounded by some $M \in \mathbb{R}$, and by the triangular inequalit
 which proves the continuity of $F$ at $x$.
 ````
 
-
 We now introduce some criteria of Riemann integrability. The proofs use step functions rather than Riemann sums.
 
 ````{prf:theorem} Riemann-Integrable Functions
