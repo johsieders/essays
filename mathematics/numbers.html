@@ -507,8 +507,8 @@ You can physically count the coins in your pocket but not the ones you owe your 
 The reals, the continuum, are quite different. The continuum is an abstraction of straight lines in space or time.
 However, quantum physics tells us that straight lines break down into discrete quanta when observed closely.
 And yet, the continuum is one of the most important and most useful abstractions ever conceived.</p>
-<p>Much of the material presented can be found in <span id="id1">[<a class="reference internal" href="#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
-<span id="id2">[<a class="reference internal" href="#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, <span id="id3">[<a class="reference internal" href="#id15" title="John Stillwell. Roads to Infinity: The Mathematics of Truth and Proof. A K Peters/CRC Press, 2010.">Stillwell, 2010</a>]</span>,
+<p>Much of the material presented can be found in <span id="id1">[<a class="reference internal" href="calculus.html#id88" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id2">[<a class="reference internal" href="calculus.html#id89" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, <span id="id3">[<a class="reference internal" href="#id15" title="John Stillwell. Roads to Infinity: The Mathematics of Truth and Proof. A K Peters/CRC Press, 2010.">Stillwell, 2010</a>]</span>,
 to name but a few prominent examples.
 Why did I write this paper? The starting point was the idea of a fast track from naturals to reals, with all
 difficulties included, but the boring parts sketched or omitted.
@@ -584,7 +584,7 @@ I don’t know, and, honestly, I don’t care too much. What seems clear to me i
 must have been first humans, probably at different times and different locations, to grasp the concept of a number.
 Today, many millennia later, the Peano axioms perfectly describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers for all mathematical purposes.</p>
 <div class="proof definition admonition" id="def-peano-axioms">
-<p class="admonition-title"><span class="caption-number">Definition 6 </span> (Peano Axioms)</p>
+<p class="admonition-title"><span class="caption-number">Definition 8 </span> (Peano Axioms)</p>
 <section class="definition-content" id="proof-content">
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is <strong>not empty</strong>: <span class="math notranslate nohighlight">\(0 \in \mathbb{N}\)</span></p></li>
@@ -609,7 +609,7 @@ then <span class="math notranslate nohighlight">\(\phi(n)\)</span> is true for e
 </section>
 </div><p>From these axioms, order, addition, and multiplication can be defined recursively:</p>
 <div class="proof definition admonition" id="def-add-mul-ord">
-<p class="admonition-title"><span class="caption-number">Definition 7 </span> (Addition, Multiplication, Ordering)</p>
+<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Addition, Multiplication, Ordering)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(n, m \in \mathbb{N}\)</span>.</p>
 <p><strong>a) Addition</strong></p>
@@ -633,7 +633,7 @@ We can start at <span class="math notranslate nohighlight">\(0\)</span> and cons
 by applying the successor function.
 The following is a formal definition of infinity, with no handwaving, no dots, and no “and so on.”</p>
 <div class="proof definition admonition" id="def-infinity">
-<p class="admonition-title"><span class="caption-number">Definition 8 </span> (Infinity)</p>
+<p class="admonition-title"><span class="caption-number">Definition 10 </span> (Infinity)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be any set.</p>
 <p><strong>a)</strong><span class="math notranslate nohighlight">\(A\)</span> is <strong>finite</strong> iff there is an <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to \{0, 1, \ldots, n\}\)</span>.</p>
@@ -645,15 +645,15 @@ This injection is often called an <strong>enumeration</strong>, a way of arrangi
 That’s a formal version of Hilbert’s Hotel, which can always accommodate an extra guest by moving everyone else up one room.
 Another injection would be <span class="math notranslate nohighlight">\(\phi(n) = 10^n\)</span>, with <span class="math notranslate nohighlight">\(B = \{1, 10, 100, \ldots\}\)</span>. <span class="math notranslate nohighlight">\(B\)</span> is a set with huge gaps, and yet,
 it’s still infinite: you never run out of natural numbers.</p>
-<p>The equivalence of <strong>not finite</strong> and <strong>infinite</strong> in <a class="reference internal" href="#def-infinity">Definition 8</a> is not obvious.
+<p>The equivalence of <strong>not finite</strong> and <strong>infinite</strong> in <a class="reference internal" href="#def-infinity">Definition 10</a> is not obvious.
 To prove it, we need a weak form of the axiom of choice.</p>
 <div class="proof definition admonition" id="def-axiom-countable-choice">
-<p class="admonition-title"><span class="caption-number">Definition 9 </span> (Axiom of Countable Chioce)</p>
+<p class="admonition-title"><span class="caption-number">Definition 11 </span> (Axiom of Countable Chioce)</p>
 <section class="definition-content" id="proof-content">
 <p>Every not finite set contains a countably infinite subset</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-countable-uncountable">
-<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Countable and Uncountable Sets)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Countable and Uncountable Sets)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> If <span class="math notranslate nohighlight">\(A\)</span> is infinite iff  it is not finite.</p>
 <p><strong>(b)</strong> If <span class="math notranslate nohighlight">\(A\)</span> is countably infinite iff there is an bijection <span class="math notranslate nohighlight">\(\phi: A \to \mathbb{N}\)</span>.</p>
@@ -664,10 +664,10 @@ Therefore, the power set of a countable set is always uncountable.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
-Let <span class="math notranslate nohighlight">\(A\)</span> be infinite and assume it to be finite. Let <span class="math notranslate nohighlight">\(\phi : A \to B\)</span> as claimed in <a class="reference internal" href="#def-infinity">Definition 8</a>.
+Let <span class="math notranslate nohighlight">\(A\)</span> be infinite and assume it to be finite. Let <span class="math notranslate nohighlight">\(\phi : A \to B\)</span> as claimed in <a class="reference internal" href="#def-infinity">Definition 10</a>.
 But <span class="math notranslate nohighlight">\(\left |\phi(A) \right | = \left | A \right | &gt; \left | B \right | = \left | \phi(A) \right |\)</span>.
 So <span class="math notranslate nohighlight">\(A\)</span> cannot be finite, it must be not finite.</p>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be not finite, and <span class="math notranslate nohighlight">\(\{a_0, a_1, \ldots \}\)</span> be a countably infinite subset as granted by <a class="reference internal" href="#def-axiom-countable-choice">Definition 9</a>.
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be not finite, and <span class="math notranslate nohighlight">\(\{a_0, a_1, \ldots \}\)</span> be a countably infinite subset as granted by <a class="reference internal" href="#def-axiom-countable-choice">Definition 11</a>.
 The function <span class="math notranslate nohighlight">\(\phi\)</span> defined by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi:
@@ -697,8 +697,8 @@ and it is a surjection because of <span class="math notranslate nohighlight">\(\
 <ol class="arabic simple">
 <li><p>Any natural number <span class="math notranslate nohighlight">\(a &gt; 1\)</span> can be uniquely decomposed
 into a product of primes <span class="math notranslate nohighlight">\(a = \prod_{i=1}^n p_i^{\alpha_i}\)</span> where <span class="math notranslate nohighlight">\(p_i\)</span>
-are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</span> are naturals (see <a class="reference internal" href="arithmetic.html#thr-fundamental">Theorem 6</a>).</p></li>
-<li><p>There are infinitely many primes <span class="math notranslate nohighlight">\(p_1, p_2, \ldots\)</span> (see <a class="reference internal" href="arithmetic.html#thr-infinite-primes">Theorem 7</a>).</p></li>
+are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</span> are naturals (see <a class="reference internal" href="arithmetic.html#thr-fundamental">Theorem 7</a>).</p></li>
+<li><p>There are infinitely many primes <span class="math notranslate nohighlight">\(p_1, p_2, \ldots\)</span> (see <a class="reference internal" href="arithmetic.html#thr-infinite-primes">Theorem 8</a>).</p></li>
 </ol>
 <p>Let <span class="math notranslate nohighlight">\(\{A_i\}\)</span> be a family of sets, countable for assertion (c), finite for (d), and let</p>
 <div class="math notranslate nohighlight">
@@ -713,7 +713,7 @@ are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</s
        a \mapsto p_i^{\phi_i(a)} \text{ if } a \in A_i
    \end{array}
 \right .\end{split}\]</div>
-<p>is an injection: The set <span class="math notranslate nohighlight">\(A_i\)</span> is mapped to the powers of <span class="math notranslate nohighlight">\(p_i\)</span> (we are using <a class="reference internal" href="arithmetic.html#thr-infinite-primes">Theorem 7</a>).</p>
+<p>is an injection: The set <span class="math notranslate nohighlight">\(A_i\)</span> is mapped to the powers of <span class="math notranslate nohighlight">\(p_i\)</span> (we are using <a class="reference internal" href="arithmetic.html#thr-infinite-primes">Theorem 8</a>).</p>
 <p><strong>(d) Finite Crossproduct</strong>: The function</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi:
@@ -724,7 +724,7 @@ are prime numbers and <span class="math notranslate nohighlight">\(\alpha_i\)</s
    \end{array}
 \right .\end{split}\]</div>
 <p>is an injection: Each <span class="math notranslate nohighlight">\((a_1, a_2, \ldots, a_n)\)</span> is mapped to the unique natural number whose decomposition
-is <span class="math notranslate nohighlight">\((\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))\)</span> (we are using <a class="reference internal" href="arithmetic.html#thr-fundamental">Theorem 6</a>).</p>
+is <span class="math notranslate nohighlight">\((\phi_1(a_1), \phi_2(a_2), \ldots, \phi_n(a_n))\)</span> (we are using <a class="reference internal" href="arithmetic.html#thr-fundamental">Theorem 7</a>).</p>
 <p><strong>e)</strong>
 Assume there is an injection</p>
 <div class="math notranslate nohighlight">
@@ -740,11 +740,11 @@ Assume there is an injection</p>
 <p>But in this case, for any subset <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with two or more elements, there would be no room left for <span class="math notranslate nohighlight">\(\phi(U)\)</span>,
 since <span class="math notranslate nohighlight">\(\phi\)</span> is injective. Therefore, <span class="math notranslate nohighlight">\(K\)</span> is not empty, and we can ask if <span class="math notranslate nohighlight">\(\phi(K)\)</span> belongs to <span class="math notranslate nohighlight">\(K\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-countable-uncountable-1">
-<span class="eqno">(24)<a class="headerlink" href="#equation-equ-countable-uncountable-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\phi(K) \in K \Rightarrow \phi(K) \notin K \\
+<span class="eqno">(19)<a class="headerlink" href="#equation-equ-countable-uncountable-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\phi(K) \in K \Rightarrow \phi(K) \notin K \\
 &amp;\phi(K) \notin K \Rightarrow \phi(K) \in K\end{split}\]</div>
 <p>This contradiction proves that there can be no injection from a power set of a set to the set itself.
 It is the formal variant of the barber who shaves all men who do not shave themselves.
-Note that, with <span class="math notranslate nohighlight">\(K\)</span> empty, contradiction <a class="reference internal" href="#equation-equ-countable-uncountable-1">(24)</a> would be meaningless: ex falso quodlibet.</p>
+Note that, with <span class="math notranslate nohighlight">\(K\)</span> empty, contradiction <a class="reference internal" href="#equation-equ-countable-uncountable-1">(19)</a> would be meaningless: ex falso quodlibet.</p>
 </div>
 </section>
 <section id="integers">
@@ -767,7 +767,7 @@ As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)
 the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
 <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is countable, since it is the union of two countable sets.</p>
 <div class="proof definition admonition" id="definition-5">
-<p class="admonition-title"><span class="caption-number">Definition 10 </span> (Ordering of Integers)</p>
+<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Ordering of Integers)</p>
 <section class="definition-content" id="proof-content">
 <p>We extend the order on <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> by setting, for <span class="math notranslate nohighlight">\(m, n \in \mathbb{N}\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -809,7 +809,7 @@ the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is inde
 <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is countable, since it is the cross-product of two countable sets.</p>
 <p>The <strong>normal form</strong> of a rational number <span class="math notranslate nohighlight">\(a/b\)</span> requires <span class="math notranslate nohighlight">\(b &gt; 0\)</span> and <span class="math notranslate nohighlight">\(a, b\)</span> coprime.</p>
 <div class="proof definition admonition" id="definition-6">
-<p class="admonition-title"><span class="caption-number">Definition 11 </span> (Ordering of Rationals)</p>
+<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Ordering of Rationals)</p>
 <section class="definition-content" id="proof-content">
 <p>We extend the order on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> by setting, for <span class="math notranslate nohighlight">\(a/b, c/d \in \mathbb{Q}\)</span> in normal form:</p>
 <div class="math notranslate nohighlight">
@@ -817,7 +817,7 @@ the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is inde
 <p>With this ordering, <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is a totally ordered set  without lower or upper bound.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-archimedean-property">
-<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Archimedean Property)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Archimedean Property)</p>
 <section class="theorem-content" id="proof-content">
 <p>For any <span class="math notranslate nohighlight">\(q \in \mathbb{Q}\)</span>, there exists <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>  such that <span class="math notranslate nohighlight">\(n &gt; q\)</span>.</p>
 </section>
@@ -837,7 +837,7 @@ The rest of this section is about curing this defect. The key concept is the Cau
 The following definitions are, for now, restricted to rationals (even the epsilons are rational!) because that’s all we have.
 But the definitions remain valid, of course, in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and in any metric space.</p>
 <div class="proof definition admonition" id="def-convergence">
-<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Convergence of Rational Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Convergence of Rational Sequences)</p>
 <section class="definition-content" id="proof-content">
 <p><strong>(a)</strong>
 We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> <strong>convergent to <span class="math notranslate nohighlight">\(x\)</span></strong>, written as</p>
@@ -863,7 +863,7 @@ iff <span class="math notranslate nohighlight">\(\left | x_n - y_n \right |\)</s
 We call a set <span class="math notranslate nohighlight">\(A\)</span> complete iff every Cauchy sequence converges.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-convergent-sequences">
-<p class="admonition-title"><span class="caption-number">Theorem 14 </span> (Arithmetic on Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Arithmetic on Sequences)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>a)</strong> Sum, difference, product, and quotient of convergent sequences are convergent and
 converge to the sum, difference, product, and quotient of their limits. For the denominator <span class="math notranslate nohighlight">\(\{y_n\}\)</span> of a quotient we require that
@@ -890,7 +890,7 @@ The answer is yes, it does, and goes back to Cantor. He defined</p>
 <p>This reads as follows: <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is the set of the equivalence classes of all Cauchy sequences, or, more informally:
 It is the set of whatever numbers that can be approximated by rationals. This gives us the following theorem for free:</p>
 <div class="proof theorem admonition" id="thr-rationals-reals">
-<p class="admonition-title"><span class="caption-number">Theorem 15 </span> (Rationals and Reals)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (Rationals and Reals)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every real number can be approximated by rationals to any degree of precision.</p>
 </section>
@@ -909,13 +909,13 @@ with its limit <span class="math notranslate nohighlight">\(\sqrt 2\)</span>. Th
 For <span class="math notranslate nohighlight">\(x = \{x_n\}\)</span>, <span class="math notranslate nohighlight">\(y = \{y_n\}\)</span> we define:</p>
 <div class="math notranslate nohighlight">
 \[x + y = \{x_n\} + \{y_n\}\]</div>
-<p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 14</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span> and of all other arithmetic operations.
+<p>Thanks to <a class="reference internal" href="#thr-convergent-sequences">Theorem 15</a> we know the meaning of <span class="math notranslate nohighlight">\(\{x_n\} + \{y_n\}\)</span> and of all other arithmetic operations.
 Therefore, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is a field.</p>
 <p><span class="math notranslate nohighlight">\(\mathbb{R}\)</span> not only inherits the basic arithmetics but also the topology:
 We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
 an undertaking that involves a considerable number of epsilons.</p>
 <div class="proof definition admonition" id="def-convergence-reals">
-<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Convergence of Real Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Convergence of Real Sequences)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(r, s\)</span> be real numbers and <span class="math notranslate nohighlight">\(\{r_n\}_n\)</span> a sequence of reals numbers.
 Here is how they are represented by their defining Cauchy series of rationals:</p>
@@ -929,7 +929,7 @@ This can be represented as a matrix, with a row for each <span class="math notra
 <p><strong>a) Distance of reals</strong><br />
 We define what it means for a real number to be close to zero or to another real number:</p>
 <div class="math notranslate nohighlight" id="equation-def-convergence-reals-1">
-<span class="eqno">(25)<a class="headerlink" href="#equation-def-convergence-reals-1" title="Link to this equation">#</a></span>\[\begin{split}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon \\
+<span class="eqno">(20)<a class="headerlink" href="#equation-def-convergence-reals-1" title="Link to this equation">#</a></span>\[\begin{split}\left | r \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k \right | &lt; \epsilon \\
 \left | r - s \right | &lt; \epsilon &amp;\Leftrightarrow \exists k_0(\epsilon): \forall k &gt; k_0(\epsilon): \left | y_k - z_k \right | &lt; \epsilon\end{split}\]</div>
 <p>Note that the equivalence of rational Cauchy sequences is the same as the equality of their corresponding reals:</p>
 <div class="math notranslate nohighlight">
@@ -937,17 +937,17 @@ We define what it means for a real number to be close to zero or to another real
 <p><strong>b) Convergence of reals</strong><br />
 We define what it means for a sequence of real numbers to converge to zero or to another real number:</p>
 <div class="math notranslate nohighlight" id="equation-def-convergence-reals-2">
-<span class="eqno">(26)<a class="headerlink" href="#equation-def-convergence-reals-2" title="Link to this equation">#</a></span>\[\begin{split}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n \right | &lt; \epsilon \\
+<span class="eqno">(21)<a class="headerlink" href="#equation-def-convergence-reals-2" title="Link to this equation">#</a></span>\[\begin{split}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n \right | &lt; \epsilon \\
 \lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon) \left | r_n - r \right | &lt; \epsilon\end{split}\]</div>
-<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-2">(26)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(25)</a>, gives us the long version:</p>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-2">(21)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(20)</a>, gives us the long version:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}\lim_{n \to \infty} r_n = 0 &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} \right | &lt; \epsilon\\\lim_{n \to \infty} r_n = r &amp;\Leftrightarrow \forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_0(\epsilon, n): \forall k &gt; k_0(\epsilon, n): \left | x_{n_k} - y_k \right | &lt; \epsilon\end{aligned}\end{align} \]</div>
 <p><strong>c) Cauchy convergence of reals</strong><br />
 We define what it means for a sequence of real numbers to be a Cauchy sequence: The sequence <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span>
 is a Cauchy sequence iff:</p>
 <div class="math notranslate nohighlight" id="equation-def-convergence-reals-3">
-<span class="eqno">(27)<a class="headerlink" href="#equation-def-convergence-reals-3" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
-<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-3">(27)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(25)</a>, gives us the long version:</p>
+<span class="eqno">(22)<a class="headerlink" href="#equation-def-convergence-reals-3" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \left | r_n - r_m \right | &lt; \epsilon\]</div>
+<p>Expanding statement <a class="reference internal" href="#equation-def-convergence-reals-3">(22)</a> with <a class="reference internal" href="#equation-def-convergence-reals-1">(20)</a>, gives us the long version:</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_0(\epsilon, m, n): \forall k &gt; k_0(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
 </section>
@@ -956,7 +956,7 @@ is a Cauchy sequence iff:</p>
 \[ \begin{align}\begin{aligned}x_{n_0} &amp;= 2 + \frac{1}{n} \\x_{n_{k+1}} &amp;= x_{n_k} - \frac{2 + \frac{1}{n} -x_{n_k}^2}{(2 + \frac{1}{n})x_{n_k}}\end{aligned}\end{align} \]</div>
 <p>For each <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>, <span class="math notranslate nohighlight">\(\{x_{n_k}\}_k\)</span> is a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> that converges in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> to <span class="math notranslate nohighlight">\(\sqrt{2 + \frac{1}{n}}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
 <div class="proof theorem admonition" id="thr-R-completeness">
-<p class="admonition-title"><span class="caption-number">Theorem 16 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is Complete)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is Complete)</p>
 <section class="theorem-content" id="proof-content">
 <p>Every Cauchy sequence <span class="math notranslate nohighlight">\(\{r_n\}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> converges.</p>
 </section>
@@ -968,13 +968,13 @@ We proceed in two steps: (1) We show that the diagonal sequence <span class="mat
 \[r_n = \{x_{n_k}\}_k\]</div>
 <p>Each <span class="math notranslate nohighlight">\(r_n\)</span> being a Cauchy sequence, we get:</p>
 <div class="math notranslate nohighlight" id="equation-thr-r-completeness-1">
-<span class="eqno">(28)<a class="headerlink" href="#equation-thr-r-completeness-1" title="Link to this equation">#</a></span>\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
+<span class="eqno">(23)<a class="headerlink" href="#equation-thr-r-completeness-1" title="Link to this equation">#</a></span>\[\forall n \in \mathbb{N}, \epsilon &gt; 0: \exists k_0(n, \epsilon): \forall k, j &gt; k_0(n, \epsilon) : \left | x_{n_k} - x_{n_j} \right | &lt; \epsilon\]</div>
 <p>The sequence  <span class="math notranslate nohighlight">\(\{r_n\}_n = \{\{x_{n_k}\}\}_n\)</span> being a Cauchy sequence itself, we get:</p>
 <div class="math notranslate nohighlight" id="equation-thr-r-completeness-2">
-<span class="eqno">(29)<a class="headerlink" href="#equation-thr-r-completeness-2" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
+<span class="eqno">(24)<a class="headerlink" href="#equation-thr-r-completeness-2" title="Link to this equation">#</a></span>\[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall m, n &gt; n_0(\epsilon): \exists k_1(\epsilon, m, n): \forall k &gt; k_1(\epsilon, m, n): \left | x_{n_k} - x_{m_k} \right | &lt; \epsilon\]</div>
 <p>We conclude that the diagonal sequence  <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is also Cauchy sequence.
-To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and, using inequality <a class="reference internal" href="#equation-thr-r-completeness-1">(28)</a> twice
-and <a class="reference internal" href="#equation-thr-r-completeness-2">(29)</a> once, get the inequality:</p>
+To this end, we choose <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(n, m &gt; n_0(\epsilon)\)</span>, and <span class="math notranslate nohighlight">\(k &gt; k_1(\epsilon, m, n)\)</span> and, using inequality <a class="reference internal" href="#equation-thr-r-completeness-1">(23)</a> twice
+and <a class="reference internal" href="#equation-thr-r-completeness-2">(24)</a> once, get the inequality:</p>
 <div class="math notranslate nohighlight">
 \[\left | x_{n_n} - x_{m_m} \right | \le \left | x_{n_n} - x_{n_k} \right | + \left | x_{n_k} - x_{m_k} \right | + \left | x_{m_k} - x_{m_m} \right | &lt; 3 \epsilon\]</div>
 <p>So, the sequence <span class="math notranslate nohighlight">\(\{x_{n_n}\}\)</span> is a Cauchy sequence and represents a real number <span class="math notranslate nohighlight">\(r\)</span>:</p>
@@ -983,18 +983,18 @@ and <a class="reference internal" href="#equation-thr-r-completeness-2">(29)</a>
 <p>It remains to show that</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty}r_n = r\]</div>
-<p>We observe that in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(29)</a> we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like.
-Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 13</a>):</p>
+<p>We observe that in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(24)</a> we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like.
+Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 15</a>):</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
 <p>which is what we want.</p>
 </div>
 <p>This proof, however dry or abstract it might appear, is nothing but the obstinate application of known facts:
 We apply the triangular inequality to show that the diagonal sequence is a Cauchy sequence,
-and, in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(29)</a>,
+and, in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(24)</a>,
 we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is how “forall” is meant to be employed.</p>
 <div class="proof definition admonition" id="definition-13">
-<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Ordering of Reals)</p>
+<p class="admonition-title"><span class="caption-number">Definition 16 </span> (Ordering of Reals)</p>
 <section class="definition-content" id="proof-content">
 <p>We extend the order on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by setting, for <span class="math notranslate nohighlight">\(x = \{x_n\}, y = \{y_n\} \in \mathbb{R}\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -1004,7 +1004,7 @@ we replace the general <span class="math notranslate nohighlight">\(m\)</span> w
 </div><p>We close this chapter with a note about the uncountability of the real numbers
 and a glimpse at the continuum hypothesis.</p>
 <div class="proof theorem admonition" id="thr-R-uncountable">
-<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span> (<span class="math notranslate nohighlight">\(\mathbb{R}\)</span> is uncountable)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(B \ge 2\)</span> be a natural number, the <em>basis</em>.
@@ -1039,7 +1039,7 @@ Look at the sequences <span class="math notranslate nohighlight">\(\{a_k\}, \{r_
 \[\frac{r_n}{qB^n} = \frac{a_{n+1}}{B^{n+1}} + \frac{r_{n+1}}{qB^{n+1}}\]</div>
 <p>from which follows for any <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-r-uncountable-1">
-<span class="eqno">(30)<a class="headerlink" href="#equation-equ-r-uncountable-1" title="Link to this equation">#</a></span>\[\frac{p}{q} = \sum_{k=1}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}\]</div>
+<span class="eqno">(25)<a class="headerlink" href="#equation-equ-r-uncountable-1" title="Link to this equation">#</a></span>\[\frac{p}{q} = \sum_{k=1}^n \frac{a_k}{B^k} + \frac{r_{n}}{qB^n}\]</div>
 <p><strong>(b)</strong> The proof uses the famous diagonalization method.
 We prove in a first step that it is impossible to enumerate the rationals in <span class="math notranslate nohighlight">\([0,1)\)</span>.
 Assume that <span class="math notranslate nohighlight">\(\{x_n\}\)</span> is such an enumeration and</p>
@@ -1070,9 +1070,9 @@ From now on, <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> wi
 <p class="admonition-title"><span class="caption-number">Remark 5 </span> (Continuum Hypothesis)</p>
 <section class="remark-content" id="proof-content">
 <p>Two sets are said to be <strong>equinumerous</strong>, or have the same <strong>cardinality</strong>, if there is a bijection between them.
-<a class="reference internal" href="#thr-countable-uncountable">Theorem 12</a> (b) tells us that all countably infinite sets share the same cardinality,
-denoted as <span class="math notranslate nohighlight">\(\aleph_0\)</span>. <a class="reference internal" href="#thr-R-uncountable">Theorem 17</a> tells us that <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{P}(\mathbb{N})\)</span> have the same cardinality,
-denoted as  <span class="math notranslate nohighlight">\(\mathfrak{c}\)</span>. <a class="reference internal" href="#thr-countable-uncountable">Theorem 12</a> (e) tells us that, for any set <span class="math notranslate nohighlight">\(A\)</span>,
+<a class="reference internal" href="#thr-countable-uncountable">Theorem 13</a> (b) tells us that all countably infinite sets share the same cardinality,
+denoted as <span class="math notranslate nohighlight">\(\aleph_0\)</span>. <a class="reference internal" href="#thr-R-uncountable">Theorem 18</a> tells us that <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{P}(\mathbb{N})\)</span> have the same cardinality,
+denoted as  <span class="math notranslate nohighlight">\(\mathfrak{c}\)</span>. <a class="reference internal" href="#thr-countable-uncountable">Theorem 13</a> (e) tells us that, for any set <span class="math notranslate nohighlight">\(A\)</span>,
 the cardinality of <span class="math notranslate nohighlight">\(\mathcal{P}(A)\)</span> is always strictly higher than that of <span class="math notranslate nohighlight">\(A\)</span>.
 And if two sets have the same cardinality, then their power sets necessarily do too.
 This leads to an infinite sequence of
