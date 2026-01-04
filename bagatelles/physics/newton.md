@@ -54,7 +54,7 @@ field?
 
 
 
-## The Lagrangian
+## Newton's World
 
 Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. 
 He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less 
@@ -70,7 +70,7 @@ on objects in motion than a thermometer has on temperature.
 
 In Newtonian physics, we study volumeless particles with positive mass that travel through space along a trajectory described 
 by a differentiable function $x: [0, T] \rightarrow \mathbb{R}^3$. The interval $[0, T]$
-can extend over microseconds or millennia, but is always finite. Starting at zero is just for notational convenience. 
+can extend over microseconds or millennia, but is always finite. Starting at zero is just a notational convenience. 
 $x(t)$ is the position in space of the particle at time $t$, 
 $\dot{x}(t)$ its velocity. We write:
 
@@ -113,14 +113,15 @@ x_{(2)} = \begin{bmatrix}
 In general, dealing with two or more particles is surprisingly inconspicuous: we keep writing $x$, whatever the dimension; 
 most formulae remain valid regardless of the dimension of $x$. Notice will be given if they don't.
 
-The **Lagrangian** is any differentiable function $L(x, \dot{x}) \rightarrow \mathbb{R}$ that is a measure 
+The **Lagrangian** is any differentiable function $L(x, \dot{x}) \rightarrow \mathbb{R}$. It is meant to be a measure 
 of the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
 The total mess along $x$ is called the **action** and is defined by:
 
 ```{math}
-:label: least-action
+:label: action
 A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt 
 ```
+
 Now, consider a particle that travels from some point $a$ to another point $b$. 
 For any given Lagrangian $L$, we can seek trajectories $x$ that minimize the action $A$
 subject to border conditions such as $x(0) = a$, $x(T) = b$.
@@ -162,7 +163,6 @@ that your solution is indeed L-minimal.
 todo
 
 ````
-
 
 The link between the Lagrangian and observed reality is established by the following definition:
 
