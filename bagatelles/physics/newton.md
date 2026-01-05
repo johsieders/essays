@@ -31,44 +31,9 @@ of antiquity.
 trigonometry).
 
 
-## Classical Mechanics
-
-What’s the Problem: How do particles move in a field (spring, gravitational
-field, electric field, magnetic field, …) and how do particles affect the
-field?
-
-* Principle of Least Action (amazing, this principle rules the world!)
-* The Lagrangian defines the effort caused per unit of time
-* The action is the accumulated amount of effort over time
-* The principle says: Every system minimizes the action
-
-  * Equations of Motion (Euler-Lagrange, Hamiltonian)
-  * Principle of Relativity (sic): Speed is relative and symmetric (you cannot
-    tell which train is moving). There is no absolute rest (Galileo
-    Transformation)
-  
-* Consequences:
-    * Conservation of Momentum (Newton’s Laws)
-    * Conservation of Energy (Energy = the Hamiltonian)
-    * Conservation of Information (Theorem of Gibbs-Liouville)
-
-
-
 ## Newton's World
 
-Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. 
-He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less 
-particles with positive mass, and calculated how they move {cite}`susskind2014classical`. 
-aindrops, apples, and planets are tangible instances, but of course they do have shape, volume, and many other properties. 
-Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise. 
-Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity. 
-This is the stage, and the actors are volume-less particles. You need at least one of them; if there are many, 
-it's called statistical mechanics. Newtonian mechanics is a model (in the mind, on paper, or on a computer) 
-that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop 
-is completely unaware of Newton's laws, raindrops have always fallen in the same way. Newton's laws have less effect 
-on objects in motion than a thermometer has on temperature.
-
-In Newtonian physics, we study volumeless particles with positive mass that travel through space along a trajectory described 
+In Newtonian physics, we study volumeless particles with positive mass that travel through space along a **trajectory** described 
 by a differentiable function $x: [0, T] \rightarrow \mathbb{R}^3$. The interval $[0, T]$
 can extend over microseconds or millennia, but is always finite. Starting at zero is just a notational convenience. 
 $x(t)$ is the position in space of the particle at time $t$, 
@@ -87,7 +52,7 @@ x = \begin{bmatrix}
 ```
 
 This is the standard case. There are variations: When the particle travels along a straight line, 
-we choose this direction as the basis vector. This reduces $x$ to a vector of dimension one. 
+we choose this direction as the basis vector, reducing $x$ to a vector of dimension one. 
 When the particle moves on a plane, $x$ is reduced to two dimensions.
 When we study two or more particles at a time, say two, $x$ becomes a vector of dimension six, and we 
 face a small notational challenge, for instance: 
@@ -113,61 +78,154 @@ x_{(2)} = \begin{bmatrix}
 In general, dealing with two or more particles is surprisingly inconspicuous: we keep writing $x$, whatever the dimension; 
 most formulae remain valid regardless of the dimension of $x$. Notice will be given if they don't.
 
-The **Lagrangian** is any differentiable function $L(x, \dot{x}) \rightarrow \mathbb{R}$. It is meant to be a measure 
-of the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
-The total mess along $x$ is called the **action** and is defined by:
+The **Lagrangian** is any differentiable function
 
 ```{math}
-:label: action
+:label: def-lagrange
+&L:
+\left\{
+    \begin{array}{lr}
+        \mathbb{R}^3 \times \mathbb{R}^3  \rightarrow \mathbb{R} \\
+        (x, y) \mapsto L(x, y)
+    \end{array}
+\right .
+```
+
+that vanishes for large $x,y$: $L(x,y) = 0$ if $\min \{\lVert x \lVert, \lVert y \lVert \} > M$ for some large $M$. 
+The value $L(x,\dot{x})$ is meant to quantify
+the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
+The total mess along $x$ is a **functional** called the **action** and is defined by:
+
+```{math}
+:label: action-1
 A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt 
 ```
 
-Now, consider a particle that travels from some point $a$ to another point $b$. 
+A functional is a function that depends on another function, and a functional derivative is a derivative with respect
+to a function, see XXX. 
+
+The term "mess" is deliberately vague. What happens is that physicists somehow find the correct Lagrangian,
+and then interpret it as the "mess", or deviation from a tranquil, steady state.
+
+Consider a particle that travels from some point $a$ to another point $b$. 
 For any given Lagrangian $L$, we can seek trajectories $x$ that minimize the action $A$
 subject to border conditions such as $x(0) = a$, $x(T) = b$.
 We call such an $x$ minimal with respect to $L$ or **$L$-minimal**.
 
 A **principle** is something that has been observed for ages and is taken for granted without further proof. 
 A famous example is the fact that the speed of light is the same for all observers.
-We are going to state the **principle of least action**, which is perhaps the most fundamental of all.
-It governs all movements, from leaves whirling in the wind to rockets flying to Mars. Here it is:
+We are going to state the **principle of least action** for classical physics.
+It governs all movements in this world, from leaves whirling in the wind to rockets flying to Mars.
 
 ````{prf:definition} Principle of Least Action
 :label: def-least-action
-For every problem in physics, from free fall to magnetic fields, there is a Lagrangian
-such that L-minimal trajectories describe exactly what happens in reality.
+For every problem in classical physics, from free fall to magnetic fields, there is a Lagrangian $L$
+such that $L$-minimal trajectories describe with high accuracy what happens in reality.
 ````
+This is arguably the most significant physical principle of all. 
+In classical physics, it gives rise to the Euler–Lagrange equation, aka **equation of motion**.
+It extends gently to the theories of relativity and quantum mechanics:
+The famous equation $E = mc^2$ is a simple form of the relativistic version of Euler–Lagrange; 
+the quantum mechanical version is known as the Schrödinger equation.
+
+A real number $x$ is called a **stationary point** of a function $f$ iff the derivative of $f$ vanishes at $x$,
+see {prf:ref}`thr-mean-value-differentiation`.
+All local extrema of $f$ are either stationary or boundary points. 
+
+A trajectory $x$ is called a **stationary point** of a Lagrangian $L$ iff the functional derivative of $A$ vanishes at $x$ :
+
+```{math}
+:label: action-2
+\delta A[x] = 0 
+```
+As there are no boundaries, all local extrema of $L$, and in particular all $L$-minimal trajectories $x$, are stationary.
+
 
 ````{prf:theorem} Euler-Lagrange
 :label: def-euler-lagrange
 
-Let $L$ be a Lagrangian, and $x$ be L-minimal. Then $x$ solves the **Euler-Lagrange equation**
+Let $L$ be a Lagrangian. A trajectory $x$ is stationary iff it solves the
+ **Euler-Lagrange equation**
 
+(EL)=
 ```{math}
 :label: euler-lagrange
-\partial_t \, \partial_\dot{x} L = \partial_x L
+\partial_t \, \partial_{\dot{x}} L = \partial_x L
 ```
-The converse is not true.
-The Euler-Lagrange equation is also known as the **equation of motion** of classical mechanics.
+
+This reads as $n$ independent equalities
+
+```{math}
+:label: euler-lagrange-idx
+\partial_t \, \partial_{\dot{x_k}} L = \partial_{x_k} L
+```
+
+for any dimension $n$ of $x$.
 ````
-The theorem of Euler-Lagrange is a sophisticated variant of the fact that the derivative of a function vanishes at its extrema,
-see {prf:ref}`thr-mean-value-differentiation`. 
-
-The usual reasoning is as follows: Solving the Euler–Lagrange equation yields many solutions 
-that differ by one or more integration constants. Use the boundary conditions to assign appropriate values to these and ensure 
-that your solution is indeed L-minimal.
-
 
 ````{prf:proof}
 
-todo
+We must write out the equation {eq}`action-2`.
+By definition of functional derivatives, we have
 
+```{math}
+\delta A[x] = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0}
+```
+for any differentiable function $h : \mathbb{R}^3 \to \mathbb{R}$. $A$ is differentiable in $x$ iff $\delta A[x]$
+is independent of $h$. Writing $L$ for $L(x(t) + \epsilon h(t), \dot{x}(t) + \epsilon \dot{h}(t))$ and integrating by parts gives us:
+
+```{math}
+&0= \partial_{\epsilon} A[x + \epsilon h] \\
+&= \int_0^T \partial_{\epsilon}L(x + \epsilon h, \dot{x} + \epsilon \dot{h}) \, dt \\
+&= \int_0^T \partial_x L\, h + \partial_{\dot{x}} L\, \dot{h} \, dt \\
+&= \partial_{\dot{x}} L \, h \vert_{t=0}^{t=T} + \int_0^T \partial_x L\, h - \partial_t \partial_{\dot{x}} L\, h \, dt
+```
+
+With $\epsilon = 0$ it follows:
+
+```{math}
+:label: euler-lagrange-1
+&0 = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0} \\
+&=\partial_{\dot{x}} L(x, \dot{x}) \, h(t) \vert_{t=0}^{t=T} + 
+\int_0^T (\partial_x L(x,\dot{x}) - \partial_t \partial_{\dot{x}} L(x,\dot{x}))\, h \, dt
+```
+
+The first term in {eq}`euler-lagrange-1` vanishes because we can choose $h$ such that $h(0) = h(T) = 0$.  
+The second term vanishes for every $h$:
+
+```{math}
+\int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L) \, h \, dt = 0
+```
+This gives equation {eq}`euler-lagrange`. Note that
+
+```{math}
+(g|h) = \int_0^T gh \, dt
+```
+is a scalar product on $C([0,T])$. We are using the fact that $g = 0$ iff $(g, h) = 0$ for all $h$.
+````
+
+````{prf:remark} On Lagrangians
+:label: rem-lagrangian
+
+Let $L$ be a Lagrangian.
+
+**(a)** Multiplying $L$ with a non-zero factor, e.g. $-1$, doesn't affect {ref}`Euler-Lagrange<EL>`.
+EL yields potential $L$-minimizers and -maximizers. However, it cannot distinguish between them.
+
+**(b)** Adding a constant to $L$ doesn't affect {ref}`Euler-Lagrange<EL>`.
+
+**(c)** Adding a gradient $G(x)$ to $L$ doesn't affect {ref}`Euler-Lagrange<EL>` because $\partial_x G = 0$.
+
+**(d)** The usual reasoning is as follows: Solving the Euler–Lagrange equation yields many solutions 
+(potential $L$-minimizers and -maximizers) that differ by some integration constants. 
+Use the boundary conditions to assign appropriate values to these and ensure 
+that your solution is indeed $L$-minimal.
 ````
 
 The link between the Lagrangian and observed reality is established by the following definition:
 
 ````{prf:definition} Force and Momentum
-:label: def-least-action
+:label: def-force-momentum
 For a given Lagrangian $L$, the quantities **force** and **momentum** are defined by:
 
 ```{math}
@@ -177,7 +235,7 @@ For a given Lagrangian $L$, the quantities **force** and **momentum** are define
 \\
 & F = \frac{\partial L}{\partial x}
 ```
-which reduces the Euler-Lagrange equation to
+which reduces the Euler-Lagrange equation to:
 
 ```{math}
 :label: euler-lagrange-short
@@ -188,7 +246,7 @@ which reduces the Euler-Lagrange equation to
 If you have an idea of force and momentum, you get the Lagrangian by integration. 
 If you have an idea of the Lagrangian, you get force and momentum by differentiation, 
 and can compare these with your measurements. The good news is that today, 
-Lagrangians are well-known, they are only a dozen or so, and many of them follow simple patterns.
+Lagrangians are well-known, and many of them follow a few simple patterns.
 We can just use them and get quickly to our results.
 If, for whatever reason, you need a hitherto unknown Lagrangian, follow Susskinds advice: 
 guess it, buy it, or steal it! (see {cite}`susskind2014classical`, p. 999). 
@@ -199,7 +257,7 @@ and the idea of one time dimension plus three space dimensions extending to infi
 contradicts the theory of relativity. Newton's world is a **model** of ours, extremely useful, but inaccurate and counterintuitive.
 It abstracts away what is unimportant (the volume of particles) 
 and idealizes to keep the math simple (straight lines extending to infinity
-rather than curved space). Within Newton's world, we can use mathematics — particularly calculus — 
+rather than a curved space). Within Newton's world, we can use mathematics — mostly calculus — 
 to derive a multitude of results that are true in the mathematical sense, but few of which have any bearing on our world.
 However, if they do, they will only ever be approximate as long as 
 particles move much more slowly than light. 
@@ -208,7 +266,7 @@ Newtonian mechanics becomes outright wrong when particles move fast.
 The concept of Lagrangians is strange. You can choose any function as your preferred Lagrangian, plug it into Euler-Lagrange, 
 and develop your own physics from here.
 Unfortunately, your results are unlikely to have a counterpart in the real world, so nobody will be interested.
-But if you do have a counterpart, and observed particles follow your equations of motion with reasonable accuracy,
+But if they do, and observed particles follow your equations of motion with reasonable accuracy,
 then your Lagrangian is likely to be the good one. Some years or decades later, your equations will be endorsed
 by the community of physicists. But there will never be a proof in any mathematical sense.
 
@@ -217,34 +275,72 @@ Each time, we will employ the same procedure: We plug the Lagrangian into the Eu
 solve it, and interpret the result.
 
 
-
-
 ### Hamilton, Conservation of Energy
+
+````{prf:definition} Poisson Brackets and Hamiltonians
+:label: def-poisson-hamiltonian
+
+Let $A, B, H$ be differentiable, real-valued functions of two variables $x, p$ defined on $\mathbb{R}^n \times \mathbb{R}^n$.
+The dimension $n$ is often three (that's one particle), sometimes more. 
+
+**(a)** **Poisson brackets** are defined by:
+
+```{math}
+\{A, B\} = \partial_x A \, \partial_p B - \partial_p A \, \partial_x B
+```
+Note that $\partial_x A = \begin{bmatrix}
+        \partial_1 A \\
+        \partial_2 A \\
+        \partial_3 A
+    \end{bmatrix}$, so $\partial_x A$, $\partial_p A, \ldots$ are vectors, and $\{A, B\}$ is a scalar.
+
+**(b)** A function $H$ is called **Hamiltonian**, iff
+
+```{math}
+\partial_x H = - \dot{p} \text{ and } \partial_p H = \dot{x}
+```
+It is clear in this case that:
+
+```{math}
+\{A, H\} = \partial_t A \\
+```
+which is often abbreviated to:
+```{math}
+\{\cdot, H\} = \partial_t\\
+```
+````
+
+````{prf:theorem} Hamiltonian, Energy
+:label: def-hamiltonian-energy
+Let $H$ be defined by;
 
 ```{math}
 H(x, p) + L(x, \dot{x}) = p \, \dot{x}
 ```
 
+or:
 ```{math}
-&\partial_x H = - \dot{p} \\
-\\
-&\partial_p H = \dot{x} \\
-\\
-&\{\cdot, H\} = \frac{d}{dt}
+:label: def-energy
+H(x, p) = p \, \dot{x} - L(x, \dot{x})
 ```
 
+Then $H$ is a Hamiltonian iff $L$ is stationary, that is, it fulfills Euler-Lafrange.
+
+The function $H$ defined by {eq}`def-energy` is called the **Hamiltonian** of $L$ or the **energy** $E$ of $L$.
+````
+
+
+````{prf:proof} 
+
+Let $x
+
 ```{math}
-&E(t) = H(x(t), p(t)) \\
-&\partial_t E = \partial_t H(x, p) \\
+&\partial_t H(x, p) \\
 &= \partial_x H \dot{x} + \partial_p H \dot{p} \\
 &= \dot{p} \dot{x} - \dot{x} \dot{p} = 0
 ```
+````
 
-```{math}
-&\frac{\partial H}{\partial x} = - \dot{p} \\
-\\
-&\frac{\partial H}{\partial p} = \dot{x} \\
-```
 
 
 
@@ -506,9 +602,6 @@ p = \partial T =
 
 
 
-
-
-
 ## Conservation of Information, Gibbs-Liouville
 
 ```{math}
@@ -539,6 +632,41 @@ p = \partial T =
     acceleration). Their levitation is mostly due to centrifugal force.
 
 
+
+## Classical Mechanics
+
+What’s the Problem: How do particles move in a field (spring, gravitational
+field, electric field, magnetic field, …) and how do particles affect the
+field?
+
+* Principle of Least Action (amazing, this principle rules the world!)
+* The Lagrangian defines the effort caused per unit of time
+* The action is the accumulated amount of effort over time
+* The principle says: Every system minimizes the action
+
+  * Equations of Motion (Euler-Lagrange, Hamiltonian)
+  * Principle of Relativity (sic): Speed is relative and symmetric (you cannot
+    tell which train is moving). There is no absolute rest (Galileo
+    Transformation)
+  
+* Consequences:
+    * Conservation of Momentum (Newton’s Laws)
+    * Conservation of Energy (Energy = the Hamiltonian)
+    * Conservation of Information (Theorem of Gibbs-Liouville)
+
+## Intro
+
+Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. 
+He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less 
+particles with positive mass, and calculated how they move {cite}`susskind2014classical`. 
+aindrops, apples, and planets are tangible instances, but of course they do have shape, volume, and many other properties. 
+Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise. 
+Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity. 
+This is the stage, and the actors are volume-less particles. You need at least one of them; if there are many, 
+it's called statistical mechanics. Newtonian mechanics is a model (in the mind, on paper, or on a computer) 
+that describes reality and allows us to make predictions, but it is separate from nature. A falling raindrop 
+is completely unaware of Newton's laws, raindrops have always fallen in the same way. Newton's laws have less effect 
+on objects in motion than a thermometer has on temperature.
 
 ## References
 
