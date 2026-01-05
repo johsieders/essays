@@ -138,7 +138,7 @@ A trajectory $x$ is called a **stationary point** of a Lagrangian $L$ iff the fu
 :label: action-2
 \delta A[x] = 0 
 ```
-As there are no boundaries, all local extrema of $L$, and in particular all $L$-minimal trajectories $x$, are stationary.
+As there are no boundaries for $L$, all local extrema of $L$, and in particular all $L$-minimal trajectories $x$, are stationary.
 
 
 ````{prf:theorem} Euler-Lagrange
@@ -171,7 +171,10 @@ By definition of functional derivatives, we have
 ```{math}
 \delta A[x] = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0}
 ```
-for any differentiable function $h : \mathbb{R}^3 \to \mathbb{R}$. $A$ is differentiable in $x$ iff $\delta A[x]$
+for any differentiable function $h : \mathbb{R}^3 \to \mathbb{R}$ satisfying $h(0) = h(T) = 0$. 
+That's necessary because $x + h$ is supposed to fulfill the biundary conditions.
+
+$A$ is differentiable in $x$ iff $\delta A[x]$
 is independent of $h$. Writing $L$ for $L(x(t) + \epsilon h(t), \dot{x}(t) + \epsilon \dot{h}(t))$ and integrating by parts gives us:
 
 ```{math}
@@ -190,7 +193,7 @@ With $\epsilon = 0$ it follows:
 \int_0^T (\partial_x L(x,\dot{x}) - \partial_t \partial_{\dot{x}} L(x,\dot{x}))\, h \, dt
 ```
 
-The first term in {eq}`euler-lagrange-1` vanishes because we can choose $h$ such that $h(0) = h(T) = 0$.  
+The first term in {eq}`euler-lagrange-1` vanishes because $h(0) = h(T) = 0$.  
 The second term vanishes for every $h$:
 
 ```{math}
