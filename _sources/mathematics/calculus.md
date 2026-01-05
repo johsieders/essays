@@ -1272,7 +1272,7 @@ Same procedure: $f$ and $g$ are differentiable, so:
 ```{math}
 f(x+h)g(x+h) &= (f(x) + f'(x)h + o(h))(g(x) + g'(x)h + o(h)) \\
 \\
-  &= f(x)g(x) + (f'(x)g(x) + f(x)g'(x))h + o(h)
+&= f(x)g(x) + (f'(x)g(x) + f(x)g'(x))h + o(h)
 ```
 which is the desired result. 
 ````
