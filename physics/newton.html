@@ -947,7 +947,7 @@ The border condition is always the same, with some <span class="math notranslate
 <td><p><span class="math notranslate nohighlight">\(\ddot{x} = 0\)</span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Solution</p></td>
+<tr class="row-even"><td><p>Trajectory</p></td>
 <td><p><span class="math notranslate nohighlight">\(x(t) = vt\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(v = \frac{B}{T}\)</span></p></td>
 </tr>
@@ -992,7 +992,7 @@ The border condition is always the same, with some <span class="math notranslate
 <td><p><span class="math notranslate nohighlight">\(\ddot{x} = -a\)</span></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Solution</p></td>
+<tr class="row-even"><td><p>Trajectory</p></td>
 <td><p><span class="math notranslate nohighlight">\(x(t) = - \frac{1}{2} a t^2 + c t\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(c = \frac{B}{T} + \frac{1}{2} aT\)</span></p></td>
 </tr>
@@ -1003,32 +1003,45 @@ The border condition is always the same, with some <span class="math notranslate
 </tbody>
 </table>
 </div>
-<p>Let us apply this result to a boat (or a swimmer, for example) starting on the left bank of a one-unit-wide river at point <span class="math notranslate nohighlight">\((0,0)\)</span>,
-and going to point <span class="math notranslate nohighlight">\(B = (1, b_2)\)</span> on the right bank. The current flows from top to bottom with a constant acceleration of <span class="math notranslate nohighlight">\(-a_2\)</span>.
-Moving a mass of <span class="math notranslate nohighlight">\(m\)</span> units upstream over a distance of <span class="math notranslate nohighlight">\(b_2\)</span> units requires an amount of work equal to <span class="math notranslate nohighlight">\(amb_2\)</span>.
+<p>Let us apply this result to a rocket of mass <span class="math notranslate nohighlight">\(m\)</span> flying from <span class="math notranslate nohighlight">\((0,0)\)</span> to <span class="math notranslate nohighlight">\(B = (1, 1)\)</span>. Let <span class="math notranslate nohighlight">\(T=1\)</span>.
+The downward acceleration is <span class="math notranslate nohighlight">\(a_2\)</span>. Moving a mass of <span class="math notranslate nohighlight">\(m\)</span> units up one distance unit requires an amount of work equal to <span class="math notranslate nohighlight">\(am\)</span>.
 Everything happens in a plane, with coordinates <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
 <p>Setting <span class="math notranslate nohighlight">\(a = \begin{bmatrix}
         0 \\
         a_2
     \end{bmatrix}\)</span>
-and <span class="math notranslate nohighlight">\(b = \begin{bmatrix}
+and <span class="math notranslate nohighlight">\(B = \begin{bmatrix}
         1 \\
-        b_2
-    \end{bmatrix}\)</span>, we get, with <span class="math notranslate nohighlight">\(t \in [0, T]\)</span>:</p>
+        1
+    \end{bmatrix}\)</span>, we get, with <span class="math notranslate nohighlight">\(t \in [0, 1]\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;x_1(t) = \frac{t}{T} \\
-&amp;x_2(t) = -\frac{1}{2} a_2 t^2 + b_2 \frac{t}{T} + \frac{1}{2}T t\end{split}\]</div>
-<p>Expressing <span class="math notranslate nohighlight">\(t\)</span> in terms of <span class="math notranslate nohighlight">\(x_1\)</span> yields, with <span class="math notranslate nohighlight">\(x_1 \in [0, 1]\)</span>:</p>
+\[\begin{split}&amp;x_1(t) = t \\
+&amp;x_2(t) = \frac{1}{2} a_2 (t - t^2) + t\end{split}\]</div>
+<p>We notice that:</p>
 <div class="math notranslate nohighlight">
-\[x_2(x_1) = -\frac{1}{2} a_2 T^2 (x_1 - x_1^2) + b_2 x_1\]</div>
-<p>The <a class="reference internal" href="#boat-upstream.png"><span class="xref myst">figure</span></a> below shows the optimal trajectory upstream (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downstream (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(b_2=1, T = 1\)</span>.
-For <span class="math notranslate nohighlight">\(a_2=0\)</span> (no current) we get a straight line.</p>
+\[\begin{split}&amp;\dot{x_1}(t) = 1 \\
+&amp;\dot{x_2}(t) = -a_2 t + \frac{3}{2}\end{split}\]</div>
+<p>The speed along <span class="math notranslate nohighlight">\(x_1\)</span> is constant, while the speed along <span class="math notranslate nohighlight">\(x_2\)</span> decreases at a rate of <span class="math notranslate nohighlight">\(a_2\)</span>.
+The <a class="reference internal" href="#boat-upstream.png"><span class="xref myst">figure</span></a> below shows the optimal trajectory upwards (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downwards (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(T = 1\)</span>.
+For <span class="math notranslate nohighlight">\(a_2=0\)</span> we get a straight line.</p>
 <figure class="align-center" id="id86">
-<img alt="../_images/boat-upstream.png" src="../_images/boat-upstream.png" />
+<img alt="../_images/overshooting.png" src="../_images/overshooting.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Crossing a River</span><a class="headerlink" href="#id86" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Flying Rocket</span><a class="headerlink" href="#id86" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>This “overshooting” trajectory is actually the optimal solution that minimizes action, not energy expenditure.
+The principle of least action produces this result because:</p>
+<ol class="arabic simple">
+<li><p>Action minimization ≠ distance minimization: The Lagrangian <span class="math notranslate nohighlight">\(L = \frac{1}{2}m\dot{x}^2 - amx\)</span> integrates both kinetic energy and potential energy over time.</p></li>
+<li><p>Early altitude gain is cheaper: The action functional favors gaining altitude early when you have the full time interval <span class="math notranslate nohighlight">\(T\)</span> to amortize the cost. The parabolic overshoot allows the rocket to:<br />
+- Accelerate upward strongly at the start<br />
+- Coast through the middle section with less thrust<br />
+- Decelerate near the end</p></li>
+<li><p>Quadratic velocity cost: Since kinetic energy is quadratic in <span class="math notranslate nohighlight">\(\dot{x}\)</span>, maintaining constant velocity throughout is less efficient (in terms of action) than varying the velocity profile.</p></li>
+</ol>
+<p>The paradox: While a straight line from <span class="math notranslate nohighlight">\((0,0)\)</span> to <span class="math notranslate nohighlight">\((1,1)\)</span> is the shortest path, it’s not the path of least action when fighting a constant opposing force. The physics demands this counterintuitive parabolic trajectory.
+This is analogous to why projectiles follow parabolic paths under gravity - nature optimizes action, not distance.</p>
 </section>
 <section id="hooke">
 <h3>Hooke<a class="headerlink" href="#hooke" title="Link to this heading">#</a></h3>
@@ -1062,7 +1075,7 @@ For <span class="math notranslate nohighlight">\(a_2=0\)</span> (no current) we 
 <td><p><span class="math notranslate nohighlight">\(\ddot{x} = -\omega^2 x \)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(\omega = \sqrt{\frac{k}{m}}\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p>Solution</p></td>
+<tr class="row-even"><td><p>Trajectory</p></td>
 <td><p><span class="math notranslate nohighlight">\(x(t) = a \sin \omega t + b \cos \omega t\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(a = x(\frac{\pi}{2}), b = x(0)\)</span></p></td>
 </tr>
@@ -1196,6 +1209,22 @@ on objects in motion than a thermometer has on temperature.</p>
 </div>
 </div>
 <div style="margin-bottom: 100px;"></div>
+<p>Let us apply this result to a boat (or a swimmer, for example) starting on the left bank of a one-unit-wide river at point <span class="math notranslate nohighlight">\((0,0)\)</span>,
+and going to point <span class="math notranslate nohighlight">\(B = (1, b_2)\)</span> on the right bank. The current flows from top to bottom with a constant acceleration of <span class="math notranslate nohighlight">\(-a_2\)</span>.
+Moving a mass of <span class="math notranslate nohighlight">\(m\)</span> units upstream over a distance of <span class="math notranslate nohighlight">\(b_2\)</span> units requires an amount of work equal to <span class="math notranslate nohighlight">\(amb_2\)</span>.
+Everything happens in a plane, with coordinates <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
+<p>This “overshooting” trajectory is actually the optimal solution that minimizes action, not energy expenditure.
+The principle of least action produces this result because:</p>
+<ol class="arabic simple">
+<li><p>Action minimization ≠ distance minimization: The Lagrangian <span class="math notranslate nohighlight">\(L = \frac{1}{2}m\dot{x}^2 - amx\)</span> integrates both kinetic energy and potential energy over time.</p></li>
+<li><p>Early altitude gain is “cheaper”: The action functional favors gaining altitude early when you have the full time interval <span class="math notranslate nohighlight">\(T\)</span> to amortize the cost. The parabolic overshoot allows the rocket to:
+- Accelerate upward strongly at the start
+- Coast through the middle section with less thrust
+- Decelerate near the end</p></li>
+<li><p>Quadratic velocity cost: Since kinetic energy is quadratic in <span class="math notranslate nohighlight">\(\dot{x}\)</span>, maintaining constant velocity throughout is less efficient (in terms of action) than varying the velocity profile.</p></li>
+</ol>
+<p>The paradox: While a straight line from (0,0) to (1,1) is the shortest path, it’s not the path of least action when fighting a constant opposing force. The physics demands this counterintuitive parabolic trajectory.
+This is analogous to why projectiles follow parabolic paths under gravity - nature optimizes action, not distance.</p>
 </section>
 </section>
 

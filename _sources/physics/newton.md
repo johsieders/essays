@@ -528,7 +528,7 @@ p = \partial T =
 * - Euler-Lagrange
   - $\ddot{x} = 0$
   -
-* - Solution
+* - Trajectory
   - $x(t) = vt$
   - $v = \frac{B}{T}$
 * - Energy
@@ -561,7 +561,7 @@ The solution is a constant motion from $0$ to $B$, and the velocity $v$ is such 
 * - Euler-Lagrange
   - $\ddot{x} = -a$
   -
-* - Solution
+* - Trajectory
   - $x(t) = - \frac{1}{2} a t^2 + c t$
   - $c = \frac{B}{T} + \frac{1}{2} aT$
 * - Energy
@@ -570,42 +570,53 @@ The solution is a constant motion from $0$ to $B$, and the velocity $v$ is such 
 ```
 
 
-Let us apply this result to a boat (or a swimmer, for example) starting on the left bank of a one-unit-wide river at point $(0,0)$, 
-and going to point $B = (1, b_2)$ on the right bank. The current flows from top to bottom with a constant acceleration of $-a_2$. 
-Moving a mass of $m$ units upstream over a distance of $b_2$ units requires an amount of work equal to $amb_2$.
+Let us apply this result to a rocket of mass $m$ flying from $(0,0)$ to $B = (1, 1)$. Let $T=1$. 
+The downward acceleration is $a_2$. Moving a mass of $m$ units up one distance unit requires an amount of work equal to $am$.
 Everything happens in a plane, with coordinates $x_1$ and $x_2$. 
 
 Setting $a = \begin{bmatrix}
         0 \\
         a_2
     \end{bmatrix}$
- and $b = \begin{bmatrix}
+ and $B = \begin{bmatrix}
         1 \\
-        b_2
-    \end{bmatrix}$, we get, with $t \in [0, T]$:
+        1
+    \end{bmatrix}$, we get, with $t \in [0, 1]$:
 
 ```{math}
-&x_1(t) = \frac{t}{T} \\
-&x_2(t) = -\frac{1}{2} a_2 t^2 + b_2 \frac{t}{T} + \frac{1}{2}T t
+&x_1(t) = t \\
+&x_2(t) = \frac{1}{2} a_2 (t - t^2) + t
 ```
 
-Expressing $t$ in terms of $x_1$ yields, with $x_1 \in [0, 1]$:
+We notice that:
 
 ```{math}
-x_2(x_1) = -\frac{1}{2} a_2 T^2 (x_1 - x_1^2) + b_2 x_1
+&\dot{x_1}(t) = 1 \\
+&\dot{x_2}(t) = -a_2 t + \frac{3}{2}
 ```
+The speed along $x_1$ is constant, while the speed along $x_2$ decreases at a rate of $a_2$. 
+The [figure](#boat-upstream.png) below shows the optimal trajectory upwards ($a_2$ positive) and downwards ($a_2$ negative), with $T = 1$.
+For $a_2=0$ we get a straight line.
 
-The [figure](#boat-upstream.png) below shows the optimal trajectory upstream ($a_2$ positive) and downstream ($a_2$ negative), with $b_2=1, T = 1$.
-For $a_2=0$ (no current) we get a straight line.
 
-
-```{figure} boat-upstream.png
+```{figure} overshooting.png
 :label: boat-upstream
 :align: center
 
-Crossing a River
+Flying Rocket
 ```
+ This "overshooting" trajectory is actually the optimal solution that minimizes action, not energy expenditure. 
+ The principle of least action produces this result because:
 
+  1. Action minimization ≠ distance minimization: The Lagrangian $L = \frac{1}{2}m\dot{x}^2 - amx$ integrates both kinetic energy and potential energy over time.
+  2. Early altitude gain is cheaper: The action functional favors gaining altitude early when you have the full time interval $T$ to amortize the cost. The parabolic overshoot allows the rocket to:  
+    - Accelerate upward strongly at the start   
+    - Coast through the middle section with less thrust   
+    - Decelerate near the end   
+  3. Quadratic velocity cost: Since kinetic energy is quadratic in $\dot{x}$, maintaining constant velocity throughout is less efficient (in terms of action) than varying the velocity profile.
+
+  The paradox: While a straight line from $(0,0)$ to $(1,1)$ is the shortest path, it's not the path of least action when fighting a constant opposing force. The physics demands this counterintuitive parabolic trajectory.
+  This is analogous to why projectiles follow parabolic paths under gravity - nature optimizes action, not distance.
 
 ### Hooke
 
@@ -629,7 +640,7 @@ Crossing a River
 * - Euler-Lagrange
   - $\ddot{x} = -\omega^2 x $
   - $\omega = \sqrt{\frac{k}{m}}$
-* - Solution
+* - Trajectory
   - $x(t) = a \sin \omega t + b \cos \omega t$
   - $a = x(\frac{\pi}{2}), b = x(0)$
 * - Energy
@@ -733,3 +744,23 @@ on objects in motion than a thermometer has on temperature.
 
 
 <div style="margin-bottom: 100px;"></div>
+
+
+Let us apply this result to a boat (or a swimmer, for example) starting on the left bank of a one-unit-wide river at point $(0,0)$, 
+and going to point $B = (1, b_2)$ on the right bank. The current flows from top to bottom with a constant acceleration of $-a_2$. 
+Moving a mass of $m$ units upstream over a distance of $b_2$ units requires an amount of work equal to $amb_2$.
+Everything happens in a plane, with coordinates $x_1$ and $x_2$.
+
+
+ This "overshooting" trajectory is actually the optimal solution that minimizes action, not energy expenditure. 
+ The principle of least action produces this result because:
+
+  1. Action minimization ≠ distance minimization: The Lagrangian $L = \frac{1}{2}m\dot{x}^2 - amx$ integrates both kinetic energy and potential energy over time.
+  2. Early altitude gain is "cheaper": The action functional favors gaining altitude early when you have the full time interval $T$ to amortize the cost. The parabolic overshoot allows the rocket to:
+    - Accelerate upward strongly at the start
+    - Coast through the middle section with less thrust
+    - Decelerate near the end
+  3. Quadratic velocity cost: Since kinetic energy is quadratic in $\dot{x}$, maintaining constant velocity throughout is less efficient (in terms of action) than varying the velocity profile.
+
+  The paradox: While a straight line from (0,0) to (1,1) is the shortest path, it's not the path of least action when fighting a constant opposing force. The physics demands this counterintuitive parabolic trajectory.
+  This is analogous to why projectiles follow parabolic paths under gravity - nature optimizes action, not distance.
