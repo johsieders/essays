@@ -91,8 +91,12 @@ The **Lagrangian** is any differentiable function
 \right .
 ```
 
-that vanishes for large $x,v$: $L(x,v) = 0$ if $\min \{\lVert x \lVert, \lVert y \lVert \} > M$ for some large $M$.
-You can think of $M$ as the diameter of the universe. 
+that vanishes for large arguments: $L(x,v) = 0$ if $\min \{\lVert x \lVert, \lVert v \lVert \} > M$ for some large $M$.
+Think of $M$ as the diameter of the universe. From a mathematical point of view, $x$ and $v$ are arbitrary functions.  
+The physicist would see $x$ as the position and $v = \dot{x}$ as the velocity of a moving particle.
+The symbols $v$ and $\dot{x}$ are almost interchangeable. So, $\partial_{\dot{x}}L$ and $\partial_{v}L$ mean exactly the same:
+the partial derivative of $L$ with respect to the second variable.
+
 The value $L(x,\dot{x})$ is meant to quantify
 the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
 The total mess along $x$ is a **functional** called the **action** and is defined by:
@@ -105,16 +109,12 @@ A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt
 A functional is a function that depends on another function, and a functional derivative is a derivative with respect
 to a function, see XXX. 
 
-The designations $v$ and $\dot{x}$ are almost interchangable. So, $\partial_{\dot{x}}$ and $\partial_{x}$ mean exactly the same:
-the partial derivative of $L$ with respect to the second variable.
-
-
 The term "mess" is deliberately vague. What happens is that physicists somehow find the correct Lagrangian,
 and then interpret it as the "mess", or deviation from a tranquil, steady state.
 
-Consider a particle that travels from some point $a$ to another point $b$. 
+Consider a particle that travels from $0$ to some point $B$. Starting at $0$ is again just a notational convenience.
 For any given Lagrangian $L$, we can seek trajectories $x$ that minimize the action $A$
-subject to border conditions such as $x(0) = a$, $x(T) = b$.
+subject to boundary conditions such as $x(0) = 0$, $x(T) = B$.
 We call such an $x$ minimal with respect to $L$ or **$L$-minimal**.
 
 A **principle** is something that has been observed for ages and is taken for granted without further proof. 
@@ -158,7 +158,16 @@ Let $L$ be a Lagrangian. A trajectory $x$ is stationary iff it solves the
 \partial_t \, \partial_{\dot{x}} L = \partial_x L
 ```
 
-This reads as $n$ independent equalities
+subject to the boundary conditions:
+
+(BC)=
+```{math}
+:label: euler-lagrange-boundary-conditions
+&x(0) = 0 \\
+&x(T) = B
+```
+
+Equation {eq}`euler-lagrange` reads as $n$ independent equalities:
 
 ```{math}
 :label: euler-lagrange-idx
@@ -183,13 +192,13 @@ $A$ is differentiable in $x$ iff $\delta A[x]$
 is independent of $h$. Writing $L$ for $L(x(t) + \epsilon h(t), \dot{x}(t) + \epsilon \dot{h}(t))$ and integrating by parts gives us:
 
 ```{math}
-&0= \partial_{\epsilon} A[x + \epsilon h] \\
+&\partial_{\epsilon} A[x + \epsilon h] \\
 &= \int_0^T \partial_{\epsilon} L \, dt \\
 &= \int_0^T \partial_x L\, h + \partial_{\dot{x}} L\, \dot{h} \, dt \\
 &= \partial_{\dot{x}} L \, h \vert_{t=0}^{t=T} + \int_0^T \partial_x L\, h - \partial_t \partial_{\dot{x}} L\, h \, dt
 ```
 
-With $\epsilon = 0$ it follows:
+With $\epsilon = 0$  and writing $L$ for $L(x(t), \dot{x}(t))$ it follows:
 
 ```{math}
 :label: euler-lagrange-1
@@ -370,10 +379,10 @@ Let $x
 ## A Catalogue of Lagrangians
 
 We consider some important Lagrangians, starting from the simplest case of no acceleration and working up to the magnetic field.
-The border condition is always the same, with some $B \in \mathbb{R}^3$:
+The boundary condition is always the same, with some $B \in \mathbb{R}^3$:
 
 ```{math}
-:label: border-condition
+:label: boundary-condition
 &x(0) = 0 \\
 &x(T) = B
 ```
@@ -592,12 +601,11 @@ We notice that:
 
 ```{math}
 &\dot{x_1}(t) = 1 \\
-&\dot{x_2}(t) = -a_2 t + \frac{3}{2}
+&\dot{x_2}(t) = -a_2 t + \frac{a_2 + 2}{2}
 ```
-The speed along $x_1$ is constant, while the speed along $x_2$ decreases at a rate of $a_2$. 
+The horizontal speed is constant. The rocket climbs until $t_0 = \frac{a_2 + 2}{2 a_2}$ and then descends. 
 The [figure](#boat-upstream.png) below shows the optimal trajectory upwards ($a_2$ positive) and downwards ($a_2$ negative), with $T = 1$.
 For $a_2=0$ we get a straight line.
-
 
 ```{figure} overshooting.png
 :label: boat-upstream
