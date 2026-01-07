@@ -536,13 +536,13 @@ and the differential operator <strong><span class="math notranslate nohighlight"
 <figure class="align-center" id="id92">
 <img alt="../_images/calculus-diagram-1.png" src="../_images/calculus-diagram-1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">The Backbone</span><a class="headerlink" href="#id92" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The Backbone</span><a class="headerlink" href="#id92" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id93">
 <img alt="../_images/calculus-diagram-2.png" src="../_images/calculus-diagram-2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The Roadmap</span><a class="headerlink" href="#id93" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">The Roadmap</span><a class="headerlink" href="#id93" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Here is the roadmap: After warming up with <a class="reference internal" href="#zeno-paradoxes"><span class="std std-ref">Zeno’s paradoxes</span></a>, we study the <a class="reference internal" href="#topology-of-r"><span class="std std-ref">topology</span></a> of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and
@@ -568,8 +568,8 @@ The <a class="reference internal" href="#thr-integration-rules">integration rule
 We see that, for the limit of differentiable functions to be differentiable, the <strong>derivatives</strong> must be uniformly convergent;
 the vector spaces <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span> are <strong>not</strong> closed under the sup-norm.</p>
 <p>The apogee of this short paper is <a class="reference internal" href="#thr-taylor">Taylor's theorem</a>, which is proven by a simple application of integration by parts.</p>
-<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id91" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>, <span id="id2">[<a class="reference internal" href="#id90" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>, <span id="id3">[<a class="reference internal" href="#id88" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
-<span id="id4">[<a class="reference internal" href="#id89" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, to name but a few prominent examples.</p>
+<p>This material has been published many times, see <span id="id1">[<a class="reference internal" href="#id91" title="Richard Courant. Vorlesungen über Differential- und Integralrechnung. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.">Courant, 1955</a>]</span>, <span id="id2">[<a class="reference internal" href="#id90" title="Walter Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition edition, 1976. First published 1953.">Rudin, 1976</a>]</span>, <span id="id3">[<a class="reference internal" href="numbers.html#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id4">[<a class="reference internal" href="numbers.html#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, to name but a few prominent examples.</p>
 </section>
 <section id="zeno-s-paradoxes">
 <span id="zeno-paradoxes"></span><h2>Zeno’s Paradoxes<a class="headerlink" href="#zeno-s-paradoxes" title="Link to this heading">#</a></h2>
@@ -657,7 +657,7 @@ therefore <span class="math notranslate nohighlight">\(a \in B\)</span> for ever
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing, <span class="math notranslate nohighlight">\(\{y_n\}\)</span> a non-increasing real sequence satisfying:</p>
 <div class="math notranslate nohighlight" id="equation-equ-nested-intervals-1">
-<span class="eqno">(31)<a class="headerlink" href="#equation-equ-nested-intervals-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\forall n \in \mathbb{N}: x_n \le y_n \\
+<span class="eqno">(32)<a class="headerlink" href="#equation-equ-nested-intervals-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\forall n \in \mathbb{N}: x_n \le y_n \\
 \\
 &amp;\lim_{n \to \infty} (y_n - x_n) = 0\end{split}\]</div>
 <p>Then <span class="math notranslate nohighlight">\(\{x_n\}\)</span> and <span class="math notranslate nohighlight">\(\{y_n\}\)</span> converge to the same point:</p>
@@ -672,9 +672,9 @@ therefore <span class="math notranslate nohighlight">\(a \in B\)</span> for ever
 <p>Subtracting <span class="math notranslate nohighlight">\(x_n\)</span> gives:</p>
 <div class="math notranslate nohighlight">
 \[0 \le x_m - x_n \le y_n - x_n\]</div>
-<p>which is what we want because of <a class="reference internal" href="#equation-equ-nested-intervals-1">(31)</a>.
+<p>which is what we want because of <a class="reference internal" href="#equation-equ-nested-intervals-1">(32)</a>.
 The sequence <span class="math notranslate nohighlight">\(\{y_n\}\)</span> is a Cauchy sequence by the same argument,
-and the limits of <span class="math notranslate nohighlight">\(\{x_n\}\)</span> and <span class="math notranslate nohighlight">\(\{y_n\}\)</span> coincide, again because of <a class="reference internal" href="#equation-equ-nested-intervals-1">(31)</a>.</p>
+and the limits of <span class="math notranslate nohighlight">\(\{x_n\}\)</span> and <span class="math notranslate nohighlight">\(\{y_n\}\)</span> coincide, again because of <a class="reference internal" href="#equation-equ-nested-intervals-1">(32)</a>.</p>
 </div>
 </section>
 <section id="compact-sets">
@@ -932,7 +932,7 @@ The Riemann sum <span class="math notranslate nohighlight">\(R(\phi, X_{\phi}, \
 <p><strong>(c)</strong>
 We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S-integrable</strong>, iff</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-1">
-<span class="eqno">(32)<a class="headerlink" href="#equation-equ-riemann-integrals-1" title="Link to this equation">#</a></span>\[\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
+<span class="eqno">(33)<a class="headerlink" href="#equation-equ-riemann-integrals-1" title="Link to this equation">#</a></span>\[\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-riemann-integrals">
@@ -941,18 +941,18 @@ We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
 <p>Theorem: <span class="math notranslate nohighlight">\(f\)</span> is R-integrable iff it is S-integrable. In this case, we have:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-2">
-<span class="eqno">(33)<a class="headerlink" href="#equation-equ-riemann-integrals-2" title="Link to this equation">#</a></span>\[\int_a^b f(x) \, dx = \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
+<span class="eqno">(34)<a class="headerlink" href="#equation-equ-riemann-integrals-2" title="Link to this equation">#</a></span>\[\int_a^b f(x) \, dx = \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <p>This equivalence allows us to forget the term “S-integrability”.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <strong>Part One:</strong> We show that <a class="reference internal" href="#equation-equ-riemann-integrals-1">(32)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-2">(33)</a> hold if <span class="math notranslate nohighlight">\(f\)</span> is R-integrable.</p>
+<p>Proof. <strong>Part One:</strong> We show that <a class="reference internal" href="#equation-equ-riemann-integrals-1">(33)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-2">(34)</a> hold if <span class="math notranslate nohighlight">\(f\)</span> is R-integrable.</p>
 <p>Take any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f\)</span> is integrable, there is a partition <span class="math notranslate nohighlight">\(X\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-3">
-<span class="eqno">(34)<a class="headerlink" href="#equation-equ-riemann-integrals-3" title="Link to this equation">#</a></span>\[\left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | &lt; \epsilon\]</div>
+<span class="eqno">(35)<a class="headerlink" href="#equation-equ-riemann-integrals-3" title="Link to this equation">#</a></span>\[\left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | &lt; \epsilon\]</div>
 <p>for any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>. We are done if we can produce step functions <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-3a">
-<span class="eqno">(35)<a class="headerlink" href="#equation-equ-riemann-integrals-3a" title="Link to this equation">#</a></span>\[R(\phi) - \epsilon \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon \]</div>
+<span class="eqno">(36)<a class="headerlink" href="#equation-equ-riemann-integrals-3a" title="Link to this equation">#</a></span>\[R(\phi) - \epsilon \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon \]</div>
 <p>Here they are:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;u_k = \inf \{f(x) \mid x \in [x_{k}, x_{k+1})\} \\
@@ -965,13 +965,13 @@ We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S
 \[\phi  \le f \le \psi \]</div>
 <p>from which it follows that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-3b">
-<span class="eqno">(36)<a class="headerlink" href="#equation-equ-riemann-integrals-3b" title="Link to this equation">#</a></span>\[R(\phi)  \le R(f, X, \xi) \le R(\psi) \]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-equ-riemann-integrals-3b" title="Link to this equation">#</a></span>\[R(\phi)  \le R(f, X, \xi) \le R(\psi) \]</div>
 <p>for any partition <span class="math notranslate nohighlight">\(X\)</span> and and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>.
-Combining <a class="reference internal" href="#equation-equ-riemann-integrals-3b">(36)</a> with <a class="reference internal" href="#equation-equ-riemann-integrals-3">(34)</a>, we get:</p>
+Combining <a class="reference internal" href="#equation-equ-riemann-integrals-3b">(37)</a> with <a class="reference internal" href="#equation-equ-riemann-integrals-3">(35)</a>, we get:</p>
 <div class="math notranslate nohighlight">
 \[R(\phi) - \epsilon  \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon\]</div>
-<p>for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and this is <a class="reference internal" href="#equation-equ-riemann-integrals-3a">(35)</a>, the inequality we are after.</p>
-<p><strong>Part Two:</strong> We show that <span class="math notranslate nohighlight">\(f\)</span> is R-integrable if <a class="reference internal" href="#equation-equ-riemann-integrals-1">(32)</a> holds.</p>
+<p>for any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and this is <a class="reference internal" href="#equation-equ-riemann-integrals-3a">(36)</a>, the inequality we are after.</p>
+<p><strong>Part Two:</strong> We show that <span class="math notranslate nohighlight">\(f\)</span> is R-integrable if <a class="reference internal" href="#equation-equ-riemann-integrals-1">(33)</a> holds.</p>
 <p>Take any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span> and choose step functions <span class="math notranslate nohighlight">\(\phi, \psi\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> that squeeze <span class="math notranslate nohighlight">\(f\)</span> from below and above:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;\phi \le f \le \psi \\
@@ -979,7 +979,7 @@ Combining <a class="reference internal" href="#equation-equ-riemann-integrals-3b
 <p>We assume w.l.o.g. that <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> share the same partition <span class="math notranslate nohighlight">\(T = \{t_0, t_1, \ldots, t_m \}\)</span>.
 We are done if we can produce a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-4">
-<span class="eqno">(37)<a class="headerlink" href="#equation-equ-riemann-integrals-4" title="Link to this equation">#</a></span>\[R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon\]</div>
+<span class="eqno">(38)<a class="headerlink" href="#equation-equ-riemann-integrals-4" title="Link to this equation">#</a></span>\[R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon\]</div>
 <p>for any partition <span class="math notranslate nohighlight">\(X\)</span> with <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>The key idea is to split <span class="math notranslate nohighlight">\([a, b]\)</span> into a “good” set <span class="math notranslate nohighlight">\(U\)</span> and a “bad” set <span class="math notranslate nohighlight">\(V\)</span> and to make <span class="math notranslate nohighlight">\(V\)</span> arbitrarily small.</p>
 <p>We are given <span class="math notranslate nohighlight">\(\epsilon\)</span> and <span class="math notranslate nohighlight">\(T\)</span>. We choose a partition <span class="math notranslate nohighlight">\(X\)</span> with small <span class="math notranslate nohighlight">\(\delta = \mu(X)\)</span>.
@@ -995,7 +995,7 @@ Each X-interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</s
 \[\rho(x) = f(\xi_k) \text{ for } x \in [x_k, x_{k+1})\]</div>
 <p>Note that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-4a">
-<span class="eqno">(38)<a class="headerlink" href="#equation-equ-riemann-integrals-4a" title="Link to this equation">#</a></span>\[R(\rho) = R(f, X, \xi)\]</div>
+<span class="eqno">(39)<a class="headerlink" href="#equation-equ-riemann-integrals-4a" title="Link to this equation">#</a></span>\[R(\rho) = R(f, X, \xi)\]</div>
 <p>Let <span class="math notranslate nohighlight">\(U\)</span> be the union of all the intervals in <span class="math notranslate nohighlight">\(X\)</span> that fit into one of the intervals in <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(V\)</span> the complement of <span class="math notranslate nohighlight">\(U\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;K = \{k &lt; n \mid \exists j &lt; m: [x_k, x_{k+1}) \subseteq [t_j, t_{j+1}) \} \\
@@ -1007,24 +1007,24 @@ Each X-interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</s
 \[\phi(x) = \phi(\xi_k) \le f(\xi_k) = \rho(x) \le \psi(\xi_k) = \psi(x)\]</div>
 <p>Therefore, we have on <span class="math notranslate nohighlight">\(U\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-5a">
-<span class="eqno">(39)<a class="headerlink" href="#equation-equ-riemann-integrals-5a" title="Link to this equation">#</a></span>\[\phi(x) \le \rho(x) \le  \psi(x)\]</div>
-<p>Summing over <a class="reference internal" href="#equation-equ-riemann-integrals-5a">(39)</a> gives:</p>
+<span class="eqno">(40)<a class="headerlink" href="#equation-equ-riemann-integrals-5a" title="Link to this equation">#</a></span>\[\phi(x) \le \rho(x) \le  \psi(x)\]</div>
+<p>Summing over <a class="reference internal" href="#equation-equ-riemann-integrals-5a">(40)</a> gives:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-7">
-<span class="eqno">(40)<a class="headerlink" href="#equation-equ-riemann-integrals-7" title="Link to this equation">#</a></span>\[\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) \]</div>
+<span class="eqno">(41)<a class="headerlink" href="#equation-equ-riemann-integrals-7" title="Link to this equation">#</a></span>\[\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) \]</div>
 <p>The length of <span class="math notranslate nohighlight">\(V\)</span> is bounded by <span class="math notranslate nohighlight">\(m\delta\)</span> because <span class="math notranslate nohighlight">\(V\)</span> contains at most <span class="math notranslate nohighlight">\(m\)</span> intervals, and the length of each interval is less or equal <span class="math notranslate nohighlight">\(\delta\)</span>.
 And, since <span class="math notranslate nohighlight">\(f\)</span> is bounded, there is an <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span> such that we have on <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-6">
-<span class="eqno">(41)<a class="headerlink" href="#equation-equ-riemann-integrals-6" title="Link to this equation">#</a></span>\[\phi(x) - M \le \rho(x) \le \psi(x) + M\]</div>
-<p>Summing over <a class="reference internal" href="#equation-equ-riemann-integrals-6">(41)</a> gives:</p>
+<span class="eqno">(42)<a class="headerlink" href="#equation-equ-riemann-integrals-6" title="Link to this equation">#</a></span>\[\phi(x) - M \le \rho(x) \le \psi(x) + M\]</div>
+<p>Summing over <a class="reference internal" href="#equation-equ-riemann-integrals-6">(42)</a> gives:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-8">
-<span class="eqno">(42)<a class="headerlink" href="#equation-equ-riemann-integrals-8" title="Link to this equation">#</a></span>\[\begin{split}&amp;\sum_{k \in L} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \\
+<span class="eqno">(43)<a class="headerlink" href="#equation-equ-riemann-integrals-8" title="Link to this equation">#</a></span>\[\begin{split}&amp;\sum_{k \in L} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \\
 &amp;\le \sum_{k \in L} \rho(x_k)(x_{k+1} - x_k) \\
 &amp;\le \sum_{k \in L} \psi(x_k)(x_{k+1} - x_k) + Mm\delta\end{split}\]</div>
-<p>The inequalities <a class="reference internal" href="#equation-equ-riemann-integrals-7">(40)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-8">(42)</a> are combined to:</p>
+<p>The inequalities <a class="reference internal" href="#equation-equ-riemann-integrals-7">(41)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-8">(43)</a> are combined to:</p>
 <div class="math notranslate nohighlight">
 \[R(\phi) - Mm\delta \le R(\rho) \le R(\psi) + Mm\delta\]</div>
-<p>Remembering <a class="reference internal" href="#equation-equ-riemann-integrals-4a">(38)</a> and setting <span class="math notranslate nohighlight">\(\delta = \epsilon/Mm\)</span>,
-we arrive at <a class="reference internal" href="#equation-equ-riemann-integrals-4">(37)</a>, the desired result:</p>
+<p>Remembering <a class="reference internal" href="#equation-equ-riemann-integrals-4a">(39)</a> and setting <span class="math notranslate nohighlight">\(\delta = \epsilon/Mm\)</span>,
+we arrive at <a class="reference internal" href="#equation-equ-riemann-integrals-4">(38)</a>, the desired result:</p>
 <div class="math notranslate nohighlight">
 \[R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon \]</div>
 </div>
@@ -1130,17 +1130,17 @@ We set for <span class="math notranslate nohighlight">\(k = 0, \ldots, n-1\)</sp
 <p>if <span class="math notranslate nohighlight">\(\mu(X)\)</span> is sufficiently small.</p>
 <p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f\)</span> be non-decreasing. We get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-1">
-<span class="eqno">(43)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
+<span class="eqno">(44)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
 &amp;\le \delta \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
 &amp;= \delta (f(b) - f(a)) &lt; \epsilon\end{split}\]</div>
 <p>if <span class="math notranslate nohighlight">\(\delta &lt; \epsilon /(f(b) - f(a))\)</span>.</p>
 <p><strong>(c)</strong> Let <span class="math notranslate nohighlight">\(f\)</span> be continuous. Then it is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and there is a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that,
 for all <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(\psi(x_k) - \phi(x_{k}) &lt; \epsilon\)</span> if <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span>. We get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-2">
-<span class="eqno">(44)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-2" title="Link to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \\
+<span class="eqno">(45)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-2" title="Link to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \\
 &amp;&lt; \epsilon \sum_{k=0}^{n-1} (x_{k+1} - x_k) \\
 &amp;= \epsilon (b - a)\end{split}\]</div>
-<p>In <a class="reference internal" href="#equation-equ-riemann-integrable-functions-1">(43)</a> and <a class="reference internal" href="#equation-equ-riemann-integrable-functions-2">(44)</a> we encounter <strong>collapsing sums</strong>,
+<p>In <a class="reference internal" href="#equation-equ-riemann-integrable-functions-1">(44)</a> and <a class="reference internal" href="#equation-equ-riemann-integrable-functions-2">(45)</a> we encounter <strong>collapsing sums</strong>,
 which are a recurrent pattern in the theory of integrals.</p>
 <p><strong>(d)</strong> Let <span class="math notranslate nohighlight">\(f\)</span> be bounded, continuous and <span class="math notranslate nohighlight">\(D\)</span> the set of points where <span class="math notranslate nohighlight">\(f\)</span> is discontinous.
 We assume that <span class="math notranslate nohighlight">\(D\)</span> has only one limit point <span class="math notranslate nohighlight">\(d^*\)</span>. If there is more than one,
@@ -1155,14 +1155,14 @@ in the proof of <a class="reference internal" href="#thr-riemann-integrals">Theo
 <p>Since <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\(U\)</span>, there is a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that,
 for all <span class="math notranslate nohighlight">\(k \in K\)</span>, <span class="math notranslate nohighlight">\(\psi(x_k) - \phi(x_{k}) &lt; \epsilon\)</span> if <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span>. We have on <span class="math notranslate nohighlight">\(U\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-3">
-<span class="eqno">(45)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-3" title="Link to this equation">#</a></span>\[\sum_{k\in K} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a)\]</div>
+<span class="eqno">(46)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-3" title="Link to this equation">#</a></span>\[\sum_{k\in K} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a)\]</div>
 <p>Since <span class="math notranslate nohighlight">\(|d - d^*| &lt; \delta\)</span> for all but finitely many <span class="math notranslate nohighlight">\(d \in D\)</span>,
 all but finitely many elements of <span class="math notranslate nohighlight">\(D\)</span> are assembled in just one interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</span>,
 however small <span class="math notranslate nohighlight">\(\delta\)</span> is. Therefore the number of elements of <span class="math notranslate nohighlight">\(L\)</span>, say <span class="math notranslate nohighlight">\(m\)</span>, is finite.
 And <span class="math notranslate nohighlight">\(|f|\)</span> is bounded by some real number <span class="math notranslate nohighlight">\(M\)</span>. We have on <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-4">
-<span class="eqno">(46)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-4" title="Link to this equation">#</a></span>\[\sum_{k\in L} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \delta m M\]</div>
-<p>Adding <a class="reference internal" href="#equation-equ-riemann-integrable-functions-3">(45)</a> and <a class="reference internal" href="#equation-equ-riemann-integrable-functions-4">(46)</a> gives us:</p>
+<span class="eqno">(47)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-4" title="Link to this equation">#</a></span>\[\sum_{k\in L} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \delta m M\]</div>
+<p>Adding <a class="reference internal" href="#equation-equ-riemann-integrable-functions-3">(46)</a> and <a class="reference internal" href="#equation-equ-riemann-integrable-functions-4">(47)</a> gives us:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a) + \delta m M \\\end{split}\]</div>
 <p>or:</p>
@@ -1186,7 +1186,7 @@ The ultimate result is the Lebesgue Criterion, the proof of which is too lengthy
 or, equivalently: <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> is closed under the sup norm.
 We can swap limit and integral:</p>
 <div class="math notranslate nohighlight" id="equation-thr-limit-riemann-integrable-1">
-<span class="eqno">(47)<a class="headerlink" href="#equation-thr-limit-riemann-integrable-1" title="Link to this equation">#</a></span>\[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
+<span class="eqno">(48)<a class="headerlink" href="#equation-thr-limit-riemann-integrable-1" title="Link to this equation">#</a></span>\[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of R-integrable functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.
@@ -1204,7 +1204,7 @@ Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> and <sp
 <div class="math notranslate nohighlight">
 \[R(\phi) - \epsilon (b-a) \le R(f, X, \xi) \le  R(\psi) + \epsilon (b-a)\]</div>
 <p>whenever <span class="math notranslate nohighlight">\(X\)</span> is as least as fine grained as <span class="math notranslate nohighlight">\(X_{\phi}\)</span> and <span class="math notranslate nohighlight">\(X_{\psi}\)</span>.
-This proves that <span class="math notranslate nohighlight">\(f\)</span> is integrable. Equation <a class="reference internal" href="#equation-thr-limit-riemann-integrable-1">(47)</a> follows from:</p>
+This proves that <span class="math notranslate nohighlight">\(f\)</span> is integrable. Equation <a class="reference internal" href="#equation-thr-limit-riemann-integrable-1">(48)</a> follows from:</p>
 <div class="math notranslate nohighlight">
 \[\left | \int_a^b f_n(x) \, dx - \int_a^b f(x) \, dx \right | \le \int_a^b \left | f_n(x) - f(x) \right | \, dx \le (b - a) \left \lVert f_n - f \right \rVert_{\infty}\]</div>
 </div>
@@ -1237,17 +1237,17 @@ And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <s
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1">
-<span class="eqno">(48)<a class="headerlink" href="#equation-equ-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
+<span class="eqno">(49)<a class="headerlink" href="#equation-equ-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
 <p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>. We often use the notation:</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-0">
-<span class="eqno">(49)<a class="headerlink" href="#equation-equ-derivatives-0" title="Link to this equation">#</a></span>\[\frac{df}{dx} =  f'(x)\]</div>
-<p>The statement <a class="reference internal" href="#equation-equ-derivatives-1">(48)</a> is equivalent to</p>
+<span class="eqno">(50)<a class="headerlink" href="#equation-equ-derivatives-0" title="Link to this equation">#</a></span>\[\frac{df}{dx} =  f'(x)\]</div>
+<p>The statement <a class="reference internal" href="#equation-equ-derivatives-1">(49)</a> is equivalent to</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1a">
-<span class="eqno">(50)<a class="headerlink" href="#equation-equ-derivatives-1a" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
+<span class="eqno">(51)<a class="headerlink" href="#equation-equ-derivatives-1a" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
 <p>which means that the term <span class="math notranslate nohighlight">\(f'(x) \, h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.
-The derivative is fully determined by equation <a class="reference internal" href="#equation-equ-derivatives-1a">(50)</a>. From</p>
+The derivative is fully determined by equation <a class="reference internal" href="#equation-equ-derivatives-1a">(51)</a>. From</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1b">
-<span class="eqno">(51)<a class="headerlink" href="#equation-equ-derivatives-1b" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + y \, h + o(h)\]</div>
+<span class="eqno">(52)<a class="headerlink" href="#equation-equ-derivatives-1b" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + y \, h + o(h)\]</div>
 <p>for some value <span class="math notranslate nohighlight">\(y\)</span> we can conclude that <span class="math notranslate nohighlight">\(y = f'(x)\)</span>.</p>
 <p><strong>(c)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuously differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if it is differentiable at <span class="math notranslate nohighlight">\(x\)</span>
 and its derivative <span class="math notranslate nohighlight">\(f'\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
@@ -1442,13 +1442,13 @@ Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition 
 \[f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}\]</div>
 <p>and we get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-main-theorem-calculus-1">
-<span class="eqno">(52)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+<span class="eqno">(53)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
 &amp;= f(b) - f(a)\end{split}\]</div>
 <p>The final reasoning is standard: We choose partitions <span class="math notranslate nohighlight">\(\{x_k\}\)</span> with arbitrarily small granularity.
-The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(52)</a> is thus driven to equality.
-The last equation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(52)</a> is again the <strong>collapsing sum pattern</strong>.</p>
+The approximation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(53)</a> is thus driven to equality.
+The last equation in <a class="reference internal" href="#equation-equ-main-theorem-calculus-1">(53)</a> is again the <strong>collapsing sum pattern</strong>.</p>
 </div>
 <div class="proof theorem admonition" id="thr-integration-rules">
 <p class="admonition-title"><span class="caption-number">Theorem 34 </span> (Integration Rules)</p>
@@ -1457,7 +1457,7 @@ The last equation in <a class="reference internal" href="#equation-equ-main-theo
 <p><strong>(a) Integration by Parts</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
 <div class="math notranslate nohighlight" id="equation-thr-integration-rules-1">
-<span id="integration-by-parts"></span><span class="eqno">(53)<a class="headerlink" href="#equation-thr-integration-rules-1" title="Link to this equation">#</a></span>\[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
+<span id="integration-by-parts"></span><span class="eqno">(54)<a class="headerlink" href="#equation-thr-integration-rules-1" title="Link to this equation">#</a></span>\[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
 <p><strong>(b) Substitution Rule</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b)])\)</span> with <span class="math notranslate nohighlight">\(g' \neq 0\)</span>. Then</p>
 <div class="math notranslate nohighlight">
@@ -1521,13 +1521,13 @@ A simple example is:</p>
 <p>Let <span class="math notranslate nohighlight">\([a, b]\)</span> be a finite interval <span class="math notranslate nohighlight">\(f \in  C^{n+1}([a, b])\)</span>, <span class="math notranslate nohighlight">\(x \in (a, b)\)</span> and <span class="math notranslate nohighlight">\(h\)</span> so small that <span class="math notranslate nohighlight">\(x+h \in [a, b]\)</span>. Then:</p>
 <p><strong>(a)</strong></p>
 <div class="math notranslate nohighlight" id="equation-thr-taylor-a">
-<span class="eqno">(54)<a class="headerlink" href="#equation-thr-taylor-a" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(h)^k + \frac{1}{n!}\int _x^{x+h} (x+h-t)^n f^{(n+1)}(t) \, dt\]</div>
+<span class="eqno">(55)<a class="headerlink" href="#equation-thr-taylor-a" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(h)^k + \frac{1}{n!}\int _x^{x+h} (x+h-t)^n f^{(n+1)}(t) \, dt\]</div>
 <p><strong>(b)</strong> There exists a <span class="math notranslate nohighlight">\(\xi \in [x-h,x+h]\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-thr-taylor-b">
-<span class="eqno">(55)<a class="headerlink" href="#equation-thr-taylor-b" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\]</div>
+<span class="eqno">(56)<a class="headerlink" href="#equation-thr-taylor-b" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\]</div>
 <p><strong>(c)</strong></p>
 <div class="math notranslate nohighlight" id="equation-thr-taylor-c">
-<span class="eqno">(56)<a class="headerlink" href="#equation-thr-taylor-c" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(h^n)\]</div>
+<span class="eqno">(57)<a class="headerlink" href="#equation-thr-taylor-c" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(h^n)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong> The proof is by induction, using the main theorem of integration and integration by parts. We set <span class="math notranslate nohighlight">\(u = x+h\)</span>.</p>
@@ -1536,11 +1536,11 @@ A simple example is:</p>
 &amp; = -(u-t)f'(t) \lvert_x^u + \int _x^u(u-t)f''(t)dt \\
 &amp; = (u-x)f'(x) + \int _x^u(u-t)f''(t)dt = \text{ ... } \\
 &amp; =\sum _{k=1}^n \frac{f^{(k)}(x)}{k!}(u-x)^k + \frac{1}{n!}\int _x^u (u-t)^n f^{(n+1)}(t)dt\end{split}\]</div>
-<p>We obtain equation <a class="reference internal" href="#equation-thr-taylor-a">(54)</a> by replacing <span class="math notranslate nohighlight">\(u\)</span> with <span class="math notranslate nohighlight">\(h = u-x\)</span>.</p>
+<p>We obtain equation <a class="reference internal" href="#equation-thr-taylor-a">(55)</a> by replacing <span class="math notranslate nohighlight">\(u\)</span> with <span class="math notranslate nohighlight">\(h = u-x\)</span>.</p>
 <p><strong>(b)</strong> Using the <a class="reference internal" href="#thr-mean-value-integration">mean value theorem of integration</a>, we find a <span class="math notranslate nohighlight">\(\xi \in [x-h, x+h]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{n!}\int _x^u(u-t)^nf^{(n+1)}(t)dt = \frac{f^{(n+1)}(\xi)}{n!}\int_x^u (u-t)^n dt = \frac{f^{(n+1)}(\xi)}{(n+1)!}(u-x)^{n+1}\]</div>
-<p>We obtain equation <a class="reference internal" href="#equation-thr-taylor-b">(55)</a> again by replacing <span class="math notranslate nohighlight">\(u\)</span> with <span class="math notranslate nohighlight">\(h = u-x\)</span>.</p>
+<p>We obtain equation <a class="reference internal" href="#equation-thr-taylor-b">(56)</a> again by replacing <span class="math notranslate nohighlight">\(u\)</span> with <span class="math notranslate nohighlight">\(h = u-x\)</span>.</p>
 <p><strong>(c)</strong>
 This follows from (b), because:</p>
 <div class="math notranslate nohighlight">

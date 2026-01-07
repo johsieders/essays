@@ -466,18 +466,21 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-greeks">The Greeks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-catalogue-of-lagrangians">A Catalogue of Lagrangians</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-case">General Case</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-v">T, V</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-lagrangian">Standard Lagrangian</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-motion">Constant Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-acceleration">No Acceleration</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-acceleration">Constant Acceleration</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke">Hooke</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catenary">Catenary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field">Magnetic Field</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-trains-elevators-and-spaceships">A Note on Trains, Elevators, and Spaceships</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>
@@ -522,8 +525,7 @@ trigonometry).</p></li>
 <p>In Newtonian physics, we study volumeless particles with positive mass that travel through space along a <strong>trajectory</strong> described
 by a differentiable function <span class="math notranslate nohighlight">\(x: [0, T] \rightarrow \mathbb{R}^3\)</span>. The interval <span class="math notranslate nohighlight">\([0, T]\)</span>
 can extend over microseconds or millennia, but is always finite. Starting at zero is just a notational convenience.
-<span class="math notranslate nohighlight">\(x(t)\)</span> is the position in space of the particle at time <span class="math notranslate nohighlight">\(t\)</span>,
-<span class="math notranslate nohighlight">\(\dot{x}(t)\)</span> its velocity. We write:</p>
+<span class="math notranslate nohighlight">\(x(t)\)</span> is the position in space of the particle at time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(v(t) = \dot{x}(t)\)</span> its velocity. We write:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}x = \begin{bmatrix}
         x_1 \\
@@ -536,9 +538,10 @@ can extend over microseconds or millennia, but is always finite. Starting at zer
     \end{bmatrix}\end{split}\]</div>
 <p>This is the standard case. There are variations: When the particle travels along a straight line,
 we choose this direction as the basis vector, reducing <span class="math notranslate nohighlight">\(x\)</span> to a vector of dimension one.
-When the particle moves on a plane, <span class="math notranslate nohighlight">\(x\)</span> is reduced to two dimensions.
-When we study two or more particles at a time, say two, <span class="math notranslate nohighlight">\(x\)</span> becomes a vector of dimension six, and we
-face a small notational challenge, for instance:</p>
+When the particle moves in a plane, <span class="math notranslate nohighlight">\(x\)</span> is reduced to two dimensions.
+When we study two or more particles at a time, say two, <span class="math notranslate nohighlight">\(x\)</span> becomes a vector of dimension two, four, or six.
+A vector of dimension six can represent six vectors of dimension one, three of two, or two of three.
+We face a small notational challenge, for instance:</p>
 <div class="math notranslate nohighlight">
 \[x^2 = \sum_{k=1}^6 x_k^2 = (x_{(1)})^2 + (x_{(2)})^2\]</div>
 <p>where:</p>
@@ -561,10 +564,11 @@ most formulae remain valid regardless of the dimension of <span class="math notr
 \left\{
     \begin{array}{lr}
         \mathbb{R}^3 \times \mathbb{R}^3  \rightarrow \mathbb{R} \\
-        (x, y) \mapsto L(x, y)
+        (x, v) \mapsto L(x, v)
     \end{array}
 \right .\end{split}\]</div>
-<p>that vanishes for large <span class="math notranslate nohighlight">\(x,y\)</span>: <span class="math notranslate nohighlight">\(L(x,y) = 0\)</span> if <span class="math notranslate nohighlight">\(\min \{\lVert x \lVert, \lVert y \lVert \} &gt; M\)</span> for some large <span class="math notranslate nohighlight">\(M\)</span>.
+<p>that vanishes for large <span class="math notranslate nohighlight">\(x,v\)</span>: <span class="math notranslate nohighlight">\(L(x,v) = 0\)</span> if <span class="math notranslate nohighlight">\(\min \{\lVert x \lVert, \lVert y \lVert \} &gt; M\)</span> for some large <span class="math notranslate nohighlight">\(M\)</span>.
+You can think of <span class="math notranslate nohighlight">\(M\)</span> as the diameter of the universe.
 The value <span class="math notranslate nohighlight">\(L(x,\dot{x})\)</span> is meant to quantify
 the mess caused by a particle travelling at velocity <span class="math notranslate nohighlight">\(\dot{x}(t)\)</span> through point <span class="math notranslate nohighlight">\(x(t)\)</span>.
 The total mess along <span class="math notranslate nohighlight">\(x\)</span> is a <strong>functional</strong> called the <strong>action</strong> and is defined by:</p>
@@ -572,6 +576,8 @@ The total mess along <span class="math notranslate nohighlight">\(x\)</span> is 
 <span class="eqno">(2)<a class="headerlink" href="#equation-action-1" title="Link to this equation">#</a></span>\[A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt \]</div>
 <p>A functional is a function that depends on another function, and a functional derivative is a derivative with respect
 to a function, see XXX.</p>
+<p>The designations <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(\dot{x}\)</span> are almost interchangable. So, <span class="math notranslate nohighlight">\(\partial_{\dot{x}}\)</span> and <span class="math notranslate nohighlight">\(\partial_{x}\)</span> mean exactly the same:
+the partial derivative of <span class="math notranslate nohighlight">\(L\)</span> with respect to the second variable.</p>
 <p>The term “mess” is deliberately vague. What happens is that physicists somehow find the correct Lagrangian,
 and then interpret it as the “mess”, or deviation from a tranquil, steady state.</p>
 <p>Consider a particle that travels from some point <span class="math notranslate nohighlight">\(a\)</span> to another point <span class="math notranslate nohighlight">\(b\)</span>.
@@ -599,7 +605,7 @@ All local extrema of <span class="math notranslate nohighlight">\(f\)</span> are
 <p>A trajectory <span class="math notranslate nohighlight">\(x\)</span> is called a <strong>stationary point</strong> of a Lagrangian <span class="math notranslate nohighlight">\(L\)</span> iff the functional derivative of <span class="math notranslate nohighlight">\(A\)</span> vanishes at <span class="math notranslate nohighlight">\(x\)</span> :</p>
 <div class="math notranslate nohighlight" id="equation-action-2">
 <span class="eqno">(3)<a class="headerlink" href="#equation-action-2" title="Link to this equation">#</a></span>\[\delta A[x] = 0 \]</div>
-<p>As there are no boundaries, all local extrema of <span class="math notranslate nohighlight">\(L\)</span>, and in particular all <span class="math notranslate nohighlight">\(L\)</span>-minimal trajectories <span class="math notranslate nohighlight">\(x\)</span>, are stationary.</p>
+<p>As there are no boundaries for <span class="math notranslate nohighlight">\(L\)</span>, all local extrema of <span class="math notranslate nohighlight">\(L\)</span>, and in particular all <span class="math notranslate nohighlight">\(L\)</span>-minimal trajectories <span class="math notranslate nohighlight">\(x\)</span>, are stationary.</p>
 <div class="proof theorem admonition" id="def-euler-lagrange">
 <p class="admonition-title"><span class="caption-number">Theorem 1 </span> (Euler-Lagrange)</p>
 <section class="theorem-content" id="proof-content">
@@ -617,26 +623,28 @@ All local extrema of <span class="math notranslate nohighlight">\(f\)</span> are
 By definition of functional derivatives, we have</p>
 <div class="math notranslate nohighlight">
 \[\delta A[x] = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0}\]</div>
-<p>for any differentiable function <span class="math notranslate nohighlight">\(h : \mathbb{R}^3 \to \mathbb{R}\)</span>. <span class="math notranslate nohighlight">\(A\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span> iff <span class="math notranslate nohighlight">\(\delta A[x]\)</span>
+<p>for any differentiable function <span class="math notranslate nohighlight">\(h : \mathbb{R}^3 \to \mathbb{R}\)</span> satisfying <span class="math notranslate nohighlight">\(h(0) = h(T) = 0\)</span>.
+That’s necessary because <span class="math notranslate nohighlight">\(x + h\)</span> is supposed to fulfill the boundary conditions.</p>
+<p><span class="math notranslate nohighlight">\(A\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span> iff <span class="math notranslate nohighlight">\(\delta A[x]\)</span>
 is independent of <span class="math notranslate nohighlight">\(h\)</span>. Writing <span class="math notranslate nohighlight">\(L\)</span> for <span class="math notranslate nohighlight">\(L(x(t) + \epsilon h(t), \dot{x}(t) + \epsilon \dot{h}(t))\)</span> and integrating by parts gives us:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;0= \partial_{\epsilon} A[x + \epsilon h] \\
-&amp;= \int_0^T \partial_{\epsilon}L(x + \epsilon h, \dot{x} + \epsilon \dot{h}) \, dt \\
+&amp;= \int_0^T \partial_{\epsilon} L \, dt \\
 &amp;= \int_0^T \partial_x L\, h + \partial_{\dot{x}} L\, \dot{h} \, dt \\
 &amp;= \partial_{\dot{x}} L \, h \vert_{t=0}^{t=T} + \int_0^T \partial_x L\, h - \partial_t \partial_{\dot{x}} L\, h \, dt\end{split}\]</div>
 <p>With <span class="math notranslate nohighlight">\(\epsilon = 0\)</span> it follows:</p>
 <div class="math notranslate nohighlight" id="equation-euler-lagrange-1">
 <span class="eqno">(6)<a class="headerlink" href="#equation-euler-lagrange-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;0 = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0} \\
-&amp;=\partial_{\dot{x}} L(x, \dot{x}) \, h(t) \vert_{t=0}^{t=T} + 
-\int_0^T (\partial_x L(x,\dot{x}) - \partial_t \partial_{\dot{x}} L(x,\dot{x}))\, h \, dt\end{split}\]</div>
-<p>The first term in <a class="reference internal" href="#equation-euler-lagrange-1">(6)</a> vanishes because we can choose <span class="math notranslate nohighlight">\(h\)</span> such that <span class="math notranslate nohighlight">\(h(0) = h(T) = 0\)</span>.<br />
-The second term vanishes for every <span class="math notranslate nohighlight">\(h\)</span>:</p>
+&amp;=\partial_{\dot{x}} L \, h(t) \vert_{t=0}^{t=T} + 
+\int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L)\, h \, dt\end{split}\]</div>
+<p>The first term in <a class="reference internal" href="#equation-euler-lagrange-1">(6)</a> vanishes because <span class="math notranslate nohighlight">\(h(0) = h(T) = 0\)</span>.<br />
+Therefore, for every <span class="math notranslate nohighlight">\(h\)</span>, the second term vanishes too:</p>
 <div class="math notranslate nohighlight">
 \[\int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L) \, h \, dt = 0\]</div>
 <p>This gives equation <a class="reference internal" href="#equation-euler-lagrange">(4)</a>. Note that</p>
 <div class="math notranslate nohighlight">
 \[(g|h) = \int_0^T gh \, dt\]</div>
-<p>is a scalar product on <span class="math notranslate nohighlight">\(C([0,T])\)</span>. We are using the fact that <span class="math notranslate nohighlight">\(g = 0\)</span> iff <span class="math notranslate nohighlight">\((g, h) = 0\)</span> for all <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>is a scalar product on <span class="math notranslate nohighlight">\(C([0,T])\)</span>. We are using the fact that <span class="math notranslate nohighlight">\(g = 0\)</span> iff <span class="math notranslate nohighlight">\((g|h) = 0\)</span> for all <span class="math notranslate nohighlight">\(h\)</span>.</p>
 </div>
 <div class="proof remark admonition" id="rem-lagrangian">
 <p class="admonition-title"><span class="caption-number">Remark 1 </span> (On Lagrangians)</p>
@@ -735,8 +743,31 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 &amp;= \partial_x H \dot{x} + \partial_p H \dot{p} \\
 &amp;= \dot{p} \dot{x} - \dot{x} \dot{p} = 0\end{split}\]</div>
 </div>
+</section>
+<section id="conservation-of-information-gibbs-liouville">
+<h3>Conservation of Information, Gibbs-Liouville<a class="headerlink" href="#conservation-of-information-gibbs-liouville" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla \cdot 
+\begin{bmatrix}
+\dot{x} \\
+\dot{p}
+\end{bmatrix} = 0\end{split}\]</div>
+</section>
+<section id="conservation-of-momentum">
+<h3>Conservation of Momentum<a class="headerlink" href="#conservation-of-momentum" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n \dot {p_k} = \sum_{k=1}^n F_k\]</div>
+</section>
+</section>
+<section id="a-catalogue-of-lagrangians">
+<h2>A Catalogue of Lagrangians<a class="headerlink" href="#a-catalogue-of-lagrangians" title="Link to this heading">#</a></h2>
+<p>We consider some important Lagrangians, starting from the simplest case of no acceleration and working up to the magnetic field.
+The border condition is always the same, with some <span class="math notranslate nohighlight">\(B \in \mathbb{R}^3\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-border-condition">
+<span class="eqno">(10)<a class="headerlink" href="#equation-border-condition" title="Link to this equation">#</a></span>\[\begin{split}&amp;x(0) = 0 \\
+&amp;x(T) = B\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-force-t-v">
-<span class="eqno">(10)<a class="headerlink" href="#equation-force-t-v" title="Link to this equation">#</a></span>\[\begin{split}F = -\partial V = 
+<span class="eqno">(11)<a class="headerlink" href="#equation-force-t-v" title="Link to this equation">#</a></span>\[\begin{split}F = -\partial V = 
 -\begin{bmatrix}
 \partial_1 V  \\
 \partial_2 V  \\
@@ -744,27 +775,26 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 \end{bmatrix}\end{split}\]</div>
 <p>Momentum:</p>
 <div class="math notranslate nohighlight" id="equation-momentum-t-v">
-<span class="eqno">(12)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
+<span class="eqno">(13)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
 \begin{bmatrix}
 \partial_{\dot{x}} T \\
 \partial_{\dot{y}} T \\
 \partial_{\dot{z}} T \\
 \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-momentum-t-v">
-<span class="eqno">(12)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
+<span class="eqno">(13)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
 \begin{bmatrix}
 \partial_1 T  \\
 \partial_2 T  \\
 \partial_3 T  \\
 \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-momentum-t-v-dot">
-<span class="eqno">(13)<a class="headerlink" href="#equation-momentum-t-v-dot" title="Link to this equation">#</a></span>\[\begin{split}\dot{p} = \partial_t \, \partial T = \partial \dot{T} = 
+<span class="eqno">(14)<a class="headerlink" href="#equation-momentum-t-v-dot" title="Link to this equation">#</a></span>\[\begin{split}\dot{p} = \partial_t \, \partial T = \partial \dot{T} = 
 \begin{bmatrix}
 \partial_1 \dot{T} \\
 \partial_2 \dot{T}  \\
 \partial_3 \dot{T}  \\
 \end{bmatrix}\end{split}\]</div>
-</section>
 <section id="general-case">
 <h3>General Case<a class="headerlink" href="#general-case" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-general-case">
@@ -799,7 +829,7 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 </tr>
 <tr class="row-even"><td><p>Energy</p></td>
 <td><p><span class="math notranslate nohighlight">\(H(x, p) = \dot{x}(p) p - L(x, \dot{x}(p)) \)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(L(x, \dot{x}) = \dot{x} p(\dot{x})  - H(x, p(\dot{x}))\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(H(x, p(\dot{x})) + L(x, \dot{x}) = \dot{x} p(\dot{x})\)</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -885,8 +915,8 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 </table>
 </div>
 </section>
-<section id="constant-motion">
-<h3>Constant Motion<a class="headerlink" href="#constant-motion" title="Link to this heading">#</a></h3>
+<section id="no-acceleration">
+<h3>No Acceleration<a class="headerlink" href="#no-acceleration" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-constant-motion">
 <caption><span class="caption-number">Table 4 </span><span class="caption-text">Constant Motion</span><a class="headerlink" href="#tab-constant-motion" title="Link to this table">#</a></caption>
 <colgroup>
@@ -919,7 +949,7 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 </tr>
 <tr class="row-even"><td><p>Solution</p></td>
 <td><p><span class="math notranslate nohighlight">\(x(t) = vt\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(v = \text{const}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(v = \frac{B}{T}\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>Energy</p></td>
 <td><p><span class="math notranslate nohighlight">\(H(x, p) = \frac{p^2}{2m}\)</span></p></td>
@@ -928,6 +958,7 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 </tbody>
 </table>
 </div>
+<p>The solution is a constant motion from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(B\)</span>, and the velocity <span class="math notranslate nohighlight">\(v\)</span> is such that the particle arrives at <span class="math notranslate nohighlight">\(B\)</span> at time <span class="math notranslate nohighlight">\(T\)</span>.</p>
 </section>
 <section id="constant-acceleration">
 <h3>Constant Acceleration<a class="headerlink" href="#constant-acceleration" title="Link to this heading">#</a></h3>
@@ -962,8 +993,8 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 <td></td>
 </tr>
 <tr class="row-even"><td><p>Solution</p></td>
-<td><p><span class="math notranslate nohighlight">\(x(t) = \frac{1}{2} a \, t^2\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\dot{p} = F\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x(t) = - \frac{1}{2} a t^2 + c t\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(c = \frac{B}{T} + \frac{1}{2} aT\)</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>Energy</p></td>
 <td><p><span class="math notranslate nohighlight">\(H(x, p) = \frac{p^2}{2m} + amx\)</span></p></td>
@@ -972,6 +1003,32 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 </tbody>
 </table>
 </div>
+<p>Let us apply this result to a boat (or a swimmer, for example) starting on the left bank of a one-unit-wide river at point <span class="math notranslate nohighlight">\((0,0)\)</span>,
+and going to point <span class="math notranslate nohighlight">\(B = (1, b_2)\)</span> on the right bank. The current flows from top to bottom with a constant acceleration of <span class="math notranslate nohighlight">\(-a_2\)</span>.
+Moving a mass of <span class="math notranslate nohighlight">\(m\)</span> units upstream over a distance of <span class="math notranslate nohighlight">\(b_2\)</span> units requires an amount of work equal to <span class="math notranslate nohighlight">\(amb_2\)</span>.
+Everything happens in a plane, with coordinates <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
+<p>Setting <span class="math notranslate nohighlight">\(a = \begin{bmatrix}
+        0 \\
+        a_2
+    \end{bmatrix}\)</span>
+and <span class="math notranslate nohighlight">\(b = \begin{bmatrix}
+        1 \\
+        b_2
+    \end{bmatrix}\)</span>, we get, with <span class="math notranslate nohighlight">\(t \in [0, T]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;x_1(t) = \frac{t}{T} \\
+&amp;x_2(t) = -\frac{1}{2} a_2 t^2 + b_2 \frac{t}{T} + \frac{1}{2}T t\end{split}\]</div>
+<p>Expressing <span class="math notranslate nohighlight">\(t\)</span> in terms of <span class="math notranslate nohighlight">\(x_1\)</span> yields, with <span class="math notranslate nohighlight">\(x_1 \in [0, 1]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[x_2(x_1) = -\frac{1}{2} a_2 T^2 (x_1 - x_1^2) + b_2 x_1\]</div>
+<p>The <a class="reference internal" href="#boat-upstream.png"><span class="xref myst">figure</span></a> below shows the optimal trajectory upstream (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downstream (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(b_2=1, T = 1\)</span>.
+For <span class="math notranslate nohighlight">\(a_2=0\)</span> (no current) we get a straight line.</p>
+<figure class="align-center" id="id86">
+<img alt="../_images/boat-upstream.png" src="../_images/boat-upstream.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Crossing a River</span><a class="headerlink" href="#id86" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="hooke">
 <h3>Hooke<a class="headerlink" href="#hooke" title="Link to this heading">#</a></h3>
@@ -1060,20 +1117,6 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 </table>
 </div>
 </section>
-</section>
-<section id="conservation-of-momentum">
-<h2>Conservation of Momentum<a class="headerlink" href="#conservation-of-momentum" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\sum_{k=1}^n \dot {p_k} = \sum_{k=1}^n F_k\]</div>
-</section>
-<section id="conservation-of-information-gibbs-liouville">
-<h2>Conservation of Information, Gibbs-Liouville<a class="headerlink" href="#conservation-of-information-gibbs-liouville" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{split}\nabla \cdot 
-\begin{bmatrix}
-\dot{x} \\
-\dot{p}
-\end{bmatrix} = 0\end{split}\]</div>
 </section>
 <section id="a-note-on-trains-elevators-and-spaceships">
 <h2>A Note on Trains, Elevators, and Spaceships<a class="headerlink" href="#a-note-on-trains-elevators-and-spaceships" title="Link to this heading">#</a></h2>
@@ -1223,18 +1266,21 @@ on objects in motion than a thermometer has on temperature.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-greeks">The Greeks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-catalogue-of-lagrangians">A Catalogue of Lagrangians</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-case">General Case</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-v">T, V</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-lagrangian">Standard Lagrangian</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-motion">Constant Motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-acceleration">No Acceleration</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-acceleration">Constant Acceleration</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hooke">Hooke</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catenary">Catenary</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field">Magnetic Field</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-trains-elevators-and-spaceships">A Note on Trains, Elevators, and Spaceships</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>

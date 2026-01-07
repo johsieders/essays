@@ -36,8 +36,7 @@ trigonometry).
 In Newtonian physics, we study volumeless particles with positive mass that travel through space along a **trajectory** described 
 by a differentiable function $x: [0, T] \rightarrow \mathbb{R}^3$. The interval $[0, T]$
 can extend over microseconds or millennia, but is always finite. Starting at zero is just a notational convenience. 
-$x(t)$ is the position in space of the particle at time $t$, 
-$\dot{x}(t)$ its velocity. We write:
+$x(t)$ is the position in space of the particle at time $t$, $v(t) = \dot{x}(t)$ its velocity. We write:
 
 ```{math}
 x = \begin{bmatrix}
@@ -53,9 +52,10 @@ x = \begin{bmatrix}
 
 This is the standard case. There are variations: When the particle travels along a straight line, 
 we choose this direction as the basis vector, reducing $x$ to a vector of dimension one. 
-When the particle moves on a plane, $x$ is reduced to two dimensions.
-When we study two or more particles at a time, say two, $x$ becomes a vector of dimension six, and we 
-face a small notational challenge, for instance: 
+When the particle moves in a plane, $x$ is reduced to two dimensions.
+When we study two or more particles at a time, say two, $x$ becomes a vector of dimension two, four, or six.
+A vector of dimension six can represent six vectors of dimension one, three of two, or two of three.
+We face a small notational challenge, for instance: 
 
 ```{math}
 x^2 = \sum_{k=1}^6 x_k^2 = (x_{(1)})^2 + (x_{(2)})^2
@@ -86,12 +86,13 @@ The **Lagrangian** is any differentiable function
 \left\{
     \begin{array}{lr}
         \mathbb{R}^3 \times \mathbb{R}^3  \rightarrow \mathbb{R} \\
-        (x, y) \mapsto L(x, y)
+        (x, v) \mapsto L(x, v)
     \end{array}
 \right .
 ```
 
-that vanishes for large $x,y$: $L(x,y) = 0$ if $\min \{\lVert x \lVert, \lVert y \lVert \} > M$ for some large $M$. 
+that vanishes for large $x,v$: $L(x,v) = 0$ if $\min \{\lVert x \lVert, \lVert y \lVert \} > M$ for some large $M$.
+You can think of $M$ as the diameter of the universe. 
 The value $L(x,\dot{x})$ is meant to quantify
 the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
 The total mess along $x$ is a **functional** called the **action** and is defined by:
@@ -103,6 +104,10 @@ A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt
 
 A functional is a function that depends on another function, and a functional derivative is a derivative with respect
 to a function, see XXX. 
+
+The designations $v$ and $\dot{x}$ are almost interchangable. So, $\partial_{\dot{x}}$ and $\partial_{x}$ mean exactly the same:
+the partial derivative of $L$ with respect to the second variable.
+
 
 The term "mess" is deliberately vague. What happens is that physicists somehow find the correct Lagrangian,
 and then interpret it as the "mess", or deviation from a tranquil, steady state.
@@ -138,7 +143,7 @@ A trajectory $x$ is called a **stationary point** of a Lagrangian $L$ iff the fu
 :label: action-2
 \delta A[x] = 0 
 ```
-As there are no boundaries, all local extrema of $L$, and in particular all $L$-minimal trajectories $x$, are stationary.
+As there are no boundaries for $L$, all local extrema of $L$, and in particular all $L$-minimal trajectories $x$, are stationary.
 
 
 ````{prf:theorem} Euler-Lagrange
@@ -171,12 +176,15 @@ By definition of functional derivatives, we have
 ```{math}
 \delta A[x] = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0}
 ```
-for any differentiable function $h : \mathbb{R}^3 \to \mathbb{R}$. $A$ is differentiable in $x$ iff $\delta A[x]$
+for any differentiable function $h : \mathbb{R}^3 \to \mathbb{R}$ satisfying $h(0) = h(T) = 0$. 
+That's necessary because $x + h$ is supposed to fulfill the boundary conditions.
+
+$A$ is differentiable in $x$ iff $\delta A[x]$
 is independent of $h$. Writing $L$ for $L(x(t) + \epsilon h(t), \dot{x}(t) + \epsilon \dot{h}(t))$ and integrating by parts gives us:
 
 ```{math}
 &0= \partial_{\epsilon} A[x + \epsilon h] \\
-&= \int_0^T \partial_{\epsilon}L(x + \epsilon h, \dot{x} + \epsilon \dot{h}) \, dt \\
+&= \int_0^T \partial_{\epsilon} L \, dt \\
 &= \int_0^T \partial_x L\, h + \partial_{\dot{x}} L\, \dot{h} \, dt \\
 &= \partial_{\dot{x}} L \, h \vert_{t=0}^{t=T} + \int_0^T \partial_x L\, h - \partial_t \partial_{\dot{x}} L\, h \, dt
 ```
@@ -186,12 +194,12 @@ With $\epsilon = 0$ it follows:
 ```{math}
 :label: euler-lagrange-1
 &0 = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0} \\
-&=\partial_{\dot{x}} L(x, \dot{x}) \, h(t) \vert_{t=0}^{t=T} + 
-\int_0^T (\partial_x L(x,\dot{x}) - \partial_t \partial_{\dot{x}} L(x,\dot{x}))\, h \, dt
+&=\partial_{\dot{x}} L \, h(t) \vert_{t=0}^{t=T} + 
+\int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L)\, h \, dt
 ```
 
-The first term in {eq}`euler-lagrange-1` vanishes because we can choose $h$ such that $h(0) = h(T) = 0$.  
-The second term vanishes for every $h$:
+The first term in {eq}`euler-lagrange-1` vanishes because $h(0) = h(T) = 0$.  
+Therefore, for every $h$, the second term vanishes too:
 
 ```{math}
 \int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L) \, h \, dt = 0
@@ -201,7 +209,7 @@ This gives equation {eq}`euler-lagrange`. Note that
 ```{math}
 (g|h) = \int_0^T gh \, dt
 ```
-is a scalar product on $C([0,T])$. We are using the fact that $g = 0$ iff $(g, h) = 0$ for all $h$.
+is a scalar product on $C([0,T])$. We are using the fact that $g = 0$ iff $(g|h) = 0$ for all $h$.
 ````
 
 ````{prf:remark} On Lagrangians
@@ -341,8 +349,34 @@ Let $x
 ```
 ````
 
+### Conservation of Information, Gibbs-Liouville
+
+```{math}
+\nabla \cdot 
+\begin{bmatrix}
+\dot{x} \\
+\dot{p}
+\end{bmatrix} = 0
+```
+
+### Conservation of Momentum
+
+```{math}
+\sum_{k=1}^n \dot {p_k} = \sum_{k=1}^n F_k
+```
 
 
+
+## A Catalogue of Lagrangians
+
+We consider some important Lagrangians, starting from the simplest case of no acceleration and working up to the magnetic field.
+The border condition is always the same, with some $B \in \mathbb{R}^3$:
+
+```{math}
+:label: border-condition
+&x(0) = 0 \\
+&x(T) = B
+```
 
 ```{math}
 :label: force-t-v
@@ -413,7 +447,7 @@ p = \partial T =
   - $\dot{p} = F$
 * - Energy
   - $H(x, p) = \dot{x}(p) p - L(x, \dot{x}(p)) $
-  - $L(x, \dot{x}) = \dot{x} p(\dot{x})  - H(x, p(\dot{x}))$
+  - $H(x, p(\dot{x})) + L(x, \dot{x}) = \dot{x} p(\dot{x})$
 ```
 
 
@@ -472,7 +506,7 @@ p = \partial T =
   - $= \frac{1}{2}m\dot{x}^2 + V(x)$  
 ```
 
-### Constant Motion
+### No Acceleration
 
 ```{list-table} Constant Motion
 :header-rows: 1
@@ -496,11 +530,14 @@ p = \partial T =
   -
 * - Solution
   - $x(t) = vt$
-  - $v = \text{const}$
+  - $v = \frac{B}{T}$
 * - Energy
   - $H(x, p) = \frac{p^2}{2m}$
   - $= \frac{1}{2}m\dot{x}^2$
 ```
+
+The solution is a constant motion from $0$ to $B$, and the velocity $v$ is such that the particle arrives at $B$ at time $T$.
+
 
 ### Constant Acceleration
 
@@ -525,11 +562,48 @@ p = \partial T =
   - $\ddot{x} = -a$
   -
 * - Solution
-  - $x(t) = \frac{1}{2} a \, t^2$
-  - $\dot{p} = F$
+  - $x(t) = - \frac{1}{2} a t^2 + c t$
+  - $c = \frac{B}{T} + \frac{1}{2} aT$
 * - Energy
   - $H(x, p) = \frac{p^2}{2m} + amx$
   - $= \frac{1}{2}m\dot{x}^2 + amx$
+```
+
+
+Let us apply this result to a boat (or a swimmer, for example) starting on the left bank of a one-unit-wide river at point $(0,0)$, 
+and going to point $B = (1, b_2)$ on the right bank. The current flows from top to bottom with a constant acceleration of $-a_2$. 
+Moving a mass of $m$ units upstream over a distance of $b_2$ units requires an amount of work equal to $amb_2$.
+Everything happens in a plane, with coordinates $x_1$ and $x_2$. 
+
+Setting $a = \begin{bmatrix}
+        0 \\
+        a_2
+    \end{bmatrix}$
+ and $b = \begin{bmatrix}
+        1 \\
+        b_2
+    \end{bmatrix}$, we get, with $t \in [0, T]$:
+
+```{math}
+&x_1(t) = \frac{t}{T} \\
+&x_2(t) = -\frac{1}{2} a_2 t^2 + b_2 \frac{t}{T} + \frac{1}{2}T t
+```
+
+Expressing $t$ in terms of $x_1$ yields, with $x_1 \in [0, 1]$:
+
+```{math}
+x_2(x_1) = -\frac{1}{2} a_2 T^2 (x_1 - x_1^2) + b_2 x_1
+```
+
+The [figure](#boat-upstream.png) below shows the optimal trajectory upstream ($a_2$ positive) and downstream ($a_2$ negative), with $b_2=1, T = 1$.
+For $a_2=0$ (no current) we get a straight line.
+
+
+```{figure} boat-upstream.png
+:label: boat-upstream
+:align: center
+
+Crossing a River
 ```
 
 
@@ -593,24 +667,6 @@ p = \partial T =
   - $= \frac{1}{2}m\dot{x}^2$ 
 ```
 
-
-## Conservation of Momentum
-
-```{math}
-\sum_{k=1}^n \dot {p_k} = \sum_{k=1}^n F_k
-```
-
-
-
-## Conservation of Information, Gibbs-Liouville
-
-```{math}
-\nabla \cdot 
-\begin{bmatrix}
-\dot{x} \\
-\dot{p}
-\end{bmatrix} = 0
-```
 
 
 ## A Note on Trains, Elevators, and Spaceships
