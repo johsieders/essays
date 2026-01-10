@@ -464,8 +464,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-greeks">The Greeks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lie-algebra-poisson-brackets">Lie-Algebra, Poisson Brackets</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
 </ul>
@@ -523,7 +524,7 @@ trigonometry).</p></li>
 <section id="newton-s-world">
 <h2>Newton’s World<a class="headerlink" href="#newton-s-world" title="Link to this heading">#</a></h2>
 <p>In Newtonian physics, we study volumeless particles with positive mass that travel through space along a <strong>trajectory</strong> described
-by a differentiable function <span class="math notranslate nohighlight">\(x: [0, T] \rightarrow \mathbb{R}^3\)</span>. The interval <span class="math notranslate nohighlight">\([0, T]\)</span>
+by a differentiable function <span class="math notranslate nohighlight">\(x: \{0, T\} \rightarrow \mathbb{R}^3\)</span>. The interval <span class="math notranslate nohighlight">\(\{0, T\}\)</span>
 can extend over microseconds or millennia, but is always finite. Starting at zero is just a notational convenience.
 <span class="math notranslate nohighlight">\(x(t)\)</span> is the position in space of the particle at time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(v(t) = \dot{x}(t)\)</span> its velocity. We write:</p>
 <div class="math notranslate nohighlight">
@@ -567,22 +568,23 @@ most formulae remain valid regardless of the dimension of <span class="math notr
         (x, v) \mapsto L(x, v)
     \end{array}
 \right .\end{split}\]</div>
-<p>that vanishes for large <span class="math notranslate nohighlight">\(x,v\)</span>: <span class="math notranslate nohighlight">\(L(x,v) = 0\)</span> if <span class="math notranslate nohighlight">\(\min \{\lVert x \lVert, \lVert y \lVert \} &gt; M\)</span> for some large <span class="math notranslate nohighlight">\(M\)</span>.
-You can think of <span class="math notranslate nohighlight">\(M\)</span> as the diameter of the universe.
-The value <span class="math notranslate nohighlight">\(L(x,\dot{x})\)</span> is meant to quantify
+<p>that vanishes for large arguments: <span class="math notranslate nohighlight">\(L(x,v) = 0\)</span> if <span class="math notranslate nohighlight">\(\min \{\lVert x \lVert, \lVert v \lVert \} &gt; M\)</span> for some large <span class="math notranslate nohighlight">\(M\)</span>.
+Think of <span class="math notranslate nohighlight">\(M\)</span> as the diameter of the universe. From a mathematical point of view, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(v\)</span> are arbitrary functions.<br />
+The physicist would see <span class="math notranslate nohighlight">\(x\)</span> as the position and <span class="math notranslate nohighlight">\(v = \dot{x}\)</span> as the velocity of a moving particle.
+The symbols <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(\dot{x}\)</span> are almost interchangeable. So, <span class="math notranslate nohighlight">\(\partial_{\dot{x}}L\)</span> and <span class="math notranslate nohighlight">\(\partial_{v}L\)</span> mean exactly the same:
+the partial derivative of <span class="math notranslate nohighlight">\(L\)</span> with respect to the second variable.</p>
+<p>The value <span class="math notranslate nohighlight">\(L(x,\dot{x})\)</span> is meant to quantify
 the mess caused by a particle travelling at velocity <span class="math notranslate nohighlight">\(\dot{x}(t)\)</span> through point <span class="math notranslate nohighlight">\(x(t)\)</span>.
 The total mess along <span class="math notranslate nohighlight">\(x\)</span> is a <strong>functional</strong> called the <strong>action</strong> and is defined by:</p>
 <div class="math notranslate nohighlight" id="equation-action-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-action-1" title="Link to this equation">#</a></span>\[A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt \]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-action-1" title="Link to this equation">#</a></span>\[A\{x\} = \int_0^{T} L(x(t), \dot{x}(t)) \, dt \]</div>
 <p>A functional is a function that depends on another function, and a functional derivative is a derivative with respect
 to a function, see XXX.</p>
-<p>The designations <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(\dot{x}\)</span> are almost interchangable. So, <span class="math notranslate nohighlight">\(\partial_{\dot{x}}\)</span> and <span class="math notranslate nohighlight">\(\partial_{x}\)</span> mean exactly the same:
-the partial derivative of <span class="math notranslate nohighlight">\(L\)</span> with respect to the second variable.</p>
 <p>The term “mess” is deliberately vague. What happens is that physicists somehow find the correct Lagrangian,
 and then interpret it as the “mess”, or deviation from a tranquil, steady state.</p>
-<p>Consider a particle that travels from some point <span class="math notranslate nohighlight">\(a\)</span> to another point <span class="math notranslate nohighlight">\(b\)</span>.
+<p>Consider a particle that travels from <span class="math notranslate nohighlight">\(0\)</span> to some point <span class="math notranslate nohighlight">\(B\)</span>. Starting at <span class="math notranslate nohighlight">\(0\)</span> is again just a notational convenience.
 For any given Lagrangian <span class="math notranslate nohighlight">\(L\)</span>, we can seek trajectories <span class="math notranslate nohighlight">\(x\)</span> that minimize the action <span class="math notranslate nohighlight">\(A\)</span>
-subject to border conditions such as <span class="math notranslate nohighlight">\(x(0) = a\)</span>, <span class="math notranslate nohighlight">\(x(T) = b\)</span>.
+subject to boundary conditions such as <span class="math notranslate nohighlight">\(x(0) = 0\)</span>, <span class="math notranslate nohighlight">\(x(T) = B\)</span>.
 We call such an <span class="math notranslate nohighlight">\(x\)</span> minimal with respect to <span class="math notranslate nohighlight">\(L\)</span> or <strong><span class="math notranslate nohighlight">\(L\)</span>-minimal</strong>.</p>
 <p>A <strong>principle</strong> is something that has been observed for ages and is taken for granted without further proof.
 A famous example is the fact that the speed of light is the same for all observers.
@@ -600,11 +602,11 @@ It extends gently to the theories of relativity and quantum mechanics:
 The famous equation <span class="math notranslate nohighlight">\(E = mc^2\)</span> is a simple form of the relativistic version of Euler–Lagrange;
 the quantum mechanical version is known as the Schrödinger equation.</p>
 <p>A real number <span class="math notranslate nohighlight">\(x\)</span> is called a <strong>stationary point</strong> of a function <span class="math notranslate nohighlight">\(f\)</span> iff the derivative of <span class="math notranslate nohighlight">\(f\)</span> vanishes at <span class="math notranslate nohighlight">\(x\)</span>,
-see <a class="reference internal" href="../mathematics/calculus.html#thr-mean-value-differentiation">Theorem 32</a>.
+see <a class="reference internal" href="../mathematics/calculus.html#thr-mean-value-differentiation">Theorem 33</a>.
 All local extrema of <span class="math notranslate nohighlight">\(f\)</span> are either stationary or boundary points.</p>
 <p>A trajectory <span class="math notranslate nohighlight">\(x\)</span> is called a <strong>stationary point</strong> of a Lagrangian <span class="math notranslate nohighlight">\(L\)</span> iff the functional derivative of <span class="math notranslate nohighlight">\(A\)</span> vanishes at <span class="math notranslate nohighlight">\(x\)</span> :</p>
 <div class="math notranslate nohighlight" id="equation-action-2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-action-2" title="Link to this equation">#</a></span>\[\delta A[x] = 0 \]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-action-2" title="Link to this equation">#</a></span>\[\delta A\{x\} = 0 \]</div>
 <p>As there are no boundaries for <span class="math notranslate nohighlight">\(L\)</span>, all local extrema of <span class="math notranslate nohighlight">\(L\)</span>, and in particular all <span class="math notranslate nohighlight">\(L\)</span>-minimal trajectories <span class="math notranslate nohighlight">\(x\)</span>, are stationary.</p>
 <div class="proof theorem admonition" id="def-euler-lagrange">
 <p class="admonition-title"><span class="caption-number">Theorem 1 </span> (Euler-Lagrange)</p>
@@ -613,38 +615,42 @@ All local extrema of <span class="math notranslate nohighlight">\(f\)</span> are
 <strong>Euler-Lagrange equation</strong></p>
 <div class="math notranslate nohighlight" id="equation-euler-lagrange">
 <span id="el"></span><span class="eqno">(4)<a class="headerlink" href="#equation-euler-lagrange" title="Link to this equation">#</a></span>\[\partial_t \, \partial_{\dot{x}} L = \partial_x L\]</div>
-<p>This reads as <span class="math notranslate nohighlight">\(n\)</span> independent equalities</p>
+<p>subject to the boundary conditions:</p>
+<div class="math notranslate nohighlight" id="equation-euler-lagrange-boundary-conditions">
+<span id="bc"></span><span class="eqno">(5)<a class="headerlink" href="#equation-euler-lagrange-boundary-conditions" title="Link to this equation">#</a></span>\[\begin{split}&amp;x(0) = 0 \\
+&amp;x(T) = B\end{split}\]</div>
+<p>Equation <a class="reference internal" href="#equation-euler-lagrange">(4)</a> reads as <span class="math notranslate nohighlight">\(n\)</span> independent equalities:</p>
 <div class="math notranslate nohighlight" id="equation-euler-lagrange-idx">
-<span class="eqno">(5)<a class="headerlink" href="#equation-euler-lagrange-idx" title="Link to this equation">#</a></span>\[\partial_t \, \partial_{\dot{x_k}} L = \partial_{x_k} L\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-euler-lagrange-idx" title="Link to this equation">#</a></span>\[\partial_t \, \partial_{\dot{x_k}} L = \partial_{x_k} L\]</div>
 <p>for any dimension <span class="math notranslate nohighlight">\(n\)</span> of <span class="math notranslate nohighlight">\(x\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We must write out the equation <a class="reference internal" href="#equation-action-2">(3)</a>.
 By definition of functional derivatives, we have</p>
 <div class="math notranslate nohighlight">
-\[\delta A[x] = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0}\]</div>
+\[\delta A\{x\} = \partial_{\epsilon} A\{x + \epsilon h\} \vert_{\epsilon=0}\]</div>
 <p>for any differentiable function <span class="math notranslate nohighlight">\(h : \mathbb{R}^3 \to \mathbb{R}\)</span> satisfying <span class="math notranslate nohighlight">\(h(0) = h(T) = 0\)</span>.
 That’s necessary because <span class="math notranslate nohighlight">\(x + h\)</span> is supposed to fulfill the boundary conditions.</p>
-<p><span class="math notranslate nohighlight">\(A\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span> iff <span class="math notranslate nohighlight">\(\delta A[x]\)</span>
+<p><span class="math notranslate nohighlight">\(A\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span> iff <span class="math notranslate nohighlight">\(\delta A\{x\}\)</span>
 is independent of <span class="math notranslate nohighlight">\(h\)</span>. Writing <span class="math notranslate nohighlight">\(L\)</span> for <span class="math notranslate nohighlight">\(L(x(t) + \epsilon h(t), \dot{x}(t) + \epsilon \dot{h}(t))\)</span> and integrating by parts gives us:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;0= \partial_{\epsilon} A[x + \epsilon h] \\
+\[\begin{split}&amp;\partial_{\epsilon} A\{x + \epsilon h\} \\
 &amp;= \int_0^T \partial_{\epsilon} L \, dt \\
 &amp;= \int_0^T \partial_x L\, h + \partial_{\dot{x}} L\, \dot{h} \, dt \\
 &amp;= \partial_{\dot{x}} L \, h \vert_{t=0}^{t=T} + \int_0^T \partial_x L\, h - \partial_t \partial_{\dot{x}} L\, h \, dt\end{split}\]</div>
-<p>With <span class="math notranslate nohighlight">\(\epsilon = 0\)</span> it follows:</p>
+<p>With <span class="math notranslate nohighlight">\(\epsilon = 0\)</span>  and writing <span class="math notranslate nohighlight">\(L\)</span> for <span class="math notranslate nohighlight">\(L(x(t), \dot{x}(t))\)</span> it follows:</p>
 <div class="math notranslate nohighlight" id="equation-euler-lagrange-1">
-<span class="eqno">(6)<a class="headerlink" href="#equation-euler-lagrange-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;0 = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0} \\
+<span class="eqno">(7)<a class="headerlink" href="#equation-euler-lagrange-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;0 = \partial_{\epsilon} A\{x + \epsilon h\} \vert_{\epsilon=0} \\
 &amp;=\partial_{\dot{x}} L \, h(t) \vert_{t=0}^{t=T} + 
 \int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L)\, h \, dt\end{split}\]</div>
-<p>The first term in <a class="reference internal" href="#equation-euler-lagrange-1">(6)</a> vanishes because <span class="math notranslate nohighlight">\(h(0) = h(T) = 0\)</span>.<br />
+<p>The first term in <a class="reference internal" href="#equation-euler-lagrange-1">(7)</a> vanishes because <span class="math notranslate nohighlight">\(h(0) = h(T) = 0\)</span>.<br />
 Therefore, for every <span class="math notranslate nohighlight">\(h\)</span>, the second term vanishes too:</p>
 <div class="math notranslate nohighlight">
 \[\int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L) \, h \, dt = 0\]</div>
 <p>This gives equation <a class="reference internal" href="#equation-euler-lagrange">(4)</a>. Note that</p>
 <div class="math notranslate nohighlight">
 \[(g|h) = \int_0^T gh \, dt\]</div>
-<p>is a scalar product on <span class="math notranslate nohighlight">\(C([0,T])\)</span>. We are using the fact that <span class="math notranslate nohighlight">\(g = 0\)</span> iff <span class="math notranslate nohighlight">\((g|h) = 0\)</span> for all <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>is a scalar product on <span class="math notranslate nohighlight">\(C(\{0,T\})\)</span>. We are using the fact that <span class="math notranslate nohighlight">\(g = 0\)</span> iff <span class="math notranslate nohighlight">\((g|h) = 0\)</span> for all <span class="math notranslate nohighlight">\(h\)</span>.</p>
 </div>
 <div class="proof remark admonition" id="rem-lagrangian">
 <p class="admonition-title"><span class="caption-number">Remark 1 </span> (On Lagrangians)</p>
@@ -665,12 +671,10 @@ that your solution is indeed <span class="math notranslate nohighlight">\(L\)</s
 <section class="definition-content" id="proof-content">
 <p>For a given Lagrangian <span class="math notranslate nohighlight">\(L\)</span>, the quantities <strong>force</strong> and <strong>momentum</strong> are defined by:</p>
 <div class="math notranslate nohighlight" id="equation-force-momentum">
-<span class="eqno">(7)<a class="headerlink" href="#equation-force-momentum" title="Link to this equation">#</a></span>\[\begin{split}&amp; p = \frac{\partial L}{\partial \dot{x}} \\
-\\
-&amp; F = \frac{\partial L}{\partial x}\end{split}\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-force-momentum" title="Link to this equation">#</a></span>\[p = \frac{\partial L}{\partial \dot{x}} \quad F = \frac{\partial L}{\partial x}\]</div>
 <p>which reduces the Euler-Lagrange equation to:</p>
 <div class="math notranslate nohighlight" id="equation-euler-lagrange-short">
-<span class="eqno">(8)<a class="headerlink" href="#equation-euler-lagrange-short" title="Link to this equation">#</a></span>\[\dot {p} = F\]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-euler-lagrange-short" title="Link to this equation">#</a></span>\[\dot {p} = F\]</div>
 </section>
 </div><p>If you have an idea of force and momentum, you get the Lagrangian by integration.
 If you have an idea of the Lagrangian, you get force and momentum by differentiation,
@@ -699,21 +703,69 @@ by the community of physicists. But there will never be a proof in any mathemati
 <p>Here is our roadmap: We are going to present some key Lagrangians that cover systems ranging from free fall to magnetic fields.
 Each time, we will employ the same procedure: We plug the Lagrangian into the Euler-Lagrange equation,
 solve it, and interpret the result.</p>
+</section>
 <section id="hamilton-conservation-of-energy">
-<h3>Hamilton, Conservation of Energy<a class="headerlink" href="#hamilton-conservation-of-energy" title="Link to this heading">#</a></h3>
-<div class="proof definition admonition" id="def-poisson-hamiltonian">
-<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Poisson Brackets and Hamiltonians)</p>
+<h2>Hamilton, Conservation of Energy<a class="headerlink" href="#hamilton-conservation-of-energy" title="Link to this heading">#</a></h2>
+<section id="lie-algebra-poisson-brackets">
+<h3>Lie-Algebra, Poisson Brackets<a class="headerlink" href="#lie-algebra-poisson-brackets" title="Link to this heading">#</a></h3>
+<div class="proof definition admonition" id="def-lie-algebra">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Lie Algebra)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (or any other field).
+Let <span class="math notranslate nohighlight">\(\{\cdot, \cdot\}\)</span> be a mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\{\cdot, \cdot\} : 
+\left\{
+    \begin{array}{lr}
+        V \times V \to V \\
+        A, B \mapsto \{A, B\}
+    \end{array}
+\right .\end{split}\]</div>
+<p>that fulfills th following conditions for every <span class="math notranslate nohighlight">\(A, B, C \in V\)</span>:</p>
+<p>(i) <span class="math notranslate nohighlight">\(\{\cdot, \cdot\}\)</span> is bilinear.</p>
+<p>(ii) <span class="math notranslate nohighlight">\(\{A, A\} = 0\)</span></p>
+<p>(iii) The Jacobi identity holds:</p>
+<div class="math notranslate nohighlight" id="equation-equ-jacobi">
+<span class="eqno">(10)<a class="headerlink" href="#equation-equ-jacobi" title="Link to this equation">#</a></span>\[\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} = 0\]</div>
+<p>Then <span class="math notranslate nohighlight">\((V, \{\cdot, \cdot\})\)</span> is called a <strong>Lie-Algebra</strong>.</p>
+</section>
+</div><p>A frequent example is the vector space of square matrices with the commutator <span class="math notranslate nohighlight">\(\{A, B\} = AB - BA\)</span> as bilinear mapping.
+Conditions (i), (ii), and (iii) obviously hold. Another important example is Poisson brackets, to which we now turn.</p>
+<div class="proof definition admonition" id="def-poisson-brackets">
+<p class="admonition-title"><span class="caption-number">Definition 4 </span> (Poisson Brackets)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A, B\)</span> be differentiable, real-valued functions of two variables <span class="math notranslate nohighlight">\(x, p\)</span> defined on <span class="math notranslate nohighlight">\(\mathbb{R}^n \times \mathbb{R}^n\)</span>.
+The <strong>Poisson brackets</strong> are defined by:</p>
+<div class="math notranslate nohighlight" id="equation-equ-poisson-brackets">
+<span class="eqno">(11)<a class="headerlink" href="#equation-equ-poisson-brackets" title="Link to this equation">#</a></span>\[\begin{split}\{A, B\} &amp;= \partial_x A \, \partial_p B - \partial_p A \, \partial_x B \\
+&amp;= \sum_{k=1}^n \partial_{x_k} A \, \partial_{p_k} B - \partial_{p_k} A \, \partial_{x_k} B\end{split}\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thr-poisson-brackets">
+<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Properties of Poisson Brackets)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(V = C^1(\mathbb{R}^n)\)</span>. Then <span class="math notranslate nohighlight">\((V, \{\cdot, \cdot\})\)</span> is a Lie algebra.</p>
+<p><strong>(b)</strong> The following equations hold for any <span class="math notranslate nohighlight">\(A \in V\)</span>, and <span class="math notranslate nohighlight">\(x, p \in \mathbb{R}^n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\{A, x\} = -\partial_p A \\
+&amp;\{A, p\} = \partial_x A\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\{x, p\} = \begin{bmatrix}
+                &amp; \vdots           \\
+        \cdots  &amp; x_i p_j  &amp;\cdots \\
+                &amp; \vdots  
+    \end{bmatrix}_{i, j = 1, \ldots, n}\end{split}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only show the Jacobi equation <a class="reference internal" href="#equation-equ-jacobi">(10)</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} \\
+&amp;= \end{split}\]</div>
+</div>
+<div class="proof definition admonition" id="def-hamilton">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span> (Hamilton)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A, B, H\)</span> be differentiable, real-valued functions of two variables <span class="math notranslate nohighlight">\(x, p\)</span> defined on <span class="math notranslate nohighlight">\(\mathbb{R}^n \times \mathbb{R}^n\)</span>.
 The dimension <span class="math notranslate nohighlight">\(n\)</span> is often three (that’s one particle), sometimes more.</p>
-<p><strong>(a)</strong> <strong>Poisson brackets</strong> are defined by:</p>
-<div class="math notranslate nohighlight">
-\[\{A, B\} = \partial_x A \, \partial_p B - \partial_p A \, \partial_x B\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(\partial_x A = \begin{bmatrix}
-        \partial_1 A \\
-        \partial_2 A \\
-        \partial_3 A
-    \end{bmatrix}\)</span>, so <span class="math notranslate nohighlight">\(\partial_x A\)</span>, <span class="math notranslate nohighlight">\(\partial_p A, \ldots\)</span> are vectors, and <span class="math notranslate nohighlight">\(\{A, B\}\)</span> is a scalar.</p>
 <p><strong>(b)</strong> A function <span class="math notranslate nohighlight">\(H\)</span> is called <strong>Hamiltonian</strong>, iff</p>
 <div class="math notranslate nohighlight">
 \[\partial_x H = - \dot{p} \text{ and } \partial_p H = \dot{x}\]</div>
@@ -725,16 +777,16 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 \[\begin{split}\{\cdot, H\} = \partial_t\\\end{split}\]</div>
 </section>
 </div><div class="proof theorem admonition" id="def-hamiltonian-energy">
-<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Hamiltonian, Energy)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 3 </span> (Hamiltonian, Energy)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(H\)</span> be defined by;</p>
 <div class="math notranslate nohighlight">
 \[H(x, p) + L(x, \dot{x}) = p \, \dot{x}\]</div>
 <p>or:</p>
 <div class="math notranslate nohighlight" id="equation-def-energy">
-<span class="eqno">(9)<a class="headerlink" href="#equation-def-energy" title="Link to this equation">#</a></span>\[H(x, p) = p \, \dot{x} - L(x, \dot{x})\]</div>
+<span class="eqno">(12)<a class="headerlink" href="#equation-def-energy" title="Link to this equation">#</a></span>\[H(x, p) = p \, \dot{x} - L(x, \dot{x})\]</div>
 <p>Then <span class="math notranslate nohighlight">\(H\)</span> is a Hamiltonian iff <span class="math notranslate nohighlight">\(L\)</span> is stationary, that is, it fulfills Euler-Lafrange.</p>
-<p>The function <span class="math notranslate nohighlight">\(H\)</span> defined by <a class="reference internal" href="#equation-def-energy">(9)</a> is called the <strong>Hamiltonian</strong> of <span class="math notranslate nohighlight">\(L\)</span> or the <strong>energy</strong> <span class="math notranslate nohighlight">\(E\)</span> of <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<p>The function <span class="math notranslate nohighlight">\(H\)</span> defined by <a class="reference internal" href="#equation-def-energy">(12)</a> is called the <strong>Hamiltonian</strong> of <span class="math notranslate nohighlight">\(L\)</span> or the <strong>energy</strong> <span class="math notranslate nohighlight">\(E\)</span> of <span class="math notranslate nohighlight">\(L\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let $x</p>
@@ -762,12 +814,12 @@ The dimension <span class="math notranslate nohighlight">\(n\)</span> is often t
 <section id="a-catalogue-of-lagrangians">
 <h2>A Catalogue of Lagrangians<a class="headerlink" href="#a-catalogue-of-lagrangians" title="Link to this heading">#</a></h2>
 <p>We consider some important Lagrangians, starting from the simplest case of no acceleration and working up to the magnetic field.
-The border condition is always the same, with some <span class="math notranslate nohighlight">\(B \in \mathbb{R}^3\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-border-condition">
-<span class="eqno">(10)<a class="headerlink" href="#equation-border-condition" title="Link to this equation">#</a></span>\[\begin{split}&amp;x(0) = 0 \\
+The boundary condition is always the same, with some <span class="math notranslate nohighlight">\(B \in \mathbb{R}^3\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-boundary-condition">
+<span class="eqno">(13)<a class="headerlink" href="#equation-boundary-condition" title="Link to this equation">#</a></span>\[\begin{split}&amp;x(0) = 0 \\
 &amp;x(T) = B\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-force-t-v">
-<span class="eqno">(11)<a class="headerlink" href="#equation-force-t-v" title="Link to this equation">#</a></span>\[\begin{split}F = -\partial V = 
+<span class="eqno">(14)<a class="headerlink" href="#equation-force-t-v" title="Link to this equation">#</a></span>\[\begin{split}F = -\partial V = 
 -\begin{bmatrix}
 \partial_1 V  \\
 \partial_2 V  \\
@@ -775,21 +827,21 @@ The border condition is always the same, with some <span class="math notranslate
 \end{bmatrix}\end{split}\]</div>
 <p>Momentum:</p>
 <div class="math notranslate nohighlight" id="equation-momentum-t-v">
-<span class="eqno">(13)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
+<span class="eqno">(16)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
 \begin{bmatrix}
 \partial_{\dot{x}} T \\
 \partial_{\dot{y}} T \\
 \partial_{\dot{z}} T \\
 \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-momentum-t-v">
-<span class="eqno">(13)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
+<span class="eqno">(16)<a class="headerlink" href="#equation-momentum-t-v" title="Link to this equation">#</a></span>\[\begin{split}p = \partial T = 
 \begin{bmatrix}
 \partial_1 T  \\
 \partial_2 T  \\
 \partial_3 T  \\
 \end{bmatrix}\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-momentum-t-v-dot">
-<span class="eqno">(14)<a class="headerlink" href="#equation-momentum-t-v-dot" title="Link to this equation">#</a></span>\[\begin{split}\dot{p} = \partial_t \, \partial T = \partial \dot{T} = 
+<span class="eqno">(17)<a class="headerlink" href="#equation-momentum-t-v-dot" title="Link to this equation">#</a></span>\[\begin{split}\dot{p} = \partial_t \, \partial T = \partial \dot{T} = 
 \begin{bmatrix}
 \partial_1 \dot{T} \\
 \partial_2 \dot{T}  \\
@@ -1013,16 +1065,16 @@ Everything happens in a plane, with coordinates <span class="math notranslate no
 and <span class="math notranslate nohighlight">\(B = \begin{bmatrix}
         1 \\
         1
-    \end{bmatrix}\)</span>, we get, with <span class="math notranslate nohighlight">\(t \in [0, 1]\)</span>:</p>
+    \end{bmatrix}\)</span>, we get, with <span class="math notranslate nohighlight">\(t \in \{0, 1\}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;x_1(t) = t \\
 &amp;x_2(t) = \frac{1}{2} a_2 (t - t^2) + t\end{split}\]</div>
 <p>We notice that:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;\dot{x_1}(t) = 1 \\
-&amp;\dot{x_2}(t) = -a_2 t + \frac{3}{2}\end{split}\]</div>
-<p>The speed along <span class="math notranslate nohighlight">\(x_1\)</span> is constant, while the speed along <span class="math notranslate nohighlight">\(x_2\)</span> decreases at a rate of <span class="math notranslate nohighlight">\(a_2\)</span>.
-The <a class="reference internal" href="#boat-upstream.png"><span class="xref myst">figure</span></a> below shows the optimal trajectory upwards (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downwards (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(T = 1\)</span>.
+&amp;\dot{x_2}(t) = -a_2 t + \frac{a_2 + 2}{2}\end{split}\]</div>
+<p>The horizontal speed is constant. The rocket climbs until <span class="math notranslate nohighlight">\(t_0 = \frac{a_2 + 2}{2 a_2}\)</span> and then descends.
+The {figure}(#boat-upstream.png) below shows the optimal trajectory upwards (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downwards (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(T = 1\)</span>.
 For <span class="math notranslate nohighlight">\(a_2=0\)</span> we get a straight line.</p>
 <figure class="align-center" id="id86">
 <img alt="../_images/overshooting.png" src="../_images/overshooting.png" />
@@ -1225,6 +1277,13 @@ The principle of least action produces this result because:</p>
 </ol>
 <p>The paradox: While a straight line from (0,0) to (1,1) is the shortest path, it’s not the path of least action when fighting a constant opposing force. The physics demands this counterintuitive parabolic trajectory.
 This is analogous to why projectiles follow parabolic paths under gravity - nature optimizes action, not distance.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial_x A = \begin{bmatrix}
+        \partial_{x_1} A_1 &amp; \partial_{x_1} A_2  &amp;\cdots &amp;\partial_{x_1} A_n \\
+        \partial_{x_2} A_1 &amp; \partial_{x_2} A_2  &amp;\cdots &amp;\partial_{x_2} A_n \\
+        \vdots &amp;\vdots &amp; &amp;\vdots \\
+        \partial_{x_n} A_1 &amp; \partial_{x_n} A_2  &amp;\cdots &amp;\partial_{x_n} A_n 
+    \end{bmatrix}\end{split}\]</div>
 </section>
 </section>
 
@@ -1293,8 +1352,9 @@ This is analogous to why projectiles follow parabolic paths under gravity - natu
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-greeks">The Greeks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lie-algebra-poisson-brackets">Lie-Algebra, Poisson Brackets</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-information-gibbs-liouville">Conservation of Information, Gibbs-Liouville</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
 </ul>

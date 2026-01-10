@@ -422,13 +422,15 @@ document.write(`
    <a href="#cap-def-diophantine"><strong>def-diophantine</strong></a> | 
    <a href="#cap-def-euler-lagrange"><strong>def-euler-lagrange</strong></a> | 
    <a href="#cap-def-force-momentum"><strong>def-force-momentum</strong></a> | 
+   <a href="#cap-def-hamilton"><strong>def-hamilton</strong></a> | 
    <a href="#cap-def-hamiltonian-energy"><strong>def-hamiltonian-energy</strong></a> | 
    <a href="#cap-def-infinity"><strong>def-infinity</strong></a> | 
    <a href="#cap-def-integer-division"><strong>def-integer-division</strong></a> | 
    <a href="#cap-def-least-action"><strong>def-least-action</strong></a> | 
+   <a href="#cap-def-lie-algebra"><strong>def-lie-algebra</strong></a> | 
    <a href="#cap-def-module"><strong>def-module</strong></a> | 
    <a href="#cap-def-peano-axioms"><strong>def-peano-axioms</strong></a> | 
-   <a href="#cap-def-poisson-hamiltonian"><strong>def-poisson-hamiltonian</strong></a> | 
+   <a href="#cap-def-poisson-brackets"><strong>def-poisson-brackets</strong></a> | 
    <a href="#cap-def-riemann-integrals-sums"><strong>def-riemann-integrals-sums</strong></a> | 
    <a href="#cap-def-step-functions"><strong>def-step-functions</strong></a> | 
    <a href="#cap-def-sup-norm"><strong>def-sup-norm</strong></a> | 
@@ -445,6 +447,7 @@ document.write(`
    <a href="#cap-rem-carmichael"><strong>rem-carmichael</strong></a> | 
    <a href="#cap-rem-continuum-hypothesis"><strong>rem-continuum-hypothesis</strong></a> | 
    <a href="#cap-rem-counterexample"><strong>rem-counterexample</strong></a> | 
+   <a href="#cap-rem-dx-calculus"><strong>rem-dx-calculus</strong></a> | 
    <a href="#cap-rem-lagrangian"><strong>rem-lagrangian</strong></a> | 
    <a href="#cap-rem-lebesgue-criterion"><strong>rem-lebesgue-criterion</strong></a> | 
    <a href="#cap-rem-sup-norm"><strong>rem-sup-norm</strong></a> | 
@@ -469,6 +472,7 @@ document.write(`
    <a href="#cap-thr-integer-division"><strong>thr-integer-division</strong></a> | 
    <a href="#cap-thr-integration-rules"><strong>thr-integration-rules</strong></a> | 
    <a href="#cap-thr-intermediate-value"><strong>thr-intermediate-value</strong></a> | 
+   <a href="#cap-thr-legendre"><strong>thr-legendre</strong></a> | 
    <a href="#cap-thr-limit-differentiable-functions"><strong>thr-limit-differentiable-functions</strong></a> | 
    <a href="#cap-thr-limit-riemann-integrable"><strong>thr-limit-riemann-integrable</strong></a> | 
    <a href="#cap-thr-main-theorem-calculus"><strong>thr-main-theorem-calculus</strong></a> | 
@@ -476,6 +480,7 @@ document.write(`
    <a href="#cap-thr-mean-value-integration"><strong>thr-mean-value-integration</strong></a> | 
    <a href="#cap-thr-modules"><strong>thr-modules</strong></a> | 
    <a href="#cap-thr-nested-intervals"><strong>thr-nested-intervals</strong></a> | 
+   <a href="#cap-thr-poisson-brackets"><strong>thr-poisson-brackets</strong></a> | 
    <a href="#cap-thr-properties-derivatives"><strong>thr-properties-derivatives</strong></a> | 
    <a href="#cap-thr-properties-riemann"><strong>thr-properties-riemann</strong></a> | 
    <a href="#cap-thr-rationals-reals"><strong>thr-rationals-reals</strong></a> | 
@@ -601,6 +606,14 @@ document.write(`
        <a href="physics/newton.html#def-force-momentum"><code class="xref">def-force-momentum</code></a> <em>(physics/newton)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-hamilton"><td></td><td>
+       <strong>def-hamilton</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="physics/newton.html#def-hamilton"><code class="xref">def-hamilton</code></a> <em>(physics/newton)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-hamiltonian-energy"><td></td><td>
        <strong>def-hamiltonian-energy</strong></td><td></td></tr>
      <tr>
@@ -633,6 +646,14 @@ document.write(`
        <a href="physics/newton.html#def-least-action"><code class="xref">def-least-action</code></a> <em>(physics/newton)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-lie-algebra"><td></td><td>
+       <strong>def-lie-algebra</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="physics/newton.html#def-lie-algebra"><code class="xref">def-lie-algebra</code></a> <em>(physics/newton)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-module"><td></td><td>
        <strong>def-module</strong></td><td></td></tr>
      <tr>
@@ -649,12 +670,12 @@ document.write(`
        <a href="mathematics/numbers.html#def-peano-axioms"><code class="xref">def-peano-axioms</code></a> <em>(mathematics/numbers)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def-poisson-hamiltonian"><td></td><td>
-       <strong>def-poisson-hamiltonian</strong></td><td></td></tr>
+     <tr class="cap" id="cap-def-poisson-brackets"><td></td><td>
+       <strong>def-poisson-brackets</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="physics/newton.html#def-poisson-hamiltonian"><code class="xref">def-poisson-hamiltonian</code></a> <em>(physics/newton)</em></td><td>
+       <a href="physics/newton.html#def-poisson-brackets"><code class="xref">def-poisson-brackets</code></a> <em>(physics/newton)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-riemann-integrals-sums"><td></td><td>
@@ -783,6 +804,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/calculus.html#rem-counterexample"><code class="xref">rem-counterexample</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>remark</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-rem-dx-calculus"><td></td><td>
+       <strong>rem-dx-calculus</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#rem-dx-calculus"><code class="xref">rem-dx-calculus</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-lagrangian"><td></td><td>
@@ -977,6 +1006,14 @@ document.write(`
        <a href="mathematics/calculus.html#thr-intermediate-value"><code class="xref">thr-intermediate-value</code></a> <em>(mathematics/calculus)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-legendre"><td></td><td>
+       <strong>thr-legendre</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/calculus.html#thr-legendre"><code class="xref">thr-legendre</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-limit-differentiable-functions"><td></td><td>
        <strong>thr-limit-differentiable-functions</strong></td><td></td></tr>
      <tr>
@@ -1031,6 +1068,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/calculus.html#thr-nested-intervals"><code class="xref">thr-nested-intervals</code></a> <em>(mathematics/calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-poisson-brackets"><td></td><td>
+       <strong>thr-poisson-brackets</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="physics/newton.html#thr-poisson-brackets"><code class="xref">thr-poisson-brackets</code></a> <em>(physics/newton)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-properties-derivatives"><td></td><td>
