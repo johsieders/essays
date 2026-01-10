@@ -1451,8 +1451,16 @@ Let $f, g \in C^1([a,b])$. Then
 Let $f \in C^1([a,b])$ and $g \in C^1([g^{-1}(a), g^{-1}(b)])$ with $g' \neq 0$. Then
 
 ```{math}
-\int^b_a f(y) \, dy = \int^{g^{-1}(b)}_{g^{-1}(a)} f(g(x))\,g'(x) \, dx
+:label: substitution-1
+\int_a^b f(g(x))\,g'(x) \, dx = \int_{g(a)}^{g(b)} f(y) \, dy 
 ```
+and equivalently with $u = g(a), v = g(b)$:
+
+```{math}
+:label: substitution-2
+\int_u^v f(y) \, dy = \int^{g^{-1}(v)}_{g^{-1}(u)} f(g(x))\,g'(x) \, dx
+```
+
 ````
 
 ````{prf:proof} 
@@ -1475,15 +1483,48 @@ f \, g \vert^b_a = \int_a^b (fg)'(x) \, dx  = \int_a^b f'(x)g(x) \, dx  + \int_a
 and with {prf:ref}`thr-main-theorem-calculus` we conclude:
 
 ```{math}
-&f \circ g \vert_u^v  = \int_{u}^{v} (f \circ g)'(x) \, dx = \int_u^v f'(g(x))g'(x) \, dx \\
-                     &= f(g(v)) - f(g(u)) = \int_{g(u)}^{g(v)} f'(y) \, dy 
+&f \circ g \vert_a^b  = \int_{a}^{b} (f \circ g)'(x) \, dx = \int_a^b f'(g(x))g'(x) \, dx \\
+                     &= f(g(a)) - f(g(b)) = \int_{g(a)}^{g(b)} f'(y) \, dy 
 ```
-Setting $a = g(u), b = g(v)$ gives us:
+
+````
+
+````{prf:remark} dx Calculus
+:label: rem-dx-calculus
+
+The substitution rules {eq}`substitution-1` and {eq}`substitution-2`  can be memorized as follows:
 
 ```{math}
-\int_a^b f'(y) \, dy  = \int_{g^{-1}(a)}^{g^{-1}(b)} f'(g(x))g'(x) \, dx
+:label: substitution-3
+&y = g(x) \\
+& \Rightarrow \frac{dy}{dx} = \frac{dg}{dx} = g'(x) \\
+& \Rightarrow dy = g'(x) \, dy
 ```
+You still have to keep track of the integration bounds.
+````
 
+
+````{prf:theorem} Legendre Substitution
+:label: thr-legendre
+Let $f \in C^1([0,x_0])$ with $f(0) = 0$ and $f' \neq 0$. Then the Legendre equation holds:
+
+```{math}
+:label: eq-legendre
+\int_0^{x_0} f(x) \, dx + \int_0^{y_0} f^{-1}(y) \, dy = x_0 y_0
+```
+````
+
+
+````{prf:proof} 
+
+We apply equation {eq}`substitution-2` and integrate by parts:
+
+```{math}
+\int_0^{y_0} f^{-1}(y) \, dy
+&=\int_0^{f^{-1}(y_0)} x f'(x) \, dx \\
+&= x f(x) \vert_0^{x_0} - \int_0^{x_0} f(x) dx \\
+&=x_0 y_0 - \int_0^{x_0} f(x) dx
+```
 
 ````
 

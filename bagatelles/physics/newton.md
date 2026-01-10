@@ -34,7 +34,7 @@ trigonometry).
 ## Newton's World
 
 In Newtonian physics, we study volumeless particles with positive mass that travel through space along a **trajectory** described 
-by a differentiable function $x: [0, T] \rightarrow \mathbb{R}^3$. The interval $[0, T]$
+by a differentiable function $x: \{0, T\} \rightarrow \mathbb{R}^3$. The interval $\{0, T\}$
 can extend over microseconds or millennia, but is always finite. Starting at zero is just a notational convenience. 
 $x(t)$ is the position in space of the particle at time $t$, $v(t) = \dot{x}(t)$ its velocity. We write:
 
@@ -103,7 +103,7 @@ The total mess along $x$ is a **functional** called the **action** and is define
 
 ```{math}
 :label: action-1
-A[x] = \int_0^{T} L(x(t), \dot{x}(t)) \, dt 
+A\{x\} = \int_0^{T} L(x(t), \dot{x}(t)) \, dt 
 ```
 
 A functional is a function that depends on another function, and a functional derivative is a derivative with respect
@@ -141,7 +141,7 @@ A trajectory $x$ is called a **stationary point** of a Lagrangian $L$ iff the fu
 
 ```{math}
 :label: action-2
-\delta A[x] = 0 
+\delta A\{x\} = 0 
 ```
 As there are no boundaries for $L$, all local extrema of $L$, and in particular all $L$-minimal trajectories $x$, are stationary.
 
@@ -183,16 +183,16 @@ We must write out the equation {eq}`action-2`.
 By definition of functional derivatives, we have
 
 ```{math}
-\delta A[x] = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0}
+\delta A\{x\} = \partial_{\epsilon} A\{x + \epsilon h\} \vert_{\epsilon=0}
 ```
 for any differentiable function $h : \mathbb{R}^3 \to \mathbb{R}$ satisfying $h(0) = h(T) = 0$. 
 That's necessary because $x + h$ is supposed to fulfill the boundary conditions.
 
-$A$ is differentiable in $x$ iff $\delta A[x]$
+$A$ is differentiable in $x$ iff $\delta A\{x\}$
 is independent of $h$. Writing $L$ for $L(x(t) + \epsilon h(t), \dot{x}(t) + \epsilon \dot{h}(t))$ and integrating by parts gives us:
 
 ```{math}
-&\partial_{\epsilon} A[x + \epsilon h] \\
+&\partial_{\epsilon} A\{x + \epsilon h\} \\
 &= \int_0^T \partial_{\epsilon} L \, dt \\
 &= \int_0^T \partial_x L\, h + \partial_{\dot{x}} L\, \dot{h} \, dt \\
 &= \partial_{\dot{x}} L \, h \vert_{t=0}^{t=T} + \int_0^T \partial_x L\, h - \partial_t \partial_{\dot{x}} L\, h \, dt
@@ -202,7 +202,7 @@ With $\epsilon = 0$  and writing $L$ for $L(x(t), \dot{x}(t))$ it follows:
 
 ```{math}
 :label: euler-lagrange-1
-&0 = \partial_{\epsilon} A[x + \epsilon h] \vert_{\epsilon=0} \\
+&0 = \partial_{\epsilon} A\{x + \epsilon h\} \vert_{\epsilon=0} \\
 &=\partial_{\dot{x}} L \, h(t) \vert_{t=0}^{t=T} + 
 \int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L)\, h \, dt
 ```
@@ -218,7 +218,7 @@ This gives equation {eq}`euler-lagrange`. Note that
 ```{math}
 (g|h) = \int_0^T gh \, dt
 ```
-is a scalar product on $C([0,T])$. We are using the fact that $g = 0$ iff $(g|h) = 0$ for all $h$.
+is a scalar product on $C(\{0,T\})$. We are using the fact that $g = 0$ iff $(g|h) = 0$ for all $h$.
 ````
 
 ````{prf:remark} On Lagrangians
@@ -248,9 +248,8 @@ For a given Lagrangian $L$, the quantities **force** and **momentum** are define
 ```{math}
 :label: force-momentum
 
-& p = \frac{\partial L}{\partial \dot{x}} \\
-\\
-& F = \frac{\partial L}{\partial x}
+p = \frac{\partial L}{\partial \dot{x}} \quad F = \frac{\partial L}{\partial x}
+
 ```
 which reduces the Euler-Lagrange equation to:
 
@@ -292,24 +291,94 @@ Each time, we will employ the same procedure: We plug the Lagrangian into the Eu
 solve it, and interpret the result.
 
 
-### Hamilton, Conservation of Energy
+## Hamilton, Conservation of Energy
 
-````{prf:definition} Poisson Brackets and Hamiltonians
-:label: def-poisson-hamiltonian
+### Lie-Algebra, Poisson Brackets
+
+
+````{prf:definition} Lie Algebra
+:label: def-lie-algebra
+
+Let $V$ be a vector space over $\mathbb{R}$ (or any other field). 
+Let $\{\cdot, \cdot\}$ be a mapping 
+
+```{math}
+\{\cdot, \cdot\} : 
+\left\{
+    \begin{array}{lr}
+        V \times V \to V \\
+        A, B \mapsto \{A, B\}
+    \end{array}
+\right .
+```
+
+that fulfills th following conditions for every $A, B, C \in V$:
+
+(i) $\{\cdot, \cdot\}$ is bilinear.
+
+(ii) $\{A, A\} = 0$
+
+(iii) The Jacobi identity holds:
+
+```{math}
+:label: equ-jacobi
+\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} = 0
+```
+
+Then $(V, \{\cdot, \cdot\})$ is called a **Lie-Algebra**.
+````
+
+A frequent example is the vector space of square matrices with the commutator $\{A, B\} = AB - BA$ as bilinear mapping. 
+Conditions (i), (ii), and (iii) obviously hold. Another important example is Poisson brackets, to which we now turn.
+
+````{prf:definition} Poisson Brackets
+:label: def-poisson-brackets
+
+Let $A, B$ be differentiable, real-valued functions of two variables $x, p$ defined on $\mathbb{R}^n \times \mathbb{R}^n$. 
+The **Poisson brackets** are defined by:
+
+```{math}
+:label: equ-poisson-brackets
+\{A, B\} &= \partial_x A \, \partial_p B - \partial_p A \, \partial_x B \\
+&= \sum_{k=1}^n \partial_{x_k} A \, \partial_{p_k} B - \partial_{p_k} A \, \partial_{x_k} B
+```
+````
+````{prf:theorem} Properties of Poisson Brackets
+:label: thr-poisson-brackets
+
+**(a)** Let $V = C^1(\mathbb{R}^n)$. Then $(V, \{\cdot, \cdot\})$ is a Lie algebra.
+
+**(b)** The following equations hold for any $A \in V$, and $x, p \in \mathbb{R}^n$:
+
+```{math}
+&\{A, x\} = -\partial_p A \\
+&\{A, p\} = \partial_x A
+```
+
+```{math}
+\{x, p\} = \begin{bmatrix}
+                & \vdots           \\
+        \cdots  & x_i p_j  &\cdots \\
+                & \vdots  
+    \end{bmatrix}_{i, j = 1, \ldots, n}
+```
+
+````
+````{prf:proof}
+We only show the Jacobi equation {eq}`equ-jacobi`
+
+```{math}
+&\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} \\
+&= 
+```
+
+
+````
+````{prf:definition} Hamilton
+:label: def-hamilton
 
 Let $A, B, H$ be differentiable, real-valued functions of two variables $x, p$ defined on $\mathbb{R}^n \times \mathbb{R}^n$.
 The dimension $n$ is often three (that's one particle), sometimes more. 
-
-**(a)** **Poisson brackets** are defined by:
-
-```{math}
-\{A, B\} = \partial_x A \, \partial_p B - \partial_p A \, \partial_x B
-```
-Note that $\partial_x A = \begin{bmatrix}
-        \partial_1 A \\
-        \partial_2 A \\
-        \partial_3 A
-    \end{bmatrix}$, so $\partial_x A$, $\partial_p A, \ldots$ are vectors, and $\{A, B\}$ is a scalar.
 
 **(b)** A function $H$ is called **Hamiltonian**, iff
 
@@ -326,6 +395,7 @@ which is often abbreviated to:
 \{\cdot, H\} = \partial_t\\
 ```
 ````
+
 
 ````{prf:theorem} Hamiltonian, Energy
 :label: def-hamiltonian-energy
@@ -590,7 +660,7 @@ Setting $a = \begin{bmatrix}
  and $B = \begin{bmatrix}
         1 \\
         1
-    \end{bmatrix}$, we get, with $t \in [0, 1]$:
+    \end{bmatrix}$, we get, with $t \in \{0, 1\}$:
 
 ```{math}
 &x_1(t) = t \\
@@ -604,7 +674,7 @@ We notice that:
 &\dot{x_2}(t) = -a_2 t + \frac{a_2 + 2}{2}
 ```
 The horizontal speed is constant. The rocket climbs until $t_0 = \frac{a_2 + 2}{2 a_2}$ and then descends. 
-The [figure](#boat-upstream.png) below shows the optimal trajectory upwards ($a_2$ positive) and downwards ($a_2$ negative), with $T = 1$.
+The \{figure\}(#boat-upstream.png) below shows the optimal trajectory upwards ($a_2$ positive) and downwards ($a_2$ negative), with $T = 1$.
 For $a_2=0$ we get a straight line.
 
 ```{figure} overshooting.png
@@ -772,3 +842,13 @@ Everything happens in a plane, with coordinates $x_1$ and $x_2$.
 
   The paradox: While a straight line from (0,0) to (1,1) is the shortest path, it's not the path of least action when fighting a constant opposing force. The physics demands this counterintuitive parabolic trajectory.
   This is analogous to why projectiles follow parabolic paths under gravity - nature optimizes action, not distance.
+
+
+```{math}
+\partial_x A = \begin{bmatrix}
+        \partial_{x_1} A_1 & \partial_{x_1} A_2  &\cdots &\partial_{x_1} A_n \\
+        \partial_{x_2} A_1 & \partial_{x_2} A_2  &\cdots &\partial_{x_2} A_n \\
+        \vdots &\vdots & &\vdots \\
+        \partial_{x_n} A_1 & \partial_{x_n} A_2  &\cdots &\partial_{x_n} A_n 
+    \end{bmatrix}
+```
