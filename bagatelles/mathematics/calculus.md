@@ -1215,8 +1215,13 @@ This is often abbreviated to
 ```{math}
 {f^{-1}}' = \frac{1}{f'}
 ```
+but you have to keep track of $x$ and $y$. Using the quotient notation, we can write:
 
-but you have to keep track of $x$ and $y$.
+```{math}
+&\frac{df^{-1}}{dy}(f(x)) = \left ( \frac{df}{dx} \right )^{-1}(x) \\
+\\
+&\frac{df^{-1}}{dy}(y) = \left ( \frac{df}{dx} \right )^{-1}(f^{-1}(y)) 
+```
 
 **(c) Product Rule**
 

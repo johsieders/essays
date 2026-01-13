@@ -97,7 +97,7 @@ The physicist would see $x$ as the position and $v = \dot{x}$ as the velocity of
 The symbols $v$ and $\dot{x}$ are almost interchangeable. So, $\partial_{\dot{x}}L$ and $\partial_{v}L$ mean exactly the same:
 the partial derivative of $L$ with respect to the second variable.
 
-The value $L(x,\dot{x})$ is meant to quantify
+The purpose of the value $L(x,\dot{x})$ is to quantify
 the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
 The total mess along $x$ is a **functional** called the **action** and is defined by:
 
@@ -300,36 +300,36 @@ solve it, and interpret the result.
 :label: def-lie-algebra
 
 Let $V$ be a vector space over $\mathbb{R}$ (or any other field). 
-Let $\{\cdot, \cdot\}$ be a mapping 
+Let $[\cdot, \cdot]$ be a mapping 
 
 ```{math}
-\{\cdot, \cdot\} : 
+[\cdot, \cdot] : 
 \left\{
     \begin{array}{lr}
         V \times V \to V \\
-        A, B \mapsto \{A, B\}
+        A, B \mapsto [A, B]
     \end{array}
 \right .
 ```
 
-that fulfills th following conditions for every $A, B, C \in V$:
+that fulfills the following conditions for every $A, B, C \in V$:
 
-(i) $\{\cdot, \cdot\}$ is bilinear.
+(i) $[\cdot, \cdot]$ is bilinear.
 
-(ii) $\{A, A\} = 0$
+(ii) $[A, A] = 0$
 
 (iii) The Jacobi identity holds:
 
 ```{math}
 :label: equ-jacobi
-\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} = 0
+[A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0
 ```
 
-Then $(V, \{\cdot, \cdot\})$ is called a **Lie-Algebra**.
+Then $(V, [\cdot, \cdot])$ is called a **Lie-Algebra**.
 ````
 
-A frequent example is the vector space of square matrices with the commutator $\{A, B\} = AB - BA$ as bilinear mapping. 
-Conditions (i), (ii), and (iii) obviously hold. Another important example is Poisson brackets, to which we now turn.
+A frequent example is the vector space of square matrices with the commutator $[A, B] = AB - BA$ as bilinear mapping. 
+Conditions (i), (ii), and (iii) obviously hold. Another important example is the Poisson brackets, to which we now turn.
 
 ````{prf:definition} Poisson Brackets
 :label: def-poisson-brackets
@@ -365,6 +365,8 @@ The **Poisson brackets** are defined by:
 
 ````
 ````{prf:proof}
+TODO
+
 We only show the Jacobi equation {eq}`equ-jacobi`
 
 ```{math}
@@ -374,48 +376,52 @@ We only show the Jacobi equation {eq}`equ-jacobi`
 
 
 ````
-````{prf:definition} Hamilton
+````{prf:definition} Legendre Transformation, Hamiltonian
 :label: def-hamilton
 
-Let $A, B, H$ be differentiable, real-valued functions of two variables $x, p$ defined on $\mathbb{R}^n \times \mathbb{R}^n$.
-The dimension $n$ is often three (that's one particle), sometimes more. 
-
-**(b)** A function $H$ is called **Hamiltonian**, iff
-
-```{math}
-\partial_x H = - \dot{p} \text{ and } \partial_p H = \dot{x}
-```
-It is clear in this case that:
+Let $L: \mathbb{R}^n \times  \mathbb{R}^n \to \mathbb{R}$ be a Lagrangian with $\partial^2_{v} L \ne 0$ on $[0, T]$.
+As always, the dimension $n$ is often three (that's one particle), sometimes more. Let $p(x, v) = \partial_{v}L(x, v)$.
+$L$ is called non-degenerate iff:
 
 ```{math}
-\{A, H\} = \partial_t A \\
+:label: non-degenerate
+\partial_{v} p(x, v) \ne 0 \text{ for all } x, v 
 ```
-which is often abbreviated to:
+If equation {eq}`non-degenerate` holds, $v$ can be expressed in terms of $p$ and vice versa:
 ```{math}
-\{\cdot, H\} = \partial_t\\
+:label: equ-hamilton-1
+&p = p(x, v) \\
+&v = v(x, p)
 ```
+
+Every non-degenerate Lagragian has a twin $H$, called **Hamiltonian**, defined by
+
+```{math}
+:label: equ-hamilton-2
+H(x, p(x, v))  = v p(x, v) - L(x, v)
+```
+
+$H$ and $L$ are linked by the equations
+
+```{math}
+:label: equ-hamilton-3
+&H(x, p(x, v)) + L(x, v) = v p(x, v) \\
+&H(x, p) + L(x, v(x, p)) = v(x, p) p
+```
+depending on wether you choose $v$ or $p$ as independent variable.
+
 ````
 
 
 ````{prf:theorem} Hamiltonian, Energy
 :label: def-hamiltonian-energy
-Let $H$ be defined by;
 
-```{math}
-H(x, p) + L(x, \dot{x}) = p \, \dot{x}
-```
-
-or:
-```{math}
-:label: def-energy
-H(x, p) = p \, \dot{x} - L(x, \dot{x})
-```
+TODO
 
 Then $H$ is a Hamiltonian iff $L$ is stationary, that is, it fulfills Euler-Lafrange.
 
 The function $H$ defined by {eq}`def-energy` is called the **Hamiltonian** of $L$ or the **energy** $E$ of $L$.
 ````
-
 
 ````{prf:proof} 
 
