@@ -97,7 +97,7 @@ The physicist would see $x$ as the position and $v = \dot{x}$ as the velocity of
 The symbols $v$ and $\dot{x}$ are almost interchangeable. So, $\partial_{\dot{x}}L$ and $\partial_{v}L$ mean exactly the same:
 the partial derivative of $L$ with respect to the second variable.
 
-The value $L(x,\dot{x})$ is meant to quantify
+The purpose of the value $L(x,\dot{x})$ is to quantify
 the mess caused by a particle travelling at velocity $\dot{x}(t)$ through point $x(t)$.
 The total mess along $x$ is a **functional** called the **action** and is defined by:
 
@@ -300,36 +300,36 @@ solve it, and interpret the result.
 :label: def-lie-algebra
 
 Let $V$ be a vector space over $\mathbb{R}$ (or any other field). 
-Let $\{\cdot, \cdot\}$ be a mapping 
+Let $[\cdot, \cdot]$ be a mapping 
 
 ```{math}
-\{\cdot, \cdot\} : 
+[\cdot, \cdot] : 
 \left\{
     \begin{array}{lr}
         V \times V \to V \\
-        A, B \mapsto \{A, B\}
+        A, B \mapsto [A, B]
     \end{array}
 \right .
 ```
 
-that fulfills th following conditions for every $A, B, C \in V$:
+that fulfills the following conditions for every $A, B, C \in V$:
 
-(i) $\{\cdot, \cdot\}$ is bilinear.
+(i) $[\cdot, \cdot]$ is bilinear.
 
-(ii) $\{A, A\} = 0$
+(ii) $[A, A] = 0$
 
 (iii) The Jacobi identity holds:
 
 ```{math}
 :label: equ-jacobi
-\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} = 0
+[A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0
 ```
 
-Then $(V, \{\cdot, \cdot\})$ is called a **Lie-Algebra**.
+Then $(V, [\cdot, \cdot])$ is called a **Lie-Algebra**.
 ````
 
-A frequent example is the vector space of square matrices with the commutator $\{A, B\} = AB - BA$ as bilinear mapping. 
-Conditions (i), (ii), and (iii) obviously hold. Another important example is Poisson brackets, to which we now turn.
+A frequent example is the vector space of square matrices with the commutator $[A, B] = AB - BA$ as bilinear mapping. 
+Conditions (i), (ii), and (iii) obviously hold. Another important example is the Poisson brackets, to which we now turn.
 
 ````{prf:definition} Poisson Brackets
 :label: def-poisson-brackets
@@ -348,7 +348,7 @@ The **Poisson brackets** are defined by:
 
 **(a)** Let $V = C^1(\mathbb{R}^n)$. Then $(V, \{\cdot, \cdot\})$ is a Lie algebra.
 
-**(b)** The following equations hold for any $A \in V$, and $x, p \in \mathbb{R}^n$:
+**(b)** The following equations hold for any $A \in V$, and any $x, p \in \mathbb{R}^n$:
 
 ```{math}
 &\{A, x\} = -\partial_p A \\
@@ -365,6 +365,8 @@ The **Poisson brackets** are defined by:
 
 ````
 ````{prf:proof}
+TODO
+
 We only show the Jacobi equation {eq}`equ-jacobi`
 
 ```{math}
@@ -372,79 +374,197 @@ We only show the Jacobi equation {eq}`equ-jacobi`
 &= 
 ```
 
+````
+
+````{prf:theorem} Legendre Transformation
+:label: thr-legendre-transformation
+
+Let the Lagrangian $L$ be strictly convex in the second argument $v$: 
+
+```{math}
+:label: equ-convex
+
+\partial_v^2 L(x, v) > 0
+```
+
+Then, for each $x$, the velocity $v$ can be expressed in terms of the momentum $p$:
+ 
+```{math}
+v \mapsto p(x, v) = \partial_v L(x, v)
+```
+The mapping $p(x, \cdot)$ is a global diffeomorphisms and its inverse is:
+
+```{math}
+p \mapsto v(x, p)
+```
 
 ````
-````{prf:definition} Hamilton
+
+````{prf:proof}
+TODO
+````
+
+````{prf:definition} Hamiltonian, Energy
 :label: def-hamilton
 
-Let $A, B, H$ be differentiable, real-valued functions of two variables $x, p$ defined on $\mathbb{R}^n \times \mathbb{R}^n$.
-The dimension $n$ is often three (that's one particle), sometimes more. 
-
-**(b)** A function $H$ is called **Hamiltonian**, iff
+Let $L$ be a Lagrangian satisfying {eq}`equ-convex`.
+Then there is a twin $H$, called the **Hamiltonian**, defined by:
 
 ```{math}
-\partial_x H = - \dot{p} \text{ and } \partial_p H = \dot{x}
+:label: equ-hamilton-1
+H(x, p)  = v(x, p) p - L(x, v(x, p))
 ```
-It is clear in this case that:
+The twin of a given Hamiltonian $H$ is defined by
 
 ```{math}
-\{A, H\} = \partial_t A \\
+:label: equ-hamilton-2
+L(x, v) = v p(x, v) - H(x, p(x, v))
 ```
-which is often abbreviated to:
+
+The **energy** associated with a Lagrangian is just the Hamiltonian:
+
 ```{math}
-\{\cdot, H\} = \partial_t\\
+:label: equ-energy
+E = H
+```
+With $v$ as independent variable, we get:
+
+```{math}
+:label: equ-hamilton-3
+H(x, p(x, v)) + L(x, v) = v p(x, v) 
+```
+
+Choosing $p$ as independent variable gives:
+
+```{math}
+:label: equ-hamilton-4
+H(x, p) + L(x, v(x, p)) = v(x, p)  p
+```
+Ignoring the variables and remembering that $v = \dot{x}$, we often write, as everybody does:
+
+```{math}
+:label: equ-hamilton-5
+H + L = \dot{x}p
 ```
 ````
 
-
-````{prf:theorem} Hamiltonian, Energy
-:label: def-hamiltonian-energy
-Let $H$ be defined by;
-
+````{prf:remark} Schrödinger Equation
+:label: def-schroedinger
+The equation {eq}`equ-energy` comes a bit out of the blue and looks as 
+arbitrary as the definitions of force and momentum as partial derivatives of the Lagrangian.
+By way of a taster, we present the general form of the Schrödinger equation:
+ 
 ```{math}
-H(x, p) + L(x, \dot{x}) = p \, \dot{x}
+:label: equ-schroedinger
+\hat{E} = -i \hat{H}
 ```
 
-or:
-```{math}
-:label: def-energy
-H(x, p) = p \, \dot{x} - L(x, \dot{x})
-```
-
-Then $H$ is a Hamiltonian iff $L$ is stationary, that is, it fulfills Euler-Lafrange.
-
-The function $H$ defined by {eq}`def-energy` is called the **Hamiltonian** of $L$ or the **energy** $E$ of $L$.
+where $\hat{E}$ and $\hat{H}$ are energy and Hamiltonian operators resp. 
 ````
 
+````{prf:theorem} Hamiltonian Equations
+:label: thr-hamiltonian-equations
+
+Let $L$ be a Lagrangian satisfying {eq}`equ-convex` and $H$ its Hamiltonian.
+Then equations {eq}`equ-hamilton-a` are equivalent to the 
+Euler-Lagrange equation {eq}`equ-euler-lagrange`:
+
+```{math}
+:label: equ-hamilton-a
+&\partial_x H = -\dot{p} \\
+&\partial_p H = \dot{x}
+```
+
+```{math}
+:label: equ-euler-lagrange
+\partial_t \partial_v L = \partial_x L
+```
+````
 
 ````{prf:proof} 
 
-Let $x
+We assume that Euler-Lagrange {eq}`equ-euler-lagrange` holds. We need it for the first equation only.
+Note that $p = \partial_v L$ by definition. The proof requires the product and the chain rule of differentiation.
 
 ```{math}
-&\partial_t H(x, p) \\
-&= \partial_x H \dot{x} + \partial_p H \dot{p} \\
-&= \dot{p} \dot{x} - \dot{x} \dot{p} = 0
+\partial_x H(x, p) &= \partial_x v(x, p) p - (\partial_x L(x, v(x, p)) + \partial_v L(x, v(x, p)) \partial_x v(x, p)) \\
+&= \partial_x v(x, p) p - (\partial_x L(x, v(x, p)) + p \, \partial_x v(x, p)) \\
+&= -\partial_x L(x, v(x,p)) \\
+&= -\partial_t \partial_v L(x, v(x,p)) \\
+&= - \partial_t p
+```
+
+```{math}
+\partial_p H(x, p) &= \partial_p v(x, p) \, p + v(x, p) - \partial_v L(x, v(x, p)) \, \partial_p v(x, p)) \\
+&= \partial_p v(x, p) \, p + v(x, p) - p \, \partial_p v(x, p)) \\
+&= v(x, p)
+```
+Now, we assume that Hamilton {eq}`equ-hamilton-a` holds. 
+
+```{math}
+\partial_x L(x, v) &= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + \partial_p H(x, p(x, v)) \, \partial_x p(x, v)) \\
+&= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + v \, \partial_x p(x, v)) \\
+&= \partial_x H(x, p(x, v)) \\
+&= \partial_t p(x, v) \\
+&= \partial_t \partial_v L(x, v) \\
 ```
 ````
+The following theorem summarizes the essence of Newtonian mechanics. 
+That's almost all there is to it. The proofs are deceptively simple.
 
-### Conservation of Information, Gibbs-Liouville
+````{prf:theorem} Conservation Laws
+:label: thr-conservation
+
+
+**(a)** Conservation of Energy
 
 ```{math}
-\nabla \cdot 
-\begin{bmatrix}
-\dot{x} \\
-\dot{p}
-\end{bmatrix} = 0
+\dot{E} = 0
 ```
 
-### Conservation of Momentum
+**(b)** Conservation of Momentum
 
 ```{math}
 \sum_{k=1}^n \dot {p_k} = \sum_{k=1}^n F_k
 ```
 
+**(c)** Conservation of Information
 
+```{math}
+\partial \cdot 
+\begin{bmatrix}
+\dot{x} \\
+\dot{p}
+\end{bmatrix} = 0
+```
+````
+
+````{prf:proof}
+**(a)** 
+The conservation of energy follows from {eq}`equ-hamilton-a` using the chain rule:
+```{math}
+\partial_t H = \partial_t H \, \dot{x} + \partial_p H \, \dot{p}
+= - \dot{p} \, \dot{x} + \dot{x} \, \dot{p} = 0
+```
+
+**(b)** 
+
+**(c)**
+```{math}
+\partial \cdot 
+\begin{bmatrix}
+\dot{x} \\
+\dot{p}
+\end{bmatrix} =  
+\partial \cdot 
+\begin{bmatrix}
+\partial_p H \\
+-\partial_x H
+\end{bmatrix} =  
+\partial_x \partial_p H - \partial_p \partial_x H = 0
+```
+ 
+````
 
 ## A Catalogue of Lagrangians
 
