@@ -57,6 +57,8 @@ parts:
         title: From Naturals to Reals
       - file: mathematics/calculus
         title: First Steps in Calculus
+      - file: mathematics/differentials
+        title: Differential Calculus
 
   - caption: History
     chapters:
