@@ -214,6 +214,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -465,7 +466,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-greeks">The Greeks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-laws">Hamilton, Conservation Laws</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lie-algebra-poisson-brackets">Lie-Algebra, Poisson Brackets</a></li>
 </ul>
 </li>
@@ -481,7 +482,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-trains-elevators-and-spaceships">A Note on Trains, Elevators, and Spaceships</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
@@ -497,8 +497,30 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="newton">
 <h1>Newton<a class="headerlink" href="#newton" title="Link to this heading">#</a></h1>
-<p><em>Johannes Siedersleben, April 2026</em></p>
-<p>XXX introduction  XXX</p>
+<p><em>Johannes Siedersleben, February 2026</em></p>
+<p>What’s the Problem: How do particles move in a field (spring, gravitational
+field, electric field, magnetic field, …) and how do particles affect the
+field?</p>
+<ul class="simple">
+<li><p>Principle of Least Action (amazing, this principle rules the world!)</p></li>
+<li><p>The Lagrangian defines the effort caused per unit of time</p></li>
+<li><p>The action is the accumulated amount of effort over time</p></li>
+<li><p>The principle says: Every system minimizes the action</p>
+<ul>
+<li><p>Equations of Motion (Euler-Lagrange, Hamiltonian)</p></li>
+<li><p>Principle of Relativity (sic): Speed is relative and symmetric (you cannot
+tell which train is moving). There is no absolute rest (Galileo
+Transformation)</p></li>
+</ul>
+</li>
+<li><p>Consequences:</p>
+<ul>
+<li><p>Conservation of Momentum (Newton’s Laws)</p></li>
+<li><p>Conservation of Energy (Energy = the Hamiltonian)</p></li>
+<li><p>Conservation of Information (Theorem of Gibbs-Liouville)</p></li>
+</ul>
+</li>
+</ul>
 <section id="the-greeks">
 <h2>The Greeks<a class="headerlink" href="#the-greeks" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -702,127 +724,83 @@ by the community of physicists. But there will never be a proof in any mathemati
 Each time, we will employ the same procedure: We plug the Lagrangian into the Euler-Lagrange equation,
 solve it, and interpret the result.</p>
 </section>
-<section id="hamilton-conservation-of-energy">
-<h2>Hamilton, Conservation of Energy<a class="headerlink" href="#hamilton-conservation-of-energy" title="Link to this heading">#</a></h2>
-<section id="lie-algebra-poisson-brackets">
-<h3>Lie-Algebra, Poisson Brackets<a class="headerlink" href="#lie-algebra-poisson-brackets" title="Link to this heading">#</a></h3>
-<div class="proof definition admonition" id="def-lie-algebra">
-<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Lie Algebra)</p>
+<section id="hamilton-conservation-laws">
+<h2>Hamilton, Conservation Laws<a class="headerlink" href="#hamilton-conservation-laws" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="thr-legendre-invertibility">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Legendre Invertibilty)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (or any other field).
-Let <span class="math notranslate nohighlight">\([\cdot, \cdot]\)</span> be a mapping</p>
+<p>With a Lagrangian <span class="math notranslate nohighlight">\(L\)</span> and a position <span class="math notranslate nohighlight">\(x\)</span> given, the momentum <span class="math notranslate nohighlight">\(p\)</span> can be thought of as a function of <span class="math notranslate nohighlight">\(v\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}[\cdot, \cdot] : 
-\left\{
-    \begin{array}{lr}
-        V \times V \to V \\
-        A, B \mapsto [A, B]
-    \end{array}
-\right .\end{split}\]</div>
-<p>that fulfills the following conditions for every <span class="math notranslate nohighlight">\(A, B, C \in V\)</span>:</p>
-<p>(i) <span class="math notranslate nohighlight">\([\cdot, \cdot]\)</span> is bilinear.</p>
-<p>(ii) <span class="math notranslate nohighlight">\([A, A] = 0\)</span></p>
-<p>(iii) The Jacobi identity holds:</p>
-<div class="math notranslate nohighlight" id="equation-equ-jacobi">
-<span class="eqno">(10)<a class="headerlink" href="#equation-equ-jacobi" title="Link to this equation">#</a></span>\[[A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0\]</div>
-<p>Then <span class="math notranslate nohighlight">\((V, [\cdot, \cdot])\)</span> is called a <strong>Lie-Algebra</strong>.</p>
+\[\tilde{p}_x: v \mapsto p(x, v) = \partial_v L(x, v)\]</div>
+<p><span class="math notranslate nohighlight">\(L\)</span> is called <strong>Legendre-invertible</strong> iff, for every <span class="math notranslate nohighlight">\(x\)</span>,
+the mapping <span class="math notranslate nohighlight">\(\tilde{v}\)</span> is a global diffeomorphisms.
+That means: there exists an inverse function:</p>
+<div class="math notranslate nohighlight">
+\[\tilde{v}_x: p \mapsto v(x, p)\]</div>
+<p>such that, for every <span class="math notranslate nohighlight">\(x, v, p\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\tilde{v}_x(\tilde{p}_x(v)) = v \\
+&amp;\tilde{p}_x(\tilde{v}_x(p)) = p 
+\end{split}\]</div>
 </section>
-</div><p>A frequent example is the vector space of square matrices with the commutator <span class="math notranslate nohighlight">\([A, B] = AB - BA\)</span> as bilinear mapping.
-Conditions (i), (ii), and (iii) obviously hold. Another important example is the Poisson brackets, to which we now turn.</p>
-<div class="proof definition admonition" id="def-poisson-brackets">
-<p class="admonition-title"><span class="caption-number">Definition 4 </span> (Poisson Brackets)</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A, B\)</span> be differentiable, real-valued functions of two variables <span class="math notranslate nohighlight">\(x, p\)</span> defined on <span class="math notranslate nohighlight">\(\mathbb{R}^n \times \mathbb{R}^n\)</span>.
-The <strong>Poisson brackets</strong> are defined by:</p>
-<div class="math notranslate nohighlight" id="equation-equ-poisson-brackets">
-<span class="eqno">(11)<a class="headerlink" href="#equation-equ-poisson-brackets" title="Link to this equation">#</a></span>\[\begin{split}\{A, B\} &amp;= \partial_x A \, \partial_p B - \partial_p A \, \partial_x B \\
-&amp;= \sum_{k=1}^n \partial_{x_k} A \, \partial_{p_k} B - \partial_{p_k} A \, \partial_{x_k} B\end{split}\]</div>
-</section>
-</div><div class="proof theorem admonition" id="thr-poisson-brackets">
-<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Properties of Poisson Brackets)</p>
+</div><div class="proof theorem admonition" id="thr-legendre-transformation">
+<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Legendre Invertibilty)</p>
 <section class="theorem-content" id="proof-content">
-<p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(V = C^1(\mathbb{R}^n)\)</span>. Then <span class="math notranslate nohighlight">\((V, \{\cdot, \cdot\})\)</span> is a Lie algebra.</p>
-<p><strong>(b)</strong> The following equations hold for any <span class="math notranslate nohighlight">\(A \in V\)</span>, and any <span class="math notranslate nohighlight">\(x, p \in \mathbb{R}^n\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}&amp;\{A, x\} = -\partial_p A \\
-&amp;\{A, p\} = \partial_x A\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\{x, p\} = \begin{bmatrix}
-                &amp; \vdots           \\
-        \cdots  &amp; x_i p_j  &amp;\cdots \\
-                &amp; \vdots  
-    \end{bmatrix}_{i, j = 1, \ldots, n}\end{split}\]</div>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. TODO</p>
-<p>We only show the Jacobi equation <a class="reference internal" href="#equation-equ-jacobi">(10)</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}&amp;\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} \\
-&amp;= \end{split}\]</div>
-</div>
-<div class="proof theorem admonition" id="thr-legendre-transformation">
-<p class="admonition-title"><span class="caption-number">Theorem 3 </span> (Legendre Transformation)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let the Lagrangian <span class="math notranslate nohighlight">\(L\)</span> be strictly convex in the second argument <span class="math notranslate nohighlight">\(v\)</span>:</p>
+<p>If the Lagrangian <span class="math notranslate nohighlight">\(L\)</span> is strictly convex in the second argument:</p>
 <div class="math notranslate nohighlight" id="equation-equ-convex">
-<span class="eqno">(12)<a class="headerlink" href="#equation-equ-convex" title="Link to this equation">#</a></span>\[\partial_v^2 L(x, v) &gt; 0\]</div>
-<p>Then, for each <span class="math notranslate nohighlight">\(x\)</span>, the velocity <span class="math notranslate nohighlight">\(v\)</span> can be expressed in terms of the momentum <span class="math notranslate nohighlight">\(p\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[v \mapsto p(x, v) = \partial_v L(x, v)\]</div>
-<p>The mapping <span class="math notranslate nohighlight">\(p(x, \cdot)\)</span> is a global diffeomorphisms and its inverse is:</p>
-<div class="math notranslate nohighlight">
-\[p \mapsto v(x, p)\]</div>
+<span class="eqno">(10)<a class="headerlink" href="#equation-equ-convex" title="Link to this equation">#</a></span>\[\partial_v^2 L(x, v) &gt; 0\]</div>
+<p>then <span class="math notranslate nohighlight">\(L\)</span> is Legendre-invertible.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 <div class="proof definition admonition" id="def-hamilton">
-<p class="admonition-title"><span class="caption-number">Definition 5 </span> (Hamiltonian, Energy)</p>
+<p class="admonition-title"><span class="caption-number">Definition 4 </span> (Hamiltonian, Energy)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(L\)</span> be a Lagrangian satisfying <a class="reference internal" href="#equation-equ-convex">(12)</a>.
+<p>Let <span class="math notranslate nohighlight">\(L\)</span> be a Lagrangian satisfying <a class="reference internal" href="#equation-equ-convex">(10)</a>.
 Then there is a twin <span class="math notranslate nohighlight">\(H\)</span>, called the <strong>Hamiltonian</strong>, defined by:</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-1">
-<span class="eqno">(13)<a class="headerlink" href="#equation-equ-hamilton-1" title="Link to this equation">#</a></span>\[H(x, p)  = v(x, p) p - L(x, v(x, p))\]</div>
+<span class="eqno">(11)<a class="headerlink" href="#equation-equ-hamilton-1" title="Link to this equation">#</a></span>\[H(x, p)  = v(x, p) p - L(x, v(x, p))\]</div>
 <p>The twin of a given Hamiltonian <span class="math notranslate nohighlight">\(H\)</span> is defined by</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-2">
-<span class="eqno">(14)<a class="headerlink" href="#equation-equ-hamilton-2" title="Link to this equation">#</a></span>\[L(x, v) = v p(x, v) - H(x, p(x, v))\]</div>
+<span class="eqno">(12)<a class="headerlink" href="#equation-equ-hamilton-2" title="Link to this equation">#</a></span>\[L(x, v) = v p(x, v) - H(x, p(x, v))\]</div>
 <p>The <strong>energy</strong> associated with a Lagrangian is just the Hamiltonian:</p>
 <div class="math notranslate nohighlight" id="equation-equ-energy">
-<span class="eqno">(15)<a class="headerlink" href="#equation-equ-energy" title="Link to this equation">#</a></span>\[E = H\]</div>
+<span class="eqno">(13)<a class="headerlink" href="#equation-equ-energy" title="Link to this equation">#</a></span>\[E = H\]</div>
 <p>With <span class="math notranslate nohighlight">\(v\)</span> as independent variable, we get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-3">
-<span class="eqno">(16)<a class="headerlink" href="#equation-equ-hamilton-3" title="Link to this equation">#</a></span>\[H(x, p(x, v)) + L(x, v) = v p(x, v) \]</div>
+<span class="eqno">(14)<a class="headerlink" href="#equation-equ-hamilton-3" title="Link to this equation">#</a></span>\[H(x, p(x, v)) + L(x, v) = v p(x, v) \]</div>
 <p>Choosing <span class="math notranslate nohighlight">\(p\)</span> as independent variable gives:</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-4">
-<span class="eqno">(17)<a class="headerlink" href="#equation-equ-hamilton-4" title="Link to this equation">#</a></span>\[H(x, p) + L(x, v(x, p)) = v(x, p)  p\]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-equ-hamilton-4" title="Link to this equation">#</a></span>\[H(x, p) + L(x, v(x, p)) = v(x, p)  p\]</div>
 <p>Ignoring the variables and remembering that <span class="math notranslate nohighlight">\(v = \dot{x}\)</span>, we often write, as everybody does:</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-5">
-<span class="eqno">(18)<a class="headerlink" href="#equation-equ-hamilton-5" title="Link to this equation">#</a></span>\[H + L = \dot{x}p\]</div>
+<span class="eqno">(16)<a class="headerlink" href="#equation-equ-hamilton-5" title="Link to this equation">#</a></span>\[H + L = \dot{x}p\]</div>
 </section>
 </div><div class="proof remark admonition" id="def-schroedinger">
 <p class="admonition-title"><span class="caption-number">Remark 2 </span> (Schrödinger Equation)</p>
 <section class="remark-content" id="proof-content">
-<p>The equation <a class="reference internal" href="#equation-equ-energy">(15)</a> comes a bit out of the blue and looks as
+<p>The equation <a class="reference internal" href="#equation-equ-energy">(13)</a> comes a bit out of the blue and looks as
 arbitrary as the definitions of force and momentum as partial derivatives of the Lagrangian.
 By way of a taster, we present the general form of the Schrödinger equation:</p>
 <div class="math notranslate nohighlight" id="equation-equ-schroedinger">
-<span class="eqno">(19)<a class="headerlink" href="#equation-equ-schroedinger" title="Link to this equation">#</a></span>\[\hat{E} = -i \hat{H}\]</div>
+<span class="eqno">(17)<a class="headerlink" href="#equation-equ-schroedinger" title="Link to this equation">#</a></span>\[\hat{E} = -i \hat{H}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\hat{E}\)</span> and <span class="math notranslate nohighlight">\(\hat{H}\)</span> are energy and Hamiltonian operators resp.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-hamiltonian-equations">
-<p class="admonition-title"><span class="caption-number">Theorem 4 </span> (Hamiltonian Equations)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 3 </span> (Hamiltonian Equations)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(L\)</span> be a Lagrangian satisfying <a class="reference internal" href="#equation-equ-convex">(12)</a> and <span class="math notranslate nohighlight">\(H\)</span> its Hamiltonian.
-Then equations <a class="reference internal" href="#equation-equ-hamilton-a">(20)</a> are equivalent to the
-Euler-Lagrange equation <a class="reference internal" href="#equation-equ-euler-lagrange">(21)</a>:</p>
+<p>Let <span class="math notranslate nohighlight">\(L\)</span> be a Lagrangian satisfying <a class="reference internal" href="#equation-equ-convex">(10)</a> and <span class="math notranslate nohighlight">\(H\)</span> its Hamiltonian.
+Then equations <a class="reference internal" href="#equation-equ-hamilton-a">(18)</a> are equivalent to the
+Euler-Lagrange equation <a class="reference internal" href="#equation-equ-euler-lagrange">(19)</a>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-a">
-<span class="eqno">(20)<a class="headerlink" href="#equation-equ-hamilton-a" title="Link to this equation">#</a></span>\[\begin{split}&amp;\partial_x H = -\dot{p} \\
+<span class="eqno">(18)<a class="headerlink" href="#equation-equ-hamilton-a" title="Link to this equation">#</a></span>\[\begin{split}&amp;\partial_x H = -\dot{p} \\
 &amp;\partial_p H = \dot{x}\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-equ-euler-lagrange">
-<span class="eqno">(21)<a class="headerlink" href="#equation-equ-euler-lagrange" title="Link to this equation">#</a></span>\[\partial_t \partial_v L = \partial_x L\]</div>
+<span class="eqno">(19)<a class="headerlink" href="#equation-equ-euler-lagrange" title="Link to this equation">#</a></span>\[\partial_t \partial_v L = \partial_x L\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We assume that Euler-Lagrange <a class="reference internal" href="#equation-equ-euler-lagrange">(21)</a> holds. We need it for the first equation only.
+<p>Proof. We assume that Euler-Lagrange <a class="reference internal" href="#equation-equ-euler-lagrange">(19)</a> holds. We need it for the first equation only.
 Note that <span class="math notranslate nohighlight">\(p = \partial_v L\)</span> by definition. The proof requires the product and the chain rule of differentiation.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial_x H(x, p) &amp;= \partial_x v(x, p) p - (\partial_x L(x, v(x, p)) + \partial_v L(x, v(x, p)) \partial_x v(x, p)) \\
@@ -834,7 +812,7 @@ Note that <span class="math notranslate nohighlight">\(p = \partial_v L\)</span>
 \[\begin{split}\partial_p H(x, p) &amp;= \partial_p v(x, p) \, p + v(x, p) - \partial_v L(x, v(x, p)) \, \partial_p v(x, p)) \\
 &amp;= \partial_p v(x, p) \, p + v(x, p) - p \, \partial_p v(x, p)) \\
 &amp;= v(x, p)\end{split}\]</div>
-<p>Now, we assume that Hamilton <a class="reference internal" href="#equation-equ-hamilton-a">(20)</a> holds.</p>
+<p>Now, we assume that Hamilton <a class="reference internal" href="#equation-equ-hamilton-a">(18)</a> holds.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial_x L(x, v) &amp;= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + \partial_p H(x, p(x, v)) \, \partial_x p(x, v)) \\
 &amp;= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + v \, \partial_x p(x, v)) \\
@@ -845,7 +823,7 @@ Note that <span class="math notranslate nohighlight">\(p = \partial_v L\)</span>
 <p>The following theorem summarizes the essence of Newtonian mechanics.
 That’s almost all there is to it. The proofs are deceptively simple.</p>
 <div class="proof theorem admonition" id="thr-conservation">
-<p class="admonition-title"><span class="caption-number">Theorem 5 </span> (Conservation Laws)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 4 </span> (Conservation Laws)</p>
 <section class="theorem-content" id="proof-content">
 <p><strong>(a)</strong> Conservation of Energy</p>
 <div class="math notranslate nohighlight">
@@ -863,7 +841,7 @@ That’s almost all there is to it. The proofs are deceptively simple.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
-The conservation of energy follows from <a class="reference internal" href="#equation-equ-hamilton-a">(20)</a> using the chain rule:</p>
+The conservation of energy follows from <a class="reference internal" href="#equation-equ-hamilton-a">(18)</a> using the chain rule:</p>
 <div class="math notranslate nohighlight">
 \[\partial_t H = \partial_t H \, \dot{x} + \partial_p H \, \dot{p}
 = - \dot{p} \, \dot{x} + \dot{x} \, \dot{p} = 0\]</div>
@@ -881,6 +859,72 @@ The conservation of energy follows from <a class="reference internal" href="#equ
 -\partial_x H
 \end{bmatrix} =  
 \partial_x \partial_p H - \partial_p \partial_x H = 0\end{split}\]</div>
+</div>
+<section id="lie-algebra-poisson-brackets">
+<h3>Lie-Algebra, Poisson Brackets<a class="headerlink" href="#lie-algebra-poisson-brackets" title="Link to this heading">#</a></h3>
+<div class="proof definition admonition" id="def-lie-algebra">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span> (Lie Algebra)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> (or any other field).
+Let <span class="math notranslate nohighlight">\([\cdot, \cdot]\)</span> be a mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}[\cdot, \cdot] : 
+\left\{
+    \begin{array}{lr}
+        V \times V \to V \\
+        A, B \mapsto [A, B]
+    \end{array}
+\right .\end{split}\]</div>
+<p>that fulfills the following conditions for every <span class="math notranslate nohighlight">\(A, B, C \in V\)</span>:</p>
+<p>(i) <span class="math notranslate nohighlight">\([\cdot, \cdot]\)</span> is bilinear.</p>
+<p>(ii) <span class="math notranslate nohighlight">\([A, A] = 0\)</span></p>
+<p>(iii) The Jacobi identity holds:</p>
+<div class="math notranslate nohighlight" id="equation-equ-jacobi">
+<span class="eqno">(20)<a class="headerlink" href="#equation-equ-jacobi" title="Link to this equation">#</a></span>\[[A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0\]</div>
+<p>Then <span class="math notranslate nohighlight">\((V, [\cdot, \cdot])\)</span> is called a <strong>Lie-Algebra</strong>.</p>
+</section>
+</div><p>A frequent example is the vector space of square matrices with the commutator <span class="math notranslate nohighlight">\([A, B] = AB - BA\)</span> as bilinear mapping.
+Conditions (i), (ii), and (iii) obviously hold. Another important example is the Poisson brackets, to which we now turn.</p>
+<div class="proof definition admonition" id="def-poisson-brackets">
+<p class="admonition-title"><span class="caption-number">Definition 6 </span> (Poisson Brackets)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(A, B\)</span> be differentiable, real-valued functions of two variables <span class="math notranslate nohighlight">\(x, p\)</span> defined on <span class="math notranslate nohighlight">\(\mathbb{R}^n \times \mathbb{R}^n\)</span>.
+The <strong>Poisson brackets</strong> are defined by:</p>
+<div class="math notranslate nohighlight" id="equation-equ-poisson-brackets">
+<span class="eqno">(21)<a class="headerlink" href="#equation-equ-poisson-brackets" title="Link to this equation">#</a></span>\[\begin{split}\{A, B\} &amp;= \partial_x A \, \partial_p B - \partial_p A \, \partial_x B \\
+&amp;= \sum_{k=1}^n \partial_{x_k} A \, \partial_{p_k} B - \partial_{p_k} A \, \partial_{x_k} B\end{split}\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thr-poisson-brackets">
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span> (Properties of Poisson Brackets)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>(a)</strong> Let <span class="math notranslate nohighlight">\(V = C^1(\mathbb{R}^n)\)</span>. Then <span class="math notranslate nohighlight">\((V, \{\cdot, \cdot\})\)</span> is a Lie algebra.</p>
+<p><strong>(b)</strong> The following equations hold for any <span class="math notranslate nohighlight">\(A \in V\)</span>, and any <span class="math notranslate nohighlight">\(x, p \in \mathbb{R}^n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\{A, x\} = -\partial_p A \\
+&amp;\{A, p\} = \partial_x A\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\{x, p\} = \begin{bmatrix}
+                &amp; \vdots           \\
+        \cdots  &amp; x_i p_j  &amp;\cdots \\
+                &amp; \vdots  
+    \end{bmatrix}_{i, j = 1, \ldots, n}\end{split}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+<p>We only show the Jacobi equation <a class="reference internal" href="#equation-equ-jacobi">(20)</a></p>
+<div class="math notranslate nohighlight">
+\[\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\}\]</div>
+<div class="math notranslate nohighlight">
+\[\{f, \{g, h\}\} + \{g, \{h, f\}\} + \{h, \{f, g\}\} = 0\]</div>
+<p>Using abstract gradient symbols and the product rule <span class="math notranslate nohighlight">\(\partial(ab) = (\partial a)b + a(\partial b)\)</span>, we expand each nested bracket:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\{f, \{g, h\}\} &amp;= - \partial_p^2 g \partial_x f \partial_x h + \partial_x\partial_p g \partial_p f \partial_x h + \partial_x\partial_p g \partial_x f \partial_p h - \partial_x^2 g \partial_p f \partial_p h + \partial_p^2 h \partial_x f \partial_x g - \partial_x\partial_p h \partial_p f \partial_x g - \partial_x\partial_p h \partial_x f \partial_p g + \partial_x^2 h \partial_p f \partial_p g \\
+\{g, \{h, f\}\} &amp;= \partial_p^2 f \partial_x g \partial_x h - \partial_x\partial_p f \partial_p g \partial_x h - \partial_x\partial_p f \partial_x g \partial_p h + \partial_x^2 f \partial_p g \partial_p h - \partial_p^2 h \partial_x f \partial_x g + \partial_x\partial_p h \partial_p f \partial_x g + \partial_x\partial_p h \partial_x f \partial_p g - \partial_x^2 h \partial_p f \partial_p g \\
+\{h, \{f, g\}\} &amp;= - \partial_p^2 f \partial_x g \partial_x h + \partial_x\partial_p f \partial_p g \partial_x h + \partial_x\partial_p f \partial_x g \partial_p h - \partial_x^2 f \partial_p g \partial_p h + \partial_p^2 g \partial_x f \partial_x h - \partial_x\partial_p g \partial_p f \partial_x h - \partial_x\partial_p g \partial_x f \partial_p h + \partial_x^2 g \partial_p f \partial_p h\end{split}\]</div>
+<p>Summing all three expressions:</p>
+<div class="math notranslate nohighlight">
+\[\{f, \{g, h\}\} + \{g, \{h, f\}\} + \{h, \{f, g\}\} = 0\]</div>
+<p>All terms cancel by direct verification. \qed</p>
 </div>
 </section>
 </section>
@@ -1282,32 +1326,6 @@ acceleration). Their levitation is mostly due to centrifugal force.</p></li>
 </li>
 </ul>
 </section>
-<section id="classical-mechanics">
-<h2>Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Link to this heading">#</a></h2>
-<p>What’s the Problem: How do particles move in a field (spring, gravitational
-field, electric field, magnetic field, …) and how do particles affect the
-field?</p>
-<ul class="simple">
-<li><p>Principle of Least Action (amazing, this principle rules the world!)</p></li>
-<li><p>The Lagrangian defines the effort caused per unit of time</p></li>
-<li><p>The action is the accumulated amount of effort over time</p></li>
-<li><p>The principle says: Every system minimizes the action</p>
-<ul>
-<li><p>Equations of Motion (Euler-Lagrange, Hamiltonian)</p></li>
-<li><p>Principle of Relativity (sic): Speed is relative and symmetric (you cannot
-tell which train is moving). There is no absolute rest (Galileo
-Transformation)</p></li>
-</ul>
-</li>
-<li><p>Consequences:</p>
-<ul>
-<li><p>Conservation of Momentum (Newton’s Laws)</p></li>
-<li><p>Conservation of Energy (Energy = the Hamiltonian)</p></li>
-<li><p>Conservation of Information (Theorem of Gibbs-Liouville)</p></li>
-</ul>
-</li>
-</ul>
-</section>
 <section id="intro">
 <h2>Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
 <p>Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity.
@@ -1426,7 +1444,7 @@ This is analogous to why projectiles follow parabolic paths under gravity - natu
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-greeks">The Greeks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#newton-s-world">Newton’s World</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-of-energy">Hamilton, Conservation of Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hamilton-conservation-laws">Hamilton, Conservation Laws</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lie-algebra-poisson-brackets">Lie-Algebra, Poisson Brackets</a></li>
 </ul>
 </li>
@@ -1442,7 +1460,6 @@ This is analogous to why projectiles follow parabolic paths under gravity - natu
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-trains-elevators-and-spaceships">A Note on Trains, Elevators, and Spaceships</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">Intro</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>

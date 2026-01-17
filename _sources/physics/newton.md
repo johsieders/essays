@@ -1,9 +1,26 @@
 # Newton
 
-*Johannes Siedersleben, April 2026*
+*Johannes Siedersleben, February 2026*
 
 
-XXX introduction  XXX
+What’s the Problem: How do particles move in a field (spring, gravitational
+field, electric field, magnetic field, …) and how do particles affect the
+field?
+
+* Principle of Least Action (amazing, this principle rules the world!)
+* The Lagrangian defines the effort caused per unit of time
+* The action is the accumulated amount of effort over time
+* The principle says: Every system minimizes the action
+
+  * Equations of Motion (Euler-Lagrange, Hamiltonian)
+  * Principle of Relativity (sic): Speed is relative and symmetric (you cannot
+    tell which train is moving). There is no absolute rest (Galileo
+    Transformation)
+  
+* Consequences:
+    * Conservation of Momentum (Newton’s Laws)
+    * Conservation of Energy (Energy = the Hamiltonian)
+    * Conservation of Information (Theorem of Gibbs-Liouville)
 
 
 ## The Greeks
@@ -202,6 +219,7 @@ With $\epsilon = 0$  and writing $L$ for $L(x(t), \dot{x}(t))$ it follows:
 
 ```{math}
 :label: euler-lagrange-1
+
 &0 = \partial_{\epsilon} A\{x + \epsilon h\} \vert_{\epsilon=0} \\
 &=\partial_{\dot{x}} L \, h(t) \vert_{t=0}^{t=T} + 
 \int_0^T (\partial_x L - \partial_t \partial_{\dot{x}} L)\, h \, dt
@@ -249,7 +267,6 @@ For a given Lagrangian $L$, the quantities **force** and **momentum** are define
 :label: force-momentum
 
 p = \frac{\partial L}{\partial \dot{x}} \quad F = \frac{\partial L}{\partial x}
-
 ```
 which reduces the Euler-Lagrange equation to:
 
@@ -291,113 +308,48 @@ Each time, we will employ the same procedure: We plug the Lagrangian into the Eu
 solve it, and interpret the result.
 
 
-## Hamilton, Conservation of Energy
+## Hamilton, Conservation Laws
 
-### Lie-Algebra, Poisson Brackets
+````{prf:definition} Legendre Invertibilty 
+:label: thr-legendre-invertibility
 
-
-````{prf:definition} Lie Algebra
-:label: def-lie-algebra
-
-Let $V$ be a vector space over $\mathbb{R}$ (or any other field). 
-Let $[\cdot, \cdot]$ be a mapping 
-
+With a Lagrangian $L$ and a position $x$ given, the momentum $p$ can be thought of as a function of $v$ 
+ 
 ```{math}
-[\cdot, \cdot] : 
-\left\{
-    \begin{array}{lr}
-        V \times V \to V \\
-        A, B \mapsto [A, B]
-    \end{array}
-\right .
+\tilde{p}_x: v \mapsto p(x, v) = \partial_v L(x, v)
 ```
 
-that fulfills the following conditions for every $A, B, C \in V$:
-
-(i) $[\cdot, \cdot]$ is bilinear.
-
-(ii) $[A, A] = 0$
-
-(iii) The Jacobi identity holds:
+$L$ is called **Legendre-invertible** iff, for every $x$, 
+the mapping $\tilde{v}$ is a global diffeomorphisms.
+That means: there exists an inverse function:  
 
 ```{math}
-:label: equ-jacobi
-[A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0
+\tilde{v}_x: p \mapsto v(x, p)
 ```
+such that, for every $x, v, p$:
 
-Then $(V, [\cdot, \cdot])$ is called a **Lie-Algebra**.
-````
-
-A frequent example is the vector space of square matrices with the commutator $[A, B] = AB - BA$ as bilinear mapping. 
-Conditions (i), (ii), and (iii) obviously hold. Another important example is the Poisson brackets, to which we now turn.
-
-````{prf:definition} Poisson Brackets
-:label: def-poisson-brackets
-
-Let $A, B$ be differentiable, real-valued functions of two variables $x, p$ defined on $\mathbb{R}^n \times \mathbb{R}^n$. 
-The **Poisson brackets** are defined by:
 
 ```{math}
-:label: equ-poisson-brackets
-\{A, B\} &= \partial_x A \, \partial_p B - \partial_p A \, \partial_x B \\
-&= \sum_{k=1}^n \partial_{x_k} A \, \partial_{p_k} B - \partial_{p_k} A \, \partial_{x_k} B
-```
-````
-````{prf:theorem} Properties of Poisson Brackets
-:label: thr-poisson-brackets
+&\tilde{v}_x(\tilde{p}_x(v)) = v \\
+&\tilde{p}_x(\tilde{v}_x(p)) = p 
 
-**(a)** Let $V = C^1(\mathbb{R}^n)$. Then $(V, \{\cdot, \cdot\})$ is a Lie algebra.
-
-**(b)** The following equations hold for any $A \in V$, and any $x, p \in \mathbb{R}^n$:
-
-```{math}
-&\{A, x\} = -\partial_p A \\
-&\{A, p\} = \partial_x A
-```
-
-```{math}
-\{x, p\} = \begin{bmatrix}
-                & \vdots           \\
-        \cdots  & x_i p_j  &\cdots \\
-                & \vdots  
-    \end{bmatrix}_{i, j = 1, \ldots, n}
-```
-
-````
-````{prf:proof}
-TODO
-
-We only show the Jacobi equation {eq}`equ-jacobi`
-
-```{math}
-&\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\} \\
-&= 
 ```
 
 ````
 
-````{prf:theorem} Legendre Transformation
+
+
+````{prf:theorem} Legendre Invertibilty 
 :label: thr-legendre-transformation
 
-Let the Lagrangian $L$ be strictly convex in the second argument $v$: 
+If the Lagrangian $L$ is strictly convex in the second argument:
 
 ```{math}
 :label: equ-convex
 
 \partial_v^2 L(x, v) > 0
 ```
-
-Then, for each $x$, the velocity $v$ can be expressed in terms of the momentum $p$:
- 
-```{math}
-v \mapsto p(x, v) = \partial_v L(x, v)
-```
-The mapping $p(x, \cdot)$ is a global diffeomorphisms and its inverse is:
-
-```{math}
-p \mapsto v(x, p)
-```
-
+then $L$ is Legendre-invertible.
 ````
 
 ````{prf:proof}
@@ -565,6 +517,107 @@ The conservation of energy follows from {eq}`equ-hamilton-a` using the chain rul
 ```
  
 ````
+
+### Lie-Algebra, Poisson Brackets
+
+````{prf:definition} Lie Algebra
+:label: def-lie-algebra
+
+Let $V$ be a vector space over $\mathbb{R}$ (or any other field). 
+Let $[\cdot, \cdot]$ be a mapping 
+
+```{math}
+[\cdot, \cdot] : 
+\left\{
+    \begin{array}{lr}
+        V \times V \to V \\
+        A, B \mapsto [A, B]
+    \end{array}
+\right .
+```
+
+that fulfills the following conditions for every $A, B, C \in V$:
+
+(i) $[\cdot, \cdot]$ is bilinear.
+
+(ii) $[A, A] = 0$
+
+(iii) The Jacobi identity holds:
+
+```{math}
+:label: equ-jacobi
+[A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0
+```
+
+Then $(V, [\cdot, \cdot])$ is called a **Lie-Algebra**.
+````
+
+A frequent example is the vector space of square matrices with the commutator $[A, B] = AB - BA$ as bilinear mapping. 
+Conditions (i), (ii), and (iii) obviously hold. Another important example is the Poisson brackets, to which we now turn.
+
+````{prf:definition} Poisson Brackets
+:label: def-poisson-brackets
+
+Let $A, B$ be differentiable, real-valued functions of two variables $x, p$ defined on $\mathbb{R}^n \times \mathbb{R}^n$. 
+The **Poisson brackets** are defined by:
+
+```{math}
+:label: equ-poisson-brackets
+\{A, B\} &= \partial_x A \, \partial_p B - \partial_p A \, \partial_x B \\
+&= \sum_{k=1}^n \partial_{x_k} A \, \partial_{p_k} B - \partial_{p_k} A \, \partial_{x_k} B
+```
+````
+````{prf:theorem} Properties of Poisson Brackets
+:label: thr-poisson-brackets
+
+**(a)** Let $V = C^1(\mathbb{R}^n)$. Then $(V, \{\cdot, \cdot\})$ is a Lie algebra.
+
+**(b)** The following equations hold for any $A \in V$, and any $x, p \in \mathbb{R}^n$:
+
+```{math}
+&\{A, x\} = -\partial_p A \\
+&\{A, p\} = \partial_x A
+```
+
+```{math}
+\{x, p\} = \begin{bmatrix}
+                & \vdots           \\
+        \cdots  & x_i p_j  &\cdots \\
+                & \vdots  
+    \end{bmatrix}_{i, j = 1, \ldots, n}
+```
+
+````
+````{prf:proof}
+TODO
+
+We only show the Jacobi equation {eq}`equ-jacobi`
+
+```{math}
+\{A, \{B, C\}\} + \{B, \{C, A\}\} + \{C, \{A, B\}\}
+```
+```{math}
+\{f, \{g, h\}\} + \{g, \{h, f\}\} + \{h, \{f, g\}\} = 0
+```
+
+
+Using abstract gradient symbols and the product rule $\partial(ab) = (\partial a)b + a(\partial b)$, we expand each nested bracket:
+
+```{math}
+\{f, \{g, h\}\} &= - \partial_p^2 g \partial_x f \partial_x h + \partial_x\partial_p g \partial_p f \partial_x h + \partial_x\partial_p g \partial_x f \partial_p h - \partial_x^2 g \partial_p f \partial_p h + \partial_p^2 h \partial_x f \partial_x g - \partial_x\partial_p h \partial_p f \partial_x g - \partial_x\partial_p h \partial_x f \partial_p g + \partial_x^2 h \partial_p f \partial_p g \\
+\{g, \{h, f\}\} &= \partial_p^2 f \partial_x g \partial_x h - \partial_x\partial_p f \partial_p g \partial_x h - \partial_x\partial_p f \partial_x g \partial_p h + \partial_x^2 f \partial_p g \partial_p h - \partial_p^2 h \partial_x f \partial_x g + \partial_x\partial_p h \partial_p f \partial_x g + \partial_x\partial_p h \partial_x f \partial_p g - \partial_x^2 h \partial_p f \partial_p g \\
+\{h, \{f, g\}\} &= - \partial_p^2 f \partial_x g \partial_x h + \partial_x\partial_p f \partial_p g \partial_x h + \partial_x\partial_p f \partial_x g \partial_p h - \partial_x^2 f \partial_p g \partial_p h + \partial_p^2 g \partial_x f \partial_x h - \partial_x\partial_p g \partial_p f \partial_x h - \partial_x\partial_p g \partial_x f \partial_p h + \partial_x^2 g \partial_p f \partial_p h
+```
+
+Summing all three expressions:
+
+```{math}
+\{f, \{g, h\}\} + \{g, \{h, f\}\} + \{h, \{f, g\}\} = 0
+```
+
+All terms cancel by direct verification. \qed
+````
+
 
 ## A Catalogue of Lagrangians
 
@@ -898,26 +951,7 @@ Flying Rocket
 
 
 
-## Classical Mechanics
 
-What’s the Problem: How do particles move in a field (spring, gravitational
-field, electric field, magnetic field, …) and how do particles affect the
-field?
-
-* Principle of Least Action (amazing, this principle rules the world!)
-* The Lagrangian defines the effort caused per unit of time
-* The action is the accumulated amount of effort over time
-* The principle says: Every system minimizes the action
-
-  * Equations of Motion (Euler-Lagrange, Hamiltonian)
-  * Principle of Relativity (sic): Speed is relative and symmetric (you cannot
-    tell which train is moving). There is no absolute rest (Galileo
-    Transformation)
-  
-* Consequences:
-    * Conservation of Momentum (Newton’s Laws)
-    * Conservation of Energy (Energy = the Hamiltonian)
-    * Conservation of Information (Theorem of Gibbs-Liouville)
 
 ## Intro
 

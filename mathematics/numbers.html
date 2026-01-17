@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -507,8 +507,8 @@ You can physically count the coins in your pocket but not the ones you owe your 
 The reals, the continuum, are quite different. The continuum is an abstraction of straight lines in space or time.
 However, quantum physics tells us that straight lines break down into discrete quanta when observed closely.
 And yet, the continuum is one of the most important and most useful abstractions ever conceived.</p>
-<p>Much of the material presented can be found in <span id="id1">[<a class="reference internal" href="calculus.html#id88" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
-<span id="id2">[<a class="reference internal" href="calculus.html#id89" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, <span id="id3">[<a class="reference internal" href="#id15" title="John Stillwell. Roads to Infinity: The Mathematics of Truth and Proof. A K Peters/CRC Press, 2010.">Stillwell, 2010</a>]</span>,
+<p>Much of the material presented can be found in <span id="id1">[<a class="reference internal" href="#id81" title="Harro Heuser. Lehrbuch der Analysis Teil 1. Vieweg+Teubner, 17th edition edition, 2009. First published 1980.">Heuser, 2009</a>]</span>,
+<span id="id2">[<a class="reference internal" href="#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, <span id="id3">[<a class="reference internal" href="#id15" title="John Stillwell. Roads to Infinity: The Mathematics of Truth and Proof. A K Peters/CRC Press, 2010.">Stillwell, 2010</a>]</span>,
 to name but a few prominent examples.
 Why did I write this paper? The starting point was the idea of a fast track from naturals to reals, with all
 difficulties included, but the boring parts sketched or omitted.
@@ -584,7 +584,7 @@ I don’t know, and, honestly, I don’t care too much. What seems clear to me i
 must have been first humans, probably at different times and different locations, to grasp the concept of a number.
 Today, many millennia later, the Peano axioms perfectly describe the set <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> of natural numbers for all mathematical purposes.</p>
 <div class="proof definition admonition" id="def-peano-axioms">
-<p class="admonition-title"><span class="caption-number">Definition 11 </span> (Peano Axioms)</p>
+<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Peano Axioms)</p>
 <section class="definition-content" id="proof-content">
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\mathbb{N}\)</span> is <strong>not empty</strong>: <span class="math notranslate nohighlight">\(0 \in \mathbb{N}\)</span></p></li>
@@ -609,7 +609,7 @@ then <span class="math notranslate nohighlight">\(\phi(n)\)</span> is true for e
 </section>
 </div><p>From these axioms, order, addition, and multiplication can be defined recursively:</p>
 <div class="proof definition admonition" id="def-add-mul-ord">
-<p class="admonition-title"><span class="caption-number">Definition 12 </span> (Addition, Multiplication, Ordering)</p>
+<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Addition, Multiplication, Ordering)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(n, m \in \mathbb{N}\)</span>.</p>
 <p><strong>a) Addition</strong></p>
@@ -633,7 +633,7 @@ We can start at <span class="math notranslate nohighlight">\(0\)</span> and cons
 by applying the successor function.
 The following is a formal definition of infinity, with no handwaving, no dots, and no “and so on.”</p>
 <div class="proof definition admonition" id="def-infinity">
-<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Infinity)</p>
+<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Infinity)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be any set.</p>
 <p><strong>a)</strong><span class="math notranslate nohighlight">\(A\)</span> is <strong>finite</strong> iff there is an <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> and an injection <span class="math notranslate nohighlight">\(\phi: A \to \{0, 1, \ldots, n\}\)</span>.</p>
@@ -645,10 +645,10 @@ This injection is often called an <strong>enumeration</strong>, a way of arrangi
 That’s a formal version of Hilbert’s Hotel, which can always accommodate an extra guest by moving everyone else up one room.
 Another injection would be <span class="math notranslate nohighlight">\(\phi(n) = 10^n\)</span>, with <span class="math notranslate nohighlight">\(B = \{1, 10, 100, \ldots\}\)</span>. <span class="math notranslate nohighlight">\(B\)</span> is a set with huge gaps, and yet,
 it’s still infinite: you never run out of natural numbers.</p>
-<p>The equivalence of <strong>not finite</strong> and <strong>infinite</strong> in <a class="reference internal" href="#def-infinity">Definition 13</a> is not obvious.
+<p>The equivalence of <strong>not finite</strong> and <strong>infinite</strong> in <a class="reference internal" href="#def-infinity">Definition 14</a> is not obvious.
 To prove it, we need a weak form of the axiom of choice.</p>
 <div class="proof definition admonition" id="def-axiom-countable-choice">
-<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Axiom of Countable Chioce)</p>
+<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Axiom of Countable Chioce)</p>
 <section class="definition-content" id="proof-content">
 <p>Every not finite set contains a countably infinite subset</p>
 </section>
@@ -664,10 +664,10 @@ Therefore, the power set of a countable set is always uncountable.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
-Let <span class="math notranslate nohighlight">\(A\)</span> be infinite and assume it to be finite. Let <span class="math notranslate nohighlight">\(\phi : A \to B\)</span> as claimed in <a class="reference internal" href="#def-infinity">Definition 13</a>.
+Let <span class="math notranslate nohighlight">\(A\)</span> be infinite and assume it to be finite. Let <span class="math notranslate nohighlight">\(\phi : A \to B\)</span> as claimed in <a class="reference internal" href="#def-infinity">Definition 14</a>.
 But <span class="math notranslate nohighlight">\(\left |\phi(A) \right | = \left | A \right | &gt; \left | B \right | = \left | \phi(A) \right |\)</span>.
 So <span class="math notranslate nohighlight">\(A\)</span> cannot be finite, it must be not finite.</p>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be not finite, and <span class="math notranslate nohighlight">\(\{a_0, a_1, \ldots \}\)</span> be a countably infinite subset as granted by <a class="reference internal" href="#def-axiom-countable-choice">Definition 14</a>.
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be not finite, and <span class="math notranslate nohighlight">\(\{a_0, a_1, \ldots \}\)</span> be a countably infinite subset as granted by <a class="reference internal" href="#def-axiom-countable-choice">Definition 15</a>.
 The function <span class="math notranslate nohighlight">\(\phi\)</span> defined by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\phi:
@@ -767,7 +767,7 @@ As any ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)
 the set <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is indeed the <strong>smallest ring containing <span class="math notranslate nohighlight">\(\mathbb{N}\)</span></strong>.
 <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> is countable, since it is the union of two countable sets.</p>
 <div class="proof definition admonition" id="definition-5">
-<p class="admonition-title"><span class="caption-number">Definition 15 </span> (Ordering of Integers)</p>
+<p class="admonition-title"><span class="caption-number">Definition 16 </span> (Ordering of Integers)</p>
 <section class="definition-content" id="proof-content">
 <p>We extend the order on <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> by setting, for <span class="math notranslate nohighlight">\(m, n \in \mathbb{N}\)</span>:</p>
 <div class="math notranslate nohighlight">
@@ -809,7 +809,7 @@ the set <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is inde
 <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> is countable, since it is the cross-product of two countable sets.</p>
 <p>The <strong>normal form</strong> of a rational number <span class="math notranslate nohighlight">\(a/b\)</span> requires <span class="math notranslate nohighlight">\(b &gt; 0\)</span> and <span class="math notranslate nohighlight">\(a, b\)</span> coprime.</p>
 <div class="proof definition admonition" id="definition-6">
-<p class="admonition-title"><span class="caption-number">Definition 16 </span> (Ordering of Rationals)</p>
+<p class="admonition-title"><span class="caption-number">Definition 17 </span> (Ordering of Rationals)</p>
 <section class="definition-content" id="proof-content">
 <p>We extend the order on <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> by setting, for <span class="math notranslate nohighlight">\(a/b, c/d \in \mathbb{Q}\)</span> in normal form:</p>
 <div class="math notranslate nohighlight">
@@ -837,7 +837,7 @@ The rest of this section is about curing this defect. The key concept is the Cau
 The following definitions are, for now, restricted to rationals (even the epsilons are rational!) because that’s all we have.
 But the definitions remain valid, of course, in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and in any metric space.</p>
 <div class="proof definition admonition" id="def-convergence">
-<p class="admonition-title"><span class="caption-number">Definition 17 </span> (Convergence of Rational Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Definition 18 </span> (Convergence of Rational Sequences)</p>
 <section class="definition-content" id="proof-content">
 <p><strong>(a)</strong>
 We call a sequence <span class="math notranslate nohighlight">\(\{x_n\}\)</span> <strong>convergent to <span class="math notranslate nohighlight">\(x\)</span></strong>, written as</p>
@@ -915,7 +915,7 @@ Therefore, the set <span class="math notranslate nohighlight">\(\mathbb{R}\)</sp
 We must define the distance and convergence of reals in terms of the distance and convergence of Cauchy sequences of rationals,
 an undertaking that involves a considerable number of epsilons.</p>
 <div class="proof definition admonition" id="def-convergence-reals">
-<p class="admonition-title"><span class="caption-number">Definition 18 </span> (Convergence of Real Sequences)</p>
+<p class="admonition-title"><span class="caption-number">Definition 19 </span> (Convergence of Real Sequences)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(r, s\)</span> be real numbers and <span class="math notranslate nohighlight">\(\{r_n\}_n\)</span> a sequence of reals numbers.
 Here is how they are represented by their defining Cauchy series of rationals:</p>
@@ -984,7 +984,7 @@ and <a class="reference internal" href="#equation-thr-r-completeness-2">(42)</a>
 <div class="math notranslate nohighlight">
 \[\lim_{n \to \infty}r_n = r\]</div>
 <p>We observe that in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(42)</a> we can choose <span class="math notranslate nohighlight">\(m\)</span> as we like.
-Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 18</a>):</p>
+Setting <span class="math notranslate nohighlight">\(m = k\)</span> we get (compare <a class="reference internal" href="#def-convergence-reals">Definition 19</a>):</p>
 <div class="math notranslate nohighlight">
 \[\forall \epsilon &gt; 0: \exists n_0(\epsilon): \forall n &gt; n_0(\epsilon): \exists k_1(\epsilon, n): \forall k &gt; k_1(\epsilon, n): \left | x_{n_k} - x_{k_k} \right | &lt; \epsilon\]</div>
 <p>which is what we want.</p>
@@ -994,7 +994,7 @@ We apply the triangular inequality to show that the diagonal sequence is a Cauch
 and, in statement <a class="reference internal" href="#equation-thr-r-completeness-2">(42)</a>,
 we replace the general <span class="math notranslate nohighlight">\(m\)</span> with a specific choice — this is how “forall” is meant to be employed.</p>
 <div class="proof definition admonition" id="definition-13">
-<p class="admonition-title"><span class="caption-number">Definition 19 </span> (Ordering of Reals)</p>
+<p class="admonition-title"><span class="caption-number">Definition 20 </span> (Ordering of Reals)</p>
 <section class="definition-content" id="proof-content">
 <p>We extend the order on <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> by setting, for <span class="math notranslate nohighlight">\(x = \{x_n\}, y = \{y_n\} \in \mathbb{R}\)</span>:</p>
 <div class="math notranslate nohighlight">
