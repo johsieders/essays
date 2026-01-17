@@ -28,6 +28,8 @@ parts:
         title: Problem of Free Will Dissolved *
       - file: philosophy/mathematics-existence
         title: What Exists in Mathematics? *
+      - file: philosophy/ethik
+        title: Von Aristoteles bis Nietzsche *
 
   - caption: Computer Science
     chapters:
