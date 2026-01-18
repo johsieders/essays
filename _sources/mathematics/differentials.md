@@ -6,222 +6,87 @@
 
 ## Introduction
 
+WORK IN PROGRESS
 
+## Linear Mappings, Matrices, Tensors
 
-todo
-
-
-## Derivatives on Hilbert Spaces
-
-````{prf:Definition} Derivatives
-:label: def-derivatives
-
-Let $F:U \to V$. The **derivative** $\partial F(x)$ of $F$ in $x$ is defined as 
+Let $A$ be a real (m x n)-Matrix, so $A^\intercal$ is (n x m). 
+$A$ defines a linear mapping $A:\mathbb{R}^m \to \mathbb{R}^n$ by 
 
 ```{math}
-\partial F = \lim_{h \to 0} \frac{1}{\| h \| }(F(x+h) - F(x))
+A(x) = A^\intercal x = \begin{bmatrix}
+                \vdots           \\
+                \sum _{i=1}^m a_{ij}x_i    \\
+                \vdots  
+    \end{bmatrix}_{j = 1, \ldots, n}
 ```
-or, equivalently: 
-
-```{math}
-:label: equ-derivatives
- 
-F(x+h) - F(x) = \partial F(x)\, h + o(h)
-```
-
-If such a mapping exists, $F$ is called differentiable in $x$. 
-The derivative of $F$ in $x$ is a linear mapping
-
-```{math}
-\partial F(x): 
-\left \{
-    \begin{array}{lr}
-        \mathbb{R}^n \to \mathbb{R}^m \\
-        h \mapsto \partial F(x) \, h
-    \end{array}
-\right .
-```
-
-that approximates the function $F$ locally in $x$ as shown in {eq}`equ-derivatives`.
-We will show that under weak assumptions, $\partial F$ can be calculated as 
-
-```{math}
-\partial F = \begin{bmatrix}
-        &\vdots \\
-        \cdots &\partial_i F_j &\cdots \\
-        &\vdots
-    \end{bmatrix}_{i = 1, \ldots, n; \, j = 1, \ldots, m}
-```
-
-The **differential operator** $\partial$ maps a differentiable function $F$ to a function 
-that maps a vector $x$ to the linear mapping  $\partial F(x)$:
-
-```{math}
-\partial: 
-\left \{
-    \begin{array}{lr}
-        C^1(\mathbb{R}^n, \mathbb{R}^m) \to C(\mathbb{R}^n, L(\mathbb{R}^n, \mathbb{R}^m))  \\
-        F \mapsto (x \mapsto \partial F(x))
-    \end{array}
-\right .
-```
- 
-
-````
-
-
-
-
-````{prf:Definition} Uniqueness of the Derivative
-:label: uniquness-derivative
-
-The derivative is unique. 
-````
-
-````{prf:proof} 
-Assume that there are two linear mappings $D, E$ satisfying {eq}`equ-derivatives`:
-
-```{math}
-&F(x+h) - F(x) = D \, h + o(h) \\
-&F(x+h) - F(x) = E \, h + o(h)
-```
-Then:
-```{math}
-D \, h + o(h) = E \, h + o(h)
-```
-
-which shows that $D = E$.
-````
-
-### Chain Rule, Product Pule
-
-
-````{prf:Theorem} Chain Rule
-:label: chain-rule
-
-Let $G:\mathbb{R}^n \to \mathbb{R}^m$ be differentiable in x and 
-$F:\mathbb{R}^m \to \mathbb{R}^k$ differentiable in G(x). 
-Then $F \circ G: \mathbb{R}^n \to \mathbb{R}^k$ is differentiable in $x$ and we have:
-
-```{math}
-\partial (F \circ G) = \partial F \circ G \cdot \partial G
-```
-or, written with arguments: 
-
-```{math}
-\partial (F \circ G)(x) = \partial F(G(x)) \cdot \partial G(x)
-```
-
-You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
-The case $p = 1$:
-
-$$
-D(g\circ F)(h)=\partial g\mathsf{T}\dot{F}\mathsf{T}h\text{               }(1\times 1)\mathsf{T}
-$$
-
-So, for instance:
-
-$$
-\partial _t(g(\text{tx}))=\partial g\mathsf{T}x\text{              }
-$$
-
-or, with an $n\times m$-Matrix $A$:
-
-$$
-\partial _t(g(t A))=\partial g\mathsf{T}A\text{     }
-$$
-
-Proof:
-
-$$
-G\circ F(x+h)=G(F(x)+ \text{DF}(x)(h)+o(h))
-
-\text{$\quad $            }=G(F(x))+\text{DG}(F(x))( \text{DF}(x)(h)+o(h))+o(h)
-
-\text{                      }=G\circ F(x)+(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
-$$
-
-So:
-
-$$
-G\circ F(x+h)-G\circ F(x)=(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
-$$
-
-which proves the assertion via uniqueness.
-
-## Matrices, Tensors, Linear Mappings
-
-Let $A$ be an ($n x m$)-Matrix, so $A^T$ is $(m x n)$. $A$ defines a linear mapping $A$$:\mathbb{R}^n\text{-$>$ \mathbb{R}^m$by 
-
-$$
-A(x) = A\mathsf{T}x = \left(
-\begin{array}{c}
- . 
- \sum _{j=1}^n a_{\text{ij}}x_j 
- . 
-\end{array}
-\right) {}_{i=1,\text{..},m}
-$$
 
 Likewise,
 
-$$
-y(A) = y\mathsf{T}A = \left(
-\begin{array}{c}
- . 
- \sum _{i=1}^m y_ia_{\text{ij}} 
- . 
-\end{array}
-\right) {}_{j=1,\text{..},n}
-$$
+```{math}
+x(A) = x^\intercal A = \begin{bmatrix}
+                \vdots           \\
+                \sum _{i=1}^m x_i a_{ij}    \\
+                \vdots  
+    \end{bmatrix}_{j = 1, \ldots, n}
+```
 
-So, every vector and every matrix can also be considered a linear mapping defined as above. Physicists use an alternative notation:
+So, every vector and every matrix can also be considered a linear mapping defined as above. 
+Physicists use an alternative notation:
 
-$$
-\langle A|x\rangle  = A\mathsf{T}x =A(x)
+```{math}
+&\langle A | x \rangle  = A^\intercal x = A(x)  \\
+&\langle x | A \rangle  = x^\intercal A = x(A) \\
+&\langle B | A | x \rangle = \langle B | \langle A | x \rangle \rangle = B^\intercal A^\intercal x = (A B)^\intercal x = B(A(x))
+```
 
-\langle y|A\rangle  = y\mathsf{T}A =y(A)
+To the right of the bar is the argument, and to the left is the function. 
+No need to care about transpositions.
 
-\langle B|A|x\rangle =\langle B|\langle A|x\rangle \rangle =B\mathsf{T} A\mathsf{T}x = (A B)\mathsf{T}x=B(A(x))
-$$
+Let $B$ be a (n x p)-Matrix, so $B^\intercal$ is (p x m). $B$ defines a linear mapping $B:\mathbb{R}^n \to \mathbb{R}^p$
+by the same procedure. The linear mapping $B\circ A: \mathbb{R}^m \to \mathbb{R}^p$ is defined by
 
-What is right of the bar is the argument, what is left of the bar is the function. No need to care about transpositions.
 
-Let $B$ be an ($m x p$)-Matrix, so $B^T$ is $(p x m)$.$B$ defines a linear mapping $B$$:\mathbb{R}^m\text{-$>$ \mathbb{R}^p$by the
-same procedure. Then the linear mapping $B\circ A$$:\mathbb{R}^n\text{-$>$ \mathbb{R}^p$is defined by
+```{math}
+(B\circ A)(x) = B(A(x)) =B^\intercal A^\intercal x =(A B)^\intercal x =
+\begin{bmatrix}
+                \vdots           \\
+                \sum_{i=1}^m \sum_{j=1}^n a_{ij}b_{jk} x_i    \\
+                \vdots  
+    \end{bmatrix}_{k = 1, \ldots, p}
+```
 
-$$
-(B\circ A)(x) = B(A(x)) =B\mathsf{T} A\mathsf{T}x =(A B)\mathsf{T}x=\left(
-\begin{array}{c}
- . 
- \underset{j=1}{\overset{n}{\sum _{i=1}^m \sum }}b_{\text{ki}}a_{\text{ij}}x_j 
- . 
-\end{array}
-\right) {}_{k=1,\text{..},p}
-$$
+```{math}
+B\circ A = \begin{bmatrix}
+                   &\vdots           \\
+           \cdots  &\sum_{j=1}^n a_{ij}b_{jk} &\cdots    \\
+                   &\vdots  
+    \end{bmatrix}_{i = 1, \ldots, m; \, k = 1, \ldots, p}
+```
 
-The matrix $(A\circ B)\mathsf{T$ is $(p\times n)$.  This is important for the chain rule. The case $p = 1$ is frequent:  1 
+The matrix $(A\circ B)^\intercal$ is (n x p). This is important for the chain rule. The case $p = 1$ is frequent:
 
-$$
-B = b = \left(
-\begin{array}{c}
- b_1 
- . 
- b_m 
-\end{array}
-\right)
-$$
 
-$$
-(b\circ A)(x)= b\mathsf{T} A\mathsf{T}x =(A b)\mathsf{T}x= \sum _{i=1}^m \sum _{j=1}^n b_ia_{\text{ij}}x_j
-$$
+```{math}
+B = b =
+\begin{bmatrix}
+                b_1           \\
+                \vdots    \\
+                b_n  
+\end{bmatrix}
+```
+
+
+```{math}
+(b\circ A)(x)= b^\intercal A^\intercal x =(A b)^\intercal x= \sum _{i=1}^m \sum _{j=1}^n a_{ij} b_j x_i
+```
 
 ### Tensors, Frobenius Product
 
  Let $x$ $\in $ $\mathbb{R}^n$, $y$ $\in $ $\mathbb{R}^m$. Then
 
 $$
-x\unicode{f3da}y =x\cdot y\mathsf{T}= \left(
+x\unicode{f3da}y =x\cdot y\intercal= \left(
 \begin{array}{cccc}
  x_1y_1 & . & . & x_1y_m 
  . &   &   & . 
@@ -235,31 +100,34 @@ $$
 \text{$\quad $        }x^{\unicode{f3da}q}= \left(
 \begin{array}{ccc}
  . & . & . 
- . & x_{j_1}x_{j_2}\text{..} x_{j_q} & .  
+ . & x_{j_1}x_{j_2}\ldots x_{j_q} & .  
  . & . & . 
 \end{array}
-\right)_{j_1,\text{..},j_q=1,\text{..},n }
+\right)_{j_1,\ldots,j_q=1,\ldots,n }
 $$
 
-$>>>$ Let S, T be tensors with shape = $\left(n_1, n_2,\text{..}, n_q\right)$. Then the Frobenius product $\langle S,T\rangle$of $S$and $T$
+$>>>$ Let S, T be tensors with shape = $\left(n_1, n_2,\ldots, n_q\right)$. Then the Frobenius product $\langle S,T\rangle$of $S$and $T$
 is defined by
 
 $$
-\langle S,T\rangle =\sum _{j_q=1}^{n_q} \text{..}\sum _{j_2=1}^{n_2} \sum _{j_1=1}^{n_1} s_{j_q,\text{..},j_1}t_{j_1,\text{..},j_q}
+\langle S,T\rangle =\sum _{j_q=1}^{n_q} \ldots\sum _{j_2=1}^{n_2} \sum _{j_1=1}^{n_1} s_{j_q,\ldots,j_1}t_{j_1,\ldots,j_q}
 $$
 
 $>>>$ or, in Einstein notation:
 
 $$
-\langle S,T\rangle =s_{j_1,\text{..},j_q}t^{j_1,\text{..},j_q}
+\langle S,T\rangle =s_{j_1,\ldots,j_q}t^{j_1,\ldots,j_q}
 $$
 
-So, $h^{\unicode{f3da}q$ is a tensors with shape = $(n, n, \text{..},n)$ with $q$ times $n$. With an $(n\times n)$-matrix $A$ we have:
+So, $h^{\unicode{f3da}q$ is a tensors with shape = $(n, n, \ldots,n)$ with $q$ times $n$. With an $(n\times n)$-matrix $A$ we have:
 
 $$
-\quad \quad h\mathsf{T}A h =\left\langle A,h^{\unicode{f3da}2}\right\rangle =\left\langle A\mathsf{T},h^{\unicode{f3da}2}\right\rangle =h\mathsf{T}A\mathsf{T}
+\quad \quad h\intercalA h =\left\langle A,h^{\unicode{f3da}2}\right\rangle =\left\langle A\intercal,h^{\unicode{f3da}2}\right\rangle =h\intercalA\intercal
 h
 $$
+
+
+
 
 ## Vector Calculus in $\mathbb{R^n$
 
@@ -267,7 +135,7 @@ Let $F:\mathbb{R}^n\text{-$>$ \mathbb{R}^m$be a function. A linear mapping $\tex
 of $F$ in $x$, iff
 
 $$
-F(x+h)-F(x)=\text{DF}(x)(h)+o(h)=\text{DF}(x)\mathsf{T}h+o(h)
+F(x+h)-F(x)=\text{DF}(x)(h)+o(h)=\text{DF}(x)\intercalh+o(h)
 $$
 
 $\text{DF}(x)$ is also called the Jacobian of $F$ in $x$. 
@@ -286,7 +154,7 @@ $$
 $$
 
 $$
-=\partial F(x)\mathsf{T}h
+=\partial F(x)\intercalh
 $$
 
 The first equation is the definition of the directional derivative, the second definition of the derivative in one dimension, and the third follows
@@ -314,26 +182,26 @@ $$
 Note that:
 
 $$
-(\text{DG}(F)\circ \text{DF} )(h)=\text{DG}(F)(\text{DF} (h))=\text{DG}(F)\mathsf{T}\cdot \text{DF}\mathsf{T}h
+(\text{DG}(F)\circ \text{DF} )(h)=\text{DG}(F)(\text{DF} (h))=\text{DG}(F)\intercal\cdot \text{DF}\intercalh
 $$
 
 You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
 The case $p = 1$:
 
 $$
-D(g\circ F)(h)=\partial g\mathsf{T}\dot{F}\mathsf{T}h\text{               }(1\times 1)\mathsf{T}
+D(g\circ F)(h)=\partial g\intercal\dot{F}\intercalh\text{               }(1\times 1)\intercal
 $$
 
 So, for instance:
 
 $$
-\partial _t(g(\text{tx}))=\partial g\mathsf{T}x\text{              }
+\partial _t(g(\text{tx}))=\partial g\intercalx\text{              }
 $$
 
 or, with an $n\times m$-Matrix $A$:
 
 $$
-\partial _t(g(t A))=\partial g\mathsf{T}A\text{     }
+\partial _t(g(t A))=\partial g\intercalA\text{     }
 $$
 
 Proof:
@@ -359,15 +227,15 @@ which proves the assertion via uniqueness.
 Let $F:\mathbb{R}^n\text{-$>$ \mathbb{R}^m$be a function. The partial derivative of $F_i$ with respect to $x_j$ is defined as:
 
 $$
-\partial _jF_i\left(x_1,\text{..},x_j,\text{..}x_n\right)=lim_{h\text{-$>$0}\frac{1}{h}\left(F_i\left(x_1,\text{..},x_j+h,\text{..}x_1\right)-F_i\left(x_1,\text{..},x_j,\text{..}x_n\right)\right)
+\partial _jF_i\left(x_1,\ldots,x_j,\ldotsx_n\right)=lim_{h\text{-$>$0}\frac{1}{h}\left(F_i\left(x_1,\ldots,x_j+h,\ldotsx_1\right)-F_i\left(x_1,\ldots,x_j,\ldotsx_n\right)\right)
 $$
 
-Let $\left(j_1, j_2,\text{..}, j_q\right)$ be a sequence of indices. The partial derivative of $F_i$ with respect to $x_{j_1},x_{j_2},\text{..},
+Let $\left(j_1, j_2,\ldots, j_q\right)$ be a sequence of indices. The partial derivative of $F_i$ with respect to $x_{j_1},x_{j_2},\ldots,
 x_{j_q$ is recursively defined as:
 
 $$
-\partial _{j_1}\partial _{j_2}\text{..}\partial _{j_q}F_i\left(x_1,.,x_j,.x_n\right)=lim_{h\text{-$>$0}\frac{1}{h}\left(\partial _{j_2}\text{..}\partial
-_{j_q}F_i\left(x_1,.,x_{j_1}+h,.,x_n\right)-\partial _{j_2}\text{..}\partial _{j_q}F_i\left(x_1,.,x_{j_1},.,x_n\right)\right)
+\partial _{j_1}\partial _{j_2}\ldots\partial _{j_q}F_i\left(x_1,.,x_j,.x_n\right)=lim_{h\text{-$>$0}\frac{1}{h}\left(\partial _{j_2}\ldots\partial
+_{j_q}F_i\left(x_1,.,x_{j_1}+h,.,x_n\right)-\partial _{j_2}\ldots\partial _{j_q}F_i\left(x_1,.,x_{j_1},.,x_n\right)\right)
 $$
 
 ### Theorem 3 (Jacobian and Partial Derivatives)
@@ -381,13 +249,13 @@ $$
 which is the same as (omitting the argument $x$)
 
 $$
-\text{DF}_{\text{ji}} =\partial _jF_i (j=1,\text{..},n;i=1,\text{..},m)
+\text{DF}_{\text{ji}} =\partial _jF_i (j=1,\ldots,n;i=1,\ldots,m)
 $$
 
 So:
 
 $$
-F(x+h)-F(x)=\partial \unicode{f3da}F(x)\mathsf{T}h+o(h)
+F(x+h)-F(x)=\partial \unicode{f3da}F(x)\intercalh+o(h)
 $$
 
 b) If all $\partial _jF_i$ are continuous in an open environment $U$ of $x$, then $F$ is differentiable in $U$, and (a) holds for all $y\in
@@ -405,19 +273,19 @@ $$
 So, if all $\partial _i\partial _jf$ are continuously differentiable in an open environment of x, then Theorem 3 applies and we have:
 
 $$
-\partial ^{\unicode{f3da}2}=\left(\partial ^{\unicode{f3da}2}\right)\mathsf{T}
+\partial ^{\unicode{f3da}2}=\left(\partial ^{\unicode{f3da}2}\right)\intercal
 $$
 
 which is the same as
 
 $$
-\partial _i\partial _jf(x)=\partial _j\partial _if(x)\text{  }(i,j=1,\text{..},n)
+\partial _i\partial _jf(x)=\partial _j\partial _if(x)\text{  }(i,j=1,\ldots,n)
 $$
 
 More generally, multiple derivative, such as
 
 $$
-\partial _{j_1}\partial _{j_2}\text{..}\partial _{j_q}f(x)
+\partial _{j_1}\partial _{j_2}\ldots\partial _{j_q}f(x)
 $$
 
 do not depend on the order of the indices, or, equivalently, the tensor of partial derivatives is fully symmetric.
@@ -452,10 +320,10 @@ $$
 \partial ^{\unicode{f3da}q}= \left(
 \begin{array}{ccc}
  . & . & . 
- . & \partial _{j_1}\partial _{j_2}\text{..} \partial _{j_q} & .  
+ . & \partial _{j_1}\partial _{j_2}\ldots \partial _{j_q} & .  
  . & . & . 
 \end{array}
-\right)_{j_1,\text{..},j_q=1,\text{..},n }\text{  }(\text{tensor} \text{of} \text{partial} \text{derivatives} \text{of} \text{rank} q)
+\right)_{j_1,\ldots,j_q=1,\ldots,n }\text{  }(\text{tensor} \text{of} \text{partial} \text{derivatives} \text{of} \text{rank} q)
 $$
 
 $$
@@ -486,7 +354,7 @@ D^2F=\partial ^{\unicode{f3da}2}\unicode{f3da}F =\left(
  . &  \partial _k\partial _jF_i & . 
  . &  . & . 
 \end{array}
-\right)_{j=1,\text{..}nk=1,\text{..}ni=1,\text{..},m}=\left(
+\right)_{j=1,\ldotsnk=1,\ldotsni=1,\ldots,m}=\left(
 \begin{array}{cccc}
  \partial _1\text{DF} & . & . & \partial _n\text{DF} 
 \end{array}
@@ -495,10 +363,10 @@ D^2F=\partial ^{\unicode{f3da}2}\unicode{f3da}F =\left(
 \partial ^{\unicode{f3da}q}\unicode{f3da}F= \left(
 \begin{array}{ccc}
  . & . & . 
- . & \partial _{j_1}\partial _{j_2}\text{..} \partial _{j_qF_i} & .  
+ . & \partial _{j_1}\partial _{j_2}\ldots \partial _{j_qF_i} & .  
  . & . & . 
 \end{array}
-\right)_{j_1,\text{..},j_q=1,\text{..},n i=1,\text{..}m}
+\right)_{j_1,\ldots,j_q=1,\ldots,n i=1,\ldotsm}
 $$
 
 The terms $\partial ,\partial ^{\unicode{f3da}q$ and their aliases ($\nabla $, grad, H, D, J) are operators that map a scalar- or vector-valued
@@ -718,23 +586,23 @@ stationary point of $f$.
 Proof (for minimum only): Let h$\in $$\mathbb{R}^n$ be a small vector. Then:
 
 $$
-f(x)\leq f(x+h)=f(x)+\partial f(x)\mathsf{T}h+o(h)\text{   }(\text{works} \text{for} h \text{and} \text{-h})
+f(x)\leq f(x+h)=f(x)+\partial f(x)\intercalh+o(h)\text{   }(\text{works} \text{for} h \text{and} \text{-h})
 
-0\leq \partial f(x)\mathsf{T}h+o(\| h\| )
+0\leq \partial f(x)\intercalh+o(\| h\| )
 
-0\leq \frac{\partial f(x)\mathsf{T}h}{\| h\| }+\frac{o(\| h\| )}{\| h\| }
+0\leq \frac{\partial f(x)\intercalh}{\| h\| }+\frac{o(\| h\| )}{\| h\| }
 
-0\leq -\frac{\partial f(x)\mathsf{T}h}{\| h\| }+\frac{o(\| h\| )}{\| h\| }
+0\leq -\frac{\partial f(x)\intercalh}{\| h\| }+\frac{o(\| h\| )}{\| h\| }
 $$
 
 So, for small positive $\epsilon$ we get:
 
 $$
-\frac{\partial f(x)\mathsf{T}h}{\| h\| }-\epsilon \leq 0\leq \frac{\partial f(x)\mathsf{T}h}{\| h\| }+\epsilon
+\frac{\partial f(x)\intercalh}{\| h\| }-\epsilon \leq 0\leq \frac{\partial f(x)\intercalh}{\| h\| }+\epsilon
 $$
 
 $$
--\epsilon \leq -\frac{\partial f(x)\mathsf{T}h}{\| h\| }\leq +\epsilon
+-\epsilon \leq -\frac{\partial f(x)\intercalh}{\| h\| }\leq +\epsilon
 $$
 
 which proves the statement.
@@ -836,7 +704,7 @@ $$
 because:
 
 $$
-\frac{d}{dt}f(x+\text{th})=\sum _{j=1}^n \partial _jf(x+\text{th})h_j=\partial f(x+\text{th})\mathsf{T}h=\langle \partial f(x+\text{th}),h\rangle
+\frac{d}{dt}f(x+\text{th})=\sum _{j=1}^n \partial _jf(x+\text{th})h_j=\partial f(x+\text{th})\intercalh=\langle \partial f(x+\text{th}),h\rangle
 
 \frac{d^2}{dt^2}f(x+\text{th})=\sum _{i=1}^n \sum _{j=1}^n \partial _i\partial _jf(x+\text{th})h_ih_j=\left\langle \partial ^{\unicode{f3da}2}f(x+\text{th}),
 h^{\unicode{f3da}2}\right\rangle
@@ -984,3 +852,136 @@ $$
 The first two terms are known from V3. It is the last (third) term we have to compute. We assume initially $\phi $ and $h$ to be scalars as in
 V2.
 
+
+## Derivatives on Hilbert Spaces
+
+````{prf:Definition} Derivatives
+:label: def-derivatives
+
+Let $F:U \to V$. The **derivative** $\partial F(x)$ of $F$ in $x$ is defined as 
+
+```{math}
+\partial F = \lim_{h \to 0} \frac{1}{\| h \| }(F(x+h) - F(x))
+```
+or, equivalently: 
+
+```{math}
+:label: equ-derivatives
+ 
+F(x+h) - F(x) = \partial F(x)\, h + o(h)
+```
+
+If such a mapping exists, $F$ is called differentiable in $x$. 
+The derivative of $F$ in $x$ is a linear mapping
+
+```{math}
+\partial F(x): 
+\left \{
+    \begin{array}{lr}
+        \mathbb{R}^n \to \mathbb{R}^m \\
+        h \mapsto \partial F(x) \, h
+    \end{array}
+\right .
+```
+
+that approximates the function $F$ locally in $x$ as shown in {eq}`equ-derivatives`.
+We will show that under weak assumptions, $\partial F$ can be calculated as 
+
+```{math}
+\partial F = \begin{bmatrix}
+        &\vdots \\
+        \cdots &\partial_i F_j &\cdots \\
+        &\vdots
+    \end{bmatrix}_{i = 1, \ldots, m; \, j = 1, \ldots, n}
+```
+
+The **differential operator** $\partial$ maps a differentiable function $F$ to a function 
+that maps a vector $x$ to the linear mapping  $\partial F(x)$:
+
+```{math}
+\partial: 
+\left \{
+    \begin{array}{lr}
+        C^1(\mathbb{R}^n, \mathbb{R}^m) \to C(\mathbb{R}^n, L(\mathbb{R}^n, \mathbb{R}^m))  \\
+        F \mapsto (x \mapsto \partial F(x))
+    \end{array}
+\right .
+``` 
+````
+
+````{prf:Definition} Uniqueness of the Derivative
+:label: uniquness-derivative
+
+The derivative is unique. 
+````
+
+````{prf:proof} 
+Assume that there are two linear mappings $D, E$ satisfying {eq}`equ-derivatives`:
+
+```{math}
+&F(x+h) - F(x) = D \, h + o(h) \\
+&F(x+h) - F(x) = E \, h + o(h)
+```
+Then:
+```{math}
+D \, h + o(h) = E \, h + o(h)
+```
+
+which shows that $D = E$.
+````
+
+### Chain Rule, Product Pule
+
+
+````{prf:Theorem} Chain Rule
+:label: chain-rule
+
+Let $G:\mathbb{R}^n \to \mathbb{R}^m$ be differentiable in x and 
+$F:\mathbb{R}^m \to \mathbb{R}^k$ differentiable in G(x). 
+Then $F \circ G: \mathbb{R}^n \to \mathbb{R}^k$ is differentiable in $x$ and we have:
+
+```{math}
+\partial (F \circ G) = \partial F \circ G \cdot \partial G
+```
+or, written with arguments: 
+
+```{math}
+\partial (F \circ G)(x) = \partial F(G(x)) \cdot \partial G(x)
+```
+
+You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
+The case $p = 1$:
+
+$$
+D(g\circ F)(h)=\partial g\intercal\dot{F}\intercalh\text{               }(1\times 1)\intercal
+$$
+
+So, for instance:
+
+$$
+\partial _t(g(\text{tx}))=\partial g\intercalx\text{              }
+$$
+
+or, with an $n\times m$-Matrix $A$:
+
+$$
+\partial _t(g(t A))=\partial g\intercalA\text{     }
+$$
+
+Proof:
+
+$$
+G\circ F(x+h)=G(F(x)+ \text{DF}(x)(h)+o(h))
+
+\text{$\quad $            }=G(F(x))+\text{DG}(F(x))( \text{DF}(x)(h)+o(h))+o(h)
+
+\text{                      }=G\circ F(x)+(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+$$
+
+So:
+
+$$
+G\circ F(x+h)-G\circ F(x)=(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+$$
+
+which proves the assertion via uniqueness.

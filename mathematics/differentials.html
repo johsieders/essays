@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -195,7 +195,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../philosophy/ethik.html">Von Aristoteles bis Nietzsche - Wege zum guten Leben *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/ethik.html">Von Aristoteles bis Nietzsche *</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
 <ul class="nav bd-sidenav">
@@ -466,11 +466,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-on-hilbert-spaces">Derivatives on Hilbert Spaces</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule-product-pule">Chain Rule, Product Pule</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-tensors-linear-mappings">Matrices, Tensors, Linear Mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-mappings-matrices-tensors">Linear Mappings, Matrices, Tensors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-frobenius-product">Tensors, Frobenius Product</a></li>
 </ul>
 </li>
@@ -498,6 +494,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule">Chain Rule</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-on-hilbert-spaces">Derivatives on Hilbert Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule-product-pule">Chain Rule, Product Pule</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -515,169 +515,64 @@ document.write(`
 <p><em>Johannes Siedersleben, April 2026</em></p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>todo</p>
+<p>WORK IN PROGRESS</p>
 </section>
-<section id="derivatives-on-hilbert-spaces">
-<h2>Derivatives on Hilbert Spaces<a class="headerlink" href="#derivatives-on-hilbert-spaces" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="def-derivatives">
-<p class="admonition-title"><span class="caption-number">Definition 30 </span> (Derivatives)</p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(F:U \to V\)</span>. The <strong>derivative</strong> <span class="math notranslate nohighlight">\(\partial F(x)\)</span> of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span> is defined as</p>
+<section id="linear-mappings-matrices-tensors">
+<h2>Linear Mappings, Matrices, Tensors<a class="headerlink" href="#linear-mappings-matrices-tensors" title="Link to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a real (m x n)-Matrix, so <span class="math notranslate nohighlight">\(A^\intercal\)</span> is (n x m).
+<span class="math notranslate nohighlight">\(A\)</span> defines a linear mapping <span class="math notranslate nohighlight">\(A:\mathbb{R}^m \to \mathbb{R}^n\)</span> by</p>
 <div class="math notranslate nohighlight">
-\[\partial F = \lim_{h \to 0} \frac{1}{\| h \| }(F(x+h) - F(x))\]</div>
-<p>or, equivalently:</p>
-<div class="math notranslate nohighlight" id="equation-equ-derivatives">
-<span class="eqno">(74)<a class="headerlink" href="#equation-equ-derivatives" title="Link to this equation">#</a></span>\[F(x+h) - F(x) = \partial F(x)\, h + o(h)\]</div>
-<p>If such a mapping exists, <span class="math notranslate nohighlight">\(F\)</span> is called differentiable in <span class="math notranslate nohighlight">\(x\)</span>.
-The derivative of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span> is a linear mapping</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\partial F(x): 
-\left \{
-    \begin{array}{lr}
-        \mathbb{R}^n \to \mathbb{R}^m \\
-        h \mapsto \partial F(x) \, h
-    \end{array}
-\right .\end{split}\]</div>
-<p>that approximates the function <span class="math notranslate nohighlight">\(F\)</span> locally in <span class="math notranslate nohighlight">\(x\)</span> as shown in <a class="reference internal" href="#equation-equ-derivatives">(74)</a>.
-We will show that under weak assumptions, <span class="math notranslate nohighlight">\(\partial F\)</span> can be calculated as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\partial F = \begin{bmatrix}
-        &amp;\vdots \\
-        \cdots &amp;\partial_i F_j &amp;\cdots \\
-        &amp;\vdots
-    \end{bmatrix}_{i = 1, \ldots, n; \, j = 1, \ldots, m}\end{split}\]</div>
-<p>The <strong>differential operator</strong> <span class="math notranslate nohighlight">\(\partial\)</span> maps a differentiable function <span class="math notranslate nohighlight">\(F\)</span> to a function
-that maps a vector <span class="math notranslate nohighlight">\(x\)</span> to the linear mapping  <span class="math notranslate nohighlight">\(\partial F(x)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\partial: 
-\left \{
-    \begin{array}{lr}
-        C^1(\mathbb{R}^n, \mathbb{R}^m) \to C(\mathbb{R}^n, L(\mathbb{R}^n, \mathbb{R}^m))  \\
-        F \mapsto (x \mapsto \partial F(x))
-    \end{array}
-\right .\end{split}\]</div>
-</section>
-</div><div class="proof definition admonition" id="uniquness-derivative">
-<p class="admonition-title"><span class="caption-number">Definition 31 </span> (Uniqueness of the Derivative)</p>
-<section class="definition-content" id="proof-content">
-<p>The derivative is unique.</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. Assume that there are two linear mappings <span class="math notranslate nohighlight">\(D, E\)</span> satisfying <a class="reference internal" href="#equation-equ-derivatives">(74)</a>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}&amp;F(x+h) - F(x) = D \, h + o(h) \\
-&amp;F(x+h) - F(x) = E \, h + o(h)\end{split}\]</div>
-<p>Then:</p>
-<div class="math notranslate nohighlight">
-\[D \, h + o(h) = E \, h + o(h)\]</div>
-<p>which shows that <span class="math notranslate nohighlight">\(D = E\)</span>.</p>
-</div>
-<section id="chain-rule-product-pule">
-<h3>Chain Rule, Product Pule<a class="headerlink" href="#chain-rule-product-pule" title="Link to this heading">#</a></h3>
-<div class="proof theorem admonition" id="chain-rule">
-<p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Chain Rule)</p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(G:\mathbb{R}^n \to \mathbb{R}^m\)</span> be differentiable in x and
-<span class="math notranslate nohighlight">\(F:\mathbb{R}^m \to \mathbb{R}^k\)</span> differentiable in G(x).
-Then <span class="math notranslate nohighlight">\(F \circ G: \mathbb{R}^n \to \mathbb{R}^k\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span> and we have:</p>
-<div class="math notranslate nohighlight">
-\[\partial (F \circ G) = \partial F \circ G \cdot \partial G\]</div>
-<p>or, written with arguments:</p>
-<div class="math notranslate nohighlight">
-\[\partial (F \circ G)(x) = \partial F(G(x)) \cdot \partial G(x)\]</div>
-<p>You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
-The case <span class="math notranslate nohighlight">\(p = 1\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-D(g\circ F)(h)=\partial g\mathsf{T}\dot{F}\mathsf{T}h\text{               }(1\times 1)\mathsf{T}
-\]</div>
-<p>So, for instance:</p>
-<div class="math notranslate nohighlight">
-\[
-\partial _t(g(\text{tx}))=\partial g\mathsf{T}x\text{              }
-\]</div>
-<p>or, with an <span class="math notranslate nohighlight">\(n\times m\)</span>-Matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\partial _t(g(t A))=\partial g\mathsf{T}A\text{     }
-\]</div>
-<p>Proof:</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-G\circ F(x+h)=G(F(x)+ \text{DF}(x)(h)+o(h))\\\text{$\quad $            }=G(F(x))+\text{DG}(F(x))( \text{DF}(x)(h)+o(h))+o(h)\\\text{                      }=G\circ F(x)+(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
-\end{aligned}\end{align} \]</div>
-<p>So:</p>
-<div class="math notranslate nohighlight">
-\[
-G\circ F(x+h)-G\circ F(x)=(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
-\]</div>
-<p>which proves the assertion via uniqueness.</p>
-</section>
-</div></section>
-</section>
-<section id="matrices-tensors-linear-mappings">
-<h2>Matrices, Tensors, Linear Mappings<a class="headerlink" href="#matrices-tensors-linear-mappings" title="Link to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be an (<span class="math notranslate nohighlight">\(n x m\)</span>)-Matrix, so <span class="math notranslate nohighlight">\(A^T\)</span> is <span class="math notranslate nohighlight">\((m x n)\)</span>. <span class="math notranslate nohighlight">\(A\)</span> defines a linear mapping <span class="math notranslate nohighlight">\(A\)</span><span class="math notranslate nohighlight">\(:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>by</p>
-<div class="math notranslate nohighlight">
-\[
-A(x) = A\mathsf{T}x = \left(
-\begin{array}{c}
- . 
- \sum _{j=1}^n a_{\text{ij}}x_j 
- . 
-\end{array}
-\right) {}_{i=1,\text{..},m}
-\]</div>
+\[\begin{split}A(x) = A^\intercal x = \begin{bmatrix}
+                \vdots           \\
+                \sum _{i=1}^m a_{ij}x_i    \\
+                \vdots  
+    \end{bmatrix}_{j = 1, \ldots, n}\end{split}\]</div>
 <p>Likewise,</p>
 <div class="math notranslate nohighlight">
-\[
-y(A) = y\mathsf{T}A = \left(
-\begin{array}{c}
- . 
- \sum _{i=1}^m y_ia_{\text{ij}} 
- . 
-\end{array}
-\right) {}_{j=1,\text{..},n}
-\]</div>
-<p>So, every vector and every matrix can also be considered a linear mapping defined as above. Physicists use an alternative notation:</p>
+\[\begin{split}x(A) = x^\intercal A = \begin{bmatrix}
+                \vdots           \\
+                \sum _{i=1}^m x_i a_{ij}    \\
+                \vdots  
+    \end{bmatrix}_{j = 1, \ldots, n}\end{split}\]</div>
+<p>So, every vector and every matrix can also be considered a linear mapping defined as above.
+Physicists use an alternative notation:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-\langle A|x\rangle  = A\mathsf{T}x =A(x)\\\langle y|A\rangle  = y\mathsf{T}A =y(A)\\\langle B|A|x\rangle =\langle B|\langle A|x\rangle \rangle =B\mathsf{T} A\mathsf{T}x = (A B)\mathsf{T}x=B(A(x))
-\end{aligned}\end{align} \]</div>
-<p>What is right of the bar is the argument, what is left of the bar is the function. No need to care about transpositions.</p>
-<p>Let <span class="math notranslate nohighlight">\(B\)</span> be an (<span class="math notranslate nohighlight">\(m x p\)</span>)-Matrix, so <span class="math notranslate nohighlight">\(B^T\)</span> is <span class="math notranslate nohighlight">\((p x m)\)</span>.<span class="math notranslate nohighlight">\(B\)</span> defines a linear mapping <span class="math notranslate nohighlight">\(B\)</span><span class="math notranslate nohighlight">\(:\mathbb{R}^m\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^p\)</span>by the
-same procedure. Then the linear mapping <span class="math notranslate nohighlight">\(B\circ A\)</span><span class="math notranslate nohighlight">\(:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^p\)</span>is defined by</p>
+\[\begin{split}&amp;\langle A | x \rangle  = A^\intercal x = A(x)  \\
+&amp;\langle x | A \rangle  = x^\intercal A = x(A) \\
+&amp;\langle B | A | x \rangle = \langle B | \langle A | x \rangle \rangle = B^\intercal A^\intercal x = (A B)^\intercal x = B(A(x))\end{split}\]</div>
+<p>To the right of the bar is the argument, and to the left is the function.
+No need to care about transpositions.</p>
+<p>Let <span class="math notranslate nohighlight">\(B\)</span> be a (n x p)-Matrix, so <span class="math notranslate nohighlight">\(B^\intercal\)</span> is (p x m). <span class="math notranslate nohighlight">\(B\)</span> defines a linear mapping <span class="math notranslate nohighlight">\(B:\mathbb{R}^n \to \mathbb{R}^p\)</span>
+by the same procedure. The linear mapping <span class="math notranslate nohighlight">\(B\circ A: \mathbb{R}^m \to \mathbb{R}^p\)</span> is defined by</p>
 <div class="math notranslate nohighlight">
-\[
-(B\circ A)(x) = B(A(x)) =B\mathsf{T} A\mathsf{T}x =(A B)\mathsf{T}x=\left(
-\begin{array}{c}
- . 
- \underset{j=1}{\overset{n}{\sum _{i=1}^m \sum }}b_{\text{ki}}a_{\text{ij}}x_j 
- . 
-\end{array}
-\right) {}_{k=1,\text{..},p}
-\]</div>
-<p>The matrix <span class="math notranslate nohighlight">\((A\circ B)\mathsf{T\)</span> is <span class="math notranslate nohighlight">\((p\times n)\)</span>.  This is important for the chain rule. The case <span class="math notranslate nohighlight">\(p = 1\)</span> is frequent:  1</p>
+\[\begin{split}(B\circ A)(x) = B(A(x)) =B^\intercal A^\intercal x =(A B)^\intercal x =
+\begin{bmatrix}
+                \vdots           \\
+                \sum_{i=1}^m \sum_{j=1}^n a_{ij}b_{jk} x_i    \\
+                \vdots  
+    \end{bmatrix}_{k = 1, \ldots, p}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[
-B = b = \left(
-\begin{array}{c}
- b_1 
- . 
- b_m 
-\end{array}
-\right)
-\]</div>
+\[\begin{split}B\circ A = \begin{bmatrix}
+                   &amp;\vdots           \\
+           \cdots  &amp;\sum_{j=1}^n a_{ij}b_{jk} &amp;\cdots    \\
+                   &amp;\vdots  
+    \end{bmatrix}_{i = 1, \ldots, m; \, k = 1, \ldots, p}\end{split}\]</div>
+<p>The matrix <span class="math notranslate nohighlight">\((A\circ B)^\intercal\)</span> is (n x p). This is important for the chain rule. The case <span class="math notranslate nohighlight">\(p = 1\)</span> is frequent:</p>
 <div class="math notranslate nohighlight">
-\[
-(b\circ A)(x)= b\mathsf{T} A\mathsf{T}x =(A b)\mathsf{T}x= \sum _{i=1}^m \sum _{j=1}^n b_ia_{\text{ij}}x_j
-\]</div>
+\[\begin{split}B = b =
+\begin{bmatrix}
+                b_1           \\
+                \vdots    \\
+                b_n  
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[(b\circ A)(x)= b^\intercal A^\intercal x =(A b)^\intercal x= \sum _{i=1}^m \sum _{j=1}^n a_{ij} b_j x_i\]</div>
 <section id="tensors-frobenius-product">
 <h3>Tensors, Frobenius Product<a class="headerlink" href="#tensors-frobenius-product" title="Link to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(x\)</span> <span class="math notranslate nohighlight">\(\in \)</span> <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, <span class="math notranslate nohighlight">\(y\)</span> <span class="math notranslate nohighlight">\(\in \)</span> <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[
-x\unicode{f3da}y =x\cdot y\mathsf{T}= \left(
+x\unicode{f3da}y =x\cdot y\intercal= \left(
 \begin{array}{cccc}
  x_1y_1 &amp; . &amp; . &amp; x_1y_m 
  . &amp;   &amp;   &amp; . 
@@ -691,26 +586,26 @@ x\unicode{f3da}y =x\cdot y\mathsf{T}= \left(
 \text{$\quad $        }x^{\unicode{f3da}q}= \left(
 \begin{array}{ccc}
  . &amp; . &amp; . 
- . &amp; x_{j_1}x_{j_2}\text{..} x_{j_q} &amp; .  
+ . &amp; x_{j_1}x_{j_2}\ldots x_{j_q} &amp; .  
  . &amp; . &amp; . 
 \end{array}
-\right)_{j_1,\text{..},j_q=1,\text{..},n }
+\right)_{j_1,\ldots,j_q=1,\ldots,n }
 \]</div>
-<p><span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> Let S, T be tensors with shape = <span class="math notranslate nohighlight">\(\left(n_1, n_2,\text{..}, n_q\right)\)</span>. Then the Frobenius product <span class="math notranslate nohighlight">\(\langle S,T\rangle\)</span>of <span class="math notranslate nohighlight">\(S\)</span>and <span class="math notranslate nohighlight">\(T\)</span>
+<p><span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> Let S, T be tensors with shape = <span class="math notranslate nohighlight">\(\left(n_1, n_2,\ldots, n_q\right)\)</span>. Then the Frobenius product <span class="math notranslate nohighlight">\(\langle S,T\rangle\)</span>of <span class="math notranslate nohighlight">\(S\)</span>and <span class="math notranslate nohighlight">\(T\)</span>
 is defined by</p>
 <div class="math notranslate nohighlight">
 \[
-\langle S,T\rangle =\sum _{j_q=1}^{n_q} \text{..}\sum _{j_2=1}^{n_2} \sum _{j_1=1}^{n_1} s_{j_q,\text{..},j_1}t_{j_1,\text{..},j_q}
+\langle S,T\rangle =\sum _{j_q=1}^{n_q} \ldots\sum _{j_2=1}^{n_2} \sum _{j_1=1}^{n_1} s_{j_q,\ldots,j_1}t_{j_1,\ldots,j_q}
 \]</div>
 <p><span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> or, in Einstein notation:</p>
 <div class="math notranslate nohighlight">
 \[
-\langle S,T\rangle =s_{j_1,\text{..},j_q}t^{j_1,\text{..},j_q}
+\langle S,T\rangle =s_{j_1,\ldots,j_q}t^{j_1,\ldots,j_q}
 \]</div>
-<p>So, <span class="math notranslate nohighlight">\(h^{\unicode{f3da}q\)</span> is a tensors with shape = <span class="math notranslate nohighlight">\((n, n, \text{..},n)\)</span> with <span class="math notranslate nohighlight">\(q\)</span> times <span class="math notranslate nohighlight">\(n\)</span>. With an <span class="math notranslate nohighlight">\((n\times n)\)</span>-matrix <span class="math notranslate nohighlight">\(A\)</span> we have:</p>
+<p>So, <span class="math notranslate nohighlight">\(h^{\unicode{f3da}q\)</span> is a tensors with shape = <span class="math notranslate nohighlight">\((n, n, \ldots,n)\)</span> with <span class="math notranslate nohighlight">\(q\)</span> times <span class="math notranslate nohighlight">\(n\)</span>. With an <span class="math notranslate nohighlight">\((n\times n)\)</span>-matrix <span class="math notranslate nohighlight">\(A\)</span> we have:</p>
 <div class="math notranslate nohighlight">
 \[
-\quad \quad h\mathsf{T}A h =\left\langle A,h^{\unicode{f3da}2}\right\rangle =\left\langle A\mathsf{T},h^{\unicode{f3da}2}\right\rangle =h\mathsf{T}A\mathsf{T}
+\quad \quad h\intercalA h =\left\langle A,h^{\unicode{f3da}2}\right\rangle =\left\langle A\intercal,h^{\unicode{f3da}2}\right\rangle =h\intercalA\intercal
 h
 \]</div>
 </section>
@@ -721,7 +616,7 @@ h
 of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span>, iff</p>
 <div class="math notranslate nohighlight">
 \[
-F(x+h)-F(x)=\text{DF}(x)(h)+o(h)=\text{DF}(x)\mathsf{T}h+o(h)
+F(x+h)-F(x)=\text{DF}(x)(h)+o(h)=\text{DF}(x)\intercalh+o(h)
 \]</div>
 <p><span class="math notranslate nohighlight">\(\text{DF}(x)\)</span> is also called the Jacobian of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <section id="definition-3-directional-derivatives">
@@ -738,7 +633,7 @@ The directional derivative of <span class="math notranslate nohighlight">\(F\)</
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-=\partial F(x)\mathsf{T}h
+=\partial F(x)\intercalh
 \]</div>
 <p>The first equation is the definition of the directional derivative, the second definition of the derivative in one dimension, and the third follows
 from the chain rule. If <span class="math notranslate nohighlight">\(b_j\)</span> is the j-th basis vector, then</p>
@@ -763,23 +658,23 @@ D(G\circ F)= \text{DG}(F)\circ \text{DF}\text{  }
 <p>Note that:</p>
 <div class="math notranslate nohighlight">
 \[
-(\text{DG}(F)\circ \text{DF} )(h)=\text{DG}(F)(\text{DF} (h))=\text{DG}(F)\mathsf{T}\cdot \text{DF}\mathsf{T}h
+(\text{DG}(F)\circ \text{DF} )(h)=\text{DG}(F)(\text{DF} (h))=\text{DG}(F)\intercal\cdot \text{DF}\intercalh
 \]</div>
 <p>You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
 The case <span class="math notranslate nohighlight">\(p = 1\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-D(g\circ F)(h)=\partial g\mathsf{T}\dot{F}\mathsf{T}h\text{               }(1\times 1)\mathsf{T}
+D(g\circ F)(h)=\partial g\intercal\dot{F}\intercalh\text{               }(1\times 1)\intercal
 \]</div>
 <p>So, for instance:</p>
 <div class="math notranslate nohighlight">
 \[
-\partial _t(g(\text{tx}))=\partial g\mathsf{T}x\text{              }
+\partial _t(g(\text{tx}))=\partial g\intercalx\text{              }
 \]</div>
 <p>or, with an <span class="math notranslate nohighlight">\(n\times m\)</span>-Matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\partial _t(g(t A))=\partial g\mathsf{T}A\text{     }
+\partial _t(g(t A))=\partial g\intercalA\text{     }
 \]</div>
 <p>Proof:</p>
 <div class="math notranslate nohighlight">
@@ -798,14 +693,14 @@ G\circ F(x+h)-G\circ F(x)=(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
 <p>Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>be a function. The partial derivative of <span class="math notranslate nohighlight">\(F_i\)</span> with respect to <span class="math notranslate nohighlight">\(x_j\)</span> is defined as:</p>
 <div class="math notranslate nohighlight">
 \[
-\partial _jF_i\left(x_1,\text{..},x_j,\text{..}x_n\right)=lim_{h\text{-$&gt;$0}\frac{1}{h}\left(F_i\left(x_1,\text{..},x_j+h,\text{..}x_1\right)-F_i\left(x_1,\text{..},x_j,\text{..}x_n\right)\right)
+\partial _jF_i\left(x_1,\ldots,x_j,\ldotsx_n\right)=lim_{h\text{-$&gt;$0}\frac{1}{h}\left(F_i\left(x_1,\ldots,x_j+h,\ldotsx_1\right)-F_i\left(x_1,\ldots,x_j,\ldotsx_n\right)\right)
 \]</div>
-<p>Let <span class="math notranslate nohighlight">\(\left(j_1, j_2,\text{..}, j_q\right)\)</span> be a sequence of indices. The partial derivative of <span class="math notranslate nohighlight">\(F_i\)</span> with respect to <span class="math notranslate nohighlight">\(x_{j_1},x_{j_2},\text{..},
+<p>Let <span class="math notranslate nohighlight">\(\left(j_1, j_2,\ldots, j_q\right)\)</span> be a sequence of indices. The partial derivative of <span class="math notranslate nohighlight">\(F_i\)</span> with respect to <span class="math notranslate nohighlight">\(x_{j_1},x_{j_2},\ldots,
 x_{j_q\)</span> is recursively defined as:</p>
 <div class="math notranslate nohighlight">
 \[
-\partial _{j_1}\partial _{j_2}\text{..}\partial _{j_q}F_i\left(x_1,.,x_j,.x_n\right)=lim_{h\text{-$&gt;$0}\frac{1}{h}\left(\partial _{j_2}\text{..}\partial
-_{j_q}F_i\left(x_1,.,x_{j_1}+h,.,x_n\right)-\partial _{j_2}\text{..}\partial _{j_q}F_i\left(x_1,.,x_{j_1},.,x_n\right)\right)
+\partial _{j_1}\partial _{j_2}\ldots\partial _{j_q}F_i\left(x_1,.,x_j,.x_n\right)=lim_{h\text{-$&gt;$0}\frac{1}{h}\left(\partial _{j_2}\ldots\partial
+_{j_q}F_i\left(x_1,.,x_{j_1}+h,.,x_n\right)-\partial _{j_2}\ldots\partial _{j_q}F_i\left(x_1,.,x_{j_1},.,x_n\right)\right)
 \]</div>
 </section>
 <section id="theorem-3-jacobian-and-partial-derivatives">
@@ -818,12 +713,12 @@ _{j_q}F_i\left(x_1,.,x_{j_1}+h,.,x_n\right)-\partial _{j_2}\text{..}\partial _{j
 <p>which is the same as (omitting the argument <span class="math notranslate nohighlight">\(x\)</span>)</p>
 <div class="math notranslate nohighlight">
 \[
-\text{DF}_{\text{ji}} =\partial _jF_i (j=1,\text{..},n;i=1,\text{..},m)
+\text{DF}_{\text{ji}} =\partial _jF_i (j=1,\ldots,n;i=1,\ldots,m)
 \]</div>
 <p>So:</p>
 <div class="math notranslate nohighlight">
 \[
-F(x+h)-F(x)=\partial \unicode{f3da}F(x)\mathsf{T}h+o(h)
+F(x+h)-F(x)=\partial \unicode{f3da}F(x)\intercalh+o(h)
 \]</div>
 <p>b) If all <span class="math notranslate nohighlight">\(\partial _jF_i\)</span> are continuous in an open environment <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(x\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable in <span class="math notranslate nohighlight">\(U\)</span>, and (a) holds for all <span class="math notranslate nohighlight">\(y\in
 U\)</span>.</p>
@@ -839,17 +734,17 @@ in an open environment of x, then</p>
 <p>So, if all <span class="math notranslate nohighlight">\(\partial _i\partial _jf\)</span> are continuously differentiable in an open environment of x, then Theorem 3 applies and we have:</p>
 <div class="math notranslate nohighlight">
 \[
-\partial ^{\unicode{f3da}2}=\left(\partial ^{\unicode{f3da}2}\right)\mathsf{T}
+\partial ^{\unicode{f3da}2}=\left(\partial ^{\unicode{f3da}2}\right)\intercal
 \]</div>
 <p>which is the same as</p>
 <div class="math notranslate nohighlight">
 \[
-\partial _i\partial _jf(x)=\partial _j\partial _if(x)\text{  }(i,j=1,\text{..},n)
+\partial _i\partial _jf(x)=\partial _j\partial _if(x)\text{  }(i,j=1,\ldots,n)
 \]</div>
 <p>More generally, multiple derivative, such as</p>
 <div class="math notranslate nohighlight">
 \[
-\partial _{j_1}\partial _{j_2}\text{..}\partial _{j_q}f(x)
+\partial _{j_1}\partial _{j_2}\ldots\partial _{j_q}f(x)
 \]</div>
 <p>do not depend on the order of the indices, or, equivalently, the tensor of partial derivatives is fully symmetric.</p>
 </section>
@@ -878,10 +773,10 @@ f:\mathbb{R}^n\text{-$&gt;$ \mathbb{R}\\F:\mathbb{R}^n\text{-$&gt;$ \mathbb{R}^m
 \right)=H, \partial ^{\unicode{f3da}2}f=\text{Hf}\text{       }(\text{Hessian})\\\partial ^{\unicode{f3da}q}= \left(
 \begin{array}{ccc}
  . &amp; . &amp; . 
- . &amp; \partial _{j_1}\partial _{j_2}\text{..} \partial _{j_q} &amp; .  
+ . &amp; \partial _{j_1}\partial _{j_2}\ldots \partial _{j_q} &amp; .  
  . &amp; . &amp; . 
 \end{array}
-\right)_{j_1,\text{..},j_q=1,\text{..},n }\text{  }(\text{tensor} \text{of} \text{partial} \text{derivatives} \text{of} \text{rank} q)
+\right)_{j_1,\ldots,j_q=1,\ldots,n }\text{  }(\text{tensor} \text{of} \text{partial} \text{derivatives} \text{of} \text{rank} q)
 \end{aligned}\end{align} \]</div>
 <div class="math notranslate nohighlight">
 \[
@@ -911,17 +806,17 @@ D^2F=\partial ^{\unicode{f3da}2}\unicode{f3da}F =\left(
  . &amp;  \partial _k\partial _jF_i &amp; . 
  . &amp;  . &amp; . 
 \end{array}
-\right)_{j=1,\text{..}nk=1,\text{..}ni=1,\text{..},m}=\left(
+\right)_{j=1,\ldotsnk=1,\ldotsni=1,\ldots,m}=\left(
 \begin{array}{cccc}
  \partial _1\text{DF} &amp; . &amp; . &amp; \partial _n\text{DF} 
 \end{array}
 \right)\text{    }(\text{tensor} \text{of} \text{partial} \text{derivatives} \text{of} \text{rank} 2)\\\partial ^{\unicode{f3da}q}\unicode{f3da}F= \left(
 \begin{array}{ccc}
  . &amp; . &amp; . 
- . &amp; \partial _{j_1}\partial _{j_2}\text{..} \partial _{j_qF_i} &amp; .  
+ . &amp; \partial _{j_1}\partial _{j_2}\ldots \partial _{j_qF_i} &amp; .  
  . &amp; . &amp; . 
 \end{array}
-\right)_{j_1,\text{..},j_q=1,\text{..},n i=1,\text{..}m}
+\right)_{j_1,\ldots,j_q=1,\ldots,n i=1,\ldotsm}
 \end{aligned}\end{align} \]</div>
 <p>The terms <span class="math notranslate nohighlight">\(\partial ,\partial ^{\unicode{f3da}q\)</span> and their aliases (<span class="math notranslate nohighlight">\(\nabla \)</span>, grad, H, D, J) are operators that map a scalar- or vector-valued
 function (<span class="math notranslate nohighlight">\(f\)</span> or <span class="math notranslate nohighlight">\(F\)</span>) to a  tensor-valued function, such as <span class="math notranslate nohighlight">\(\partial f\)</span>.</p>
@@ -1126,16 +1021,16 @@ stationary point of <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p>Proof (for minimum only): Let h<span class="math notranslate nohighlight">\(\in \)</span><span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> be a small vector. Then:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}
-f(x)\leq f(x+h)=f(x)+\partial f(x)\mathsf{T}h+o(h)\text{   }(\text{works} \text{for} h \text{and} \text{-h})\\0\leq \partial f(x)\mathsf{T}h+o(\| h\| )\\0\leq \frac{\partial f(x)\mathsf{T}h}{\| h\| }+\frac{o(\| h\| )}{\| h\| }\\0\leq -\frac{\partial f(x)\mathsf{T}h}{\| h\| }+\frac{o(\| h\| )}{\| h\| }
+f(x)\leq f(x+h)=f(x)+\partial f(x)\intercalh+o(h)\text{   }(\text{works} \text{for} h \text{and} \text{-h})\\0\leq \partial f(x)\intercalh+o(\| h\| )\\0\leq \frac{\partial f(x)\intercalh}{\| h\| }+\frac{o(\| h\| )}{\| h\| }\\0\leq -\frac{\partial f(x)\intercalh}{\| h\| }+\frac{o(\| h\| )}{\| h\| }
 \end{aligned}\end{align} \]</div>
 <p>So, for small positive <span class="math notranslate nohighlight">\(\epsilon\)</span> we get:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{\partial f(x)\mathsf{T}h}{\| h\| }-\epsilon \leq 0\leq \frac{\partial f(x)\mathsf{T}h}{\| h\| }+\epsilon
+\frac{\partial f(x)\intercalh}{\| h\| }-\epsilon \leq 0\leq \frac{\partial f(x)\intercalh}{\| h\| }+\epsilon
 \]</div>
 <div class="math notranslate nohighlight">
 \[
--\epsilon \leq -\frac{\partial f(x)\mathsf{T}h}{\| h\| }\leq +\epsilon
+-\epsilon \leq -\frac{\partial f(x)\intercalh}{\| h\| }\leq +\epsilon
 \]</div>
 <p>which proves the statement.</p>
 </section>
@@ -1217,7 +1112,7 @@ f(x+h)=\sum _{j=0}^k \frac{1}{k!}\left\langle \partial ^{\unicode{f3da}j}f(x), h
 <p>because:</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}\begin{aligned}
-\frac{d}{dt}f(x+\text{th})=\sum _{j=1}^n \partial _jf(x+\text{th})h_j=\partial f(x+\text{th})\mathsf{T}h=\langle \partial f(x+\text{th}),h\rangle\\\frac{d^2}{dt^2}f(x+\text{th})=\sum _{i=1}^n \sum _{j=1}^n \partial _i\partial _jf(x+\text{th})h_ih_j=\left\langle \partial ^{\unicode{f3da}2}f(x+\text{th}),
+\frac{d}{dt}f(x+\text{th})=\sum _{j=1}^n \partial _jf(x+\text{th})h_j=\partial f(x+\text{th})\intercalh=\langle \partial f(x+\text{th}),h\rangle\\\frac{d^2}{dt^2}f(x+\text{th})=\sum _{i=1}^n \sum _{j=1}^n \partial _i\partial _jf(x+\text{th})h_ih_j=\left\langle \partial ^{\unicode{f3da}2}f(x+\text{th}),
 h^{\unicode{f3da}2}\right\rangle
 \end{aligned}\end{align} \]</div>
 <p>and so on. Taylor in one dimension tells us, for <span class="math notranslate nohighlight">\(g(t) = f(x+\text{th})\)</span>:</p>
@@ -1335,6 +1230,104 @@ A(\phi )=g(F(\phi ))\\\text{$\delta $A}=\left(\frac{d}{dx}g\circ F\right) \text{
 V2.</p>
 </section>
 </section>
+<section id="derivatives-on-hilbert-spaces">
+<h2>Derivatives on Hilbert Spaces<a class="headerlink" href="#derivatives-on-hilbert-spaces" title="Link to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-derivatives">
+<p class="admonition-title"><span class="caption-number">Definition 30 </span> (Derivatives)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(F:U \to V\)</span>. The <strong>derivative</strong> <span class="math notranslate nohighlight">\(\partial F(x)\)</span> of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[\partial F = \lim_{h \to 0} \frac{1}{\| h \| }(F(x+h) - F(x))\]</div>
+<p>or, equivalently:</p>
+<div class="math notranslate nohighlight" id="equation-equ-derivatives">
+<span class="eqno">(74)<a class="headerlink" href="#equation-equ-derivatives" title="Link to this equation">#</a></span>\[F(x+h) - F(x) = \partial F(x)\, h + o(h)\]</div>
+<p>If such a mapping exists, <span class="math notranslate nohighlight">\(F\)</span> is called differentiable in <span class="math notranslate nohighlight">\(x\)</span>.
+The derivative of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span> is a linear mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial F(x): 
+\left \{
+    \begin{array}{lr}
+        \mathbb{R}^n \to \mathbb{R}^m \\
+        h \mapsto \partial F(x) \, h
+    \end{array}
+\right .\end{split}\]</div>
+<p>that approximates the function <span class="math notranslate nohighlight">\(F\)</span> locally in <span class="math notranslate nohighlight">\(x\)</span> as shown in <a class="reference internal" href="#equation-equ-derivatives">(74)</a>.
+We will show that under weak assumptions, <span class="math notranslate nohighlight">\(\partial F\)</span> can be calculated as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial F = \begin{bmatrix}
+        &amp;\vdots \\
+        \cdots &amp;\partial_i F_j &amp;\cdots \\
+        &amp;\vdots
+    \end{bmatrix}_{i = 1, \ldots, m; \, j = 1, \ldots, n}\end{split}\]</div>
+<p>The <strong>differential operator</strong> <span class="math notranslate nohighlight">\(\partial\)</span> maps a differentiable function <span class="math notranslate nohighlight">\(F\)</span> to a function
+that maps a vector <span class="math notranslate nohighlight">\(x\)</span> to the linear mapping  <span class="math notranslate nohighlight">\(\partial F(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial: 
+\left \{
+    \begin{array}{lr}
+        C^1(\mathbb{R}^n, \mathbb{R}^m) \to C(\mathbb{R}^n, L(\mathbb{R}^n, \mathbb{R}^m))  \\
+        F \mapsto (x \mapsto \partial F(x))
+    \end{array}
+\right .\end{split}\]</div>
+</section>
+</div><div class="proof definition admonition" id="uniquness-derivative">
+<p class="admonition-title"><span class="caption-number">Definition 31 </span> (Uniqueness of the Derivative)</p>
+<section class="definition-content" id="proof-content">
+<p>The derivative is unique.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Assume that there are two linear mappings <span class="math notranslate nohighlight">\(D, E\)</span> satisfying <a class="reference internal" href="#equation-equ-derivatives">(74)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;F(x+h) - F(x) = D \, h + o(h) \\
+&amp;F(x+h) - F(x) = E \, h + o(h)\end{split}\]</div>
+<p>Then:</p>
+<div class="math notranslate nohighlight">
+\[D \, h + o(h) = E \, h + o(h)\]</div>
+<p>which shows that <span class="math notranslate nohighlight">\(D = E\)</span>.</p>
+</div>
+<section id="chain-rule-product-pule">
+<h3>Chain Rule, Product Pule<a class="headerlink" href="#chain-rule-product-pule" title="Link to this heading">#</a></h3>
+<div class="proof theorem admonition" id="chain-rule">
+<p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Chain Rule)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(G:\mathbb{R}^n \to \mathbb{R}^m\)</span> be differentiable in x and
+<span class="math notranslate nohighlight">\(F:\mathbb{R}^m \to \mathbb{R}^k\)</span> differentiable in G(x).
+Then <span class="math notranslate nohighlight">\(F \circ G: \mathbb{R}^n \to \mathbb{R}^k\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span> and we have:</p>
+<div class="math notranslate nohighlight">
+\[\partial (F \circ G) = \partial F \circ G \cdot \partial G\]</div>
+<p>or, written with arguments:</p>
+<div class="math notranslate nohighlight">
+\[\partial (F \circ G)(x) = \partial F(G(x)) \cdot \partial G(x)\]</div>
+<p>You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
+The case <span class="math notranslate nohighlight">\(p = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+D(g\circ F)(h)=\partial g\intercal\dot{F}\intercalh\text{               }(1\times 1)\intercal
+\]</div>
+<p>So, for instance:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _t(g(\text{tx}))=\partial g\intercalx\text{              }
+\]</div>
+<p>or, with an <span class="math notranslate nohighlight">\(n\times m\)</span>-Matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _t(g(t A))=\partial g\intercalA\text{     }
+\]</div>
+<p>Proof:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+G\circ F(x+h)=G(F(x)+ \text{DF}(x)(h)+o(h))\\\text{$\quad $            }=G(F(x))+\text{DG}(F(x))( \text{DF}(x)(h)+o(h))+o(h)\\\text{                      }=G\circ F(x)+(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+\end{aligned}\end{align} \]</div>
+<p>So:</p>
+<div class="math notranslate nohighlight">
+\[
+G\circ F(x+h)-G\circ F(x)=(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+\]</div>
+<p>which proves the assertion via uniqueness.</p>
+</section>
+</div></section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1402,11 +1395,7 @@ V2.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-on-hilbert-spaces">Derivatives on Hilbert Spaces</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule-product-pule">Chain Rule, Product Pule</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-tensors-linear-mappings">Matrices, Tensors, Linear Mappings</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-mappings-matrices-tensors">Linear Mappings, Matrices, Tensors</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-frobenius-product">Tensors, Frobenius Product</a></li>
 </ul>
 </li>
@@ -1432,6 +1421,10 @@ V2.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#easy-examples">Easy Examples</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-rule">Product Rule</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule">Chain Rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-on-hilbert-spaces">Derivatives on Hilbert Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule-product-pule">Chain Rule, Product Pule</a></li>
 </ul>
 </li>
 </ul>
