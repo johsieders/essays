@@ -29,7 +29,7 @@ parts:
       - file: philosophy/mathematics-existence
         title: What Exists in Mathematics? *
       - file: philosophy/ethik
-        title: Von Aristoteles bis Nietzsche *
+        title: Wie soll man leben? *
 
   - caption: Computer Science
     chapters:
