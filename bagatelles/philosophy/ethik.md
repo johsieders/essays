@@ -18,7 +18,7 @@ eine "richtige" Philosophie zu identifizieren, sondern Muster zu erkennen:
 Welche Prinzipien tauchen immer wieder auf? Wo gibt es Divergenzen? Welche Philosophen sind Ausreißer?
  
 Der Text ist gedacht als Fahrplan in dem Gewirr der vielen Richtungen, Meinungen, Begriffe der Ethik.
-Kapitel 5 enthält eine umfanreich Literatursammlung.
+Kapitel 5 enthält ausführliche Literaturempfehlungen.
 
 
 ### 1.2 Methodik und Aufbau
@@ -3729,7 +3729,7 @@ Die folgenden Fragen sind als Diskussionsanregung für philosophische Gesprächs
 
 ---
 
-## 5 Literaturempfehlungen – Originaltexte und seriöse Einstiege
+## 5. Literaturempfehlungen – Originaltexte und seriöse Einstiege
 
 Die folgenden Empfehlungen sind **keine** Sekundärliteratur oder Einführungen ("Philosophie für Eilige"), 
 sondern **Primärtexte** bzw. wissenschaftliche Textsammlungen, die als Einstieg geeignet sind.
