@@ -3729,7 +3729,7 @@ Die folgenden Fragen sind als Diskussionsanregung für philosophische Gesprächs
 
 ---
 
-## 5. Literaturempfehlungen – Originaltexte und seriöse Einstiege
+## 5. Literaturempfehlungen
 
 Die folgenden Empfehlungen sind **keine** Sekundärliteratur oder Einführungen ("Philosophie für Eilige"), 
 sondern **Primärtexte** bzw. wissenschaftliche Textsammlungen, die als Einstieg geeignet sind.
@@ -4003,7 +4003,8 @@ sondern **Primärtexte** bzw. wissenschaftliche Textsammlungen, die als Einstieg
 - **Deutsch**: "Jenseits von Gut und Böse" + "Genealogie der Moral" (in KSA oder als Einzelausgaben bei Reclam/dtv)
 - **Englisch**: Beyond Good and Evil / On the Genealogy of Morality (Cambridge)
 
-**Hinweis**: Nietzsche ist stilistisch brillant, aber philosophisch fordernd. Aphorismen, keine systematischen Argumente. "Genealogie der Moral" ist strukturierter als "Jenseits".
+**Hinweis**: Nietzsche ist stilistisch brillant, aber philosophisch fordernd. Aphorismen, keine systematischen Argumente. 
+"Genealogie der Moral" ist strukturierter als "Jenseits".
 
 ---
 
@@ -4030,20 +4031,6 @@ sondern **Primärtexte** bzw. wissenschaftliche Textsammlungen, die als Einstieg
 - **Mill: Utilitarismus** – klar, konkret, kontrovers
 - **Nietzsche: Genealogie der Moral** – brillant geschrieben, empörend
 - **Kohelet (Prediger)** – existenziell, literarisch, überraschend modern
-
----
-
-**Allgemeine Hinweise**:
-
-1. **Originaltext zuerst**: Lesen Sie immer zuerst den Primärtext, bevor Sie Sekundärliteratur konsultieren. Bilden Sie sich Ihre eigene Meinung.
-
-2. **Übersetzungen variieren**: Bei antiken Texten (Aristoteles, Epikur, Konfuzius, Buddha) lohnt es sich, verschiedene Übersetzungen zu vergleichen – Nuancen können wichtig sein.
-
-3. **Kommentare nutzen**: Besonders bei Kant, Aristoteles, Konfuzius sind die Einleitungen und Kommentare in den empfohlenen Ausgaben sehr wertvoll.
-
-4. **Geduld**: Philosophische Texte erfordern langsames, mehrmaliges Lesen. Das ist normal.
-
-5. **Kontext beachten**: Die historische, kulturelle, biographische Einbettung hilft oft beim Verständnis – nutzen Sie die Einleitungen.
 
 ---
 
