@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Modeste Proposition &#8212; Bagatelles</title>
+    <title>Differential Operators: A Formal Algebraic Approach &#8212; Bagatelles</title>
   
   
   
@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -58,11 +58,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'literature/1-animaux';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/diff-operators';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Darf man noch fliegen?" href="14-fliegen.html" />
-    <link rel="prev" title="Books to Read" href="0-bibliography.html" />
+    <link rel="next" title="Differential Calculus" href="differentials.html" />
+    <link rel="prev" title="First Steps in Calculus" href="calculus.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -207,14 +209,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../physics/newton.html">Newton</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differentials.html">Differential Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -225,33 +227,33 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="22-god-and-evil.html">Is God responsible for evil?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="23-is-science-a-threat.html">Is science a threat to religion?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-genesis-questions.html">Questions about Genesis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="20-revelations.html">Die Offenbarungen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="32-religions-in-britain.html">Religions in Britain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
-<li class="toctree-l1"><a class="reference internal" href="19-henry-v-chorus.html">The Chorus in Henry V</a></li>
-<li class="toctree-l1"><a class="reference internal" href="16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-francais-perdition.html">Le français en voie de perdition ?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0-bibliography.html">Books to read</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modeste proposition pour la sauvegarde du bétail</a></li>
-<li class="toctree-l1"><a class="reference internal" href="14-fliegen.html">Darf man noch fliegen?</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
 </ul>
 
     </div>
@@ -323,7 +325,7 @@
       
       
       
-      <li><a href="https://github.com/johsieders/essays/edit/main/literature/1-animaux.md" target="_blank"
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/diff-operators.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -340,7 +342,7 @@
       
       
       
-      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fliterature/1-animaux.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/diff-operators.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +372,7 @@
       
       
       
-      <li><a href="../_sources/literature/1-animaux.md" target="_blank"
+      <li><a href="../_sources/mathematics/diff-operators.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -441,7 +443,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -452,11 +456,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Modeste Proposition</h1>
+    <h1>Differential Operators: A Formal Algebraic Approach</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-idea">The Central Idea</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-and-conventions">Notation and Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-approach">Why This Approach?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-vs-applied">Formal vs. Applied</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-follows">What Follows</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -466,35 +485,75 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="modeste-proposition">
-<h1>Modeste Proposition<a class="headerlink" href="#modeste-proposition" title="Link to this heading">#</a></h1>
-<p><em>Johannes Siedersleben, Tuntenhausen, juillet 2020</em></p>
-<p>La France compte 65 millions d’habitants, 25 millions de porcs et 20 millions de vaches. Elle produit
-chaque année 240 millions d’hectolitres de lait et 2 millions de tonnes de volaille. La consommation
-de viande en France est de 90 kg par an et tête, bébés inclus. Étant donné ces chiffres, il n’est pas
-surprenant que ces bêtes soient élevées dans des conditions souvent abominables : quatre poulets
-par mètre carré, des veaux enfermés dans des cages qui les empêchent de bouger. Et les chiffres de
-tous les pays industrialisés se ressemblent. Nous parlons ici d’un problème mondial ; quel en est
-l’origine ? Bien sûr, on peut nommer l’inhumanité, la cruauté des éleveurs et aussi le manque de
-pitié, l’indifférence des consommateurs. Mais des diatribes contre les éleveurs et des appels aux
-consommateurs sont vite oubliés ; des règlements (tant de mètres carrés, des cages de tel gabarit)
-ne sont certes pas inutiles, mais ne résolvent pas le problème. Et si on convertissait les Français au
-végétarisme ou au véganisme ? Autant leur interdire le vin, et franchement, je ne sais pas si ça
-serait encore la France telle que nous l’aimons.</p>
-<p>L’origine du mal, c’est notre gourmandise. Nous sommes insatiables. Personne n’a besoin de 90 kg de
-viande par an ; il est même malsain d’en manger tant. Mais la demande est là, et les éleveurs font
-l’impossible pour la satisfaire : Ils produisent le maximum aux plus bas coûts au détriment des
-animaux, des intérimaires dans les fermes et les abattoirs, et aussi de l’environnement : Dans les
-champs, on ne voit plus que du maïs ; chaque vache produit autant de CO<sub>2</sub> par an qu’une voiture
-moyenne. Nous apercevons ici le côté sombre du capitalisme, qui n’est pas sans mérites mais
-défaillant en agriculture, dans les transports publics, les hôpitaux et bien d’autres domaines.</p>
-<p>Voici ma modeste proposition : Mangeons moins de viande, la moitié par exemple, mais deux fois
-meilleure et deux fois plus chère. Les bêtes n’auraient plus d’antibiotiques, mais quatre fois plus de
-place. On ne mangerait de la viande que trois fois par semaine avec deux fois plus de plaisir. Les
-éleveurs gagneraient autant qu’avant, les consommateurs ne payeraient pas plus cher et les bêtes
-auraient la belle vie, un peu comme les moutons normands qui broutent l’herbe en profitant de la
-vue sur le Mont St. Michel. Une utopie ? Et si on commençait par une réduction de 10 pourcents au lieu de 50 ?</p>
-<div style="margin-bottom: 100px;"></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="differential-operators-a-formal-algebraic-approach">
+<h1>Differential Operators: A Formal Algebraic Approach<a class="headerlink" href="#differential-operators-a-formal-algebraic-approach" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Classical vector calculus presents students with a bewildering array of distinct operations—gradient, divergence, curl, Laplacian, Jacobian, Hessian—each with its own notation, definition, and geometric interpretation. While this zoo of operators serves physics and engineering well, it obscures a deeper unity: <strong>all these operators are just different ways of composing partial derivatives</strong>.</p>
+<p>This note develops a systematic, algebraic framework for differential operators that treats them as first-class mathematical objects that can be manipulated, composed, and applied. The key insight is disarmingly simple: if we denote the partial derivative operator by <span class="math notranslate nohighlight">\(\partial_i\)</span> (or <span class="math notranslate nohighlight">\(\partial_x\)</span>, <span class="math notranslate nohighlight">\(\partial_y\)</span>, etc., when variables have names), then we can construct all the familiar operators of vector calculus through standard algebraic operations—scalar multiplication, vector dot products, cross products, and tensor products.</p>
+<section id="the-central-idea">
+<h3>The Central Idea<a class="headerlink" href="#the-central-idea" title="Link to this heading">#</a></h3>
+<p>Consider the gradient operator. Traditionally, we define it as an operation that takes a scalar function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> and produces a vector field. But we can think of it more abstractly: the gradient operator <strong>is</strong> the column vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial = \begin{pmatrix} \partial_1 \\ \partial_2 \\ \vdots \\ \partial_n \end{pmatrix}\end{split}\]</div>
+<p>where each <span class="math notranslate nohighlight">\(\partial_i\)</span> represents the operator “take the partial derivative with respect to the <span class="math notranslate nohighlight">\(i\)</span>-th variable.”</p>
+<p>When we write <span class="math notranslate nohighlight">\(\partial \cdot f\)</span>, we’re using the notation of scalar multiplication from linear algebra—but instead of multiplying numbers, we’re applying operators to functions. The gradient of <span class="math notranslate nohighlight">\(f\)</span> is simply this formal product.</p>
+<p>This shift in perspective—from operations on functions to algebraic manipulation of operators—has profound consequences. Once we accept that <span class="math notranslate nohighlight">\(\partial\)</span> is a legitimate vector of operators, the rest of vector calculus falls into place through familiar algebraic constructions:</p>
+<ul class="simple">
+<li><p>The <strong>Laplacian</strong> <span class="math notranslate nohighlight">\(\Delta f = \nabla^2 f\)</span> becomes <span class="math notranslate nohighlight">\(\partial^2 \cdot f\)</span>, the inner product of <span class="math notranslate nohighlight">\(\partial\)</span> with itself, applied to <span class="math notranslate nohighlight">\(f\)</span></p></li>
+<li><p>The <strong>Hessian</strong> becomes <span class="math notranslate nohighlight">\(\partial \otimes \partial\)</span>, the tensor (outer) product of <span class="math notranslate nohighlight">\(\partial\)</span> with itself</p></li>
+<li><p>The <strong>curl</strong> of a vector field <span class="math notranslate nohighlight">\(F\)</span> is <span class="math notranslate nohighlight">\(\partial \times F\)</span>, the cross product</p></li>
+<li><p>The <strong>Jacobian</strong> of a vector field <span class="math notranslate nohighlight">\(F\)</span> is <span class="math notranslate nohighlight">\(\partial \otimes F\)</span>, the tensor product</p></li>
+</ul>
+</section>
+<section id="notation-and-conventions">
+<h3>Notation and Conventions<a class="headerlink" href="#notation-and-conventions" title="Link to this heading">#</a></h3>
+<p>We adopt the following notational framework:</p>
+<p><strong>Basic derivative operators:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\partial_i\)</span> denotes <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x_i}\)</span> when variables are indexed as <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial_x, \partial_y, \partial_z\)</span> when variables have names</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial\)</span> denotes the <strong>gradient operator</strong>, the column vector <span class="math notranslate nohighlight">\((\partial_1, \partial_2, \ldots, \partial_n)^T\)</span></p></li>
+</ul>
+<p><strong>Operator composition:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\partial \cdot f\)</span> is the gradient of scalar function <span class="math notranslate nohighlight">\(f\)</span> (scalar multiplication)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial^2 = \partial \cdot \partial\)</span> is the Laplacian operator (dot product of operators)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial \otimes \partial\)</span> (written <span class="math notranslate nohighlight">\(\partial^{\otimes 2}\)</span> for brevity) is the Hessian operator</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial^{\otimes k}\)</span> represents the <span class="math notranslate nohighlight">\(k\)</span>-th order tensor of partial derivatives</p></li>
+<li><p>For vector fields <span class="math notranslate nohighlight">\(F\)</span>: <span class="math notranslate nohighlight">\(\partial \cdot F\)</span> is divergence, <span class="math notranslate nohighlight">\(\partial \times F\)</span> is curl, <span class="math notranslate nohighlight">\(\partial \otimes F\)</span> is the Jacobian</p></li>
+</ul>
+<p>The symbol <span class="math notranslate nohighlight">\(\otimes\)</span> denotes the tensor/outer product. In the accompanying code, we use <code class="docutils literal notranslate"><span class="pre">\ocross</span></code> as a text representation.</p>
+</section>
+<section id="why-this-approach">
+<h3>Why This Approach?<a class="headerlink" href="#why-this-approach" title="Link to this heading">#</a></h3>
+<p><strong>Conceptual clarity:</strong> Instead of memorizing separate definitions for each operator, we have a single unified principle: compose <span class="math notranslate nohighlight">\(\partial\)</span> using standard algebraic operations.</p>
+<p><strong>Dimensional reasoning:</strong> The algebraic structure makes dimensional constraints transparent. The curl <span class="math notranslate nohighlight">\(\partial \times F\)</span> involves a cross product, which only makes sense in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. The Laplacian <span class="math notranslate nohighlight">\(\partial^2\)</span> is a scalar operator in any dimension. These constraints emerge naturally from the algebra rather than being imposed ad hoc.</p>
+<p><strong>Extensibility:</strong> Need the Poisson bracket? It’s simply the bilinear operator</p>
+<div class="math notranslate nohighlight">
+\[\{A, B\} = \partial_x A \cdot \partial_p B - \partial_p A \cdot \partial_x B\]</div>
+<p>acting on pairs of functions. Want higher-order derivatives for Taylor expansions? Use <span class="math notranslate nohighlight">\(\partial^{\otimes k}\)</span>.</p>
+<p><strong>Computational implementation:</strong> This algebraic perspective translates directly into code. An “operator engine” can implement these constructions as composable objects that respect the algebraic rules and can be applied to symbolic expressions via SymPy.</p>
+</section>
+<section id="formal-vs-applied">
+<h3>Formal vs. Applied<a class="headerlink" href="#formal-vs-applied" title="Link to this heading">#</a></h3>
+<p>It’s crucial to distinguish between the <strong>operator</strong> (a formal algebraic object) and its <strong>application</strong> to functions. The gradient operator <span class="math notranslate nohighlight">\(\partial\)</span> is a vector of derivative operators. When we apply it to a function <span class="math notranslate nohighlight">\(f\)</span> by writing <span class="math notranslate nohighlight">\(\partial \cdot f\)</span>, we get the gradient of <span class="math notranslate nohighlight">\(f\)</span>—a vector field.</p>
+<p>This distinction parallels the difference between a matrix <span class="math notranslate nohighlight">\(A\)</span> and its action <span class="math notranslate nohighlight">\(A \mathbf{v}\)</span> on a vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. The matrix exists as an algebraic object independent of any particular vector; similarly, <span class="math notranslate nohighlight">\(\partial\)</span> exists as an operator independent of any particular function.</p>
+</section>
+<section id="what-follows">
+<h3>What Follows<a class="headerlink" href="#what-follows" title="Link to this heading">#</a></h3>
+<p>In the sections that follow, we’ll:</p>
+<ol class="arabic simple">
+<li><p>Formalize the partial derivative operators <span class="math notranslate nohighlight">\(\partial_i\)</span> and their basic properties</p></li>
+<li><p>Construct the gradient operator <span class="math notranslate nohighlight">\(\partial\)</span> as a vector of operators</p></li>
+<li><p>Define scalar, dot, cross, and tensor products of operators</p></li>
+<li><p>Derive the classical operators (Laplacian, Hessian, divergence, curl, Jacobian) as special cases</p></li>
+<li><p>Explore operator identities and how they correspond to theorems of vector calculus</p></li>
+<li><p>Demonstrate the implementation of an “operator engine” that makes this machinery computational</p></li>
+</ol>
+<p>The goal is not merely notational elegance. By treating differential operators as algebraic objects in their own right, we gain a systematic framework that unifies vector calculus, clarifies its structure, and extends naturally to more sophisticated settings—from tensor analysis to differential geometry to the functional analysis underlying variational calculus.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -510,7 +569,7 @@ vue sur le Mont St. Michel. Une utopie ? Et si on commençait par une réduction
         },
         kernelOptions: {
             name: "python3",
-            path: "./literature"
+            path: "./mathematics"
         },
         predefinedOutput: true
     }
@@ -528,20 +587,20 @@ vue sur le Mont St. Michel. Une utopie ? Et si on commençait par une réduction
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="0-bibliography.html"
+       href="calculus.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Books to Read</p>
+        <p class="prev-next-title">First Steps in Calculus</p>
       </div>
     </a>
     <a class="right-next"
-       href="14-fliegen.html"
+       href="differentials.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Darf man noch fliegen?</p>
+        <p class="prev-next-title">Differential Calculus</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -551,6 +610,28 @@ vue sur le Mont St. Michel. Une utopie ? Et si on commençait par une réduction
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-idea">The Central Idea</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-and-conventions">Notation and Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-approach">Why This Approach?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-vs-applied">Formal vs. Applied</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-follows">What Follows</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
