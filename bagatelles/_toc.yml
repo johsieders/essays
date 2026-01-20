@@ -59,6 +59,8 @@ parts:
         title: From Naturals to Reals
       - file: mathematics/calculus
         title: First Steps in Calculus
+      - file: mathematics/diff-operators
+        title: Differential Operators *  
       - file: mathematics/differentials
         title: Differential Calculus
 
