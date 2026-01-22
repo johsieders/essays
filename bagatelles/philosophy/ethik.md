@@ -109,59 +109,18 @@ Die Synthese (Abschnitt 3) bietet verschiedene Perspektiven auf das Material:
 
 ## 1.6 Die zehn Philosophen auf einen Blick
 
-```
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Philosoph     | Kultur   | Epoche    | Zielhorizont      | Ethiktyp         | Metaphysik             | Hauptwerk(e)         |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Stoiker       | Griech-  | 3. Jh.    | Eudaimonia durch  | Tugendethik/     | Materialistisch,       | Epiktet:             |
-| (Epiktet,     | römisch  | v. Chr. - | Apatheia          | Pflichtethik     | pantheistisch,         | Handbüchlein;        |
-| Marcus Aurel) |          | 2. Jh.    | (Seelenruhe)      |                  | deterministisch,       | Marcus Aurel:        |
-|               |          | n. Chr.   |                   |                  | kein Jenseits          | Selbstbetrachtungen  |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Epikur        | Griechisch| 341-270  | Ataraxia          | Konsequenz-      | Atomistisch,           | Brief an             |
-|               |          | v. Chr.   | (Seelenruhe durch | ethik (Lust als  | materialistisch,       | Menoikeus;           |
-|               |          |           | Lustmaximierung)  | höchstes Gut)    | kein Jenseits          | Hauptlehrsätze       |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Konfuzius     | Chinesisch| 551-479  | Soziale Harmonie  | Tugendethik      | Agnostisch,            | Analekten            |
-|               |          | v. Chr.   | durch Riten und   | (relational,     | diesseitig,            | (Lunyu)              |
-|               |          |           | Tugend            | rollengebunden)  | Himmel als Ordnung     |                      |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Buddha        | Indisch  | ca. 563-  | Nirvana           | Tugendethik/     | Weder Materialismus    | Pali-Kanon;          |
-|               |          | 483       | (Beendigung des   | Konsequenz-      | noch Theismus,         | Vier Edle            |
-|               |          | v. Chr.   | Leidens)          | ethik (Karma)    | abhängiges Entstehen,  | Wahrheiten;          |
-|               |          |           |                   |                  | kein Selbst (Anatta)   | Achtfacher Pfad      |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Prediger      | Jüdisch  | ca. 3. Jh.| Resignation +     | Skeptisch-       | Diesseitig,            | Kohelet              |
-| Salomo        |          | v. Chr.   | situativer Genuss | existenziell     | kein klares Jenseits,  | (Ecclesiastes)       |
-| (Kohelet)     |          |           | angesichts        |                  | Gott fern und          |                      |
-|               |          |           | Absurdität        |                  | unergründlich          |                      |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Sprüche       | Jüdisch  | ca. 10-3. | Gedeihen (Shalom) | Tugendethik      | Gott als gerechte      | Mishle               |
-| Salomos       |          | Jh.       | durch Weisheit    | (Vergeltungs-    | Ordnung, diesseitige   | (Proverbs)           |
-|               |          | v. Chr.   | und Gottesfurcht  | lehre)           | Belohnung/Strafe       |                      |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Immanuel      | Deutsch  | 1724-1804 | Autonomie durch   | Deontologie      | Dualistisch (Phäno-    | Kritik der           |
-| Kant          |          |           | moralisches       | (Pflichtethik)   | men/Noumena), Gott/    | praktischen          |
-|               |          |           | Gesetz            |                  | Unsterblichkeit als    | Vernunft;            |
-|               |          |           |                   |                  | Postulate              | Grundlegung zur      |
-|               |          |           |                   |                  |                        | Metaphysik d. Sitten |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| John Stuart   | Britisch | 1806-1873 | Größtes Glück der | Konsequenz-      | Empiristisch,          | Utilitarianism;      |
-| Mill          |          |           | größten Zahl      | ethik            | naturalistisch,        | On Liberty           |
-|               |          |           |                   | (Utilitarismus)  | kein Jenseits          |                      |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Aristoteles   | Griechisch| 384-322  | Eudaimonia        | Tugendethik      | Teleologisch,          | Nikomachische        |
-|               |          | v. Chr.   | (Aufblühen durch  | (Mesotes-Lehre,  | naturalistisch,        | Ethik;               |
-|               |          |           | Tugend)           | die Mitte)       | kein transzendentes    | Politik              |
-|               |          |           |                   |                  | Jenseits               |                      |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-| Friedrich     | Deutsch  | 1844-1900 | Übermensch        | Anti-Moral       | Nihilistisch,          | Also sprach          |
-| Nietzsche     |          |           | (Selbstschöpfung, | (Perspektivismus,| perspektivisch,        | Zarathustra;         |
-|               |          |           | Selbstüberwindung)| Wille zur Macht) | kein Jenseits,         | Jenseits von Gut     |
-|               |          |           |                   |                  | ewige Wiederkunft      | und Böse;            |
-|               |          |           |                   |                  |                        | Genealogie der Moral |
-+---------------+----------+-----------+-------------------+------------------+------------------------+----------------------+
-```
+| Philosoph | Kultur | Epoche | Zielhorizont | Ethiktyp | Metaphysik | Hauptwerk(e) |
+|-----------|--------|--------|--------------|----------|------------|--------------|
+| Stoiker (Epiktet, Marcus Aurel) | Griech-römisch | 3. Jh. v. Chr. - 2. Jh. n. Chr. | Eudaimonia durch Apatheia (Seelenruhe) | Tugendethik/Pflichtethik | Materialistisch, pantheistisch, deterministisch, kein Jenseits | Epiktet: Handbüchlein; Marcus Aurel: Selbstbetrachtungen |
+| Epikur | Griechisch | 341-270 v. Chr. | Ataraxia (Seelenruhe durch Lustmaximierung) | Konsequenzethik (Lust als höchstes Gut) | Atomistisch, materialistisch, kein Jenseits | Brief an Menoikeus; Hauptlehrsätze |
+| Konfuzius | Chinesisch | 551-479 v. Chr. | Soziale Harmonie durch Riten und Tugend | Tugendethik (relational, rollengebunden) | Agnostisch, diesseitig, Himmel als Ordnung | Analekten (Lunyu) |
+| Buddha | Indisch | ca. 563-483 v. Chr. | Nirvana (Beendigung des Leidens) | Tugendethik/Konsequenzethik (Karma) | Weder Materialismus noch Theismus, abhängiges Entstehen, kein Selbst (Anatta) | Pali-Kanon; Vier Edle Wahrheiten; Achtfacher Pfad |
+| Prediger Salomo (Kohelet) | Jüdisch | ca. 3. Jh. v. Chr. | Resignation + situativer Genuss angesichts Absurdität | Skeptisch-existenziell | Diesseitig, kein klares Jenseits, Gott fern und unergründlich | Kohelet (Ecclesiastes) |
+| Sprüche Salomos | Jüdisch | ca. 10-3. Jh. v. Chr. | Gedeihen (Shalom) durch Weisheit und Gottesfurcht | Tugendethik (Vergeltungslehre) | Gott als gerechte Ordnung, diesseitige Belohnung/Strafe | Mishle (Proverbs) |
+| Immanuel Kant | Deutsch | 1724-1804 | Autonomie durch moralisches Gesetz | Deontologie (Pflichtethik) | Dualistisch (Phänomen/Noumena), Gott/Unsterblichkeit als Postulate | Kritik der praktischen Vernunft; Grundlegung zur Metaphysik d. Sitten |
+| John Stuart Mill | Britisch | 1806-1873 | Größtes Glück der größten Zahl | Konsequenzethik (Utilitarismus) | Empiristisch, naturalistisch, kein Jenseits | Utilitarianism; On Liberty |
+| Aristoteles | Griechisch | 384-322 v. Chr. | Eudaimonia (Aufblühen durch Tugend) | Tugendethik (Mesotes-Lehre, die Mitte) | Teleologisch, naturalistisch, kein transzendentes Jenseits | Nikomachische Ethik; Politik |
+| Friedrich Nietzsche | Deutsch | 1844-1900 | Übermensch (Selbstschöpfung, Selbstüberwindung) | Anti-Moral (Perspektivismus, Wille zur Macht) | Nihilistisch, perspektivisch, kein Jenseits, ewige Wiederkunft | Also sprach Zarathustra; Jenseits von Gut und Böse; Genealogie der Moral |
 
 **Anmerkungen zur Tabelle:**
 - **Zielhorizont** beschreibt das jeweilige summum bonum – das höchste Gut oder Endziel
@@ -397,46 +356,21 @@ Unabhängigkeit von Glück, Launen anderer, materiellen Umständen.
 
 #### Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Stoiker                           | Epikur                            |
-+------------------+-----------------------------------+-----------------------------------+
-| Ziel             | Tugend (Apatheia)                 | Lust (Ataraxia/Aponia)            |
-+------------------+-----------------------------------+-----------------------------------+
-| Höchstes Gut     | Tugend (einziges Gut)             | Katastematische Lust (Seelenruhe) |
-+------------------+-----------------------------------+-----------------------------------+
-| Gerechtigkeit    | Objektives Naturrecht             | Nützlichkeitsvertrag              |
-|                  | (Lex Naturalis)                   | (Konvention)                      |
-+------------------+-----------------------------------+-----------------------------------+
-| Politisches Leben| Pflicht zur Teilnahme             | Rückzug ins Private               |
-|                  | (Kosmopolitismus)                 | (Lathe biōsas)                    |
-+------------------+-----------------------------------+-----------------------------------+
-| Kosmologie       | Deterministisch (Logos/Pneuma)    | Atomistisch (Zufall durch         |
-|                  |                                   | Clinamen)                         |
-+------------------+-----------------------------------+-----------------------------------+
-| Gemeinschaft     | Kosmopolis (ganze Menschheit)     | Enger Freundeskreis (Garten)      |
-+------------------+-----------------------------------+-----------------------------------+
-| Lust             | Ein "Nebenprodukt", oft verdächtig| Das höchste Gut (wenn statisch/   |
-|                  |                                   | katastematisch)                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Schmerz          | Ein "Indifferenzgut" (Adiaphoron) | Das einzige wahre Übel            |
-+------------------+-----------------------------------+-----------------------------------+
-| Affekte          | Apatheia (Freiheit von            | Ataraxia (Seelenruhe durch        |
-|                  | Leidenschaften)                   | Lustmaximierung)                  |
-+------------------+-----------------------------------+-----------------------------------+
-| Mut              | Zentrale Tugend                   | Irrelevant (wozu in Gefahr gehen?)|
-+------------------+-----------------------------------+-----------------------------------+
-| Götter           | Pantheistisch: Gott ist die       | Deistisch: Götter existieren,     |
-|                  | Vernunft in der Materie (Logos)   | sind aber völlig desinteressiert  |
-|                  |                                   | (Metakosmia)                      |
-+------------------+-----------------------------------+-----------------------------------+
-| Jenseits         | Nein (materialistischer           | Nein (materialistischer           |
-|                  | Pantheismus)                      | Atomismus)                        |
-+------------------+-----------------------------------+-----------------------------------+
-| Willensfreiheit  | Kompatibilismus: Freiheit in      | Clinamen erlaubt Indeterminismus  |
-|                  | Zustimmung zu Vorstellungen       | auf atomarer Ebene                |
-+------------------+-----------------------------------+-----------------------------------+
-```
+| Dimension | Stoiker | Epikur |
+|-----------|---------|--------|
+| Ziel | Tugend (Apatheia) | Lust (Ataraxia/Aponia) |
+| Höchstes Gut | Tugend (einziges Gut) | Katastematische Lust (Seelenruhe) |
+| Gerechtigkeit | Objektives Naturrecht (Lex Naturalis) | Nützlichkeitsvertrag (Konvention) |
+| Politisches Leben | Pflicht zur Teilnahme (Kosmopolitismus) | Rückzug ins Private (Lathe biōsas) |
+| Kosmologie | Deterministisch (Logos/Pneuma) | Atomistisch (Zufall durch Clinamen) |
+| Gemeinschaft | Kosmopolis (ganze Menschheit) | Enger Freundeskreis (Garten) |
+| Lust | Ein "Nebenprodukt", oft verdächtig | Das höchste Gut (wenn statisch/katastematisch) |
+| Schmerz | Ein "Indifferenzgut" (Adiaphoron) | Das einzige wahre Übel |
+| Affekte | Apatheia (Freiheit von Leidenschaften) | Ataraxia (Seelenruhe durch Lustmaximierung) |
+| Mut | Zentrale Tugend | Irrelevant (wozu in Gefahr gehen?) |
+| Götter | Pantheistisch: Gott ist die Vernunft in der Materie (Logos) | Deistisch: Götter existieren, sind aber völlig desinteressiert (Metakosmia) |
+| Jenseits | Nein (materialistischer Pantheismus) | Nein (materialistischer Atomismus) |
+| Willensfreiheit | Kompatibilismus: Freiheit in Zustimmung zu Vorstellungen | Clinamen erlaubt Indeterminismus auf atomarer Ebene |
 
 #### Unterschiede
 
@@ -768,45 +702,20 @@ Karma ist **keine** kosmische Gerechtigkeit oder Schicksal, sondern **natürlich
 
 #### Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Konfuzius                         | Buddha                            |
-+------------------+-----------------------------------+-----------------------------------+
-| Ziel             | He (Harmonie) – soziale Ordnung   | Nirvana – Befreiung vom Leiden    |
-+------------------+-----------------------------------+-----------------------------------+
-| Das Selbst       | Muss durch Bildung **verfeinert** | Muss als Illusion **durchschaut** |
-|                  | werden (Junzi)                    | werden (Anatta)                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Gesellschaft     | Das **Labor** der Tugend          | Ein **Netz** aus Verwicklungen    |
-+------------------+-----------------------------------+-----------------------------------+
-| Leidursache      | Soziale Unordnung, mangelnde      | Psychologisches Anhaften,         |
-|                  | Bildung, falsche Rollen           | Unwissenheit (Moha)               |
-+------------------+-----------------------------------+-----------------------------------+
-| Lösung           | Ordnung durch Ritual (Li),        | Entsagung, Meditation,            |
-|                  | Bildung (Wen), Vorbild (De)       | Achtfacher Pfad                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Rolle des Rituals| **Zentral** – der Kleber der      | **Hindernis** – Silabbata-        |
-|                  | Zivilisation                      | paramasa (Anhaften an Riten)      |
-+------------------+-----------------------------------+-----------------------------------+
-| Gemeinschaft     | **Konstitutiv** – Mensch wird     | **Sangha** – Schutzraum, aber     |
-|                  | durch Beziehungen zum Menschen    | weltliche Bindungen = Leiden      |
-+------------------+-----------------------------------+-----------------------------------+
-| Hierarchie       | Notwendig für Ordnung (Wu Lun)    | Egalitär (alle können Erleuchtung |
-|                  |                                   | erreichen, Kaste ist irrelevant)  |
-+------------------+-----------------------------------+-----------------------------------+
-| Legitimität      | Tianming (Mandat des Himmels) –   | Individuelle Einsicht (Erfahrung),|
-|                  | moralisch                         | empirische Verifikation           |
-+------------------+-----------------------------------+-----------------------------------+
-| Gerechtigkeit    | Erfüllung von Rollen-Pflichten    | Überwindung von Karma (Handlungs- |
-|                  | (Wu Lun)                          | folgen)                           |
-+------------------+-----------------------------------+-----------------------------------+
-| Jenseits         | Agnostisch ("Wenn wir das Leben   | Wiedergeburt (Samsara), aber kein |
-|                  | nicht verstehen...")              | "Selbst" wird wiedergeboren       |
-+------------------+-----------------------------------+-----------------------------------+
-| Metaphysik       | Schweigt dazu – diesseitig,       | Schweigt zu unbeantwortbaren      |
-|                  | pragmatisch                       | Fragen – apophatisch              |
-+------------------+-----------------------------------+-----------------------------------+
-```
+| Dimension | Konfuzius | Buddha |
+|-----------|-----------|--------|
+| Ziel | He (Harmonie) – soziale Ordnung | Nirvana – Befreiung vom Leiden |
+| Das Selbst | Muss durch Bildung **verfeinert** werden (Junzi) | Muss als Illusion **durchschaut** werden (Anatta) |
+| Gesellschaft | Das **Labor** der Tugend | Ein **Netz** aus Verwicklungen |
+| Leidursache | Soziale Unordnung, mangelnde Bildung, falsche Rollen | Psychologisches Anhaften, Unwissenheit (Moha) |
+| Lösung | Ordnung durch Ritual (Li), Bildung (Wen), Vorbild (De) | Entsagung, Meditation, Achtfacher Pfad |
+| Rolle des Rituals | **Zentral** – der Kleber der Zivilisation | **Hindernis** – Silabbata-paramasa (Anhaften an Riten) |
+| Gemeinschaft | **Konstitutiv** – Mensch wird durch Beziehungen zum Menschen | **Sangha** – Schutzraum, aber weltliche Bindungen = Leiden |
+| Hierarchie | Notwendig für Ordnung (Wu Lun) | Egalitär (alle können Erleuchtung erreichen, Kaste ist irrelevant) |
+| Legitimität | Tianming (Mandat des Himmels) – moralisch | Individuelle Einsicht (Erfahrung), empirische Verifikation |
+| Gerechtigkeit | Erfüllung von Rollen-Pflichten (Wu Lun) | Überwindung von Karma (Handlungsfolgen) |
+| Jenseits | Agnostisch ("Wenn wir das Leben nicht verstehen...") | Wiedergeburt (Samsara), aber kein "Selbst" wird wiedergeboren |
+| Metaphysik | Schweigt dazu – diesseitig, pragmatisch | Schweigt zu unbeantwortbaren Fragen – apophatisch |
 
 #### Unterschiede
 
@@ -1116,36 +1025,19 @@ Beispiele:
 
 #### Tabellarische Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Prediger                          | Sprüche                           |
-+------------------+-----------------------------------+-----------------------------------+
-| Weltsicht        | Absurdistisch, zyklisch           | Ordnungsorientiert, kausal        |
-+------------------+-----------------------------------+-----------------------------------+
-| Vergeltungslehre | **Abgelehnt** – Gerechte leiden,  | **Zentral** – Tugend führt zu     |
-|                  | Böse gedeihen                     | Erfolg                            |
-+------------------+-----------------------------------+-----------------------------------+
-| Weisheit         | Relativ nutzlos (1:18)            | Absolut wertvoll (3:13-18)        |
-+------------------+-----------------------------------+-----------------------------------+
-| Arbeit           | Absurd, für andere (2:18-23)      | Segensreich, führt zu Wohlstand   |
-|                  |                                   | (10:4)                            |
-+------------------+-----------------------------------+-----------------------------------+
-| Tod              | Gleichmacher, Ende (3:19-20)      | Folge von Torheit (10:21, 11:19)  |
-+------------------+-----------------------------------+-----------------------------------+
-| Gott             | Fern, unergründlich (5:1)         | Nah, gerecht, belohnend (3:5-6)   |
-+------------------+-----------------------------------+-----------------------------------+
-| Jenseits         | Nein/unklar – "wer weiß?" (3:21)  | Unklar, aber Vergeltung diesseitig|
-+------------------+-----------------------------------+-----------------------------------+
-| Ton              | Melancholisch, resigniert         | Optimistisch, lehrerhaft          |
-+------------------+-----------------------------------+-----------------------------------+
-| Ethik            | Genuss trotz Sinnlosigkeit        | Tugend wegen Belohnung            |
-+------------------+-----------------------------------+-----------------------------------+
-| Ungerechtigkeit  | Realität, unerklärbar (8:14)      | Ausnahme, selbstverschuldet       |
-+------------------+-----------------------------------+-----------------------------------+
-| Botschaft        | "Alles ist eitel – genieße        | "Sei weise – und es geht dir gut" |
-|                  | trotzdem"                         |                                   |
-+------------------+-----------------------------------+-----------------------------------+
-```
+| Dimension | Prediger | Sprüche |
+|-----------|----------|---------|
+| Weltsicht | Absurdistisch, zyklisch | Ordnungsorientiert, kausal |
+| Vergeltungslehre | **Abgelehnt** – Gerechte leiden, Böse gedeihen | **Zentral** – Tugend führt zu Erfolg |
+| Weisheit | Relativ nutzlos (1:18) | Absolut wertvoll (3:13-18) |
+| Arbeit | Absurd, für andere (2:18-23) | Segensreich, führt zu Wohlstand (10:4) |
+| Tod | Gleichmacher, Ende (3:19-20) | Folge von Torheit (10:21, 11:19) |
+| Gott | Fern, unergründlich (5:1) | Nah, gerecht, belohnend (3:5-6) |
+| Jenseits | Nein/unklar – "wer weiß?" (3:21) | Unklar, aber Vergeltung diesseitig |
+| Ton | Melancholisch, resigniert | Optimistisch, lehrerhaft |
+| Ethik | Genuss trotz Sinnlosigkeit | Tugend wegen Belohnung |
+| Ungerechtigkeit | Realität, unerklärbar (8:14) | Ausnahme, selbstverschuldet |
+| Botschaft | "Alles ist eitel – genieße trotzdem" | "Sei weise – und es geht dir gut" |
 
 #### Die zentrale Spannung
 
@@ -1484,35 +1376,19 @@ Mill ist kein Hedonist im vulgären Sinn.
 
 #### Tabellarische Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Kant                              | Mill                              |
-+------------------+-----------------------------------+-----------------------------------+
-| Ethiktyp         | Deontologie (Pflichtethik)        | Konsequenzialismus (Utilitarismus)|
-+------------------+-----------------------------------+-----------------------------------+
-| Kriterium        | Universalisierbarkeit der Maxime  | Gesamtglück aller Betroffenen     |
-+------------------+-----------------------------------+-----------------------------------+
-| Moralischer Wert | Gesinnung, Pflichterfüllung       | Folgen, Nutzen                    |
-+------------------+-----------------------------------+-----------------------------------+
-| Lügen            | **Niemals** (selbst zum Schutz)   | **Erlaubt**, wenn nützlich        |
-+------------------+-----------------------------------+-----------------------------------+
-| Ausnahmen        | Keine – absolute Regeln           | Ja – Regeln sind Faustregeln      |
-+------------------+-----------------------------------+-----------------------------------+
-| Motivation       | Pflicht über Neigung              | Glück ist natürliches Ziel        |
-+------------------+-----------------------------------+-----------------------------------+
-| Gleichheit       | Würde jedes Menschen (Zweck an    | Jeder zählt gleich (aber          |
-|                  | sich)                             | aggregierbar)                     |
-+------------------+-----------------------------------+-----------------------------------+
-| Freiheit         | Autonomie = Selbstbindung an      | Freiheit = tun was man will       |
-|                  | Gesetz                            | (solange kein Schaden)            |
-+------------------+-----------------------------------+-----------------------------------+
-| Gott/Jenseits    | Postulat der praktischen Vernunft | Irrelevant, empirisch unzugänglich|
-+------------------+-----------------------------------+-----------------------------------+
-| Tugend           | Selbstzweck                       | Instrumentell (dient Glück)       |
-+------------------+-----------------------------------+-----------------------------------+
-| Glück            | Nicht direktes Ziel der Moral     | **Das** Ziel der Moral            |
-+------------------+-----------------------------------+-----------------------------------+
-```
+| Dimension | Kant | Mill |
+|-----------|------|------|
+| Ethiktyp | Deontologie (Pflichtethik) | Konsequenzialismus (Utilitarismus) |
+| Kriterium | Universalisierbarkeit der Maxime | Gesamtglück aller Betroffenen |
+| Moralischer Wert | Gesinnung, Pflichterfüllung | Folgen, Nutzen |
+| Lügen | **Niemals** (selbst zum Schutz) | **Erlaubt**, wenn nützlich |
+| Ausnahmen | Keine – absolute Regeln | Ja – Regeln sind Faustregeln |
+| Motivation | Pflicht über Neigung | Glück ist natürliches Ziel |
+| Gleichheit | Würde jedes Menschen (Zweck an sich) | Jeder zählt gleich (aber aggregierbar) |
+| Freiheit | Autonomie = Selbstbindung an Gesetz | Freiheit = tun was man will (solange kein Schaden) |
+| Gott/Jenseits | Postulat der praktischen Vernunft | Irrelevant, empirisch unzugänglich |
+| Tugend | Selbstzweck | Instrumentell (dient Glück) |
+| Glück | Nicht direktes Ziel der Moral | **Das** Ziel der Moral |
 
 #### Klassische Konflikte
 
@@ -1902,39 +1778,21 @@ Aber: Der Übermensch **bejaht** dieses Chaos und schafft daraus **Kunst** (sein
 
 #### Tabellarische Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Aristoteles                       | Nietzsche                         |
-+------------------+-----------------------------------+-----------------------------------+
-| Ziel             | Eudaimonia (Aufblühen)            | Übermensch (Selbstschöpfung)      |
-+------------------+-----------------------------------+-----------------------------------+
-| Die Mitte        | Tugend ist die Mitte              | Mitte ist Mittelmäßigkeit!        |
-+------------------+-----------------------------------+-----------------------------------+
-| Gemeinschaft     | Zoon politikon – essentiell       | Einsamkeit – notwendig            |
-+------------------+-----------------------------------+-----------------------------------+
-| Freundschaft     | Philia – konstitutiv              | Gefahr der Schwächung             |
-+------------------+-----------------------------------+-----------------------------------+
-| Mitleid          | Tugend (richtige Mitte)           | **Schwäche, zu überwinden**       |
-+------------------+-----------------------------------+-----------------------------------+
-| Gleichheit       | Proportionale Gerechtigkeit       | Hierarchie ist natürlich und gut  |
-+------------------+-----------------------------------+-----------------------------------+
-| Maß/Extreme      | Maß ist Tugend                    | **Extreme** schaffen Größe        |
-+------------------+-----------------------------------+-----------------------------------+
-| Glück            | Ziel des Lebens                   | Zeichen der Schwäche ("Glück      |
-|                  |                                   | der Herde")                       |
-+------------------+-----------------------------------+-----------------------------------+
-| Leid             | Zu vermeiden                      | **Zu bejahen** (macht stark)      |
-+------------------+-----------------------------------+-----------------------------------+
-| Moral            | Objektiv (naturbasiert)           | Perspektivisch (machtbasiert)     |
-+------------------+-----------------------------------+-----------------------------------+
-| Mensch           | Wesen mit fester Natur            | Wesen **ohne** feste Natur        |
-|                  |                                   | (zu überwinden)                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Politik          | Notwendig für Tugend              | Gefahr der Nivellierung           |
-+------------------+-----------------------------------+-----------------------------------+
-| Kontemplation    | Höchstes Leben                    | Zu passiv, zu weltfremd           |
-+------------------+-----------------------------------+-----------------------------------+
-```
+| Dimension | Aristoteles | Nietzsche |
+|-----------|-------------|-----------|
+| Ziel | Eudaimonia (Aufblühen) | Übermensch (Selbstschöpfung) |
+| Die Mitte | Tugend ist die Mitte | Mitte ist Mittelmäßigkeit! |
+| Gemeinschaft | Zoon politikon – essentiell | Einsamkeit – notwendig |
+| Freundschaft | Philia – konstitutiv | Gefahr der Schwächung |
+| Mitleid | Tugend (richtige Mitte) | **Schwäche, zu überwinden** |
+| Gleichheit | Proportionale Gerechtigkeit | Hierarchie ist natürlich und gut |
+| Maß/Extreme | Maß ist Tugend | **Extreme** schaffen Größe |
+| Glück | Ziel des Lebens | Zeichen der Schwäche ("Glück der Herde") |
+| Leid | Zu vermeiden | **Zu bejahen** (macht stark) |
+| Moral | Objektiv (naturbasiert) | Perspektivisch (machtbasiert) |
+| Mensch | Wesen mit fester Natur | Wesen **ohne** feste Natur (zu überwinden) |
+| Politik | Notwendig für Tugend | Gefahr der Nivellierung |
+| Kontemplation | Höchstes Leben | Zu passiv, zu weltfremd |
 
 #### Punkt für Punkt: Nietzsche contra Aristoteles
 
@@ -2260,148 +2118,48 @@ aller zehn behandelten Philosophen bzw. Traditionen.
 
 ### Tabelle 1: Metaphysische und epistemologische Positionen
 
-```
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Philosoph     | Metaphysik             | Jenseits         | Willensfreiheit       | Selbstmord       |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Stoiker       | Materialistisch,       | Nein (Seele      | Kompatibilismus:      | Akzeptabel       |
-|               | pantheistisch,         | materiell)       | Freiheit in           | (rationaler      |
-|               | deterministisch        |                  | Zustimmung            | Ausgang)         |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Epikur        | Atomistisch,           | Nein (keine      | Clinamen erlaubt      | Nicht explizit   |
-|               | materialistisch        | Seele)           | Indeterminismus       | thematisiert     |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Konfuzius     | Agnostisch,            | Irrelevant       | Nicht explizit        | Nicht explizit   |
-|               | diesseitig             | (schweigt dazu)  | thematisiert          | thematisiert     |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Buddha        | Weder Materialismus    | Samsara          | Karma als kausale     | Verboten         |
-|               | noch Theismus,         | (Wiedergeburt),  | Kette, aber kein      | (erstes Sila)    |
-|               | abhängiges Entstehen   | Nirvana als      | "Selbst" entscheidet  |                  |
-|               |                        | Auslöschen       |                       |                  |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Prediger      | Diesseitig,            | Unklar ("wer     | Nicht explizit        | Nicht explizit   |
-|               | Gott fern und          | weiß?", 3:21)    | thematisiert          | thematisiert     |
-|               | unergründlich          |                  |                       |                  |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Sprüche       | Gott als gerechte      | Unklar (Fokus    | Mensch hat Wahl       | Nicht explizit   |
-|               | Ordnung                | auf diesseitige  | zwischen Weisheit     | thematisiert     |
-|               |                        | Vergeltung)      | und Torheit           |                  |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Kant          | Dualistisch            | Ja (Postulat     | Ja (transzendentale   | Verboten (gegen  |
-|               | (Phänomen/Noumenon),   | der praktischen  | Freiheit,             | Pflicht gegen    |
-|               | Gott als Postulat      | Vernunft)        | Autonomie)            | sich selbst)     |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Mill          | Empiristisch,          | Nein             | Kompatibilismus       | Erlaubt (Schaden-|
-|               | naturalistisch         | (irrelevant)     | (implizit)            | prinzip: eigene  |
-|               |                        |                  |                       | Entscheidung)    |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Aristoteles   | Teleologisch,          | Nein/unklar      | Prohairesis           | Nicht explizit,  |
-|               | naturalistisch         | Hylomorphismus   | (rationale Wahl),     | aber wohl gegen  |
-|               |                        | Keine persön-    | aber in natürlicher   | die Natur        |
-|               |                        | liche            | Ordnung               |                  |
-|               |                        | Fortexistenz     |                       |                  |
-+---------------+------------------------+------------------+-----------------------+------------------+
-| Nietzsche     | Nihilistisch,          | Nein (explizit   | Kompliziert:          | Kontextuell:     |
-|               | perspektivisch,        | abgelehnt)       | Determinismus vs.     | Im Leiden kann   |
-|               | ewige Wiederkunft      |                  | Selbstschöpfung       | es richtig sein  |
-+---------------+------------------------+------------------+-----------------------+------------------+
-```
+| Philosoph | Metaphysik | Jenseits | Willensfreiheit | Selbstmord |
+|-----------|------------|----------|-----------------|------------|
+| Stoiker | Materialistisch, pantheistisch, deterministisch | Nein (Seele materiell) | Kompatibilismus: Freiheit in Zustimmung | Akzeptabel (rationaler Ausgang) |
+| Epikur | Atomistisch, materialistisch | Nein (keine Seele) | Clinamen erlaubt Indeterminismus | Nicht explizit thematisiert |
+| Konfuzius | Agnostisch, diesseitig | Irrelevant (schweigt dazu) | Nicht explizit thematisiert | Nicht explizit thematisiert |
+| Buddha | Weder Materialismus noch Theismus, abhängiges Entstehen | Samsara (Wiedergeburt), Nirvana als Auslöschen | Karma als kausale Kette, aber kein "Selbst" entscheidet | Verboten (erstes Sila) |
+| Prediger | Diesseitig, Gott fern und unergründlich | Unklar ("wer weiß?", 3:21) | Nicht explizit thematisiert | Nicht explizit thematisiert |
+| Sprüche | Gott als gerechte Ordnung | Unklar (Fokus auf diesseitige Vergeltung) | Mensch hat Wahl zwischen Weisheit und Torheit | Nicht explizit thematisiert |
+| Kant | Dualistisch (Phänomen/Noumenon), Gott als Postulat | Ja (Postulat der praktischen Vernunft) | Ja (transzendentale Freiheit, Autonomie) | Verboten (gegen Pflicht gegen sich selbst) |
+| Mill | Empiristisch, naturalistisch | Nein (irrelevant) | Kompatibilismus (implizit) | Erlaubt (Schadensprinzip: eigene Entscheidung) |
+| Aristoteles | Teleologisch, naturalistisch | Nein/unklar Hylomorphismus Keine persönliche Fortexistenz | Prohairesis (rationale Wahl), aber in natürlicher Ordnung | Nicht explizit, aber wohl gegen die Natur |
+| Nietzsche | Nihilistisch, perspektivisch, ewige Wiederkunft | Nein (explizit abgelehnt) | Kompliziert: Determinismus vs. Selbstschöpfung | Kontextuell: Im Leiden kann es richtig sein |
 
 ### Tabelle 2: Soziale und praktische Orientierung
 
-```
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Philosoph     | Soziale          | Politische          | Mitleid als        | Egalitär vs.         |
-|               | Orientierung     | Orientierung        | Tugend?            | Hierarchisch         |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Stoiker       | Kosmopolitisch   | Pflicht zur         | Ja (mit Maß)       | Theoretisch egalitär |
-|               | (ganze           | Teilnahme           |                    | (alle haben Vernunft)|
-|               | Menschheit)      |                     |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Epikur        | Enger Freundes-  | Rückzug             | Nicht zentral      | Egalitär im Garten   |
-|               | kreis (Garten)   | (lathe biōsas)      |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Konfuzius     | Konzentrische    | Zentral             | Ja (im Kontext     | Hierarchisch         |
-|               | Kreise (Familie  | (Vorbild-Herrschaft)| der Beziehungen)   | (Fünf Beziehungen)   |
-|               | → Staat)         |                     |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Buddha        | Sangha           | Rückzug             | Ja (Karuna         | Egalitär             |
-|               | (Mönchsgemein-   | (Entsagung)         | zentral)           | (anti-Kaste)         |
-|               | schaft)          |                     |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Prediger      | Nicht explizit   | Skeptisch           | Nicht thematisiert | Nicht explizit       |
-|               |                  | (nichts hilft)      |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Sprüche       | Familie,         | Implizit positiv    | Ja (zu Armen)      | Hierarchisch         |
-|               | Gemeinschaft     | (weiser Herrscher)  |                    | (aber lernbar)       |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Kant          | Kosmopolitisch   | Rechtsstaat,        | Ja (aus Pflicht)   | Egalitär (gleiche    |
-|               | (Weltbürger)     | Gewaltenteilung     |                    | Würde)               |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Mill          | Universell       | Demokratie,         | Ja (maximiert      | Egalitär (jeder      |
-|               | (alle fühlenden  | Reform              | Gesamtglück)       | zählt gleich)        |
-|               | Wesen)           |                     |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Aristoteles   | Polis            | Zentral             | Ja (richtige Mitte)| Hierarchisch (nach   |
-|               | (zoon politikon) | (Mensch als         |                    | Verdienst)           |
-|               |                  | politisches Wesen)  |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-| Nietzsche     | Einsamkeit       | Ablehnung           | **Nein** (Schwäche)| Hierarchisch         |
-|               | (gegen Herde)    | (Demokratie =       |                    | (natürlich und gut)  |
-|               |                  | Mittelmäßigkeit)    |                    |                      |
-+---------------+------------------+---------------------+--------------------+----------------------+
-```
+| Philosoph | Soziale Orientierung | Politische Orientierung | Mitleid als Tugend? | Egalitär vs. Hierarchisch |
+|-----------|---------------------|------------------------|---------------------|---------------------------|
+| Stoiker | Kosmopolitisch (ganze Menschheit) | Pflicht zur Teilnahme | Ja (mit Maß) | Theoretisch egalitär (alle haben Vernunft) |
+| Epikur | Enger Freundeskreis (Garten) | Rückzug (lathe biōsas) | Nicht zentral | Egalitär im Garten |
+| Konfuzius | Konzentrische Kreise (Familie → Staat) | Zentral (Vorbild-Herrschaft) | Ja (im Kontext der Beziehungen) | Hierarchisch (Fünf Beziehungen) |
+| Buddha | Sangha (Mönchsgemeinschaft) | Rückzug (Entsagung) | Ja (Karuna zentral) | Egalitär (anti-Kaste) |
+| Prediger | Nicht explizit | Skeptisch (nichts hilft) | Nicht thematisiert | Nicht explizit |
+| Sprüche | Familie, Gemeinschaft | Implizit positiv (weiser Herrscher) | Ja (zu Armen) | Hierarchisch (aber lernbar) |
+| Kant | Kosmopolitisch (Weltbürger) | Rechtsstaat, Gewaltenteilung | Ja (aus Pflicht) | Egalitär (gleiche Würde) |
+| Mill | Universell (alle fühlenden Wesen) | Demokratie, Reform | Ja (maximiert Gesamtglück) | Egalitär (jeder zählt gleich) |
+| Aristoteles | Polis (zoon politikon) | Zentral (Mensch als politisches Wesen) | Ja (richtige Mitte) | Hierarchisch (nach Verdienst) |
+| Nietzsche | Einsamkeit (gegen Herde) | Ablehnung (Demokratie = Mittelmäßigkeit) | **Nein** (Schwäche) | Hierarchisch (natürlich und gut) |
 
 ### Tabelle 3: Zentrale Konzepte und methodische Besonderheiten
 
-```
-+---------------+------------------------+-------------------------+---------------------------+
-| Philosoph     | Zentrale Konzepte      | Methode                 | Besondere Merkmale        |
-+---------------+------------------------+-------------------------+---------------------------+
-| Stoiker       | Dichotomie der         | Therapeutische Übungen  | Monistisch, keine         |
-|               | Kontrolle, Prohairesis,| (askēsis), Meditation   | ausgleichende Gerechtig-  |
-|               | Amor fati              |                         | keit im Jenseits          |
-+---------------+------------------------+-------------------------+---------------------------+
-| Epikur        | Tetrapharmakos,        | Philosophie als         | Monistisch, anti-politisch|
-|               | Drei Begierden,        | Therapie, Naturphilo-   | (einzigartig unter        |
-|               | Hedonistisches Kalkül  | sophie gegen Aberglauben| Griechen)                 |
-+---------------+------------------------+-------------------------+---------------------------+
-| Konfuzius     | Ren, Li, Xiao,         | Ritual, Bildung,        | Nicht-metaphysisch,       |
-|               | Fünf Beziehungen,      | Vorbild                 | kontextual, konservativ   |
-|               | Junzi                  |                         |                           |
-+---------------+------------------------+-------------------------+---------------------------+
-| Buddha        | Vier Edle Wahrheiten,  | Meditation, Achtsamkeit,| Nicht-Selbst (Anatta)     |
-|               | Achtfacher Pfad,       | ethisches Leben         | einzigartig, pragmatisch, |
-|               | Drei Gifte, Anatta     |                         | anti-rituell              |
-+---------------+------------------------+-------------------------+---------------------------+
-| Prediger      | Hebel (Vanitas),       | Beobachtung, Reflexion, | Innerbiblischer           |
-|               | Zeitenweisheit,        | existenzielle           | Außenseiter, existenziell |
-|               | Gottesfurcht trotz     | Ehrlichkeit             | modern, kein Messianismus |
-|               | Absurdität             |                         |                           |
-+---------------+------------------------+-------------------------+---------------------------+
-| Sprüche       | Vergeltungslehre,      | Unterweisung,           | Weisheitsliteratur,       |
-|               | Weisheit als Lebens-   | Tradition, Beispiele    | optimistisch, pädagogisch |
-|               | kunst, Gottesfurcht    |                         |                           |
-+---------------+------------------------+-------------------------+---------------------------+
-| Kant          | Kategorischer          | A priori Vernunft,      | Rigoristisch, formalis-   |
-|               | Imperativ, Autonomie,  | transzendentale         | tisch, anti-konsequen-    |
-|               | Würde, guter Wille     | Deduktion               | zialistisch               |
-+---------------+------------------------+-------------------------+---------------------------+
-| Mill          | Utilitätsprinzip,      | Empirisch, induktiv,    | Liberal-progressiv,       |
-|               | Schadensprinzip,       | soziale Reform          | feministisch, fallibilis- |
-|               | höhere vs. niedere     |                         | tisch, tier-inklusiv      |
-|               | Freuden                |                         |                           |
-+---------------+------------------------+-------------------------+---------------------------+
-| Aristoteles   | Mesotes (die Mitte),   | Beobachtung, Erfahrung, | Klassiker der Tugendethik,|
-|               | Phronesis, Eudaimonia, | Gewöhnung, Bildung      | teleologisch, holistisch, |
-|               | Philia, Zoon politikon |                         | realistisch               |
-+---------------+------------------------+-------------------------+---------------------------+
-| Nietzsche     | Übermensch, Wille zur  | Genealogie, Aphorismus, | Anti-systematisch,        |
-|               | Macht, Umwertung aller | Provokation, Psycho-    | stilistisch brillant,     |
-|               | Werte, Amor fati,      | logie, Perspektivismus  | polarisierend, tragisch   |
-|               | Ewige Wiederkunft      |                         |                           |
-+---------------+------------------------+-------------------------+---------------------------+
-```
+| Philosoph | Zentrale Konzepte | Methode | Besondere Merkmale |
+|-----------|-------------------|---------|-------------------|
+| Stoiker | Dichotomie der Kontrolle, Prohairesis, Amor fati | Therapeutische Übungen (askēsis), Meditation | Monistisch, keine ausgleichende Gerechtigkeit im Jenseits |
+| Epikur | Tetrapharmakos, Drei Begierden, Hedonistisches Kalkül | Philosophie als Therapie, Naturphilosophie gegen Aberglauben | Monistisch, anti-politisch (einzigartig unter Griechen) |
+| Konfuzius | Ren, Li, Xiao, Fünf Beziehungen, Junzi | Ritual, Bildung, Vorbild | Nicht-metaphysisch, kontextual, konservativ |
+| Buddha | Vier Edle Wahrheiten, Achtfacher Pfad, Drei Gifte, Anatta | Meditation, Achtsamkeit, ethisches Leben | Nicht-Selbst (Anatta) einzigartig, pragmatisch, anti-rituell |
+| Prediger | Hebel (Vanitas), Zeitenweisheit, Gottesfurcht trotz Absurdität | Beobachtung, Reflexion, existenzielle Ehrlichkeit | Innerbiblischer Außenseiter, existenziell modern, kein Messianismus |
+| Sprüche | Vergeltungslehre, Weisheit als Lebenskunst, Gottesfurcht | Unterweisung, Tradition, Beispiele | Weisheitsliteratur, optimistisch, pädagogisch |
+| Kant | Kategorischer Imperativ, Autonomie, Würde, guter Wille | A priori Vernunft, transzendentale Deduktion | Rigoristisch, formalistisch, anti-konsequenzialistisch |
+| Mill | Utilitätsprinzip, Schadensprinzip, höhere vs. niedere Freuden | Empirisch, induktiv, soziale Reform | Liberal-progressiv, feministisch, fallibilistisch, tier-inklusiv |
+| Aristoteles | Mesotes (die Mitte), Phronesis, Eudaimonia, Philia, Zoon politikon | Beobachtung, Erfahrung, Gewöhnung, Bildung | Klassiker der Tugendethik, teleologisch, holistisch, realistisch |
+| Nietzsche | Übermensch, Wille zur Macht, Umwertung aller Werte, Amor fati, Ewige Wiederkunft | Genealogie, Aphorismus, Provokation, Psychologie, Perspektivismus | Anti-systematisch, stilistisch brillant, polarisierend, tragisch |
 
 ---
 
@@ -2642,31 +2400,18 @@ Dies ist Nietzsches **radikalste** Position und stellt ihn gegen die gesamte phi
 
 ### Matrix: Regeln/Prinzipien nach Philosophen
 
-```
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Prinzip                    | Sto | Epi | Kon | Bud | Pre | Spr | Kan | Mil | Ari | Nie |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Mäßigung/Selbstkontrolle   |  X  |  X  |  X  |  X  |  ~  |  X  |  ~  |  X  |  X  | (!) |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Praktische Klugheit        |  X  |  X  |  X  |  X  |  ~  |  X  |  ~  |  X  |  X  |  ~  |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Mitleid/Mitgefühl          |  X  |  ~  |  X  |  X  |  -  |  X  |  X  |  X  |  X  | (!) |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Gerechtigkeit/Fairness     |  X  |  ~  |  X  |  X  |  -  |  X  |  X  |  X  |  X  | (!) |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Wahrhaftigkeit/Ehrlichkeit |  X  |  ~  |  X  |  X  |  ~  |  X  |  X  |  ~  |  X  |  ~  |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Gemeinschaft/Sozial        |  X  | (!) |  X  | (!) |  -  |  X  |  X  |  X  |  X  | (!) |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Fleiß/Arbeitsamkeit        |  ~  |  -  |  X  |  ~  | (!) |  X  |  ~  |  ~  |  ~  |  ~  |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Akzeptanz/Gelassenheit     |  X  |  X  |  ~  |  ~  |  X  |  -  |  -  |  -  |  -  |  X  |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Freundschaft               |  ~  |  X  |  X  |  ~  |  -  |  X  |  ~  |  ~  |  X  |  ~  |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Gottesfurcht               |  ~  | (!) |  ~  | (!) |  X  |  X  |  X  | (!) |  ~  | (!) |
-+----------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-```
+| Prinzip | Sto | Epi | Kon | Bud | Pre | Spr | Kan | Mil | Ari | Nie |
+|---------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| Mäßigung/Selbstkontrolle | X | X | X | X | ~ | X | ~ | X | X | (!) |
+| Praktische Klugheit | X | X | X | X | ~ | X | ~ | X | X | ~ |
+| Mitleid/Mitgefühl | X | ~ | X | X | - | X | X | X | X | (!) |
+| Gerechtigkeit/Fairness | X | ~ | X | X | - | X | X | X | X | (!) |
+| Wahrhaftigkeit/Ehrlichkeit | X | ~ | X | X | ~ | X | X | ~ | X | ~ |
+| Gemeinschaft/Sozial | X | (!) | X | (!) | - | X | X | X | X | (!) |
+| Fleiß/Arbeitsamkeit | ~ | - | X | ~ | (!) | X | ~ | ~ | ~ | ~ |
+| Akzeptanz/Gelassenheit | X | X | ~ | ~ | X | - | - | - | - | X |
+| Freundschaft | ~ | X | X | ~ | - | X | ~ | ~ | X | ~ |
+| Gottesfurcht | ~ | (!) | ~ | (!) | X | X | X | (!) | ~ | (!) |
 
 **Legende**: Sto = Stoiker, Epi = Epikur, Kon = Konfuzius, Bud = Buddha, Pre = Prediger, Spr = Sprüche, Kan = Kant, Mil = Mill, Ari = Aristoteles, Nie = Nietzsche
 
@@ -2836,25 +2581,15 @@ Diese Sektion analysiert die ultimativen Ziele (das *summum bonum*, das höchste
 
 ### Matrix: Ziele nach Philosophen
 
-```
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Ziel                      | Sto | Epi | Kon | Bud | Pre | Spr | Kan | Mil | Ari | Nie |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Seelenruhe/Innerer Frieden|  X  |  X  |  -  |  X  |  X  |  -  |  -  |  -  |  -  |  -  |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Eudaimonia/Aufblühen      |  X  |  -  |  -  |  -  |  -  |  X  |  -  |  -  |  X  |  -  |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Tugend als Selbstzweck    |  X  |  -  |  -  |  -  |  -  |  -  |  X  |  -  |  X  |  -  |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Maximierung von Glück     |  -  |  X  |  -  |  -  |  -  |  -  |  -  |  X  |  -  |  -  |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Soziale Harmonie          |  -  |  -  |  X  |  -  |  -  |  X  |  -  |  -  |  -  |  -  |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Selbstschöpfung/Übermensch|  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |  X  |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Autonomie/Würde           |  -  |  -  |  -  |  -  |  -  |  -  |  X  |  -  |  -  |  -  |
-+---------------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-```
+| Ziel | Sto | Epi | Kon | Bud | Pre | Spr | Kan | Mil | Ari | Nie |
+|------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| Seelenruhe/Innerer Frieden | X | X | - | X | X | - | - | - | - | - |
+| Eudaimonia/Aufblühen | X | - | - | - | - | X | - | - | X | - |
+| Tugend als Selbstzweck | X | - | - | - | - | - | X | - | X | - |
+| Maximierung von Glück | - | X | - | - | - | - | - | X | - | - |
+| Soziale Harmonie | - | - | X | - | - | X | - | - | - | - |
+| Selbstschöpfung/Übermensch | - | - | - | - | - | - | - | - | - | X |
+| Autonomie/Würde | - | - | - | - | - | - | X | - | - | - |
 
 ---
 
@@ -3201,31 +2936,16 @@ Diese Sektion untersucht nicht **was** die Philosophen vorschlagen, sondern **wa
 
 ### Matrix: Begründungslogiken
 
-```
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Begründung       | Sto   | Epi   | Kon   | Bud   | Pre   | Spr   | Kan   | Mil   | Ari   | Nie   |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Natur/Teleologie |   X   |   -   |   -   |   -   |   -   |   ~   |   -   |   -   |   X   |   -   |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Vernunft a priori|   -   |   -   |   -   |   -   |   -   |   -   |   X   |   -   |   -   |   -   |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Empirisch/       |   -   |   X   |   -   |   X   |   -   |   -   |   -   |   X   |   -   |   -   |
-| Konsequenzen     |       |       |       |       |       |       |       |       |       |       |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Tradition/Ritual |   -   |   -   |   X   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Leidvermeidung   |   -   |   ~   |   -   |   X   |   -   |   -   |   -   |   -   |   -   |   -   |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Göttliche        |   -   |   -   |   -   |   -   |   -   |   X   |   ~   |   -   |   -   |   -   |
-| Ordnung          |       |       |       |       |       |       |       |       |       |       |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Skepsis/         |   -   |   -   |   -   |   -   |   X   |   -   |   -   |   -   |   -   |   -   |
-| Resignation      |       |       |       |       |       |       |       |       |       |       |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| Perspektivismus/ |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   X   |
-| Genealogie       |       |       |       |       |       |       |       |       |       |       |
-+------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-```
+| Begründung | Sto | Epi | Kon | Bud | Pre | Spr | Kan | Mil | Ari | Nie |
+|------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| Natur/Teleologie | X | - | - | - | - | ~ | - | - | X | - |
+| Vernunft a priori | - | - | - | - | - | - | X | - | - | - |
+| Empirisch/Konsequenzen | - | X | - | X | - | - | - | X | - | - |
+| Tradition/Ritual | - | - | X | - | - | - | - | - | - | - |
+| Leidvermeidung | - | ~ | - | X | - | - | - | - | - | - |
+| Göttliche Ordnung | - | - | - | - | - | X | ~ | - | - | - |
+| Skepsis/Resignation | - | - | - | - | X | - | - | - | - | - |
+| Perspektivismus/Genealogie | - | - | - | - | - | - | - | - | - | X |
 
 ---
 
@@ -3444,31 +3164,15 @@ Während Abschnitt 3.2 Gemeinsamkeiten zeigte, identifiziert dieser Abschnitt di
 
 ### Matrix: Die Spaltungen
 
-```
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Spaltung         | Sto | Epi | Kon | Bud | Pre | Spr | Kan | Mil | Ari | Nie |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Pflicht vs.      | Pf  | Gl  | ?   | ?   | ?   | Gl  | Pf  | Gl  | Gl  | -   |
-| Glück            |     |     |     |     |     |     |     |     |     |     |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Sozial vs.       | So  | In  | So  | In  | ?   | So  | So  | So  | So  | In  |
-| Individuell      |     |     |     |     |     |     |     |     |     |     |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Mitte vs.        | Mi  | Mi  | Mi  | Mi  | ?   | Mi  | Mi  | Mi  | Mi  | Ex  |
-| Extreme          |     |     |     |     |     |     |     |     |     |     |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Mitleid:         | Tu  | ?   | Tu  | Tu  | ?   | Tu  | Tu  | Tu  | Tu  | Sc  |
-| Tugend/Schwäche  |     |     |     |     |     |     |     |     |     |     |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Jenseits         | Ne  | Ne  | ?   | Ko  | Ne  | Ja  | Ja  | Ne  | Ne  | Ne  |
-| ja/nein          |     |     |     |     |     |     |     |     |     |     |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Egalitär vs.     | Eg  | Eg  | Hi  | Eg  | ?   | Hi  | Eg  | Eg  | Hi  | Hi  |
-| Hierarchisch     |     |     |     |     |     |     |     |     |     |     |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| Objektive Werte  | Ja  | Ne  | Ja  | ?   | Ne  | Ja  | Ja  | ~   | Ja  | Ne  |
-+------------------+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-```
+| Spaltung | Sto | Epi | Kon | Bud | Pre | Spr | Kan | Mil | Ari | Nie |
+|----------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| Pflicht vs. Glück | Pf | Gl | ? | ? | ? | Gl | Pf | Gl | Gl | - |
+| Sozial vs. Individuell | So | In | So | In | ? | So | So | So | So | In |
+| Mitte vs. Extreme | Mi | Mi | Mi | Mi | ? | Mi | Mi | Mi | Mi | Ex |
+| Mitleid: Tugend/Schwäche | Tu | ? | Tu | Tu | ? | Tu | Tu | Tu | Tu | Sc |
+| Jenseits ja/nein | Ne | Ne | ? | Ko | Ne | Ja | Ja | Ne | Ne | Ne |
+| Egalitär vs. Hierarchisch | Eg | Eg | Hi | Eg | ? | Hi | Eg | Eg | Hi | Hi |
+| Objektive Werte | Ja | Ne | Ja | ? | Ne | Ja | Ja | ~ | Ja | Ne |
 
 **Legende**: Pf = Pflicht, Gl = Glück, So = Sozial, In = Individuell, Mi = Mitte, Ex = Extreme, Tu = Tugend, Sc = Schwäche, Ne = Nein, Ja = Ja, Ko = Komplex, Eg = Egalitär, Hi = Hierarchisch, ? = Unklar/Schweigt
 
