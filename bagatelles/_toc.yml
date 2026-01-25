@@ -28,8 +28,35 @@ parts:
         title: Problem of Free Will Dissolved *
       - file: philosophy/mathematics-existence
         title: What Exists in Mathematics? *
-      - file: philosophy/ethik
+      - file: philosophy/ethik-main
         title: Wie soll man leben? *
+        sections:
+          - file: philosophy/ethik-2-1
+            title: 2.1 Stoiker vs. Epikur
+          - file: philosophy/ethik-2-2
+            title: 2.2 Konfuzius vs. Buddha
+          - file: philosophy/ethik-2-3
+            title: 2.3 Prediger vs. Sprüche Salomos
+          - file: philosophy/ethik-2-4
+            title: 2.4 Kant vs. Mill
+          - file: philosophy/ethik-2-5
+            title: 2.5 Aristoteles vs. Nietzsche
+          - file: philosophy/ethik-2-6
+            title: 2.6 Platon vs. Hume
+          - file: philosophy/ethik-3-1
+            title: 3.1 Alle Philosophen auf einen Blick
+          - file: philosophy/ethik-3-2
+            title: 3.2 Regeln nach Häufigkeit
+          - file: philosophy/ethik-3-3
+            title: 3.3 Ziele nach Häufigkeit
+          - file: philosophy/ethik-3-4
+            title: 3.4 Begründungslogiken
+          - file: philosophy/ethik-3-5
+            title: 3.5 Die großen Spaltungen
+          - file: philosophy/ethik-4
+            title: 4. Diskussionsfragen
+          - file: philosophy/ethik-5
+            title: 5. Literaturempfehlungen
 
   - caption: Computer Science
     chapters:

@@ -615,7 +615,7 @@ Summing all three expressions:
 \{f, \{g, h\}\} + \{g, \{h, f\}\} + \{h, \{f, g\}\} = 0
 ```
 
-All terms cancel by direct verification. \qed
+All terms cancel by direct verification.
 ````
 
 
@@ -847,11 +847,11 @@ We notice that:
 &\dot{x_2}(t) = -a_2 t + \frac{a_2 + 2}{2}
 ```
 The horizontal speed is constant. The rocket climbs until $t_0 = \frac{a_2 + 2}{2 a_2}$ and then descends. 
-The \{figure\}(#boat-upstream.png) below shows the optimal trajectory upwards ($a_2$ positive) and downwards ($a_2$ negative), with $T = 1$.
+The \{figure\}(#overshooting) below shows the optimal trajectory upwards ($a_2$ positive) and downwards ($a_2$ negative), with $T = 1$.
 For $a_2=0$ we get a straight line.
 
 ```{figure} overshooting.png
-:label: boat-upstream
+:label: overshooting
 :align: center
 
 Flying Rocket
@@ -859,7 +859,7 @@ Flying Rocket
  This "overshooting" trajectory is actually the optimal solution that minimizes action, not energy expenditure. 
  The principle of least action produces this result because:
 
-  1. Action minimization ≠ distance minimization: The Lagrangian $L = \frac{1}{2}m\dot{x}^2 - amx$ integrates both kinetic energy and potential energy over time.
+  1. Action minimization ≠ distance minimization: The Lagrangian $L = \frac{1}{2}m\dot{x}^2 - m ax$ integrates both kinetic energy and potential energy over time.
   2. Early altitude gain is cheaper: The action functional favors gaining altitude early when you have the full time interval $T$ to amortize the cost. The parabolic overshoot allows the rocket to:  
     - Accelerate upward strongly at the start   
     - Coast through the middle section with less thrust   
