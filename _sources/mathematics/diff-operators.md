@@ -20,6 +20,7 @@ This shift in perspective—from operations on functions to algebraic manipulati
 
 - The **Laplacian** $\Delta f = \nabla^2 f$ becomes $\partial^2 \cdot f$, the inner product of $\partial$ with itself, applied to $f$
 - The **Hessian** becomes $\partial \otimes \partial$, the tensor (outer) product of $\partial$ with itself
+- The **divergence** of a vector field $F$ is $\partial \cdot F$, the inner product of $\partial$ and $F$.
 - The **curl** of a vector field $F$ is $\partial \times F$, the cross product
 - The **Jacobian** of a vector field $F$ is $\partial \otimes F$, the tensor product
 
@@ -73,3 +74,87 @@ In the sections that follow, we'll:
 6. Demonstrate the implementation of an "operator engine" that makes this machinery computational
 
 The goal is not merely notational elegance. By treating differential operators as algebraic objects in their own right, we gain a systematic framework that unifies vector calculus, clarifies its structure, and extends naturally to more sophisticated settings—from tensor analysis to differential geometry to the functional analysis underlying variational calculus.
+
+
+## More Notation
+
+Einstein coovariant, index down. $\mu$ always runs from $0$ to $3$
+
+```{math}
+\partial_{\mu} = 
+    \begin{bmatrix}
+                \partial_{0}    \\
+                \partial_{1}    \\
+                \partial_{2}    \\
+                \partial_{3}           
+    \end{bmatrix}
+```
+
+Einstein contravariant, index up:
+
+```{math}
+\partial^{\mu} = 
+    \begin{bmatrix}
+                \partial^{0}    \\
+                \partial^{1}    \\
+                \partial^{2}    \\
+                \partial^{3}           
+    \end{bmatrix} =
+     \begin{bmatrix}
+                \partial_{0}    \\
+                - \partial_{1}    \\
+                - \partial_{2}    \\
+                - \partial_{3}           
+    \end{bmatrix}
+```
+
+```{math}
+g_{\mu \nu} = \begin{bmatrix}
+                1 &0 &0 &0    \\
+                0 &-1 &0 &0    \\
+                0 &0 &-1 &0    \\
+                0 &0 &0 &-1          
+    \end{bmatrix}
+```
+
+```{math}
+\partial^{\mu} = g_{\mu \nu} \partial_{\mu}
+```
+
+
+The d'Alembert symbol:
+
+```{math}
+\Box = \partial_{\mu} \cdot \partial^{\mu} = \partial_{0}^2 - \partial_{1}^2 - \partial_{2}^2 - \partial_{3}^2
+```
+
+The divergence of a curl vanishes:
+
+```{math}
+\partial \cdot (\partial \times F) = 0
+```
+
+The curl of a gradient vanishes:
+
+```{math}
+\partial \times (\partial f) = 0
+```
+
+Product rules
+
+```{math}
+\partial (f \, g) &= \partial f \, g + f \, \partial g \\
+\partial \cdot (F \, g) &= (\partial \cdot F) \, g + F \cdot \partial g \\
+\partial \, (A \cdot B) &= (\partial \otimes A) \, B + A \, (\partial \otimes B) \\
+\partial \cdot (A \times B) &= B \cdot (\partial \times A) - A \cdot (\partial \times B) \\
+\partial \times (\partial \times F) &= \partial \, (\partial \cdot F) - \partial^2F
+```
+
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+```
+
+<div style="margin-bottom: 100px;"></div>

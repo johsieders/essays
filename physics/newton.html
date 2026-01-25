@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -926,7 +926,7 @@ The <strong>Poisson brackets</strong> are defined by:</p>
 <p>Summing all three expressions:</p>
 <div class="math notranslate nohighlight">
 \[\{f, \{g, h\}\} + \{g, \{h, f\}\} + \{h, \{f, g\}\} = 0\]</div>
-<p>All terms cancel by direct verification. \qed</p>
+<p>All terms cancel by direct verification.</p>
 </div>
 </section>
 </section>
@@ -1193,7 +1193,7 @@ and <span class="math notranslate nohighlight">\(B = \begin{bmatrix}
 \[\begin{split}&amp;\dot{x_1}(t) = 1 \\
 &amp;\dot{x_2}(t) = -a_2 t + \frac{a_2 + 2}{2}\end{split}\]</div>
 <p>The horizontal speed is constant. The rocket climbs until <span class="math notranslate nohighlight">\(t_0 = \frac{a_2 + 2}{2 a_2}\)</span> and then descends.
-The {figure}(#boat-upstream.png) below shows the optimal trajectory upwards (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downwards (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(T = 1\)</span>.
+The {figure}(#overshooting) below shows the optimal trajectory upwards (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downwards (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(T = 1\)</span>.
 For <span class="math notranslate nohighlight">\(a_2=0\)</span> we get a straight line.</p>
 <figure class="align-center" id="id130">
 <img alt="../_images/overshooting.png" src="../_images/overshooting.png" />
@@ -1204,7 +1204,7 @@ For <span class="math notranslate nohighlight">\(a_2=0\)</span> we get a straigh
 <p>This “overshooting” trajectory is actually the optimal solution that minimizes action, not energy expenditure.
 The principle of least action produces this result because:</p>
 <ol class="arabic simple">
-<li><p>Action minimization ≠ distance minimization: The Lagrangian <span class="math notranslate nohighlight">\(L = \frac{1}{2}m\dot{x}^2 - amx\)</span> integrates both kinetic energy and potential energy over time.</p></li>
+<li><p>Action minimization ≠ distance minimization: The Lagrangian <span class="math notranslate nohighlight">\(L = \frac{1}{2}m\dot{x}^2 - m ax\)</span> integrates both kinetic energy and potential energy over time.</p></li>
 <li><p>Early altitude gain is cheaper: The action functional favors gaining altitude early when you have the full time interval <span class="math notranslate nohighlight">\(T\)</span> to amortize the cost. The parabolic overshoot allows the rocket to:<br />
 - Accelerate upward strongly at the start<br />
 - Coast through the middle section with less thrust<br />
