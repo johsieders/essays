@@ -132,13 +132,15 @@ Die Synthese (Abschnitt 3) bietet verschiedene Perspektiven auf das Material:
 
 ---
 
-## 2. Die fünf Paarungen
+## 2. Die sechs Paarungen
 
 - [2.1 Stoiker vs. Epikur](ethik-2-1.md)
 - [2.2 Konfuzius vs. Buddha](ethik-2-2.md)
 - [2.3 Prediger (Kohelet) vs. Sprüche Salomos (Mishle)](ethik-2-3.md)
 - [2.4 Immanuel Kant vs. John Stuart Mill](ethik-2-4.md)
 - [2.5 Aristoteles vs. Friedrich Nietzsche](ethik-2-5.md)
+- [2.6 Platon vs. David Hume](ethik-2-6.md)
+- [2.7 Descartes vs. Spinoza](ethik-2-7.md)
 
 ---
 
