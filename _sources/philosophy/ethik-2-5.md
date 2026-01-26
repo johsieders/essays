@@ -6,7 +6,7 @@
 
 ### Aristoteles (384-322 v. Chr.)
 
-#### Zielhorizont
+#### Ziel
 **Eudaimonia durch aretē** – Das höchste Gut ist **Eudaimonia** (εὐδαιμονία, "Glückseligkeit", besser: "Aufblühen", "Gedeihen"). 
 Eudaimonia ist die **Verwirklichung der menschlichen Funktion** (ergon) gemäß der Vernunft. Tugend (aretē) ist **konstitutiv** für 
 Eudaimonia, nicht nur instrumentell. Man wird glücklich, **indem** man tugendhaft ist.
