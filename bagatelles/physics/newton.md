@@ -102,16 +102,16 @@ The **Lagrangian** is any differentiable function
 &L:
 \left\{
     \begin{array}{lr}
-        \mathbb{R}^3 \times \mathbb{R}^3  \rightarrow \mathbb{R} \\
+        \mathbb{R}^n \times \mathbb{R}^n  \rightarrow \mathbb{R} \\
         (x, v) \mapsto L(x, v)
     \end{array}
 \right .
 ```
 
-that vanishes for large arguments: $L(x,v) = 0$ if $\min \{\lVert x \lVert, \lVert v \lVert \} > M$ for some large $M$.
-Think of $M$ as the diameter of the universe. From a mathematical point of view, $x$ and $v$ are arbitrary functions.  
+with $n = 3$ or $n = 3N$, $N$ being the number of particles considered. From a mathematical point of view, $x$ and $v$ are arbitrary functions.  
 The physicist would see $x$ as the position and $v = \dot{x}$ as the velocity of a moving particle.
-The symbols $v$ and $\dot{x}$ are almost interchangeable. So, $\partial_{\dot{x}}L$ and $\partial_{v}L$ mean exactly the same:
+The symbols $v$ and $\dot{x}$ are often interchangeable, but it is sometimes useful to treat them as independent variables.
+Anyway, $\partial_{\dot{x}}L$ and $\partial_{v}L$ mean exactly the same:
 the partial derivative of $L$ with respect to the second variable.
 
 The purpose of the value $L(x,\dot{x})$ is to quantify
@@ -310,8 +310,8 @@ solve it, and interpret the result.
 
 ## Hamilton, Conservation Laws
 
-````{prf:definition} Legendre Invertibilty 
-:label: thr-legendre-invertibility
+````{prf:definition} Legendre Invertibility 
+:label: def-legendre-invertibility
 
 With a Lagrangian $L$ and a position $x$ given, the momentum $p$ can be thought of as a function of $v$ 
  
@@ -319,7 +319,7 @@ With a Lagrangian $L$ and a position $x$ given, the momentum $p$ can be thought 
 \tilde{p}_x: v \mapsto p(x, v) = \partial_v L(x, v)
 ```
 
-$L$ is called **Legendre-invertible** iff, for every $x$, 
+$L$ is called **Legendre-invertible** or **L-invertible** iff, for every $x$, 
 the mapping $\tilde{v}$ is a global diffeomorphisms.
 That means: there exists an inverse function:  
 
@@ -328,19 +328,14 @@ That means: there exists an inverse function:
 ```
 such that, for every $x, v, p$:
 
-
 ```{math}
-&\tilde{v}_x(\tilde{p}_x(v)) = v \\
-&\tilde{p}_x(\tilde{v}_x(p)) = p 
-
+&\tilde{v}_x \circ \tilde{p}_x(v) = v \\
+&\tilde{p}_x \circ \tilde{v}_x(p) = p 
 ```
-
 ````
 
-
-
-````{prf:theorem} Legendre Invertibilty 
-:label: thr-legendre-transformation
+````{prf:theorem} Legendre Invertibility 
+:label: thr-legendre-invertibility
 
 If the Lagrangian $L$ is strictly convex in the second argument:
 
@@ -359,7 +354,7 @@ TODO
 ````{prf:definition} Hamiltonian, Energy
 :label: def-hamilton
 
-Let $L$ be a Lagrangian satisfying {eq}`equ-convex`.
+Let $L$ be an L-invertible Lagrangian.
 Then there is a twin $H$, called the **Hamiltonian**, defined by:
 
 ```{math}
@@ -392,12 +387,13 @@ Choosing $p$ as independent variable gives:
 :label: equ-hamilton-4
 H(x, p) + L(x, v(x, p)) = v(x, p)  p
 ```
-Ignoring the variables and remembering that $v = \dot{x}$, we often write, as everybody does:
 
+The notation
 ```{math}
 :label: equ-hamilton-5
 H + L = \dot{x}p
 ```
+is a sloppy shorthand of {eq}`equ-hamilton-3` and {eq}`equ-hamilton-4`, with  $\dot{x} = v$.
 ````
 
 ````{prf:remark} Schrödinger Equation
@@ -412,6 +408,7 @@ By way of a taster, we present the general form of the Schrödinger equation:
 ```
 
 where $\hat{E}$ and $\hat{H}$ are energy and Hamiltonian operators resp. 
+You move from Newtonian mechanics to quantum mechanics essentially by putting hats on the variables.
 ````
 
 ````{prf:theorem} Hamiltonian Equations
@@ -447,8 +444,8 @@ Note that $p = \partial_v L$ by definition. The proof requires the product and t
 ```
 
 ```{math}
-\partial_p H(x, p) &= \partial_p v(x, p) \, p + v(x, p) - \partial_v L(x, v(x, p)) \, \partial_p v(x, p)) \\
-&= \partial_p v(x, p) \, p + v(x, p) - p \, \partial_p v(x, p)) \\
+\partial_p H(x, p) &= \partial_p v(x, p) \, p + v(x, p) - \partial_v L(x, v(x, p)) \, \partial_p v(x, p) \\
+&= \partial_p v(x, p) \, p + v(x, p) - p \, \partial_p v(x, p) \\
 &= v(x, p)
 ```
 Now, we assume that Hamilton {eq}`equ-hamilton-a` holds. 
@@ -456,7 +453,7 @@ Now, we assume that Hamilton {eq}`equ-hamilton-a` holds.
 ```{math}
 \partial_x L(x, v) &= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + \partial_p H(x, p(x, v)) \, \partial_x p(x, v)) \\
 &= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + v \, \partial_x p(x, v)) \\
-&= \partial_x H(x, p(x, v)) \\
+&= - \partial_x H(x, p(x, v)) \\
 &= \partial_t p(x, v) \\
 &= \partial_t \partial_v L(x, v) \\
 ```
@@ -587,7 +584,15 @@ The **Poisson brackets** are defined by:
     \end{bmatrix}_{i, j = 1, \ldots, n}
 ```
 
+**(c)** Let $A, H: \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}$ be scalar fields on the phase space
+and $H$ be a Hamiltonian. Then
+
+```{math}
+\{A, H\} = \partial_t A = \dot{A}
+
+```
 ````
+
 ````{prf:proof}
 TODO
 
