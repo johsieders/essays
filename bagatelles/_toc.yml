@@ -46,7 +46,9 @@ parts:
           - file: philosophy/ethik-2-7
             title: 2.7 Descartes vs. Spinoza
           - file: philosophy/ethik-2-8
-            title: 2.8 Schopenhauer vs. Neues Testament  
+            title: 2.8 Schopenhauer vs. Neues Testament
+          - file: philosophy/ethik-2-9
+            title: 2.9 Thomas von Aquin vs. Sartre
           - file: philosophy/ethik-3-1
             title: 3.1 Alle Philosophen auf einen Blick
           - file: philosophy/ethik-3-2

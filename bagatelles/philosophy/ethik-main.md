@@ -116,7 +116,7 @@ Die Synthese (Abschnitt 3) bietet verschiedene Perspektiven auf das Material:
 
 ---
 
-## 1.6 Die zehn Philosophen auf einen Blick
+### 1.6 Die zehn Philosophen auf einen Blick
 
 | Philosoph | Kultur | Epoche | Zielhorizont | Ethiktyp | Metaphysik | Hauptwerk(e) |
 |-----------|--------|--------|--------------|----------|------------|--------------|
