@@ -203,6 +203,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-6.html">2.6 Platon vs. Hume</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3-1.html">3.1 Alle Philosophen auf einen Blick</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3-2.html">3.2 Regeln und Prinzipien nach Häufigkeit</a></li>
@@ -613,14 +614,14 @@ most formulae remain valid regardless of the dimension of <span class="math notr
 <span class="eqno">(1)<a class="headerlink" href="#equation-def-lagrange" title="Link to this equation">#</a></span>\[\begin{split}&amp;L:
 \left\{
     \begin{array}{lr}
-        \mathbb{R}^3 \times \mathbb{R}^3  \rightarrow \mathbb{R} \\
+        \mathbb{R}^n \times \mathbb{R}^n  \rightarrow \mathbb{R} \\
         (x, v) \mapsto L(x, v)
     \end{array}
 \right .\end{split}\]</div>
-<p>that vanishes for large arguments: <span class="math notranslate nohighlight">\(L(x,v) = 0\)</span> if <span class="math notranslate nohighlight">\(\min \{\lVert x \lVert, \lVert v \lVert \} &gt; M\)</span> for some large <span class="math notranslate nohighlight">\(M\)</span>.
-Think of <span class="math notranslate nohighlight">\(M\)</span> as the diameter of the universe. From a mathematical point of view, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(v\)</span> are arbitrary functions.<br />
+<p>with <span class="math notranslate nohighlight">\(n = 3\)</span> or <span class="math notranslate nohighlight">\(n = 3N\)</span>, <span class="math notranslate nohighlight">\(N\)</span> being the number of particles considered. From a mathematical point of view, <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(v\)</span> are arbitrary functions.<br />
 The physicist would see <span class="math notranslate nohighlight">\(x\)</span> as the position and <span class="math notranslate nohighlight">\(v = \dot{x}\)</span> as the velocity of a moving particle.
-The symbols <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(\dot{x}\)</span> are almost interchangeable. So, <span class="math notranslate nohighlight">\(\partial_{\dot{x}}L\)</span> and <span class="math notranslate nohighlight">\(\partial_{v}L\)</span> mean exactly the same:
+The symbols <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(\dot{x}\)</span> are often interchangeable, but it is sometimes useful to treat them as independent variables.
+Anyway, <span class="math notranslate nohighlight">\(\partial_{\dot{x}}L\)</span> and <span class="math notranslate nohighlight">\(\partial_{v}L\)</span> mean exactly the same:
 the partial derivative of <span class="math notranslate nohighlight">\(L\)</span> with respect to the second variable.</p>
 <p>The purpose of the value <span class="math notranslate nohighlight">\(L(x,\dot{x})\)</span> is to quantify
 the mess caused by a particle travelling at velocity <span class="math notranslate nohighlight">\(\dot{x}(t)\)</span> through point <span class="math notranslate nohighlight">\(x(t)\)</span>.
@@ -755,25 +756,24 @@ solve it, and interpret the result.</p>
 </section>
 <section id="hamilton-conservation-laws">
 <h2>Hamilton, Conservation Laws<a class="headerlink" href="#hamilton-conservation-laws" title="Link to this heading">#</a></h2>
-<div class="proof definition admonition" id="thr-legendre-invertibility">
-<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Legendre Invertibilty)</p>
+<div class="proof definition admonition" id="def-legendre-invertibility">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span> (Legendre Invertibility)</p>
 <section class="definition-content" id="proof-content">
 <p>With a Lagrangian <span class="math notranslate nohighlight">\(L\)</span> and a position <span class="math notranslate nohighlight">\(x\)</span> given, the momentum <span class="math notranslate nohighlight">\(p\)</span> can be thought of as a function of <span class="math notranslate nohighlight">\(v\)</span></p>
 <div class="math notranslate nohighlight">
 \[\tilde{p}_x: v \mapsto p(x, v) = \partial_v L(x, v)\]</div>
-<p><span class="math notranslate nohighlight">\(L\)</span> is called <strong>Legendre-invertible</strong> iff, for every <span class="math notranslate nohighlight">\(x\)</span>,
+<p><span class="math notranslate nohighlight">\(L\)</span> is called <strong>Legendre-invertible</strong> or <strong>L-invertible</strong> iff, for every <span class="math notranslate nohighlight">\(x\)</span>,
 the mapping <span class="math notranslate nohighlight">\(\tilde{v}\)</span> is a global diffeomorphisms.
 That means: there exists an inverse function:</p>
 <div class="math notranslate nohighlight">
 \[\tilde{v}_x: p \mapsto v(x, p)\]</div>
 <p>such that, for every <span class="math notranslate nohighlight">\(x, v, p\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\tilde{v}_x(\tilde{p}_x(v)) = v \\
-&amp;\tilde{p}_x(\tilde{v}_x(p)) = p 
-\end{split}\]</div>
+\[\begin{split}&amp;\tilde{v}_x \circ \tilde{p}_x(v) = v \\
+&amp;\tilde{p}_x \circ \tilde{v}_x(p) = p \end{split}\]</div>
 </section>
-</div><div class="proof theorem admonition" id="thr-legendre-transformation">
-<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Legendre Invertibilty)</p>
+</div><div class="proof theorem admonition" id="thr-legendre-invertibility">
+<p class="admonition-title"><span class="caption-number">Theorem 2 </span> (Legendre Invertibility)</p>
 <section class="theorem-content" id="proof-content">
 <p>If the Lagrangian <span class="math notranslate nohighlight">\(L\)</span> is strictly convex in the second argument:</p>
 <div class="math notranslate nohighlight" id="equation-equ-convex">
@@ -786,7 +786,7 @@ That means: there exists an inverse function:</p>
 <div class="proof definition admonition" id="def-hamilton">
 <p class="admonition-title"><span class="caption-number">Definition 4 </span> (Hamiltonian, Energy)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(L\)</span> be a Lagrangian satisfying <a class="reference internal" href="#equation-equ-convex">(10)</a>.
+<p>Let <span class="math notranslate nohighlight">\(L\)</span> be an L-invertible Lagrangian.
 Then there is a twin <span class="math notranslate nohighlight">\(H\)</span>, called the <strong>Hamiltonian</strong>, defined by:</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-1">
 <span class="eqno">(11)<a class="headerlink" href="#equation-equ-hamilton-1" title="Link to this equation">#</a></span>\[H(x, p)  = v(x, p) p - L(x, v(x, p))\]</div>
@@ -802,9 +802,10 @@ Then there is a twin <span class="math notranslate nohighlight">\(H\)</span>, ca
 <p>Choosing <span class="math notranslate nohighlight">\(p\)</span> as independent variable gives:</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-4">
 <span class="eqno">(15)<a class="headerlink" href="#equation-equ-hamilton-4" title="Link to this equation">#</a></span>\[H(x, p) + L(x, v(x, p)) = v(x, p)  p\]</div>
-<p>Ignoring the variables and remembering that <span class="math notranslate nohighlight">\(v = \dot{x}\)</span>, we often write, as everybody does:</p>
+<p>The notation</p>
 <div class="math notranslate nohighlight" id="equation-equ-hamilton-5">
 <span class="eqno">(16)<a class="headerlink" href="#equation-equ-hamilton-5" title="Link to this equation">#</a></span>\[H + L = \dot{x}p\]</div>
+<p>is a sloppy shorthand of <a class="reference internal" href="#equation-equ-hamilton-3">(14)</a> and <a class="reference internal" href="#equation-equ-hamilton-4">(15)</a>, with  <span class="math notranslate nohighlight">\(\dot{x} = v\)</span>.</p>
 </section>
 </div><div class="proof remark admonition" id="def-schroedinger">
 <p class="admonition-title"><span class="caption-number">Remark 2 </span> (Schrödinger Equation)</p>
@@ -814,7 +815,8 @@ arbitrary as the definitions of force and momentum as partial derivatives of the
 By way of a taster, we present the general form of the Schrödinger equation:</p>
 <div class="math notranslate nohighlight" id="equation-equ-schroedinger">
 <span class="eqno">(17)<a class="headerlink" href="#equation-equ-schroedinger" title="Link to this equation">#</a></span>\[\hat{E} = -i \hat{H}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\hat{E}\)</span> and <span class="math notranslate nohighlight">\(\hat{H}\)</span> are energy and Hamiltonian operators resp.</p>
+<p>where <span class="math notranslate nohighlight">\(\hat{E}\)</span> and <span class="math notranslate nohighlight">\(\hat{H}\)</span> are energy and Hamiltonian operators resp.
+You move from Newtonian mechanics to quantum mechanics essentially by putting hats on the variables.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-hamiltonian-equations">
 <p class="admonition-title"><span class="caption-number">Theorem 3 </span> (Hamiltonian Equations)</p>
@@ -838,14 +840,14 @@ Note that <span class="math notranslate nohighlight">\(p = \partial_v L\)</span>
 &amp;= -\partial_t \partial_v L(x, v(x,p)) \\
 &amp;= - \partial_t p\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}\partial_p H(x, p) &amp;= \partial_p v(x, p) \, p + v(x, p) - \partial_v L(x, v(x, p)) \, \partial_p v(x, p)) \\
-&amp;= \partial_p v(x, p) \, p + v(x, p) - p \, \partial_p v(x, p)) \\
+\[\begin{split}\partial_p H(x, p) &amp;= \partial_p v(x, p) \, p + v(x, p) - \partial_v L(x, v(x, p)) \, \partial_p v(x, p) \\
+&amp;= \partial_p v(x, p) \, p + v(x, p) - p \, \partial_p v(x, p) \\
 &amp;= v(x, p)\end{split}\]</div>
 <p>Now, we assume that Hamilton <a class="reference internal" href="#equation-equ-hamilton-a">(18)</a> holds.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial_x L(x, v) &amp;= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + \partial_p H(x, p(x, v)) \, \partial_x p(x, v)) \\
 &amp;= v \, \partial_x p(x, v) - (\partial_x H(x, p(x, v)) + v \, \partial_x p(x, v)) \\
-&amp;= \partial_x H(x, p(x, v)) \\
+&amp;= - \partial_x H(x, p(x, v)) \\
 &amp;= \partial_t p(x, v) \\
 &amp;= \partial_t \partial_v L(x, v) \\\end{split}\]</div>
 </div>
@@ -937,6 +939,11 @@ The <strong>Poisson brackets</strong> are defined by:</p>
         \cdots  &amp; x_i p_j  &amp;\cdots \\
                 &amp; \vdots  
     \end{bmatrix}_{i, j = 1, \ldots, n}\end{split}\]</div>
+<p><strong>(c)</strong> Let <span class="math notranslate nohighlight">\(A, H: \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}\)</span> be scalar fields on the phase space
+and <span class="math notranslate nohighlight">\(H\)</span> be a Hamiltonian. Then</p>
+<div class="math notranslate nohighlight">
+\[\{A, H\} = \partial_t A = \dot{A}
+\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>

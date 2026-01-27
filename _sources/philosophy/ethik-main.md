@@ -14,7 +14,7 @@
 
 Wie soll man leben? Was macht ein gutes Leben aus? Welche Regeln oder Prinzipien führen zu Tugend, zu Glück, oder zu beidem?
 
-Diese Arbeit vergleicht zehn philosophische Traditionen – von den antiken Griechen über asiatische Weisheitslehren
+Diese Arbeit vergleicht 18 philosophische Traditionen – von den antiken Griechen über asiatische Weisheitslehren
 und biblische Texte bis zur modernen Aufklärung und ihrer radikalen Kritik. Das Ziel ist nicht,
 eine "richtige" Philosophie zu identifizieren, sondern Muster zu erkennen:
 Welche Prinzipien tauchen immer wieder auf? Wo gibt es Divergenzen? Welche Philosophen sind Ausreißer?
@@ -31,34 +31,29 @@ Hier sind die Kriterien für die vorliegende Auswahl:
 - **Thematischer Fokus**: Philosophen, die konkrete Lebensregeln oder -prinzipien formuliert haben
 - **Maximaler Kontrast**: Paarung von ähnlichen und gegensätzlichen Positionen
 
-Es fehlen große Namen wie Platon, Thomas von Aquin, Spinoza, Schopenhauer.
-Diese (und noch ein paar mehr) kommen das nächste Mal dran.
 
-Wir präsentieren die 10 Richtungen paarweise:
+Wir präsentieren die 18 Richtungen paarweise:
 1. **Stoiker vs. Epikur** – Pflicht vs. Lust in der antiken Philosophie
 2. **Konfuzius vs. Buddha** – Soziale Harmonie vs. individuelle Befreiung
 3. **Prediger vs. Sprüche Salomos** – Innerbibliche Spannung zwischen Skepsis und Optimismus
 4. **Kant vs. Mill** – Der klassische Konflikt moderner Ethik: Pflicht vs. Konsequenzen
 5. **Aristoteles vs. Nietzsche** – Mitte vs. Extreme, Harmonie vs. Selbstüberwindung
+6. **Platon vs. Hume** 
+7. **Descartes vs. Spinoza** 
+8. **Schopenhauer vs. Neues Testament** 
+9. **Sartre vs. Thomas von Aquin** 
 
 Jede Paarung wird durch zwei Steckbriefe und einen direkten Vergleich präsentiert.
 Die Synthese identifiziert übergreifende Muster, Gemeinsamkeiten und Spaltungen.
-Ein Anhang bietet Diskussionsfragen für jede Paarung.
+Der [Anhang](ethik-4.md) enthält Diskussionsfragen für jede Paarung, und die
+[Literaturempfehlungen](ethik-5.md) bilden den Abschluss dieser Arbeit.
+
 
 ### 1.3 Methodische Grenzen
 
 Es gibt mindestens drei Probleme:
 
-**a) Kategorienverwischung**
-
-Der Unterschied zwischen "Regeln für ein tugendhaftes Leben" und "Regeln für ein glückliches Leben" ist nicht immer klar.
-Bei manchen Philosophen fallen beide zusammen (Aristoteles: Tugend IST Eudaimonia), bei anderen sind sie getrennt
-(Kant: Tugend und Glückseligkeit sind prinzipiell verschieden), bei wieder anderen ist Tugend nur instrumentell für Glück (Epikur, Mill).
-
-**Unsere Lösung:** Die Steckbriefe machen diese Unterschiede deutlich.
-Jeder Philosoph wird durch seinen eigenen "Zielhorizont" charakterisiert, der klärt, ob Tugend, Glück, oder beides das Ziel ist.
-
-**b) Reduktionismus**
+**a) Reduktionismus**
 
 Wer komplexe philosophische Systeme auf nur 10 Regeln reduziert, läuft  Gefahr, Wesentliches zu verschweigen.
 Aristoteles' Mesotes-Lehre ist situativ und kontextabhängig – sie in eine Regel zu pressen, verzerrt sie.
@@ -68,6 +63,19 @@ Konfuzius' Ethik ist relational und rollengebunden, nicht regelförmig im westli
 nicht als erschöpfende Darstellungen. Die Steckbriefe enthalten auch Abschnitte zu "Begründungslogik" und "Besonderheiten",
 die über reine Regelsammlungen hinausgehen. Matrizen und Checklisten sind **Hilfsmittel**,
 kein Selbstzweck – sie dienen der strukturierten Diskussion, nicht der Reduktion philosophischer Komplexität.
+
+
+**b) Kategorienverwischung**
+
+Der Unterschied zwischen "Regeln für ein tugendhaftes Leben" und "Regeln für ein glückliches Leben" ist nicht immer klar.
+Bei manchen Philosophen fallen beide zusammen (Aristoteles: Tugend IST Eudaimonia), bei anderen sind sie getrennt
+(Kant: Tugend und Glückseligkeit sind prinzipiell verschieden), bei wieder anderen ist Tugend nur instrumentell für Glück (Epikur, Mill).
+
+**Unsere Lösung:** Wir formulieren, bei allen Vorbehalten, für jeden Philosophen zehn Regeln.
+Wir nennen das **Ziel**, welches durch die Befolgung dieser Regeln angestrebt wird, z.B. individuelles Glück,
+Tugend, oder Wohlergehen der Menschheit insgesant. Und wir beschreiben in der **Begründung**, warum der Philosoph glaubt, 
+dass seine Regeln richtig sind, z.B. Vernunft, Erfahrung, logisches Denken.
+
 
 **c) Übersetzungsprobleme**
 
@@ -132,7 +140,7 @@ Die Synthese (Abschnitt 3) bietet verschiedene Perspektiven auf das Material:
 
 ---
 
-## 2. Die sechs Paarungen
+## 2. Die neun Paarungen
 
 - [2.1 Stoiker vs. Epikur](ethik-2-1.md)
 - [2.2 Konfuzius vs. Buddha](ethik-2-2.md)
@@ -154,14 +162,5 @@ Die Synthese (Abschnitt 3) bietet verschiedene Perspektiven auf das Material:
 
 ---
 
-## 4. Anhang: Diskussionsfragen
-
-[Diskussionsfragen zu allen Paarungen](ethik-4.md)
-
----
-
-## 5. Literaturempfehlungen
-
-[Literaturempfehlungen](ethik-5.md)
 
 <div style="margin-bottom: 100px;"></div>
