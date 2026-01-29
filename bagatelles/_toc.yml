@@ -28,9 +28,11 @@ parts:
         title: Problem of Free Will Dissolved *
       - file: philosophy/mathematics-existence
         title: What Exists in Mathematics? *
-      - file: philosophy/ethik-main
+      - file: philosophy/ethik-0
         title: Wie soll man leben? *
         sections:
+          - file: philosophy/ethik-1
+            title: 1. Alle Philosophen im Überblick
           - file: philosophy/ethik-2-1
             title: 2.1 Stoiker vs. Epikur
           - file: philosophy/ethik-2-2
@@ -50,15 +52,13 @@ parts:
           - file: philosophy/ethik-2-9
             title: 2.9 Thomas von Aquin vs. Sartre
           - file: philosophy/ethik-3-1
-            title: 3.1 Alle Philosophen auf einen Blick
+            title: 3.1 Regeln nach Häufigkeit
           - file: philosophy/ethik-3-2
-            title: 3.2 Regeln nach Häufigkeit
+            title: 3.2 Ziele nach Häufigkeit
           - file: philosophy/ethik-3-3
-            title: 3.3 Ziele nach Häufigkeit
+            title: 3.3 Begründungslogiken
           - file: philosophy/ethik-3-4
-            title: 3.4 Begründungslogiken
-          - file: philosophy/ethik-3-5
-            title: 3.5 Die großen Spaltungen
+            title: 3.4 Die großen Spaltungen
           - file: philosophy/ethik-4
             title: 4. Diskussionsfragen
           - file: philosophy/ethik-5
