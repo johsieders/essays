@@ -6,7 +6,7 @@
 
 ### Konfuzius (Kong Fuzi, 孔夫子, 551-479 v. Chr.)
 
-#### Zielhorizont
+#### Ziel
 **Soziale Harmonie (He, 和) durch ritualisierte Tugend** – Die Kultivierung des **Junzi** (君子, der Edle), der durch **De** (德, moralische Ausstrahlungskraft) wirkt. 
 
 Tugend ist bei Konfuzius **relational**: Ein Mensch existiert nur in Bezug auf andere. Selbstverwirklichung geschieht **durch** Beziehungen, nicht **trotz** ihnen.
@@ -102,7 +102,7 @@ Moralität verbreitet sich durch **De** (德) – eine fast magnetische moralisc
 
 **Regel**: Nicht die Geburt, sondern die **moralische Formung** macht den Junzi. Dies war für die Zhou-Zeit (hierarchisch, aristokratisch) revolutionär.
 
-#### Begründungslogik
+#### Begründung
 
 **Metaphysisch**: **Agnostisch**. Konfuzius schweigt über Metaphysik. "Wenn wir das Leben noch nicht verstehen, wie können wir den Tod verstehen?" (Analekten 11.12)
 
@@ -125,7 +125,7 @@ Moralität verbreitet sich durch **De** (德) – eine fast magnetische moralisc
 
 ### Buddha (Siddhartha Gautama, ca. 563-483 v. Chr.)
 
-#### Zielhorizont
+#### Ziel
 **Nirvana** (निर्वाण, Erlöschen) – Beendigung des Leidens (**Dukkha**, दुःख) durch das Erlöschen des Durstes (**Tanha**, तृष्णा, Begehren). 
 
 Das Ziel ist die **radikale Freiheit** von der Illusion eines beständigen Selbst. Nicht Harmonie in der Welt, sondern **Überwindung** der Welt (Samsara, संसार, Kreislauf der Wiedergeburt).
@@ -227,7 +227,7 @@ Karma ist **keine** kosmische Gerechtigkeit oder Schicksal, sondern **natürlich
 
 **Regel**: Du bist verantwortlich für deine Handlungen. Aber: Es gibt **kein Selbst**, das handelt – nur den Prozess des Handelns.
 
-#### Begründungslogik
+#### Begründung
 
 **Metaphysisch**: **Weder Materialismus noch Theismus**. Buddha lehnte beide ab. Seine Position ist **apophatisch** (via negationis) – er schweigt zu unbeantwortbaren Fragen.
 
