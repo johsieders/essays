@@ -885,7 +885,7 @@ Flying Rocket
   - Expression
   - Comment
 * - Lagrangian
-  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{k}{2}mx^2$
+  - $L(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{k}{2}x^2$
   - 
 * - Force
   - $F = -kx$
@@ -898,10 +898,10 @@ Flying Rocket
   - $\omega = \sqrt{\frac{k}{m}}$
 * - Trajectory
   - $x(t) = a \sin \omega t + b \cos \omega t$
-  - $a = x(\frac{\pi}{2}), b = x(0)$
+  - $a = x(\frac{\pi}{2 \omega}), b = x(0)$
 * - Energy
-  - $H(x, p) = \frac{p^2}{2m} + \frac{k}{2}mx^2$
-  - $= \frac{1}{2}m\dot{x}^2 + \frac{k}{2}mx^2$ 
+  - $H(x, p) = \frac{p^2}{2m} + \frac{k}{2}x^2$
+  - $= \frac{1}{2}m\dot{x}^2 + \frac{k}{2}x^2$ 
 ```
 
 ### Catenary

@@ -6,7 +6,7 @@
 
 ### Stoiker (Epiktet, Marcus Aurel, Seneca)
 
-#### Zielhorizont
+#### Ziel
 **Eudaimonia durch Apatheia und Ataraxie** – Freiheit von irrationalen Leidenschaften durch Übereinstimmung mit dem Logos. Während die **Ataraxia** (Seelenruhe) ein Resultat ist, ist die **Apatheia** der aktive Weg. Tugend ist die **einzige notwendige und hinreichende** Bedingung für das Glück.
 
 #### Regeln
@@ -89,7 +89,7 @@ Die **radikale Bejahung der Notwendigkeit**. (Der Begriff "Amor Fati" ist modern
 
 **Regel**: Wünsche nicht, dass die Dinge anders sind. **Liebe die Notwendigkeit** als Teil eines rationalen Ganzen. "Wünsche, dass alles genau so geschieht, wie es geschieht." (Epiktet)
 
-#### Begründungslogik
+#### Begründung
 
 **Metaphysisch**: Der Kosmos ist rational geordnet (Logos/Providenz). Alles geschieht aus Notwendigkeit. Widerstand ist irrational.
 
@@ -111,7 +111,7 @@ Die **radikale Bejahung der Notwendigkeit**. (Der Begriff "Amor Fati" ist modern
 
 ### Epikur
 
-#### Zielhorizont
+#### Ziel
 **Ataraxia (Seelenruhe) und Aponia (Schmerzfreiheit)** als höchstes Gut. Lust (hēdonē) ist das Ziel, aber **negativ definiert**: primär als **Abwesenheit** von Schmerz und Angst, nicht als positive Stimulation.
 
 #### Regeln
@@ -194,7 +194,7 @@ Unabhängigkeit von Glück, Launen anderer, materiellen Umständen.
 
 **Regel**: "Gewöhne dich an einfache Lebensweise. Nicht wer wenig hat, sondern wer mehr begehrt, ist arm."
 
-#### Begründungslogik
+#### Begründung
 
 **Metaphysisch**: **Atomismus**. Keine Teleologie, keine eingreifenden Götter. Zufall (Clinamen) im atomaren Bereich – keine strikte Determination.
 

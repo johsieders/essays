@@ -122,7 +122,7 @@ Thomas' Lösung: **Analogie** (analogia entis).
 
 Thomas unterscheidet:
 
-**Synderesis**: Die angeborene Fähigkeit, **Grundprinzipien** des Guten zu erkennen ("Das Gute ist zu tun, das Böse zu meiden"). Unfehlbar.
+**Synderesis**: Die angeborene Fähigkeit, **Grundprinzipien** des Guten zu erkennen ("Das Gute ist zu tun, das Böse zu meiden"). **Präzise**: Sie ist der **Habitus** (bleibende Disposition) der ersten Prinzipien des praktischen Verstandes. Sie irrt **nie** im Allgemeinen ("Tue das Gute"), ist also unfehlbar auf dieser Ebene.
 
 **Conscientia** (Gewissen): Die **Anwendung** der Prinzipien auf konkrete Situationen. Kann irren (durch Unwissenheit, Leidenschaft).
 
@@ -143,6 +143,28 @@ Thomas unterscheidet:
 **Regel**: Menschliche Gesetze sind nur **gültig**, wenn sie dem **Naturrecht** entsprechen. Ein ungerechtes Gesetz ist **kein Gesetz** ("lex iniusta non est lex").
 
 **Lebensführung**: Gehorche den Gesetzen (Römer 13,1: "Seid untertan der Obrigkeit"). Aber: Wenn ein Gesetz dem Naturrecht widerspricht → **Widerstand** ist erlaubt (z.B. gegen Tyrannei, gegen Abtreibungsgesetze).
+
+**8a. Bonum Commune – Das Gemeinwohl**
+
+**Gegen Sartres individuellen Fokus** steht bei Thomas das **Bonum Commune** (Gemeinwohl):
+
+Der Mensch ist **nicht** nur für sich selbst oder für Gott da, sondern **Teil eines sozialen Organismus**.
+
+**Die Essenz des Menschen** beinhaltet seine **soziale Funktion**:
+- Der Mensch ist **von Natur aus** ein soziales Wesen (animal sociale)
+- Das Gute des Einzelnen ist **untergeordnet** dem Gemeinwohl (wenn es Konflikt gibt)
+- Die **Tugend** verwirklicht sich **im sozialen Kontext** (Familie, Polis, Kirche)
+
+**Regel**: Handle so, dass das **Gemeinwohl** (bonum commune) gefördert wird. Das Gute des Ganzen geht vor dem Guten des Teils (aber: nicht durch Unterdrückung des Einzelnen, sondern durch Harmonie).
+
+**Lebensführung**: 
+- Dein Wohl ist **verbunden** mit dem Wohl der Gemeinschaft
+- Handle nicht **nur** egoistisch (aber auch nicht nur altruistisch) – sondern so, dass du deine **soziale Funktion** erfüllst
+- Familie, Staat, Kirche sind **natürliche** Ordnungen, in denen du deine Essenz verwirklichst
+
+**Gegen Sartre**: Sartre sieht den Menschen als **isoliert** (konfrontiert mit anderen Freiheiten, "Die Hölle sind die anderen"). Thomas sieht ihn als **sozial** (verbunden in einer natürlichen Ordnung). Der Mensch ist **von Natur aus** auf Gemeinschaft angelegt – nicht erst durch Wahl.
+
+**Moderne Kritik**: Kann das Gemeinwohl missbraucht werden zur Unterdrückung des Einzelnen? Ja (Totalitarismus beruft sich auf "Gemeinwohl"). Thomas' Antwort: Nur das **wahre** Gemeinwohl (das natürliche Gesetz respektiert) ist gültig.
 
 **9. Doppelte Wahrheit – Fides et Ratio**
 
@@ -193,7 +215,7 @@ Das **höchste Gut** ist die **Schau Gottes** (visio beatifica) im Jenseits.
 - **Einflussreich**: 1879 zur offiziellen Philosophie der katholischen Kirche erklärt (Thomismus)
 - **Ordnung**: Hierarchisch (Gott → Engel → Menschen → Tiere → Pflanzen → Unbelebtes)
 - **Optimismus**: Natur ist gut (gegen Augustins Pessimismus), Vernunft ist mächtig
-- **Konservativ**: Verteidigt feudale Ordnung, Monarchie, kirchliche Autorität
+- **Konservativ**: Verteidigt feudale Ordnung, kirchliche Autorität. **Aber**: Bei der Staatsform bevorzugt Thomas (De regno) eine **Mischverfassung** (Monarchie kombiniert mit Aristokratie und Demokratie) zur Vermeidung von Tyrannei – er ist also weniger absolutistisch, als man im Mittelalter vermuten würde.
 
 ---
 
@@ -239,6 +261,26 @@ Sartres berühmter Satz (L'existentialisme est un humanisme, 1946):
 **Regel**: Du bist **immer** frei. Keine Ausreden ("Meine Natur", "Meine Kindheit", "Die Umstände") – das ist **mauvaise foi** (Selbsttäuschung).
 
 **Lebensführung**: Übernimm deine Freiheit. Wähle. Handle. Du bist **verantwortlich** für alles, was du tust (und nicht tust).
+
+**Präzisierung – Faktizität (Facticité) als Gegengewicht zur Freiheit**:
+
+Sartre ignoriert **Grenzen** nicht – aber er sagt: Diese Grenzen bekommen ihre **Bedeutung** erst durch deine **Wahl**, wie du dich zu ihnen verhältst.
+
+**Faktizität** = Die **gegebenen Umstände** deiner Existenz:
+- Dein **Körper** (Geschlecht, Gesundheit, Behinderung)
+- Deine **Situation** (Armut, Reichtum, Herkunft)
+- Deine **Vergangenheit** (was bereits geschehen ist)
+- Dein **Tod** (Sterblichkeit)
+
+**Aber**: Diese Fakten sind **bedeutungsleer**, bis du sie **interpretierst** durch deine Wahl.
+
+**Beispiel**: 
+- Eine körperliche Behinderung ist eine **Faktizität** (gegeben, unveränderbar)
+- **Aber**: Ob sie ein "Hindernis" oder eine "Herausforderung" ist, ob sie dich "definiert" oder nur "betrifft" – das wählst **du** durch deine Haltung
+
+**Regel**: Freiheit ist **nicht** Abwesenheit von Grenzen, sondern Freiheit **innerhalb** der Faktizität – die Art, wie du dich zu den Grenzen verhältst.
+
+**Lebensführung**: Du kannst deine Faktizität **nicht** ändern (Körper, Vergangenheit, Situation). Aber du bist **frei**, ihnen Bedeutung zu geben. Sartre: "Ich bin für meine Geburt verantwortlich" – nicht kausal, aber **existenziell** (wie ich sie interpretiere).
 
 **3. Mauvaise foi – Selbsttäuschung**
 
@@ -345,6 +387,39 @@ Kein "Wesen des Homosexuellen", des "Arbeiters", des "Juden"
 **Regel**: Vermeide Essentialismus. Definiere niemanden (auch dich selbst nicht) durch "Natur" oder "Wesen".
 
 **Lebensführung**: Wenn jemand sagt "Frauen sind so", "Männer sind so", "Homosexuelle sind so" – lehne ab. Das ist Essentialismus (und meist **mauvaise foi**).
+
+**9a. Das ontologische Rückgrat – En-soi vs. Pour-soi**
+
+**Sartres fundamentale Unterscheidung** (L'être et le néant):
+
+**En-soi** (An-sich):
+- Das Sein der **Dinge** (Steine, Tische, Bäume)
+- **Vollständig identisch** mit sich selbst: Ein Stein **ist**, was er ist
+- **Keine Freiheit**, kein Bewusstsein, keine Möglichkeit
+- **Volle Positivität**: keine Leere, keine Spannung, kein Werden
+
+**Pour-soi** (Für-sich):
+- Das Sein des **Bewusstseins** (der Mensch)
+- **Nicht identisch** mit sich selbst: Der Mensch **ist nicht**, was er ist (er ist **werdend**, nicht **seiend**)
+- Ein "**Loch im Sein**", ein **Nicht-Sein** (néant)
+- **Negativität**: Bewusstsein ist immer Bewusstsein **von** etwas (intentional) – also **nicht** das Ding selbst
+
+**Warum ist der Mensch Pour-soi ("Loch im Sein")?**
+
+Weil das **Bewusstsein** immer auf etwas **gerichtet** ist (intentional), das es **nicht ist**. Es ist **Distanz** zu sich selbst:
+- Ich bin **nicht** meine Vergangenheit (sie ist fest, ich bin frei)
+- Ich bin **nicht** meine Zukunft (sie ist offen, nicht festgelegt)
+- Ich bin **nicht** meine Rolle (Kellner, Lehrer – ich kann sie jederzeit ablegen)
+
+**Konsequenz**:
+- **Dinge** (en-soi) sind **festgelegt** – daher unfrei
+- **Menschen** (pour-soi) sind **nicht festgelegt** – daher **radikal frei**
+
+Der Mensch ist **nichts Festgelegtes** – ein "Loch im Sein", eine Leere, die sich selbst füllen muss (durch Wahl).
+
+**Regel**: Der Mensch ist **kein Ding**. Er ist Bewusstsein – und Bewusstsein ist **Freiheit** (weil es keine feste Identität hat).
+
+**Lebensführung**: Verstehe, dass du **nicht** bist wie ein Stein (festgelegt). Du bist **Für-sich** – offen, werdend, frei. Das ist deine **Würde** (Freiheit) und deine **Last** (Verantwortung).
 
 **10. Der Mensch ist ein nutzloses Leiden – L'homme est une passion inutile**
 
@@ -627,6 +702,80 @@ Aber diese Synthese ist **unmöglich**. Der Mensch ist **für-sich** (frei), kan
 **Die härteste Frage**: Ist der Mensch **geschaffen** (Thomas) oder **selbstgeschaffen** (Sartre)? 
 
 Oder ist die Frage falsch gestellt? Vielleicht gibt es weder vorgegebene Essenz **noch** totale Freiheit – sondern beides (Dialektik von Natur und Freiheit)?
+
+---
+
+### Das IT-Duell: Enterprise Java vs. JavaScript ohne Schema
+
+Stellen wir uns vor, Thomas und Sartre müssten eine KI entwickeln:
+
+**Thomas von Aquin** wäre der Architekt einer **Enterprise-Java-Anwendung**:
+- Alles ist in einer strengen **Klassen-Hierarchie** (`Object` → `LivingBeing` → `RationalAnimal` → `Human`)
+- Bevor ein Objekt **instanziiert** wird (Existenz), ist sein **Interface** und seine **Funktionalität** (Essenz) durch das System-Design (**Gottes Plan**) fest definiert
+- Jede Klasse hat **definierte Methoden**: `seekGood()`, `avoidEvil()`, `strive ForBeatificVision()`
+- Ein **Fehler** im Programm ist einfach eine Abweichung vom Interface (Bug = **Privatio boni**, Mangel an Vollkommenheit)
+- Das Ziel ist die vollständige **Synchronisation mit dem Master-Server** (Visio beatifica)
+- **Vorteil**: Typ-Sicherheit, klare Struktur, vorhersagbar
+- **Nachteil**: Rigide, keine Flexibilität, Kreativität ist Abweichung vom Plan
+
+**Jean-Paul Sartre** hingegen würde das System in **reinem JavaScript ohne Schemata** bauen:
+- Es gibt **keine Klassen**, keine Interfaces, keine Typ-Prüfung beim Start
+- Das Objekt wird einfach in den Speicher geworfen (**Existenz**): `let human = {};`
+- Es hat **keine Methoden**, bis es sich zur Laufzeit selbst welche zuweist (Essenz):
+  ```javascript
+  human.define = function() {
+    this.purpose = "self-chosen";
+    this.essence = "whatever I make it";
+  };
+  ```
+- Wenn das Objekt entscheidet, plötzlich eine `String`-Methode auf ein `Integer`-Feld anzuwenden, dann ist das eben seine **radikale Freiheit**
+- Das System ist permanent **instabil** und voller `Angoisse` (Runtime-Errors), aber dafür absolut **"authentisch"** und nicht durch einen Architekten bevormundet
+- **Vorteil**: Maximale Flexibilität, Kreativität, Selbstbestimmung
+- **Nachteil**: Keine Sicherheit, keine Garantien, ständige Gefahr von Abstürzen
+
+**Für den Programmierer**:
+- **Thomas**: Stark typisierte Sprache (Java, C#, Haskell) – sicher, aber eingeschränkt
+- **Sartre**: Dynamische Sprache (JavaScript, Python, Ruby) – flexibel, aber gefährlich
+
+---
+
+### Erweiterte Vergleichstabelle
+
+```{list-table}
+:header-rows: 1
+:widths: 20 40 40
+
+* - Konzept
+  - Thomas von Aquin
+  - Jean-Paul Sartre
+* - Ontologie
+  - Ordnung des Seins (Hierarchie: Gott → Engel → Mensch)
+  - Das Nichts (Pour-soi als "Loch im Sein")
+* - Soziales
+  - Bonum Commune (Gemeinwohl, soziale Essenz)
+  - Konflikt der Freiheiten ("Die Hölle sind die anderen")
+* - Fehler/Böses
+  - Privatio boni (Mangel an Vollkommenheit, Bug)
+  - Mauvaise foi (Leugnung der Freiheit, Selbsttäuschung)
+* - Metapher
+  - Der Mensch als Entdeckung (entdecke deine Essenz)
+  - Der Mensch als Erfindung (erfinde deine Essenz)
+* - Freiheit
+  - Begrenzt (durch Essenz, Natur, Gesetz)
+  - Radikal (nur durch Faktizität begrenzt)
+* - Verantwortung
+  - Vor Gott (Gericht, Sünde)
+  - Vor sich selbst und allen (Vorbild)
+* - IT-Analogie
+  - Enterprise Java (strenge Klassenstruktur)
+  - JavaScript ohne Schema (dynamisch, zur Laufzeit)
+```
+
+**Historische Anmerkung zum Bösen**:
+
+**Thomas**: Das Böse (malum) ist ein **Mangel an Sein** (*privatio boni*). Es hat keine eigene Realität – es ist wie ein Loch (Abwesenheit von Stoff), nicht wie eine Substanz. Ein Bug im Programm, keine eigenständige Entität. Daher ist Gott nicht Ursache des Bösen (er schafft nur Sein, nicht Nicht-Sein).
+
+**Sartre**: Das Böse ist eine **Wahl**. Es gibt keine "Mängel" – nur unterschiedliche **Entwürfe der Freiheit**. Manche wählen **mauvaise foi** (Selbsttäuschung, Flucht vor Freiheit), andere wählen Grausamkeit. Aber es sind **Wahlen**, keine ontologischen Defizite. Das Böse ist **real** (nicht bloß Mangel), weil Freiheit real ist.
 
 ---
 

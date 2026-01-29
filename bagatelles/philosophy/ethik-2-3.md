@@ -6,12 +6,12 @@
 
 ### Prediger Salomo / Kohelet (קֹהֶלֶת)
 
-#### Zielhorizont
+#### Ziel
 **Resignation angesichts der Absurdität + situativer Genuss als einziger verlässlicher "Anteil"**
 
 Kohelet sieht keine verlässliche moralische Weltordnung. Es gibt keine individuelle Unsterblichkeit mit Vergeltung, keine ausgleichende Gerechtigkeit. Das einzige, was Gott dem Menschen fest zugesagt hat, ist der **Cheleq** (חֵלֶק, Anteil) – die kleinen Momente des Genusses.
 
-#### Kernregeln
+#### Regeln
 
 **1. Hebel havalim (הֲבֵל הֲבָלִים) – "Windhauch der Windhauche"**
 
@@ -109,7 +109,7 @@ Der berühmte Katalog aus 3:1-8:
 
 **Regel** (wenn authentisch): Fürchte Gott – nicht aus Hoffnung auf Belohnung, sondern aus Respekt vor dem Unfassbaren.
 
-#### Begründungslogik
+#### Begründung
 
 **Metaphysisch**: Gott existiert, hat die Welt geschaffen, ist aber **unergründlich**. Keine Providenz, keine erkennbare Ordnung.
 
@@ -130,10 +130,10 @@ Der berühmte Katalog aus 3:1-8:
 
 ### Sprüche Salomos / Mishle (מִשְׁלֵי)
 
-#### Zielhorizont
+#### Ziel
 **Gedeihen (Shalom, שָׁלוֹם) durch Weisheit** – Ein gutes, erfolgreiches Leben ist **erreichbar** durch Weisheit, Gottesfurcht und Tugend. Die Welt ist **geordnet**, und wer die Ordnung versteht, gedeiht.
 
-#### Kernregeln
+#### Regeln
 
 **1. "Die Furcht des HERRN ist der Anfang der Weisheit"**
 
@@ -211,7 +211,7 @@ Die **Weisheit** (Chokmah) ist keine bloße Eigenschaft, sondern tritt als **per
 
 **Regel**: Suche die Weisheit – sie ist der Bauplan der Welt. Wer sie versteht, versteht die Ordnung.
 
-#### Begründungslogik
+#### Begründung
 
 **Metaphysisch**: Gott hat die Welt mit **Ordnung** geschaffen (erkennbar, verlässlich). Chokmah (Weisheit) war sein Werkzeug.
 
@@ -300,7 +300,7 @@ Um die Dialektik zu vervollständigen, braucht man das **Buch Hiob** als Testfal
 
 Hiob ist der **Bug-Report in Echtzeit** (einzelner Testfall), Prediger ist die **Systemanalyse** (generelle Diagnose).
 
-#### Überraschende Gemeinsamkeiten
+#### Gemeinsamkeiten
 
 **1. Gottesfurcht**
 
