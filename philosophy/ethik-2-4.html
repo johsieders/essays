@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -194,8 +194,12 @@
 <li class="toctree-l1"><a class="reference internal" href="36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics-existence.html">What Exists in Mathematics? *</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="ethik-0.html">Wie soll man leben? *</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ethik-1.html">1 Alle Philosophen auf einen Blick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-2.html">1.2 Regeln</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-5.html">1.5 Spaltungen</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
@@ -206,22 +210,20 @@
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-1.html">3.2 Regeln und Prinzipien nach Häufigkeit</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-2.html">3.3 Ziele nach Häufigkeit</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-3.html">3.3 Begründungslogiken</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-4.html">3.4 Die großen Spaltungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-4.html">4. Anhang: Diskussionsfragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-4.html">4. Literatur</a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="ethik-5.html">5. Literaturempfehlungen</a></li>
+
+
+
+
+
+
 </ul>
 </details></li>
 </ul>
@@ -495,16 +497,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immanuel-kant-1724-1804">Immanuel Kant (1724-1804)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziele">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regeln">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundung">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundungen">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#besonderheiten">Besonderheiten</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#john-stuart-mill-1806-1873">John Stuart Mill (1806-1873)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Besonderheiten</a></li>
 </ul>
 </li>
@@ -532,8 +534,8 @@ document.write(`
 <hr class="docutils" />
 <section id="immanuel-kant-1724-1804">
 <h2>Immanuel Kant (1724-1804)<a class="headerlink" href="#immanuel-kant-1724-1804" title="Link to this heading">#</a></h2>
-<section id="ziel">
-<h3>Ziel<a class="headerlink" href="#ziel" title="Link to this heading">#</a></h3>
+<section id="ziele">
+<h3>Ziele<a class="headerlink" href="#ziele" title="Link to this heading">#</a></h3>
 <p><strong>Autonomie und Würde durch moralisches Handeln</strong> – Der Mensch verwirklicht seine Freiheit, indem er aus Pflicht (nicht aus Neigung) dem moralischen Gesetz folgt. Das höchste Gut ist ein guter Wille.</p>
 </section>
 <section id="regeln">
@@ -644,8 +646,8 @@ document.write(`
 <p><strong>Regel</strong>: Unmündigkeit ist selbstverschuldet, wenn die Ursache nicht im Mangel des Verstandes, sondern im Mangel an Mut liegt.</p>
 <p><strong>Lebensführung</strong>: Denke selbst. Folge nicht blind Autoritäten (Kirche, Staat, Tradition). Prüfe mit deiner Vernunft.</p>
 </section>
-<section id="begrundung">
-<h3>Begründung<a class="headerlink" href="#begrundung" title="Link to this heading">#</a></h3>
+<section id="begrundungen">
+<h3>Begründungen<a class="headerlink" href="#begrundungen" title="Link to this heading">#</a></h3>
 <p><strong>Metaphysisch</strong>: <strong>Dualismus</strong> – Phänomenale Welt (Natur, Kausalität, Determinismus) vs. Noumenale Welt (Freiheit, Moral). Wir sind <strong>zugleich</strong> determiniert (als Naturwesen) und frei (als Vernunftwesen).</p>
 <p><strong>Epistemologisch</strong>: <strong>Transzendentaler Idealismus</strong> – Wir erkennen Dinge, wie sie uns <strong>erscheinen</strong> (Phänomene), nicht wie sie <strong>an sich</strong> sind (Noumena).</p>
 <p><strong>Ethisch</strong>: <strong>Deontologie</strong> (Pflichtethik) – Moralität liegt in der <strong>Pflicht</strong>, nicht in Konsequenzen. Der gute Wille ist das einzige uneingeschränkt Gute.</p>
@@ -666,7 +668,7 @@ document.write(`
 <section id="john-stuart-mill-1806-1873">
 <h2>John Stuart Mill (1806-1873)<a class="headerlink" href="#john-stuart-mill-1806-1873" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3>Ziel<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>Ziele<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Das größte Glück der größten Zahl</strong> – Moralisches Handeln maximiert das <strong>Gesamtglück</strong> (pleasure) und minimiert das <strong>Gesamtleid</strong> (pain). Die Konsequenzen entscheiden über Moralität.</p>
 </section>
 <section id="id2">
@@ -757,7 +759,7 @@ document.write(`
 <p><strong>Lebensführung</strong>: Wenn du dich nicht an die Experience Machine anschließen würdest – dann bist du <strong>kein</strong> konsequenter Utilarist.</p>
 </section>
 <section id="id3">
-<h3>Begründung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>Begründungen<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p><strong>Metaphysisch</strong>: <strong>Naturalistisch</strong> – Es gibt nur die natürliche Welt. Lust/Schmerz sind empirisch messbare Größen.</p>
 <p><strong>Epistemologisch</strong>: <strong>Empiristisch</strong> – Moral basiert auf Erfahrung (was tatsächlich Glück bringt), nicht auf a priori Prinzipien.</p>
 <p><strong>Ethisch</strong>: <strong>Konsequenzialismus</strong> – Nur die <strong>Folgen</strong> entscheiden über Moralität. Motive, Pflichten, Regeln sind <strong>abgeleitet</strong> (weil sie gute Folgen haben).</p>
@@ -780,44 +782,69 @@ document.write(`
 <h2>Direkter Vergleich: Kant vs. Mill<a class="headerlink" href="#direkter-vergleich-kant-vs-mill" title="Link to this heading">#</a></h2>
 <section id="tabellarische-ubersicht">
 <h3>Tabellarische Übersicht<a class="headerlink" href="#tabellarische-ubersicht" title="Link to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Kant                              | Mill                              |
-+------------------+-----------------------------------+-----------------------------------+
-| Was zählt?       | **Pflicht** (Absicht)             | **Nutzen** (Konsequenzen)         |
-+------------------+-----------------------------------+-----------------------------------+
-| Höchstes Gut     | Guter Wille (Autonomie)           | Glück (Lust, Abwesenheit von      |
-|                  |                                   | Schmerz)                          |
-+------------------+-----------------------------------+-----------------------------------+
-| Moralische Regel | Kategorischer Imperativ           | Nützlichkeitsprinzip (Utility)    |
-|                  | (Universalisierung)               |                                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Lügen            | **Nie** erlaubt (auch nicht für   | Erlaubt, wenn Gesamtnutzen        |
-|                  | Mörder an der Tür)                | dadurch steigt                    |
-+------------------+-----------------------------------+-----------------------------------+
-| Menschenwert     | **Würde** – absolut, unersetzbar  | **Teil** der Nutzenrechnung –     |
-|                  |                                   | aggregierbar                      |
-+------------------+-----------------------------------+-----------------------------------+
-| Trolley-Problem  | **Nein** – Menschen sind keine    | **Ja** – töte einen, rette fünf   |
-|                  | Rechengrößen                      | (maximiert Gesamtnutzen)          |
-+------------------+-----------------------------------+-----------------------------------+
-| Regeltyp         | **Absolute** Regeln (keine        | **Flexible** Faustregeln          |
-|                  | Ausnahmen)                        | (Sekundärprinzipien)              |
-+------------------+-----------------------------------+-----------------------------------+
-| Freiheit         | **Autonomie** – Selbstgesetzgebung| **Schaden-Prinzip** – tu was du   |
-|                  | durch Vernunft                    | willst, solange andere nicht      |
-|                  |                                   | geschädigt werden                 |
-+------------------+-----------------------------------+-----------------------------------+
-| Begründung       | **A priori** (Vernunft)           | **A posteriori** (Erfahrung)      |
-+------------------+-----------------------------------+-----------------------------------+
-| Egalitarismus    | Alle haben gleiche Würde          | Alle zählen gleich im Kalkül      |
-+------------------+-----------------------------------+-----------------------------------+
-| Neigung          | Keine moralische Basis (kontingent| Irrelevant – nur Konsequenzen     |
-|                  | )                                 | zählen                            |
-+------------------+-----------------------------------+-----------------------------------+
-| Selbstmord       | Immer verboten (Pflicht gegen     | Erlaubt, wenn Gesamtnutzen steigt |
-|                  | sich selbst)                      | (z.B. unheilbar krank)            |
-+------------------+-----------------------------------+-----------------------------------+
-</pre></div>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 40.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Dimension</p></th>
+<th class="head"><p>Kant</p></th>
+<th class="head"><p>Mill</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Was zählt?</p></td>
+<td><p><strong>Pflicht</strong> (Absicht)</p></td>
+<td><p><strong>Nutzen</strong> (Konsequenzen)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Höchstes Gut</p></td>
+<td><p>Guter Wille (Autonomie)</p></td>
+<td><p>Glück (Lust, Abwesenheit von Schmerz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Moralische Regel</p></td>
+<td><p>Kategorischer Imperativ (Universalisierung)</p></td>
+<td><p>Nützlichkeitsprinzip (Utility)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lügen</p></td>
+<td><p><strong>Nie</strong> erlaubt (auch nicht für Mörder an der Tür)</p></td>
+<td><p>Erlaubt, wenn Gesamtnutzen dadurch steigt</p></td>
+</tr>
+<tr class="row-even"><td><p>Menschenwert</p></td>
+<td><p><strong>Würde</strong> – absolut, unersetzbar</p></td>
+<td><p><strong>Teil</strong> der Nutzenrechnung – aggregierbar</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trolley-Problem</p></td>
+<td><p><strong>Nein</strong> – Menschen sind keine Rechengrößen</p></td>
+<td><p><strong>Ja</strong> – töte einen, rette fünf (maximiert Gesamtnutzen)</p></td>
+</tr>
+<tr class="row-even"><td><p>Regeltyp</p></td>
+<td><p><strong>Absolute</strong> Regeln (keine Ausnahmen)</p></td>
+<td><p><strong>Flexible</strong> Faustregeln (Sekundärprinzipien)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Freiheit</p></td>
+<td><p><strong>Autonomie</strong> – Selbstgesetzgebung durch Vernunft</p></td>
+<td><p><strong>Schaden-Prinzip</strong> – tu was du willst, solange andere nicht geschädigt werden</p></td>
+</tr>
+<tr class="row-even"><td><p>Begründung</p></td>
+<td><p><strong>A priori</strong> (Vernunft)</p></td>
+<td><p><strong>A posteriori</strong> (Erfahrung)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Egalitarismus</p></td>
+<td><p>Alle haben gleiche Würde</p></td>
+<td><p>Alle zählen gleich im Kalkül</p></td>
+</tr>
+<tr class="row-even"><td><p>Neigung</p></td>
+<td><p>Keine moralische Basis (kontingent)</p></td>
+<td><p>Irrelevant – nur Konsequenzen zählen</p></td>
+</tr>
+<tr class="row-odd"><td><p>Selbstmord</p></td>
+<td><p>Immer verboten (Pflicht gegen sich selbst)</p></td>
+<td><p>Erlaubt, wenn Gesamtnutzen steigt (z.B. unheilbar krank)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
 <section id="unterschiede">
@@ -993,16 +1020,16 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#immanuel-kant-1724-1804">Immanuel Kant (1724-1804)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziele">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regeln">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundung">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundungen">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#besonderheiten">Besonderheiten</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#john-stuart-mill-1806-1873">John Stuart Mill (1806-1873)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Besonderheiten</a></li>
 </ul>
 </li>

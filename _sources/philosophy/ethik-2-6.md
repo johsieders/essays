@@ -6,7 +6,7 @@
 
 ### Platon (Πλάτων, ca. 428-348 v. Chr.)
 
-#### Ziel
+#### Ziele
 **Erkenntnis des Guten und Aufstieg der Seele** – Wahre Glückseligkeit (Eudaimonia) liegt in der **Kontemplation der ewigen Ideen**, insbesondere der **Idee des Guten** (ἡ τοῦ ἀγαθοῦ ἰδέα). Die Seele ist unsterblich und strebt nach Befreiung aus der sinnlichen Welt.
 
 #### Regeln
@@ -199,7 +199,7 @@ Die **Idee des Guten** (τὸ ἀγαθόν) ist wie die Sonne:
 
 **Lebensführung**: Dies ist das Endziel – aber nur wenige erreichen es. Philosophie ist lebenslanger Aufstieg. Die meisten bleiben in der Höhle.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Zweisubstanzenlehre** – Ideen (ewig, unveränderlich) und materielle Dinge (vergänglich, wandelbar). Die Ideen sind **objektiv real**, unabhängig von Menschen. Dies ist der Beginn des **Universalienstreits** (Nominalismus vs. Realismus), der die Philosophie 2500 Jahre beschäftigt.
 
@@ -220,7 +220,7 @@ Die **Idee des Guten** (τὸ ἀγαθόν) ist wie die Sonne:
 
 ### David Hume (1711-1776)
 
-#### Ziel
+#### Ziele
 **Wissenschaft des Menschen auf empirischer Grundlage** – Verstehe menschliche Natur durch **Beobachtung und Erfahrung**, nicht durch Spekulation. Ziel ist nicht moralische Perfektion, sondern **Wahrheit** über unsere kognitiven und moralischen Fähigkeiten.
 
 #### Regeln
@@ -360,7 +360,7 @@ Humes radikaler Schluss (*Enquiry*, XII.iii):
 
 **Lebensführung**: Verschwende keine Zeit mit metaphysischen Spekulationen (Seele, Gott, Ideen, Substanz). Sie sind **unklar** und **leer** – haben keinen klaren Bedeutungsgehalt. Konzentriere dich auf Erfahrbares.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Naturalistisch** – Es gibt nur die natürliche Welt. Keine Ideen, keine Substanzen, keine Seelen. Nur Wahrnehmungen und ihre Regelmäßigkeiten.
 
@@ -383,51 +383,55 @@ Humes radikaler Schluss (*Enquiry*, XII.iii):
 
 #### Tabellarische Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Platon                            | Hume                              |
-+------------------+-----------------------------------+-----------------------------------+
-| Erkenntnisquelle | **Vernunft** (Nous) – a priori    | **Erfahrung** (Impressions) –     |
-|                  |                                   | a posteriori                      |
-+------------------+-----------------------------------+-----------------------------------+
-| Realität         | **Ideen** sind das Wahre (ewig,  | Nur **Wahrnehmungen** existieren  |
-|                  | unveränderlich)                   | sicher; "Substanz" ist Fiktion    |
-+------------------+-----------------------------------+-----------------------------------+
-| Sinne            | Täuschen – liefern nur Meinung    | Einzige Quelle der Erkenntnis     |
-|                  | (Doxa)                            |                                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Mathematik       | Modell für Philosophie (ewige     | Analytisch (Relations of Ideas) – |
-|                  | Wahrheiten)                       | sagt nichts über Welt             |
-+------------------+-----------------------------------+-----------------------------------+
-| Das Selbst       | Unsterbliche **Seele** (psyche),  | **Fiktion** – nur Bündel von      |
-|                  | dreiteilig, substanziell          | Wahrnehmungen (Bundle Theory)     |
-+------------------+-----------------------------------+-----------------------------------+
-| Kausalität       | Objektiv, notwendig               | **Gewohnheit** – keine logische   |
-|                  |                                   | Notwendigkeit                     |
-+------------------+-----------------------------------+-----------------------------------+
-| Moral            | **Objektiv** – Idee des Guten     | **Gefühl** – aus Sympathie, nicht |
-|                  | existiert unabhängig              | Vernunft (Sentimentalismus)       |
-+------------------+-----------------------------------+-----------------------------------+
-| Tugend           | **Wissen** – wer das Gute kennt,  | Was **nützlich/angenehm** ist –   |
-|                  | tut es (Intellektualismus)        | empirisch beobachtbar             |
-+------------------+-----------------------------------+-----------------------------------+
-| Vernunft vs.     | Vernunft **herrscht** über        | Vernunft ist **Sklavin** der      |
-| Leidenschaft     | Leidenschaften                    | Leidenschaften                    |
-+------------------+-----------------------------------+-----------------------------------+
-| Religion         | Unsterbliche Seele, Jenseits,     | Kritik an Wundern, Gottesbeweisen;|
-|                  | Wiedergeburt                      | Agnostizismus                     |
-+------------------+-----------------------------------+-----------------------------------+
-| Körper           | Grab der Seele (soma sēma) –      | Teil der natürlichen Welt – nicht |
-|                  | Hindernis, zu verachten           | geringzuschätzen                  |
-+------------------+-----------------------------------+-----------------------------------+
-| Politik          | Philosophenkönige, elitär,        | Gemäßigt (Whig), gegen Dogmatismus|
-|                  | totalitär (Politeia)              |                                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Methode          | Dialektik, Deduktion von Ideen    | Beobachtung, Induktion (Problem!),|
-|                  |                                   | Skepsis                           |
-+------------------+-----------------------------------+-----------------------------------+
-| Lebensführung    | Asketisch, kontemplativ, elitär   | Praktisch, gemäßigt, skeptisch    |
-+------------------+-----------------------------------+-----------------------------------+
+```{list-table}
+:header-rows: 1
+:widths: 20 40 40
+
+* - Dimension
+  - Platon
+  - Hume
+* - Erkenntnisquelle
+  - **Vernunft** (Nous) – a priori
+  - **Erfahrung** (Impressions) – a posteriori
+* - Realität
+  - **Ideen** sind das Wahre (ewig, unveränderlich)
+  - Nur **Wahrnehmungen** existieren sicher; "Substanz" ist Fiktion
+* - Sinne
+  - Täuschen – liefern nur Meinung (Doxa)
+  - Einzige Quelle der Erkenntnis
+* - Mathematik
+  - Modell für Philosophie (ewige Wahrheiten)
+  - Analytisch (Relations of Ideas) – sagt nichts über Welt
+* - Das Selbst
+  - Unsterbliche **Seele** (psyche), dreiteilig, substanziell
+  - **Fiktion** – nur Bündel von Wahrnehmungen (Bundle Theory)
+* - Kausalität
+  - Objektiv, notwendig
+  - **Gewohnheit** – keine logische Notwendigkeit
+* - Moral
+  - **Objektiv** – Idee des Guten existiert unabhängig
+  - **Gefühl** – aus Sympathie, nicht Vernunft (Sentimentalismus)
+* - Tugend
+  - **Wissen** – wer das Gute kennt, tut es (Intellektualismus)
+  - Was **nützlich/angenehm** ist – empirisch beobachtbar
+* - Vernunft vs. Leidenschaft
+  - Vernunft **herrscht** über Leidenschaften
+  - Vernunft ist **Sklavin** der Leidenschaften
+* - Religion
+  - Unsterbliche Seele, Jenseits, Wiedergeburt
+  - Kritik an Wundern, Gottesbeweisen; Agnostizismus
+* - Körper
+  - Grab der Seele (soma sēma) – Hindernis, zu verachten
+  - Teil der natürlichen Welt – nicht geringzuschätzen
+* - Politik
+  - Philosophenkönige, elitär, totalitär (Politeia)
+  - Gemäßigt (Whig), gegen Dogmatismus
+* - Methode
+  - Dialektik, Deduktion von Ideen
+  - Beobachtung, Induktion (Problem!), Skepsis
+* - Lebensführung
+  - Asketisch, kontemplativ, elitär
+  - Praktisch, gemäßigt, skeptisch
 ```
 
 #### Unterschiede

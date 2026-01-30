@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -194,8 +194,12 @@
 <li class="toctree-l1"><a class="reference internal" href="36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics-existence.html">What Exists in Mathematics? *</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="ethik-0.html">Wie soll man leben? *</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ethik-1.html">1 Alle Philosophen auf einen Blick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-2.html">1.2 Regeln</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-5.html">1.5 Spaltungen</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
@@ -206,22 +210,20 @@
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.8 Schopenhauer vs. Neues Testament</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-1.html">3.2 Regeln und Prinzipien nach Häufigkeit</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-2.html">3.3 Ziele nach Häufigkeit</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-3.html">3.3 Begründungslogiken</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-4.html">3.4 Die großen Spaltungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-4.html">4. Anhang: Diskussionsfragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-4.html">4. Literatur</a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="ethik-5.html">5. Literaturempfehlungen</a></li>
+
+
+
+
+
+
 </ul>
 </details></li>
 </ul>
@@ -495,16 +497,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arthur-schopenhauer-1788-1860">Arthur Schopenhauer (1788-1860)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziele">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regeln">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundung">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundungen">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#besonderheiten">Besonderheiten</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neues-testament">Neues Testament</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Besonderheiten</a></li>
 </ul>
 </li>
@@ -537,8 +539,8 @@ document.write(`
 <hr class="docutils" />
 <section id="arthur-schopenhauer-1788-1860">
 <h2>Arthur Schopenhauer (1788-1860)<a class="headerlink" href="#arthur-schopenhauer-1788-1860" title="Link to this heading">#</a></h2>
-<section id="ziel">
-<h3>Ziel<a class="headerlink" href="#ziel" title="Link to this heading">#</a></h3>
+<section id="ziele">
+<h3>Ziele<a class="headerlink" href="#ziele" title="Link to this heading">#</a></h3>
 <p><strong>Verneinung des Willens zum Leben</strong> – Erkenne, dass das Leben <strong>Leiden</strong> ist, weil der metaphysische Wille unstillbar ist. Befreie dich durch ästhetische Kontemplation (temporär) oder durch asketische Verneinung des Willens (dauerhaft). Das höchste Ziel ist <strong>Auslöschung des Willens</strong> – nicht Glück, sondern Ende des Leidens.</p>
 </section>
 <section id="regeln">
@@ -656,8 +658,8 @@ Wenn der Wille im <strong>Individuum</strong> zerstört wird (durch Tod), ist er
 <p><strong>Regel</strong>: Alle Ungerechtigkeit beruht auf Täuschung (principium individuationis). Alle Gerechtigkeit auf Erkenntnis der Einheit.</p>
 <p><strong>Lebensführung</strong>: Handle gerecht, weil <strong>du selbst</strong> das Opfer bist (metaphysisch). Es gibt keine echte Trennung zwischen Täter und Opfer.</p>
 </section>
-<section id="begrundung">
-<h3>Begründung<a class="headerlink" href="#begrundung" title="Link to this heading">#</a></h3>
+<section id="begrundungen">
+<h3>Begründungen<a class="headerlink" href="#begrundungen" title="Link to this heading">#</a></h3>
 <p><strong>Metaphysisch</strong>: Die Welt ist <strong>Wille</strong> (Ding an sich) – blind, ziellos, unstillbar. Erscheinungswelt ist <strong>Maya</strong> (Illusion der Individuation).</p>
 <p><strong>Erkenntnistheoretisch</strong>: Kant + Platon + Vedanta. Die Welt als <strong>Vorstellung</strong> (Kant’s Erscheinung). Reine Ideen (Platon). Einheit hinter Vielheit (Vedanta).</p>
 <p><strong>Ethisch</strong>: <strong>Mitleid</strong> als Grundlage. Nicht Pflicht (Kant), nicht Glück (Utilitaristen), sondern Mitleid aus Erkenntnis der Einheit.</p>
@@ -680,7 +682,7 @@ Wenn der Wille im <strong>Individuum</strong> zerstört wird (durch Tod), ist er
 <section id="neues-testament">
 <h2>Neues Testament<a class="headerlink" href="#neues-testament" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3>Ziel<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>Ziele<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Reich Gottes und Nachfolge Christi</strong> – Das Ziel ist Teilhabe am <strong>Reich Gottes</strong> (Basileia tou Theou), das in Jesus Christus <strong>schon angebrochen</strong> ist, aber noch nicht vollendet. Erlösung durch <strong>Gnade</strong> (nicht durch Werke allein). Lebe in <strong>Liebe</strong> (Agape) zu Gott und Nächsten, folge Christus nach, und erwarte die <strong>Auferstehung</strong>.</p>
 </section>
 <section id="id2">
@@ -761,7 +763,7 @@ Selig seid ihr, wenn sie euch schmähen und verfolgen […] um meinetwillen.”<
 <p><strong>Spannung</strong>: Wie verhalten sich Gesetz und Freiheit? Paulus ringt damit (Römerbrief). Antinomismus (Gesetz ist abgeschafft) vs. Nomismus (Gesetz bleibt gültig).</p>
 </section>
 <section id="id3">
-<h3>Begründung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>Begründungen<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p><strong>Theologisch</strong>: <strong>Gott</strong> ist <strong>Liebe</strong> (1 Johannes 4,8). Er offenbart sich in Jesus Christus. Erlösung durch Christi Tod und Auferstehung.</p>
 <p><strong>Eschatologisch</strong>: Das Reich Gottes ist <strong>schon und noch nicht</strong>. Hoffnung auf Vollendung (Parusie, Neue Schöpfung).</p>
 <p><strong>Ethisch</strong>: <strong>Agape</strong> (Liebe) als Grundprinzip. Nicht Pflicht (Kant), nicht Glück (Aristoteles), sondern <strong>Liebe</strong> (selbstlos, opfernd).</p>
@@ -1328,16 +1330,16 @@ denn du bist bei mir, dein Stecken und Stab trösten mich.”</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arthur-schopenhauer-1788-1860">Arthur Schopenhauer (1788-1860)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziele">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regeln">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundung">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundungen">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#besonderheiten">Besonderheiten</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neues-testament">Neues Testament</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Besonderheiten</a></li>
 </ul>
 </li>

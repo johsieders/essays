@@ -6,7 +6,7 @@
 
 ### René Descartes (1596-1650)
 
-#### Ziel
+#### Ziele
 **Gewissheit durch methodischen Zweifel** – Finde ein unerschütterliches Fundament für Wissen. Erkenne Gott und die Seele als unsterblich. Lebe als freies, vernünftiges Wesen in einer mechanistischen Welt.
 
 #### Regeln
@@ -183,7 +183,7 @@ In seinen **Passions de l'âme** (1649, Spätwerk) entwickelt Descartes eine **r
 
 **Moderne Resonanz**: Générosité ist Vorläufer von Kant's **Autonomie** (Selbstgesetzgebung) und Sartre's **Authentizität** (bewusste Nutzung der Freiheit).
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Dualismus** – Zwei Substanzen (res cogitans, res extensa). Gott als Schöpfer beider.
 
@@ -205,7 +205,7 @@ In seinen **Passions de l'âme** (1649, Spätwerk) entwickelt Descartes eine **r
 
 ### Baruch Spinoza (1632-1677)
 
-#### Ziel
+#### Ziele
 **Erkenntnis Gottes und Freiheit durch Einsicht** – Verstehe, dass alles Teil der einen göttlichen Substanz ist. Befreie dich von Affekten durch Erkenntnis der Notwendigkeit. Erreiche **Amor Dei intellectualis** (intellektuelle Gottesliebe).
 
 #### Regeln
@@ -376,7 +376,7 @@ Diese Liebe ist:
 
 **Lebensführung**: Der Tod ist nicht schlimm (der Weise denkt über nichts weniger nach als über den Tod, Ethica IV, Prop. 67). Lebe **jetzt** im Ewigen (durch Erkenntnis).
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Monismus** – Eine Substanz (Deus sive Natura) mit unendlich vielen Attributen. Alles ist Modus dieser Substanz.
 

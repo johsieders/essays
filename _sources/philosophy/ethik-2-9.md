@@ -6,7 +6,7 @@
 
 ### Thomas von Aquin (1225-1274)
 
-#### Ziel
+#### Ziele
 **Visio beatifica – Gottesschau** – Das höchste Ziel des Menschen ist die **Schau Gottes** (visio beatifica) im Jenseits. In diesem Leben: Lebe gemäß der **natürlichen Ordnung** (Vernunft, Tugend) und bereite dich auf die **übernatürliche Vollendung** (durch Gnade) vor. Erkenne Gottes Ordnung (in Natur und Offenbarung) und verwirkliche deine **gottgegebene Essenz**.
 
 #### Regeln
@@ -198,7 +198,7 @@ Das **höchste Gut** ist die **Schau Gottes** (visio beatifica) im Jenseits.
 
 **Lebensführung**: Lebe tugendhaft (Kardinaltugenden), aber: Dein wahres Ziel ist die **Gottesschau**. Alles andere ist Vorbereitung. "Unser Vaterland ist der Himmel" (Philipper 3,20).
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Essenz vor Existenz**. Gott hat die Welt geschaffen mit festen Essenzen (Naturen). Der Mensch hat eine **gottgegebene Natur** (Vernunft, Wille, Bestimmung zur Gottesschau).
 
@@ -221,7 +221,7 @@ Das **höchste Gut** ist die **Schau Gottes** (visio beatifica) im Jenseits.
 
 ### Jean-Paul Sartre (1905-1980)
 
-#### Ziel
+#### Ziele
 **Authentizität und Engagement** – Erkenne, dass du **radikal frei** bist (es gibt keine vorgegebene Essenz). Wähle dich selbst (Selbst-Schöpfung), übernimm Verantwortung, engagiere dich. Das Ziel ist nicht Glück, sondern **Authentizität** – lebe in Übereinstimmung mit deiner **selbstgewählten** Freiheit.
 
 #### Regeln
@@ -439,7 +439,7 @@ Aber diese Synthese ist **unmöglich**. Der Mensch ist **für-sich** (frei), kan
 
 **Lebensführung**: Erwarte **keinen Sinn** von außen (Gott, Natur, Geschichte). **Du** musst Sinn schaffen – durch deine Wahl, dein Engagement. Das Leben ist absurd – aber **du** gibst ihm Bedeutung.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Existenz vor Essenz** (Atheismus). Es gibt **keinen Gott**, also keine vorgegebene menschliche Natur. Der Mensch ist **radikal frei**.
 

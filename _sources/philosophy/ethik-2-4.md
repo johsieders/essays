@@ -6,7 +6,7 @@
 
 ### Immanuel Kant (1724-1804)
 
-#### Ziel
+#### Ziele
 **Autonomie und Würde durch moralisches Handeln** – Der Mensch verwirklicht seine Freiheit, indem er aus Pflicht (nicht aus Neigung) dem moralischen Gesetz folgt. Das höchste Gut ist ein guter Wille.
 
 #### Regeln
@@ -153,7 +153,7 @@ Kants Motto der **Aufklärung**: "Sapere aude! Habe Mut, dich deines eigenen Ver
 
 **Lebensführung**: Denke selbst. Folge nicht blind Autoritäten (Kirche, Staat, Tradition). Prüfe mit deiner Vernunft.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Dualismus** – Phänomenale Welt (Natur, Kausalität, Determinismus) vs. Noumenale Welt (Freiheit, Moral). Wir sind **zugleich** determiniert (als Naturwesen) und frei (als Vernunftwesen).
 
@@ -174,7 +174,7 @@ Kants Motto der **Aufklärung**: "Sapere aude! Habe Mut, dich deines eigenen Ver
 
 ### John Stuart Mill (1806-1873)
 
-#### Ziel
+#### Ziele
 **Das größte Glück der größten Zahl** – Moralisches Handeln maximiert das **Gesamtglück** (pleasure) und minimiert das **Gesamtleid** (pain). Die Konsequenzen entscheiden über Moralität.
 
 #### Regeln
@@ -310,7 +310,7 @@ Stell dir eine Maschine vor, die dir **perfektes Glück** simuliert. Du liegst i
 
 **Lebensführung**: Wenn du dich nicht an die Experience Machine anschließen würdest – dann bist du **kein** konsequenter Utilarist.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Naturalistisch** – Es gibt nur die natürliche Welt. Lust/Schmerz sind empirisch messbare Größen.
 
@@ -334,44 +334,49 @@ Stell dir eine Maschine vor, die dir **perfektes Glück** simuliert. Du liegst i
 
 #### Tabellarische Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Kant                              | Mill                              |
-+------------------+-----------------------------------+-----------------------------------+
-| Was zählt?       | **Pflicht** (Absicht)             | **Nutzen** (Konsequenzen)         |
-+------------------+-----------------------------------+-----------------------------------+
-| Höchstes Gut     | Guter Wille (Autonomie)           | Glück (Lust, Abwesenheit von      |
-|                  |                                   | Schmerz)                          |
-+------------------+-----------------------------------+-----------------------------------+
-| Moralische Regel | Kategorischer Imperativ           | Nützlichkeitsprinzip (Utility)    |
-|                  | (Universalisierung)               |                                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Lügen            | **Nie** erlaubt (auch nicht für   | Erlaubt, wenn Gesamtnutzen        |
-|                  | Mörder an der Tür)                | dadurch steigt                    |
-+------------------+-----------------------------------+-----------------------------------+
-| Menschenwert     | **Würde** – absolut, unersetzbar  | **Teil** der Nutzenrechnung –     |
-|                  |                                   | aggregierbar                      |
-+------------------+-----------------------------------+-----------------------------------+
-| Trolley-Problem  | **Nein** – Menschen sind keine    | **Ja** – töte einen, rette fünf   |
-|                  | Rechengrößen                      | (maximiert Gesamtnutzen)          |
-+------------------+-----------------------------------+-----------------------------------+
-| Regeltyp         | **Absolute** Regeln (keine        | **Flexible** Faustregeln          |
-|                  | Ausnahmen)                        | (Sekundärprinzipien)              |
-+------------------+-----------------------------------+-----------------------------------+
-| Freiheit         | **Autonomie** – Selbstgesetzgebung| **Schaden-Prinzip** – tu was du   |
-|                  | durch Vernunft                    | willst, solange andere nicht      |
-|                  |                                   | geschädigt werden                 |
-+------------------+-----------------------------------+-----------------------------------+
-| Begründung       | **A priori** (Vernunft)           | **A posteriori** (Erfahrung)      |
-+------------------+-----------------------------------+-----------------------------------+
-| Egalitarismus    | Alle haben gleiche Würde          | Alle zählen gleich im Kalkül      |
-+------------------+-----------------------------------+-----------------------------------+
-| Neigung          | Keine moralische Basis (kontingent| Irrelevant – nur Konsequenzen     |
-|                  | )                                 | zählen                            |
-+------------------+-----------------------------------+-----------------------------------+
-| Selbstmord       | Immer verboten (Pflicht gegen     | Erlaubt, wenn Gesamtnutzen steigt |
-|                  | sich selbst)                      | (z.B. unheilbar krank)            |
-+------------------+-----------------------------------+-----------------------------------+
+```{list-table}
+:header-rows: 1
+:widths: 20 40 40
+
+* - Dimension
+  - Kant
+  - Mill
+* - Was zählt?
+  - **Pflicht** (Absicht)
+  - **Nutzen** (Konsequenzen)
+* - Höchstes Gut
+  - Guter Wille (Autonomie)
+  - Glück (Lust, Abwesenheit von Schmerz)
+* - Moralische Regel
+  - Kategorischer Imperativ (Universalisierung)
+  - Nützlichkeitsprinzip (Utility)
+* - Lügen
+  - **Nie** erlaubt (auch nicht für Mörder an der Tür)
+  - Erlaubt, wenn Gesamtnutzen dadurch steigt
+* - Menschenwert
+  - **Würde** – absolut, unersetzbar
+  - **Teil** der Nutzenrechnung – aggregierbar
+* - Trolley-Problem
+  - **Nein** – Menschen sind keine Rechengrößen
+  - **Ja** – töte einen, rette fünf (maximiert Gesamtnutzen)
+* - Regeltyp
+  - **Absolute** Regeln (keine Ausnahmen)
+  - **Flexible** Faustregeln (Sekundärprinzipien)
+* - Freiheit
+  - **Autonomie** – Selbstgesetzgebung durch Vernunft
+  - **Schaden-Prinzip** – tu was du willst, solange andere nicht geschädigt werden
+* - Begründung
+  - **A priori** (Vernunft)
+  - **A posteriori** (Erfahrung)
+* - Egalitarismus
+  - Alle haben gleiche Würde
+  - Alle zählen gleich im Kalkül
+* - Neigung
+  - Keine moralische Basis (kontingent)
+  - Irrelevant – nur Konsequenzen zählen
+* - Selbstmord
+  - Immer verboten (Pflicht gegen sich selbst)
+  - Erlaubt, wenn Gesamtnutzen steigt (z.B. unheilbar krank)
 ```
 
 #### Unterschiede

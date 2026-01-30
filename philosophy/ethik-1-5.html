@@ -1,0 +1,1623 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1.5 Spaltungen &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'philosophy/ethik-1-5';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.1 Stoiker vs. Epikur" href="ethik-2-1.html" />
+    <link rel="prev" title="1.4 Begründungen" href="ethik-1-4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics-existence.html">What Exists in Mathematics? *</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ethik-0.html">Wie soll man leben? *</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-2.html">1.2 Regeln</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.5 Spaltungen</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-3.html">2.3 Prediger vs. Sprüche Salomos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-4.html">2.4 Kant vs. Mill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-6.html">2.6 Platon vs. Hume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-3.html">3. Fragen</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ethik-4.html">4. Literatur</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/newton.html">Newton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/philosophy/ethik-1-5.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fphilosophy/ethik-1-5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/philosophy/ethik-1-5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.5 Spaltungen</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.5 Spaltungen</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metaphysisch-materialismus-vs-idealismus-vs-theismus">Metaphysisch: Materialismus vs. Idealismus vs. Theismus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#materialismus-naturalismus-5-18">1. Materialismus/Naturalismus (5/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idealismus-dualismus-6-18">2. Idealismus/Dualismus (6/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theismus-4-18">3. Theismus (4/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epistemologisch-empirismus-vs-rationalismus-vs-offenbarung">Epistemologisch: Empirismus vs. Rationalismus vs. Offenbarung</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirismus-4-18">1. Empirismus (4/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rationalismus-5-18">2. Rationalismus (5/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#offenbarung-2-18">3. Offenbarung (2/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethisch-deontologie-vs-konsequenzialismus-vs-tugendethik">Ethisch: Deontologie vs. Konsequenzialismus vs. Tugendethik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deontologie-1-18-aber-einflussreich">1. Deontologie (1/18, aber einflussreich!)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsequenzialismus-3-18">2. Konsequenzialismus (3/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tugendethik-7-18">3. Tugendethik (7/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mitleid-17-vs-1-nietzsches-alleingang">Mitleid: 17 vs. 1 – Nietzsches Alleingang</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-mitleid-17-18">Pro Mitleid (17/18):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contra-mitleid-1-18">Contra Mitleid (1/18):</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anthropologisch-essenz-vor-existenz-vs-existenz-vor-essenz">Anthropologisch: Essenz vor Existenz vs. Existenz vor Essenz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#essenz-vor-existenz-10-18">1. Essenz vor Existenz (10/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#existenz-vor-essenz-2-18">2. Existenz vor Essenz (2/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-unklar-6-18">3. Ambivalent/Unklar (6/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#freiheits-freier-wille-vs-determinismus">Freiheits: Freier Wille vs. Determinismus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radikale-freiheit-3-18">1. Radikale Freiheit (3/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinismus-kompatibilismus-5-18">2. Determinismus/Kompatibilismus (5/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrenzte-freiheit-7-18">3. Begrenzte Freiheit (7/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unklar-skeptisch-3-18">4. Unklar/Skeptisch (3/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transzendenz-diesseitig-vs-jenseitig">Transzendenz: Diesseitig vs. Jenseitig</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nur-diesseits-9-18">1. Nur Diesseits (9/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primar-jenseits-3-18">2. Primär Jenseits (3/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-6-18">3. Ambivalent (6/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sozial-gemeinschaft-vs-einsamkeit">Sozial: Gemeinschaft vs. Einsamkeit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeinschaft-zentral-7-18">1. Gemeinschaft zentral (7/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#einsamkeit-ruckzug-4-18">2. Einsamkeit/Rückzug (4/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-7-18">3. Ambivalent (7/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#politisch-engagement-vs-ruckzug">Politisch: Engagement vs. Rückzug</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engagement-8-18">1. Engagement (8/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ruckzug-4-18">2. Rückzug (4/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#privat-provisorisch-6-18">3. Privat/Provisorisch (6/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gleichheit-egalitar-vs-hierarchisch">Gleichheit: Egalitär vs. Hierarchisch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#egalitar-10-18">1. Egalitär (10/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchisch-6-18">2. Hierarchisch (6/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-2-18">3. Ambivalent (2/18)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ubersicht-die-10-spaltungen">Übersicht: Die 10 Spaltungen</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-unvereinbarsten-duelle">Die unvereinbarsten Duelle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-metaphysische-duell-platon-vs-epikur">1. Das metaphysische Duell: Platon vs. Epikur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-epistemologische-duell-kant-vs-hume">2. Das epistemologische Duell: Kant vs. Hume</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-ethische-duell-kant-vs-mill-lugen-dilemma">3. Das ethische Duell: Kant vs. Mill (Lügen-Dilemma)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-mitleid-duell-schopenhauer-vs-nietzsche">4. Das Mitleid-Duell: Schopenhauer vs. Nietzsche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-anthropologische-duell-thomas-vs-sartre">5. Das anthropologische Duell: Thomas vs. Sartre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-freiheits-duell-sartre-vs-spinoza">6. Das Freiheits-Duell: Sartre vs. Spinoza</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-transzendenz-duell-epikur-vs-nt">7. Das Transzendenz-Duell: Epikur vs. NT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-sozial-duell-aristoteles-vs-epikur">8. Das Sozial-Duell: Aristoteles vs. Epikur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-politische-duell-mill-vs-schopenhauer">9. Das politische Duell: Mill vs. Schopenhauer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-gleichheits-duell-kant-vs-nietzsche">10. Das Gleichheits-Duell: Kant vs. Nietzsche</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erkenntnisse-aus-der-spaltungsanalyse">Erkenntnisse aus der Spaltungsanalyse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keine-synthese-moglich-fragmentierung-bestatigt">1. Keine Synthese möglich – Fragmentierung bestätigt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-radikalen-auszenseiter-nietzsche-und-sartre">2. Die radikalen Außenseiter: Nietzsche und Sartre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-unuberbruckbaren-spaltungen">3. Die unüberbrückbaren Spaltungen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenz-bei-regeln-divergenz-bei-begrundungen">4. Konvergenz bei Regeln, Divergenz bei Begründungen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-synthese-versuche-sind-gescheitert">5. Die Synthese-Versuche sind gescheitert</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#der-naturalistische-fehlschluss-hume-spaltet">6. Der naturalistische Fehlschluss (Hume) spaltet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sakularisierung-ist-komplett-aber-ohne-ersatz">7. Die Säkularisierung ist komplett – aber ohne Ersatz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-moderne-dilemma-pluralismus-ohne-konsens">8. Das moderne Dilemma: Pluralismus ohne Konsens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-unvereinbarsten-philosophen-paare">9. Die unvereinbarsten Philosophen-Paare</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoffnung-regelkonsens-trotz-begrundungsdivergenz">10. Hoffnung: Regelkonsens trotz Begründungsdivergenz</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="spaltungen">
+<h1>1.5 Spaltungen<a class="headerlink" href="#spaltungen" title="Link to this heading">#</a></h1>
+<p>Diese Sektion analysiert die <strong>unüberbrückbaren Gegensätze</strong> zwischen den verschiedenen Philosophien.
+Während vorherige Abschnitte Konvergenzen zeigten (Regeln: Mäßigung 14/18, Klugheit 15/18), fokussiert
+dieser Abschnitt auf die <strong>Bruchlinien</strong> – jene fundamentalen Divergenzen, die philosophische Systeme <strong>unvereinbar</strong> machen.</p>
+<hr class="docutils" />
+<section id="metaphysisch-materialismus-vs-idealismus-vs-theismus">
+<h2>Metaphysisch: Materialismus vs. Idealismus vs. Theismus<a class="headerlink" href="#metaphysisch-materialismus-vs-idealismus-vs-theismus" title="Link to this heading">#</a></h2>
+<p><strong>Die fundamentalste Frage</strong>: Was ist die <strong>Wirklichkeit</strong>?</p>
+<section id="materialismus-naturalismus-5-18">
+<h3>1. Materialismus/Naturalismus (5/18)<a class="headerlink" href="#materialismus-naturalismus-5-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Nur <strong>Materie/Natur</strong> existiert. Alles folgt natürlichen Gesetzen. Kein Geist, keine Seele (außer materiell).</p>
+<p><strong>Vertreter</strong>: Epikur, Stoiker, Hume, Mill, Aristoteles (teilweise)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Epikur</strong>: Alles (auch Seele) besteht aus <strong>Atomen</strong></p></li>
+<li><p><strong>Hume</strong>: Seele ist “<strong>Bündel von Wahrnehmungen</strong>”, kein substanzielles Selbst</p></li>
+<li><p><strong>Stoiker</strong>: Seele ist <strong>Pneuma</strong> (materieller Hauch)</p></li>
+</ul>
+</section>
+<section id="idealismus-dualismus-6-18">
+<h3>2. Idealismus/Dualismus (6/18)<a class="headerlink" href="#idealismus-dualismus-6-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: <strong>Geist/Ideen</strong> sind primär oder gleichberechtigt mit Materie. Seele ist <strong>unsterblich</strong>.</p>
+<p><strong>Vertreter</strong>: Platon, Descartes, Kant, Schopenhauer, NT, Thomas (teilweise)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Platon</strong>: Wahre Wirklichkeit sind <strong>Ideen</strong> (ewig, unveränderlich). Materie ist Schatten</p></li>
+<li><p><strong>Descartes</strong>: Zwei Substanzen – <strong>res cogitans</strong> (Geist) und <strong>res extensa</strong> (Materie)</p></li>
+<li><p><strong>Kant</strong>: Wir erkennen nur <strong>Phänomene</strong>, nicht <strong>Dinge an sich</strong></p></li>
+</ul>
+</section>
+<section id="theismus-4-18">
+<h3>3. Theismus (4/18)<a class="headerlink" href="#theismus-4-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Ein <strong>personaler Gott</strong> hat die Welt geschaffen und erhält sie.</p>
+<p><strong>Vertreter</strong>: NT, Thomas, Descartes, Sprüche</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>NT</strong>: Trinität, Schöpfung, Inkarnation, Erlösung</p></li>
+<li><p><strong>Thomas</strong>: Gott als <strong>Actus purus</strong>, Essenz = Existenz</p></li>
+</ul>
+<p><strong>Der Konflikt ist TOTAL</strong>:</p>
+<ul class="simple">
+<li><p>Materialisten: <strong>Keine Seele</strong>, <strong>kein Jenseits</strong>, <strong>kein Gott</strong></p></li>
+<li><p>Idealisten: <strong>Seele unsterblich</strong>, <strong>Ideen ewig</strong>, <strong>Geist primär</strong></p></li>
+<li><p>Theisten: <strong>Gott schuf alles</strong>, <strong>Seele unsterblich</strong>, <strong>Jenseits zentral</strong></p></li>
+</ul>
+<p><strong>Beispiel-Duelle</strong>:</p>
+<ul class="simple">
+<li><p><strong>Epikur vs. Platon</strong>: Atome vs. Ideen – unvereinbar!</p></li>
+<li><p><strong>Hume vs. Descartes</strong>: Bündel von Wahrnehmungen vs. res cogitans – unvereinbar!</p></li>
+<li><p><strong>Mill vs. Thomas</strong>: Naturalismus vs. Theismus – unvereinbar!</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Keine gemeinsame <strong>Ontologie</strong> → keine gemeinsame Ethik-Basis.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="epistemologisch-empirismus-vs-rationalismus-vs-offenbarung">
+<h2>Epistemologisch: Empirismus vs. Rationalismus vs. Offenbarung<a class="headerlink" href="#epistemologisch-empirismus-vs-rationalismus-vs-offenbarung" title="Link to this heading">#</a></h2>
+<p><strong>Die Methodenfrage</strong>: Wie erkennen wir <strong>Wahrheit</strong>?</p>
+<section id="empirismus-4-18">
+<h3>1. Empirismus (4/18)<a class="headerlink" href="#empirismus-4-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Alle Erkenntnis stammt aus <strong>Erfahrung</strong>. Keine angeborenen Ideen.</p>
+<p><strong>Vertreter</strong>: Hume, Mill, Aristoteles, Epikur</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Hume</strong>: “Nichts ist im Verstand, was nicht zuerst in den Sinnen war” (Locke)</p></li>
+<li><p><strong>Mill</strong>: Induktion, Beobachtung, wissenschaftliche Methode</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: <strong>Keine Moral a priori</strong> – Moral muss empirisch begründet werden (Nutzen, Sympathie).</p>
+</section>
+<section id="rationalismus-5-18">
+<h3>2. Rationalismus (5/18)<a class="headerlink" href="#rationalismus-5-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Wahre Erkenntnis stammt aus <strong>Vernunft</strong>. Es gibt <strong>a priori</strong> Wahrheiten.</p>
+<p><strong>Vertreter</strong>: Platon, Descartes, Spinoza, Kant, Thomas (teilweise)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Platon</strong>: Anamnesis – Seele <strong>erinnert</strong> sich an Ideen</p></li>
+<li><p><strong>Kant</strong>: Synthetische Urteile <strong>a priori</strong> (z.B. kategorischer Imperativ)</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Moral ist <strong>a priori</strong> – universell, notwendig, unabhängig von Erfahrung.</p>
+</section>
+<section id="offenbarung-2-18">
+<h3>3. Offenbarung (2/18)<a class="headerlink" href="#offenbarung-2-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Höchste Wahrheiten sind <strong>geoffenbart</strong>, nicht durch Vernunft erkennbar.</p>
+<p><strong>Vertreter</strong>: NT, Sprüche</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>NT</strong>: “Glaube kommt aus der Predigt” (Römer 10:17), Heiliger Geist</p></li>
+</ul>
+<p><strong>Der Konflikt</strong>:</p>
+<ul class="simple">
+<li><p><strong>Hume</strong>: Kein a priori, kein Offenbarung → Moral basiert auf Custom/Habit</p></li>
+<li><p><strong>Kant</strong>: A priori, aber <strong>keine</strong> Offenbarung → Moral basiert auf Vernunft</p></li>
+<li><p><strong>NT</strong>: Offenbarung <strong>übersteigt</strong> Vernunft → Moral basiert auf Gottes Gebot</p></li>
+</ul>
+<p><strong>Beispiel-Duelle</strong>:</p>
+<ul class="simple">
+<li><p><strong>Hume vs. Kant</strong>: “Vernunft ist Sklavin der Leidenschaften” vs. “Vernunft gibt sich selbst das Gesetz” – <strong>unvereinbar</strong>!</p></li>
+<li><p><strong>Kant vs. NT</strong>: Autonomie (Selbstgesetzgebung) vs. Theonomie (Gottes Gesetz) – <strong>unvereinbar</strong>!</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Keine gemeinsame <strong>Erkenntnismethode</strong> → keine gemeinsame Wahrheitsfindung.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="ethisch-deontologie-vs-konsequenzialismus-vs-tugendethik">
+<h2>Ethisch: Deontologie vs. Konsequenzialismus vs. Tugendethik<a class="headerlink" href="#ethisch-deontologie-vs-konsequenzialismus-vs-tugendethik" title="Link to this heading">#</a></h2>
+<p><strong>Die Frage</strong>: Was macht Handlungen <strong>moralisch gut</strong>?</p>
+<section id="deontologie-1-18-aber-einflussreich">
+<h3>1. Deontologie (1/18, aber einflussreich!)<a class="headerlink" href="#deontologie-1-18-aber-einflussreich" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Handlungen sind gut aufgrund ihrer <strong>Übereinstimmung mit Pflicht/Gesetz</strong>, nicht aufgrund ihrer Folgen.</p>
+<p><strong>Vertreter</strong>: Kant</p>
+<p><strong>These</strong>: Kategorischer Imperativ – handle so, dass die Maxime deines Willens jederzeit als Prinzip einer allgemeinen Gesetzgebung gelten könne.</p>
+<p><strong>Konsequenz</strong>: Lügen ist <strong>immer</strong> falsch – selbst um Unschuldige zu schützen!</p>
+</section>
+<section id="konsequenzialismus-3-18">
+<h3>2. Konsequenzialismus (3/18)<a class="headerlink" href="#konsequenzialismus-3-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Handlungen sind gut aufgrund ihrer <strong>Folgen</strong> (Glück, Nutzen, Lust).</p>
+<p><strong>Vertreter</strong>: Mill, Epikur, Hume (teilweise)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Mill</strong>: Größtes Glück der größten Zahl</p></li>
+<li><p><strong>Epikur</strong>: Maximiere Ataraxia (Seelenruhe)</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Lügen ist erlaubt, wenn es <strong>Leid verhindert</strong> (Mill)!</p>
+</section>
+<section id="tugendethik-7-18">
+<h3>3. Tugendethik (7/18)<a class="headerlink" href="#tugendethik-7-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Handlungen sind gut, wenn sie aus <strong>Tugend/Charakter</strong> entspringen.</p>
+<p><strong>Vertreter</strong>: Aristoteles, Platon, Stoiker, Thomas, Konfuzius, Sprüche, NT (teilweise)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Aristoteles</strong>: Handle gemäß <strong>Mesotes</strong> (die Mitte), aus <strong>Phronesis</strong> (praktischer Klugheit)</p></li>
+<li><p><strong>Konfuzius</strong>: Handle aus <strong>Ren</strong> (Menschlichkeit), gemäß <strong>Li</strong> (Ritual)</p></li>
+</ul>
+<p><strong>Der Konflikt – Das Lügen-Dilemma</strong>:</p>
+<p><strong>Situation</strong>: Ein Mörder fragt dich nach dem Aufenthaltsort eines Unschuldigen.</p>
+<ul class="simple">
+<li><p><strong>Kant (Deontologie)</strong>: Lügen ist <strong>immer</strong> falsch → sage die Wahrheit (auch wenn der Unschuldige stirbt)!</p></li>
+<li><p><strong>Mill (Konsequenzialismus)</strong>: Lügen ist erlaubt → lüge, um Leid zu verhindern!</p></li>
+<li><p><strong>Aristoteles (Tugendethik)</strong>: Phronesis (Klugheit) entscheidet → situativ (wahrscheinlich lügen)</p></li>
+</ul>
+<p><strong>Das ist UNVEREINBAR</strong>! Drei verschiedene Antworten auf dieselbe Frage.</p>
+<p><strong>Weitere Konflikte</strong>:</p>
+<ul class="simple">
+<li><p><strong>Kant vs. Mill</strong>: Pflicht vs. Nutzen – im Konfliktfall: wer hat Vorrang?</p></li>
+<li><p><strong>Aristoteles vs. Kant</strong>: Tugend ist Teil von Glück vs. Tugend ist getrennt von Glück</p></li>
+<li><p><strong>Mill vs. Aristoteles</strong>: Glück als Gesamtglück vs. Glück als individuelles Aufblühen</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mitleid-17-vs-1-nietzsches-alleingang">
+<h2>Mitleid: 17 vs. 1 – Nietzsches Alleingang<a class="headerlink" href="#mitleid-17-vs-1-nietzsches-alleingang" title="Link to this heading">#</a></h2>
+<p><strong>Die dramatischste Spaltung</strong>: Fast alle (17/18) sehen <strong>Mitleid</strong> als Tugend – <strong>außer Nietzsche</strong>!</p>
+<section id="pro-mitleid-17-18">
+<h3>Pro Mitleid (17/18):<a class="headerlink" href="#pro-mitleid-17-18" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Schopenhauer</strong>: Mitleid ist die <strong>einzige</strong> Basis der Moral!</p></li>
+<li><p><strong>Buddha</strong>: Karuna (Mitgefühl) ist zentral</p></li>
+<li><p><strong>NT</strong>: Agape (Nächstenliebe) – “Liebe deinen Nächsten”</p></li>
+<li><p><strong>Hume</strong>: Sympathie ist Grundlage der Moral</p></li>
+<li><p><strong>Konfuzius</strong>: Ren (Menschlichkeit) beinhaltet Empathie</p></li>
+<li><p><strong>Kant</strong>: Mitleid aus Pflicht (problematisch, aber geboten)</p></li>
+<li><p><strong>Mill</strong>: Mitleid maximiert Gesamtglück</p></li>
+<li><p><strong>Aristoteles</strong>: Mitleid ist Tugend (richtige Mitte)</p></li>
+<li><p><strong>Stoiker</strong>: Oikeiosis (Zugehörigkeit), Mitleid mit Maß</p></li>
+<li><p><strong>Thomas</strong>: Misericordia (Barmherzigkeit)</p></li>
+<li><p><strong>Platon</strong>: Mitleid existiert, untergeordnet der Vernunft</p></li>
+<li><p><strong>Spinoza</strong>: Durch Vernunft als gut erkannt</p></li>
+<li><p><strong>Descartes</strong>: Générosité beinhaltet Mitleid</p></li>
+<li><p><strong>Sartre</strong>: Implizit (Verantwortung für alle)</p></li>
+<li><p><strong>Sprüche</strong>: “Wer dem Geringen Gewalt tut, lästert dessen Schöpfer”</p></li>
+<li><p><strong>Epikur</strong>: Freundschaft (implizites Mitleid)</p></li>
+<li><p><strong>Prediger</strong>: (neutral, fehlt)</p></li>
+</ul>
+</section>
+<section id="contra-mitleid-1-18">
+<h3>Contra Mitleid (1/18):<a class="headerlink" href="#contra-mitleid-1-18" title="Link to this heading">#</a></h3>
+<p><strong>Nietzsche</strong>: “Das Mitleid verdoppelt das Leid!”</p>
+<p><strong>Nietzsches Argument</strong>:</p>
+<ul class="simple">
+<li><p>Mitleid ist <strong>Schwäche</strong> – es schwächt beide (den Mitleidenden und den Bemitleideten)</p></li>
+<li><p>Mitleid ist <strong>Sklavenmoral</strong> – Ressentiment der Schwachen</p></li>
+<li><p>Stattdessen: <strong>Respekt</strong> – hilf dem Leidenden, <strong>stärker</strong> zu werden, nicht zu leiden</p></li>
+</ul>
+<p><strong>Das ist die RADIKALSTE Spaltung</strong>:</p>
+<ul class="simple">
+<li><p><strong>17:1</strong> – Nietzsche steht <strong>praktisch allein</strong> gegen die gesamte philosophische und religiöse Tradition!</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Keine Einigung über <strong>Basisemotion</strong> der Moral.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="anthropologisch-essenz-vor-existenz-vs-existenz-vor-essenz">
+<h2>Anthropologisch: Essenz vor Existenz vs. Existenz vor Essenz<a class="headerlink" href="#anthropologisch-essenz-vor-existenz-vs-existenz-vor-essenz" title="Link to this heading">#</a></h2>
+<p><strong>Die Frage</strong>: Hat der Mensch eine <strong>vorgegebene Natur</strong> (Essenz)?</p>
+<section id="essenz-vor-existenz-10-18">
+<h3>1. Essenz vor Existenz (10/18)<a class="headerlink" href="#essenz-vor-existenz-10-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Der Mensch hat eine <strong>vorgegebene Natur/Essenz</strong> – durch Gott, Natur, oder Ideen.</p>
+<p><strong>Vertreter</strong>: Platon, Aristoteles, Thomas, Stoiker, Descartes, Spinoza, NT, Sprüche, Konfuzius (implizit), Hume (implizit)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Platon</strong>: Seele hat <strong>Ideen</strong> geschaut vor der Geburt – Essenz ist vorgegeben</p></li>
+<li><p><strong>Aristoteles</strong>: Mensch ist <strong>von Natur aus</strong> rationales und soziales Wesen (ergon)</p></li>
+<li><p><strong>Thomas</strong>: Gott hat den Menschen mit einer <strong>Essenz</strong> erschaffen (vernünftiges Tier, Bild Gottes)</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: <strong>Verwirkliche</strong> deine Natur – lebe gemäß deiner Essenz.</p>
+</section>
+<section id="existenz-vor-essenz-2-18">
+<h3>2. Existenz vor Essenz (2/18)<a class="headerlink" href="#existenz-vor-essenz-2-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Der Mensch hat <strong>keine</strong> vorgegebene Natur – er <strong>erschafft</strong> seine Essenz.</p>
+<p><strong>Vertreter</strong>: Sartre, Nietzsche</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Sartre</strong>: “Der Mensch ist nichts anderes, als wozu er sich macht” – du wählst deine Essenz</p></li>
+<li><p><strong>Nietzsche</strong>: “Werde, der du bist” – durch Selbstüberwindung, nicht durch vorgegebene Natur</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: <strong>Erschaffe</strong> deine Essenz – du bist radikal frei.</p>
+</section>
+<section id="ambivalent-unklar-6-18">
+<h3>3. Ambivalent/Unklar (6/18)<a class="headerlink" href="#ambivalent-unklar-6-18" title="Link to this heading">#</a></h3>
+<p><strong>Vertreter</strong>: Buddha (Anatta – kein Selbst!), Schopenhauer (Wille ist vorgegeben, aber zu verneinen), Epikur, Mill, Kant (Autonomie, aber kategorisches Gesetz), Prediger</p>
+<p><strong>Der Konflikt ist TOTAL</strong>:</p>
+<ul class="simple">
+<li><p><strong>Thomas</strong>: Du hast eine <strong>gottgegebene Essenz</strong> → verwirkliche sie!</p></li>
+<li><p><strong>Sartre</strong>: Du hast <strong>keine Essenz</strong> → erschaffe sie!</p></li>
+</ul>
+<p><strong>Beispiel-Duell</strong>: <strong>Thomas vs. Sartre</strong></p>
+<ul class="simple">
+<li><p><strong>Thomas</strong>: Essenz vor Existenz – Gott schuf den Menschen mit bestimmter Natur</p></li>
+<li><p><strong>Sartre</strong>: Existenz vor Essenz – kein Gott, keine Natur, radikale Freiheit</p></li>
+</ul>
+<p><strong>Das ist das fundamentalste Duell der modernen Philosophie</strong>!</p>
+<p><strong>Konsequenz</strong>: Keine Einigung über <strong>menschliche Natur</strong>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="freiheits-freier-wille-vs-determinismus">
+<h2>Freiheits: Freier Wille vs. Determinismus<a class="headerlink" href="#freiheits-freier-wille-vs-determinismus" title="Link to this heading">#</a></h2>
+<p><strong>Die Frage</strong>: Ist der Mensch <strong>frei</strong> in seinen Entscheidungen?</p>
+<section id="radikale-freiheit-3-18">
+<h3>1. Radikale Freiheit (3/18)<a class="headerlink" href="#radikale-freiheit-3-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Der Mensch ist <strong>radikal frei</strong> – vollständig selbstbestimmt.</p>
+<p><strong>Vertreter</strong>: Sartre, Descartes, Kant (transzendental)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Sartre</strong>: “Zur Freiheit verurteilt” – du <strong>musst</strong> wählen, kannst nicht nicht wählen</p></li>
+<li><p><strong>Descartes</strong>: Freier Wille ist unbegrenzt (im Gegensatz zum begrenzten Verstand)</p></li>
+<li><p><strong>Kant</strong>: Transzendentale Freiheit (noumenales Ich ist frei, phenomenales Ich determiniert)</p></li>
+</ul>
+</section>
+<section id="determinismus-kompatibilismus-5-18">
+<h3>2. Determinismus/Kompatibilismus (5/18)<a class="headerlink" href="#determinismus-kompatibilismus-5-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Alles ist <strong>kausal determiniert</strong> – aber Freiheit ist möglich innerhalb der Determination.</p>
+<p><strong>Vertreter</strong>: Stoiker, Spinoza, Schopenhauer (Wille unfrei), Hume (Custom/Habit), Epikur (teilweise – Clinamen!)</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Stoiker</strong>: Alles folgt Logos – aber du bist frei, <strong>zuzustimmen</strong> (Prohairesis)</p></li>
+<li><p><strong>Spinoza</strong>: Radikaler Determinismus – Freiheit = Einsicht in Notwendigkeit</p></li>
+<li><p><strong>Schopenhauer</strong>: Wille ist <strong>unfrei</strong> – “Der Mensch kann tun, was er will, aber nicht wollen, was er will”</p></li>
+</ul>
+</section>
+<section id="begrenzte-freiheit-7-18">
+<h3>3. Begrenzte Freiheit (7/18)<a class="headerlink" href="#begrenzte-freiheit-7-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Freiheit existiert, aber ist <strong>begrenzt</strong> durch Natur, Gesellschaft, Karma.</p>
+<p><strong>Vertreter</strong>: Aristoteles, Thomas, Buddha, Konfuzius, NT, Mill, Platon</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Aristoteles</strong>: Freiheit durch Tugend – aber begrenzt durch Charakter (Gewohnheit)</p></li>
+<li><p><strong>Buddha</strong>: Karma determiniert – aber durch Meditation Freiheit möglich</p></li>
+<li><p><strong>Thomas</strong>: Freier Wille (durch Gott gegeben), aber begrenzt durch Sünde</p></li>
+</ul>
+</section>
+<section id="unklar-skeptisch-3-18">
+<h3>4. Unklar/Skeptisch (3/18)<a class="headerlink" href="#unklar-skeptisch-3-18" title="Link to this heading">#</a></h3>
+<p><strong>Vertreter</strong>: Prediger, Nietzsche (Perspektivismus), Sprüche</p>
+<p><strong>Der Konflikt</strong>:</p>
+<ul class="simple">
+<li><p><strong>Sartre</strong>: Du bist <strong>absolut</strong> frei – keine Ausreden!</p></li>
+<li><p><strong>Spinoza</strong>: Du bist <strong>völlig</strong> determiniert – Freiheit = Illusion (echte Freiheit = Erkenntnis)</p></li>
+<li><p><strong>Stoiker</strong>: Du bist determiniert, aber frei im <strong>Zustimmen</strong></p></li>
+</ul>
+<p><strong>Beispiel-Duelle</strong>:</p>
+<ul class="simple">
+<li><p><strong>Sartre vs. Spinoza</strong>: Radikale Freiheit vs. radikaler Determinismus – <strong>unvereinbar</strong>!</p></li>
+<li><p><strong>Descartes vs. Schopenhauer</strong>: Freier Wille unbegrenzt vs. “Mensch kann nicht wollen, was er will” – <strong>unvereinbar</strong>!</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Keine Einigung über <strong>Verantwortung</strong> (wenn determiniert – wie verantwortlich?).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="transzendenz-diesseitig-vs-jenseitig">
+<h2>Transzendenz: Diesseitig vs. Jenseitig<a class="headerlink" href="#transzendenz-diesseitig-vs-jenseitig" title="Link to this heading">#</a></h2>
+<p><strong>Die Frage</strong>: Ist das <strong>Diesseits</strong> alles, oder gibt es ein <strong>Jenseits</strong>?</p>
+<section id="nur-diesseits-9-18">
+<h3>1. Nur Diesseits (9/18)<a class="headerlink" href="#nur-diesseits-9-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Das <strong>Diesseits</strong> ist alles – kein Jenseits, keine Unsterblichkeit.</p>
+<p><strong>Vertreter</strong>: Epikur, Nietzsche, Sartre, Mill, Hume, Konfuzius, Buddha (Nirvana hier), Aristoteles, Prediger</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Epikur</strong>: “Der Tod geht uns nichts an” – nach dem Tod existieren wir nicht</p></li>
+<li><p><strong>Nietzsche</strong>: “Gott ist tot” – Jenseits ist Flucht (Hinterwelten)</p></li>
+<li><p><strong>Sartre</strong>: Atheistischer Existenzialismus – kein Gott, kein Jenseits</p></li>
+</ul>
+</section>
+<section id="primar-jenseits-3-18">
+<h3>2. Primär Jenseits (3/18)<a class="headerlink" href="#primar-jenseits-3-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Das <strong>Jenseits</strong> ist das eigentliche Ziel – Diesseits ist Durchgang.</p>
+<p><strong>Vertreter</strong>: NT, Thomas, Platon</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>NT</strong>: “Trachtet zuerst nach dem Reich Gottes” (Matthäus 6:33) – Himmel ist Ziel</p></li>
+<li><p><strong>Thomas</strong>: Visio beatifica (Gottesschau) im Jenseits – höchstes Gut</p></li>
+<li><p><strong>Platon</strong>: Philosophie = Vorbereitung auf Tod (Befreiung der Seele)</p></li>
+</ul>
+</section>
+<section id="ambivalent-6-18">
+<h3>3. Ambivalent (6/18)<a class="headerlink" href="#ambivalent-6-18" title="Link to this heading">#</a></h3>
+<p><strong>Vertreter</strong>: Kant (Jenseits als Postulat), Spinoza (Ewigkeit jetzt), Schopenhauer, Descartes, Stoiker, Sprüche</p>
+<p><strong>Der Konflikt ist TOTAL</strong>:</p>
+<ul class="simple">
+<li><p><strong>Epikur</strong>: Kein Jenseits → lebe <strong>jetzt</strong>, maximiere Ataraxia</p></li>
+<li><p><strong>NT</strong>: Jenseits ist Ziel → lebe für <strong>ewiges Leben</strong></p></li>
+</ul>
+<p><strong>Konsequenzen</strong>:</p>
+<ul class="simple">
+<li><p><strong>Epikur</strong>: Irdisches Glück ist <strong>alles</strong></p></li>
+<li><p><strong>NT</strong>: Irdisches Glück ist <strong>sekundär</strong> (notfalls opfern für Jenseits)</p></li>
+</ul>
+<p><strong>Beispiel-Duell</strong>: <strong>Epikur vs. NT</strong></p>
+<ul class="simple">
+<li><p><strong>Epikur</strong>: “Iss, trink, sei fröhlich” (im Sinne von Ataraxia)</p></li>
+<li><p><strong>NT</strong>: “Was hilft es dem Menschen, die ganze Welt zu gewinnen und Schaden an seiner Seele zu nehmen?” (Markus 8:36)</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Völlig verschiedene <strong>Prioritäten</strong> im Leben.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="sozial-gemeinschaft-vs-einsamkeit">
+<h2>Sozial: Gemeinschaft vs. Einsamkeit<a class="headerlink" href="#sozial-gemeinschaft-vs-einsamkeit" title="Link to this heading">#</a></h2>
+<p><strong>Die Frage</strong>: Ist der Mensch <strong>sozial</strong> oder braucht er <strong>Einsamkeit</strong>?</p>
+<section id="gemeinschaft-zentral-7-18">
+<h3>1. Gemeinschaft zentral (7/18)<a class="headerlink" href="#gemeinschaft-zentral-7-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Der Mensch ist <strong>von Natur aus sozial</strong> – Gemeinschaft ist konstitutiv.</p>
+<p><strong>Vertreter</strong>: Aristoteles, Konfuzius, Stoiker, Kant, Mill, Thomas, NT</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Aristoteles</strong>: “Zoon politikon” – Mensch ist <strong>von Natur aus</strong> politisches Wesen</p></li>
+<li><p><strong>Konfuzius</strong>: Tugend realisiert sich <strong>nur</strong> in Beziehungen (Fünf Beziehungen)</p></li>
+<li><p><strong>Thomas</strong>: Bonum Commune (Gemeinwohl) vor Einzelwohl</p></li>
+<li><p><strong>NT</strong>: “Ihr seid der Leib Christi” (1 Kor 12:27) – Ekklesia zentral</p></li>
+</ul>
+</section>
+<section id="einsamkeit-ruckzug-4-18">
+<h3>2. Einsamkeit/Rückzug (4/18)<a class="headerlink" href="#einsamkeit-ruckzug-4-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Einsamkeit ist <strong>notwendig</strong> für Weisheit/Erlösung – Gemeinschaft hindert.</p>
+<p><strong>Vertreter</strong>: Epikur, Buddha, Schopenhauer, Nietzsche</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Epikur</strong>: “Lathe biōsas” (Lebe im Verborgenen) – Rückzug aus Politik</p></li>
+<li><p><strong>Buddha</strong>: Entsagung weltlicher Bindungen – Sangha (Mönchsgemeinschaft), aber Rückzug</p></li>
+<li><p><strong>Schopenhauer</strong>: Einsamkeit – Menschen verstärken Leiden</p></li>
+<li><p><strong>Nietzsche</strong>: “Die Herde zieht nach unten” – Einsamkeit notwendig für Größe</p></li>
+</ul>
+</section>
+<section id="ambivalent-7-18">
+<h3>3. Ambivalent (7/18)<a class="headerlink" href="#ambivalent-7-18" title="Link to this heading">#</a></h3>
+<p><strong>Vertreter</strong>: Platon (Polis wichtig, aber Seele individuell), Hume (Sympathie verbindet), Sartre (individuell frei, aber Engagement), Descartes, Spinoza, Sprüche, Prediger</p>
+<p><strong>Der Konflikt</strong>:</p>
+<ul class="simple">
+<li><p><strong>Aristoteles</strong>: Mensch <strong>braucht</strong> Polis – außerhalb der Polis bist du “Tier oder Gott”</p></li>
+<li><p><strong>Epikur</strong>: Polis <strong>hindert</strong> Ataraxia – Rückzug nötig</p></li>
+</ul>
+<p><strong>Beispiel-Duelle</strong>:</p>
+<ul class="simple">
+<li><p><strong>Konfuzius vs. Epikur</strong>: Harmonie (He) durch Gemeinschaft vs. Ataraxia durch Rückzug – <strong>unvereinbar</strong>!</p></li>
+<li><p><strong>Mill vs. Schopenhauer</strong>: Gesamtglück (sozial) vs. Willensverneinung (asozial) – <strong>unvereinbar</strong>!</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Keine Einigung über <strong>menschliche Natur</strong> (sozial oder nicht?).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="politisch-engagement-vs-ruckzug">
+<h2>Politisch: Engagement vs. Rückzug<a class="headerlink" href="#politisch-engagement-vs-ruckzug" title="Link to this heading">#</a></h2>
+<p><strong>Die Frage</strong>: Soll man sich <strong>politisch engagieren</strong> oder <strong>zurückziehen</strong>?</p>
+<section id="engagement-8-18">
+<h3>1. Engagement (8/18)<a class="headerlink" href="#engagement-8-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Politisches Engagement ist <strong>Pflicht</strong> oder zumindest wichtig.</p>
+<p><strong>Vertreter</strong>: Aristoteles, Konfuzius, Stoiker, Kant, Mill, Platon, Thomas, Sartre</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Aristoteles</strong>: Polis ist Ort der Tugendverwirklichung</p></li>
+<li><p><strong>Konfuzius</strong>: Bildung und Vorbild für Harmonie</p></li>
+<li><p><strong>Mill</strong>: Soziale Reform, Demokratie, Fortschritt</p></li>
+<li><p><strong>Sartre</strong>: “s’engager” (sich engagieren) – Résistance, politisch links</p></li>
+</ul>
+</section>
+<section id="ruckzug-4-18">
+<h3>2. Rückzug (4/18)<a class="headerlink" href="#ruckzug-4-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Politik ist <strong>hinderlich</strong> – Rückzug ist besser.</p>
+<p><strong>Vertreter</strong>: Epikur, Buddha, Schopenhauer, Prediger</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Epikur</strong>: “Lathe biōsas” – Politik bringt Unruhe</p></li>
+<li><p><strong>Buddha</strong>: Weltliche Macht ist Illusion (Maya)</p></li>
+<li><p><strong>Schopenhauer</strong>: Politik verstärkt Leiden</p></li>
+</ul>
+</section>
+<section id="privat-provisorisch-6-18">
+<h3>3. Privat/Provisorisch (6/18)<a class="headerlink" href="#privat-provisorisch-6-18" title="Link to this heading">#</a></h3>
+<p><strong>Vertreter</strong>: Descartes (provisorische Moral), Hume, NT (Reich Gottes, nicht irdisch), Nietzsche (gegen Herde), Spinoza (Demokratie, aber Kontemplation), Sprüche</p>
+<p><strong>Der Konflikt</strong>:</p>
+<ul class="simple">
+<li><p><strong>Mill</strong>: Demokratie, Reform, Engagement → Pflicht zur Verbesserung</p></li>
+<li><p><strong>Epikur</strong>: Rückzug → Politik stört Ataraxia</p></li>
+</ul>
+<p><strong>Beispiel-Duell</strong>: <strong>Mill vs. Epikur</strong></p>
+<ul class="simple">
+<li><p><strong>Mill</strong>: Aktivismus (Frauenrechte, Sozialreform, Utilitarismus)</p></li>
+<li><p><strong>Epikur</strong>: Quietismus (Garten, Freunde, Philosophie)</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Keine Einigung über <strong>politische Verpflichtung</strong>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="gleichheit-egalitar-vs-hierarchisch">
+<h2>Gleichheit: Egalitär vs. Hierarchisch<a class="headerlink" href="#gleichheit-egalitar-vs-hierarchisch" title="Link to this heading">#</a></h2>
+<p><strong>Die Frage</strong>: Sind alle Menschen <strong>gleich</strong> oder gibt es <strong>natürliche Hierarchie</strong>?</p>
+<section id="egalitar-10-18">
+<h3>1. Egalitär (10/18)<a class="headerlink" href="#egalitar-10-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Alle Menschen sind <strong>gleich</strong> an Würde/Wert.</p>
+<p><strong>Vertreter</strong>: Stoiker, Epikur, Buddha, Kant, Mill, Hume, Spinoza, Schopenhauer, NT, Sartre</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Stoiker</strong>: Alle haben Logos → Kosmopolitismus</p></li>
+<li><p><strong>Kant</strong>: Alle haben Würde (kategorischer Imperativ)</p></li>
+<li><p><strong>Mill</strong>: “Jeder zählt für einen, niemand für mehr als einen”</p></li>
+<li><p><strong>Buddha</strong>: Kastensystem abgelehnt</p></li>
+<li><p><strong>NT</strong>: “Vor Gott sind alle gleich” (Galater 3:28)</p></li>
+<li><p><strong>Sartre</strong>: Alle radikal frei, gleich</p></li>
+</ul>
+</section>
+<section id="hierarchisch-6-18">
+<h3>2. Hierarchisch (6/18)<a class="headerlink" href="#hierarchisch-6-18" title="Link to this heading">#</a></h3>
+<p><strong>Position</strong>: Es gibt <strong>natürliche Hierarchie</strong> – und das ist gut.</p>
+<p><strong>Vertreter</strong>: Platon, Aristoteles, Konfuzius, Nietzsche, Thomas, Sprüche</p>
+<p><strong>These</strong>:</p>
+<ul class="simple">
+<li><p><strong>Platon</strong>: Seelenvermögen → Philosophenkönige, Wächter, Handwerker (Stände)</p></li>
+<li><p><strong>Aristoteles</strong>: Nach Verdienst (distributive Gerechtigkeit) – nicht alle gleich</p></li>
+<li><p><strong>Nietzsche</strong>: <strong>Rangordnung</strong> ist natürlich und gut – Übermensch vs. Herde</p></li>
+<li><p><strong>Konfuzius</strong>: Fünf Beziehungen (hierarchisch: Herrscher-Untertan, Vater-Sohn, etc.)</p></li>
+<li><p><strong>Thomas</strong>: Natürliche Ordnung (Gott → Mensch, Mann → Frau, Herrscher → Untertan)</p></li>
+</ul>
+</section>
+<section id="ambivalent-2-18">
+<h3>3. Ambivalent (2/18)<a class="headerlink" href="#ambivalent-2-18" title="Link to this heading">#</a></h3>
+<p><strong>Vertreter</strong>: Descartes, Prediger</p>
+<p><strong>Der Konflikt ist FUNDAMENTAL</strong>:</p>
+<ul class="simple">
+<li><p><strong>Kant</strong>: Alle haben <strong>gleiche Würde</strong> (Zweck an sich)</p></li>
+<li><p><strong>Nietzsche</strong>: Rangordnung ist <strong>natürlich</strong> – Gleichheit ist Sklavenmoral!</p></li>
+</ul>
+<p><strong>Beispiel-Duelle</strong>:</p>
+<ul class="simple">
+<li><p><strong>Mill vs. Nietzsche</strong>: Gleichheit (alle zählen gleich) vs. Rangordnung (Übermensch &gt; Herde) – <strong>unvereinbar</strong>!</p></li>
+<li><p><strong>Buddha vs. Konfuzius</strong>: Kastensystem abgelehnt vs. Fünf Beziehungen (hierarchisch) – <strong>unvereinbar</strong>!</p></li>
+</ul>
+<p><strong>Konsequenz</strong>: Keine Einigung über <strong>Menschenbild</strong> (gleich oder hierarchisch?).</p>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+<section id="ubersicht-die-10-spaltungen">
+<h1>Übersicht: Die 10 Spaltungen<a class="headerlink" href="#ubersicht-die-10-spaltungen" title="Link to this heading">#</a></h1>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 21.1%" />
+<col style="width: 26.3%" />
+<col style="width: 26.3%" />
+<col style="width: 26.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Spaltung</p></th>
+<th class="head"><p>Position A</p></th>
+<th class="head"><p>Position B</p></th>
+<th class="head"><p>Position C</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Metaphysik</p></li>
+</ol>
+</td>
+<td><p>Materialismus (5/18)</p></td>
+<td><p>Idealismus (6/18)</p></td>
+<td><p>Theismus (4/18), Sonstige (3/18)</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Epistemologie</p></li>
+</ol>
+</td>
+<td><p>Empirismus (4/18)</p></td>
+<td><p>Rationalismus (5/18)</p></td>
+<td><p>Offenbarung (2/18), Sonstige (7/18)</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>Ethik-Basis</p></li>
+</ol>
+</td>
+<td><p>Deontologie: Kant (1/18)</p></td>
+<td><p>Konsequenzialismus (3/18)</p></td>
+<td><p>Tugendethik (7/18), Sonstige (7/18)</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Mitleid</p></li>
+</ol>
+</td>
+<td><p>Pro (17/18)</p></td>
+<td><p>Contra: <strong>Nietzsche</strong> (1/18)</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>Anthropologie</p></li>
+</ol>
+</td>
+<td><p>Essenz vor Existenz (10/18)</p></td>
+<td><p>Existenz vor Essenz: Sartre, Nietzsche (2/18)</p></td>
+<td><p>Ambivalent (6/18)</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="6">
+<li><p>Freiheit</p></li>
+</ol>
+</td>
+<td><p>Radikale Freiheit (3/18)</p></td>
+<td><p>Determinismus (5/18)</p></td>
+<td><p>Begrenzte Freiheit (7/18), Unklar (3/18)</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="7">
+<li><p>Transzendenz</p></li>
+</ol>
+</td>
+<td><p>Nur Diesseits (9/18)</p></td>
+<td><p>Primär Jenseits (3/18)</p></td>
+<td><p>Ambivalent (6/18)</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="8">
+<li><p>Sozial</p></li>
+</ol>
+</td>
+<td><p>Gemeinschaft (7/18)</p></td>
+<td><p>Einsamkeit/Rückzug (4/18)</p></td>
+<td><p>Ambivalent (7/18)</p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="9">
+<li><p>Politik</p></li>
+</ol>
+</td>
+<td><p>Engagement (8/18)</p></td>
+<td><p>Rückzug (4/18)</p></td>
+<td><p>Privat/Provisorisch (6/18)</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="10">
+<li><p>Gleichheit</p></li>
+</ol>
+</td>
+<td><p>Egalitär (10/18)</p></td>
+<td><p>Hierarchisch (6/18)</p></td>
+<td><p>Ambivalent (2/18)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<section id="die-unvereinbarsten-duelle">
+<h2>Die unvereinbarsten Duelle<a class="headerlink" href="#die-unvereinbarsten-duelle" title="Link to this heading">#</a></h2>
+<section id="das-metaphysische-duell-platon-vs-epikur">
+<h3>1. Das metaphysische Duell: Platon vs. Epikur<a class="headerlink" href="#das-metaphysische-duell-platon-vs-epikur" title="Link to this heading">#</a></h3>
+<p><strong>Platon</strong>: Wahre Wirklichkeit sind <strong>Ideen</strong> (ewig, unveränderlich). Materie ist Schatten.
+<strong>Epikur</strong>: Wahre Wirklichkeit sind <strong>Atome</strong> (materiell, beweglich). Ideen sind Illusion.</p>
+<p><strong>Unvereinbar</strong>: Entweder sind Ideen real (Platon) oder nur Atome (Epikur). Es gibt <strong>keine Synthese</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="das-epistemologische-duell-kant-vs-hume">
+<h3>2. Das epistemologische Duell: Kant vs. Hume<a class="headerlink" href="#das-epistemologische-duell-kant-vs-hume" title="Link to this heading">#</a></h3>
+<p><strong>Kant</strong>: Moral ist <strong>a priori</strong> (kategorischer Imperativ). Vernunft gibt sich selbst das Gesetz.
+<strong>Hume</strong>: Moral ist <strong>a posteriori</strong> (Custom/Habit). “Vernunft ist Sklavin der Leidenschaften.”</p>
+<p><strong>Unvereinbar</strong>: Entweder ist Moral a priori (Kant) oder a posteriori (Hume). Einer muss falsch liegen.</p>
+<p><strong>Kants Synthese-Versuch</strong>: Synthetische Urteile a priori. Aber Hume würde das bezweifeln.</p>
+</section>
+<hr class="docutils" />
+<section id="das-ethische-duell-kant-vs-mill-lugen-dilemma">
+<h3>3. Das ethische Duell: Kant vs. Mill (Lügen-Dilemma)<a class="headerlink" href="#das-ethische-duell-kant-vs-mill-lugen-dilemma" title="Link to this heading">#</a></h3>
+<p><strong>Situation</strong>: Mörder fragt nach Aufenthaltsort eines Unschuldigen.</p>
+<p><strong>Kant</strong>: Lügen ist <strong>immer</strong> falsch (kategorischer Imperativ) → sage Wahrheit!
+<strong>Mill</strong>: Lügen ist erlaubt, wenn es <strong>Leid verhindert</strong> → lüge!</p>
+<p><strong>Unvereinbar</strong>: Pflicht (Kant) vs. Konsequenzen (Mill). Im Konfliktfall: <strong>entgegengesetzte</strong> Antworten!</p>
+</section>
+<hr class="docutils" />
+<section id="das-mitleid-duell-schopenhauer-vs-nietzsche">
+<h3>4. Das Mitleid-Duell: Schopenhauer vs. Nietzsche<a class="headerlink" href="#das-mitleid-duell-schopenhauer-vs-nietzsche" title="Link to this heading">#</a></h3>
+<p><strong>Schopenhauer</strong>: Mitleid ist die <strong>einzige</strong> Basis der Moral. Erkenne die Identität allen Leidens!
+<strong>Nietzsche</strong>: Mitleid ist <strong>Schwäche</strong>. “Das Mitleid verdoppelt das Leid.” Stattdessen: Respekt, Stärke!</p>
+<p><strong>Unvereinbar</strong>: 17:1 – Nietzsche steht <strong>praktisch allein</strong> gegen die Tradition!</p>
+</section>
+<hr class="docutils" />
+<section id="das-anthropologische-duell-thomas-vs-sartre">
+<h3>5. Das anthropologische Duell: Thomas vs. Sartre<a class="headerlink" href="#das-anthropologische-duell-thomas-vs-sartre" title="Link to this heading">#</a></h3>
+<p><strong>Thomas</strong>: <strong>Essenz vor Existenz</strong> – Gott schuf den Menschen mit bestimmter Natur (Vernunftwesen, Bild Gottes).
+<strong>Sartre</strong>: <strong>Existenz vor Essenz</strong> – kein Gott, keine Natur. Der Mensch erschafft sich selbst.</p>
+<p><strong>Unvereinbar</strong>: Entweder hat der Mensch eine Natur (Thomas) oder nicht (Sartre). Das ist das fundamentalste moderne Duell!</p>
+<p><strong>IT-Analogie</strong> (aus Paarung 9):</p>
+<ul class="simple">
+<li><p><strong>Thomas</strong>: Enterprise Java (Klassen, Interfaces fest definiert)</p></li>
+<li><p><strong>Sartre</strong>: JavaScript ohne Schemata (Objekt definiert sich zur Laufzeit)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="das-freiheits-duell-sartre-vs-spinoza">
+<h3>6. Das Freiheits-Duell: Sartre vs. Spinoza<a class="headerlink" href="#das-freiheits-duell-sartre-vs-spinoza" title="Link to this heading">#</a></h3>
+<p><strong>Sartre</strong>: <strong>Radikale Freiheit</strong> – “zur Freiheit verurteilt”. Du <strong>musst</strong> wählen.
+<strong>Spinoza</strong>: <strong>Radikaler Determinismus</strong> – alles folgt aus Gottes Natur (Notwendigkeit). Freiheit = Einsicht in Notwendigkeit.</p>
+<p><strong>Unvereinbar</strong>: Entweder ist der Mensch frei (Sartre) oder determiniert (Spinoza).</p>
+</section>
+<hr class="docutils" />
+<section id="das-transzendenz-duell-epikur-vs-nt">
+<h3>7. Das Transzendenz-Duell: Epikur vs. NT<a class="headerlink" href="#das-transzendenz-duell-epikur-vs-nt" title="Link to this heading">#</a></h3>
+<p><strong>Epikur</strong>: Kein Jenseits – “Der Tod geht uns nichts an.” Lebe <strong>jetzt</strong>, maximiere Ataraxia.
+<strong>NT</strong>: Jenseits ist Ziel – “Trachtet zuerst nach dem Reich Gottes.” Ewiges Leben ist alles.</p>
+<p><strong>Unvereinbar</strong>: Völlig verschiedene <strong>Prioritäten</strong> im Leben. Was du opferst (irdisches Glück) ist für den anderen <strong>das Ziel</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="das-sozial-duell-aristoteles-vs-epikur">
+<h3>8. Das Sozial-Duell: Aristoteles vs. Epikur<a class="headerlink" href="#das-sozial-duell-aristoteles-vs-epikur" title="Link to this heading">#</a></h3>
+<p><strong>Aristoteles</strong>: “Zoon politikon” – Mensch ist <strong>von Natur aus</strong> sozial/politisch. Außerhalb der Polis bist du “Tier oder Gott”.
+<strong>Epikur</strong>: “Lathe biōsas” (Lebe im Verborgenen) – Rückzug aus Politik. Ataraxia braucht <strong>Einsamkeit</strong> (bzw. kleinen Freundeskreis).</p>
+<p><strong>Unvereinbar</strong>: Ist der Mensch <strong>von Natur aus</strong> sozial (Aristoteles) oder braucht er Rückzug (Epikur)?</p>
+</section>
+<hr class="docutils" />
+<section id="das-politische-duell-mill-vs-schopenhauer">
+<h3>9. Das politische Duell: Mill vs. Schopenhauer<a class="headerlink" href="#das-politische-duell-mill-vs-schopenhauer" title="Link to this heading">#</a></h3>
+<p><strong>Mill</strong>: Politisches Engagement ist <strong>Pflicht</strong> – Sozialreform, Demokratie, Fortschritt. “Besser ein unzufriedener Sokrates als ein zufriedenes Schwein.”
+<strong>Schopenhauer</strong>: Politik ist <strong>sinnlos</strong> – verstärkt Leiden. Besser: Kontemplation, Askese, Willensverneinung.</p>
+<p><strong>Unvereinbar</strong>: Aktivismus (Mill) vs. Quietismus (Schopenhauer).</p>
+</section>
+<hr class="docutils" />
+<section id="das-gleichheits-duell-kant-vs-nietzsche">
+<h3>10. Das Gleichheits-Duell: Kant vs. Nietzsche<a class="headerlink" href="#das-gleichheits-duell-kant-vs-nietzsche" title="Link to this heading">#</a></h3>
+<p><strong>Kant</strong>: Alle Menschen haben <strong>gleiche Würde</strong> (kategorischer Imperativ). Jeder ist Zweck an sich.
+<strong>Nietzsche</strong>: <strong>Rangordnung</strong> ist natürlich und gut. Gleichheit ist <strong>Sklavenmoral</strong> (Ressentiment der Schwachen). Übermensch &gt; Herde.</p>
+<p><strong>Unvereinbar</strong>: Egalitarismus (Kant) vs. Aristokratismus (Nietzsche).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="erkenntnisse-aus-der-spaltungsanalyse">
+<h2>Erkenntnisse aus der Spaltungsanalyse<a class="headerlink" href="#erkenntnisse-aus-der-spaltungsanalyse" title="Link to this heading">#</a></h2>
+<section id="keine-synthese-moglich-fragmentierung-bestatigt">
+<h3>1. Keine Synthese möglich – Fragmentierung bestätigt<a class="headerlink" href="#keine-synthese-moglich-fragmentierung-bestatigt" title="Link to this heading">#</a></h3>
+<p><strong>Die fundamentale Erkenntnis</strong>: Bei allen 10 Spaltungen gibt es <strong>keine Mehrheitsposition</strong>!</p>
+<p><strong>Metaphysik</strong>: Materialismus (5), Idealismus (6), Theismus (4), Sonstige (3) – <strong>keine Mehrheit</strong>!
+<strong>Epistemologie</strong>: Empirismus (4), Rationalismus (5), Offenbarung (2), Sonstige (7) – <strong>keine Mehrheit</strong>!
+<strong>Ethik</strong>: Deontologie (1), Konsequenzialismus (3), Tugendethik (7), Sonstige (7) – <strong>keine Mehrheit</strong>!</p>
+<p><strong>Konsequenz</strong>: <strong>MacIntyres These</strong> wird bestätigt – die moderne Ethik ist <strong>fragmentiert</strong>. Es gibt keine gemeinsame Basis.</p>
+</section>
+<hr class="docutils" />
+<section id="die-radikalen-auszenseiter-nietzsche-und-sartre">
+<h3>2. Die radikalen Außenseiter: Nietzsche und Sartre<a class="headerlink" href="#die-radikalen-auszenseiter-nietzsche-und-sartre" title="Link to this heading">#</a></h3>
+<p><strong>Nietzsche</strong> lehnt ab:</p>
+<ul class="simple">
+<li><p>Mitleid (17:1 – praktisch allein!)</p></li>
+<li><p>Gleichheit (Rangordnung ist natürlich)</p></li>
+<li><p>Gemeinschaft (Herde zieht nach unten)</p></li>
+<li><p>Wahrheit (Perspektivismus)</p></li>
+<li><p>Tugend (Sklavenmoral)</p></li>
+</ul>
+<p><strong>Sartre</strong> lehnt ab:</p>
+<ul class="simple">
+<li><p>Essenz vor Existenz (radikal)</p></li>
+<li><p>Naturrecht (keine Natur)</p></li>
+<li><p>Jenseits (Atheismus)</p></li>
+</ul>
+<p><strong>Beide</strong> sind <strong>Revolutionäre</strong> – sie stellen sich gegen die gesamte Tradition.</p>
+</section>
+<hr class="docutils" />
+<section id="die-unuberbruckbaren-spaltungen">
+<h3>3. Die unüberbrückbaren Spaltungen<a class="headerlink" href="#die-unuberbruckbaren-spaltungen" title="Link to this heading">#</a></h3>
+<p><strong>Top 5 der unüberbrückbaren Spaltungen</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Mitleid</strong> (17:1) – Nietzsche steht <strong>praktisch allein</strong>!</p></li>
+<li><p><strong>Anthropologie</strong> (Essenz vs. Existenz) – Thomas vs. Sartre ist fundamental</p></li>
+<li><p><strong>Transzendenz</strong> (Diesseits vs. Jenseits) – völlig verschiedene Prioritäten</p></li>
+<li><p><strong>Ethik</strong> (Kant vs. Mill im Lügen-Dilemma) – entgegengesetzte Antworten</p></li>
+<li><p><strong>Freiheit</strong> (Sartre vs. Spinoza) – radikale Freiheit vs. radikaler Determinismus</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="konvergenz-bei-regeln-divergenz-bei-begrundungen">
+<h3>4. Konvergenz bei Regeln, Divergenz bei Begründungen<a class="headerlink" href="#konvergenz-bei-regeln-divergenz-bei-begrundungen" title="Link to this heading">#</a></h3>
+<p><strong>Das Paradox</strong>: Trotz <strong>Divergenz</strong> bei Begründungen gibt es <strong>Konvergenz</strong> bei Regeln!</p>
+<p><strong>Regeln</strong> (Konvergenz):</p>
+<ul class="simple">
+<li><p>Mäßigung: 14/18</p></li>
+<li><p>Klugheit: 15/18</p></li>
+<li><p>Mitleid: 14/18 (außer Nietzsche!)</p></li>
+<li><p>Gerechtigkeit: 13/18</p></li>
+</ul>
+<p><strong>Begründungen</strong> (Divergenz):</p>
+<ul class="simple">
+<li><p>Metaphysik: keine Mehrheit</p></li>
+<li><p>Epistemologie: keine Mehrheit</p></li>
+<li><p>Ethik-Basis: keine Mehrheit</p></li>
+</ul>
+<p><strong>Interpretation</strong>:</p>
+<ul class="simple">
+<li><p><strong>Optimistisch</strong> (Rawls): “Overlapping Consensus” ist möglich – verschiedene Begründungen, gleiche Regeln</p></li>
+<li><p><strong>Pessimistisch</strong> (MacIntyre): Konsens ist <strong>brüchig</strong> – im Konfliktfall kollabiert er</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="die-synthese-versuche-sind-gescheitert">
+<h3>5. Die Synthese-Versuche sind gescheitert<a class="headerlink" href="#die-synthese-versuche-sind-gescheitert" title="Link to this heading">#</a></h3>
+<p><strong>Drei große Synthesen</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Thomas</strong>: Aristoteles + Christentum (Natur + Gnade, Vernunft + Offenbarung)</p></li>
+<li><p><strong>Kant</strong>: Empirismus + Rationalismus (synthetische Urteile a priori)</p></li>
+<li><p><strong>Spinoza</strong>: Vernunft + Natur (Deus sive Natura)</p></li>
+</ol>
+<p><strong>Alle drei</strong> sind <strong>umstritten</strong>! Keine wurde universal akzeptiert.</p>
+<p><strong>Konsequenz</strong>: Die <strong>großen Synthesen</strong> sind gescheitert. Die Philosophie bleibt <strong>fragmentiert</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="der-naturalistische-fehlschluss-hume-spaltet">
+<h3>6. Der naturalistische Fehlschluss (Hume) spaltet<a class="headerlink" href="#der-naturalistische-fehlschluss-hume-spaltet" title="Link to this heading">#</a></h3>
+<p><strong>Humes Gesetz</strong>: Vom <strong>Sein</strong> kann man nicht aufs <strong>Sollen</strong> schließen.</p>
+<p><strong>Betroffen</strong> (Naturrecht-Ethiken):</p>
+<ul class="simple">
+<li><p>Aristoteles (vom ergon zum Sollen)</p></li>
+<li><p>Stoiker (vom Logos zum Sollen)</p></li>
+<li><p>Thomas (vom natürlichen Gesetz zum Sollen)</p></li>
+<li><p>Spinoza (vom Conatus zum Sollen)</p></li>
+<li><p>Konfuzius (vom Ren/Li zum Sollen)</p></li>
+</ul>
+<p><strong>Wenn Hume recht hat</strong>: Alle 5 Naturrecht-Ethiken <strong>kollabieren</strong>!</p>
+<p><strong>Konsequenz</strong>: Die <strong>größte Gruppe</strong> (Naturrecht) steht auf <strong>unsicherem Fundament</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="die-sakularisierung-ist-komplett-aber-ohne-ersatz">
+<h3>7. Die Säkularisierung ist komplett – aber ohne Ersatz<a class="headerlink" href="#die-sakularisierung-ist-komplett-aber-ohne-ersatz" title="Link to this heading">#</a></h3>
+<p><strong>Theistische Ethik</strong>: Nur 4/18 (NT, Thomas, Descartes, Sprüche)
+<strong>Säkulare Ethik</strong>: 14/18</p>
+<p><strong>Aber</strong>: Die säkularen Ethiken sind <strong>zerstritten</strong>!</p>
+<ul class="simple">
+<li><p>Vernunft (Platon, Kant) – aber motiviert sie?</p></li>
+<li><p>Natur (Aristoteles, Stoiker) – aber naturalistischer Fehlschluss!</p></li>
+<li><p>Gefühl (Hume, Schopenhauer) – aber subjektiv!</p></li>
+<li><p>Konsequenzen (Mill, Epikur) – aber Einzelne opfern?</p></li>
+<li><p>Freiheit (Sartre, Nietzsche) – aber Beliebigkeit?</p></li>
+</ul>
+<p><strong>Dostojewskis Frage</strong> (zitiert von Sartre): “Wenn Gott nicht existiert, ist alles erlaubt?”</p>
+<p><strong>Nietzsches Diagnose</strong>: “Gott ist tot” – und wir haben <strong>keine Ersatz-Basis</strong> gefunden.</p>
+</section>
+<hr class="docutils" />
+<section id="das-moderne-dilemma-pluralismus-ohne-konsens">
+<h3>8. Das moderne Dilemma: Pluralismus ohne Konsens<a class="headerlink" href="#das-moderne-dilemma-pluralismus-ohne-konsens" title="Link to this heading">#</a></h3>
+<p><strong>Das 21. Jahrhundert steht vor der Frage</strong>: Können wir mit <strong>Begründungsvielfalt</strong> leben?</p>
+<p><strong>Zwei Antworten</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Liberalismus</strong> (Rawls, Habermas):</p>
+<ul class="simple">
+<li><p><strong>Ja</strong> – “Overlapping Consensus” ist möglich</p></li>
+<li><p>Verschiedene Begründungen, gleiche Regeln (Menschenrechte, Rechtsstaat)</p></li>
+<li><p>Pluralismus ist <strong>Stärke</strong>, nicht Schwäche</p></li>
+</ul>
+</li>
+<li><p><strong>Kommunitarismus</strong> (MacIntyre, Sandel):</p>
+<ul class="simple">
+<li><p><strong>Nein</strong> – ohne gemeinsame Begründung kollabiert Ethik</p></li>
+<li><p>Brauchen <strong>Gemeinschaft</strong> mit geteilten Werten</p></li>
+<li><p>Pluralismus ist <strong>Fragmentierung</strong></p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Die offene Frage</strong>: Wer hat recht?</p>
+</section>
+<hr class="docutils" />
+<section id="die-unvereinbarsten-philosophen-paare">
+<h3>9. Die unvereinbarsten Philosophen-Paare<a class="headerlink" href="#die-unvereinbarsten-philosophen-paare" title="Link to this heading">#</a></h3>
+<p><strong>Top 10 der unvereinbarsten Duelle</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Nietzsche vs. fast alle</strong> (Mitleid-Streit: 17:1)</p></li>
+<li><p><strong>Thomas vs. Sartre</strong> (Essenz vs. Existenz)</p></li>
+<li><p><strong>Kant vs. Mill</strong> (Pflicht vs. Konsequenzen)</p></li>
+<li><p><strong>Platon vs. Epikur</strong> (Ideen vs. Atome)</p></li>
+<li><p><strong>Kant vs. Hume</strong> (A priori vs. A posteriori)</p></li>
+<li><p><strong>Sartre vs. Spinoza</strong> (Freiheit vs. Determinismus)</p></li>
+<li><p><strong>Epikur vs. NT</strong> (Diesseits vs. Jenseits)</p></li>
+<li><p><strong>Aristoteles vs. Epikur</strong> (Gemeinschaft vs. Rückzug)</p></li>
+<li><p><strong>Schopenhauer vs. Nietzsche</strong> (Mitleid vs. Stärke)</p></li>
+<li><p><strong>Kant vs. Nietzsche</strong> (Gleichheit vs. Rangordnung)</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="hoffnung-regelkonsens-trotz-begrundungsdivergenz">
+<h3>10. Hoffnung: Regelkonsens trotz Begründungsdivergenz<a class="headerlink" href="#hoffnung-regelkonsens-trotz-begrundungsdivergenz" title="Link to this heading">#</a></h3>
+<p><strong>Das Positive</strong>: Trotz <strong>radikaler Divergenz</strong> bei Begründungen gibt es <strong>Konvergenz</strong> bei Regeln.</p>
+<p><strong>Die Frage</strong>: Reicht das?</p>
+<p><strong>Optimistische Deutung</strong>: Ja – wir brauchen keine <strong>Begründungskonsens</strong>, nur <strong>Regelkonsens</strong>.</p>
+<p><strong>Pessimistische Deutung</strong>: Nein – ohne Begründung sind Regeln <strong>brüchig</strong> (im Konfliktfall kollabieren sie).</p>
+<p><strong>Die größte offene Frage der Philosophie</strong>: Kann pluralistische Gesellschaft mit <strong>Spaltungen</strong> leben?</p>
+<hr class="docutils" />
+<div style="margin-bottom: 100px;"></div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./philosophy"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ethik-1-4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1.4 Begründungen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ethik-2-1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.1 Stoiker vs. Epikur</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.5 Spaltungen</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metaphysisch-materialismus-vs-idealismus-vs-theismus">Metaphysisch: Materialismus vs. Idealismus vs. Theismus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#materialismus-naturalismus-5-18">1. Materialismus/Naturalismus (5/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idealismus-dualismus-6-18">2. Idealismus/Dualismus (6/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theismus-4-18">3. Theismus (4/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epistemologisch-empirismus-vs-rationalismus-vs-offenbarung">Epistemologisch: Empirismus vs. Rationalismus vs. Offenbarung</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirismus-4-18">1. Empirismus (4/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rationalismus-5-18">2. Rationalismus (5/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#offenbarung-2-18">3. Offenbarung (2/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethisch-deontologie-vs-konsequenzialismus-vs-tugendethik">Ethisch: Deontologie vs. Konsequenzialismus vs. Tugendethik</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deontologie-1-18-aber-einflussreich">1. Deontologie (1/18, aber einflussreich!)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsequenzialismus-3-18">2. Konsequenzialismus (3/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tugendethik-7-18">3. Tugendethik (7/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mitleid-17-vs-1-nietzsches-alleingang">Mitleid: 17 vs. 1 – Nietzsches Alleingang</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pro-mitleid-17-18">Pro Mitleid (17/18):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contra-mitleid-1-18">Contra Mitleid (1/18):</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anthropologisch-essenz-vor-existenz-vs-existenz-vor-essenz">Anthropologisch: Essenz vor Existenz vs. Existenz vor Essenz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#essenz-vor-existenz-10-18">1. Essenz vor Existenz (10/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#existenz-vor-essenz-2-18">2. Existenz vor Essenz (2/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-unklar-6-18">3. Ambivalent/Unklar (6/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#freiheits-freier-wille-vs-determinismus">Freiheits: Freier Wille vs. Determinismus</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radikale-freiheit-3-18">1. Radikale Freiheit (3/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinismus-kompatibilismus-5-18">2. Determinismus/Kompatibilismus (5/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrenzte-freiheit-7-18">3. Begrenzte Freiheit (7/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unklar-skeptisch-3-18">4. Unklar/Skeptisch (3/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transzendenz-diesseitig-vs-jenseitig">Transzendenz: Diesseitig vs. Jenseitig</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nur-diesseits-9-18">1. Nur Diesseits (9/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primar-jenseits-3-18">2. Primär Jenseits (3/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-6-18">3. Ambivalent (6/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sozial-gemeinschaft-vs-einsamkeit">Sozial: Gemeinschaft vs. Einsamkeit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gemeinschaft-zentral-7-18">1. Gemeinschaft zentral (7/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#einsamkeit-ruckzug-4-18">2. Einsamkeit/Rückzug (4/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-7-18">3. Ambivalent (7/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#politisch-engagement-vs-ruckzug">Politisch: Engagement vs. Rückzug</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#engagement-8-18">1. Engagement (8/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ruckzug-4-18">2. Rückzug (4/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#privat-provisorisch-6-18">3. Privat/Provisorisch (6/18)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gleichheit-egalitar-vs-hierarchisch">Gleichheit: Egalitär vs. Hierarchisch</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#egalitar-10-18">1. Egalitär (10/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchisch-6-18">2. Hierarchisch (6/18)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambivalent-2-18">3. Ambivalent (2/18)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ubersicht-die-10-spaltungen">Übersicht: Die 10 Spaltungen</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-unvereinbarsten-duelle">Die unvereinbarsten Duelle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-metaphysische-duell-platon-vs-epikur">1. Das metaphysische Duell: Platon vs. Epikur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-epistemologische-duell-kant-vs-hume">2. Das epistemologische Duell: Kant vs. Hume</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-ethische-duell-kant-vs-mill-lugen-dilemma">3. Das ethische Duell: Kant vs. Mill (Lügen-Dilemma)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-mitleid-duell-schopenhauer-vs-nietzsche">4. Das Mitleid-Duell: Schopenhauer vs. Nietzsche</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-anthropologische-duell-thomas-vs-sartre">5. Das anthropologische Duell: Thomas vs. Sartre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-freiheits-duell-sartre-vs-spinoza">6. Das Freiheits-Duell: Sartre vs. Spinoza</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-transzendenz-duell-epikur-vs-nt">7. Das Transzendenz-Duell: Epikur vs. NT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-sozial-duell-aristoteles-vs-epikur">8. Das Sozial-Duell: Aristoteles vs. Epikur</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-politische-duell-mill-vs-schopenhauer">9. Das politische Duell: Mill vs. Schopenhauer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-gleichheits-duell-kant-vs-nietzsche">10. Das Gleichheits-Duell: Kant vs. Nietzsche</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erkenntnisse-aus-der-spaltungsanalyse">Erkenntnisse aus der Spaltungsanalyse</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keine-synthese-moglich-fragmentierung-bestatigt">1. Keine Synthese möglich – Fragmentierung bestätigt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-radikalen-auszenseiter-nietzsche-und-sartre">2. Die radikalen Außenseiter: Nietzsche und Sartre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-unuberbruckbaren-spaltungen">3. Die unüberbrückbaren Spaltungen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konvergenz-bei-regeln-divergenz-bei-begrundungen">4. Konvergenz bei Regeln, Divergenz bei Begründungen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-synthese-versuche-sind-gescheitert">5. Die Synthese-Versuche sind gescheitert</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#der-naturalistische-fehlschluss-hume-spaltet">6. Der naturalistische Fehlschluss (Hume) spaltet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-sakularisierung-ist-komplett-aber-ohne-ersatz">7. Die Säkularisierung ist komplett – aber ohne Ersatz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#das-moderne-dilemma-pluralismus-ohne-konsens">8. Das moderne Dilemma: Pluralismus ohne Konsens</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-unvereinbarsten-philosophen-paare">9. Die unvereinbarsten Philosophen-Paare</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hoffnung-regelkonsens-trotz-begrundungsdivergenz">10. Hoffnung: Regelkonsens trotz Begründungsdivergenz</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

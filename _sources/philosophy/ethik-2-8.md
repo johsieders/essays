@@ -6,7 +6,7 @@
 
 ### Arthur Schopenhauer (1788-1860)
 
-#### Ziel
+#### Ziele
 **Verneinung des Willens zum Leben** – Erkenne, dass das Leben **Leiden** ist, weil der metaphysische Wille unstillbar ist. Befreie dich durch ästhetische Kontemplation (temporär) oder durch asketische Verneinung des Willens (dauerhaft). Das höchste Ziel ist **Auslöschung des Willens** – nicht Glück, sondern Ende des Leidens.
 
 #### Regeln
@@ -171,7 +171,7 @@ Wenn der Wille im **Individuum** zerstört wird (durch Tod), ist er **für diese
 
 **Lebensführung**: Handle gerecht, weil **du selbst** das Opfer bist (metaphysisch). Es gibt keine echte Trennung zwischen Täter und Opfer.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: Die Welt ist **Wille** (Ding an sich) – blind, ziellos, unstillbar. Erscheinungswelt ist **Maya** (Illusion der Individuation).
 
@@ -195,7 +195,7 @@ Wenn der Wille im **Individuum** zerstört wird (durch Tod), ist er **für diese
 
 ### Neues Testament
 
-#### Ziel
+#### Ziele
 **Reich Gottes und Nachfolge Christi** – Das Ziel ist Teilhabe am **Reich Gottes** (Basileia tou Theou), das in Jesus Christus **schon angebrochen** ist, aber noch nicht vollendet. Erlösung durch **Gnade** (nicht durch Werke allein). Lebe in **Liebe** (Agape) zu Gott und Nächsten, folge Christus nach, und erwarte die **Auferstehung**.
 
 #### Regeln
@@ -330,7 +330,7 @@ Paulus (Galater 5,1): "Zur Freiheit hat Christus uns befreit."
 
 **Spannung**: Wie verhalten sich Gesetz und Freiheit? Paulus ringt damit (Römerbrief). Antinomismus (Gesetz ist abgeschafft) vs. Nomismus (Gesetz bleibt gültig).
 
-#### Begründung
+#### Begründungen
 
 **Theologisch**: **Gott** ist **Liebe** (1 Johannes 4,8). Er offenbart sich in Jesus Christus. Erlösung durch Christi Tod und Auferstehung.
 

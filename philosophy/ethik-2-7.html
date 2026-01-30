@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -194,8 +194,12 @@
 <li class="toctree-l1"><a class="reference internal" href="36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics-existence.html">What Exists in Mathematics? *</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="ethik-0.html">Wie soll man leben? *</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ethik-1.html">1 Alle Philosophen auf einen Blick</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-2.html">1.2 Regeln</a></li>
 
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-1-5.html">1.5 Spaltungen</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
@@ -206,22 +210,20 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.7 Descartes vs. Spinoza</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-1.html">3.2 Regeln und Prinzipien nach Häufigkeit</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-2.html">3.3 Ziele nach Häufigkeit</a></li>
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-3.html">3.3 Begründungslogiken</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-3-4.html">3.4 Die großen Spaltungen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ethik-4.html">4. Anhang: Diskussionsfragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethik-4.html">4. Literatur</a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="ethik-5.html">5. Literaturempfehlungen</a></li>
+
+
+
+
+
+
 </ul>
 </details></li>
 </ul>
@@ -495,16 +497,16 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rene-descartes-1596-1650">René Descartes (1596-1650)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziele">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regeln">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundung">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundungen">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#besonderheiten">Besonderheiten</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baruch-spinoza-1632-1677">Baruch Spinoza (1632-1677)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Besonderheiten</a></li>
 </ul>
 </li>
@@ -534,8 +536,8 @@ document.write(`
 <hr class="docutils" />
 <section id="rene-descartes-1596-1650">
 <h2>René Descartes (1596-1650)<a class="headerlink" href="#rene-descartes-1596-1650" title="Link to this heading">#</a></h2>
-<section id="ziel">
-<h3>Ziel<a class="headerlink" href="#ziel" title="Link to this heading">#</a></h3>
+<section id="ziele">
+<h3>Ziele<a class="headerlink" href="#ziele" title="Link to this heading">#</a></h3>
 <p><strong>Gewissheit durch methodischen Zweifel</strong> – Finde ein unerschütterliches Fundament für Wissen. Erkenne Gott und die Seele als unsterblich. Lebe als freies, vernünftiges Wesen in einer mechanistischen Welt.</p>
 </section>
 <section id="regeln">
@@ -663,8 +665,8 @@ document.write(`
 <p><strong>Kontrast zur provisorischen Moral</strong>: Die provisorische Moral ist <strong>pragmatisch</strong> (lebe angepasst, während du zweifelst). Générosité ist die <strong>reife Tugend</strong> – das ethische Ideal des Philosophen, der die Wahrheit gefunden hat.</p>
 <p><strong>Moderne Resonanz</strong>: Générosité ist Vorläufer von Kant’s <strong>Autonomie</strong> (Selbstgesetzgebung) und Sartre’s <strong>Authentizität</strong> (bewusste Nutzung der Freiheit).</p>
 </section>
-<section id="begrundung">
-<h3>Begründung<a class="headerlink" href="#begrundung" title="Link to this heading">#</a></h3>
+<section id="begrundungen">
+<h3>Begründungen<a class="headerlink" href="#begrundungen" title="Link to this heading">#</a></h3>
 <p><strong>Metaphysisch</strong>: <strong>Dualismus</strong> – Zwei Substanzen (res cogitans, res extensa). Gott als Schöpfer beider.</p>
 <p><strong>Epistemologisch</strong>: <strong>Rationalismus</strong> – Wahre Erkenntnis kommt durch <strong>Vernunft</strong> (klare und deutliche Ideen), nicht primär durch Sinne. Methodischer Zweifel führt zu Gewissheit.</p>
 <p><strong>Ethisch</strong>: <strong>Freier Wille</strong> + Vernunft. Handle nach klaren und deutlichen Einsichten. Beherrsche Leidenschaften durch Vernunft.</p>
@@ -686,7 +688,7 @@ document.write(`
 <section id="baruch-spinoza-1632-1677">
 <h2>Baruch Spinoza (1632-1677)<a class="headerlink" href="#baruch-spinoza-1632-1677" title="Link to this heading">#</a></h2>
 <section id="id1">
-<h3>Ziel<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>Ziele<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p><strong>Erkenntnis Gottes und Freiheit durch Einsicht</strong> – Verstehe, dass alles Teil der einen göttlichen Substanz ist. Befreie dich von Affekten durch Erkenntnis der Notwendigkeit. Erreiche <strong>Amor Dei intellectualis</strong> (intellektuelle Gottesliebe).</p>
 </section>
 <section id="id2">
@@ -811,7 +813,7 @@ document.write(`
 <p><strong>Lebensführung</strong>: Der Tod ist nicht schlimm (der Weise denkt über nichts weniger nach als über den Tod, Ethica IV, Prop. 67). Lebe <strong>jetzt</strong> im Ewigen (durch Erkenntnis).</p>
 </section>
 <section id="id3">
-<h3>Begründung<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>Begründungen<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p><strong>Metaphysisch</strong>: <strong>Monismus</strong> – Eine Substanz (Deus sive Natura) mit unendlich vielen Attributen. Alles ist Modus dieser Substanz.</p>
 <p><strong>Epistemologisch</strong>: <strong>Rationalismus</strong> – Erkenntnis durch geometrische Deduktion. Höchste Erkenntnis ist scientia intuitiva (Erkenntnis der Notwendigkeit).</p>
 <p><strong>Ethisch</strong>: <strong>Determinismus</strong> + Erkenntnis = Freiheit. Beherrsche Affekte nicht durch Willen (Illusion), sondern durch Verstehen der Notwendigkeit.</p>
@@ -1227,16 +1229,16 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rene-descartes-1596-1650">René Descartes (1596-1650)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziel">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ziele">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regeln">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundung">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#begrundungen">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#besonderheiten">Besonderheiten</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baruch-spinoza-1632-1677">Baruch Spinoza (1632-1677)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ziele</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Regeln</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründung</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Begründungen</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Besonderheiten</a></li>
 </ul>
 </li>
