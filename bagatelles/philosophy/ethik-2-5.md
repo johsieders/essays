@@ -6,7 +6,7 @@
 
 ### Aristoteles (384-322 v. Chr.)
 
-#### Ziel
+#### Ziele
 **Eudaimonia durch aretē** – Das höchste Gut ist **Eudaimonia** (εὐδαιμονία, "Glückseligkeit", besser: "Aufblühen", "Gedeihen"). Eudaimonia ist die **Verwirklichung der menschlichen Funktion** (ergon) gemäß der Vernunft. Tugend (aretē) ist **konstitutiv** für Eudaimonia, nicht nur instrumentell. Man wird glücklich, **indem** man tugendhaft ist.
 
 #### Regeln
@@ -131,7 +131,7 @@ Die **Tragödie** hat eine **psychohygienische** Funktion: Sie bewirkt **Kathars
 
 **Anmerkung zu Mitleid (Eleos)**: Aristoteles behandelt Mitleid in der **Rhetorik** eher als **Affekt** (pathos), nicht als Tugend im modernen Sinn. Mitleid empfindet man, wenn jemandem **unverschuldet** Unglück widerfährt. Es ist situativ, nicht kategorisch. Aristoteles ist hier näher bei Nietzsche als der moderne, christlich geprägte Mitleidsbegriff (Mitleid mit jedem, immer) vermuten lässt. Mitleid ist für Aristoteles nur sinnvoll, wenn der Leidende es **nicht verdient** hat.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Teleologisch**. Alles in der Natur hat einen **Zweck** (telos, τέλος). Die Eichel strebt danach, Eiche zu werden. Der Mensch strebt nach Eudaimonia durch Verwirklichung seiner Vernunftnatur.
 
@@ -157,7 +157,7 @@ Die **Tragödie** hat eine **psychohygienische** Funktion: Sie bewirkt **Kathars
 
 ### Friedrich Nietzsche (1844-1900)
 
-#### Ziel
+#### Ziele
 **Übermensch und Leben-Bejahung** – Das Ziel ist nicht "Glück" oder "Tugend", sondern **Selbstüberwindung**, **Selbstschöpfung**, **maximale Lebenssteigerung**. Der **Übermensch** ist der, der eigene Werte schafft, alle Illusionen (Gott, Jenseits, objektive Moral) durchschaut hat und trotzdem **Ja zum Leben sagt** – inklusive Leiden.
 
 #### Regeln
@@ -275,7 +275,7 @@ Alles Leben ist **Wille zur Macht** – Streben nach Wachstum, Überwindung, Dom
 
 **Lebensführung**: Nutze deinen Willen zur Macht **schöpferisch** (Kunst, Denken), nicht destruktiv.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Nihilismus** + **Lebens-Bejahung**. Es gibt keine objektiven Werte, kein Telos, keinen Gott. Aber: Wir können **eigene** Werte schaffen.
 

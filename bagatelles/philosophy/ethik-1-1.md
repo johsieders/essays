@@ -1,8 +1,8 @@
-## 1 Alle Philosophen auf einen Blick
+## 1.1 Die Philosophen auf einen Blick
 
-Die folgende Matrix bietet eine komprimierte Übersicht über die wichtigsten Dimensionen aller achtzehn behandelten Philosophen bzw. Traditionen.
+Die folgende Matrix bietet eine Übersicht über die wichtigsten Dimensionen aller achtzehn behandelten Philosophen bzw. Traditionen.
 
-#### Tabelle 1: Grunddaten und Ziele
+### Tabelle 1: Grunddaten und Ziele
 
 ```{list-table}
 :header-rows: 1
@@ -106,7 +106,7 @@ Die folgende Matrix bietet eine komprimierte Übersicht über die wichtigsten Di
 ```
 
 
-#### Tabelle 2: Metaphysische und epistemologische Positionen
+### Tabelle 2: Metaphysische und epistemologische Positionen
 
 ```{list-table}
 :header-rows: 1
@@ -210,7 +210,7 @@ Die folgende Matrix bietet eine komprimierte Übersicht über die wichtigsten Di
 ```
 
 
-#### Tabelle 3: Soziale und praktische Orientierung
+### Tabelle 3: Soziale und praktische Orientierung
 
 ```{list-table}
 :header-rows: 1
@@ -314,7 +314,7 @@ Die folgende Matrix bietet eine komprimierte Übersicht über die wichtigsten Di
 ```
 
 
-#### Tabelle 4: Zentrale Konzepte und methodische Besonderheiten
+### Tabelle 4: Zentrale Konzepte und methodische Besonderheiten
 
 ```{list-table}
 :header-rows: 1

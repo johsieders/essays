@@ -6,7 +6,7 @@
 
 ### Prediger Salomo / Kohelet (קֹהֶלֶת)
 
-#### Ziel
+#### Ziele
 **Resignation angesichts der Absurdität + situativer Genuss als einziger verlässlicher "Anteil"**
 
 Kohelet sieht keine verlässliche moralische Weltordnung. Es gibt keine individuelle Unsterblichkeit mit Vergeltung, keine ausgleichende Gerechtigkeit. Das einzige, was Gott dem Menschen fest zugesagt hat, ist der **Cheleq** (חֵלֶק, Anteil) – die kleinen Momente des Genusses.
@@ -109,7 +109,7 @@ Der berühmte Katalog aus 3:1-8:
 
 **Regel** (wenn authentisch): Fürchte Gott – nicht aus Hoffnung auf Belohnung, sondern aus Respekt vor dem Unfassbaren.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: Gott existiert, hat die Welt geschaffen, ist aber **unergründlich**. Keine Providenz, keine erkennbare Ordnung.
 
@@ -130,7 +130,7 @@ Der berühmte Katalog aus 3:1-8:
 
 ### Sprüche Salomos / Mishle (מִשְׁלֵי)
 
-#### Ziel
+#### Ziele
 **Gedeihen (Shalom, שָׁלוֹם) durch Weisheit** – Ein gutes, erfolgreiches Leben ist **erreichbar** durch Weisheit, Gottesfurcht und Tugend. Die Welt ist **geordnet**, und wer die Ordnung versteht, gedeiht.
 
 #### Regeln
@@ -211,7 +211,7 @@ Die **Weisheit** (Chokmah) ist keine bloße Eigenschaft, sondern tritt als **per
 
 **Regel**: Suche die Weisheit – sie ist der Bauplan der Welt. Wer sie versteht, versteht die Ordnung.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: Gott hat die Welt mit **Ordnung** geschaffen (erkennbar, verlässlich). Chokmah (Weisheit) war sein Werkzeug.
 
@@ -235,48 +235,52 @@ Die **Weisheit** (Chokmah) ist keine bloße Eigenschaft, sondern tritt als **per
 
 #### Tabellarische Übersicht
 
-```
-+------------------+-----------------------------------+-----------------------------------+
-| Dimension        | Prediger (Kohelet)                | Sprüche (Mishle)                  |
-+------------------+-----------------------------------+-----------------------------------+
-| Weltordnung      | Keine erkennbare moralische       | Verlässliche Ordnung (Chokmah ist |
-|                  | Ordnung – Hebel (Flüchtigkeit)    | eingebaut in Schöpfung)           |
-+------------------+-----------------------------------+-----------------------------------+
-| Kausalität       | Kausalskepsis – Zufall und Zeit   | Kausaloptimismus – Tugend führt   |
-|                  | treffen alle (9:11)               | zu Segen                          |
-+------------------+-----------------------------------+-----------------------------------+
-| Arbeit           | Absurd – du arbeitest für Erben,  | Gesegnet – Fleiß führt zu         |
-|                  | die du nicht kennst (2:18)        | Wohlstand (10:4)                  |
-+------------------+-----------------------------------+-----------------------------------+
-| Weisheit         | Relativer Vorteil, aber kein      | Der höchste Schatz – besser als   |
-|                  | finaler Profit (Jitron) (2:13-15) | Gold (8:11)                       |
-+------------------+-----------------------------------+-----------------------------------+
-| Tod              | Der große Gleichmacher – keine    | Implizit: Gerechte werden belohnt |
-|                  | Vergeltung im Jenseits (3:19-20)  | (aber Fokus diesseitig)           |
-+------------------+-----------------------------------+-----------------------------------+
-| Gott             | Unergründlich, fern, rätselhaft   | Architekt der Ordnung,            |
-|                  | (5:1)                             | wohlwollend-passiv                |
-+------------------+-----------------------------------+-----------------------------------+
-| Gerechtigkeit    | Herrscht **nicht** – Ungerechte   | Ist garantiert – Vergeltungslehre |
-|                  | gedeihen, Gerechte leiden (8:14)  | (21:21)                           |
-+------------------+-----------------------------------+-----------------------------------+
-| Erfolg           | Zufall – nicht planbar (9:11)     | Planbar durch Disziplin und Fleiß |
-+------------------+-----------------------------------+-----------------------------------+
-| Schlüsselbegriff | **Hebel** (הֶבֶל, Flüchtigkeit)  | **Chokmah** (חָכְמָה, Weisheit   |
-|                  | + **Cheleq** (חֵלֶק, Anteil)     | als göttliches Bauprinzip)        |
-+------------------+-----------------------------------+-----------------------------------+
-| Erkenntnis       | Empirisch-skeptisch ("Ich sah...")| Traditionsorientiert-didaktisch   |
-|                  |                                   | ("Höre, mein Sohn...")            |
-+------------------+-----------------------------------+-----------------------------------+
-| Jenseits         | Scheol für alle – kein Ort der    | Fokus diesseitig, aber Gott       |
-|                  | Hoffnung (3:19-21)                | belohnt im Leben                  |
-+------------------+-----------------------------------+-----------------------------------+
-| Genuss           | **Cheleq** – der einzige          | Erlaubt, aber nicht zentral       |
-|                  | verlässliche "Anteil" (9:7)       |                                   |
-+------------------+-----------------------------------+-----------------------------------+
-| Metaphysik       | Gott als Rätsel – Schöpfer, aber  | Gott als Architekt – Welt ist     |
-|                  | unberechenbar                     | logisch gebaut (durch Chokmah)    |
-+------------------+-----------------------------------+-----------------------------------+
+```{list-table}
+:header-rows: 1
+:widths: 20 40 40
+
+* - Dimension
+  - Prediger (Kohelet)
+  - Sprüche (Mishle)
+* - Weltordnung
+  - Keine erkennbare moralische Ordnung – Hebel (Flüchtigkeit)
+  - Verlässliche Ordnung (Chokmah ist eingebaut in Schöpfung)
+* - Kausalität
+  - Kausalskepsis – Zufall und Zeit treffen alle (9:11)
+  - Kausaloptimismus – Tugend führt zu Segen
+* - Arbeit
+  - Absurd – du arbeitest für Erben, die du nicht kennst (2:18)
+  - Gesegnet – Fleiß führt zu Wohlstand (10:4)
+* - Weisheit
+  - Relativer Vorteil, aber kein finaler Profit (Jitron) (2:13-15)
+  - Der höchste Schatz – besser als Gold (8:11)
+* - Tod
+  - Der große Gleichmacher – keine Vergeltung im Jenseits (3:19-20)
+  - Implizit: Gerechte werden belohnt (aber Fokus diesseitig)
+* - Gott
+  - Unergründlich, fern, rätselhaft (5:1)
+  - Architekt der Ordnung, wohlwollend-passiv
+* - Gerechtigkeit
+  - Herrscht **nicht** – Ungerechte gedeihen, Gerechte leiden (8:14)
+  - Ist garantiert – Vergeltungslehre (21:21)
+* - Erfolg
+  - Zufall – nicht planbar (9:11)
+  - Planbar durch Disziplin und Fleiß
+* - Schlüsselbegriff
+  - **Hebel** (הֶבֶל, Flüchtigkeit) + **Cheleq** (חֵלֶק, Anteil)
+  - **Chokmah** (חָכְמָה, Weisheit als göttliches Bauprinzip)
+* - Erkenntnis
+  - Empirisch-skeptisch ("Ich sah...")
+  - Traditionsorientiert-didaktisch ("Höre, mein Sohn...")
+* - Jenseits
+  - Scheol für alle – kein Ort der Hoffnung (3:19-21)
+  - Fokus diesseitig, aber Gott belohnt im Leben
+* - Genuss
+  - **Cheleq** – der einzige verlässliche "Anteil" (9:7)
+  - Erlaubt, aber nicht zentral
+* - Metaphysik
+  - Gott als Rätsel – Schöpfer, aber unberechenbar
+  - Gott als Architekt – Welt ist logisch gebaut (durch Chokmah)
 ```
 
 #### Die zentrale Spannung

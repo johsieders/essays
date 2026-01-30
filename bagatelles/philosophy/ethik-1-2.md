@@ -1,6 +1,7 @@
-## 3.1 Regeln und Prinzipien nach Häufigkeit
+## 1.2 Regeln
 
-Diese Sektion identifiziert Regeln und Prinzipien, die über verschiedene Philosophien hinweg wiederkehren. Die Häufigkeit zeigt, welche moralischen Intuitionen kulturübergreifend geteilt werden – und welche umstritten sind.
+Diese Sektion nennt die Regeln und Prinzipien, die über verschiedene Philosophien hinweg wiederkehren. 
+Die Häufigkeit zeigt, welche moralischen Intuitionen kulturübergreifend geteilt werden und welche umstritten sind.
 
 ### Legende für die Matrix
 - **X** = Zentral, explizit betont
@@ -10,7 +11,7 @@ Diese Sektion identifiziert Regeln und Prinzipien, die über verschiedene Philos
 
 ---
 
-### Rangfolge der Prinzipien (nach Häufigkeit)
+### Prinzipien nach Häufigkeit
 
 #### 1. Mäßigung/Selbstkontrolle (14/18 Philosophen)
 
@@ -365,7 +366,7 @@ Diese Sektion identifiziert Regeln und Prinzipien, die über verschiedene Philos
 ---
 
 
-### Matrix: Regeln/Prinzipien nach Philosophen
+### Übersicht: Regeln/Prinzipien nach Philosophen
 
 ```{list-table}
 :header-rows: 1

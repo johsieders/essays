@@ -6,7 +6,7 @@
 
 ### Konfuzius (Kong Fuzi, 孔夫子, 551-479 v. Chr.)
 
-#### Ziel
+#### Ziele
 **Soziale Harmonie (He, 和) durch ritualisierte Tugend** – Die Kultivierung des **Junzi** (君子, der Edle), der durch **De** (德, moralische Ausstrahlungskraft) wirkt. 
 
 Tugend ist bei Konfuzius **relational**: Ein Mensch existiert nur in Bezug auf andere. Selbstverwirklichung geschieht **durch** Beziehungen, nicht **trotz** ihnen.
@@ -102,7 +102,7 @@ Moralität verbreitet sich durch **De** (德) – eine fast magnetische moralisc
 
 **Regel**: Nicht die Geburt, sondern die **moralische Formung** macht den Junzi. Dies war für die Zhou-Zeit (hierarchisch, aristokratisch) revolutionär.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Agnostisch**. Konfuzius schweigt über Metaphysik. "Wenn wir das Leben noch nicht verstehen, wie können wir den Tod verstehen?" (Analekten 11.12)
 
@@ -125,7 +125,7 @@ Moralität verbreitet sich durch **De** (德) – eine fast magnetische moralisc
 
 ### Buddha (Siddhartha Gautama, ca. 563-483 v. Chr.)
 
-#### Ziel
+#### Ziele
 **Nirvana** (निर्वाण, Erlöschen) – Beendigung des Leidens (**Dukkha**, दुःख) durch das Erlöschen des Durstes (**Tanha**, तृष्णा, Begehren). 
 
 Das Ziel ist die **radikale Freiheit** von der Illusion eines beständigen Selbst. Nicht Harmonie in der Welt, sondern **Überwindung** der Welt (Samsara, संसार, Kreislauf der Wiedergeburt).
@@ -227,7 +227,7 @@ Karma ist **keine** kosmische Gerechtigkeit oder Schicksal, sondern **natürlich
 
 **Regel**: Du bist verantwortlich für deine Handlungen. Aber: Es gibt **kein Selbst**, das handelt – nur den Prozess des Handelns.
 
-#### Begründung
+#### Begründungen
 
 **Metaphysisch**: **Weder Materialismus noch Theismus**. Buddha lehnte beide ab. Seine Position ist **apophatisch** (via negationis) – er schweigt zu unbeantwortbaren Fragen.
 
@@ -250,20 +250,50 @@ Karma ist **keine** kosmische Gerechtigkeit oder Schicksal, sondern **natürlich
 
 #### Übersicht
 
-| Dimension | Konfuzius | Buddha |
-|-----------|-----------|--------|
-| Ziel | He (Harmonie) – soziale Ordnung | Nirvana – Befreiung vom Leiden |
-| Das Selbst | Muss durch Bildung **verfeinert** werden (Junzi) | Muss als Illusion **durchschaut** werden (Anatta) |
-| Gesellschaft | Das **Labor** der Tugend | Ein **Netz** aus Verwicklungen |
-| Leidursache | Soziale Unordnung, mangelnde Bildung, falsche Rollen | Psychologisches Anhaften, Unwissenheit (Moha) |
-| Lösung | Ordnung durch Ritual (Li), Bildung (Wen), Vorbild (De) | Entsagung, Meditation, Achtfacher Pfad |
-| Rolle des Rituals | **Zentral** – der Kleber der Zivilisation | **Hindernis** – Silabbata-paramasa (Anhaften an Riten) |
-| Gemeinschaft | **Konstitutiv** – Mensch wird durch Beziehungen zum Menschen | **Sangha** – Schutzraum, aber weltliche Bindungen = Leiden |
-| Hierarchie | Notwendig für Ordnung (Wu Lun) | Egalitär (alle können Erleuchtung erreichen, Kaste ist irrelevant) |
-| Legitimität | Tianming (Mandat des Himmels) – moralisch | Individuelle Einsicht (Erfahrung), empirische Verifikation |
-| Gerechtigkeit | Erfüllung von Rollen-Pflichten (Wu Lun) | Überwindung von Karma (Handlungsfolgen) |
-| Jenseits | Agnostisch ("Wenn wir das Leben nicht verstehen...") | Wiedergeburt (Samsara), aber kein "Selbst" wird wiedergeboren |
-| Metaphysik | Schweigt dazu – diesseitig, pragmatisch | Schweigt zu unbeantwortbaren Fragen – apophatisch |
+```{list-table}
+:header-rows: 1
+:widths: 20 40 40
+
+* - Dimension
+  - Konfuzius
+  - Buddha
+* - Ziel
+  - He (Harmonie) – soziale Ordnung
+  - Nirvana – Befreiung vom Leiden
+* - Das Selbst
+  - Muss durch Bildung **verfeinert** werden (Junzi)
+  - Muss als Illusion **durchschaut** werden (Anatta)
+* - Gesellschaft
+  - Das **Labor** der Tugend
+  - Ein **Netz** aus Verwicklungen
+* - Leidursache
+  - Soziale Unordnung, mangelnde Bildung, falsche Rollen
+  - Psychologisches Anhaften, Unwissenheit (Moha)
+* - Lösung
+  - Ordnung durch Ritual (Li), Bildung (Wen), Vorbild (De)
+  - Entsagung, Meditation, Achtfacher Pfad
+* - Rolle des Rituals
+  - **Zentral** – der Kleber der Zivilisation
+  - **Hindernis** – Silabbata-paramasa (Anhaften an Riten)
+* - Gemeinschaft
+  - **Konstitutiv** – Mensch wird durch Beziehungen zum Menschen
+  - **Sangha** – Schutzraum, aber weltliche Bindungen = Leiden
+* - Hierarchie
+  - Notwendig für Ordnung (Wu Lun)
+  - Egalitär (alle können Erleuchtung erreichen, Kaste ist irrelevant)
+* - Legitimität
+  - Tianming (Mandat des Himmels) – moralisch
+  - Individuelle Einsicht (Erfahrung), empirische Verifikation
+* - Gerechtigkeit
+  - Erfüllung von Rollen-Pflichten (Wu Lun)
+  - Überwindung von Karma (Handlungsfolgen)
+* - Jenseits
+  - Agnostisch ("Wenn wir das Leben nicht verstehen...")
+  - Wiedergeburt (Samsara), aber kein "Selbst" wird wiedergeboren
+* - Metaphysik
+  - Schweigt dazu – diesseitig, pragmatisch
+  - Schweigt zu unbeantwortbaren Fragen – apophatisch
+```
 
 #### Unterschiede
 
