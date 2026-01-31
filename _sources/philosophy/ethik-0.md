@@ -50,7 +50,7 @@ Die Texte 2.1 bis 2.9 folgen alle demselben Muster: Für jede Richtung gibt es e
 (2) ungefähr zehn Regeln (z.B. Mäßigung, Wahrhaftigkeit), (3) Begründungen 
 (z.B. Vernunft, Erfahrung). Es folgt eine tabellarische Gegenüberstellung,
 dann kommen die Unterschiede, die Gemeinsamkeiten, und schließlich ein Fazit, das den Vergleich auf den Punkt bringt.
-Im Vordergrund stehen immer die Fragen der Etik und der Lebensführung; 
+Im Vordergrund stehen immer die Fragen der Ethik und der Lebensführung; 
 es geht **nicht** darum, den jeweiligen Philosophen in seiner ganzen Breite darzustellen.
 
 Diese Vergleiche sind nicht viel mehr als struktuierte Materialsammlungen; sie ähneln Exzerpten, 
@@ -69,7 +69,7 @@ Den Schluss der Arbeit bilden die offenen [Fragen](ethik-3.md) und die [Literatu
 Alle Texte bis auf diese Einleitung wurden von Claude Sonnet 4.5 nach meinen Vorgaben generiert. 
 Die Kapitel 2.1 bis 2.9 (also alle Vergleiche) wurden von Gemini 3 und mir selbst geprüft und mit Anmerkungen versehen.
 die dann Claude eingearbeitet hat. Ein Beispiel: In der ersten Version von Kapitel 2.6 (Platon vs. Hume) kam Platon
-in meinen Augen zu gut weg. Claude hat mit meinen Anmerkungen eine neue Version erstellt 
+zu gut weg. Claude hat mit meinen Hinweisen eine neue Version erstellt 
 mit {ref}`kritischen Anmerkungen zu Platon <platon-kritik>`. 
 Diese Version hat Gemini begutachtet, für gut befunden, aber eine Ergänzung angefordert: die
 {ref}`Metapher-Interpretation <platon-metapher>`. 
