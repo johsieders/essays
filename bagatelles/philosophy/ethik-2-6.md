@@ -128,6 +128,7 @@ Die gerechte Polis (Politeia) spiegelt die gerechte Seele. Drei Stände:
 
 **Lebensführung**: Wenn du philosophisch gebildet bist, hast du die **Pflicht** zu regieren (auch wenn es unangenehm ist). Weigere dich nicht – die Masse braucht Führung durch die Weisen.
 
+(platon-kritik)=
 **KRITISCHE ANMERKUNGEN**:
 
 **Platons Politeia** ist eines der **gefährlichsten Bücher** der Philosophiegeschichte:

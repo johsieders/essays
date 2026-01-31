@@ -558,8 +558,6 @@ Setting $q = (a,b)$ completes the proof.
 
 (iv) Let $a$ be coprime to $m$ and $b$ an integer. 
 Then there is an $x$ such that $ax \equiv b \bmod m$, and $\overline{ax} = \overline{b}$
-
-
 ````
 
 As an introduction to the Chinese Remainder Theorem, we consider the 
@@ -675,7 +673,5 @@ $m\prod_{i=1}^n (1 - \frac{1}{p_i})$
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-
 
 <div style="margin-bottom: 100px;"></div>

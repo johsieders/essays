@@ -1,4 +1,4 @@
-# Wie soll man leben? Antworten von Buddha bis Sartre
+# Wie soll man leben? Antworten von Buddha bis Nietzsche
 
 *Generiert von Claude Sonnet 4.5*
 
@@ -19,9 +19,34 @@ Der Text ist gedacht als Fahrplan in dem Gewirr der vielen Richtungen, Meinungen
 
 ### 0.1 Aufbau
 
-Philosophie lebt von Gegensätzen, von Widerspruch und Streit. Dies wird sichtbar durch die
-paarweise Darstellung, die ich gewählt habe. Diese Arbeit präsentiert neun Paarungen, 
-das sind 18 Philosophen oder philosophische Richtungen. 
+Es fing an mit dem Vergleich von Stoikern und Epikureern. Die erste Version von Kapitel [2.1](ethik-2-1.md)
+war das Ergebnis einer Anfrage an Claude Sonnet 4.5, die ich aus einer Laune heraus gestellt hatte. 
+Die Struktur des Vergleichs (meine Vorgabe) gefiel mir: 
+Für jede Richtung gibt es einen Steckbrief mit (1) Zielen (z.B. Glück, Tugend: 
+Wo will der Philosoph hin?), (2) ungefähr zehn Regeln (z.B. Mäßigung, Weisheit: Was muss ich tun?), (3) Begründungen 
+(z.B. Vernunft, Erfahrung: Wie kommt der Philosoph zu seinen Regeln?). Es folgt eine tabellarische Gegenüberstellung,
+dann kommen die Unterschiede, die Gemeinsamkeiten, und schließlich ein Fazit, das den Vergleich auf den Punkt bringt.
+Ich sagte mir: Was mit Stoikern und Epikureern funktioniert, könnte auch mit anderen Philosophen-Paaren klappen. 
+In der Tat. Hier ist das Ergebnis.
+
+Diese Arbeit präsentiert neun Paarungen nach diesem Schema, das sind 18 Philosophen oder philosophische Richtungen.
+In weiteren Verlauf verwende ich **Philosoph** als Oberbegriff für Philosophen im üblichen Sinn (Aristoteles, Kant)
+und Denkrichtungen ohne zugehörige Person (z. B. Prediger und Sprüche im Alten Testament). 
+Ich wollte wissen, welche Lebenshilfen, welche Orientierung diese Philosophen anbieten, wo sie übereinstimmen, und wo sie sich widersprechen.
+Es geht hier **nicht** darum, den jeweiligen Philosoph in seiner ganzen Breite darzustellen.
+
+Die Auswahl ist willkürlich: Aristoteles und Kant sind wohl obligatorisch, Konfuzius und Sartre liegen nahe, Prediger und Sprüche Salomos
+sind sicher exotisch, aber gerade deshalb interessant. Folgende Kriterien waren mir wichtig:
+
+- **Historische Bedeutung**: Einflussreiche Denker, die ganze Traditionen geprägt haben
+- **Kulturelle Diversität**: Westliche (griechisch, römisch, europäisch), asiatische (chinesisch, indisch) und biblische Perspektiven
+- **Thematischer Fokus**: Philosophen, die konkrete Lebensregeln oder -prinzipien formuliert haben
+- **Maximaler Kontrast**: Paarung von ähnlichen und gegensätzlichen Positionen
+
+Philosophie lebt von Gegensätzen, von Widerspruch und Streit. 
+Jeder Philosoph, von Platon bis Sartre, ist angreifbar, und jeder hat schon Unsinn erzählt. Die paarweise Darstellung, die gewählt habe, 
+macht Gegensätze und Widersprüche sichtbar. Viele Paarungen sind naheliegend (etwa Kant vs. Mill), 
+andere ungewöhnlich (z.B. Thomas von Aquin vs. Sartre), aber gerade dadurch aufschlussreich. Hier sind die Paare:
 
 1. **Stoiker vs. Epikur** – Pflicht vs. Lust in der antiken Philosophie ([2.1](ethik-2-1.md)),
 2. **Konfuzius vs. Buddha** – Soziale Harmonie vs. individuelle Befreiung ([2.2](ethik-2-2.md)),
@@ -33,27 +58,7 @@ das sind 18 Philosophen oder philosophische Richtungen.
 8. **Schopenhauer vs. Neues Testament** – Resignation vs. Erlösung, Mitleid vs. Agape ([2.8](ethik-2-8.md)),
 9. **Sartre vs. Thomas von Aquin** – Resignation vs. Erlösung, Mitleid vs. Agape ([2.9](ethik-2-9.md)),
 
-<small>Anmerkung: Der Begriff **Philosoph** steht ab sofort als Oberbegriff für Philosophen im üblichen Sinn (Aristoteles, Kant)
-und für Denkrichtungen ohne zugehörige Person (z. B. Prediger und Sprüche im Alten Testament).</small>
-
-Viele Paarungen sind naheliegend (etwa Kant vs. Mill), andere unerwartet (z.B. Thomas von Aquin vs. Sartre), aber gerade dadurch aufschlussreich. 
-Die Auswahl der Philosophen ist willkürlich: Aristoteles und Kant sind obligatorisch, Konfuzius und Sartre liegen nahe, 
-Prediger und Sprüche Salomos fallen aus der Reihe, sind aber gerade deshalb interessant. 
-Die Auswahl erfüllt, bei aller Willkür, folgende Kriterien:
-
-- **Historische Bedeutung**: Einflussreiche Denker, die ganze Traditionen geprägt haben
-- **Kulturelle Diversität**: Westliche (griechisch, römisch, europäisch), asiatische (chinesisch, indisch) und biblische Perspektiven
-- **Thematischer Fokus**: Philosophen, die konkrete Lebensregeln oder -prinzipien formuliert haben
-- **Maximaler Kontrast**: Paarung von ähnlichen und gegensätzlichen Positionen
-
-Alle Texte 2.1 bis 2.9 folgen demselben Muster: Für jede Richtung gibt es einen Steckbrief mit (1) Zielen (z.B. Glück, Tugend: 
-Wo will der Philosoph hin?), (2) ungefähr zehn Regeln (z.B. Mäßigung, Weisheit: Was muss ich tun?), (3) Begründungen 
-(z.B. Vernunft, Erfahrung: Wie kommt der Philosoph zu seinen Regeln?). Es folgt eine tabellarische Gegenüberstellung,
-dann kommen die Unterschiede, die Gemeinsamkeiten, und schließlich ein Fazit, das den Vergleich auf den Punkt bringt.
-Im Vordergrund stehen immer die Fragen der Etik und der Lebensführung; 
-es geht **nicht** darum, den jeweiligen Philosophen in seiner ganzen Breite darzustellen.
-
-Diese Vergleiche sind nicht viel mehr als struktuierte Materialsammlungen; sie ähneln Exzerpten, 
+Diese Vergleiche mit den Steckbriefen sind nicht viel mehr als struktuierte Materialsammlungen; sie ähneln Exzerpten, 
 die ein fleißiger Leser machen würde. Sie sind gedacht zum Nachschlagen, weniger zum Durchlesen von vorn bis hinten.
 Ein guter Einstieg sind die Zusammenfassungen und Analysen in Kapitel 1:
 
@@ -63,14 +68,16 @@ Ein guter Einstieg sind die Zusammenfassungen und Analysen in Kapitel 1:
 - die Liste aller Begründungen aller Philosophen sortiert nach Häufigkeit ([1.4](ethik-1-4.md)),
 - die Liste aller Spaltungen, also der wichtigsten strittigen Punkte ([1.5](ethik-1-5.md)).
 
-Den Schluss der Arbeit bilden die offenen [Fragen](ethik-3.md) und die [Literaturhinweise](ethik-4.md). 
-
-Hier eine sehr kurzes Resumée der Analysen. Bei den **Regeln** finden wir eine bemerkenswerte Konvergenz: 
+Hier eine sehr kurzes Resumée dieser Analysen. Bei den **Regeln** finden wir eine bemerkenswerte Konvergenz: 
 Mäßigung, Beherrschung der Triebe, Mitgefühl werden bei den meisten Philosophen genannt. Hier gibt es wenig Überraschungen; 
 die "Lebensberater", die in den Buchhandlungen ganze Regale füllen, haben alle von denselben Quellen abgeschrieben. 
 Im Gegensatz dazu beobachten wir bei den **Zielen** und **Begründungen** eine krasse Divergenz, 
 die sich über die Jahrtausende eher verstärkt hat.
 Man könnte verkürzt sagen: Alle machen (ungefähr) das Gleiche, aber aus ganz verschiedenen Gründen.
+Das war schon immer so, und wird sich so bald nicht ändern.
+
+Den Abschluss bilden die offenen [Fragen](ethik-3.md) und die umfangreichen [Literaturhinweise](ethik-4.md). 
+
 
 
 ### 0.2 Methodische Grenzen
@@ -140,8 +147,7 @@ Alle Texte bis auf diese Einleitung sind von Claude Sonnet 4.5 nach meinen Vorga
 Die Kapitel 2.1 bis 2.9 (also alle Vergleiche) wurden von Gemini 3 und mir selbst geprüft und mit Anmerkungen versehehn.
 die dann Claude eingearbeitet hat. Ein Beispiel: In der ersten Version von Kapitel 2.6 (Platon vs. Hume) kam Platon
 in meinen Augen zu gut weg. Claude hat mit meinen Anmerkungen (etwa eine Seite) eine neue Version erstellt 
-mit "Kritischen Anmerkungen zu Platon", {ref}`platon-kritik`. 
-Diese Version hat Gemini begutachtet, für gut befunden, aber eine Ergänzung angefordert.
+mit "Kritischen Anmerkungen zu Platon". Diese Version hat Gemini begutachtet, für gut befunden, aber eine Ergänzung angefordert.
 Diese fndet man jetzt als die Metapher-Interpretation. 
 
 Dieses Papier enthält, so hoffe ich, keine extremen oder angreifbaren Interpretationen, aber ich unterliege keinem Neutralitätsgebot wie 
