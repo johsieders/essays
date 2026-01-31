@@ -128,6 +128,7 @@ Die gerechte Polis (Politeia) spiegelt die gerechte Seele. Drei Stände:
 
 **Lebensführung**: Wenn du philosophisch gebildet bist, hast du die **Pflicht** zu regieren (auch wenn es unangenehm ist). Weigere dich nicht – die Masse braucht Führung durch die Weisen.
 
+(platon-kritik)=
 **KRITISCHE ANMERKUNGEN**:
 
 **Platons Politeia** ist eines der **gefährlichsten Bücher** der Philosophiegeschichte:
@@ -152,6 +153,7 @@ Die gerechte Polis (Politeia) spiegelt die gerechte Seele. Drei Stände:
 
 **Moderne Relevanz**: Jeder "starke Führer", der behauptet, **die Wahrheit** zu kennen und "für das Volk" zu entscheiden, folgt platonischer Logik. Demokratie ist "Herrschaft der Unwissenden" (Platon) – aber die Alternative (Herrschaft der Weisen) ist der Totalitarismus.
 
+(platon-metapher)=
 **ABER - Die Metapher-Interpretation**:
 
 Viele Platon-Forscher argumentieren gegen die **literalistische Lesart** (Popper):
