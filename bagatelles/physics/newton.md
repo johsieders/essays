@@ -927,8 +927,8 @@ Flying Rocket
   - $p = m \dot{x} + qA(x)$
   - $\dot{p} = m \ddot{x} + q \partial_x A \dot{x}$
 * - Euler-Lagrange
-  - $\ddot{x} = \frac{q}{m}(\ddot{x} \times B)$
-  - $= \frac{q}{m} ((\partial_x A)^T - \partial_x A) \dot{x}$
+  - $\ddot{x} = \frac{q}{m}(\dot{x} \times B)$
+  - $= \frac{q}{m} (\partial_x \otimes A - (\partial_x \otimes A)^\intercal) \dot{x}$
 * - Energy
   - $H(x, p) = \frac{1}{2m} (p- qA)^2$
   - $= \frac{1}{2}m\dot{x}^2$ 
