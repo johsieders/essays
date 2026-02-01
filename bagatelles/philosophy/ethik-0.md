@@ -15,7 +15,8 @@ Diese Arbeit vergleicht 18 philosophische Traditionen – von den Griechen über
 Texte bis zur modernen Aufklärung und ihrer radikalen Kritik. Das Ziel ist nicht, eine “richtige” Philosophie zu identifizieren, 
 sondern Muster zu erkennen: Welche Prinzipien tauchen immer wieder auf? Wo gibt es Divergenzen? Welche Philosophen sind Ausreißer?
 Der Text ist gedacht als Fahrplan in dem Gewirr der vielen Richtungen, Meinungen, Begriffe der Ethik.
-Aber die Arbeit des Philosophen beginnt dort, wo dieser Text endet.
+Aber die richtige Arbeit des Philosophen beginnt dort, wo dieser Text endet: 
+mit vielen offenen [Fragen](ethik-3.md) und dem Studium der [Literatur](ethik-4.md). 
 
 
 ### 0.1 Inhalt
@@ -56,9 +57,8 @@ es geht **nicht** darum, den jeweiligen Philosophen in seiner ganzen Breite darz
 
 Diese Vergleiche sind nicht viel mehr als struktuierte Materialsammlungen; sie ähneln Exzerpten, 
 die ein fleißiger Leser gemacht hätte. Sie sind gedacht zum Nachschlagen, weniger zum Durchlesen von vorn bis hinten.
-Die Tabellen in Kapitel 1.2 bis 1.5 sind nicht nach Philosophen sortiert, sondern nach Themen.
-So liefert ein Blick auf 1.2 die Spitzenreiter und die Schlusslichter bei den Regeln der Lebensführung.
-Hier der Inhalt von Kapitel 1:
+Die Kapitel 1.2 bis 1.5 sind nach Themen sortiert, nicht nach Philosophen. Man erkennt z.B. in 1.2
+mit einem Blick die Spitzenreiter bei den Regeln der Lebensführung. Hier der Inhalt:
   
 - eine kurze Darstellung aller 18 Philosophen in vier Tabellen ([1.1](ethik-1-1.md)),
 - die Liste aller Regeln aller Philosophen sortiert nach Häufigkeit ([1.2](ethik-1-2.md)),
@@ -66,7 +66,6 @@ Hier der Inhalt von Kapitel 1:
 - die Liste aller Begründungen aller Philosophen sortiert nach Häufigkeit ([1.4](ethik-1-4.md)),
 - die Liste aller Spaltungen, also der wichtigsten strittigen Punkte ([1.5](ethik-1-5.md)).
 
-Den Schluss der Arbeit bilden die offenen [Fragen](ethik-3.md) und die [Literaturhinweise](ethik-4.md). 
 
 ### 0.2 Entstehung
 Alle Texte bis auf diese Einleitung wurden von Claude Sonnet 4.5 nach meinen Vorgaben generiert. 
