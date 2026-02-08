@@ -2,5 +2,6 @@ jupyter-book>=0.15.0
 sphinx-proof
 sphinx-togglebutton
 sphinxcontrib-bibtex
+myst_nb
 torch
 git+https://github.com/johsieders/sandbox.git@main#subdirectory=sandbox/math4phys

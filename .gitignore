@@ -6,6 +6,11 @@ archive/philosophy_old/_build/
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
 
 # Other common excludes
 .DS_Store

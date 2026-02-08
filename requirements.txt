@@ -1,8 +1,11 @@
 matplotlib
 numpy
+torch
 
 jupyter-book>=0.15.0
 sphinx-proof
 sphinx-togglebutton
 sphinxcontrib-bibtex
 myst_nb
+
+git+https://github.com/johsieders/sandbox.git@main#subdirectory=sandbox/math4phys
