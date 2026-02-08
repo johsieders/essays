@@ -5,3 +5,4 @@ jupyter-book>=0.15.0
 sphinx-proof
 sphinx-togglebutton
 sphinxcontrib-bibtex
+myst_nb

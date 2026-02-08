@@ -96,7 +96,11 @@ parts:
         title: Differential Operators *  
       - file: mathematics/differentials
         title: Differential Calculus
-
+      - file: mathematics/hide-code-demo
+        title: Hide Code
+      - file: mathematics/import-demo
+        title: Import Demo
+        
   - caption: History
     chapters:
       - file: history/8-holy_roman_empire

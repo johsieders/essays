@@ -1,12 +1,23 @@
 # Book settings
 title: Bagatelles
 author: Johannes Siedersleben
-copyright: "2025, Johannes Siedersleben"
+copyright: "2026, Johannes Siedersleben"
 logo: westfield2.png
 
 # Force re-execution of notebooks on each build.
 execute:
-  execute_notebooks: off  # Using markdown, not executable notebooks
+  execute_notebooks: off  # Use pre-executed outputs from notebooks
+
+# Parse MyST markdown in notebooks
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - dollarmath
+    - linkify
+    - substitution
+    - tasklist
+  myst_url_schemes: [mailto, http, https]
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -53,3 +64,6 @@ sphinx:
       chtml:
         displayAlign: 'left'
         displayIndent: '2em'
+    # Toggle button configuration for hiding code
+    togglebutton_hint: "Click to show code"
+    togglebutton_hint_hide: "Click to hide code"
