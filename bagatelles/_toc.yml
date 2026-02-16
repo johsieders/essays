@@ -96,10 +96,9 @@ parts:
         title: Differential Operators *  
       - file: mathematics/differentials
         title: Differential Calculus
-      - file: mathematics/hide-code-demo
-        title: Hide Code
-      - file: mathematics/import-demo
-        title: Import Demo
+      - file: mathematics/tangent-cotangent
+        title: Tangent and Cotangent Spaces
+
         
   - caption: History
     chapters:

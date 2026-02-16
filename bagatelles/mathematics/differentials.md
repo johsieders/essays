@@ -32,29 +32,42 @@ x(A) = x^\intercal A = \begin{bmatrix}
 ```
 
 So, every vector and every matrix can also be considered a linear mapping defined as above. 
-Physicists use an alternative notation:
+Physicists prefer the bracket notation:
 
 ```{math}
 &\langle A | x \rangle  = A^\intercal x = A(x)  \\
 &\langle x | A \rangle  = x^\intercal A = x(A) \\
-&\langle B | A | x \rangle = \langle B | \langle A | x \rangle \rangle = B^\intercal A^\intercal x = (A B)^\intercal x = B(A(x))
+&\langle B | A | x \rangle = \langle \langle B | A \rangle | x \rangle = \langle B | \langle A | x \rangle \rangle = B^\intercal A^\intercal x = (A B)^\intercal x = B(A(x))
+&\langle B | A | x \rangle = \langle \langle B | A \rangle | x \rangle = \langle B | \langle A | x \rangle \rangle = B^\intercal A^\intercal x = (A B)^\intercal x = B(A(x))
 ```
 
 To the right of the bar is the argument, and to the left is the function. 
-No need to care about transpositions.
-
-Let $B$ be a (n x p)-Matrix, so $B^\intercal$ is (p x m). $B$ defines a linear mapping $B:\mathbb{R}^n \to \mathbb{R}^p$
-by the same procedure. The linear mapping $B\circ A: \mathbb{R}^m \to \mathbb{R}^p$ is defined by
+No need to care about transpositions. We normally use brackets, but keep in mind that there are three alternative ways to express the same thing.
 
 
 ```{math}
-(B\circ A)(x) = B(A(x)) =B^\intercal A^\intercal x =(A B)^\intercal x =
-\begin{bmatrix}
+\langle B | A \rangle = \begin{bmatrix}
+                   &\vdots           \\
+           \cdots  &\sum_{j=1}^n a_{ij}b_{jk} &\cdots    \\
+                   &\vdots  
+    \end{bmatrix}_{i = 1, \ldots, m; \, k = 1, \ldots, p}
+```
+
+
+Let $B$ be a $(n \times p)$-Matrix, so $B^\intercal$ is $(p \times n)$. $B$ defines a linear mapping $B:\mathbb{R}^n \to \mathbb{R}^p$.
+The composition $B\circ A: \mathbb{R}^m \to \mathbb{R}^p$ is a linear mapping defined by
+
+
+```{math}
+(B\circ A)(x) &= \langle B\circ A| x \rangle = \langle B| \langle A| x \rangle \rangle 
+= \begin{bmatrix}
                 \vdots           \\
                 \sum_{i=1}^m \sum_{j=1}^n a_{ij}b_{jk} x_i    \\
                 \vdots  
     \end{bmatrix}_{k = 1, \ldots, p}
 ```
+
+so:
 
 ```{math}
 B\circ A = \begin{bmatrix}
@@ -64,11 +77,11 @@ B\circ A = \begin{bmatrix}
     \end{bmatrix}_{i = 1, \ldots, m; \, k = 1, \ldots, p}
 ```
 
-The matrix $(A\circ B)^\intercal$ is (n x p). This is important for the chain rule. The case $p = 1$ is frequent:
+The matrix $(A\circ B)^\intercal$ is $(n \times p)$. This is important for the chain rule. The case $p = 1$ is frequent:
 
 
 ```{math}
-B = b =
+\langle b | \langle A | x
 \begin{bmatrix}
                 b_1           \\
                 \vdots    \\
@@ -683,42 +696,46 @@ $$
 Setting $G(x) = K(x,0)$ completes the proof. $K$ is defined on $A\times B$, $G$ is defined on $A$.
 The derivative of $G$ is immediate from the chain rule.
 
-### Theorem 7 (Taylor in n dimensions)
 
-Let $f:\mathbb{R}^n\text{-$>$ \mathbb{R}^1$and assume $\partial ^{\unicode{f3da}(k+1)}f$ continuous in an open environment J of $x\in \mathbb{R}^n$.
-Let $h\in \mathbb{R}^n$such that $x+h\in J$. Then there exists a $\xi \in (x,x+h)$ such that:
+````{prf:theorem} Taylor in n dimensions
 
-$$
-f(x+h)=\sum _{j=0}^k \frac{1}{k!}\left\langle \partial ^{\unicode{f3da}j}f(x), h^{\unicode{f3da}j}\right\rangle +\frac{1}{(k+1)!}\left\langle \partial
-^{\unicode{f3da}(k+1)}f(\xi ), h^{\unicode{f3da}(k+1)}\right\rangle 
+Let $f:\mathbb{R}^n\to \mathbb{R}$ and assume $\partial^{\otimes (k+1)} f$ continuous on an open environment $U$ of $x \in \mathbb{R}^n$.
+Let $h\in \mathbb{R}^n$ such that $x+h \in U$. Then there exists a $\xi \in [x,x+h]$ such that:
 
-\text{$\quad $       }=\sum _{j=0}^k \frac{1}{k!}\left\langle \partial ^{\unicode{f3da}j}f(x), h^{\unicode{f3da}j}\right\rangle +o\left(\| h\| ^k\right)
-$$
+```{math}
+:label: eq-taylor-n-dim
 
-Proof: It holds that, for j$\leq $k:
+f(x+h) &= \sum_{j=0}^k \frac{1}{k!} \langle \partial^{\otimes j}f(x), h^{\otimes j} \rangle +
+          \frac{1}{(k+1)!} \left \langle \partial^{\otimes (k+1)} f(\xi), h^{\otimes (k+1)} \right \rangle 
 
-$$
-\frac{d^j}{dt^j}f(x+\text{th})=\left\langle \partial ^{\unicode{f3da}j}f(x+\text{th}), h^{\unicode{f3da}j}\right\rangle
-$$
+&=\sum_{j=0}^k \frac{1}{k!} \langle \partial^{\otimes j} f(x), h^{\otimes j} \rangle +o(h^k)
+```
+````
+
+````{prf:proof}
+ 
+ It holds that, for $j \leq k$:
+
+```{math}
+\frac{d^j}{dt^j} f(x + th) = \langle \partial^{\otimes j}f(x + th), h^{\otimes j} \rangle
+```
 
 because:
 
-$$
-\frac{d}{dt}f(x+\text{th})=\sum _{j=1}^n \partial _jf(x+\text{th})h_j=\partial f(x+\text{th})\intercalh=\langle \partial f(x+\text{th}),h\rangle
+```{math}
+\frac{d}{dt}f(x+th) &= \sum_{j=1}^n \partial_j f(x+th)h_j = \langle \partial f(x+th),h \rangle \\
+\\
+\frac{d^2}{dt^2}f(x+th) &= \sum_{i=1}^n \sum_{j=1}^n \partial_i \partial_j f(x+th)h_i h_j = \left\langle \partial ^{\otimes 2} f(x+th), h^{\otimes 2} \right\rangle
+```
 
-\frac{d^2}{dt^2}f(x+\text{th})=\sum _{i=1}^n \sum _{j=1}^n \partial _i\partial _jf(x+\text{th})h_ih_j=\left\langle \partial ^{\unicode{f3da}2}f(x+\text{th}),
-h^{\unicode{f3da}2}\right\rangle
-$$
+and so on. Taylor in one dimension tells us that, for $g(t) = f(x+th)$:
 
-and so on. Taylor in one dimension tells us, for $g(t) = f(x+\text{th})$:
+```{math}
+g(1) = \sum_{j=0}^k \frac{g^{(j)}(0)}{j!} + \frac{g^{(k+1)}(\xi)}{(k+1)!}
+```
 
-$$
-g(1)=\sum _{j=0}^k \frac{g^{(j)}(0)}{j!}+\frac{g^{(k+1)}(\xi )}{(k+1)!}
-$$
-
-for some $\xi \in (0,1)$. Rewriting this equation in terms of $f$gives the statement.
-
-
+for some $\xi \in [0,1]$. Rewriting this equation in terms of $f$ gives the statement.
+````
 
 ## Calculus of Variations
 

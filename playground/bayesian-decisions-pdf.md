@@ -172,7 +172,7 @@ Finding optimal weights: collect data from 1,000 newborns (five scores plus true
 This is not a metaphor or analogy. The weighted Apgar test *is* a neural network—specifically, a single-layer perceptron with five inputs, one output, and no hidden layers. 
 The architecture looks like this:
 
-![Apgar Perceptron Architecture](apgar_perceptron.png)
+![Apgar Perceptron Architecture](../bagatelles/mathematics/apgar_perceptron.png)
 
 This is not a toy example or simplification. Real-world neural networks use exactly this principle, scaled up:
 - More inputs (50, 500, or 50,000 features instead of 5)

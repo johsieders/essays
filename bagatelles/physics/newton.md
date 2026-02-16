@@ -800,7 +800,7 @@ The solution is a constant motion from $0$ to $B$, and the velocity $v$ is such 
 
 ```{list-table} Constant Acceleration
 :header-rows: 1
-:name: tab-constant-motion
+:name: tab-constant-acceleration
 :widths: 25 50 25
 
 * - Property
@@ -911,7 +911,7 @@ Flying Rocket
 
 ```{list-table} Magnetic Field
 :header-rows: 1
-:name: tab-hooke
+:name: tab-magnetic-filed
 :widths: 25 50 25
 
 * - Property
