@@ -48,8 +48,8 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -195,7 +195,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
 
@@ -249,6 +249,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/tangent-cotangent.html">Tangent and Cotangent Spaces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -736,7 +737,7 @@ and can compare these with your measurements. The good news is that today,
 Lagrangians are well-known, and many of them follow a few simple patterns.
 We can just use them and get quickly to our results.
 If, for whatever reason, you need a hitherto unknown Lagrangian, follow Susskinds advice:
-guess it, buy it, or steal it! (see <span id="id1">[<a class="reference internal" href="#id37" title="Leonard Susskind and George Hrabovsky. Classical Mechanics: The Theoretical Minimum. Basic Books, 2014.">Susskind and Hrabovsky, 2014</a>]</span>, p. 999).</p>
+guess it, buy it, or steal it! (see <span id="id1">[<a class="reference internal" href="#id35" title="Leonard Susskind and George Hrabovsky. Classical Mechanics: The Theoretical Minimum. Basic Books, 2014.">Susskind and Hrabovsky, 2014</a>]</span>, p. 999).</p>
 <p>This world of volumeless particles, trajectories, and Lagrangians is a purely mathematical realm
 that I call <strong>Newton’s world</strong>. No one has ever seen volumenless particles,
 and the idea of one time dimension plus three space dimensions extending to infinity
@@ -1171,8 +1172,8 @@ The boundary condition is always the same, with some <span class="math notransla
 </section>
 <section id="constant-acceleration">
 <h3>Constant Acceleration<a class="headerlink" href="#constant-acceleration" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table" id="id2">
-<caption><span class="caption-number">Table 5 </span><span class="caption-text">Constant Acceleration</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-constant-acceleration">
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Constant Acceleration</span><a class="headerlink" href="#tab-constant-acceleration" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 50.0%" />
@@ -1233,10 +1234,10 @@ and <span class="math notranslate nohighlight">\(B = \begin{bmatrix}
 <p>The horizontal speed is constant. The rocket climbs until <span class="math notranslate nohighlight">\(t_0 = \frac{a_2 + 2}{2 a_2}\)</span> and then descends.
 The {figure}(#overshooting) below shows the optimal trajectory upwards (<span class="math notranslate nohighlight">\(a_2\)</span> positive) and downwards (<span class="math notranslate nohighlight">\(a_2\)</span> negative), with <span class="math notranslate nohighlight">\(T = 1\)</span>.
 For <span class="math notranslate nohighlight">\(a_2=0\)</span> we get a straight line.</p>
-<figure class="align-center" id="id130">
+<figure class="align-center" id="id128">
 <img alt="../_images/overshooting.png" src="../_images/overshooting.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Flying Rocket</span><a class="headerlink" href="#id130" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Flying Rocket</span><a class="headerlink" href="#id128" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>This “overshooting” trajectory is actually the optimal solution that minimizes action, not energy expenditure.
@@ -1301,8 +1302,8 @@ This is analogous to why projectiles follow parabolic paths under gravity - natu
 </section>
 <section id="magnetic-field">
 <h3>Magnetic Field<a class="headerlink" href="#magnetic-field" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table" id="id3">
-<caption><span class="caption-number">Table 7 </span><span class="caption-text">Magnetic Field</span><a class="headerlink" href="#id3" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-magnetic-filed">
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Magnetic Field</span><a class="headerlink" href="#tab-magnetic-filed" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 50.0%" />
@@ -1370,7 +1371,7 @@ acceleration). Their levitation is mostly due to centrifugal force.</p></li>
 <h2>Intro<a class="headerlink" href="#intro" title="Link to this heading">#</a></h2>
 <p>Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity.
 He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less
-particles with positive mass, and calculated how they move <span id="id4">[<a class="reference internal" href="#id37" title="Leonard Susskind and George Hrabovsky. Classical Mechanics: The Theoretical Minimum. Basic Books, 2014.">Susskind and Hrabovsky, 2014</a>]</span>.
+particles with positive mass, and calculated how they move <span id="id2">[<a class="reference internal" href="#id35" title="Leonard Susskind and George Hrabovsky. Classical Mechanics: The Theoretical Minimum. Basic Books, 2014.">Susskind and Hrabovsky, 2014</a>]</span>.
 aindrops, apples, and planets are tangible instances, but of course they do have shape, volume, and many other properties.
 Newton’s equations of motion are exact for particles (which aren’t real), but approximate otherwise.
 Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity.
@@ -1382,11 +1383,11 @@ on objects in motion than a thermometer has on temperature.</p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id5">
+<div class="docutils container" id="id3">
 <div role="list" class="citation-list">
-<div class="citation" id="id37" role="doc-biblioentry">
+<div class="citation" id="id35" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>SH14<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id4">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
 <p>Leonard Susskind and George Hrabovsky. <em>Classical Mechanics: The Theoretical Minimum</em>. Basic Books, 2014.</p>
 </div>
 </div>
@@ -1526,7 +1527,7 @@ By Johannes Siedersleben
 
   <p class="copyright">
     
-      © Copyright 2025, Johannes Siedersleben.
+      © Copyright 2026, Johannes Siedersleben.
       <br/>
     
   </p>

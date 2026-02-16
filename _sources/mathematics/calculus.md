@@ -1412,7 +1412,7 @@ Let $x$ be such a point. Then, for any $h > 0$ we have:
 ```
 for some $\xi \in [x,x+h]$, and $f(\xi) \to f(x)$ as $h \to 0$ since $f$ is continuous near $x$.
 
-**(b)** The proof relies on the [mean value theorem of differentiation ](#thr-mean-value-differentiation).
+**(b)** The proof relies on the [mean value theorem of differentiation](#thr-mean-value-differentiation).
 
 If $f$ is differentiable, then it is integrable.
 Let $\{x_k\}$be a partition of $[a, b]$, and $\{\xi_k\}$ a set of intermediate points such that:

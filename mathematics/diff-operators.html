@@ -48,8 +48,8 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -195,7 +195,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
 
@@ -249,6 +249,7 @@
 <li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Differential Operators *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tangent-cotangent.html">Tangent and Cotangent Spaces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -357,7 +358,7 @@
       
       
       
-      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/diff-operators.md" target="_blank"
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/diff-operators.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,7 +405,7 @@
       
       
       
-      <li><a href="../_sources/mathematics/diff-operators.md" target="_blank"
+      <li><a href="../_sources/mathematics/diff-operators.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -414,7 +415,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -500,13 +501,29 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-idea">The Central Idea</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-and-cotangent-spaces">Tangent and Cotangent Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimension-1">Dimension = 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Tangent and Cotangent Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Dimension = 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-and-conventions">Notation and Conventions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-approach">Why This Approach?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-vs-applied">Formal vs. Applied</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-vs-applied">Formal vs. Applied</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-follows">What Follows</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-notation">More Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-formulae">Some Formulae</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence-of-a-curl-vanishes">The divergence of a curl vanishes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curl-of-a-gradient-vanishes">The curl of a gradient vanishes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-rules">Product rules</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
@@ -529,7 +546,7 @@ document.write(`
 <h3>The Central Idea<a class="headerlink" href="#the-central-idea" title="Link to this heading">#</a></h3>
 <p>Consider the gradient operator. Traditionally, we define it as an operation that takes a scalar function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> and produces a vector field. But we can think of it more abstractly: the gradient operator <strong>is</strong> the column vector</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\partial = \begin{pmatrix} \partial_1 \\ \partial_2 \\ \vdots \\ \partial_n \end{pmatrix}\end{split}\]</div>
+\[\begin{split}\partial = \begin{bmatrix} \partial_1 \\ \partial_2 \\ \vdots \\ \partial_n \end{bmatrix}\end{split}\]</div>
 <p>where each <span class="math notranslate nohighlight">\(\partial_i\)</span> represents the operator “take the partial derivative with respect to the <span class="math notranslate nohighlight">\(i\)</span>-th variable.”</p>
 <p>When we write <span class="math notranslate nohighlight">\(\partial \cdot f\)</span>, we’re using the notation of scalar multiplication from linear algebra—but instead of multiplying numbers, we’re applying operators to functions. The gradient of <span class="math notranslate nohighlight">\(f\)</span> is simply this formal product.</p>
 <p>This shift in perspective—from operations on functions to algebraic manipulation of operators—has profound consequences. Once we accept that <span class="math notranslate nohighlight">\(\partial\)</span> is a legitimate vector of operators, the rest of vector calculus falls into place through familiar algebraic constructions:</p>
@@ -540,6 +557,167 @@ document.write(`
 <li><p>The <strong>curl</strong> of a vector field <span class="math notranslate nohighlight">\(F\)</span> is <span class="math notranslate nohighlight">\(\partial \times F\)</span>, the cross product</p></li>
 <li><p>The <strong>Jacobian</strong> of a vector field <span class="math notranslate nohighlight">\(F\)</span> is <span class="math notranslate nohighlight">\(\partial \otimes F\)</span>, the tensor product</p></li>
 </ul>
+<p>Here is my problem.
+Any <span class="math notranslate nohighlight">\(y \in \mathbb{R^m}\)</span> defines the linear form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y^* : \left\{
+    \begin{array}{lr}
+        \mathbb{R^m} \to \mathbb{R} \\
+        x \mapsto y^*(x) = y^\intercal \cdot x
+    \end{array}
+\right .  \end{split}\]</div>
+<p>It’s important to keep in mind that <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(y^\intercal\)</span> are different:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;y \in \mathbb{R^m} \\
+&amp;y^* \in \mathbb{R^m}^* \end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(y^*\)</span> is the dual <span class="math notranslate nohighlight">\(y\)</span> and lives in the dual space <span class="math notranslate nohighlight">\(\mathbb{R^m}^*\)</span>, a different world.
+In general, <span class="math notranslate nohighlight">\(y^*\)</span> and <span class="math notranslate nohighlight">\(y^\intercal\)</span> can be considered synonyms.</p>
+<p>For the gradient <span class="math notranslate nohighlight">\(\partial f\)</span> of a function <span class="math notranslate nohighlight">\(f: \mathbb{R^m} \to \mathbb{R}\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\partial f \in \mathbb{R^m} \\
+&amp;f(x + h) = f(x) + (\partial f)^\intercal h + o(h) \end{split}\]</div>
+<p>So, the gradient is a column vector, and its dual appears in the crucial eqution above.</p>
+<p>Let’s consider a linear mapping <span class="math notranslate nohighlight">\(A: \mathbb{R^m} \to \mathbb{R^n}\)</span>.
+Is <span class="math notranslate nohighlight">\(A\)</span> an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix (<span class="math notranslate nohighlight">\(m\)</span> rows, <span class="math notranslate nohighlight">\(n\)</span> columns) or is it <span class="math notranslate nohighlight">\(n \times m\)</span>.
+If it’s true what I said about vectors and their duals then <span class="math notranslate nohighlight">\(A\)</span> should be <span class="math notranslate nohighlight">\(m \times n\)</span></p>
+<p>Its dual <span class="math notranslate nohighlight">\(A^*\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^* : \left\{
+    \begin{array}{lr}
+        \mathbb{R^n}^* \to \mathbb{R^m}^* \\
+        y^* \mapsto A^*(y^*)
+    \end{array}
+\right .  \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A^*(y^*)\)</span> is defined by:</p>
+<div class="math notranslate nohighlight">
+\[A^*(y^*)(x) = y^*(A(x)) = y^\intercal A^\intercal x = (Ay)^\intercal x\]</div>
+<p>Now, I am applying the same reasoning to the Jacobian.
+For the Jacobian <span class="math notranslate nohighlight">\(\partial F\)</span> of a function <span class="math notranslate nohighlight">\(F: \mathbb{R^m} \to \mathbb{R^n}\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\partial F = \begin{bmatrix}
+                &amp;\partial_{1}F_1 &amp;\ldots \partial_{1}F_n    \\
+                                 &amp;\ldots \\
+                &amp;\partial_{m}F_1 \ldots \partial_{m}F_n             
+    \end{bmatrix}
+&amp;F(x + h) = F(x) + (\partial F)^\intercal h + o(h) \end{split}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tangent-and-cotangent-spaces">
+<h2>Tangent and Cotangent Spaces<a class="headerlink" href="#tangent-and-cotangent-spaces" title="Link to this heading">#</a></h2>
+<section id="dimension-1">
+<h3>Dimension = 1<a class="headerlink" href="#dimension-1" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(Q\)</span> be an 1-dimensional manifold given a function
+<span class="math notranslate nohighlight">\(x: [a, b] \to V\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is a vector space; <span class="math notranslate nohighlight">\(x \in C^\infty([a, b], V)\)</span>.</p>
+<p>We define the operator <span class="math notranslate nohighlight">\(\partial_t\)</span> by</p>
+<p><span class="math notranslate nohighlight">\(
+\partial_t: \left\{
+    \begin{array}{lr}
+        C^{\infty}(Q)  \to C^{\infty}(Q) \\
+        f \mapsto \partial_t (f \circ x)
+    \end{array}
+\right .  
+\)</span></p>
+<p>The operator <span class="math notranslate nohighlight">\(\partial_t\)</span> is called the <strong>directional derivative operator</strong> in the t-direction.
+The <strong>tangent space</strong> of <span class="math notranslate nohighlight">\(Q\)</span> at <span class="math notranslate nohighlight">\(x(t)\)</span> is defined by
+<span class="math notranslate nohighlight">\(
+T_{x(t)} Q = \text{span}\{\partial_t\}
+\)</span>
+This is a one-dimensional vector space.</p>
+<p>The <strong>cotangent space</strong> of <span class="math notranslate nohighlight">\(Q\)</span> at <span class="math notranslate nohighlight">\(x(t)\)</span> is denoted by <span class="math notranslate nohighlight">\(T^{*}_{x(t)} Q\)</span>.
+This is also a one-dimensional vector space; its unique basis vector is the linear mapping <span class="math notranslate nohighlight">\(d: T_{x(t)} Q \to \mathbb{R}\)</span>, defined by</p>
+<p><span class="math notranslate nohighlight">\(
+d: \left\{
+    \begin{array}{lr}
+        \text{span}\{\partial_t\} \to \mathbb{R} \\
+        f \mapsto df
+    \end{array}
+\right . 
+\)</span></p>
+<p>where <span class="math notranslate nohighlight">\(df\)</span> is defined by:</p>
+<p><span class="math notranslate nohighlight">\(
+df(\partial_t) = \partial_t f
+\)</span></p>
+<p>so:</p>
+<p><span class="math notranslate nohighlight">\(
+df(v) = v(f) = \lambda \partial_t f
+\)</span></p>
+<p>for <span class="math notranslate nohighlight">\(v = \lambda \partial_t \in \text{span}\{\partial_t\}\)</span>. <span class="math notranslate nohighlight">\(df\)</span> is called the <strong>differential</strong> of <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>The <strong>tangent bundle</strong> is defined as a set of pairs (point, tangent vector):</p>
+<p><span class="math notranslate nohighlight">\(
+T Q = \bigcup_{x \in Q} (\{x \} \times T_{x} Q) = \{(x, v) | x \in Q, v \in T_{x} Q \}
+= T Q = \bigcup_{t \in [a, b]} (\{x(t) \} \times T_{x(t)} Q) 
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+T Q = \bigcup_{x \in Q} (\{x \} \times T_{x} Q)   #1
+= \{(x, v) | x \in Q, v \in T_{x} Q \}            #2 
+= \{(x, v) | x \in Q, v in \text{span}\{\partial_t\}}  #3
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+T Q = \bigcup_{t \in [a, b]} (\{x(t) \} \times T_{x(t)} Q)  = \{(x(t), \lambda \partial_t) | t \in [a, b], \lambda \in \mathbb{R} }
+\)</span></p>
+<p>The <strong>cotangent bundle</strong> is defined as as a set of pairs (point, covector):</p>
+<p><span class="math notranslate nohighlight">\(
+T^{*} Q = \{(x, p) | x \in Q, p \in T^{*}_{x} Q \}
+\)</span></p>
+</section>
+</section>
+<section id="id1">
+<h2>Tangent and Cotangent Spaces<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Dimension = 1<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(Q\)</span> be an 1-dimensional manifold given a function
+<span class="math notranslate nohighlight">\(x: [a, b] \to V\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is a vector space; <span class="math notranslate nohighlight">\(x \in C^\infty([a, b], V)\)</span>.</p>
+<p>We define the operator <span class="math notranslate nohighlight">\(\partial_t\)</span> by</p>
+<p><span class="math notranslate nohighlight">\(
+\partial_t: \left\{
+    \begin{array}{lr}
+        C^{\infty}(Q)  \to C^{\infty}(Q) \\
+        f \mapsto \partial_t (f \circ x)
+    \end{array}
+\right .  
+\)</span></p>
+<p>The tangent space of <span class="math notranslate nohighlight">\(Q\)</span> at <span class="math notranslate nohighlight">\(x(t)\)</span> is defined by:</p>
+<p><span class="math notranslate nohighlight">\(
+T_{x(t)} Q = \text{span}\{\partial_t\}
+\)</span></p>
+<p>It is a one-dimensional vector space.</p>
+<p>The cotangent space of <span class="math notranslate nohighlight">\(Q\)</span> at <span class="math notranslate nohighlight">\(x(t)\)</span> is denoted by T^{*}_{x(t)} Q.</p>
+<p>It is also a one-dimensional vector space; its unique basis vector is the linear mapping <span class="math notranslate nohighlight">\(d: T_{x(t)} Q \to \mathbb{R}\)</span>, defined by</p>
+<p><span class="math notranslate nohighlight">\(
+d: \left\{
+    \begin{array}{lr}
+        \text{span}\{\partial_t\} \to \mathbb{R} \\
+        f \mapsto \df
+    \end{array}
+\right . 
+\)</span></p>
+<p>where, for <span class="math notranslate nohighlight">\(v = \lambda \partial_t \in \text{span}\{\partial_t\}\)</span>
+<span class="math notranslate nohighlight">\(
+df(v) = v(f) = \lambda \partial_t f
+\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial_t: \left\{
+    \begin{array}{lr}
+        C^{\infty}(Q)  \to C^{\infty}(Q) \\
+        f \mapsto \partial_t f \circ x
+    \end{array}
+\right .  
+\\
+\partial = \begin{array}{lr}
+        &amp;\partial_1 \\
+        &amp;... \\
+        &amp;\partial_n \\
+    \end{array}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[T_{x(t)} Q 
+= {\lambda  \dot{x}(t) | \lambda in \mathbb{R} }       # (1)
+= {\partial/\partial t f(x(t)) \dot{x}(t) | f \in C^\infty(Q) }  # (2)
+= {\partial/\partial t f(x(t)) | f \in C^\infty(Q) }  # (3)
+= {\lambda \partial/\partial t | \lambda in \mathbb{R} }  # (4)
+\]</div>
 </section>
 <section id="notation-and-conventions">
 <h3>Notation and Conventions<a class="headerlink" href="#notation-and-conventions" title="Link to this heading">#</a></h3>
@@ -566,15 +744,31 @@ document.write(`
 <p><strong>Dimensional reasoning:</strong> The algebraic structure makes dimensional constraints transparent. The curl <span class="math notranslate nohighlight">\(\partial \times F\)</span> involves a cross product, which only makes sense in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. The Laplacian <span class="math notranslate nohighlight">\(\partial^2\)</span> is a scalar operator in any dimension. These constraints emerge naturally from the algebra rather than being imposed ad hoc.</p>
 <p><strong>Extensibility:</strong> Need the Poisson bracket? It’s simply the bilinear operator</p>
 <div class="math notranslate nohighlight">
-\[\{A, B\} = \partial_x A \cdot \partial_p B - \partial_p A \cdot \partial_x B\]</div>
+\[\{A, B\} = \partial_x A \cdot \partial_p B - \partial_p A \cdot \partial_x \]</div>
 <p>acting on pairs of functions. Want higher-order derivatives for Taylor expansions? Use <span class="math notranslate nohighlight">\(\partial^{\otimes k}\)</span>.</p>
 <p><strong>Computational implementation:</strong> This algebraic perspective translates directly into code. An “operator engine” can implement these constructions as composable objects that respect the algebraic rules and can be applied to symbolic expressions via SymPy.</p>
 </section>
-<section id="formal-vs-applied">
-<h3>Formal vs. Applied<a class="headerlink" href="#formal-vs-applied" title="Link to this heading">#</a></h3>
-<p>It’s crucial to distinguish between the <strong>operator</strong> (a formal algebraic object) and its <strong>application</strong> to functions. The gradient operator <span class="math notranslate nohighlight">\(\partial\)</span> is a vector of derivative operators. When we apply it to a function <span class="math notranslate nohighlight">\(f\)</span> by writing <span class="math notranslate nohighlight">\(\partial \cdot f\)</span>, we get the gradient of <span class="math notranslate nohighlight">\(f\)</span>—a vector field.</p>
-<p>This distinction parallels the difference between a matrix <span class="math notranslate nohighlight">\(A\)</span> and its action <span class="math notranslate nohighlight">\(A \mathbf{v}\)</span> on a vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. The matrix exists as an algebraic object independent of any particular vector; similarly, <span class="math notranslate nohighlight">\(\partial\)</span> exists as an operator independent of any particular function.</p>
 </section>
+<section id="formal-vs-applied">
+<h2>Formal vs. Applied<a class="headerlink" href="#formal-vs-applied" title="Link to this heading">#</a></h2>
+<p>It’s crucial to distinguish between the <strong>operator</strong> (a formal algebraic object) and its <strong>application</strong> to functions. The gradient operator <span class="math notranslate nohighlight">\(\partial\)</span> is a vector of derivative operators. When we apply it to a function <span class="math notranslate nohighlight">\(f\)</span> by writing <span class="math notranslate nohighlight">\(\partial \cdot f\)</span>, we get the gradient of <span class="math notranslate nohighlight">\(f\)</span>—a vector field.</p>
+<p>This distinction parallels the difference between a matrix <span class="math notranslate nohighlight">\(A\)</span> and its action <span class="math notranslate nohighlight">\(A \mathbf{v}\)</span> on a vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. The matrix exists as an algebraic object independent of any particular vector; similarly, <span class="math notranslate nohighlight">\(\partial\)</span> exists as an operator independent of any particular function.### Notation and Conventions</p>
+<p>We adopt the following notational framework:</p>
+<p><strong>Basic derivative operators:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\partial_i\)</span> denotes <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x_i}\)</span> when variables are indexed as <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial_x, \partial_y, \partial_z\)</span> when variables have names</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial\)</span> denotes the <strong>gradient operator</strong>, the column vector <span class="math notranslate nohighlight">\((\partial_1, \partial_2, \ldots, \partial_n)^T\)</span></p></li>
+</ul>
+<p><strong>Operator composition:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\partial \cdot f\)</span> is the gradient of scalar function <span class="math notranslate nohighlight">\(f\)</span> (scalar multiplication)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial^2 = \partial \cdot \partial\)</span> is the Laplacian operator (dot product of operators)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial \otimes \partial\)</span> (written <span class="math notranslate nohighlight">\(\partial^{\otimes 2}\)</span> for brevity) is the Hessian operator</p></li>
+<li><p><span class="math notranslate nohighlight">\(\partial^{\otimes k}\)</span> represents the <span class="math notranslate nohighlight">\(k\)</span>-th order tensor of partial derivatives</p></li>
+<li><p>For vector fields <span class="math notranslate nohighlight">\(F\)</span>: <span class="math notranslate nohighlight">\(\partial \cdot F\)</span> is divergence, <span class="math notranslate nohighlight">\(\partial \times F\)</span> is curl, <span class="math notranslate nohighlight">\(\partial \otimes F\)</span> is the Jacobian</p></li>
+</ul>
+<p>The symbol <span class="math notranslate nohighlight">\(\otimes\)</span> denotes the tensor/outer product. In the accompanying code, we use <code class="docutils literal notranslate"><span class="pre">\ocross</span></code> as a text representation.</p>
 <section id="what-follows">
 <h3>What Follows<a class="headerlink" href="#what-follows" title="Link to this heading">#</a></h3>
 <p>In the sections that follow, we’ll:</p>
@@ -627,24 +821,96 @@ document.write(`
 <p>The d’Alembert symbol:</p>
 <div class="math notranslate nohighlight">
 \[\Box = \partial_{\mu} \cdot \partial^{\mu} = \partial_{0}^2 - \partial_{1}^2 - \partial_{2}^2 - \partial_{3}^2\]</div>
-<p>The divergence of a curl vanishes:</p>
+</section>
+<section id="some-formulae">
+<h2>Some Formulae<a class="headerlink" href="#some-formulae" title="Link to this heading">#</a></h2>
+<section id="the-divergence-of-a-curl-vanishes">
+<h3>The divergence of a curl vanishes:<a class="headerlink" href="#the-divergence-of-a-curl-vanishes" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\partial \cdot (\partial \times F) = 0\]</div>
-<p>The curl of a gradient vanishes:</p>
+</section>
+<section id="the-curl-of-a-gradient-vanishes">
+<h3>The curl of a gradient vanishes:<a class="headerlink" href="#the-curl-of-a-gradient-vanishes" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\partial \times (\partial f) = 0\]</div>
-<p>Product rules</p>
+</section>
+<section id="product-rules">
+<h3>Product rules<a class="headerlink" href="#product-rules" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial (f \, g) &amp;= \partial f \, g + f \, \partial g \\
 \partial \cdot (F \, g) &amp;= (\partial \cdot F) \, g + F \cdot \partial g \\
 \partial \, (A \cdot B) &amp;= (\partial \otimes A) \, B + A \, (\partial \otimes B) \\
 \partial \cdot (A \times B) &amp;= B \cdot (\partial \times A) - A \cdot (\partial \times B) \\
 \partial \times (\partial \times F) &amp;= \partial \, (\partial \cdot F) - \partial^2F\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">symbols</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sympy.matrices.dense</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matrix</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">math4phys.diff_ops</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">expr_equal</span><span class="p">,</span> <span class="n">matrices_equal</span><span class="p">,</span> 
+                                <span class="n">make_scalar_field</span><span class="p">,</span> <span class="n">make_vector_field</span><span class="p">,</span> 
+                                <span class="n">divergence</span><span class="p">,</span> <span class="n">gradient</span><span class="p">,</span> <span class="n">hessian</span><span class="p">,</span> <span class="n">jacobian</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_diff_ops</span><span class="p">():</span>
+    <span class="n">n_dim</span> <span class="o">=</span> <span class="mi">5</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;x_1:</span><span class="si">{</span><span class="n">n_dim</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="n">make_scalar_field</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">make_scalar_field</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+    <span class="n">F</span> <span class="o">=</span> <span class="n">make_vector_field</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_dim</span><span class="p">)</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">make_vector_field</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_dim</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">expr_equal</span><span class="p">(</span><span class="n">divergence</span><span class="p">(</span><span class="n">F</span> <span class="o">*</span> <span class="n">g</span><span class="p">),</span> <span class="n">divergence</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">gradient</span><span class="p">(</span><span class="n">g</span><span class="p">))[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="n">expr_equal</span><span class="p">(</span><span class="n">divergence</span><span class="p">(</span><span class="n">F</span> <span class="o">*</span> <span class="n">g</span><span class="p">),</span> <span class="n">divergence</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">gradient</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">F</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">assert</span> <span class="n">matrices_equal</span><span class="p">(</span><span class="n">gradient</span><span class="p">(</span><span class="n">f</span> <span class="o">*</span> <span class="n">g</span><span class="p">),</span> <span class="n">gradient</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span> <span class="o">+</span> <span class="n">f</span> <span class="o">*</span> <span class="n">gradient</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">matrices_equal</span><span class="p">(</span><span class="n">gradient</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">G</span><span class="p">),</span> <span class="n">jacobian</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">*</span> <span class="n">G</span> <span class="o">+</span> <span class="n">jacobian</span><span class="p">(</span><span class="n">G</span><span class="p">)</span> <span class="o">*</span> <span class="n">F</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">matrices_equal</span><span class="p">(</span><span class="n">hessian</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">jacobian</span><span class="p">(</span><span class="n">gradient</span><span class="p">(</span><span class="n">f</span><span class="p">)))</span>
+    <span class="k">assert</span> <span class="n">matrices_equal</span><span class="p">(</span><span class="n">hessian</span><span class="p">(</span><span class="n">f</span> <span class="o">*</span> <span class="n">g</span><span class="p">),</span>
+                          <span class="p">(</span><span class="n">hessian</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span> <span class="o">+</span>
+                           <span class="n">gradient</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">*</span> <span class="n">gradient</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span>
+                           <span class="n">gradient</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="o">*</span> <span class="n">gradient</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span>
+                           <span class="n">hessian</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="o">*</span> <span class="n">f</span><span class="p">))</span>
+    
+<span class="n">test_diff_ops</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;all tests passed&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>all tests passed
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">myst_nb</span><span class="w"> </span><span class="kn">import</span> <span class="n">glue</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">latex</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">Matrix</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;my_expr&quot;</span><span class="p">,</span> <span class="n">latex</span><span class="p">(</span><span class="n">expr</span><span class="p">),</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">hessian</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;hessian_latex&quot;</span><span class="p">,</span> <span class="n">latex</span><span class="p">(</span><span class="n">hessian</span><span class="p">),</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;hessian_size&quot;</span><span class="p">,</span> <span class="n">hessian</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>The expression <span class="pasted-text">\sin^{2}{\left(x \right)} + \cos^{2}{\left(x \right)}</span> is always equal to 1.</p>
+</section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<span class="target" id="id1"></span><div style="margin-bottom: 100px;"></div>
-</section>
+<span class="target" id="id3"></span><div style="margin-bottom: 100px;"></div></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -713,13 +979,29 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-idea">The Central Idea</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-and-cotangent-spaces">Tangent and Cotangent Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimension-1">Dimension = 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Tangent and Cotangent Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Dimension = 1</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-and-conventions">Notation and Conventions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-approach">Why This Approach?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-vs-applied">Formal vs. Applied</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-vs-applied">Formal vs. Applied</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-follows">What Follows</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-notation">More Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-formulae">Some Formulae</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-divergence-of-a-curl-vanishes">The divergence of a curl vanishes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curl-of-a-gradient-vanishes">The curl of a gradient vanishes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-rules">Product rules</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
@@ -745,7 +1027,7 @@ By Johannes Siedersleben
 
   <p class="copyright">
     
-      © Copyright 2025, Johannes Siedersleben.
+      © Copyright 2026, Johannes Siedersleben.
       <br/>
     
   </p>

@@ -15,8 +15,6 @@ Diese Arbeit vergleicht 18 philosophische Traditionen – von den Griechen über
 Texte bis zur modernen Aufklärung und ihrer radikalen Kritik. Das Ziel ist nicht, eine “richtige” Philosophie zu identifizieren, 
 sondern Muster zu erkennen: Welche Prinzipien tauchen immer wieder auf? Wo gibt es Divergenzen? Welche Philosophen sind Ausreißer?
 Der Text ist gedacht als Fahrplan in dem Gewirr der vielen Richtungen, Meinungen, Begriffe der Ethik.
-Aber die richtige Arbeit des Philosophen beginnt dort, wo dieser Text endet: 
-mit vielen offenen [Fragen](ethik-3.md) und dem Studium der [Literatur](ethik-4.md). 
 
 
 ### 0.1 Inhalt
@@ -65,6 +63,9 @@ mit einem Blick die Spitzenreiter bei den Regeln der Lebensführung. Hier der In
 - die Liste aller Ziele aller Philosophen sortiert nach Häufigkeit ([1.3](ethik-1-3.md)),
 - die Liste aller Begründungen aller Philosophen sortiert nach Häufigkeit ([1.4](ethik-1-4.md)),
 - die Liste aller Spaltungen, also der wichtigsten strittigen Punkte ([1.5](ethik-1-5.md)).
+
+Aber die richtige Arbeit des Philosophen beginnt dort, wo dieser Text endet: 
+mit vielen offenen [Fragen](ethik-3.md) und dem Studium der [Literatur](ethik-4.md). 
 
 
 ### 0.2 Entstehung

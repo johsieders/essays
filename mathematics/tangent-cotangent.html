@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Le français en voie de perdition? &#8212; Bagatelles</title>
+    <title>Tangent and Cotangent Spaces &#8212; Bagatelles</title>
   
   
   
@@ -32,9 +32,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -58,11 +58,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'literature/3-francais-perdition';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/tangent-cotangent';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Books to Read" href="0-bibliography.html" />
-    <link rel="prev" title="Bertrand Russell Talking about Useless Knowledge" href="9-russell-on-useless-knowledge.html" />
+    <link rel="next" title="Was the Empire Holy, Roman, or an Empire at All?" href="../history/8-holy_roman_empire.html" />
+    <link rel="prev" title="Differential Calculus" href="differentials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -239,15 +241,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../physics/newton.html">Newton</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/tangent-cotangent.html">Tangent and Cotangent Spaces</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tangent and Cotangent Spaces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -258,33 +260,33 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="22-god-and-evil.html">Is God responsible for evil?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="23-is-science-a-threat.html">Is science a threat to religion?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-genesis-questions.html">Questions about Genesis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="20-revelations.html">Die Offenbarungen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="32-religions-in-britain.html">Religions in Britain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
-<li class="toctree-l1"><a class="reference internal" href="19-henry-v-chorus.html">The Chorus in Henry V</a></li>
-<li class="toctree-l1"><a class="reference internal" href="16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Le français en voie de perdition ?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0-bibliography.html">Books to read</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
-<li class="toctree-l1"><a class="reference internal" href="14-fliegen.html">Darf man noch fliegen?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
 </ul>
 
     </div>
@@ -356,7 +358,7 @@
       
       
       
-      <li><a href="https://github.com/johsieders/essays/edit/main/literature/3-francais-perdition.md" target="_blank"
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/tangent-cotangent.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -373,7 +375,7 @@
       
       
       
-      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fliterature/3-francais-perdition.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/tangent-cotangent.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -403,7 +405,7 @@
       
       
       
-      <li><a href="../_sources/literature/3-francais-perdition.md" target="_blank"
+      <li><a href="../_sources/mathematics/tangent-cotangent.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -487,7 +489,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Le français en voie de perdition?</h1>
+    <h1>Tangent and Cotangent Spaces</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -497,9 +499,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langlais-est-en-effet-la-lingua-franca-du-monde-entier">L’anglais est en effet la lingua franca du monde entier.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langlais-est-il-a-envier">L’anglais est-il à envier ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quelle-attitude-prendre-par-rapport-a-langlais">Quelle attitude prendre par rapport à l’anglais ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-case">The One-Dimensional Case</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-space">Tangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-space">Cotangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-of-a-function">Differential of a Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-bundle">Tangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-bundle">Cotangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -511,90 +519,86 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="le-francais-en-voie-de-perdition">
-<h1>Le français en voie de perdition?<a class="headerlink" href="#le-francais-en-voie-de-perdition" title="Link to this heading">#</a></h1>
-<p><em>Johannes Siedersleben, Paris, juillet 2013</em></p>
-<p>Les jeunes français ne connaissent plus Molière, Flaubert ou Maupassant ; Corneille, pour eux, est un
-chanteur. Les adultes commettent des erreurs regrettables : Ils parlent de la décision qu’ils ont pris,
-pour s’en rappeler plus tard et quand ils viennent vous voir, c’est ensemble avec leur épouse. Pire
-encore, le français se voit infiltré par une langue ennemie, à savoir l’anglais : Sans le moindre besoin,
-on remplace des mots français par des substituts anglais difficiles à prononcer et ne disant pas très
-bien ce qu’ils veulent dire ; on emploie des structures de phrases qui sont en français aussi laides
-qu’elles peuvent être élégantes en anglais. Ou cela nous mène-t-il ? Qu’est-ce que sera le français
-dans cent ans ? Restera-t-il des gens prêts à parler français et capables de le faire ?
-Allons voir pourquoi le français est probablement moins menacé que cela ne semble.</p>
-<section id="langlais-est-en-effet-la-lingua-franca-du-monde-entier">
-<h2>L’anglais est en effet la lingua franca du monde entier.<a class="headerlink" href="#langlais-est-en-effet-la-lingua-franca-du-monde-entier" title="Link to this heading">#</a></h2>
-<p>Cela est un fait à ne pas nier. Il y a au moins quatre raisons : la propagation de l’anglais sur tous les
-continents, le gradient raide de l’apprentissage, son rôle en économie, politique et science et son
-patrimoine littéraire. Si le français est égal ou même supérieur sur les deux derniers points, il ne l’est
-certainement pas sur les deux premiers : Par rapport à l’anglais, il est peu représenté en Amérique et
-en Asie, et il a de quoi intimider le débutant. Ça ne veut pas dire que l’anglais soit plus facile, mais
-l’expérience montre qu’il permet à l’apprenant d’atteindre un certain niveau avec peu d’effort, alors
-que le néophyte du français passe un temps considérable et décourageant à patauger
-dans les difficultés de la prononciation, de la grammaire et de l’orthographe. Le français est rébarbatif d’abord et
-accueillant ensuite; l’anglais feint de la simplicité et dupe ainsi le débutant. Mais le choix de la lingua
-franca est fait : Ce n’est ni le français, ni l’allemand, ni l’espagnol, ni le russe, ni l’esperanto, mais
-l’anglais. Il ne peut y avoir qu’un seul vainqueur.</p>
+  <section id="tangent-and-cotangent-spaces">
+<h1>Tangent and Cotangent Spaces<a class="headerlink" href="#tangent-and-cotangent-spaces" title="Link to this heading">#</a></h1>
+<section id="the-one-dimensional-case">
+<h2>The One-Dimensional Case<a class="headerlink" href="#the-one-dimensional-case" title="Link to this heading">#</a></h2>
+<p>Let Q be a 1-dimensional manifold given by a smooth curve:
+<span class="math notranslate nohighlight">\(x: [a, b] \to V\)</span>
+where <span class="math notranslate nohighlight">\(V\)</span> is a vector space and <span class="math notranslate nohighlight">\(x \in C^\infty([a,b], V)\)</span>.</p>
+<section id="tangent-space">
+<h3>Tangent Space<a class="headerlink" href="#tangent-space" title="Link to this heading">#</a></h3>
+<p>At each point <span class="math notranslate nohighlight">\(x(t_0) \in Q\)</span>, we define the <strong>directional derivative operator</strong> <span class="math notranslate nohighlight">\(\partial_t|_{t_0}\)</span> by its action on smooth functions:</p>
+<p><span class="math notranslate nohighlight">\(
+\partial_t|_{t_0}: C^{\infty}(Q) \to \mathbb{R}, \quad f \mapsto \frac{d}{dt}\bigg|_{t=t_0} f(x(t))
+\)</span></p>
+<p>The <strong>tangent space</strong> at <span class="math notranslate nohighlight">\(x(t_0)\)</span> is:</p>
+<p><span class="math notranslate nohighlight">\(
+T_{x(t_0)} Q = \text{span}\{\partial_t|_{t_0}\}
+\)</span></p>
+<p>This is a one-dimensional vector space. A general tangent vector has the form <span class="math notranslate nohighlight">\(v = \lambda \partial_t|_{t_0}\)</span> for <span class="math notranslate nohighlight">\(\lambda \in \mathbb{R}\)</span>.</p>
 </section>
-<section id="langlais-est-il-a-envier">
-<h2>L’anglais est-il à envier ?<a class="headerlink" href="#langlais-est-il-a-envier" title="Link to this heading">#</a></h2>
-<p>Non, et ceci pour plusieurs raisons. L’anglais est menacé, lui aussi, justement et paradoxalement par
-le nombre immense de gens qui l’utilisent. Si le français paraît miné, c’est à cause de l’usage inapproprié
-ou négligent qu’on en fait : on le maîtrise mal ; mail, Twitter et autres outils de communication nous
-entraînent à des abréviations et des distorsions ou alors on s’en fiche simplement.
-L’ampleur de cet effet pour une langue donnée dépend du nombre d’utilisateurs, de leur hétérogénéité
-et de leur maîtrise de la langue : Plus il y a d’utilisateurs qui la parlent mal, plus ils ont tendance
-à l’altérer et diluer. C’est exactement ce qui arrive à l’anglais : L’anglais parlé dans un bazar indien ou
-dans une réunion de mathématiciens italiens, allemands et japonais est une offense infligée à
-l’anglais et on devrait féliciter le français d’être moins exposé à de pareils supplices. Les anglophones
-natifs sont tellement habitués au mauvais anglais qu’ils ont l’air de ne s’en même plus apercevoir. Vu
-de près, il y a à côté d’autres variétés deux anglais qu’Il faut bien distinguer: l’un réduit en guise
-d’esperanto comme moyen primitif de communication, et l’autre, l’anglais véritable, avec son vocabulaire
-immense, une foule d’idiomes et de fines nuances. Et en ce qui concerne la conservation et la
-valorisation du patrimoine littéraire, il est menacé autant que n’importe quelle autre langue : Le
-nombre de jeunes anglophones connaissant Shakespeare, Scott or Wilde est aussi peu élevé que le
-nombre de francophones érudits en littérature française. Donc, l’anglais tout entier n’est certainement p
-as menacé au point de vue propagation et il n’est pas non plus infiltré par d’autres langues.
-Mais sa pureté est en danger et la valorisation de sa littérature demande des efforts auprès des enseignants.</p>
+<section id="cotangent-space">
+<h3>Cotangent Space<a class="headerlink" href="#cotangent-space" title="Link to this heading">#</a></h3>
+<p>The <strong>cotangent space</strong> <span class="math notranslate nohighlight">\(T^*_{x(t_0)}Q\)</span> is the dual space of <span class="math notranslate nohighlight">\(T_{x(t_0)}Q\)</span>. It is also one-dimensional, with basis element <span class="math notranslate nohighlight">\(dt\)</span> defined by:</p>
+<p><span class="math notranslate nohighlight">\(
+dt: T_{x(t_0)}Q \to \mathbb{R}, \quad \text{where } dt(\partial_t|_{t_0}) = 1
+\)</span></p>
+<p>For a general tangent vector <span class="math notranslate nohighlight">\(v = \lambda \partial_t|_{t_0}\)</span>, we have <span class="math notranslate nohighlight">\(dt(v) = \lambda\)</span>.</p>
 </section>
-<section id="quelle-attitude-prendre-par-rapport-a-langlais">
-<h2>Quelle attitude prendre par rapport à l’anglais ?<a class="headerlink" href="#quelle-attitude-prendre-par-rapport-a-langlais" title="Link to this heading">#</a></h2>
-<p>Prenons au hasard des pays comme le Danemark, la Norvège ou la Finlande comme exemple. Ils ont,
-eux aussi, leur propre langue qui est un élément essentiel de leur identité nationale et dont ils sont
-fiers malgré un patrimoine littéraire peut-être moins impressionnant que celui de la France. Un pays
-chérit sa langue comme une mère son enfant : Elle le considère comme le plus mignon, le plus intelligent
-et le plus gentil du monde tout en sachant au fond de son âme que ce n’est peut-être pas toutà-fait vrai.</p>
-<p>Quelle est l’attitude de ces pays par rapport à l’anglais ? Il y a au moins deux points qui sautent aux
-yeux : D’abord, ils sont complètement détendus. Ils se soucient peu des quelques anglicismes qui ont
-pu s’installer dans leur langue et sont convaincus qu’elle sera assez forte pour assimiler ces intrus. Ils
-ne sont pas craintifs mais fiers. Ensuite, ils maîtrisent l’anglais. A Oslo, n’importe quel passant vous
-indiquera le chemin en un anglais clair et correct. Ceci n’est pas seulement une question
-d’enseignement mais surtout un état d’esprit. Il va de soi que l’anglais joue aussi un rôle important
-dans leur enseignement supérieur : De nombreuses universités offrent au niveau master des programmes
-complètement en anglais et ne demandent aux candidats aucune connaissance préalable
-de la langue nationale. Ils attirent ainsi un grand nombre d’enseignants et d’étudiants qui, tout en
-faisant leur travail, sont involontairement amenés à un apprentissage linguistique qu’ils n’auraient
-jamais envisagé autrement. C’est donc paradoxalement grâce à l’ouverture à l’anglais que leur
-langue nationale aura gagné plus d’adeptes. Il va de soi que ce procédé ne se prête pas à tous les
-domaines de la même manière: Pour un cours de maths, la langue utilisée importe beaucoup moins
-que pour un cours de philosophie, et un cours de littérature norvégienne se fera nécessairement en
-norvégien.</p>
-<p>Ce qui marche bien dans un pays ne marche pas forcément aussi bien dans un autre. Mais tout en
-évitant d’imiter candidement ce que font les autres, il pourrait être utile aux français de mieux apprendre l’anglais et de faciliter son utilisation dans l’enseignement supérieur. Vu de l’extérieur, il
-semble absurde qu’il faille une loi pour autoriser une grande école à donner des cours en anglais. Le
-choix de la langue employée devrait se faire naturellement en fonction des langues parlées par les
-personnes présentes comme c’est le cas lors d’une réunion de travail. Soit dit en passant il serait
-donc aberrant pour un professeur francophone d’enseigner des étudiants francophones en une
-langue autre que le français.</p>
-<p>Les petits pays comme le Danemark, la Norvège ou la Finlande se font peu de soucis. Ils savent que
-leurs langues évoluent, que d’ici vingt ans, il y aura probablement d’avantage d’anglicismes et
-quelques règles de grammaire modifiées ou abolies. Mais nul ne met en doute le fait qu’on parlera le
-norvégien toujours à l’époque de nos arrière-petits-fils. Et si c’est vrai pour le norvégien, ce l’est à
-plus forte raison pour le français. Celui-ci occupera toujours une place importante au premier rang
-des grandes langues telles que l’allemand, l’espagnol, le russe ou l’anglais véritable, mais il n’est ni
-universel ni à priori supérieur à d’autres.</p>
-<div style="margin-bottom: 100px;"></div>
+<section id="differential-of-a-function">
+<h3>Differential of a Function<a class="headerlink" href="#differential-of-a-function" title="Link to this heading">#</a></h3>
+<p>For any smooth function <span class="math notranslate nohighlight">\(f \in C^{\infty}(Q)\)</span>, the <strong>differential</strong> <span class="math notranslate nohighlight">\(df\)</span> is the covector:</p>
+<p><span class="math notranslate nohighlight">\(
+df: T_{x(t_0)}Q \to \mathbb{R}, \quad df(v) = v(f)
+\)</span></p>
+<p>Explicitly, for <span class="math notranslate nohighlight">\(v = \lambda \partial_t|_{t_0}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(
+df(v) = \lambda \cdot \partial_t|_{t_0} f = \lambda \cdot \frac{d}{dt}\bigg|_{t=t_0} f(x(t))
+\)</span></p>
+<p>In the basis <span class="math notranslate nohighlight">\(\{dt\}\)</span>, we can write: <span class="math notranslate nohighlight">\(df = (\partial_t f) \cdot dt\)</span>.</p>
+</section>
+<section id="tangent-bundle">
+<h3>Tangent Bundle<a class="headerlink" href="#tangent-bundle" title="Link to this heading">#</a></h3>
+<p>The <strong>tangent bundle</strong> is the collection of all tangent spaces:</p>
+<p><span class="math notranslate nohighlight">\(
+TQ = \bigcup_{x \in Q} \{x\} \times T_x Q = \{(x, v) \mid x \in Q, v \in T_x Q\}
+\)</span></p>
+<p>Using the parameterization <span class="math notranslate nohighlight">\(x: [a,b] \to Q\)</span>, we can also write:</p>
+<p><span class="math notranslate nohighlight">\(
+TQ = \{(x(t), v) \mid t \in [a,b], v \in T_{x(t)}Q\}
+\)</span></p>
+<p>or more explicitly:</p>
+<p><span class="math notranslate nohighlight">\(
+TQ = \{(x(t), \lambda \partial_t|_t) \mid t \in [a,b], \lambda \in \mathbb{R}\}
+\)</span></p>
+<p>Note that the basis vector <span class="math notranslate nohighlight">\(\partial_t|_t\)</span> depends on the point <span class="math notranslate nohighlight">\(x(t)\)</span> — it represents the tangent vector at that specific point. The tangent bundle TQ is a 2-dimensional manifold.</p>
+</section>
+<section id="cotangent-bundle">
+<h3>Cotangent Bundle<a class="headerlink" href="#cotangent-bundle" title="Link to this heading">#</a></h3>
+<p>The <strong>cotangent bundle</strong> is the collection of all cotangent spaces:</p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \bigcup_{x \in Q} \{x\} \times T^*_x Q = \{(x, p) \mid x \in Q, p \in T^*_x Q\}
+\)</span></p>
+<p>Using the parameterization:</p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \{(x(t), p) \mid t \in [a,b], p \in T^*_{x(t)}Q\}
+\)</span></p>
+<p>or more explicitly:</p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \{(x(t), p_1 \, dt) \mid t \in [a,b], p_1 \in \mathbb{R}\}
+\)</span></p>
+<p>The cotangent bundle <span class="math notranslate nohighlight">\(T^*Q\)</span> is also a 2-dimensional manifold and serves as the <strong>phase space</strong> for Hamiltonian mechanics.</p>
+</section>
+<section id="key-points">
+<h3>Key Points<a class="headerlink" href="#key-points" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The tangent space <span class="math notranslate nohighlight">\(T_x Q\)</span> at each point <span class="math notranslate nohighlight">\(x\)</span> is a vector space containing tangent vectors (velocities)</p></li>
+<li><p>The cotangent space <span class="math notranslate nohighlight">\(T^*_x Q\)</span> at each point <span class="math notranslate nohighlight">\(x\)</span> is the dual vector space containing covectors (momenta)</p></li>
+<li><p>The basis vectors <span class="math notranslate nohighlight">\(\partial_t|_t\)</span> and dual basis <span class="math notranslate nohighlight">\(dt\)</span> depend on the point via the parameter <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>This definition is coordinate-independent in the sense that it depends only on the manifold structure of Q, though we use the parameterization <span class="math notranslate nohighlight">\(x(t)\)</span> to make computations explicit</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -611,7 +615,7 @@ universel ni à priori supérieur à d’autres.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./literature"
+            path: "./mathematics"
         },
         predefinedOutput: true
     }
@@ -629,20 +633,20 @@ universel ni à priori supérieur à d’autres.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="9-russell-on-useless-knowledge.html"
+       href="differentials.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Bertrand Russell Talking about Useless Knowledge</p>
+        <p class="prev-next-title">Differential Calculus</p>
       </div>
     </a>
     <a class="right-next"
-       href="0-bibliography.html"
+       href="../history/8-holy_roman_empire.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Books to Read</p>
+        <p class="prev-next-title">Was the Empire Holy, Roman, or an Empire at All?</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -662,9 +666,15 @@ universel ni à priori supérieur à d’autres.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langlais-est-en-effet-la-lingua-franca-du-monde-entier">L’anglais est en effet la lingua franca du monde entier.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langlais-est-il-a-envier">L’anglais est-il à envier ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quelle-attitude-prendre-par-rapport-a-langlais">Quelle attitude prendre par rapport à l’anglais ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-case">The One-Dimensional Case</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-space">Tangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-space">Cotangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-of-a-function">Differential of a Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-bundle">Tangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-bundle">Cotangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

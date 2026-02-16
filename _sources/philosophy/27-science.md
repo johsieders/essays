@@ -17,7 +17,7 @@ they are not certain; and as far as they are certain, they do not refer to reali
 Imagine Newton (1687) studying falling apples or, more generally, how heavy objects move when subjected to gravity. 
 He abstracted away properties such as volume, feel, and colour, eventually arriving at the idea of volume-less 
 particles with positive mass, and calculated how they move {cite}`susskind2014classical`. 
-aindrops, apples, and planets are tangible instances, but of course they do have shape, volume and many other properties. 
+Raindrops, apples, and planets are tangible instances, but of course they do have shape, volume and many other properties. 
 Newton's equations of motion are exact for particles (which aren't real), but approximate otherwise. 
 Newtonian mechanics takes place in space-time, with four dimensions extending in both directions straight to infinity. 
 This is the stage, and the actors are volume-less particles. You need at least one of them; if there are many, 

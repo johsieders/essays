@@ -1,0 +1,9 @@
+setup.py
+math4phys/__init__.py
+math4phys/diff_ops.py
+math4phys/euler_lagrange.py
+math4phys.egg-info/PKG-INFO
+math4phys.egg-info/SOURCES.txt
+math4phys.egg-info/dependency_links.txt
+math4phys.egg-info/requires.txt
+math4phys.egg-info/top_level.txt

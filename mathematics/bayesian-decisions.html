@@ -48,8 +48,8 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -193,7 +193,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
 
@@ -247,6 +247,7 @@
 <li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diff-operators.html">Differential Operators *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tangent-cotangent.html">Tangent and Cotangent Spaces</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -565,7 +566,7 @@ But this intuition ignores the fact that some professions are vastly more common
 However perfectly a personality fits an astronaut or lighthouse keeper, these professions are so rare that the actual probability remains minuscule.</p>
 <p>Kahneman calls this “What You See Is All There Is” (WYSIATI, pronounced ‘wizzy-AH-tee’)—our tendency to judge based solely on available information while ignoring what’s missing. What people systematically forget is the <strong>base rate</strong>: the underlying frequency of each profession. There are thousands of accountants for every lighthouse keeper, regardless of personality fit.</p>
 <p>The correct probability must be approximately the product of base rate (how common is this profession?) and personality match (how well does this person fit?). Understanding this product is the gateway to Bayesian reasoning <span id="id2">[<a class="reference internal" href="bayesian-tests.html#id74" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>.
-For a readable, instructive, and, at times, humorous introduction to the strange world of Bayes, see <span id="id3">[<a class="reference internal" href="bayesian-decisions-pdf.html#id86" title="Sharon Bertsch McGrayne. The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy. Yale University Press, 2011.">McGrayne, 2011</a>]</span>.</p>
+For a readable, instructive, and, at times, humorous introduction to the strange world of Bayes, see <span id="id3">[<a class="reference internal" href="#id86" title="Sharon Bertsch McGrayne. The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy. Yale University Press, 2011.">McGrayne, 2011</a>]</span>.</p>
 <p>This essay traces a journey: from Kahneman’s insights about human fallibility through Bayesian tests to a surprising conclusion—trained automatons (neural networks making decisions from weighted scores) systematically outperform human experts. The implications for medicine, insurance, criminal justice are profound and troubling. We begin with musicians.</p>
 <section id="musicians-and-base-rates">
 <h2>Musicians and Base Rates<a class="headerlink" href="#musicians-and-base-rates" title="Link to this heading">#</a></h2>
@@ -640,8 +641,8 @@ For a readable, instructive, and, at times, humorous introduction to the strange
 <li><p>Total positive tests: TP + FP = 9.5 + 499.5 = 509</p></li>
 <li><p>Precision (positive predictive value): TP/(TP + FP) = 9.5/509 = <strong>1.9%</strong></p></li>
 </ul>
-<p>Out of 509 people who test positive, only 9.5 actually have cancer. That’s 98.1% false positives. Most patients—and many physicians—find this deeply counterintuitive <span id="id4">[<a class="reference internal" href="bayesian-decisions-pdf.html#id85" title="Gerd Gigerenzer. Calculated Risks: How to Know When Numbers Deceive You. Simon &amp; Schuster, New York, 2002.">Gigerenzer, 2002</a>]</span>. A test that is “95% accurate” produces overwhelming numbers of false alarms.</p>
-<p>This is not a defect of the test. It’s an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives <span id="id5">[<a class="reference internal" href="bayesian-decisions-pdf.html#id87" title="John P. A. Ioannidis. Why most published research findings are false. PLOS Medicine, 2(8):e124, 2005. doi:10.1371/journal.pmed.0020124.">Ioannidis, 2005</a>]</span>.</p>
+<p>Out of 509 people who test positive, only 9.5 actually have cancer. That’s 98.1% false positives. Most patients—and many physicians—find this deeply counterintuitive <span id="id4">[<a class="reference internal" href="#id85" title="Gerd Gigerenzer. Calculated Risks: How to Know When Numbers Deceive You. Simon &amp; Schuster, New York, 2002.">Gigerenzer, 2002</a>]</span>. A test that is “95% accurate” produces overwhelming numbers of false alarms.</p>
+<p>This is not a defect of the test. It’s an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives <span id="id5">[<a class="reference internal" href="#id87" title="John P. A. Ioannidis. Why most published research findings are false. PLOS Medicine, 2(8):e124, 2005. doi:10.1371/journal.pmed.0020124.">Ioannidis, 2005</a>]</span>.</p>
 <section id="the-confusion-matrix">
 <h3>The Confusion Matrix<a class="headerlink" href="#the-confusion-matrix" title="Link to this heading">#</a></h3>
 <p>The confusion matrix organizes these four outcomes systematically:</p>
@@ -869,7 +870,7 @@ But the key ideas are identical.</p>
 </section>
 <section id="why-automatons-beat-humans-anyway">
 <h2>Why Automatons Beat Humans Anyway<a class="headerlink" href="#why-automatons-beat-humans-anyway" title="Link to this heading">#</a></h2>
-<p>Given that models learn from flawed human decisions, why would they outperform humans? This is the central thesis of Kahneman’s <em>Noise: A Flaw in Human Judgment</em> <span id="id9">[<a class="reference internal" href="bayesian-decisions-pdf.html#id80" title="Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. Noise: A Flaw in Human Judgment. Little, Brown Spark, 2021.">Kahneman <em>et al.</em>, 2021</a>]</span>: trained automatons systematically beat human experts at decision-making because they eliminate <strong>noise</strong>.</p>
+<p>Given that models learn from flawed human decisions, why would they outperform humans? This is the central thesis of Kahneman’s <em>Noise: A Flaw in Human Judgment</em> <span id="id9">[<a class="reference internal" href="#id80" title="Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. Noise: A Flaw in Human Judgment. Little, Brown Spark, 2021.">Kahneman <em>et al.</em>, 2021</a>]</span>: trained automatons systematically beat human experts at decision-making because they eliminate <strong>noise</strong>.</p>
 <section id="what-is-noise">
 <h3>What is Noise?<a class="headerlink" href="#what-is-noise" title="Link to this heading">#</a></h3>
 <p>Noise is random variability in human judgment:</p>
@@ -959,7 +960,7 @@ But the key ideas are identical.</p>
 </section>
 <section id="three-critical-problems">
 <h3>Three Critical Problems<a class="headerlink" href="#three-critical-problems" title="Link to this heading">#</a></h3>
-<p>Even in appropriate domains, automation faces three serious problems that can cause significant harm <span id="id10">[<a class="reference internal" href="bayesian-decisions-pdf.html#id21" title="Cathy O'Neil. Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown, 2016.">O'Neil, 2016</a>]</span>:</p>
+<p>Even in appropriate domains, automation faces three serious problems that can cause significant harm <span id="id10">[<a class="reference internal" href="#id21" title="Cathy O'Neil. Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown, 2016.">O'Neil, 2016</a>]</span>:</p>
 <section id="the-training-data-problem">
 <h4>1. The Training Data Problem<a class="headerlink" href="#the-training-data-problem" title="Link to this heading">#</a></h4>
 <p>Models learn exactly what they’re taught—including biases. If historical decisions show:</p>
@@ -970,11 +971,11 @@ But the key ideas are identical.</p>
 <li><p>Geographic prejudices in medical care</p></li>
 </ul>
 <p>…the model will faithfully reproduce these patterns. It doesn’t distinguish between legitimate expertise and unjust bias. Both appear as correlations in the training data.</p>
-<p><strong>Example</strong>: The COMPAS recidivism predictor was trained on historical criminal justice data that reflected systemic racial biases <span id="id11">[<a class="reference internal" href="bayesian-decisions-pdf.html#id88" title="Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. ProPublica, May 23 2016. URL: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing.">Angwin <em>et al.</em>, 2016</a>]</span>. It learned to assign higher risk scores to Black defendants, not because of any individual characteristics, but because the training data showed Black defendants were more likely to be re-arrested (reflecting both higher policing in Black communities and judicial biases). The model amplified existing injustice.</p>
+<p><strong>Example</strong>: The COMPAS recidivism predictor was trained on historical criminal justice data that reflected systemic racial biases <span id="id11">[<a class="reference internal" href="#id88" title="Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. ProPublica, May 23 2016. URL: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing.">Angwin <em>et al.</em>, 2016</a>]</span>. It learned to assign higher risk scores to Black defendants, not because of any individual characteristics, but because the training data showed Black defendants were more likely to be re-arrested (reflecting both higher policing in Black communities and judicial biases). The model amplified existing injustice.</p>
 </section>
 <section id="the-feedback-loop-problem">
 <h4>2. The Feedback Loop Problem<a class="headerlink" href="#the-feedback-loop-problem" title="Link to this heading">#</a></h4>
-<p>Once deployed, models create their own training data. If an automated loan system denies credit to certain demographics, those people never get loans, never demonstrate creditworthiness, and the system “learns” that denying them was correct. The model’s decisions become self-fulfilling prophecies. Healthcare algorithms exhibit this problem acutely: systems trained to predict healthcare costs learn to allocate fewer resources to Black patients because historical data shows lower spending on them—not because they need less care, but because they received less care <span id="id12">[<a class="reference internal" href="bayesian-decisions-pdf.html#id89" title="Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464):447–453, 2019. doi:10.1126/science.aax2342.">Obermeyer <em>et al.</em>, 2019</a>]</span>.</p>
+<p>Once deployed, models create their own training data. If an automated loan system denies credit to certain demographics, those people never get loans, never demonstrate creditworthiness, and the system “learns” that denying them was correct. The model’s decisions become self-fulfilling prophecies. Healthcare algorithms exhibit this problem acutely: systems trained to predict healthcare costs learn to allocate fewer resources to Black patients because historical data shows lower spending on them—not because they need less care, but because they received less care <span id="id12">[<a class="reference internal" href="#id89" title="Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464):447–453, 2019. doi:10.1126/science.aax2342.">Obermeyer <em>et al.</em>, 2019</a>]</span>.</p>
 <p><strong>Example</strong>: Amazon’s automated recruiting tool learned to penalize résumés containing the word “women’s” (as in “women’s chess club”) because historical hiring data showed men were more often hired. The system then reinforced this pattern by recommending male candidates, creating training data that confirmed its bias.</p>
 </section>
 <section id="the-accountability-problem">
@@ -1221,7 +1222,7 @@ By Johannes Siedersleben
 
   <p class="copyright">
     
-      © Copyright 2025, Johannes Siedersleben.
+      © Copyright 2026, Johannes Siedersleben.
       <br/>
     
   </p>
