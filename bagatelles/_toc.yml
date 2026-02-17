@@ -98,7 +98,8 @@ parts:
         title: Differential Calculus
       - file: mathematics/tangent-cotangent
         title: Tangent and Cotangent Spaces
-
+      - file: mathematics/tensors
+        title: Tensors
         
   - caption: History
     chapters:

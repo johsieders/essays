@@ -98,3 +98,53 @@ The cotangent bundle $T^*Q$ is also a 2-dimensional manifold and serves as the *
 - The cotangent space $T^*_x Q$ at each point $x$ is the dual vector space containing covectors (momenta)
 - The basis vectors $\partial_t|_t$ and dual basis $dt$ depend on the point via the parameter $t$
 - This definition is coordinate-independent in the sense that it depends only on the manifold structure of Q, though we use the parameterization $x(t)$ to make computations explicit
+
+#### Question
+
+Let's summarize:
+
+$
+T_{x(t_0)} Q = \text{span}\{\partial_t|_{t_0}\} 
+$
+
+$
+T^*_{x(t_0)} Q = \text{span}\{dt\}
+$
+
+$
+TQ = \{(x, v) \mid x \in Q, v \in T_x Q\}
+$
+
+$
+T^*Q = \{(x, p) \mid x \in Q, p \in T^*_x Q\}
+$
+
+Question 1: When you write
+
+$
+T^*Q = \{(x(t), p_1 \, dt) \mid t \in [a,b], p_1 \in \mathbb{R}\}
+$
+
+how do you express the fact that $p_1 \, dt$ depends on $t$.
+We need something like $dt|t_0$ don't we?
+
+
+Question 2: These are formal definitions; the terms $\partial_t|_{t_0}$ and $dt$ are just symbols satisfying
+
+$
+dt(\partial_t|_{t_0}) = 1
+$
+
+All this is independent of Euler-Lagrange. How do poisson brackets come in?
+
+We already have
+
+$
+<p, v> = p_i v^i
+$
+
+but not yet
+
+$
+{x^i, p_j} = \delta_{ij}
+$
