@@ -96,10 +96,12 @@ parts:
         title: Differential Operators *  
       - file: mathematics/differentials
         title: Differential Calculus
-      - file: mathematics/tangent-cotangent
+      - file: mathematics/tangent-cotangent-n
         title: Tangent and Cotangent Spaces
       - file: mathematics/tensors
         title: Tensors
+      - file: mathematics/calculus-rn
+        title: Differential Calculus in $\mathbb{R}^n$
         
   - caption: History
     chapters:

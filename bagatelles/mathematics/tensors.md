@@ -1,6 +1,10 @@
 ## Tensors
 (Spivac, p. 75)
 
+
+````{prf:definition} Tensors
+:label: def-tensors
+
 Let $V$ be a vector space, often $V = \mathbb{R}^n$. 
 A **k-tensor** $T$ is a multilinear mapping from $V^k$ to $\mathbb{R}$:
 
@@ -15,13 +19,20 @@ T :
 ```
 
 The set of all tensors over $V^k$ is called $\mathcal{I}^k(V)$. This is again a vector space. 
-For $S \in \mathcal{I}^k(V)$ and $T \in \mathcal{I}^l(V)$ we define:
+The set $\mathcal{I}^1(V)$ is just $V^*$, the dual space of $V$.
+A famous example of an n-tensor is the determinant $\det \in \mathcal{I}^n(\mathbb{R}^n)$.
+````
+
+````{prf:definition} Tensor Product
+:label: def-tensor-product
+
+For $S \in \mathcal{I}^k(V)$ and $T \in \mathcal{I}^l(V)$ we define the **tensor product** of two
+tensors $S, T$ as:
 
 ```{math}
-(S \otimes T)(v_1, \ldots, v_k, w_1, \ldots, w_l) = S(v_1, \ldots, v_k) * T(w_1, \ldots, w_l)
+(S \otimes T)(v_1, \ldots, v_k, w_1, \ldots, w_l) = S(v_1, \ldots, v_k) \, T(w_1, \ldots, w_l)
 ```
-
-A famous example of an n-tensor is the determinant $\det \in \mathcal{I}^n(\mathbb{R}^n)$.
+````
 
 Some formulae:
 
@@ -42,7 +53,7 @@ Let $\{v_1, \ldots, v_n\}$ be a basis for $V$ and $\{\phi_1, \ldots, \phi_n\}$ a
 Then, the set 
 
 ```{math}
-\{(\phi_{i_1}, \ldots, \phi_{i_k}) \mid 1 \le i_1, \ldots, i_k \le n \}
+\{\phi_{i_1} \otimes \ldots \otimes \phi_{i_k} \mid 1 \le i_1, \ldots, i_k \le n \}
 ```
 is a basis for $\mathcal{I}^l(V)$ and we have:
 
@@ -50,6 +61,46 @@ is a basis for $\mathcal{I}^l(V)$ and we have:
 \text{dim} \, \mathcal{I}^k(V) = n^k
 ```
 ````
+
+````{prf:proof}
+TODO 
+````
+
+Each basis vector $\phi_{i_1} \otimes \ldots \otimes \phi_{i_k}$ can be thought of as a k-dimensional matrix 
+with exactly one entry equal to one at position $i_1, \ldots, i_k$ and all others equal to zero.
+Every k-tensor $T$ is a sum of these:
+
+```{math}
+T = \sum_{i_1, \ldots, i_k = 1, \ldots, n} T_{i_1, \ldots, i_k}\, \phi_{i_1} \otimes \ldots \otimes \phi_{i_k}
+```
+
+and we can think of $T$ as a k-dimensional matrix:
+
+```{math}
+T = \begin{bmatrix}
+                   &\vdots           \\
+           \cdots  &T_{i_1, \ldots, i_k} &\cdots    \\
+                   &\vdots  
+    \end{bmatrix}_{i_1, \ldots, i_k = 1, \ldots, n}
+```
+
+This is, in terms of Pytorch or Numpy, a tensor of shape $(n, \ldots, n)$ ($k$ times).
+For $k = 1$ we get a vector and for $k = 2$ a matrix. In Einstein notation, we can express $T$ as:
+
+```{math}
+T(x_1,\ldots, x_k) = T_{i_1, \ldots, i_k} x_1^{i_1} \cdots x_k^{i_k}
+```
+
+For $S \in \mathcal{I}^k(V)$ and $T \in \mathcal{I}^l(V)$, we get:
+
+```{math}
+S \otimes T = S_{i_1, \ldots, i_k} T_{i_{k+1}, \ldots, i_{k+l}}
+```
+
+
+
+
+
 
 ````{prf:Definition} Dual Functions
 Let
@@ -85,12 +136,26 @@ f^*(S \otimes T) = f^*S \otimes f^*T
 ````
 
 ````{prf:Definition} Inner Product
-The **inner product** on a vector space $V$ is a 2-tensor, denoted by $\langle,\rangle$,
+The **inner product** on a vector space $V$ is a 2-tensor, denoted by $\langle \cdot, \cdot \rangle$,
 required to be symmetric and positive-definite:
 
 ```{math}
 &\langle x, y \rangle = \langle y, x \rangle \\
 &\langle x, x \rangle > 0 \text{ if } x \ne 0
+```
+
+The matrix form of the inner product is simply the identity matrix:
+
+```{math}
+\langle \cdot, \cdot \rangle = \begin{bmatrix}
+              1    &       &0   \\
+                   &\ddots &    \\
+              0    &       &1
+    \end{bmatrix}
+```
+
+```{math}
+\langle x, y \rangle = \sum_{i = 1}^n x_i y_i
 ```
 ````
 
@@ -126,6 +191,9 @@ It is a subspace of $\mathcal{I}^k(V)$.
 **c)** If $T \in \mathcal{I}^k(V)$, then $\text{Alt}(T) =  \text{Alt}(\text{Alt}(T))$
 
 ````
+````{prf:proof}
+TODO 
+````
 
 
 ````{prf:Definition} Wedge Product
@@ -145,6 +213,9 @@ is clearly alternating.
 :label: thr-wedge-product-properties
 
 
+````
+````{prf:proof}
+TODO 
 ````
 
 ````{prf:Remark} Wedge Product of 1-Forms
@@ -172,7 +243,7 @@ Let $\{v_1, \ldots, v_n\}$ be a basis for $V$ and $\{\phi_1, \ldots, \phi_n\}$ a
 ```{math}
 \phi_i(v_j) = \delta_{ij}
 ```
-Then 
+Then, the set 
 
 ```{math}
 \{\phi_{i_1} \wedge \ldots \wedge \phi_{i_k}\ \mid 1 \le i_1 < \ldots < i_k \le n \}
@@ -181,5 +252,42 @@ is a basis for $\Lambda^k(V)$ and we have:
 
 ```{math}
 \text{dim}\, \Lambda^k(V) = \binom{n}{k}
+```
+
+In particular,
+
+```{math}
+\text{dim}\, \Lambda^n(\mathbb{R}^n) = 1
+```
+So, all alternating n-tensors on $V$ are multiples of any non-zero one, e.g. $\det$.
+
+````
+````{prf:proof}
+TODO 
+````
+
+````{prf:theorem} Basis Transformation
+:label: thr-basis-transformation
+
+Let $\{v_1, \ldots, v_n\}$ be a basis for $V$, $\omega \in \Lambda^n(V)$, and $A \in \text{GL}_n(\mathbb{R})$.
+Then:
+
+```{math}
+\omega(A v_1, \ldots, A v_n) = \det A \, \omega(v_1, \ldots, v_n)
+```
+````
+
+````{prf:proof}
+TODO 
+````
+
+````{prf:definition} Basis Orientation
+:label: thr-basis-transformation
+
+Let $\{v_1, \ldots, v_n\}$ be a basis for $V$, $A \in \text{GL}_n(\mathbb{R})$, and $w_i = Av_i$.
+If $\det A > 0$, $v$ and $w$ are said to have the **same orientation**, and we clearly have:
+
+```{math}
+\omega(v_1, \ldots, v_n) \, \omega(w_1, \ldots, w_n) > 0
 ```
 ````
