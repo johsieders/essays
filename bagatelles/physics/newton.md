@@ -659,9 +659,9 @@ p = \partial T =
 ```
 
 ```{math}
-:label: momentum-t-v
+:label: momentum-t-v-alt
 
-p = \partial T = 
+p = \partial T =
 \begin{bmatrix}
 \partial_1 T  \\
 \partial_2 T  \\
@@ -856,7 +856,7 @@ The \{figure\}(#overshooting) below shows the optimal trajectory upwards ($a_2$ 
 For $a_2=0$ we get a straight line.
 
 ```{figure} overshooting.png
-:label: overshooting
+:name: overshooting
 :align: center
 
 Flying Rocket

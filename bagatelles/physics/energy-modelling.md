@@ -2,6 +2,12 @@
 
 # Analyse und Modellierung moderner Energiesysteme
 
+Johannes Siedersleben, Gemini 3, Claude Opus 4.6
+
+29.03.2026
+
+
+
 ## Das Systemmodell
 Das deutsche Energienetz wandelt sich von einer hierarchischen Top-down-Struktur zu einem hochkomplexen, dezentralen Ökosystem. Es lässt sich als ein Netzwerk aus vier Grundkomponenten beschreiben:
 1.  **Produzenten:** Variable Erzeuger (PV, Wind) mit wetterabhängiger Charakteristik und steuerbare Kraftwerke (fossile Reserve) mit hohen Grenzkosten.
@@ -35,6 +41,8 @@ Für Programmierer ist **PyPSA** (*Python for Power System Analysis*) der Goldst
 
 ## 3. Technisches Beispiel: Optimierung mit $CO_2$-Limit und Speicher
 Das folgende Skript zeigt, wie ein System unter einem strikten Emissionslimit reagiert. Der Solver nutzt das Backup-Kraftwerk nur noch als "Versicherung", während der Speicher die Windflauten überbrückt.
+
+Vorbedingung: `pip install higspy, pypsa`
 
 ```python
 import pypsa
@@ -94,7 +102,7 @@ print(n.global_constraints.loc["co2_limit", "mu"]) # Shadow price of CO2
 ---
 
 ## 4. Fazit und Strategie
-Die optimale Strategie für dich als Akteur (mit 20 kWp und 12,5 kWh Speicher) lässt sich durch den **Schattenpreis** der Optimierung ermitteln. Wenn das $CO_2$-Limit oder die Netzengpässe binden, steigt der Preis drastisch an. 
+Die optimale Strategie für einen Akteur lässt sich durch den **Schattenpreis** der Optimierung ermitteln. Wenn das $CO_2$-Limit oder die Netzengpässe binden, steigt der Preis drastisch an. 
 Dieses Signal ist die Basis für dynamische Tarife: Es motiviert dich lokal dazu, dein Auto zu laden, wenn Wind im Überfluss vorhanden ist, und den Speicher zu nutzen, wenn das fossile "Residuum" einspringen müsste. Ein dirigistischer Eingriff von oben ist bei korrekt gesetzten Preissignalen theoretisch nicht notwendig.
 
 ---
@@ -105,7 +113,3 @@ Dieses Signal ist die Basis für dynamische Tarife: Es motiviert dich lokal dazu
 3.  **Agora Energiewende (2023):** *Klimaneutrales Deutschland 2045.* [agora-energiewende.de](https://www.agora-energiewende.de)
 4.  **Bundesnetzagentur (2024):** *Szenariorahmen zum Netzentwicklungsplan 2037/2045.* [netzentwicklungsplan.de](https://www.netzentwicklungsplan.de)
 5.  **Kempfert, C. (2023):** *Kurzschluss. Wie wir die Energiewende an die Wand fahren.* (Zur kritischen Einordnung der ökonomischen Narrative).
-
----
-
-Soll ich dir noch zeigen, wie du die realen historischen Last- und Wetterdaten (z. B. von OPSD) automatisiert in dieses Modell importierst, um dein Haus-Setup unter realen Bedingungen von 2024 oder 2025 zu testen?

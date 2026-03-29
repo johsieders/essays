@@ -49,14 +49,12 @@ and the differential operator **$\partial$** shifts them to the left from $C^n([
 Note: I prefer the symbol $\partial$ for the differential operator over the more frequent $D$. 
 
 ```{figure} calculus-diagram-1.png
-:label: diagram-1
 :align: center
 
 The Backbone
 ```
 
 ```{figure} calculus-diagram-2.png
-:label: diagram-2
 :align: center
 
 The Roadmap

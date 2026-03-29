@@ -380,6 +380,7 @@ $\mathbb{Z}$ is countable, since it is the union of two countable sets.
 
 
 ````{prf:definition} Ordering of Integers
+:label: def-ordering-integers
 We extend the order on $\mathbb{N}$ to $\mathbb{Z}$ by setting, for $m, n \in \mathbb{N}$:
 
 ```{math}
@@ -441,6 +442,7 @@ The **normal form** of a rational number $a/b$ requires $b > 0$ and $a, b$ copri
 
 
 ````{prf:definition} Ordering of Rationals
+:label: def-ordering-rationals
 We extend the order on $\mathbb{Z}$ to $\mathbb{Q}$ by setting, for $a/b, c/d \in \mathbb{Q}$ in normal form:
 
 ```{math}
@@ -741,6 +743,7 @@ and, in statement {eq}`thr-R-completeness-2`,
 we replace the general $m$ with a specific choice — this is how "forall" is meant to be employed.
 
 ````{prf:definition} Ordering of Reals
+:label: def-ordering-reals
 We extend the order on $\mathbb{Q}$ to $\mathbb{R}$ by setting, for $x = \{x_n\}, y = \{y_n\} \in \mathbb{R}$:
 
 ```{math}

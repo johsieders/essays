@@ -103,6 +103,7 @@ S \otimes T = S_{i_1, \ldots, i_k} T_{i_{k+1}, \ldots, i_{k+l}}
 
 
 ````{prf:Definition} Dual Functions
+:label: def-dual-functions
 Let
 
 ```{math}
@@ -136,6 +137,7 @@ f^*(S \otimes T) = f^*S \otimes f^*T
 ````
 
 ````{prf:Definition} Inner Product
+:label: def-inner-product
 The **inner product** on a vector space $V$ is a 2-tensor, denoted by $\langle \cdot, \cdot \rangle$,
 required to be symmetric and positive-definite:
 
@@ -160,6 +162,7 @@ The matrix form of the inner product is simply the identity matrix:
 ````
 
 ````{prf:Definition} Alternating Tensors, Alt-Operator
+:label: def-alternating-tensors
 **(a)** A k-tensor $\omega$ is called **alternating**, if the sign of $\omega$ is changed by swapping any two variables.
 
 ```{math}
@@ -282,7 +285,7 @@ TODO
 ````
 
 ````{prf:definition} Basis Orientation
-:label: thr-basis-transformation
+:label: def-basis-orientation
 
 Let $\{v_1, \ldots, v_n\}$ be a basis for $V$, $A \in \text{GL}_n(\mathbb{R})$, and $w_i = Av_i$.
 If $\det A > 0$, $v$ and $w$ are said to have the **same orientation**, and we clearly have:

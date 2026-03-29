@@ -73,6 +73,8 @@ parts:
 
   - caption: Physics
     chapters:
+      - file: physics/energy-modelling
+        title: Energie-Modellierung *
       - file: physics/25-physics-roadmap
         title: Physics Roadmap
       - file: physics/29-physics-one-page

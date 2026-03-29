@@ -5,6 +5,10 @@ copyright: "2026, Johannes Siedersleben"
 logo: westfield2.png
 
 # Force re-execution of notebooks on each build.
+exclude_patterns:
+  - mathematics/pontryagin.md
+  - mathematics/tangent-cotangent.md
+
 execute:
   execute_notebooks: off  # Use pre-executed outputs from notebooks
 

@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 ## Pontryagin's Principle
 (Claude Sonnet 4.6)
 
