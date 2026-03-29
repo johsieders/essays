@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Tensors &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/tensors';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Differential Calculus" href="calculus-rn.html" />
+    <link rel="prev" title="Tangent and Cotangent Spaces" href="tangent-cotangent-n.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-5.html">1.5 Spaltungen</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-3.html">2.3 Prediger vs. Sprüche Salomos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-4.html">2.4 Kant vs. Mill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-6.html">2.6 Platon vs. Hume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-4.html">4. Literatur</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/energy-modelling.html">Energie-Modellierung *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/newton.html">Newton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tangent-cotangent-n.html">Tangent and Cotangent Spaces</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus-rn.html">Differential Calculus in $\mathbb{R}^n$</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/tensors.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/tensors.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/mathematics/tensors.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tensors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tensors">
+<h1>Tensors<a class="headerlink" href="#tensors" title="Permalink to this heading">#</a></h1>
+<p>(Spivac, p. 75)</p>
+<div class="proof definition admonition" id="def-tensors">
+<p class="admonition-title"><span class="caption-number">Definition 36 </span> (Tensors)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(V\)</span> be a vector space, often <span class="math notranslate nohighlight">\(V = \mathbb{R}^n\)</span>.
+A <strong>k-tensor</strong> <span class="math notranslate nohighlight">\(T\)</span> is a multilinear mapping from <span class="math notranslate nohighlight">\(V^k\)</span> to <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T :
+\left\{
+    \begin{array}{lr}
+        V^k \to \mathbb{R} \\
+        (x_1, x_2, \ldots, x_k) \mapsto T(x_1, x_2, \ldots, x_k)
+    \end{array}
+\right .\end{split}\]</div>
+<p>The set of all tensors over <span class="math notranslate nohighlight">\(V^k\)</span> is called <span class="math notranslate nohighlight">\(\mathcal{I}^k(V)\)</span>. This is again a vector space.
+The set <span class="math notranslate nohighlight">\(\mathcal{I}^1(V)\)</span> is just <span class="math notranslate nohighlight">\(V^*\)</span>, the dual space of <span class="math notranslate nohighlight">\(V\)</span>.
+A famous example of an n-tensor is the determinant <span class="math notranslate nohighlight">\(\det \in \mathcal{I}^n(\mathbb{R}^n)\)</span>.</p>
+</section>
+</div><div class="proof definition admonition" id="def-tensor-product">
+<p class="admonition-title"><span class="caption-number">Definition 37 </span> (Tensor Product)</p>
+<section class="definition-content" id="proof-content">
+<p>For <span class="math notranslate nohighlight">\(S \in \mathcal{I}^k(V)\)</span> and <span class="math notranslate nohighlight">\(T \in \mathcal{I}^l(V)\)</span> we define the <strong>tensor product</strong> of two
+tensors <span class="math notranslate nohighlight">\(S, T\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[(S \otimes T)(v_1, \ldots, v_k, w_1, \ldots, w_l) = S(v_1, \ldots, v_k) \, T(w_1, \ldots, w_l)\]</div>
+</section>
+</div><p>Some formulae:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;(S_1 + S_2) \otimes T = S_1 \otimes T + S_2 \otimes T \\
+&amp;S \otimes (T_1 + T_2) = S \otimes T_1 + S \otimes T_2 \\
+&amp;(aS) \otimes T = S \otimes (aT) = a(S \otimes T) \\
+&amp;(S \otimes T) \otimes U = S \otimes (T \otimes U)\end{split}\]</div>
+<div class="proof theorem admonition" id="thr-basis-k-tensors">
+<p class="admonition-title"><span class="caption-number">Theorem 44 </span> (Basis for k-Tensors)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{v_1, \ldots, v_n\}\)</span> be a basis for <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(\{\phi_1, \ldots, \phi_n\}\)</span> a basis for <span class="math notranslate nohighlight">\(V^*\)</span>, so:</p>
+<div class="math notranslate nohighlight">
+\[\phi_i(v_j) = \delta_{ij}\]</div>
+<p>Then, the set</p>
+<div class="math notranslate nohighlight">
+\[\{\phi_{i_1} \otimes \ldots \otimes \phi_{i_k} \mid 1 \le i_1, \ldots, i_k \le n \}\]</div>
+<p>is a basis for <span class="math notranslate nohighlight">\(\mathcal{I}^l(V)\)</span> and we have:</p>
+<div class="math notranslate nohighlight">
+\[\text{dim} \, \mathcal{I}^k(V) = n^k\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<p>Each basis vector <span class="math notranslate nohighlight">\(\phi_{i_1} \otimes \ldots \otimes \phi_{i_k}\)</span> can be thought of as a k-dimensional matrix
+with exactly one entry equal to one at position <span class="math notranslate nohighlight">\(i_1, \ldots, i_k\)</span> and all others equal to zero.
+Every k-tensor <span class="math notranslate nohighlight">\(T\)</span> is a sum of these:</p>
+<div class="math notranslate nohighlight">
+\[T = \sum_{i_1, \ldots, i_k = 1, \ldots, n} T_{i_1, \ldots, i_k}\, \phi_{i_1} \otimes \ldots \otimes \phi_{i_k}\]</div>
+<p>and we can think of <span class="math notranslate nohighlight">\(T\)</span> as a k-dimensional matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T = \begin{bmatrix}
+                   &amp;\vdots           \\
+           \cdots  &amp;T_{i_1, \ldots, i_k} &amp;\cdots    \\
+                   &amp;\vdots  
+    \end{bmatrix}_{i_1, \ldots, i_k = 1, \ldots, n}\end{split}\]</div>
+<p>This is, in terms of Pytorch or Numpy, a tensor of shape <span class="math notranslate nohighlight">\((n, \ldots, n)\)</span> (<span class="math notranslate nohighlight">\(k\)</span> times).
+For <span class="math notranslate nohighlight">\(k = 1\)</span> we get a vector and for <span class="math notranslate nohighlight">\(k = 2\)</span> a matrix. In Einstein notation, we can express <span class="math notranslate nohighlight">\(T\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[T(x_1,\ldots, x_k) = T_{i_1, \ldots, i_k} x_1^{i_1} \cdots x_k^{i_k}\]</div>
+<p>For <span class="math notranslate nohighlight">\(S \in \mathcal{I}^k(V)\)</span> and <span class="math notranslate nohighlight">\(T \in \mathcal{I}^l(V)\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[S \otimes T = S_{i_1, \ldots, i_k} T_{i_{k+1}, \ldots, i_{k+l}}\]</div>
+<div class="proof definition admonition" id="def-dual-functions">
+<p class="admonition-title"><span class="caption-number">Definition 38 </span> (Dual Functions)</p>
+<section class="definition-content" id="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[f: V \to W\]</div>
+<p>be a linear mapping from <span class="math notranslate nohighlight">\(V\)</span> into some other vector space <span class="math notranslate nohighlight">\(W\)</span>.
+Then the <strong>dual of f</strong> is a linear transformation <span class="math notranslate nohighlight">\(f^*\)</span> defined by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f^* :
+\left\{
+    \begin{array}{lr}
+        \mathcal{I}^k(W) \to \mathcal{I}^k(V) \\
+        T \mapsto f^*T
+    \end{array}
+\right .\end{split}\]</div>
+<p>where:</p>
+<div class="math notranslate nohighlight">
+\[f^*T(v_1, \ldots, v_k) = T(f(v_1), \ldots, f(v_k))\]</div>
+<p>It holds that:</p>
+<div class="math notranslate nohighlight">
+\[f^*(S \otimes T) = f^*S \otimes f^*T\]</div>
+</section>
+</div><div class="proof definition admonition" id="def-inner-product">
+<p class="admonition-title"><span class="caption-number">Definition 39 </span> (Inner Product)</p>
+<section class="definition-content" id="proof-content">
+<p>The <strong>inner product</strong> on a vector space <span class="math notranslate nohighlight">\(V\)</span> is a 2-tensor, denoted by <span class="math notranslate nohighlight">\(\langle \cdot, \cdot \rangle\)</span>,
+required to be symmetric and positive-definite:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\langle x, y \rangle = \langle y, x \rangle \\
+&amp;\langle x, x \rangle &gt; 0 \text{ if } x \ne 0\end{split}\]</div>
+<p>The matrix form of the inner product is simply the identity matrix:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\langle \cdot, \cdot \rangle = \begin{bmatrix}
+              1    &amp;       &amp;0   \\
+                   &amp;\ddots &amp;    \\
+              0    &amp;       &amp;1
+    \end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\langle x, y \rangle = \sum_{i = 1}^n x_i y_i\]</div>
+</section>
+</div><div class="proof definition admonition" id="def-alternating-tensors">
+<p class="admonition-title"><span class="caption-number">Definition 40 </span> (Alternating Tensors, Alt-Operator)</p>
+<section class="definition-content" id="proof-content">
+<p><strong>(a)</strong> A k-tensor <span class="math notranslate nohighlight">\(\omega\)</span> is called <strong>alternating</strong>, if the sign of <span class="math notranslate nohighlight">\(\omega\)</span> is changed by swapping any two variables.</p>
+<div class="math notranslate nohighlight">
+\[\omega(v_1, \ldots, v_i, \ldots, v_j, \ldots v_n) = -\omega(v_1, \ldots, v_j, \ldots, v_i, \ldots v_n)\]</div>
+<p>The determinant <span class="math notranslate nohighlight">\(\det\)</span> is famously alternating, the inner product is not.</p>
+<p><strong>(b)</strong>
+For <span class="math notranslate nohighlight">\(T \in \mathcal{I}^k(V)\)</span>, we define <span class="math notranslate nohighlight">\(\text{Alt}(T) \in \mathcal{I}^k(V)\)</span> through:</p>
+<div class="math notranslate nohighlight">
+\[\text{Alt}(T)(v_1, \ldots, v_k) = \frac{1}{k!} \sum_{\sigma \in S_k} \text{sgn}(\sigma) \, T(v_{\sigma_1}, \ldots, v_{\sigma_k})\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_k\)</span> is the set of all permutations of the numbers <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p><strong>(c)</strong> The set of all alternating tensors in <span class="math notranslate nohighlight">\(\mathcal{I}^k(V)\)</span> is denoted by <span class="math notranslate nohighlight">\(\Lambda^k(V)\)</span>.
+It is a subspace of <span class="math notranslate nohighlight">\(\mathcal{I}^k(V)\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-alternating-tensors-properties">
+<p class="admonition-title"><span class="caption-number">Theorem 45 </span> (Properties of Alternating Tensors)</p>
+<section class="theorem-content" id="proof-content">
+<p><strong>a)</strong> If <span class="math notranslate nohighlight">\(\omega \in \Lambda^k(V)\)</span>, then <span class="math notranslate nohighlight">\(\text{Alt}(\omega) =  \omega\)</span></p>
+<p><strong>b)</strong> If <span class="math notranslate nohighlight">\(T \in \mathcal{I}^k(V)\)</span>, then <span class="math notranslate nohighlight">\(\text{Alt}(T) \in \Lambda^k(V)\)</span></p>
+<p><strong>c)</strong> If <span class="math notranslate nohighlight">\(T \in \mathcal{I}^k(V)\)</span>, then <span class="math notranslate nohighlight">\(\text{Alt}(T) =  \text{Alt}(\text{Alt}(T))\)</span></p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof definition admonition" id="def-wedge-product">
+<p class="admonition-title"><span class="caption-number">Definition 41 </span> (Wedge Product)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\omega \in \Lambda^k(V)\)</span> and <span class="math notranslate nohighlight">\(\eta \in \Lambda^l(V)\)</span>.
+Then, in general, <span class="math notranslate nohighlight">\(\omega \otimes \eta \notin \Lambda^{k+l}(V)\)</span>. But the <strong>wedge product</strong></p>
+<div class="math notranslate nohighlight">
+\[\omega \wedge \eta = \frac{(k + l)!}{k! \, l!} \text{Alt}(\omega \otimes \eta)\]</div>
+<p>is clearly alternating.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-wedge-product-properties">
+<p class="admonition-title"><span class="caption-number">Theorem 46 </span> (Properties of the Wedge Product)</p>
+<section class="theorem-content" id="proof-content">
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof remark admonition" id="rem-wedge-product">
+<p class="admonition-title"><span class="caption-number">Remark 13 </span> (Wedge Product of 1-Forms)</p>
+<section class="remark-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\alpha, \beta \in \Lambda^1(V)\)</span>.
+Then <span class="math notranslate nohighlight">\(\alpha \wedge \beta \in \Lambda^2(V)\)</span> and:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\alpha \wedge \beta &amp;= 2 \, \text{Alt}(\alpha \otimes \beta) \\
+&amp;= \frac{2}{2}(\alpha  \beta - \beta  \alpha)\end{split}\]</div>
+<p>so:</p>
+<div class="math notranslate nohighlight">
+\[(\alpha \wedge \beta)(u, v) = \alpha(u)  \beta(v) - \beta(u) \alpha(v)\]</div>
+</section>
+</div><div class="proof theorem admonition" id="thr-basis-alternating-tensors">
+<p class="admonition-title"><span class="caption-number">Theorem 47 </span> (Basis for Alternating Tensors)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{v_1, \ldots, v_n\}\)</span> be a basis for <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(\{\phi_1, \ldots, \phi_n\}\)</span> a basis for <span class="math notranslate nohighlight">\(V^*\)</span>, so:</p>
+<div class="math notranslate nohighlight">
+\[\phi_i(v_j) = \delta_{ij}\]</div>
+<p>Then, the set</p>
+<div class="math notranslate nohighlight">
+\[\{\phi_{i_1} \wedge \ldots \wedge \phi_{i_k}\ \mid 1 \le i_1 &lt; \ldots &lt; i_k \le n \}\]</div>
+<p>is a basis for <span class="math notranslate nohighlight">\(\Lambda^k(V)\)</span> and we have:</p>
+<div class="math notranslate nohighlight">
+\[\text{dim}\, \Lambda^k(V) = \binom{n}{k}\]</div>
+<p>In particular,</p>
+<div class="math notranslate nohighlight">
+\[\text{dim}\, \Lambda^n(\mathbb{R}^n) = 1\]</div>
+<p>So, all alternating n-tensors on <span class="math notranslate nohighlight">\(V\)</span> are multiples of any non-zero one, e.g. <span class="math notranslate nohighlight">\(\det\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof theorem admonition" id="thr-basis-transformation">
+<p class="admonition-title"><span class="caption-number">Theorem 48 </span> (Basis Transformation)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{v_1, \ldots, v_n\}\)</span> be a basis for <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(\omega \in \Lambda^n(V)\)</span>, and <span class="math notranslate nohighlight">\(A \in \text{GL}_n(\mathbb{R})\)</span>.
+Then:</p>
+<div class="math notranslate nohighlight">
+\[\omega(A v_1, \ldots, A v_n) = \det A \, \omega(v_1, \ldots, v_n)\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof definition admonition" id="def-basis-orientation">
+<p class="admonition-title"><span class="caption-number">Definition 42 </span> (Basis Orientation)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{v_1, \ldots, v_n\}\)</span> be a basis for <span class="math notranslate nohighlight">\(V\)</span>, <span class="math notranslate nohighlight">\(A \in \text{GL}_n(\mathbb{R})\)</span>, and <span class="math notranslate nohighlight">\(w_i = Av_i\)</span>.
+If <span class="math notranslate nohighlight">\(\det A &gt; 0\)</span>, <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(w\)</span> are said to have the <strong>same orientation</strong>, and we clearly have:</p>
+<div class="math notranslate nohighlight">
+\[\omega(v_1, \ldots, v_n) \, \omega(w_1, \ldots, w_n) &gt; 0\]</div>
+</section>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./mathematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tangent-cotangent-n.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tangent and Cotangent Spaces</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="calculus-rn.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Differential Calculus</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

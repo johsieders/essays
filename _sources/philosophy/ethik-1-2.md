@@ -754,5 +754,3 @@ Aber Sartre **bejaht**:
 **Moderne Synthese** (individualistisch + sozial): Kant (Autonomie + Kosmopolitismus), Mill (Freiheit + Gemeinwohl), Hume (Sympathie)
 
 **Das 21. Jahrhundert**: Wie verbinden wir **individuelle Freiheit** (Sartre, Mill) mit **sozialem Zusammenhalt** (Konfuzius, Aristoteles, Thomas)? Die größte offene Frage!
-
----

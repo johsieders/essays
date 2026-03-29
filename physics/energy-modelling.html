@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Analyse und Modellierung moderner Energiesysteme &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/energy-modelling';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Physics Roadmap" href="25-physics-roadmap.html" />
+    <link rel="prev" title="Formal Logic" href="../computer-science/30-formal-logic.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-5.html">1.5 Spaltungen</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-3.html">2.3 Prediger vs. Sprüche Salomos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-4.html">2.4 Kant vs. Mill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-6.html">2.6 Platon vs. Hume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-4.html">4. Literatur</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Energie-Modellierung *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton.html">Newton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/tangent-cotangent-n.html">Tangent and Cotangent Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/tensors.html">Tensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus-rn.html">Differential Calculus in $\mathbb{R}^n$</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/physics/energy-modelling.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fphysics/energy-modelling.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/physics/energy-modelling.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Analyse und Modellierung moderner Energiesysteme</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-systemmodell">Das Systemmodell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-heavy-hitter-wer-rechnet-die-energiewende">1. Die “Heavy Hitter”: Wer rechnet die Energiewende?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypsa-das-werkzeug-fur-die-quantitative-analyse">2. PyPSA: Das Werkzeug für die quantitative Analyse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technisches-beispiel-optimierung-mit-co-2-limit-und-speicher">3. Technisches Beispiel: Optimierung mit <span class="math notranslate nohighlight">\(CO_2\)</span>-Limit und Speicher</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fazit-und-strategie">4. Fazit und Strategie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literaturverzeichnis-und-quellen">Literaturverzeichnis und Quellen</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analyse-und-modellierung-moderner-energiesysteme">
+<h1>Analyse und Modellierung moderner Energiesysteme<a class="headerlink" href="#analyse-und-modellierung-moderner-energiesysteme" title="Permalink to this heading">#</a></h1>
+<p>Johannes Siedersleben, Gemini 3, Claude Opus 4.6</p>
+<p>29.03.2026</p>
+<section id="das-systemmodell">
+<h2>Das Systemmodell<a class="headerlink" href="#das-systemmodell" title="Permalink to this heading">#</a></h2>
+<p>Das deutsche Energienetz wandelt sich von einer hierarchischen Top-down-Struktur zu einem hochkomplexen, dezentralen Ökosystem. Es lässt sich als ein Netzwerk aus vier Grundkomponenten beschreiben:</p>
+<ol class="arabic simple">
+<li><p><strong>Produzenten:</strong> Variable Erzeuger (PV, Wind) mit wetterabhängiger Charakteristik und steuerbare Kraftwerke (fossile Reserve) mit hohen Grenzkosten.</p></li>
+<li><p><strong>Konsumenten:</strong> Sektorengekoppelte Lasten (Wärmepumpen, E-Mobilität), die teilweise zeitlich flexibel steuerbar sind.</p></li>
+<li><p><strong>Speicher:</strong> Kurzfristige Heimspeicher (Batterien) und langfristige Speicherlösungen, die Arbitrage zwischen Preisspitzen ermöglichen.</p></li>
+<li><p><strong>Netzinfrastruktur:</strong> Die physikalische Verbindung, die lokale Ungleichgewichte ausgleicht.</p></li>
+</ol>
+<p>Die zentrale Frage ist die Suche nach dem <strong>idealen Preismodell</strong>, das lokale Optimierung (durch lokale Akteure) mit dem Gesamtinteresse des Netzes (Stabilität und <span class="math notranslate nohighlight">\(CO_2\)</span>-Reduktion) mathematisch in Einklang bringt.</p>
+</section>
+<hr class="docutils" />
+<section id="die-heavy-hitter-wer-rechnet-die-energiewende">
+<h2>1. Die “Heavy Hitter”: Wer rechnet die Energiewende?<a class="headerlink" href="#die-heavy-hitter-wer-rechnet-die-energiewende" title="Permalink to this heading">#</a></h2>
+<p>Es gibt spezialisierte Institute, die dieses Modell mit Millionen von Datenpunkten füttern, um den idealen Energiemix der Zukunft zu ermitteln. Die wichtigsten Akteure im deutschsprachigen Raum sind:</p>
+<ul class="simple">
+<li><p><strong>Fraunhofer ISE (Freiburg):</strong> Bekannt für die <strong>REMod-Studien</strong>. Hier liegt der Fokus auf der stundengenauen Kopplung von Strom, Wärme und Mobilität.</p></li>
+<li><p><strong>Agora Energiewende:</strong> Ein Think-Tank, der wissenschaftliche Lastflussdaten in politisch-ökonomische Szenarien übersetzt (z. B. <em>Klimaneutrales Deutschland 2045</em>).</p></li>
+<li><p><strong>Forschungszentrum Jülich (IEK-3):</strong> Nutzt das Modell <strong>ETHOS</strong>, um die räumliche Dimension (wo muss welches Kabel liegen?) und Wasserstoff-Infrastrukturen zu optimieren.</p></li>
+<li><p><strong>DIW Berlin:</strong> Analysiert primär die Marktmechanismen (Kapazitätsmärkte vs. Energy-Only-Market) und die spieltheoretischen Aspekte der Preisbildung.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="pypsa-das-werkzeug-fur-die-quantitative-analyse">
+<h2>2. PyPSA: Das Werkzeug für die quantitative Analyse<a class="headerlink" href="#pypsa-das-werkzeug-fur-die-quantitative-analyse" title="Permalink to this heading">#</a></h2>
+<p>Für Programmierer ist <strong>PyPSA</strong> (<em>Python for Power System Analysis</em>) der Goldstandard. Es ist eine Open-Source-Toolbox, die die physikalischen Gesetze der Energietechnik (Kirchhoffsche Regeln) direkt mit modernen Optimierungs-Solvern (wie HiGHS oder Gurobi) verknüpft.</p>
+<p><strong>Kernmerkmale von PyPSA:</strong></p>
+<ul class="simple">
+<li><p><strong>Lineare Optimierung:</strong> Es minimiert die Gesamtkosten (Investition + Betrieb) über alle Zeitschritte hinweg.</p></li>
+<li><p><strong>Flexibilität:</strong> Komponenten wie Batterien, <span class="math notranslate nohighlight">\(CO_2\)</span>-Constraints und variable Erzeugungsprofile lassen sich modular hinzufügen.</p></li>
+<li><p><strong>Transparenz:</strong> Da es auf Python (<code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) basiert, ist die gesamte Logik für den Nutzer auditierbar – im Gegensatz zu vielen proprietären “Blackbox”-Modellen.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="technisches-beispiel-optimierung-mit-co-2-limit-und-speicher">
+<h2>3. Technisches Beispiel: Optimierung mit <span class="math notranslate nohighlight">\(CO_2\)</span>-Limit und Speicher<a class="headerlink" href="#technisches-beispiel-optimierung-mit-co-2-limit-und-speicher" title="Permalink to this heading">#</a></h2>
+<p>Das folgende Skript zeigt, wie ein System unter einem strikten Emissionslimit reagiert. Der Solver nutzt das Backup-Kraftwerk nur noch als “Versicherung”, während der Speicher die Windflauten überbrückt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pypsa</span>
+
+<span class="c1"># 1. Setup network</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">pypsa</span><span class="o">.</span><span class="n">Network</span><span class="p">()</span>
+<span class="n">n</span><span class="o">.</span><span class="n">set_snapshots</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">))</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Bus&quot;</span><span class="p">,</span> <span class="s2">&quot;Main Grid&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2. Add Carriers (defining CO2 intensity in t/MWh)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Carrier&quot;</span><span class="p">,</span> <span class="s2">&quot;wind&quot;</span><span class="p">,</span> <span class="n">co2_emissions</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Carrier&quot;</span><span class="p">,</span> <span class="s2">&quot;gas&quot;</span><span class="p">,</span> <span class="n">co2_emissions</span><span class="o">=</span><span class="mf">0.19</span><span class="p">)</span> <span class="c1"># Approximate t/MWh for CCGT</span>
+
+<span class="c1"># 3. Add Load</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Load&quot;</span><span class="p">,</span> <span class="s2">&quot;Town&quot;</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="s2">&quot;Main Grid&quot;</span><span class="p">,</span> <span class="n">p_set</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="c1"># 4. Add Renewable Generator (Wind)</span>
+<span class="n">wind_data</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Generator&quot;</span><span class="p">,</span> <span class="s2">&quot;Wind Park&quot;</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="s2">&quot;Main Grid&quot;</span><span class="p">,</span> <span class="n">carrier</span><span class="o">=</span><span class="s2">&quot;wind&quot;</span><span class="p">,</span>
+      <span class="n">p_nom</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">p_max_pu</span><span class="o">=</span><span class="n">wind_data</span><span class="p">,</span> <span class="n">marginal_cost</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># 5. Add Fossil Backup (The &quot;Insurance&quot;)</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Generator&quot;</span><span class="p">,</span> <span class="s2">&quot;Gas Turbine&quot;</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="s2">&quot;Main Grid&quot;</span><span class="p">,</span> <span class="n">carrier</span><span class="o">=</span><span class="s2">&quot;gas&quot;</span><span class="p">,</span>
+      <span class="n">p_nom</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">marginal_cost</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># High operational cost</span>
+
+<span class="c1"># 6. Add Battery Storage</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;StorageUnit&quot;</span><span class="p">,</span> <span class="s2">&quot;Battery&quot;</span><span class="p">,</span> <span class="n">bus</span><span class="o">=</span><span class="s2">&quot;Main Grid&quot;</span><span class="p">,</span>
+      <span class="n">p_nom</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">max_hours</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>  <span class="c1"># 50 MW / 200 MWh</span>
+      <span class="n">efficiency_store</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">efficiency_dispatch</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span>
+      <span class="n">marginal_cost</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># 7. Add a Global Constraint for CO2</span>
+<span class="c1"># Limit total emissions for the 24h period to 50 tons</span>
+<span class="n">n</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;GlobalConstraint&quot;</span><span class="p">,</span> <span class="s2">&quot;co2_limit&quot;</span><span class="p">,</span>
+      <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;primary_energy&quot;</span><span class="p">,</span>
+      <span class="n">carrier_attribute</span><span class="o">=</span><span class="s2">&quot;co2_emissions&quot;</span><span class="p">,</span>
+      <span class="n">sense</span><span class="o">=</span><span class="s2">&quot;&lt;=&quot;</span><span class="p">,</span>
+      <span class="n">constant</span><span class="o">=</span><span class="mf">50.0</span><span class="p">)</span>
+
+<span class="c1"># 7. Solve</span>
+<span class="n">n</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">solver_name</span><span class="o">=</span><span class="s1">&#39;highs&#39;</span><span class="p">)</span>
+
+<span class="c1"># 8. Analysis</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total CO2 Emissions: </span><span class="si">{</span><span class="n">n</span><span class="o">.</span><span class="n">generators_t</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;Gas Turbine&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.19</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> tons&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wind share: </span><span class="si">{</span><span class="n">n</span><span class="o">.</span><span class="n">generators_t</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;Wind Park&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">loads</span><span class="o">.</span><span class="n">p_set</span><span class="p">[</span><span class="s1">&#39;Town&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">snapshots</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+
+<span class="c1"># How much did the battery actually help?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">storage_units_t</span><span class="o">.</span><span class="n">state_of_charge</span><span class="p">)</span>
+
+<span class="c1"># What was the &quot;market price&quot; at each hour?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">buses_t</span><span class="o">.</span><span class="n">marginal_price</span><span class="p">)</span>
+
+<span class="c1"># Did we hit the CO2 wall?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">global_constraints</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;co2_limit&quot;</span><span class="p">,</span> <span class="s2">&quot;mu&quot;</span><span class="p">])</span> <span class="c1"># Shadow price of CO2</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="fazit-und-strategie">
+<h2>4. Fazit und Strategie<a class="headerlink" href="#fazit-und-strategie" title="Permalink to this heading">#</a></h2>
+<p>Die optimale Strategie für einen Akteur lässt sich durch den <strong>Schattenpreis</strong> der Optimierung ermitteln. Wenn das <span class="math notranslate nohighlight">\(CO_2\)</span>-Limit oder die Netzengpässe binden, steigt der Preis drastisch an.
+Dieses Signal ist die Basis für dynamische Tarife: Es motiviert dich lokal dazu, dein Auto zu laden, wenn Wind im Überfluss vorhanden ist, und den Speicher zu nutzen, wenn das fossile “Residuum” einspringen müsste. Ein dirigistischer Eingriff von oben ist bei korrekt gesetzten Preissignalen theoretisch nicht notwendig.</p>
+</section>
+<hr class="docutils" />
+<section id="literaturverzeichnis-und-quellen">
+<h2>Literaturverzeichnis und Quellen<a class="headerlink" href="#literaturverzeichnis-und-quellen" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Fraunhofer ISE (2021):</strong> <em>Wege zu einem klimaneutralen Energiesystem.</em> <a class="reference external" href="https://www.ise.fraunhofer.de">ise.fraunhofer.de</a></p></li>
+<li><p><strong>Brown, T. et al. (2018):</strong> <em>PyPSA: Python for Power System Analysis.</em> Journal of Open Research Software. <a class="reference external" href="https://pypsa.org">pypsa.org</a></p></li>
+<li><p><strong>Agora Energiewende (2023):</strong> <em>Klimaneutrales Deutschland 2045.</em> <a class="reference external" href="https://www.agora-energiewende.de">agora-energiewende.de</a></p></li>
+<li><p><strong>Bundesnetzagentur (2024):</strong> <em>Szenariorahmen zum Netzentwicklungsplan 2037/2045.</em> <a class="reference external" href="https://www.netzentwicklungsplan.de">netzentwicklungsplan.de</a></p></li>
+<li><p><strong>Kempfert, C. (2023):</strong> <em>Kurzschluss. Wie wir die Energiewende an die Wand fahren.</em> (Zur kritischen Einordnung der ökonomischen Narrative).</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../computer-science/30-formal-logic.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Formal Logic</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="25-physics-roadmap.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Physics Roadmap</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#das-systemmodell">Das Systemmodell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#die-heavy-hitter-wer-rechnet-die-energiewende">1. Die “Heavy Hitter”: Wer rechnet die Energiewende?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypsa-das-werkzeug-fur-die-quantitative-analyse">2. PyPSA: Das Werkzeug für die quantitative Analyse</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technisches-beispiel-optimierung-mit-co-2-limit-und-speicher">3. Technisches Beispiel: Optimierung mit <span class="math notranslate nohighlight">\(CO_2\)</span>-Limit und Speicher</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fazit-und-strategie">4. Fazit und Strategie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literaturverzeichnis-und-quellen">Literaturverzeichnis und Quellen</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

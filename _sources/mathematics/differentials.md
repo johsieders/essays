@@ -703,7 +703,7 @@ Let $f:\mathbb{R}^n\to \mathbb{R}$ and assume $\partial^{\otimes (k+1)} f$ conti
 Let $h\in \mathbb{R}^n$ such that $x+h \in U$. Then there exists a $\xi \in [x,x+h]$ such that:
 
 ```{math}
-:label: eq-taylor-n-dim
+:label: eq-taylor-n-dim-hilbert
 
 f(x+h) &= \sum_{j=0}^k \frac{1}{k!} \langle \partial^{\otimes j}f(x), h^{\otimes j} \rangle +
           \frac{1}{(k+1)!} \left \langle \partial^{\otimes (k+1)} f(\xi), h^{\otimes (k+1)} \right \rangle 
@@ -873,7 +873,7 @@ V2.
 ## Derivatives on Hilbert Spaces
 
 ````{prf:Definition} Derivatives
-:label: def-derivatives
+:label: def-derivatives-hilbert
 
 Let $F:U \to V$. The **derivative** $\partial F(x)$ of $F$ in $x$ is defined as 
 
@@ -883,7 +883,7 @@ Let $F:U \to V$. The **derivative** $\partial F(x)$ of $F$ in $x$ is defined as
 or, equivalently: 
 
 ```{math}
-:label: equ-derivatives
+:label: equ-derivatives-hilbert
  
 F(x+h) - F(x) = \partial F(x)\, h + o(h)
 ```
@@ -901,7 +901,7 @@ The derivative of $F$ in $x$ is a linear mapping
 \right .
 ```
 
-that approximates the function $F$ locally in $x$ as shown in {eq}`equ-derivatives`.
+that approximates the function $F$ locally in $x$ as shown in {eq}`equ-derivatives-hilbert`.
 We will show that under weak assumptions, $\partial F$ can be calculated as 
 
 ```{math}
@@ -927,13 +927,13 @@ that maps a vector $x$ to the linear mapping  $\partial F(x)$:
 ````
 
 ````{prf:Definition} Uniqueness of the Derivative
-:label: uniquness-derivative
+:label: uniquness-derivative-hilbert
 
 The derivative is unique. 
 ````
 
 ````{prf:proof} 
-Assume that there are two linear mappings $D, E$ satisfying {eq}`equ-derivatives`:
+Assume that there are two linear mappings $D, E$ satisfying {eq}`equ-derivatives-hilbert`:
 
 ```{math}
 &F(x+h) - F(x) = D \, h + o(h) \\
@@ -951,7 +951,7 @@ which shows that $D = E$.
 
 
 ````{prf:Theorem} Chain Rule
-:label: chain-rule
+:label: chain-rule-hilbert
 
 Let $G:\mathbb{R}^n \to \mathbb{R}^m$ be differentiable in x and 
 $F:\mathbb{R}^m \to \mathbb{R}^k$ differentiable in G(x). 

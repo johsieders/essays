@@ -1,0 +1,1552 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Differential Calculus &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/calculus-rn';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Was the Empire Holy, Roman, or an Empire at All?" href="../history/8-holy_roman_empire.html" />
+    <link rel="prev" title="Tensors" href="tensors.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/westfield2.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/westfield2.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-5.html">1.5 Spaltungen</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-3.html">2.3 Prediger vs. Sprüche Salomos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-4.html">2.4 Kant vs. Mill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-6.html">2.6 Platon vs. Hume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-4.html">4. Literatur</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/energy-modelling.html">Energie-Modellierung *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/newton.html">Newton</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tangent-cotangent-n.html">Tangent and Cotangent Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tensors.html">Tensors</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Differential Calculus in $\mathbb{R}^n$</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/calculus-rn.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/calculus-rn.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/mathematics/calculus-rn.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Differential Calculus</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integrals">Line Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-frobenius-product">Tensors, Frobenius Product</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-calculus-in-mathbb-r-n">Vector Calculus in <span class="math notranslate nohighlight">\(\mathbb{R^n\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-3-directional-derivatives">Definition 3 (Directional Derivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-2-chain-rule">Theorem 2 (Chain Rule)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-2">Definition 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-3-jacobian-and-partial-derivatives">Theorem 3 (Jacobian and Partial Derivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-4-partial-derivatives-are-interchangeable">Theorem 4 (Partial derivatives are interchangeable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-operators">Differential Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-formulae">Some Formulae</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-4-1-3-dimensions-1">Notation 4 (1+3 Dimensions) { 1}</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-4-stationary-points-1">Definition 4 (Stationary Points) 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-3-local-extrema">Theorem 3 (Local Extrema)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-4-derivative-of-the-inverse-function">Theorem 4 (Derivative of the Inverse Function)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-5-derivative-of-implicit-functions">Theorem 5 (Derivative of Implicit Functions)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus-of-variations">Calculus of Variations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-4-functional-derivatives">Definition 4 (Functional Derivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-5-dirac-function">Definition 5 (Dirac Function)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#easy-examples">Easy Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-rule">Product Rule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule">Chain Rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-on-hilbert-spaces">Derivatives on Hilbert Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule-product-pule">Chain Rule, Product Pule</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>05.03.2026</p>
+<section class="tex2jax_ignore mathjax_ignore" id="differential-calculus">
+<h1>Differential Calculus<a class="headerlink" href="#differential-calculus" title="Permalink to this heading">#</a></h1>
+<p><em>Johannes Siedersleben, April 2026</em></p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>WORK IN PROGRESS</p>
+</section>
+<section id="line-integrals">
+<h2>Line Integrals<a class="headerlink" href="#line-integrals" title="Permalink to this heading">#</a></h2>
+<div class="proof remark admonition" id="rem-very-easy-example">
+<p class="admonition-title"><span class="caption-number">Remark 14 </span> (A Very Easy Example)</p>
+<section class="remark-content" id="proof-content">
+<p>Let a curve <span class="math notranslate nohighlight">\(\gamma\)</span> be given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\phi(t) = \begin{bmatrix}
+               t  \\
+               t  
+    \end{bmatrix}
+\\
+&amp;0 \le t \le 1\end{split}\]</div>
+<p>so:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\dot{\phi}(t) = \begin{bmatrix}
+               1  \\
+               1  
+    \end{bmatrix}
+\\
+&amp;\| \dot{\phi}(t) \| = \sqrt{2} \end{split}\]</div>
+<p>With <span class="math notranslate nohighlight">\(f(x, y) = x y\)</span> we get</p>
+<div class="math notranslate nohighlight">
+\[\int_0^1 f(\phi(t)) \| \dot{\phi}(t) \| \, dt = \sqrt{2} \int_0^1 t^2 \, dt = \frac{\sqrt{2}}{3}\]</div>
+<p>Parameterizing on the path length:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;t(s) = \frac{s}{\sqrt{2}} \\
+&amp;\dot{t}(s) = \frac{1}{\sqrt{2}} \\
+&amp;0 \le s \le \sqrt{2}\end{split}\]</div>
+<p>gives:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\int_0^1 f(\phi(t)) \| \dot{\phi}(t) \| \, dt \\
+&amp;= \int_0^{\sqrt{2}} f(\phi(t(s))) \| \dot{\phi}(t(s)) \| \dot{t}(s) \, ds \\
+&amp;= \frac{1}{\sqrt{2}} \int_0^{\sqrt{2}} f(\phi(t(s))) \| \dot{\phi}(t(s)) \| \, ds \\
+&amp;= \frac{1}{\sqrt{2}} \int_0^{\sqrt{2}} \frac{s^2}{2} \sqrt{2} \, ds \\
+&amp;= \frac{\sqrt{2}}{3}\end{split}\]</div>
+</section>
+</div><p>Let <span class="math notranslate nohighlight">\(A\)</span> be a real (m x n)-Matrix, so <span class="math notranslate nohighlight">\(A^\intercal\)</span> is (n x m).
+<span class="math notranslate nohighlight">\(A\)</span> defines a linear mapping <span class="math notranslate nohighlight">\(A:\mathbb{R}^m \to \mathbb{R}^n\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A(x) = A^\intercal x = \begin{bmatrix}
+                \vdots           \\
+                \sum _{i=1}^m a_{ij}x_i    \\
+                \vdots  
+    \end{bmatrix}_{j = 1, \ldots, n}\end{split}\]</div>
+<p>Likewise,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x(A) = x^\intercal A = \begin{bmatrix}
+                \vdots           \\
+                \sum _{i=1}^m x_i a_{ij}    \\
+                \vdots  
+    \end{bmatrix}_{j = 1, \ldots, n}\end{split}\]</div>
+<p>So, every vector and every matrix can also be considered a linear mapping defined as above.
+Physicists prefer the bracket notation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;\langle A | x \rangle  = A^\intercal x = A(x)  \\
+&amp;\langle x | A \rangle  = x^\intercal A = x(A) \\
+&amp;\langle B | A | x \rangle = \langle \langle B | A \rangle | x \rangle = \langle B | \langle A | x \rangle \rangle = B^\intercal A^\intercal x = (A B)^\intercal x = B(A(x))
+&amp;\langle B | A | x \rangle = \langle \langle B | A \rangle | x \rangle = \langle B | \langle A | x \rangle \rangle = B^\intercal A^\intercal x = (A B)^\intercal x = B(A(x))\end{split}\]</div>
+<p>To the right of the bar is the argument, and to the left is the function.
+No need to care about transpositions. We normally use brackets, but keep in mind that there are three alternative ways to express the same thing.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\langle B | A \rangle = \begin{bmatrix}
+                   &amp;\vdots           \\
+           \cdots  &amp;\sum_{j=1}^n a_{ij}b_{jk} &amp;\cdots    \\
+                   &amp;\vdots  
+    \end{bmatrix}_{i = 1, \ldots, m; \, k = 1, \ldots, p}\end{split}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(B\)</span> be a <span class="math notranslate nohighlight">\((n \times p)\)</span>-Matrix, so <span class="math notranslate nohighlight">\(B^\intercal\)</span> is <span class="math notranslate nohighlight">\((p \times n)\)</span>. <span class="math notranslate nohighlight">\(B\)</span> defines a linear mapping <span class="math notranslate nohighlight">\(B:\mathbb{R}^n \to \mathbb{R}^p\)</span>.
+The composition <span class="math notranslate nohighlight">\(B\circ A: \mathbb{R}^m \to \mathbb{R}^p\)</span> is a linear mapping defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(B\circ A)(x) &amp;= \langle B\circ A| x \rangle = \langle B| \langle A| x \rangle \rangle 
+= \begin{bmatrix}
+                \vdots           \\
+                \sum_{i=1}^m \sum_{j=1}^n a_{ij}b_{jk} x_i    \\
+                \vdots  
+    \end{bmatrix}_{k = 1, \ldots, p}\end{split}\]</div>
+<p>so:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B\circ A = \begin{bmatrix}
+                   &amp;\vdots           \\
+           \cdots  &amp;\sum_{j=1}^n a_{ij}b_{jk} &amp;\cdots    \\
+                   &amp;\vdots  
+    \end{bmatrix}_{i = 1, \ldots, m; \, k = 1, \ldots, p}\end{split}\]</div>
+<p>The matrix <span class="math notranslate nohighlight">\((A\circ B)^\intercal\)</span> is <span class="math notranslate nohighlight">\((n \times p)\)</span>. This is important for the chain rule. The case <span class="math notranslate nohighlight">\(p = 1\)</span> is frequent:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\langle b | \langle A | x
+\begin{bmatrix}
+                b_1           \\
+                \vdots    \\
+                b_n  
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[(b\circ A)(x)= b^\intercal A^\intercal x =(A b)^\intercal x= \sum _{i=1}^m \sum _{j=1}^n a_{ij} b_j x_i\]</div>
+<section id="tensors-frobenius-product">
+<h3>Tensors, Frobenius Product<a class="headerlink" href="#tensors-frobenius-product" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(x\)</span> <span class="math notranslate nohighlight">\(\in \)</span> <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, <span class="math notranslate nohighlight">\(y\)</span> <span class="math notranslate nohighlight">\(\in \)</span> <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+x\unicode{f3da}y =x\cdot y\intercal= \left(
+\begin{array}{cccc}
+ x_1y_1 &amp; . &amp; . &amp; x_1y_m 
+ . &amp;   &amp;   &amp; . 
+ . &amp;   &amp;   &amp; . 
+ x_ny_1 &amp; . &amp; . &amp; x_ny_m 
+\end{array}
+\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{$\quad $        }x^{\unicode{f3da}q}= \left(
+\begin{array}{ccc}
+ . &amp; . &amp; . 
+ . &amp; x_{j_1}x_{j_2}\ldots x_{j_q} &amp; .  
+ . &amp; . &amp; . 
+\end{array}
+\right)_{j_1,\ldots,j_q=1,\ldots,n }
+\]</div>
+<p><span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> Let S, T be tensors with shape = <span class="math notranslate nohighlight">\(\left(n_1, n_2,\ldots, n_q\right)\)</span>. Then the Frobenius product <span class="math notranslate nohighlight">\(\langle S,T\rangle\)</span>of <span class="math notranslate nohighlight">\(S\)</span>and <span class="math notranslate nohighlight">\(T\)</span>
+is defined by</p>
+<div class="math notranslate nohighlight">
+\[
+\langle S,T\rangle =\sum _{j_q=1}^{n_q} \ldots\sum _{j_2=1}^{n_2} \sum _{j_1=1}^{n_1} s_{j_q,\ldots,j_1}t_{j_1,\ldots,j_q}
+\]</div>
+<p><span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> or, in Einstein notation:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle S,T\rangle =s_{j_1,\ldots,j_q}t^{j_1,\ldots,j_q}
+\]</div>
+<p>So, <span class="math notranslate nohighlight">\(h^{\unicode{f3da}q\)</span> is a tensors with shape = <span class="math notranslate nohighlight">\((n, n, \ldots,n)\)</span> with <span class="math notranslate nohighlight">\(q\)</span> times <span class="math notranslate nohighlight">\(n\)</span>. With an <span class="math notranslate nohighlight">\((n\times n)\)</span>-matrix <span class="math notranslate nohighlight">\(A\)</span> we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\quad \quad h\intercalA h =\left\langle A,h^{\unicode{f3da}2}\right\rangle =\left\langle A\intercal,h^{\unicode{f3da}2}\right\rangle =h\intercalA\intercal
+h
+\]</div>
+</section>
+</section>
+<section id="vector-calculus-in-mathbb-r-n">
+<h2>Vector Calculus in <span class="math notranslate nohighlight">\(\mathbb{R^n\)</span><a class="headerlink" href="#vector-calculus-in-mathbb-r-n" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>be a function. A linear mapping <span class="math notranslate nohighlight">\(\text{DF}(x):\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span> is the derivative
+of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span>, iff</p>
+<div class="math notranslate nohighlight">
+\[
+F(x+h)-F(x)=\text{DF}(x)(h)+o(h)=\text{DF}(x)\intercalh+o(h)
+\]</div>
+<p><span class="math notranslate nohighlight">\(\text{DF}(x)\)</span> is also called the Jacobian of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<section id="definition-3-directional-derivatives">
+<h3>Definition 3 (Directional Derivatives)<a class="headerlink" href="#definition-3-directional-derivatives" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(x,h \in \mathbb{R}^n\)</span>,  <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>be differentiable in <span class="math notranslate nohighlight">\(x\)</span>and defined in an open environment of <span class="math notranslate nohighlight">\(x\)</span>.
+The directional derivative of <span class="math notranslate nohighlight">\(F\)</span> with respect to <span class="math notranslate nohighlight">\(h\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _yF(x)(h)=lim_{\epsilon \to 0}\frac{1}{h}(F(x+\epsilon  h)-F(x))\in \mathbb{R}^m
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=\frac{d}{d\epsilon }F(x+\epsilon  h)|_{\epsilon =0}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=\partial F(x)\intercalh
+\]</div>
+<p>The first equation is the definition of the directional derivative, the second definition of the derivative in one dimension, and the third follows
+from the chain rule. If <span class="math notranslate nohighlight">\(b_j\)</span> is the j-th basis vector, then</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _{b_j}F(x)=\partial _jF(x)
+\]</div>
+</section>
+<section id="theorem-2-chain-rule">
+<h3>Theorem 2 (Chain Rule)<a class="headerlink" href="#theorem-2-chain-rule" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>be differentiable in x and <span class="math notranslate nohighlight">\(G:\mathbb{R}^m\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^n\)</span>differentiable in F(x).
+Then <span class="math notranslate nohighlight">\(G\circ F:U\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( W\)</span>is differentiable in <span class="math notranslate nohighlight">\(x\)</span> and we have:</p>
+<div class="math notranslate nohighlight">
+\[
+D(G\circ F)(x)= \text{DG}(F(x))\circ \text{DF}(x)
+\]</div>
+<p>or, omitting the argument:</p>
+<div class="math notranslate nohighlight">
+\[
+D(G\circ F)= \text{DG}(F)\circ \text{DF}\text{  }
+\]</div>
+<p>Note that:</p>
+<div class="math notranslate nohighlight">
+\[
+(\text{DG}(F)\circ \text{DF} )(h)=\text{DG}(F)(\text{DF} (h))=\text{DG}(F)\intercal\cdot \text{DF}\intercalh
+\]</div>
+<p>You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
+The case <span class="math notranslate nohighlight">\(p = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+D(g\circ F)(h)=\partial g\intercal\dot{F}\intercalh\text{               }(1\times 1)\intercal
+\]</div>
+<p>So, for instance:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _t(g(\text{tx}))=\partial g\intercalx\text{              }
+\]</div>
+<p>or, with an <span class="math notranslate nohighlight">\(n\times m\)</span>-Matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _t(g(t A))=\partial g\intercalA\text{     }
+\]</div>
+<p>Proof:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+G\circ F(x+h)=G(F(x)+ \text{DF}(x)(h)+o(h))\\\text{$\quad $            }=G(F(x))+\text{DG}(F(x))( \text{DF}(x)(h)+o(h))+o(h)\\\text{                      }=G\circ F(x)+(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+\end{aligned}\end{align} \]</div>
+<p>So:</p>
+<div class="math notranslate nohighlight">
+\[
+G\circ F(x+h)-G\circ F(x)=(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+\]</div>
+<p>which proves the assertion via uniqueness.</p>
+</section>
+<section id="definition-2">
+<h3>Definition 2<a class="headerlink" href="#definition-2" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>be a function. The partial derivative of <span class="math notranslate nohighlight">\(F_i\)</span> with respect to <span class="math notranslate nohighlight">\(x_j\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _jF_i\left(x_1,\ldots,x_j,\ldotsx_n\right)=lim_{h\text{-$&gt;$0}\frac{1}{h}\left(F_i\left(x_1,\ldots,x_j+h,\ldotsx_1\right)-F_i\left(x_1,\ldots,x_j,\ldotsx_n\right)\right)
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\left(j_1, j_2,\ldots, j_q\right)\)</span> be a sequence of indices. The partial derivative of <span class="math notranslate nohighlight">\(F_i\)</span> with respect to <span class="math notranslate nohighlight">\(x_{j_1},x_{j_2},\ldots,
+x_{j_q\)</span> is recursively defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _{j_1}\partial _{j_2}\ldots\partial _{j_q}F_i\left(x_1,.,x_j,.x_n\right)=lim_{h\text{-$&gt;$0}\frac{1}{h}\left(\partial _{j_2}\ldots\partial
+_{j_q}F_i\left(x_1,.,x_{j_1}+h,.,x_n\right)-\partial _{j_2}\ldots\partial _{j_q}F_i\left(x_1,.,x_{j_1},.,x_n\right)\right)
+\]</div>
+</section>
+<section id="theorem-3-jacobian-and-partial-derivatives">
+<h3>Theorem 3 (Jacobian and Partial Derivatives)<a class="headerlink" href="#theorem-3-jacobian-and-partial-derivatives" title="Permalink to this heading">#</a></h3>
+<p>a) If <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\text{DF}(x)=\partial \unicode{f3da}F(x)\text{    }(n\times m)
+\]</div>
+<p>which is the same as (omitting the argument <span class="math notranslate nohighlight">\(x\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[
+\text{DF}_{\text{ji}} =\partial _jF_i (j=1,\ldots,n;i=1,\ldots,m)
+\]</div>
+<p>So:</p>
+<div class="math notranslate nohighlight">
+\[
+F(x+h)-F(x)=\partial \unicode{f3da}F(x)\intercalh+o(h)
+\]</div>
+<p>b) If all <span class="math notranslate nohighlight">\(\partial _jF_i\)</span> are continuous in an open environment <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(x\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable in <span class="math notranslate nohighlight">\(U\)</span>, and (a) holds for all <span class="math notranslate nohighlight">\(y\in
+U\)</span>.</p>
+</section>
+<section id="theorem-4-partial-derivatives-are-interchangeable">
+<h3>Theorem 4 (Partial derivatives are interchangeable)<a class="headerlink" href="#theorem-4-partial-derivatives-are-interchangeable" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^1\)</span>be a function. If <span class="math notranslate nohighlight">\(\partial _i\partial _jf\)</span> and <span class="math notranslate nohighlight">\(\partial _j\partial _if\)</span> are continuously differentiable
+in an open environment of x, then</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _i\partial _jf(x)=\partial _j\partial _if(x)
+\]</div>
+<p>So, if all <span class="math notranslate nohighlight">\(\partial _i\partial _jf\)</span> are continuously differentiable in an open environment of x, then Theorem 3 applies and we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial ^{\unicode{f3da}2}=\left(\partial ^{\unicode{f3da}2}\right)\intercal
+\]</div>
+<p>which is the same as</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _i\partial _jf(x)=\partial _j\partial _if(x)\text{  }(i,j=1,\ldots,n)
+\]</div>
+<p>More generally, multiple derivative, such as</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _{j_1}\partial _{j_2}\ldots\partial _{j_q}f(x)
+\]</div>
+<p>do not depend on the order of the indices, or, equivalently, the tensor of partial derivatives is fully symmetric.</p>
+</section>
+<section id="differential-operators">
+<h3>Differential Operators<a class="headerlink" href="#differential-operators" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+f:\mathbb{R}^n\text{-$&gt;$ \mathbb{R}\\F:\mathbb{R}^n\text{-$&gt;$ \mathbb{R}^m
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+\partial = \left(
+\begin{array}{c}
+ \partial _1 
+ . 
+ . 
+ \partial _n 
+\end{array}
+\right) =\nabla , \partial f=\partial ^{\unicode{f3da}1}f=\nabla f=\text{grad} f\text{    }(\text{gradient})\\\partial ^{\unicode{f3da}2}= \left(
+\begin{array}{cccc}
+ \partial _1\partial _1 &amp; . &amp; . &amp; \partial _1\partial _n 
+ . &amp;   &amp;   &amp; . 
+ . &amp;   &amp;   &amp; . 
+ \partial _n\partial _1 &amp; . &amp; . &amp; \partial _n\partial _n 
+\end{array}
+\right)=H, \partial ^{\unicode{f3da}2}f=\text{Hf}\text{       }(\text{Hessian})\\\partial ^{\unicode{f3da}q}= \left(
+\begin{array}{ccc}
+ . &amp; . &amp; . 
+ . &amp; \partial _{j_1}\partial _{j_2}\ldots \partial _{j_q} &amp; .  
+ . &amp; . &amp; . 
+\end{array}
+\right)_{j_1,\ldots,j_q=1,\ldots,n }\text{  }(\text{tensor} \text{of} \text{partial} \text{derivatives} \text{of} \text{rank} q)
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{DF}=\partial \unicode{f3da}F = \left(
+\begin{array}{cccc}
+ \partial _1F_1 &amp; . &amp; . &amp; \partial _1F_m 
+ . &amp;   &amp;   &amp; . 
+ . &amp;   &amp;   &amp; . 
+ \partial _nF_1 &amp; . &amp; . &amp; \partial _nF_m 
+\end{array}
+\right)=\text{JF}\text{                       }(\text{Jacobian})
+\]</div>
+<p>There is the dot notation for <span class="math notranslate nohighlight">\(n=1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial \unicode{f3da}F=\left(
+\begin{array}{cccc}
+ \partial F_1 &amp; . &amp; . &amp; \partial F_m 
+\end{array}
+\right)=\dot{F}
+\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+D^2F=\partial ^{\unicode{f3da}2}\unicode{f3da}F =\left(
+\begin{array}{ccc}
+ . &amp; . &amp; . 
+ . &amp;  \partial _k\partial _jF_i &amp; . 
+ . &amp;  . &amp; . 
+\end{array}
+\right)_{j=1,\ldotsnk=1,\ldotsni=1,\ldots,m}=\left(
+\begin{array}{cccc}
+ \partial _1\text{DF} &amp; . &amp; . &amp; \partial _n\text{DF} 
+\end{array}
+\right)\text{    }(\text{tensor} \text{of} \text{partial} \text{derivatives} \text{of} \text{rank} 2)\\\partial ^{\unicode{f3da}q}\unicode{f3da}F= \left(
+\begin{array}{ccc}
+ . &amp; . &amp; . 
+ . &amp; \partial _{j_1}\partial _{j_2}\ldots \partial _{j_qF_i} &amp; .  
+ . &amp; . &amp; . 
+\end{array}
+\right)_{j_1,\ldots,j_q=1,\ldots,n i=1,\ldotsm}
+\end{aligned}\end{align} \]</div>
+<p>The terms <span class="math notranslate nohighlight">\(\partial ,\partial ^{\unicode{f3da}q\)</span> and their aliases (<span class="math notranslate nohighlight">\(\nabla \)</span>, grad, H, D, J) are operators that map a scalar- or vector-valued
+function (<span class="math notranslate nohighlight">\(f\)</span> or <span class="math notranslate nohighlight">\(F\)</span>) to a  tensor-valued function, such as <span class="math notranslate nohighlight">\(\partial f\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\times \mathbb{R}^m\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^p\)</span>be a function of two vectors. Then we write, assuming that the arguments are denoted
+by <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+\partial _x=\left(
+\begin{array}{c}
+ \partial _1 
+ . 
+ . 
+ \partial _n 
+\end{array}
+\right), D_xF(x,y)=\partial _x\unicode{f3da}F(x,y)=\left(
+\begin{array}{cccc}
+ \partial _1F_1 &amp; . &amp; . &amp; \partial _1F_p 
+ . &amp;   &amp;   &amp; . 
+ . &amp;   &amp;   &amp; . 
+ \partial _nF_1 &amp; . &amp; . &amp; \partial _nF_p 
+\end{array}
+\right)\\\partial _y=\left(
+\begin{array}{c}
+ \partial _{n+1} 
+ . 
+ . 
+ \partial _{n+m} 
+\end{array}
+\right),D_yF(x,y)=\partial _y\unicode{f3da}F(x,y)=\left(
+\begin{array}{cccc}
+ \partial _{n+1}F_1 &amp; . &amp; . &amp; \partial _{n+1}F_p 
+ . &amp;   &amp;   &amp; . 
+ . &amp;   &amp;   &amp; . 
+ \partial _{n+m}F_1 &amp; . &amp; . &amp; \partial _{n+m}F_p 
+\end{array}
+\right)
+\end{aligned}\end{align} \]</div>
+<p><span class="math notranslate nohighlight">\(&gt;&gt;&gt;\)</span> We assume that the subscript somehow identifies the argument in question. So, writing <span class="math notranslate nohighlight">\(\left.\partial _{x_j}F(x,y\right)\)</span> or <span class="math notranslate nohighlight">\(\left.\partial
+_{y_k}F(x,y\right)\)</span> can be useful and unambiguous. In physics, we often encounter arguments like L(x, <span class="math notranslate nohighlight">\(\dot{x\)</span>), to indicate that the second
+argument is supposed to the velocity. This leads to expressions like <span class="math notranslate nohighlight">\(\partial _{\dot{x}}L\left(x,\dot{x}\right)\)</span>. In this case, <span class="math notranslate nohighlight">\(\dot{x}\text{
+ \)</span>is just the name of an argument, and it happens to have a dot at the top. Referencing arguments by name can be ambiguous. Take the functions
+<span class="math notranslate nohighlight">\(f(x, y)\)</span>, <span class="math notranslate nohighlight">\(g(x, y)\)</span>, <span class="math notranslate nohighlight">\(h(x, y)\)</span> and differentiate <span class="math notranslate nohighlight">\(f(g(x,y), h(x,y))\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+A(x,y)=\left(
+\begin{array}{c}
+ g(x,y) 
+ h(x,y) 
+\end{array}
+\right),\text{DA}=\partial \unicode{f3da}A=\left(
+\begin{array}{cc}
+ \partial _xg &amp; \partial _xh 
+ \partial _yg &amp; \partial _yh 
+\end{array}
+\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+f(g(x,y),h(x,y))=(f\circ A)(x,y)
+\]</div>
+<p>The chain rule gives:</p>
+<div class="math notranslate nohighlight">
+\[
+D(f\circ A)=\text{DA}\cdot \text{Df}=\left(
+\begin{array}{cc}
+ \partial _xg &amp; \partial _xh 
+ \partial _yg &amp; \partial _yh 
+\end{array}
+\right)\left(
+\begin{array}{c}
+ \partial _xf 
+ \partial _yf 
+\end{array}
+\right)=\left(
+\begin{array}{c}
+ \partial _xf\cdot \partial _xg+\partial _yf\cdot \partial _xh 
+ \partial _xf\cdot \partial _yg+\partial _yf\cdot \partial _yh 
+\end{array}
+\right)
+\]</div>
+<p>Ambiguities are eliminated by parenthesis. Identifying the variables by indices works as well:</p>
+<div class="math notranslate nohighlight">
+\[
+D(f\circ A)=\left(
+\begin{array}{c}
+ \partial _1f\cdot \partial _1g+\partial _2f\cdot \partial _1h 
+ \partial _1f\cdot \partial _2g+\partial _2f\cdot \partial _2h 
+\end{array}
+\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F:\mathbb{R}^3\text{-$&gt;$ \mathbb{R}^3 f:\mathbb{R}^n\text{-$&gt;$ \mathbb{R}\quad
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\partial ^2 =\sum _{i=1}^n \partial _i{}^2\text{   }=\nabla \cdot \nabla  = \nabla ^2\text{                    }(\text{Laplace})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\partial \cdot F = \sum _{j=1}^n \partial _jF_j= \text{div}(F)\text{                    }(\text{divergence})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+(\partial \cdot )^2F =\partial \cdot \partial \cdot F =\sum _{k=1}^n \sum _{j=1}^n \partial _k\partial _jF_j= \text{div}^2(F)\text{      }\left(\text{divergence}^2\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\partial \times F = \left(
+\begin{array}{c}
+ \partial _2F_3-\partial _3F_2 
+ \partial _3F_1-\partial _1F_3 
+ \partial _1F_2-\partial _1F_2 
+\end{array}
+\right) = \text{curl}(F)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\partial ^2F = \left(
+\begin{array}{c}
+ \partial ^2F_1 
+ \partial ^2F_2 
+ \partial ^2F_3 
+\end{array}
+\right)
+\]</div>
+</section>
+<section id="some-formulae">
+<h3>Some Formulae<a class="headerlink" href="#some-formulae" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+F,G:\mathbb{R}^3\text{-$&gt;$ \mathbb{R}^3 \\f,g:\mathbb{R}^n\text{-$&gt;$ \mathbb{R}\quad
+\end{aligned}\end{align} \]</div>
+<p>div(curl) = 0</p>
+<div class="math notranslate nohighlight">
+\[
+\partial \cdot (\partial \times F)=0
+\]</div>
+<p>curl(gradient) = 0</p>
+<div class="math notranslate nohighlight">
+\[
+\partial \times (\partial f)=0
+\]</div>
+<p>div(product)</p>
+<div class="math notranslate nohighlight">
+\[
+\partial \cdot (F\cdot g)=(\partial F)\cdot g+F\cdot \partial g
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\partial (F\cdot G)=(F\cdot \partial )G+(G\cdot \partial )F+F\times (\partial \times G)+G\times (\partial \times F)
+\]</div>
+<p>Laplace = grad(div) - curl(curl)</p>
+<div class="math notranslate nohighlight">
+\[
+\partial ^2F =\partial (\partial \cdot F)-\partial \times (\partial \times F)
+\]</div>
+<p>div(cross product) = G <span class="math notranslate nohighlight">\(\cdot \)</span> curl(F) - F <span class="math notranslate nohighlight">\(\cdot \)</span> curl(G)</p>
+<div class="math notranslate nohighlight">
+\[
+\partial \cdot (F\times G)=G\cdot (\partial \times F)-F\cdot (\partial \times G)
+\]</div>
+</section>
+<section id="notation-4-1-3-dimensions-1">
+<h3>Notation 4 (1+3 Dimensions) { 1}<a class="headerlink" href="#notation-4-1-3-dimensions-1" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+\partial ^{\mu } =\left(
+\begin{array}{c}
+ \partial _0 
+ -\partial _1 
+ -\partial _2 
+ -\partial _3 
+\end{array}
+\right)\\\partial _{\mu } =\left(
+\begin{array}{c}
+ \partial _0 
+ \partial _1 
+ \partial _2 
+ \partial _3 
+\end{array}
+\right)
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[
+\square =\partial ^2=\partial _{\mu }\partial ^{\mu } = \left(\partial _0\right){}^2 -\left(\partial _1\right){}^2-\left(\partial _2\right){}^2-\left(\partial
+_3\right){}^2\text{    }(d'\text{Alembert})
+\]</div>
+</section>
+<section id="definition-4-stationary-points-1">
+<h3>Definition 4 (Stationary Points) 1<a class="headerlink" href="#definition-4-stationary-points-1" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R\)</span>be a function, differentiable in <span class="math notranslate nohighlight">\(x\)</span>. The point x is a stationary point of f if</p>
+<div class="math notranslate nohighlight">
+\[
+\partial f(x)=0
+\]</div>
+</section>
+<section id="theorem-3-local-extrema">
+<h3>Theorem 3 (Local Extrema)<a class="headerlink" href="#theorem-3-local-extrema" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R\)</span>be a function, differentiable in <span class="math notranslate nohighlight">\(x\)</span>. If f has a local minimum or maximum in <span class="math notranslate nohighlight">\(x\)</span>, then <span class="math notranslate nohighlight">\(x\)</span> is a
+stationary point of <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>Proof (for minimum only): Let h<span class="math notranslate nohighlight">\(\in \)</span><span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> be a small vector. Then:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+f(x)\leq f(x+h)=f(x)+\partial f(x)\intercalh+o(h)\text{   }(\text{works} \text{for} h \text{and} \text{-h})\\0\leq \partial f(x)\intercalh+o(\| h\| )\\0\leq \frac{\partial f(x)\intercalh}{\| h\| }+\frac{o(\| h\| )}{\| h\| }\\0\leq -\frac{\partial f(x)\intercalh}{\| h\| }+\frac{o(\| h\| )}{\| h\| }
+\end{aligned}\end{align} \]</div>
+<p>So, for small positive <span class="math notranslate nohighlight">\(\epsilon\)</span> we get:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial f(x)\intercalh}{\| h\| }-\epsilon \leq 0\leq \frac{\partial f(x)\intercalh}{\| h\| }+\epsilon
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+-\epsilon \leq -\frac{\partial f(x)\intercalh}{\| h\| }\leq +\epsilon
+\]</div>
+<p>which proves the statement.</p>
+</section>
+<section id="theorem-4-derivative-of-the-inverse-function">
+<h3>Theorem 4 (Derivative of the Inverse Function)<a class="headerlink" href="#theorem-4-derivative-of-the-inverse-function" title="Permalink to this heading">#</a></h3>
+<p>a) Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^n\)</span>be differentiable in x, and let <span class="math notranslate nohighlight">\(F^{-1}:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^n\)</span>be differentiable
+in <span class="math notranslate nohighlight">\(F(x)\)</span>. Then:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(D\left(F^{-1}\right)\right)(F(x))=(\text{DF}(x))^{-1}
+\]</div>
+<p>which is the same as (setting <span class="math notranslate nohighlight">\(y=F(x)\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[
+\left(D\left(F^{-1}\right)\right)(y)=\left(\text{DF}\left(F^{-1}(y)\right) \right)^{-1}
+\]</div>
+<p>which is the same as (omitting <span class="math notranslate nohighlight">\(x\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[
+(\text{DF})^{-1}=D\left(F^{-1}\right)\circ F
+\]</div>
+<p>Proof: Immediate from the chain rule:</p>
+<div class="math notranslate nohighlight">
+\[
+I=D\left(F\circ F^{-1}\right)(y) =\text{DF}\left(F^{-1}(y)\right)\circ \left(D\left(F^{-1}\right)\right)(y)
+\]</div>
+<p>b) Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^n\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^n\)</span>be continuously differentiable in an open environment of <span class="math notranslate nohighlight">\(x\)</span>, and let <span class="math notranslate nohighlight">\(\text{DF}(x)\)</span> be invertible.</p>
+<p>Then <span class="math notranslate nohighlight">\(F^{-1\)</span> exists and is differentiable in an open environment <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(x\)</span>. So, (a) applies on <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p>Proof: Hard stuff.</p>
+</section>
+<section id="theorem-5-derivative-of-implicit-functions">
+<h3>Theorem 5 (Derivative of Implicit Functions)<a class="headerlink" href="#theorem-5-derivative-of-implicit-functions" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(F:\mathbb{R}^{n\times m}\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>be continuously differentiable in an open environment of<span class="math notranslate nohighlight">\((a,b)\)</span>, and let <span class="math notranslate nohighlight">\(F(a,b) = 0\)</span>.
+<span class="math notranslate nohighlight">\(F\)</span>is a function of two vectors <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. The partial derivatives <span class="math notranslate nohighlight">\(\partial _xF\)</span>, <span class="math notranslate nohighlight">\(\partial _yF\)</span> are defined as above (see Notation
+XX). Let <span class="math notranslate nohighlight">\(\partial _yF(a,b)\)</span> be invertible.Then there is a function <span class="math notranslate nohighlight">\(G:A\text{-\)</span>&gt;<span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span> (with <span class="math notranslate nohighlight">\(A\subset \mathbb{R}^n\)</span> open and <span class="math notranslate nohighlight">\(a\in
+A\)</span>) such that:</p>
+<div class="math notranslate nohighlight">
+\[
+F(x, G(x))=0
+\]</div>
+<p>and the derivative of <span class="math notranslate nohighlight">\(G\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\text{DG}=-\left(\partial _yF\right){}^{-1}\circ \partial _xF
+\]</div>
+<p>Proof: Let</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+H(x,y)\text{:=}(x,F(x,y)))\\H(a, F(a,b))=(a,0)
+\end{aligned}\end{align} \]</div>
+<p>H is invertible. The inverse <span class="math notranslate nohighlight">\(H^{-1\)</span>is defined in an open environment <span class="math notranslate nohighlight">\(A\times B\)</span> of <span class="math notranslate nohighlight">\((a,0)\)</span>, with <span class="math notranslate nohighlight">\(A\subset \mathbb{R}^n\)</span>, <span class="math notranslate nohighlight">\(B\subset \mathbb{R}^m\)</span>),
+and there is a function <span class="math notranslate nohighlight">\(K:A\times B\text{-\)</span>&gt;<span class="math notranslate nohighlight">\( \mathbb{R}^m\)</span>such that</p>
+<div class="math notranslate nohighlight">
+\[
+H^{-1}(x,y)=(x,K(x,y))
+\]</div>
+<p>on <span class="math notranslate nohighlight">\(A\times B\)</span>. So, for <span class="math notranslate nohighlight">\(x\in A\)</span> and <span class="math notranslate nohighlight">\(y=0\)</span> we get:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+(x,0)=H\left(H^{-1}(x,0)\right)=H(x,K(x,0))=(x,F(x,K(x,0)))\\\text{           }0=F(x, K(x,0))
+\end{aligned}\end{align} \]</div>
+<p>Setting <span class="math notranslate nohighlight">\(G(x) = K(x,0)\)</span> completes the proof. <span class="math notranslate nohighlight">\(K\)</span> is defined on <span class="math notranslate nohighlight">\(A\times B\)</span>, <span class="math notranslate nohighlight">\(G\)</span> is defined on <span class="math notranslate nohighlight">\(A\)</span>.
+The derivative of <span class="math notranslate nohighlight">\(G\)</span> is immediate from the chain rule.</p>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 49 </span> (Taylor in n dimensions)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f:\mathbb{R}^n\to \mathbb{R}\)</span> and assume <span class="math notranslate nohighlight">\(\partial^{\otimes (k+1)} f\)</span> continuous on an open environment <span class="math notranslate nohighlight">\(U\)</span> of <span class="math notranslate nohighlight">\(x \in \mathbb{R}^n\)</span>.
+Let <span class="math notranslate nohighlight">\(h\in \mathbb{R}^n\)</span> such that <span class="math notranslate nohighlight">\(x+h \in U\)</span>. Then there exists a <span class="math notranslate nohighlight">\(\xi \in [x,x+h]\)</span> such that:</p>
+<div class="math notranslate nohighlight" id="equation-eq-taylor-n-dim">
+<span class="eqno">(82)<a class="headerlink" href="#equation-eq-taylor-n-dim" title="Permalink to this equation">#</a></span>\[ \begin{align}\begin{aligned}f(x+h) &amp;= \sum_{j=0}^k \frac{1}{k!} \langle \partial^{\otimes j}f(x), h^{\otimes j} \rangle +
+          \frac{1}{(k+1)!} \left \langle \partial^{\otimes (k+1)} f(\xi), h^{\otimes (k+1)} \right \rangle \\&amp;=\sum_{j=0}^k \frac{1}{k!} \langle \partial^{\otimes j} f(x), h^{\otimes j} \rangle +o(h^k)\end{aligned}\end{align} \]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof.  It holds that, for <span class="math notranslate nohighlight">\(j \leq k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^j}{dt^j} f(x + th) = \langle \partial^{\otimes j}f(x + th), h^{\otimes j} \rangle\]</div>
+<p>because:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{d}{dt}f(x+th) &amp;= \sum_{j=1}^n \partial_j f(x+th)h_j = \langle \partial f(x+th),h \rangle \\
+\\
+\frac{d^2}{dt^2}f(x+th) &amp;= \sum_{i=1}^n \sum_{j=1}^n \partial_i \partial_j f(x+th)h_i h_j = \left\langle \partial ^{\otimes 2} f(x+th), h^{\otimes 2} \right\rangle\end{split}\]</div>
+<p>and so on. Taylor in one dimension tells us that, for <span class="math notranslate nohighlight">\(g(t) = f(x+th)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[g(1) = \sum_{j=0}^k \frac{g^{(j)}(0)}{j!} + \frac{g^{(k+1)}(\xi)}{(k+1)!}\]</div>
+<p>for some <span class="math notranslate nohighlight">\(\xi \in [0,1]\)</span>. Rewriting this equation in terms of <span class="math notranslate nohighlight">\(f\)</span> gives the statement.</p>
+</div>
+</section>
+</section>
+<section id="calculus-of-variations">
+<h2>Calculus of Variations<a class="headerlink" href="#calculus-of-variations" title="Permalink to this heading">#</a></h2>
+<section id="definition-4-functional-derivatives">
+<h3>Definition 4 (Functional Derivatives)<a class="headerlink" href="#definition-4-functional-derivatives" title="Permalink to this heading">#</a></h3>
+<p>Let H be a Hilbert space  with an inner product of <span class="math notranslate nohighlight">\(\phi \)</span>, <span class="math notranslate nohighlight">\(\psi \in \)</span>H denoted as <span class="math notranslate nohighlight">\(\langle \phi |\psi \rangle \)</span>. Often <span class="math notranslate nohighlight">\(H=L^2(\Omega )\)</span> for
+some region <span class="math notranslate nohighlight">\(\Omega \subset \mathbb{R}^n\)</span> and:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle \phi |\psi \rangle =\int _{\Omega }\phi (x)\psi (x)dx
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\phi \)</span>, h<span class="math notranslate nohighlight">\(\in \)</span>H, and <span class="math notranslate nohighlight">\(F:H\text{-\)</span>&gt;<span class="math notranslate nohighlight">\(\mathbb{R\)</span> be a functional defined on an open environment of <span class="math notranslate nohighlight">\(\phi \)</span>. The directional derivative of
+<span class="math notranslate nohighlight">\(F\)</span> with respect to <span class="math notranslate nohighlight">\(h\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{$\delta $F}(\phi )(h)=\frac{d}{d\epsilon }F(\phi +\epsilon  h)|_{\epsilon =0}
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(\text{\)</span>\delta <span class="math notranslate nohighlight">\(F}(\phi )(h)\)</span> can be expressed as an inner product:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{$\delta $F}(\phi )(h)=\langle g(\phi )|h\rangle
+\]</div>
+<p>then we write</p>
+<div class="math notranslate nohighlight">
+\[
+\text{$\delta $F}(\phi )=g(\phi )
+\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[
+\text{$\delta $F}=g
+\]</div>
+</section>
+<section id="definition-5-dirac-function">
+<h3>Definition 5 (Dirac Function)<a class="headerlink" href="#definition-5-dirac-function" title="Permalink to this heading">#</a></h3>
+<p>The Dirac function <span class="math notranslate nohighlight">\(\delta \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\delta (x)= \begin{cases}
+ \infty (x=0) 
+ 0 (x\neq 0) 
+\end{cases}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\left\langle \left.\delta _y\right|\phi \right\rangle =\int _{\Omega } \delta (y-x)\phi (x)dx=\phi (y)
+\]</div>
+</section>
+<section id="easy-examples">
+<h3>Easy Examples<a class="headerlink" href="#easy-examples" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+F(\phi )=\left\langle \left.\delta _y\right|\phi \right\rangle =\phi (y)\\\text{$\delta $F}(\phi )(h)=\left\langle \left.\delta _y\right|h\right\rangle \\\text{$\quad $          }=\frac{d}{d\epsilon }\int _{\Omega }(\phi (x)+\epsilon  h(x))\delta _y(x)dx|_{\epsilon =0}=\int _{\Omega } h(x)\delta _y(x)dx=h(y)\text{
+                             }
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+F(\phi )=\langle g|\phi \rangle =\int _{\Omega }\phi (x)g(x)dx\\\text{$\delta $F}(\phi )(h)=\langle g|h\rangle \\\text{$\quad $          }=\frac{d}{d\epsilon }\int _{\Omega }(\phi (x)+\epsilon  h(x))g(x)dx=\int _{\Omega } h(x)g(x)dx\\\text{                              }
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+F(\phi )=\int _{\Omega }\phi ^n(x)dx\\\text{$\delta $F}(\phi )=n \phi ^{n-1}\\\text{$\delta $F}(\phi )(h)=\left\langle \left.n \phi ^{n-1}\right|h\right\rangle \\\text{                   }=\int _{\Omega } n \phi (x)^{n-1}h(x)dx\text{                           }\\\text{                   }=\frac{d}{d\epsilon }\int _{\Omega }(\phi (x)+\epsilon  h(x))^ndx=\int _{\Omega } n(\phi (x)+\epsilon  h(x))^{n-1}h(x)dx|_{\epsilon
+=0}\text{                            }
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+F(\phi )=c\int _{\Omega }\phi ^{\frac{5}{3}}(x)dx\\\text{$\delta $F}(\phi )=c\frac{5}{3} \phi ^{\frac{2}{3}}
+\end{aligned}\end{align} \]</div>
+</section>
+<section id="product-rule">
+<h3>Product Rule<a class="headerlink" href="#product-rule" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+A(\phi )=F(\phi )G(\phi )\\\text{$\delta $A}=\text{$\delta $F} G+F \text{$\delta $G}
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{$\delta $A}(\phi )=\frac{d}{d\epsilon }(F(\phi +\text{$\epsilon $h})G(\phi +\text{$\epsilon $h}))|_{\epsilon =0}=\text{$\delta $F}(\phi )G(\phi
+)+F(\phi )\text{$\delta $G}(\phi )
+\]</div>
+</section>
+<section id="chain-rule">
+<h3>Chain Rule<a class="headerlink" href="#chain-rule" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+A(\phi )=g(F(\phi ))\\\text{$\delta $A}=\left(\frac{d}{dx}g\circ F\right) \text{$\delta $F}
+\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{$\delta $A}(\phi )=\frac{d}{d\epsilon }g(F(\phi +\text{$\epsilon $h}))|_{\epsilon =0}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=\frac{d}{dx}g(F(\phi +\text{$\epsilon $h}))\frac{d}{d\epsilon }F(\phi +\text{$\epsilon $h})|_{\epsilon =0}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+=\frac{d}{dx}g(F(\phi ))\text{$\delta $F}(\phi )
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{d\epsilon }A(\phi +\text{$\epsilon $h})|_{\epsilon =0}=\partial _{\phi }L h+\partial _{\text{D$\phi $L \cdot \text{Dh}+\partial _{D^2\phi
+}L \cdot D^2h
+\]</div>
+<p>The first two terms are known from V3. It is the last (third) term we have to compute. We assume initially <span class="math notranslate nohighlight">\(\phi \)</span> and <span class="math notranslate nohighlight">\(h\)</span> to be scalars as in
+V2.</p>
+</section>
+</section>
+<section id="derivatives-on-hilbert-spaces">
+<h2>Derivatives on Hilbert Spaces<a class="headerlink" href="#derivatives-on-hilbert-spaces" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-derivatives-rn">
+<p class="admonition-title"><span class="caption-number">Definition 43 </span> (Derivatives)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(F:U \to V\)</span>. The <strong>derivative</strong> <span class="math notranslate nohighlight">\(\partial F(x)\)</span> of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[\partial F = \lim_{h \to 0} \frac{1}{\| h \| }(F(x+h) - F(x))\]</div>
+<p>or, equivalently:</p>
+<div class="math notranslate nohighlight" id="equation-equ-derivatives">
+<span class="eqno">(83)<a class="headerlink" href="#equation-equ-derivatives" title="Permalink to this equation">#</a></span>\[F(x+h) - F(x) = \partial F(x)\, h + o(h)\]</div>
+<p>If such a mapping exists, <span class="math notranslate nohighlight">\(F\)</span> is called differentiable in <span class="math notranslate nohighlight">\(x\)</span>.
+The derivative of <span class="math notranslate nohighlight">\(F\)</span> in <span class="math notranslate nohighlight">\(x\)</span> is a linear mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial F(x): 
+\left \{
+    \begin{array}{lr}
+        \mathbb{R}^n \to \mathbb{R}^m \\
+        h \mapsto \partial F(x) \, h
+    \end{array}
+\right .\end{split}\]</div>
+<p>that approximates the function <span class="math notranslate nohighlight">\(F\)</span> locally in <span class="math notranslate nohighlight">\(x\)</span> as shown in <a class="reference internal" href="#equation-equ-derivatives">(83)</a>.
+We will show that under weak assumptions, <span class="math notranslate nohighlight">\(\partial F\)</span> can be calculated as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial F = \begin{bmatrix}
+        &amp;\vdots \\
+        \cdots &amp;\partial_i F_j &amp;\cdots \\
+        &amp;\vdots
+    \end{bmatrix}_{i = 1, \ldots, m; \, j = 1, \ldots, n}\end{split}\]</div>
+<p>The <strong>differential operator</strong> <span class="math notranslate nohighlight">\(\partial\)</span> maps a differentiable function <span class="math notranslate nohighlight">\(F\)</span> to a function
+that maps a vector <span class="math notranslate nohighlight">\(x\)</span> to the linear mapping  <span class="math notranslate nohighlight">\(\partial F(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial: 
+\left \{
+    \begin{array}{lr}
+        C^1(\mathbb{R}^n, \mathbb{R}^m) \to C(\mathbb{R}^n, L(\mathbb{R}^n, \mathbb{R}^m))  \\
+        F \mapsto (x \mapsto \partial F(x))
+    \end{array}
+\right .\end{split}\]</div>
+</section>
+</div><div class="proof definition admonition" id="uniquness-derivative-rn">
+<p class="admonition-title"><span class="caption-number">Definition 44 </span> (Uniqueness of the Derivative)</p>
+<section class="definition-content" id="proof-content">
+<p>The derivative is unique.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Assume that there are two linear mappings <span class="math notranslate nohighlight">\(D, E\)</span> satisfying <a class="reference internal" href="#equation-equ-derivatives">(83)</a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp;F(x+h) - F(x) = D \, h + o(h) \\
+&amp;F(x+h) - F(x) = E \, h + o(h)\end{split}\]</div>
+<p>Then:</p>
+<div class="math notranslate nohighlight">
+\[D \, h + o(h) = E \, h + o(h)\]</div>
+<p>which shows that <span class="math notranslate nohighlight">\(D = E\)</span>.</p>
+</div>
+<section id="chain-rule-product-pule">
+<h3>Chain Rule, Product Pule<a class="headerlink" href="#chain-rule-product-pule" title="Permalink to this heading">#</a></h3>
+<div class="proof theorem admonition" id="chain-rule">
+<p class="admonition-title"><span class="caption-number">Theorem 50 </span> (Chain Rule)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(G:\mathbb{R}^n \to \mathbb{R}^m\)</span> be differentiable in x and
+<span class="math notranslate nohighlight">\(F:\mathbb{R}^m \to \mathbb{R}^k\)</span> differentiable in G(x).
+Then <span class="math notranslate nohighlight">\(F \circ G: \mathbb{R}^n \to \mathbb{R}^k\)</span> is differentiable in <span class="math notranslate nohighlight">\(x\)</span> and we have:</p>
+<div class="math notranslate nohighlight">
+\[\partial (F \circ G) = \partial F \circ G \cdot \partial G\]</div>
+<p>or, written with arguments:</p>
+<div class="math notranslate nohighlight">
+\[\partial (F \circ G)(x) = \partial F(G(x)) \cdot \partial G(x)\]</div>
+<p>You have to multiply the transpose of DG(F) and DF; DG(F) and DF cannot multiplied.
+The case <span class="math notranslate nohighlight">\(p = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+D(g\circ F)(h)=\partial g\intercal\dot{F}\intercalh\text{               }(1\times 1)\intercal
+\]</div>
+<p>So, for instance:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _t(g(\text{tx}))=\partial g\intercalx\text{              }
+\]</div>
+<p>or, with an <span class="math notranslate nohighlight">\(n\times m\)</span>-Matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\partial _t(g(t A))=\partial g\intercalA\text{     }
+\]</div>
+<p>Proof:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+G\circ F(x+h)=G(F(x)+ \text{DF}(x)(h)+o(h))\\\text{$\quad $            }=G(F(x))+\text{DG}(F(x))( \text{DF}(x)(h)+o(h))+o(h)\\\text{                      }=G\circ F(x)+(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+\end{aligned}\end{align} \]</div>
+<p>So:</p>
+<div class="math notranslate nohighlight">
+\[
+G\circ F(x+h)-G\circ F(x)=(\text{DG}(F(x))\circ \text{DF}(x))(h)+o(h)
+\]</div>
+<p>which proves the assertion via uniqueness.</p>
+</section>
+</div></section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./mathematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tensors.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tensors</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../history/8-holy_roman_empire.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Was the Empire Holy, Roman, or an Empire at All?</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integrals">Line Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tensors-frobenius-product">Tensors, Frobenius Product</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-calculus-in-mathbb-r-n">Vector Calculus in <span class="math notranslate nohighlight">\(\mathbb{R^n\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-3-directional-derivatives">Definition 3 (Directional Derivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-2-chain-rule">Theorem 2 (Chain Rule)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-2">Definition 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-3-jacobian-and-partial-derivatives">Theorem 3 (Jacobian and Partial Derivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-4-partial-derivatives-are-interchangeable">Theorem 4 (Partial derivatives are interchangeable)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-operators">Differential Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-formulae">Some Formulae</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-4-1-3-dimensions-1">Notation 4 (1+3 Dimensions) { 1}</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-4-stationary-points-1">Definition 4 (Stationary Points) 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-3-local-extrema">Theorem 3 (Local Extrema)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-4-derivative-of-the-inverse-function">Theorem 4 (Derivative of the Inverse Function)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorem-5-derivative-of-implicit-functions">Theorem 5 (Derivative of Implicit Functions)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculus-of-variations">Calculus of Variations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-4-functional-derivatives">Definition 4 (Functional Derivatives)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-5-dirac-function">Definition 5 (Dirac Function)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#easy-examples">Easy Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#product-rule">Product Rule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule">Chain Rule</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-on-hilbert-spaces">Derivatives on Hilbert Spaces</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-rule-product-pule">Chain Rule, Product Pule</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
