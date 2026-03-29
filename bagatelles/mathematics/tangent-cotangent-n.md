@@ -35,7 +35,7 @@ and condition {eq}`equ-manifolds-2` requires that the $n-k$ gradients of $F$ be 
 The idea is that the constraint {eq}`equ-manifolds-1` removes $n-k$ degrees of freedom, leaving $k$ over. 
 ````
 
-Definition {prf:definition}`def-manifolds-curves` is a simplified version of the general definition
+Definition {prf:ref}`def-manifolds-curves` is a simplified version of the general definition
 which allows for different constraint functions $F$ depending on the position $x$.
 
 ````{prf:remark} Manifolds via Curves, Generalized
@@ -45,14 +45,14 @@ Let $Q \subseteq \mathbb{R}^n$. $Q$ is called a **k-dimensional manifold** iff,
 for all $x \in Q$, there is an open environment $U(x)$ of $x$ such that the following holds:
 
 ```{math}
-:label: equ-manifolds-1
-\exists F \in C^\infty(U(x)), \mathbb{R}^{n-k}): 
+:label: equ-manifolds-1g
+\exists F \in C^\infty(U(x)), \mathbb{R}^{n-k}):
 Q \cap U_(x) = \{x \in U_\epsilon(x) \mid F(x) = 0\}
 ```
 with
 
 ```{math}
-:label: equ-manifolds-2
+:label: equ-manifolds-2g
 \text{rank } \partial F(x) = n - k
 ```
 
@@ -65,7 +65,7 @@ Let $Q \subseteq \mathbb{R}^n$. $Q$ is called a **k-dimensional manifold** iff,
 there is an open set $U \subseteq \mathbb{R}^n$ and a $F \in C^\infty(U, \mathbb{R}^{n-k})$ such that:
 
 ```{math}
-:label: equ-manifolds-1
+:label: equ-manifolds-1c
 
 Q = \{x \in U \mid F(x) = 0\}
 ```
@@ -73,7 +73,7 @@ Q = \{x \in U \mid F(x) = 0\}
 with
 
 ```{math}
-:label: equ-manifolds-2
+:label: equ-manifolds-2c
 \text{rank } \partial F(x) = n - k
 ```
 
@@ -85,11 +85,11 @@ The matrix $\partial F(x)$ is the Jacobi matrix of $F$ at $x$:
          \partial F_{n-k}(x)
     \end{bmatrix}
 ```
-and condition {eq}`equ-manifolds-2` requires that the $n-k$ gradients of $F$ be linearily independent on $Q$.
-The idea is that $F$ removes $n-k$ degrees of freedom, leaving $k$ over. 
+and condition {eq}`equ-manifolds-2c` requires that the $n-k$ gradients of $F$ be linearily independent on $Q$.
+The idea is that $F$ removes $n-k$ degrees of freedom, leaving $k$ over.
 ````
 
-Definition {prf:definition}`def-manifolds-curves` is a simplified version of the general definition given below 
+Definition {prf:ref}`def-manifolds-curves` is a simplified version of the general definition given below
 which allows for different constraints $F$ depending on the position $x$.
 
 

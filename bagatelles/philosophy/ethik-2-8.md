@@ -610,7 +610,6 @@ Der **Christ** denkt: "Der Vorhang geht auf. Der Chef hat mich gerufen. Alles, w
 Beide sind am Ende ruhig – der eine wegen der **Löschung**, der andere wegen des **Uploads**.
 
 ---
----
 
 ### Exkurs: Pascal'sche Wette
 

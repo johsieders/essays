@@ -926,7 +926,7 @@ V2.
 ## Derivatives on Hilbert Spaces
 
 ````{prf:Definition} Derivatives
-:label: def-derivatives
+:label: def-derivatives-rn
 
 Let $F:U \to V$. The **derivative** $\partial F(x)$ of $F$ in $x$ is defined as 
 
@@ -980,7 +980,7 @@ that maps a vector $x$ to the linear mapping  $\partial F(x)$:
 ````
 
 ````{prf:Definition} Uniqueness of the Derivative
-:label: uniquness-derivative
+:label: uniquness-derivative-rn
 
 The derivative is unique. 
 ````
