@@ -42,6 +42,8 @@ Für Programmierer ist **PyPSA** (*Python for Power System Analysis*) der Goldst
 ## 3. Technisches Beispiel: Optimierung mit $CO_2$-Limit und Speicher
 Das folgende Skript zeigt, wie ein System unter einem strikten Emissionslimit reagiert. Der Solver nutzt das Backup-Kraftwerk nur noch als "Versicherung", während der Speicher die Windflauten überbrückt.
 
+Vorbedingung: `pip install higspy, pypsa`
+
 ```python
 import pypsa
 
