@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Differential Operators: A Formal Algebraic Approach &#8212; Bagatelles</title>
   
@@ -29,40 +28,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show code';</script>
     <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/diff-operators';</script>
@@ -166,7 +161,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -254,6 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/israel-1.html">Der Weg zum Staat Israel *</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
 <ul class="nav bd-sidenav">
@@ -313,9 +320,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -473,9 +480,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -534,13 +541,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="differential-operators-a-formal-algebraic-approach">
-<h1>Differential Operators: A Formal Algebraic Approach<a class="headerlink" href="#differential-operators-a-formal-algebraic-approach" title="Permalink to this heading">#</a></h1>
+<h1>Differential Operators: A Formal Algebraic Approach<a class="headerlink" href="#differential-operators-a-formal-algebraic-approach" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Classical vector calculus presents students with a bewildering array of distinct operations—gradient, divergence, curl, Laplacian, Jacobian, Hessian—each with its own notation, definition, and geometric interpretation. While this zoo of operators serves physics and engineering well, it obscures a deeper unity: <strong>all these operators are just different ways of composing partial derivatives</strong>.</p>
 <p>This note develops a systematic, algebraic framework for differential operators that treats them as first-class mathematical objects that can be manipulated, composed, and applied. The key insight is disarmingly simple: if we denote the partial derivative operator by <span class="math notranslate nohighlight">\(\partial_i\)</span> (or <span class="math notranslate nohighlight">\(\partial_x\)</span>, <span class="math notranslate nohighlight">\(\partial_y\)</span>, etc., when variables have names), then we can construct all the familiar operators of vector calculus through standard algebraic operations—scalar multiplication, vector dot products, cross products, and tensor products.</p>
 <section id="the-central-idea">
-<h3>The Central Idea<a class="headerlink" href="#the-central-idea" title="Permalink to this heading">#</a></h3>
+<h3>The Central Idea<a class="headerlink" href="#the-central-idea" title="Link to this heading">#</a></h3>
 <p>Consider the gradient operator. Traditionally, we define it as an operation that takes a scalar function <span class="math notranslate nohighlight">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> and produces a vector field. But we can think of it more abstractly: the gradient operator <strong>is</strong> the column vector</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial = \begin{bmatrix} \partial_1 \\ \partial_2 \\ \vdots \\ \partial_n \end{bmatrix}\end{split}\]</div>
@@ -603,9 +610,9 @@ For the Jacobian <span class="math notranslate nohighlight">\(\partial F\)</span
 </section>
 </section>
 <section id="tangent-and-cotangent-spaces">
-<h2>Tangent and Cotangent Spaces<a class="headerlink" href="#tangent-and-cotangent-spaces" title="Permalink to this heading">#</a></h2>
+<h2>Tangent and Cotangent Spaces<a class="headerlink" href="#tangent-and-cotangent-spaces" title="Link to this heading">#</a></h2>
 <section id="dimension-1">
-<h3>Dimension = 1<a class="headerlink" href="#dimension-1" title="Permalink to this heading">#</a></h3>
+<h3>Dimension = 1<a class="headerlink" href="#dimension-1" title="Link to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(Q\)</span> be an 1-dimensional manifold given a function
 <span class="math notranslate nohighlight">\(x: [a, b] \to V\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is a vector space; <span class="math notranslate nohighlight">\(x \in C^\infty([a, b], V)\)</span>.</p>
 <p>We define the operator <span class="math notranslate nohighlight">\(\partial_t\)</span> by</p>
@@ -662,9 +669,9 @@ T^{*} Q = \{(x, p) | x \in Q, p \in T^{*}_{x} Q \}
 </section>
 </section>
 <section id="id1">
-<h2>Tangent and Cotangent Spaces<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>Tangent and Cotangent Spaces<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <section id="id2">
-<h3>Dimension = 1<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3>Dimension = 1<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(Q\)</span> be an 1-dimensional manifold given a function
 <span class="math notranslate nohighlight">\(x: [a, b] \to V\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is a vector space; <span class="math notranslate nohighlight">\(x \in C^\infty([a, b], V)\)</span>.</p>
 <p>We define the operator <span class="math notranslate nohighlight">\(\partial_t\)</span> by</p>
@@ -717,7 +724,7 @@ df(v) = v(f) = \lambda \partial_t f
 \]</div>
 </section>
 <section id="notation-and-conventions">
-<h3>Notation and Conventions<a class="headerlink" href="#notation-and-conventions" title="Permalink to this heading">#</a></h3>
+<h3>Notation and Conventions<a class="headerlink" href="#notation-and-conventions" title="Link to this heading">#</a></h3>
 <p>We adopt the following notational framework:</p>
 <p><strong>Basic derivative operators:</strong></p>
 <ul class="simple">
@@ -736,7 +743,7 @@ df(v) = v(f) = \lambda \partial_t f
 <p>The symbol <span class="math notranslate nohighlight">\(\otimes\)</span> denotes the tensor/outer product. In the accompanying code, we use <code class="docutils literal notranslate"><span class="pre">\ocross</span></code> as a text representation.</p>
 </section>
 <section id="why-this-approach">
-<h3>Why This Approach?<a class="headerlink" href="#why-this-approach" title="Permalink to this heading">#</a></h3>
+<h3>Why This Approach?<a class="headerlink" href="#why-this-approach" title="Link to this heading">#</a></h3>
 <p><strong>Conceptual clarity:</strong> Instead of memorizing separate definitions for each operator, we have a single unified principle: compose <span class="math notranslate nohighlight">\(\partial\)</span> using standard algebraic operations.</p>
 <p><strong>Dimensional reasoning:</strong> The algebraic structure makes dimensional constraints transparent. The curl <span class="math notranslate nohighlight">\(\partial \times F\)</span> involves a cross product, which only makes sense in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. The Laplacian <span class="math notranslate nohighlight">\(\partial^2\)</span> is a scalar operator in any dimension. These constraints emerge naturally from the algebra rather than being imposed ad hoc.</p>
 <p><strong>Extensibility:</strong> Need the Poisson bracket? It’s simply the bilinear operator</p>
@@ -747,7 +754,7 @@ df(v) = v(f) = \lambda \partial_t f
 </section>
 </section>
 <section id="formal-vs-applied">
-<h2>Formal vs. Applied<a class="headerlink" href="#formal-vs-applied" title="Permalink to this heading">#</a></h2>
+<h2>Formal vs. Applied<a class="headerlink" href="#formal-vs-applied" title="Link to this heading">#</a></h2>
 <p>It’s crucial to distinguish between the <strong>operator</strong> (a formal algebraic object) and its <strong>application</strong> to functions. The gradient operator <span class="math notranslate nohighlight">\(\partial\)</span> is a vector of derivative operators. When we apply it to a function <span class="math notranslate nohighlight">\(f\)</span> by writing <span class="math notranslate nohighlight">\(\partial \cdot f\)</span>, we get the gradient of <span class="math notranslate nohighlight">\(f\)</span>—a vector field.</p>
 <p>This distinction parallels the difference between a matrix <span class="math notranslate nohighlight">\(A\)</span> and its action <span class="math notranslate nohighlight">\(A \mathbf{v}\)</span> on a vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. The matrix exists as an algebraic object independent of any particular vector; similarly, <span class="math notranslate nohighlight">\(\partial\)</span> exists as an operator independent of any particular function.### Notation and Conventions</p>
 <p>We adopt the following notational framework:</p>
@@ -767,7 +774,7 @@ df(v) = v(f) = \lambda \partial_t f
 </ul>
 <p>The symbol <span class="math notranslate nohighlight">\(\otimes\)</span> denotes the tensor/outer product. In the accompanying code, we use <code class="docutils literal notranslate"><span class="pre">\ocross</span></code> as a text representation.</p>
 <section id="what-follows">
-<h3>What Follows<a class="headerlink" href="#what-follows" title="Permalink to this heading">#</a></h3>
+<h3>What Follows<a class="headerlink" href="#what-follows" title="Link to this heading">#</a></h3>
 <p>In the sections that follow, we’ll:</p>
 <ol class="arabic simple">
 <li><p>Formalize the partial derivative operators <span class="math notranslate nohighlight">\(\partial_i\)</span> and their basic properties</p></li>
@@ -781,7 +788,7 @@ df(v) = v(f) = \lambda \partial_t f
 </section>
 </section>
 <section id="more-notation">
-<h2>More Notation<a class="headerlink" href="#more-notation" title="Permalink to this heading">#</a></h2>
+<h2>More Notation<a class="headerlink" href="#more-notation" title="Link to this heading">#</a></h2>
 <p>Einstein coovariant, index down. <span class="math notranslate nohighlight">\(\mu\)</span> always runs from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(3\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial_{\mu} = 
@@ -820,19 +827,19 @@ df(v) = v(f) = \lambda \partial_t f
 \[\Box = \partial_{\mu} \cdot \partial^{\mu} = \partial_{0}^2 - \partial_{1}^2 - \partial_{2}^2 - \partial_{3}^2\]</div>
 </section>
 <section id="some-formulae">
-<h2>Some Formulae<a class="headerlink" href="#some-formulae" title="Permalink to this heading">#</a></h2>
+<h2>Some Formulae<a class="headerlink" href="#some-formulae" title="Link to this heading">#</a></h2>
 <section id="the-divergence-of-a-curl-vanishes">
-<h3>The divergence of a curl vanishes:<a class="headerlink" href="#the-divergence-of-a-curl-vanishes" title="Permalink to this heading">#</a></h3>
+<h3>The divergence of a curl vanishes:<a class="headerlink" href="#the-divergence-of-a-curl-vanishes" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\partial \cdot (\partial \times F) = 0\]</div>
 </section>
 <section id="the-curl-of-a-gradient-vanishes">
-<h3>The curl of a gradient vanishes:<a class="headerlink" href="#the-curl-of-a-gradient-vanishes" title="Permalink to this heading">#</a></h3>
+<h3>The curl of a gradient vanishes:<a class="headerlink" href="#the-curl-of-a-gradient-vanishes" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\partial \times (\partial f) = 0\]</div>
 </section>
 <section id="product-rules">
-<h3>Product rules<a class="headerlink" href="#product-rules" title="Permalink to this heading">#</a></h3>
+<h3>Product rules<a class="headerlink" href="#product-rules" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial (f \, g) &amp;= \partial f \, g + f \, \partial g \\
 \partial \cdot (F \, g) &amp;= (\partial \cdot F) \, g + F \cdot \partial g \\
@@ -906,7 +913,7 @@ df(v) = v(f) = \lambda \partial_t f
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <span class="target" id="id3"></span><div style="margin-bottom: 100px;"></div></section>
 </section>
 

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>First Steps in Arithmetic &#8212; Bagatelles</title>
   
@@ -29,40 +28,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show code';</script>
     <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/arithmetic';</script>
@@ -166,7 +161,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -254,6 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/israel-1.html">Der Weg zum Staat Israel *</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
 <ul class="nav bd-sidenav">
@@ -313,9 +320,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -473,9 +480,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -510,7 +517,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="first-steps-in-arithmetic">
-<h1>First Steps in Arithmetic<a class="headerlink" href="#first-steps-in-arithmetic" title="Permalink to this heading">#</a></h1>
+<h1>First Steps in Arithmetic<a class="headerlink" href="#first-steps-in-arithmetic" title="Link to this heading">#</a></h1>
 <p><em>Johannes Siedersleben, October 2025</em></p>
 <p>This note takes a deliberately short, constructive path through the core facts of elementary number theory—enough to make modular arithmetic usable,
 computable, and conceptually clean. We begin with the integer division theorem and use it to formalize the operators <code class="docutils literal notranslate"><span class="pre">//</span></code> (integer quotient) and <code class="docutils literal notranslate"><span class="pre">%</span></code> (remainder).
@@ -527,7 +534,7 @@ and algorithmically actionable. Readers who enjoy precise reasoning and also car
 or CRT in code) will find a compact, self-contained route from first principles to tools that power modern applications in cryptography, coding theory,
 and computational mathematics.</p>
 <section id="congruences-and-integer-division">
-<h2>Congruences and Integer Division<a class="headerlink" href="#congruences-and-integer-division" title="Permalink to this heading">#</a></h2>
+<h2>Congruences and Integer Division<a class="headerlink" href="#congruences-and-integer-division" title="Link to this heading">#</a></h2>
 <p>Our starting point is a well-known fact about the division of integers:</p>
 <div class="proof theorem admonition" id="thr-integer-division">
 <p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
@@ -548,9 +555,9 @@ Then <span class="math notranslate nohighlight">\(0 \le r - s = (q - p)m &lt; r 
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(m &gt; 0\)</span> be integers. Then, using <span class="math notranslate nohighlight">\(r\)</span> and <span class="math notranslate nohighlight">\(q\)</span> introduced in <a class="reference internal" href="#thr-integer-division">Theorem 6</a>, we define</p>
 <div class="math notranslate nohighlight" id="equation-equ-remainder">
-<span class="eqno">(27)<a class="headerlink" href="#equation-equ-remainder" title="Permalink to this equation">#</a></span>\[a\%m = r, \]</div>
+<span class="eqno">(27)<a class="headerlink" href="#equation-equ-remainder" title="Link to this equation">#</a></span>\[a\%m = r, \]</div>
 <div class="math notranslate nohighlight" id="equation-equ-integer-division">
-<span class="eqno">(28)<a class="headerlink" href="#equation-equ-integer-division" title="Permalink to this equation">#</a></span>\[a//m = q.\]</div>
+<span class="eqno">(28)<a class="headerlink" href="#equation-equ-integer-division" title="Link to this equation">#</a></span>\[a//m = q.\]</div>
 <p>These operators work for positive and negative values of <span class="math notranslate nohighlight">\(a\)</span>. Here is an example:</p>
 <p><span class="math notranslate nohighlight">\(17 \ \% \ 3 = 2\)</span> (check: <span class="math notranslate nohighlight">\(17 = 5 \cdot 3 + 2\)</span>)<br />
 <span class="math notranslate nohighlight">\(-17 \ \% \ 3 = 1\)</span> (check: <span class="math notranslate nohighlight">\(-17 = -6 \cdot 3 + 1\)</span>).</p>
@@ -562,7 +569,7 @@ Then <span class="math notranslate nohighlight">\(0 \le r - s = (q - p)m &lt; r 
 <p>(i) We say that <span class="math notranslate nohighlight">\(a\)</span> is <em>congruent to</em> <span class="math notranslate nohighlight">\(b\)</span> <em>modulo</em> <span class="math notranslate nohighlight">\(m\)</span> iff there is
 an integer <span class="math notranslate nohighlight">\(q\)</span> such that <span class="math notranslate nohighlight">\(a = b + qm\)</span>. This is written as</p>
 <div class="math notranslate nohighlight" id="equation-equ-congruence">
-<span class="eqno">(29)<a class="headerlink" href="#equation-equ-congruence" title="Permalink to this equation">#</a></span>\[a \equiv b \bmod m. \]</div>
+<span class="eqno">(29)<a class="headerlink" href="#equation-equ-congruence" title="Link to this equation">#</a></span>\[a \equiv b \bmod m. \]</div>
 <p>(ii) We say that <span class="math notranslate nohighlight">\(a\)</span> is a multiple of <span class="math notranslate nohighlight">\(m\)</span>, or that <span class="math notranslate nohighlight">\(m\)</span> divides <span class="math notranslate nohighlight">\(a\)</span> iff <span class="math notranslate nohighlight">\(a \equiv 0 \bmod m\)</span>.
 This is can also be written as <span class="math notranslate nohighlight">\(m|a\)</span>.</p>
 </section>
@@ -597,7 +604,7 @@ All numbers <span class="math notranslate nohighlight">\(b \equiv a \bmod m\)</s
 the same equivalence class modulo <span class="math notranslate nohighlight">\(m\)</span>, denoted by <span class="math notranslate nohighlight">\(\mathbb{Z}_m\)</span>.
 Choosing <span class="math notranslate nohighlight">\(\{0, 1, \ldots, m-1\}\)</span> as natural representatives, we can write</p>
 <div class="math notranslate nohighlight" id="equation-equ-equivalence-classes">
-<span class="eqno">(30)<a class="headerlink" href="#equation-equ-equivalence-classes" title="Permalink to this equation">#</a></span>\[\mathbb{Z}_m = \{\overline{0}, \overline{1}, \ldots\, \overline{m-1}\}\]</div>
+<span class="eqno">(30)<a class="headerlink" href="#equation-equ-equivalence-classes" title="Link to this equation">#</a></span>\[\mathbb{Z}_m = \{\overline{0}, \overline{1}, \ldots\, \overline{m-1}\}\]</div>
 <p>because any two different integers <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(m-1\)</span>
 belong to different equivalence classes modulo <span class="math notranslate nohighlight">\(m\)</span>. The mapping</p>
 <div class="math notranslate nohighlight">
@@ -612,7 +619,7 @@ T :
 \end{split}\]</div>
 <p>is an isomorphism, so we can write:</p>
 <div class="math notranslate nohighlight" id="equation-equ-equivalence-isomorphism">
-<span class="eqno">(31)<a class="headerlink" href="#equation-equ-equivalence-isomorphism" title="Permalink to this equation">#</a></span>\[\mathbb{Z}_m \cong \{0, 1, \ldots, m-1\},\]</div>
+<span class="eqno">(31)<a class="headerlink" href="#equation-equ-equivalence-isomorphism" title="Link to this equation">#</a></span>\[\mathbb{Z}_m \cong \{0, 1, \ldots, m-1\},\]</div>
 <p>and the notation <a class="reference internal" href="#equation-equ-equivalence-classes">(30)</a> is rarely needed.
 The next theorem shows that <span class="math notranslate nohighlight">\(\mathbb{Z}_m \)</span> is a ring, the <em>residue class ring</em> of <span class="math notranslate nohighlight">\(m\)</span>.
 Its elements are called the <em>residue classes modulo m</em>.</p>
@@ -681,7 +688,7 @@ and we get: <span class="math notranslate nohighlight">\(a \cdot b \le \gcd(a,b)
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(p\)</span> be a prime and <span class="math notranslate nohighlight">\(\alpha\)</span> be a positive integer. Then:</p>
 <div class="math notranslate nohighlight" id="equation-equ-phi-prime">
-<span class="eqno">(32)<a class="headerlink" href="#equation-equ-phi-prime" title="Permalink to this equation">#</a></span>\[ \phi(p^\alpha) = p^{\alpha - 1} (p - 1).
+<span class="eqno">(32)<a class="headerlink" href="#equation-equ-phi-prime" title="Link to this equation">#</a></span>\[ \phi(p^\alpha) = p^{\alpha - 1} (p - 1).
  \]</div>
 </section>
 </div><div class="proof admonition" id="proof">
@@ -739,7 +746,7 @@ We proceed by building another prime number <span class="math notranslate nohigh
 \[q \equiv 0 \bmod p_k  \text{ for } k \le n\]</div>
 <p>hence:</p>
 <div class="math notranslate nohighlight" id="equation-equ-infinite-primes-1">
-<span class="eqno">(33)<a class="headerlink" href="#equation-equ-infinite-primes-1" title="Permalink to this equation">#</a></span>\[q + 1 \equiv 1 \bmod p_k  \text{ for } k \le n\]</div>
+<span class="eqno">(33)<a class="headerlink" href="#equation-equ-infinite-primes-1" title="Link to this equation">#</a></span>\[q + 1 \equiv 1 \bmod p_k  \text{ for } k \le n\]</div>
 <p>If <span class="math notranslate nohighlight">\(q + 1\)</span>  weren’t prime, we would have, according to <a class="reference internal" href="#thr-fundamental">Theorem 11</a>:</p>
 <div class="math notranslate nohighlight">
 \[q + 1 = \prod_{k=1}^n p_k^{\alpha_k}\]</div>
@@ -797,7 +804,7 @@ So, <span class="math notranslate nohighlight">\(\text{ord}_m(a)\)</span> divide
 <p>Let <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(k &gt; 1\)</span> be integers. If <span class="math notranslate nohighlight">\(a^{m-1} \equiv k \bmod p\)</span> for some <span class="math notranslate nohighlight">\(a \in \mathbb{Z}\)</span>, then, by Euler’s theorem,
 <span class="math notranslate nohighlight">\(m\)</span> cannot be prime. But there are non-prime integers <span class="math notranslate nohighlight">\(n\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-equ-carmichael">
-<span class="eqno">(34)<a class="headerlink" href="#equation-equ-carmichael" title="Permalink to this equation">#</a></span>\[a^{n-1} \equiv 1 \bmod n\]</div>
+<span class="eqno">(34)<a class="headerlink" href="#equation-equ-carmichael" title="Link to this equation">#</a></span>\[a^{n-1} \equiv 1 \bmod n\]</div>
 <p>holds for at least one <span class="math notranslate nohighlight">\(a\)</span>.
 Integers <span class="math notranslate nohighlight">\(n\)</span> fullfilling <a class="reference internal" href="#equation-equ-carmichael">(34)</a> for all <span class="math notranslate nohighlight">\(a &lt; n\)</span> are called <em>Carmichael numbers</em>.
 The smallest one is <span class="math notranslate nohighlight">\(561 = 3 \cdot 11 \cdot 17\)</span>. Testing for primes is notoriously difficult,
@@ -810,7 +817,7 @@ The <em>Fermat test</em> does exactly that; the more sophisticated <em>Miller-Ra
 </section>
 </div></section>
 <section id="euclid-s-algorithm-and-applications">
-<h2>Euclid’s Algorithm and Applications<a class="headerlink" href="#euclid-s-algorithm-and-applications" title="Permalink to this heading">#</a></h2>
+<h2>Euclid’s Algorithm and Applications<a class="headerlink" href="#euclid-s-algorithm-and-applications" title="Link to this heading">#</a></h2>
 <p>This section is about solving equations of the form <span class="math notranslate nohighlight">\(ax \equiv b \bmod m\)</span> with <span class="math notranslate nohighlight">\(a, b, m \in \mathbb{Z}\)</span>.
 Such an equation is equivalent to <span class="math notranslate nohighlight">\(ax = b + qm \)</span>, which is a <em>Diophantine equation</em>.</p>
 <div class="proof definition admonition" id="def-diophantine">
@@ -818,7 +825,7 @@ Such an equation is equivalent to <span class="math notranslate nohighlight">\(a
 <section class="definition-content" id="proof-content">
 <p>An equation of the form</p>
 <div class="math notranslate nohighlight" id="equation-equ-diophantine">
-<span class="eqno">(35)<a class="headerlink" href="#equation-equ-diophantine" title="Permalink to this equation">#</a></span>\[ux + vy = m \]</div>
+<span class="eqno">(35)<a class="headerlink" href="#equation-equ-diophantine" title="Link to this equation">#</a></span>\[ux + vy = m \]</div>
 <p>with <span class="math notranslate nohighlight">\(u, v, m \in \mathbb{Z}\)</span> is called a <em>Diophantine equation</em>.</p>
 </section>
 </div><div class="proof definition admonition" id="def-module">
@@ -940,7 +947,7 @@ elements of <span class="math notranslate nohighlight">\(\mathbb{Z}_2^\times = \
 <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> be integers such that <span class="math notranslate nohighlight">\((a_i, m_i) = 1\)</span> for all <span class="math notranslate nohighlight">\(i\)</span>.</p>
 <p>(i) The system of congruences:</p>
 <div class="math notranslate nohighlight" id="equation-equ-congruences">
-<span class="eqno">(36)<a class="headerlink" href="#equation-equ-congruences" title="Permalink to this equation">#</a></span>\[ \begin{align}\begin{aligned}a_1 x \equiv 1 \bmod m_1,\\
+<span class="eqno">(36)<a class="headerlink" href="#equation-equ-congruences" title="Link to this equation">#</a></span>\[ \begin{align}\begin{aligned}a_1 x \equiv 1 \bmod m_1,\\
 a_2 x \equiv 1 \bmod m_2,\\
 \ldots       \\
 a_n x\equiv 1 \bmod m_n  
@@ -983,8 +990,9 @@ The inverse of <span class="math notranslate nohighlight">\(q_i \bmod m_i\)</spa
 <p><span class="math notranslate nohighlight">\(\phi(m) = \phi(p_1^{\alpha_1}) \ \phi(p_2^{\alpha_2}) \ \cdots \ \phi(p_n^{\alpha_n}) =\)</span>
 <span class="math notranslate nohighlight">\(p_1^{\alpha_1 - 1}(p_1 - 1) \ p_2^{\alpha_2 - 1}(p_2 - 1) \ \cdots \ p_n^{\alpha_n - 1}(p_n - 1) =\)</span>
 <span class="math notranslate nohighlight">\(m\prod_{i=1}^n (1 - \frac{1}{p_i})\)</span></p>
-<p class="rubric">References</p>
+<h2 class="rubric" id="references">References</h2>
 <div class="docutils container" id="id3">
+<div role="list" class="citation-list">
 <div class="citation" id="id9" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">HW08</a><span class="fn-bracket">]</span></span>
 <p>G. H. Hardy and E. M. Wright. <em>An Introduction to the Theory of Numbers</em>. Oxford University Press, 6th edition edition, 2008. First published 1938.</p>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>First Steps in Calculus &#8212; Bagatelles</title>
   
@@ -29,40 +28,36 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show code';</script>
     <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/calculus';</script>
@@ -166,7 +161,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -254,6 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/israel-1.html">Der Weg zum Staat Israel *</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
 <ul class="nav bd-sidenav">
@@ -313,9 +320,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -473,9 +480,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -523,10 +530,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="first-steps-in-calculus">
-<h1>First Steps in Calculus<a class="headerlink" href="#first-steps-in-calculus" title="Permalink to this heading">#</a></h1>
+<h1>First Steps in Calculus<a class="headerlink" href="#first-steps-in-calculus" title="Link to this heading">#</a></h1>
 <p><em>Johannes Siedersleben, January 2026</em></p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>“All men are mortal. Socrates is a man, so Socrates is mortal.”
 Here, we are <strong>applying</strong> a true statement (“all men are mortal”) to a particular object (“Socrates”),
 and arriving at the conclusion “Socrates is mortal”, another true statement.
@@ -564,18 +571,18 @@ I left the proof out, but the criterion is too interesting to be passed over.</p
 The backbone of our story is formed by the vector spaces <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> of Riemann-integrable functions,
 and the spaces <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> of <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable functions.
 The integral operator <strong><span class="math notranslate nohighlight">\(\int\)</span></strong> shifts functions to the right from <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{0}([a, b])\)</span> and further on to <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</span>,
-and the differential operator <strong><span class="math notranslate nohighlight">\(\partial\)</span></strong> shifts them to the left from <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n-1}([a, b])\)</span>, see <span class="xref myst">The Backbone</span>.</p>
+and the differential operator <strong><span class="math notranslate nohighlight">\(\partial\)</span></strong> shifts them to the left from <span class="math notranslate nohighlight">\(C^n([a, b])\)</span> to <span class="math notranslate nohighlight">\(C^{n-1}([a, b])\)</span>, see <a class="reference internal" href="#diagram-1.png"><span class="xref myst">The Backbone</span></a>.</p>
 <p>Note: I prefer the symbol <span class="math notranslate nohighlight">\(\partial\)</span> for the differential operator over the more frequent <span class="math notranslate nohighlight">\(D\)</span>.</p>
 <figure class="align-center" id="id136">
 <img alt="../_images/calculus-diagram-1.png" src="../_images/calculus-diagram-1.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The Backbone</span><a class="headerlink" href="#id136" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">The Backbone</span><a class="headerlink" href="#id136" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id137">
 <img alt="../_images/calculus-diagram-2.png" src="../_images/calculus-diagram-2.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">The Roadmap</span><a class="headerlink" href="#id137" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">The Roadmap</span><a class="headerlink" href="#id137" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Here is the roadmap: After warming up with <a class="reference internal" href="#zeno-paradoxes"><span class="std std-ref">Zeno’s paradoxes</span></a>, we study the <a class="reference internal" href="#topology-of-r"><span class="std std-ref">topology</span></a> of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> and
@@ -605,11 +612,11 @@ the vector spaces <span class="math notranslate nohighlight">\(C^{n}([a, b])\)</
 <span id="id4">[<a class="reference internal" href="numbers.html#id82" title="Otto Forster. Analysis 1: Differential- und Integralrechnung einer Veränderlichen. Springer Spektrum, 12th edition edition, 2016. First published 1976.">Forster, 2016</a>]</span>, to name but a few prominent examples.</p>
 </section>
 <section id="zeno-s-paradoxes">
-<span id="zeno-paradoxes"></span><h2>Zeno’s Paradoxes<a class="headerlink" href="#zeno-s-paradoxes" title="Permalink to this heading">#</a></h2>
+<span id="zeno-paradoxes"></span><h2>Zeno’s Paradoxes<a class="headerlink" href="#zeno-s-paradoxes" title="Link to this heading">#</a></h2>
 <p>Calculus is all about infinitesimally small numbers, a subject the Greeks didn’t understand.
 Zeno’s paradoxes aren’t paradoxes anymore; today, they are easily explained.</p>
 <section id="achilles-and-the-tortoise">
-<h3>Achilles and the Tortoise<a class="headerlink" href="#achilles-and-the-tortoise" title="Permalink to this heading">#</a></h3>
+<h3>Achilles and the Tortoise<a class="headerlink" href="#achilles-and-the-tortoise" title="Link to this heading">#</a></h3>
 <p>Imagine the tortoise and Achilles starting a race with the tortiose <span class="math notranslate nohighlight">\(10\)</span> metres in the lead,
 and Achilles running ten times as fast as the tortoise.<br />
 By the time Achilles has covered <span class="math notranslate nohighlight">\(10\)</span> meters, the tortoise is <span class="math notranslate nohighlight">\(1\)</span> metre in the lead.<br />
@@ -630,7 +637,7 @@ many parts, the sum of which is obviously the distance given.
 Today infinite sums are well understood; there is nothing paradoxical about them.</p>
 </section>
 <section id="the-standing-arrow">
-<h3>The Standing Arrow<a class="headerlink" href="#the-standing-arrow" title="Permalink to this heading">#</a></h3>
+<h3>The Standing Arrow<a class="headerlink" href="#the-standing-arrow" title="Link to this heading">#</a></h3>
 <p>Imagine an arrow flying along a straight line. At any given moment, the arrow occupies a specific position in space.
 How can it ever move? The answer is given by the theory of integrals we are going to study in detail.
 Here is a sketch:
@@ -646,7 +653,7 @@ Assigning meaningful values to such sums is what integration theory is all about
 </section>
 </section>
 <section id="topology-of-mathbb-r">
-<span id="topology-of-r"></span><h2>Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span><a class="headerlink" href="#topology-of-mathbb-r" title="Permalink to this heading">#</a></h2>
+<span id="topology-of-r"></span><h2>Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span><a class="headerlink" href="#topology-of-mathbb-r" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-topology-R">
 <p class="admonition-title"><span class="caption-number">Definition 21 </span> (Topology of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p>
 <section class="definition-content" id="proof-content">
@@ -690,7 +697,7 @@ therefore <span class="math notranslate nohighlight">\(a \in B\)</span> for ever
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{x_n\}\)</span> be a non-decreasing, <span class="math notranslate nohighlight">\(\{y_n\}\)</span> a non-increasing real sequence satisfying:</p>
 <div class="math notranslate nohighlight" id="equation-equ-nested-intervals-1">
-<span class="eqno">(44)<a class="headerlink" href="#equation-equ-nested-intervals-1" title="Permalink to this equation">#</a></span>\[\begin{split}&amp;\forall n \in \mathbb{N}: x_n \le y_n \\
+<span class="eqno">(44)<a class="headerlink" href="#equation-equ-nested-intervals-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;\forall n \in \mathbb{N}: x_n \le y_n \\
 \\
 &amp;\lim_{n \to \infty} (y_n - x_n) = 0\end{split}\]</div>
 <p>Then <span class="math notranslate nohighlight">\(\{x_n\}\)</span> and <span class="math notranslate nohighlight">\(\{y_n\}\)</span> converge to the same point:</p>
@@ -711,7 +718,7 @@ and the limits of <span class="math notranslate nohighlight">\(\{x_n\}\)</span> 
 </div>
 </section>
 <section id="compact-sets">
-<span id="id5"></span><h2>Compact Sets<a class="headerlink" href="#compact-sets" title="Permalink to this heading">#</a></h2>
+<span id="id5"></span><h2>Compact Sets<a class="headerlink" href="#compact-sets" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-compact">
 <p class="admonition-title"><span class="caption-number">Definition 22 </span> (Compact Sets)</p>
 <section class="definition-content" id="proof-content">
@@ -719,7 +726,7 @@ and the limits of <span class="math notranslate nohighlight">\(\{x_n\}\)</span> 
 iff each bounded sequence of elements of A has a convergent subsequence.</p>
 </section>
 </div><div class="proof lemma admonition" id="lem-compactness-completeness">
-<p class="admonition-title"><span class="caption-number">Lemma 4 </span> (Completeness, Compactness )</p>
+<p class="admonition-title"><span class="caption-number">Lemma 4 </span> (Completeness, Compactness)</p>
 <section class="lemma-content" id="proof-content">
 <p><strong>a)</strong> Compact sets are complete.</p>
 <p><strong>b)</strong> Closed subsets of complete sets are complete.</p>
@@ -795,7 +802,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 </div>
 </section>
 <section id="continuous-functions">
-<span id="id6"></span><h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Permalink to this heading">#</a></h2>
+<span id="id6"></span><h2>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-sup-norm">
 <p class="admonition-title"><span class="caption-number">Definition 23 </span> (Sup Norm)</p>
 <section class="definition-content" id="proof-content">
@@ -848,7 +855,7 @@ We end up with an increasing sequence <span class="math notranslate nohighlight"
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Assertion (a) is obvious. We prove (b) with the triangular inequality.
-For (c) and (d) we need <span class="xref myst">Bolzano-Weierstrass</span>.</p>
+For (c) and (d) we need <a class="reference internal" href="#thr-bolzano-weierstrass"><span class="xref myst">Bolzano-Weierstrass</span></a>.</p>
 <p><strong>(b)</strong>
 Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.
 Let <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span>, <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> such that <span class="math notranslate nohighlight">\(\lVert f_n - f \rVert_{\infty} &lt; \epsilon\)</span> and <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>
@@ -915,7 +922,7 @@ and <span class="math notranslate nohighlight">\(f(b_0) = \max\{f(x) \mid x \in 
 </div>
 </section>
 <section id="riemann-integrable-functions">
-<span id="id7"></span><h2>Riemann-Integrable Functions<a class="headerlink" href="#riemann-integrable-functions" title="Permalink to this heading">#</a></h2>
+<span id="id7"></span><h2>Riemann-Integrable Functions<a class="headerlink" href="#riemann-integrable-functions" title="Link to this heading">#</a></h2>
 <p>There are (at least) two equivalent ways of introducing Riemann integrals: One is based on Riemann sums (or intermediate sums),
 the other on step functions (or lower and upper sums). While these approaches look very similar,
 their equivalence, shown in <a class="reference internal" href="#thr-riemann-integrals">Theorem 28</a>, is not obvious.
@@ -965,7 +972,7 @@ The Riemann sum <span class="math notranslate nohighlight">\(R(\phi, X_{\phi}, \
 <p><strong>(c)</strong>
 We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S-integrable</strong>, iff</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-1">
-<span class="eqno">(45)<a class="headerlink" href="#equation-equ-riemann-integrals-1" title="Permalink to this equation">#</a></span>\[\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
+<span class="eqno">(45)<a class="headerlink" href="#equation-equ-riemann-integrals-1" title="Link to this equation">#</a></span>\[\sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thr-riemann-integrals">
@@ -974,7 +981,7 @@ We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f: [a, b] \to \mathbb{R}\)</span>.</p>
 <p>Theorem: <span class="math notranslate nohighlight">\(f\)</span> is R-integrable iff it is S-integrable. In this case, we have:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-2">
-<span class="eqno">(46)<a class="headerlink" href="#equation-equ-riemann-integrals-2" title="Permalink to this equation">#</a></span>\[\int_a^b f(x) \, dx = \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
+<span class="eqno">(46)<a class="headerlink" href="#equation-equ-riemann-integrals-2" title="Link to this equation">#</a></span>\[\int_a^b f(x) \, dx = \sup_{\phi \le f} R(\phi) = \inf_{\psi \ge f} R(\psi)\]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> range over all step functions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <p>This equivalence allows us to forget the term “S-integrability”.</p>
 </section>
@@ -982,10 +989,10 @@ We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S
 <p>Proof. <strong>Part One:</strong> We show that <a class="reference internal" href="#equation-equ-riemann-integrals-1">(45)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-2">(46)</a> hold if <span class="math notranslate nohighlight">\(f\)</span> is R-integrable.</p>
 <p>Take any <span class="math notranslate nohighlight">\(\epsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f\)</span> is integrable, there is a partition <span class="math notranslate nohighlight">\(X\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-3">
-<span class="eqno">(47)<a class="headerlink" href="#equation-equ-riemann-integrals-3" title="Permalink to this equation">#</a></span>\[\left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | &lt; \epsilon\]</div>
+<span class="eqno">(47)<a class="headerlink" href="#equation-equ-riemann-integrals-3" title="Link to this equation">#</a></span>\[\left | \int_a^b f(x) \, dx  - R(f, X, \xi) \right | &lt; \epsilon\]</div>
 <p>for any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>. We are done if we can produce step functions <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-3a">
-<span class="eqno">(48)<a class="headerlink" href="#equation-equ-riemann-integrals-3a" title="Permalink to this equation">#</a></span>\[R(\phi) - \epsilon \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon \]</div>
+<span class="eqno">(48)<a class="headerlink" href="#equation-equ-riemann-integrals-3a" title="Link to this equation">#</a></span>\[R(\phi) - \epsilon \le \int_a^b f(x) \, dx \le R(\psi) + \epsilon \]</div>
 <p>Here they are:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;u_k = \inf \{f(x) \mid x \in [x_{k}, x_{k+1})\} \\
@@ -998,7 +1005,7 @@ We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>S
 \[\phi  \le f \le \psi \]</div>
 <p>from which it follows that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-3b">
-<span class="eqno">(49)<a class="headerlink" href="#equation-equ-riemann-integrals-3b" title="Permalink to this equation">#</a></span>\[R(\phi)  \le R(f, X, \xi) \le R(\psi) \]</div>
+<span class="eqno">(49)<a class="headerlink" href="#equation-equ-riemann-integrals-3b" title="Link to this equation">#</a></span>\[R(\phi)  \le R(f, X, \xi) \le R(\psi) \]</div>
 <p>for any partition <span class="math notranslate nohighlight">\(X\)</span> and and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>.
 Combining <a class="reference internal" href="#equation-equ-riemann-integrals-3b">(49)</a> with <a class="reference internal" href="#equation-equ-riemann-integrals-3">(47)</a>, we get:</p>
 <div class="math notranslate nohighlight">
@@ -1012,7 +1019,7 @@ Combining <a class="reference internal" href="#equation-equ-riemann-integrals-3b
 <p>We assume w.l.o.g. that <span class="math notranslate nohighlight">\(\phi\)</span> and <span class="math notranslate nohighlight">\(\psi\)</span> share the same partition <span class="math notranslate nohighlight">\(T = \{t_0, t_1, \ldots, t_m \}\)</span>.
 We are done if we can produce a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-4">
-<span class="eqno">(50)<a class="headerlink" href="#equation-equ-riemann-integrals-4" title="Permalink to this equation">#</a></span>\[R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon\]</div>
+<span class="eqno">(50)<a class="headerlink" href="#equation-equ-riemann-integrals-4" title="Link to this equation">#</a></span>\[R(\phi) - \epsilon \le R(f, X, \xi) \le R(\psi) + \epsilon\]</div>
 <p>for any partition <span class="math notranslate nohighlight">\(X\)</span> with <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span> and any set <span class="math notranslate nohighlight">\(\xi\)</span> of intermediate points of <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <p>The key idea is to split <span class="math notranslate nohighlight">\([a, b]\)</span> into a “good” set <span class="math notranslate nohighlight">\(U\)</span> and a “bad” set <span class="math notranslate nohighlight">\(V\)</span> and to make <span class="math notranslate nohighlight">\(V\)</span> arbitrarily small.</p>
 <p>We are given <span class="math notranslate nohighlight">\(\epsilon\)</span> and <span class="math notranslate nohighlight">\(T\)</span>. We choose a partition <span class="math notranslate nohighlight">\(X\)</span> with small <span class="math notranslate nohighlight">\(\delta = \mu(X)\)</span>.
@@ -1028,7 +1035,7 @@ Each X-interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</s
 \[\rho(x) = f(\xi_k) \text{ for } x \in [x_k, x_{k+1})\]</div>
 <p>Note that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-4a">
-<span class="eqno">(51)<a class="headerlink" href="#equation-equ-riemann-integrals-4a" title="Permalink to this equation">#</a></span>\[R(\rho) = R(f, X, \xi)\]</div>
+<span class="eqno">(51)<a class="headerlink" href="#equation-equ-riemann-integrals-4a" title="Link to this equation">#</a></span>\[R(\rho) = R(f, X, \xi)\]</div>
 <p>Let <span class="math notranslate nohighlight">\(U\)</span> be the union of all the intervals in <span class="math notranslate nohighlight">\(X\)</span> that fit into one of the intervals in <span class="math notranslate nohighlight">\(T\)</span>, and <span class="math notranslate nohighlight">\(V\)</span> the complement of <span class="math notranslate nohighlight">\(U\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;K = \{k &lt; n \mid \exists j &lt; m: [x_k, x_{k+1}) \subseteq [t_j, t_{j+1}) \} \\
@@ -1040,17 +1047,17 @@ Each X-interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</s
 \[\phi(x) = \phi(\xi_k) \le f(\xi_k) = \rho(x) \le \psi(\xi_k) = \psi(x)\]</div>
 <p>Therefore, we have on <span class="math notranslate nohighlight">\(U\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-5a">
-<span class="eqno">(52)<a class="headerlink" href="#equation-equ-riemann-integrals-5a" title="Permalink to this equation">#</a></span>\[\phi(x) \le \rho(x) \le  \psi(x)\]</div>
+<span class="eqno">(52)<a class="headerlink" href="#equation-equ-riemann-integrals-5a" title="Link to this equation">#</a></span>\[\phi(x) \le \rho(x) \le  \psi(x)\]</div>
 <p>Summing over <a class="reference internal" href="#equation-equ-riemann-integrals-5a">(52)</a> gives:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-7">
-<span class="eqno">(53)<a class="headerlink" href="#equation-equ-riemann-integrals-7" title="Permalink to this equation">#</a></span>\[\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) \]</div>
+<span class="eqno">(53)<a class="headerlink" href="#equation-equ-riemann-integrals-7" title="Link to this equation">#</a></span>\[\sum_{k \in K} \phi(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \rho(x_k)(x_{k+1} - x_k) \le \sum_{k \in K} \psi(x_k)(x_{k+1} - x_k) \]</div>
 <p>The length of <span class="math notranslate nohighlight">\(V\)</span> is bounded by <span class="math notranslate nohighlight">\(m\delta\)</span> because <span class="math notranslate nohighlight">\(V\)</span> contains at most <span class="math notranslate nohighlight">\(m\)</span> intervals, and the length of each interval is less or equal <span class="math notranslate nohighlight">\(\delta\)</span>.
 And, since <span class="math notranslate nohighlight">\(f\)</span> is bounded, there is an <span class="math notranslate nohighlight">\(M \in \mathbb{R}\)</span> such that we have on <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-6">
-<span class="eqno">(54)<a class="headerlink" href="#equation-equ-riemann-integrals-6" title="Permalink to this equation">#</a></span>\[\phi(x) - M \le \rho(x) \le \psi(x) + M\]</div>
+<span class="eqno">(54)<a class="headerlink" href="#equation-equ-riemann-integrals-6" title="Link to this equation">#</a></span>\[\phi(x) - M \le \rho(x) \le \psi(x) + M\]</div>
 <p>Summing over <a class="reference internal" href="#equation-equ-riemann-integrals-6">(54)</a> gives:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrals-8">
-<span class="eqno">(55)<a class="headerlink" href="#equation-equ-riemann-integrals-8" title="Permalink to this equation">#</a></span>\[\begin{split}&amp;\sum_{k \in L} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \\
+<span class="eqno">(55)<a class="headerlink" href="#equation-equ-riemann-integrals-8" title="Link to this equation">#</a></span>\[\begin{split}&amp;\sum_{k \in L} \phi(x_k)(x_{k+1} - x_k) - Mm\delta \\
 &amp;\le \sum_{k \in L} \rho(x_k)(x_{k+1} - x_k) \\
 &amp;\le \sum_{k \in L} \psi(x_k)(x_{k+1} - x_k) + Mm\delta\end{split}\]</div>
 <p>The inequalities <a class="reference internal" href="#equation-equ-riemann-integrals-7">(53)</a> and <a class="reference internal" href="#equation-equ-riemann-integrals-8">(55)</a> are combined to:</p>
@@ -1163,14 +1170,14 @@ We set for <span class="math notranslate nohighlight">\(k = 0, \ldots, n-1\)</sp
 <p>if <span class="math notranslate nohighlight">\(\mu(X)\)</span> is sufficiently small.</p>
 <p><strong>(b)</strong> Let <span class="math notranslate nohighlight">\(f\)</span> be non-decreasing. We get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-1">
-<span class="eqno">(56)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-1" title="Permalink to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
+<span class="eqno">(56)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-1" title="Link to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) (x_{k+1} - x_k) \\
 &amp;\le \delta \sum_{k=0}^{n-1} (f(x_{k+1}) - f(x_{k})) \\
 &amp;= \delta (f(b) - f(a)) &lt; \epsilon\end{split}\]</div>
 <p>if <span class="math notranslate nohighlight">\(\delta &lt; \epsilon /(f(b) - f(a))\)</span>.</p>
 <p><strong>(c)</strong> Let <span class="math notranslate nohighlight">\(f\)</span> be continuous. Then it is uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and there is a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that,
 for all <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(\psi(x_k) - \phi(x_{k}) &lt; \epsilon\)</span> if <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span>. We get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-2">
-<span class="eqno">(57)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-2" title="Permalink to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \\
+<span class="eqno">(57)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-2" title="Link to this equation">#</a></span>\[\begin{split}&amp;R(\psi) - R(\phi) = \sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \\
 &amp;&lt; \epsilon \sum_{k=0}^{n-1} (x_{k+1} - x_k) \\
 &amp;= \epsilon (b - a)\end{split}\]</div>
 <p>In <a class="reference internal" href="#equation-equ-riemann-integrable-functions-1">(56)</a> and <a class="reference internal" href="#equation-equ-riemann-integrable-functions-2">(57)</a> we encounter <strong>collapsing sums</strong>,
@@ -1188,13 +1195,13 @@ in the proof of <a class="reference internal" href="#thr-riemann-integrals">Theo
 <p>Since <span class="math notranslate nohighlight">\(f\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\(U\)</span>, there is a <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that,
 for all <span class="math notranslate nohighlight">\(k \in K\)</span>, <span class="math notranslate nohighlight">\(\psi(x_k) - \phi(x_{k}) &lt; \epsilon\)</span> if <span class="math notranslate nohighlight">\(\mu(X) &lt; \delta\)</span>. We have on <span class="math notranslate nohighlight">\(U\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-3">
-<span class="eqno">(58)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-3" title="Permalink to this equation">#</a></span>\[\sum_{k\in K} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a)\]</div>
+<span class="eqno">(58)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-3" title="Link to this equation">#</a></span>\[\sum_{k\in K} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a)\]</div>
 <p>Since <span class="math notranslate nohighlight">\(|d - d^*| &lt; \delta\)</span> for all but finitely many <span class="math notranslate nohighlight">\(d \in D\)</span>,
 all but finitely many elements of <span class="math notranslate nohighlight">\(D\)</span> are assembled in just one interval <span class="math notranslate nohighlight">\([x_k, x_{k+1})\)</span>,
 however small <span class="math notranslate nohighlight">\(\delta\)</span> is. Therefore the number of elements of <span class="math notranslate nohighlight">\(L\)</span>, say <span class="math notranslate nohighlight">\(m\)</span>, is finite.
 And <span class="math notranslate nohighlight">\(|f|\)</span> is bounded by some real number <span class="math notranslate nohighlight">\(M\)</span>. We have on <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-equ-riemann-integrable-functions-4">
-<span class="eqno">(59)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-4" title="Permalink to this equation">#</a></span>\[\sum_{k\in L} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \delta m M\]</div>
+<span class="eqno">(59)<a class="headerlink" href="#equation-equ-riemann-integrable-functions-4" title="Link to this equation">#</a></span>\[\sum_{k\in L} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \delta m M\]</div>
 <p>Adding <a class="reference internal" href="#equation-equ-riemann-integrable-functions-3">(58)</a> and <a class="reference internal" href="#equation-equ-riemann-integrable-functions-4">(59)</a> gives us:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\sum_{k=0}^{n-1} (\psi(x_{k}) - \phi(x_{k})) (x_{k+1} - x_k) \le \epsilon (b-a) + \delta m M \\\end{split}\]</div>
@@ -1219,7 +1226,7 @@ The ultimate result is the Lebesgue Criterion, the proof of which is too lengthy
 or, equivalently: <span class="math notranslate nohighlight">\(\mathcal{R}([a, b])\)</span> is closed under the sup norm.
 We can swap limit and integral:</p>
 <div class="math notranslate nohighlight" id="equation-thr-limit-riemann-integrable-1">
-<span class="eqno">(60)<a class="headerlink" href="#equation-thr-limit-riemann-integrable-1" title="Permalink to this equation">#</a></span>\[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
+<span class="eqno">(60)<a class="headerlink" href="#equation-thr-limit-riemann-integrable-1" title="Link to this equation">#</a></span>\[\lim_{n \to \infty} \int_a^b f_n(x) \, dx = \int _a^b\lim_{n \to \infty} f_n(x) \, dx\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of R-integrable functions on <span class="math notranslate nohighlight">\([a, b]\)</span> that converges uniformly to <span class="math notranslate nohighlight">\(f\)</span>.
@@ -1263,24 +1270,24 @@ And, <span class="math notranslate nohighlight">\(f\)</span> being bounded on <s
 </div>
 </section>
 <section id="differentiable-functions">
-<span id="id8"></span><h2>Differentiable Functions<a class="headerlink" href="#differentiable-functions" title="Permalink to this heading">#</a></h2>
+<span id="id8"></span><h2>Differentiable Functions<a class="headerlink" href="#differentiable-functions" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="def-derivatives">
 <p class="admonition-title"><span class="caption-number">Definition 29 </span> (Derivatives)</p>
 <section class="definition-content" id="proof-content">
 <p>We consider a closed interval <span class="math notranslate nohighlight">\([a, b] \subset \mathbb{R}\)</span> and a function <span class="math notranslate nohighlight">\(f:[a, b] \rightarrow \mathbb{R}\)</span>.</p>
 <p><strong>(a)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if the limit</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1">
-<span class="eqno">(61)<a class="headerlink" href="#equation-equ-derivatives-1" title="Permalink to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
+<span class="eqno">(61)<a class="headerlink" href="#equation-equ-derivatives-1" title="Link to this equation">#</a></span>\[\lim_{h \to 0} \frac{1}{h}(f(x+h)-f(x)) = f'(x)\]</div>
 <p>exists. <span class="math notranslate nohighlight">\(f'(x)\)</span> is called the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>. We often use the notation:</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-0">
-<span class="eqno">(62)<a class="headerlink" href="#equation-equ-derivatives-0" title="Permalink to this equation">#</a></span>\[\frac{df}{dx} =  f'(x)\]</div>
+<span class="eqno">(62)<a class="headerlink" href="#equation-equ-derivatives-0" title="Link to this equation">#</a></span>\[\frac{df}{dx} =  f'(x)\]</div>
 <p>The statement <a class="reference internal" href="#equation-equ-derivatives-1">(61)</a> is equivalent to</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1a">
-<span class="eqno">(63)<a class="headerlink" href="#equation-equ-derivatives-1a" title="Permalink to this equation">#</a></span>\[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
+<span class="eqno">(63)<a class="headerlink" href="#equation-equ-derivatives-1a" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + f'(x) \, h + o(h)\]</div>
 <p>which means that the term <span class="math notranslate nohighlight">\(f'(x) \, h\)</span> is a linear approximation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span>.
 The derivative is fully determined by equation <a class="reference internal" href="#equation-equ-derivatives-1a">(63)</a>. From</p>
 <div class="math notranslate nohighlight" id="equation-equ-derivatives-1b">
-<span class="eqno">(64)<a class="headerlink" href="#equation-equ-derivatives-1b" title="Permalink to this equation">#</a></span>\[f(x+h) = f(x) + y \, h + o(h)\]</div>
+<span class="eqno">(64)<a class="headerlink" href="#equation-equ-derivatives-1b" title="Link to this equation">#</a></span>\[f(x+h) = f(x) + y \, h + o(h)\]</div>
 <p>for some value <span class="math notranslate nohighlight">\(y\)</span> we can conclude that <span class="math notranslate nohighlight">\(y = f'(x)\)</span>.</p>
 <p><strong>(c)</strong> We say that <span class="math notranslate nohighlight">\(f\)</span> is <strong>continuously differentiable</strong> at <span class="math notranslate nohighlight">\(x \in [a, b]\)</span> if it is differentiable at <span class="math notranslate nohighlight">\(x\)</span>
 and its derivative <span class="math notranslate nohighlight">\(f'\)</span> is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
@@ -1426,7 +1433,7 @@ This is the assertion.</p>
 </div>
 </section>
 <section id="main-theorem-of-calculus">
-<span id="id9"></span><h2>Main Theorem of Calculus<a class="headerlink" href="#main-theorem-of-calculus" title="Permalink to this heading">#</a></h2>
+<span id="id9"></span><h2>Main Theorem of Calculus<a class="headerlink" href="#main-theorem-of-calculus" title="Link to this heading">#</a></h2>
 <div class="proof theorem admonition" id="thr-main-theorem-calculus">
 <p class="admonition-title"><span class="caption-number">Theorem 36 </span> (Main Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
@@ -1465,21 +1472,21 @@ The linear operators <span class="math notranslate nohighlight">\(\int\)</span> 
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong>
-The proof relies on the <span class="xref myst">mean value theorem of integration</span>.
+The proof relies on the <a class="reference internal" href="#thr-mean-value-integration"><span class="xref myst">mean value theorem of integration</span></a>.
 We prove in fact a slightly stronger assertion:</p>
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is continuous on a neighbourhood of <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>, then <span class="math notranslate nohighlight">\(F'(x) = f(x)\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(x\)</span> be such a point. Then, for any <span class="math notranslate nohighlight">\(h &gt; 0\)</span> we have:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{h}(F(x+h) - F(x)) = \int_x^{x+h} f(y) \, dy = \frac{1}{h} h f(\xi) = f(\xi)\]</div>
 <p>for some <span class="math notranslate nohighlight">\(\xi \in [x,x+h]\)</span>, and <span class="math notranslate nohighlight">\(f(\xi) \to f(x)\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span> since <span class="math notranslate nohighlight">\(f\)</span> is continuous near <span class="math notranslate nohighlight">\(x\)</span>.</p>
-<p><strong>(b)</strong> The proof relies on the <span class="xref myst">mean value theorem of differentiation</span>.</p>
+<p><strong>(b)</strong> The proof relies on the <a class="reference internal" href="#thr-mean-value-differentiation"><span class="xref myst">mean value theorem of differentiation</span></a>.</p>
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is differentiable, then it is integrable.
 Let <span class="math notranslate nohighlight">\(\{x_k\}\)</span>be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\{\xi_k\}\)</span> a set of intermediate points such that:</p>
 <div class="math notranslate nohighlight">
 \[f'(\xi_k) = \frac{f(x_{k+1}) - f(x_k)}{x_{k+1} - x_k}\]</div>
 <p>and we get:</p>
 <div class="math notranslate nohighlight" id="equation-equ-main-theorem-calculus-1">
-<span class="eqno">(65)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Permalink to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
+<span class="eqno">(65)<a class="headerlink" href="#equation-equ-main-theorem-calculus-1" title="Link to this equation">#</a></span>\[\begin{split}\int_a^b f'(y) \, dy &amp;\approx \sum_{k=0}^{n-1}f'(\xi_k)(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}\frac{f(x_{k+1} - f(x_k)}{x_{k+1} - x_k}(x_{k+1} - x_k) \\
 &amp;= \sum_{k=0}^{n-1}f(x_{k+1}) - f(x_k) \\
 &amp;= f(b) - f(a)\end{split}\]</div>
@@ -1494,14 +1501,14 @@ The last equation in <a class="reference internal" href="#equation-equ-main-theo
 <p><strong>(a) Integration by Parts</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f, g \in C^1([a,b])\)</span>. Then</p>
 <div class="math notranslate nohighlight" id="equation-thr-integration-rules-1">
-<span id="integration-by-parts"></span><span class="eqno">(66)<a class="headerlink" href="#equation-thr-integration-rules-1" title="Permalink to this equation">#</a></span>\[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
+<span id="integration-by-parts"></span><span class="eqno">(66)<a class="headerlink" href="#equation-thr-integration-rules-1" title="Link to this equation">#</a></span>\[\int^b_a f(x) \, g'(x) \, dx = f \, g \vert^b_a - \int^b_a f'(x) g(x) \, dx\]</div>
 <p><strong>(b) Substitution Rule</strong></p>
 <p>Let <span class="math notranslate nohighlight">\(f \in C^1([a,b])\)</span> and <span class="math notranslate nohighlight">\(g \in C^1([g^{-1}(a), g^{-1}(b)])\)</span> with <span class="math notranslate nohighlight">\(g' \neq 0\)</span>. Then</p>
 <div class="math notranslate nohighlight" id="equation-substitution-1">
-<span class="eqno">(67)<a class="headerlink" href="#equation-substitution-1" title="Permalink to this equation">#</a></span>\[\int_a^b f(g(x))\,g'(x) \, dx = \int_{g(a)}^{g(b)} f(y) \, dy \]</div>
+<span class="eqno">(67)<a class="headerlink" href="#equation-substitution-1" title="Link to this equation">#</a></span>\[\int_a^b f(g(x))\,g'(x) \, dx = \int_{g(a)}^{g(b)} f(y) \, dy \]</div>
 <p>and equivalently with <span class="math notranslate nohighlight">\(u = g(a), v = g(b)\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-substitution-2">
-<span class="eqno">(68)<a class="headerlink" href="#equation-substitution-2" title="Permalink to this equation">#</a></span>\[\int_u^v f(y) \, dy = \int^{g^{-1}(v)}_{g^{-1}(u)} f(g(x))\,g'(x) \, dx\]</div>
+<span class="eqno">(68)<a class="headerlink" href="#equation-substitution-2" title="Link to this equation">#</a></span>\[\int_u^v f(y) \, dy = \int^{g^{-1}(v)}_{g^{-1}(u)} f(g(x))\,g'(x) \, dx\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong> We know from <a class="reference internal" href="#thr-differentiation-rules">Theorem 34</a> that:</p>
@@ -1523,7 +1530,7 @@ The last equation in <a class="reference internal" href="#equation-equ-main-theo
 <section class="remark-content" id="proof-content">
 <p>The substitution rules <a class="reference internal" href="#equation-substitution-1">(67)</a> and <a class="reference internal" href="#equation-substitution-2">(68)</a>  can be memorized as follows:</p>
 <div class="math notranslate nohighlight" id="equation-substitution-3">
-<span class="eqno">(69)<a class="headerlink" href="#equation-substitution-3" title="Permalink to this equation">#</a></span>\[\begin{split}&amp;y = g(x) \\
+<span class="eqno">(69)<a class="headerlink" href="#equation-substitution-3" title="Link to this equation">#</a></span>\[\begin{split}&amp;y = g(x) \\
 &amp; \Rightarrow \frac{dy}{dx} = \frac{dg}{dx} = g'(x) \\
 &amp; \Rightarrow dy = g'(x) \, dy\end{split}\]</div>
 <p>You still have to keep track of the integration bounds.</p>
@@ -1533,7 +1540,7 @@ The last equation in <a class="reference internal" href="#equation-equ-main-theo
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in C^1([0,x_0])\)</span> with <span class="math notranslate nohighlight">\(f(0) = 0\)</span> and <span class="math notranslate nohighlight">\(f' \neq 0\)</span>. Then the Legendre equation holds:</p>
 <div class="math notranslate nohighlight" id="equation-eq-legendre">
-<span class="eqno">(70)<a class="headerlink" href="#equation-eq-legendre" title="Permalink to this equation">#</a></span>\[\int_0^{x_0} f(x) \, dx + \int_0^{y_0} f^{-1}(y) \, dy = x_0 y_0\]</div>
+<span class="eqno">(70)<a class="headerlink" href="#equation-eq-legendre" title="Link to this equation">#</a></span>\[\int_0^{x_0} f(x) \, dx + \int_0^{y_0} f^{-1}(y) \, dy = x_0 y_0\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We apply equation <a class="reference internal" href="#equation-substitution-2">(68)</a> and integrate by parts:</p>
@@ -1574,7 +1581,7 @@ A simple example is:</p>
 </section>
 </div></section>
 <section id="taylor-s-theorem">
-<span id="taylor-theorem"></span><h2>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this heading">#</a></h2>
+<span id="taylor-theorem"></span><h2>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Link to this heading">#</a></h2>
 <p>Derivatives are about local changes: How does a function <span class="math notranslate nohighlight">\(f\)</span> behave in a neighbourhood of some point <span class="math notranslate nohighlight">\(x\)</span>? The Taylor series allows us to express
 <span class="math notranslate nohighlight">\(f(x+h)\)</span> in terms of the higher derivatives of <span class="math notranslate nohighlight">\(f\)</span> with arbitrary precision. It comes in three varieties that differ in the remainder term.</p>
 <div class="proof theorem admonition" id="thr-taylor">
@@ -1583,13 +1590,13 @@ A simple example is:</p>
 <p>Let <span class="math notranslate nohighlight">\([a, b]\)</span> be a finite interval <span class="math notranslate nohighlight">\(f \in  C^{n+1}([a, b])\)</span>, <span class="math notranslate nohighlight">\(x \in (a, b)\)</span> and <span class="math notranslate nohighlight">\(h\)</span> so small that <span class="math notranslate nohighlight">\(x+h \in [a, b]\)</span>. Then:</p>
 <p><strong>(a)</strong></p>
 <div class="math notranslate nohighlight" id="equation-thr-taylor-a">
-<span class="eqno">(71)<a class="headerlink" href="#equation-thr-taylor-a" title="Permalink to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(h)^k + \frac{1}{n!}\int _x^{x+h} (x+h-t)^n f^{(n+1)}(t) \, dt\]</div>
+<span class="eqno">(71)<a class="headerlink" href="#equation-thr-taylor-a" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}(h)^k + \frac{1}{n!}\int _x^{x+h} (x+h-t)^n f^{(n+1)}(t) \, dt\]</div>
 <p><strong>(b)</strong> There exists a <span class="math notranslate nohighlight">\(\xi \in [x-h,x+h]\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-thr-taylor-b">
-<span class="eqno">(72)<a class="headerlink" href="#equation-thr-taylor-b" title="Permalink to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\]</div>
+<span class="eqno">(72)<a class="headerlink" href="#equation-thr-taylor-b" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}h^{n+1}\]</div>
 <p><strong>(c)</strong></p>
 <div class="math notranslate nohighlight" id="equation-thr-taylor-c">
-<span class="eqno">(73)<a class="headerlink" href="#equation-thr-taylor-c" title="Permalink to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(h^n)\]</div>
+<span class="eqno">(73)<a class="headerlink" href="#equation-thr-taylor-c" title="Link to this equation">#</a></span>\[f(x+h)=\sum _{k=0}^n \frac{f^{(k)}(x)}{k!}h^k + o(h^n)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. <strong>(a)</strong> The proof is by induction, using the main theorem of integration and integration by parts. We set <span class="math notranslate nohighlight">\(u = x+h\)</span>.</p>
@@ -1610,7 +1617,7 @@ This follows from (b), because:</p>
 </div>
 </section>
 <section id="little-o-big-o">
-<span id="id10"></span><h2>Little o, Big O<a class="headerlink" href="#little-o-big-o" title="Permalink to this heading">#</a></h2>
+<span id="id10"></span><h2>Little o, Big O<a class="headerlink" href="#little-o-big-o" title="Link to this heading">#</a></h2>
 <p>Little o means: <span class="math notranslate nohighlight">\(f\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span> faster than <span class="math notranslate nohighlight">\(g\)</span>, or, equivalently, <span class="math notranslate nohighlight">\(f/g\)</span> tends to <span class="math notranslate nohighlight">\(0\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;f = o(g) \Leftrightarrow \lim\frac{f(x)}{g(x)} = 0 \\ \\
@@ -1623,8 +1630,9 @@ This follows from (b), because:</p>
 &amp;f = O(x^n) \Leftrightarrow f(x)\le C x^n\end{split}\]</div>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id11">
+<div role="list" class="citation-list">
 <div class="citation" id="id91" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Cou55</a><span class="fn-bracket">]</span></span>
 <p>Richard Courant. <em>Vorlesungen über Differential- und Integralrechnung</em>. Volume 1. Springer-Verlag, Berlin, 4th edition edition, 1955. First published 1927.</p>
