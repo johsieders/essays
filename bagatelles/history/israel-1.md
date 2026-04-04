@@ -100,6 +100,8 @@ Die erste Aliya wäre fast vollständig gescheitert, hätte nicht **Baron Edmond
 
 Die Siedler nannten ihn *HaNadiv* – der Großzügige. Das Verhältnis war gleichwohl ambivalent: Rothschilds Verwalter bevormundeten die Siedler, schrieben vor, was angepflanzt wurde, kontrollierten jede Ausgabe. Ben-Gurion und andere beschrieben die Rothschild-Verwaltung als paternalistisches Joch. Den Grundwiderspruch aber löste das nicht auf: Man brauchte das Geld – und wollte die Autonomie.
 
+Rothschild selbst stand dem politischen Programm Herzls skeptisch gegenüber. Als Herzl ihn 1896 besuchte und um Unterstützung bat, lehnte Rothschild ab – Herzls öffentlicher, agitatorischer Stil erschien ihm kontraproduktiv. Und doch hatte Rothschild mit seiner Siedlungsarbeit die praktische Grundlage für genau das gelegt, was Herzl sich vorgestellt hatte.
+
 ### Der Aufbau einer Parallelgesellschaft
 
 Das vielleicht Entscheidende an der zionistischen Einwanderung war nicht ihre schiere Zahl, sondern ihre **organisatorische Kohärenz**. Die Einwanderer kamen nicht als Individuen, die ein besseres Leben suchten – sie kamen mit einem historischen Projekt und bauten jahrzehntelang vor der Staatsgründung sämtliche Institutionen eines modernen Staates auf:
@@ -109,6 +111,24 @@ Das vielleicht Entscheidende an der zionistischen Einwanderung war nicht ihre sc
 - **Haganah (1920):** Eine geheime Verteidigungsorganisation, die sich zur Keimzelle der späteren israelischen Armee entwickelte
 - **Jewish Agency:** De-facto-Regierung der jüdischen Gemeinschaft
 - **Bildungssystem:** Von der Grundschule bis zur Hebräischen Universität Jerusalem (1925) – komplett auf Hebräisch.
+
+Als 1948 der Staat ausgerufen wurde, war er nicht aus dem Nichts entstanden. Er war bereits da.
+
+Hinzu kam außergewöhnliches Humankapital: Die Einwanderer der fünften Aliya aus Deutschland und Österreich brachten Bildung, Kapital und Industrieerfahrung aus hochentwickelten Gesellschaften mit. Tel Aviv, 1909 als Gartenvorstadt von Jaffa gegründet, war 1939 eine moderne Stadt mit 150.000 Einwohnern, Cafés, Konzerthäusern und einer Philharmonie – gegründet 1936 von dem Geiger Bronisław Huberman, besetzt mit aus Europa geflüchteten Musikern.
+
+### Wie die Einwanderung behandelt wurde – Osmanen und Briten im Vergleich
+
+Die fünf Aliyas fanden unter grundverschiedenen politischen Bedingungen statt, und die Haltung der jeweiligen Herrschaftsmacht prägte ihren Verlauf entscheidend.
+
+**Die osmanische Phase (1. und 2. Aliya):** Die Osmanen waren grundsätzlich feindselig – aber strukturell zu schwach, um ihre eigene Politik durchzusetzen. Schon 1882 erließen sie Einwanderungsverbote für russische Juden, folgten 1884 Landkaufverbote und 1887 Niederlassungsverbote. In der Praxis wurden all diese Verbote durch Bestechung lokaler Beamter, Strohmänner beim Landkauf und die chronische Verwaltungsschwäche einer maroden Bürokratie routinemäßig umgangen. Herzl versuchte Sultan Abdülhamid II. persönlich zu überzeugen – mit dem Angebot, die osmanischen Staatsschulden zu begleichen. Der Sultan lehnte ab: Palästina gehöre nicht ihm, sondern dem muslimischen Volk, und stehe nicht zum Verkauf. Die Jungtürkische Revolution 1908 weckte kurz Hoffnungen auf Liberalisierung; tatsächlich wurden die Jungtürken gegenüber jüdischer Einwanderung eher restriktiver. Das Ergebnis dieser Phase: Rund 60.000 Einwanderer trotz formaler Verbote – ermöglicht nicht durch Duldung, sondern durch Korruption und Staatsversagen.
+
+**Die britische Phase (3., 4. und 5. Aliya):** Die Briten brachten eine völlig andere Qualität der Kontrolle mit: einen modernen Verwaltungsapparat und ein durchdachtes Steuerungsinstrument, das **Zertifikatssystem**. Jeder Einwanderer brauchte ein offizielles Zertifikat der Mandatsverwaltung; die Gesamtzahl der Zertifikate wurde periodisch nach der angeblichen „Absorptionsfähigkeit" des Landes festgesetzt – in Wirklichkeit ein politisches Druckmittel, das je nach Lage erhöht oder gedrosselt wurde.
+
+Der britische Kurs schwankte erheblich. In den frühen Mandatsjahren war die Einwanderung vergleichsweise offen; der erste Hochkommissar Herbert Samuel, selbst jüdischer Abstammung, förderte sie aktiv. Mit wachsenden arabischen Unruhen begann das Pendel zu schwingen. Das **Passfield-Weißbuch (1930)** versuchte drastische Einschränkungen durchzusetzen – wurde aber nach massivem Lobbydruck der Zionistischen Organisation in London faktisch zurückgenommen, ein Zeichen dafür, wie stark die zionistische Bewegung in der britischen Politik verankert war.
+
+Den Wendepunkt markierte das **Weißbuch von 1939**, das dramatischste Dokument der britischen Palästinapolitik: Die jüdische Einwanderung wurde auf 75.000 über fünf Jahre begrenzt, danach nur noch mit arabischer Zustimmung – was einem faktischen Einwanderungsstopp gleichkam. Das Landkaufrecht wurde stark eingeschränkt. Dieser Schwenk kam in dem Moment, als in Europa die Vernichtungsmaschinerie anlief und Juden dringend fliehen mussten. Die zionistische Reaktion war die *Aliya Bet* – illegale Einwanderung per Schiff, die von der britischen Marine blockiert wurde. Das Schiff *Struma* (1942), mit 769 jüdischen Flüchtlingen aus Rumänien, wurde von den Briten aus dem Bosporus zurückgewiesen; nach einer sowjetischen Torpedierung sank es – fast alle Passagiere ertranken. Solche Vorfälle delegitimierten die britische Mandatspolitik in der jüdischen Welt endgültig.
+
+Das Grundmuster beider Phasen ist dasselbe: **Formale Restriktionen, die durch Realität, Korruption oder politischen Druck unterlaufen wurden.** Die Osmanen scheiterten aus Schwäche; die Briten scheiterten an der strukturellen Unlösbarkeit ihrer eigenen widersprüchlichen Versprechen.
 
 ---
 
