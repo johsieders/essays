@@ -116,8 +116,10 @@ parts:
       - file: history/31-edinburgh
         title: Edinburgh
       - file: history/israel-1
-        title: Der Weg zum Staat Israel * 
-
+        title: Der Weg zum Staat Israel *
+      - file: history/israel-2
+        title: Israel zwischen Gründung und Sechs-Tage-Krieg *
+  
   - caption: Religion
     chapters:
       - file: literature/22-god-and-evil
