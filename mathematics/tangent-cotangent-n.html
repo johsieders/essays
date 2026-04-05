@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Tangent and Cotangent Spaces &#8212; Bagatelles</title>
   
@@ -28,36 +29,40 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show code';</script>
     <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/tangent-cotangent-n';</script>
@@ -161,18 +166,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -261,7 +255,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/israel-1.html">Der Weg zum Staat Israel *</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../history/israel-2.html">Israel zwischen Gründung und Sechs-Tage-Krieg *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/israel-2.html">Von der Gründung Israels zum Sechs-Tage-Krieg *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/israel-3.html">Vom Sechs-Tage-Krieg bis Oslo*</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
 <ul class="nav bd-sidenav">
@@ -321,9 +316,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -481,9 +476,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -522,17 +517,17 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="tangent-and-cotangent-spaces">
-<h1>Tangent and Cotangent Spaces<a class="headerlink" href="#tangent-and-cotangent-spaces" title="Link to this heading">#</a></h1>
+<h1>Tangent and Cotangent Spaces<a class="headerlink" href="#tangent-and-cotangent-spaces" title="Permalink to this heading">#</a></h1>
 <div class="proof definition admonition" id="def-manifolds-constraints">
 <p class="admonition-title"><span class="caption-number">Definition 32 </span> (Manifolds via Constraints)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(Q \subseteq \mathbb{R}^n\)</span>. <span class="math notranslate nohighlight">\(Q\)</span> is called a <strong>k-dimensional manifold</strong> iff,
 there is an open set <span class="math notranslate nohighlight">\(U \subseteq \mathbb{R}^n\)</span> and a function <span class="math notranslate nohighlight">\(F \in C^\infty(U, \mathbb{R}^{n-k})\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-manifolds-1">
-<span class="eqno">(76)<a class="headerlink" href="#equation-equ-manifolds-1" title="Link to this equation">#</a></span>\[Q = \{x \in U \mid F(x) = 0\}\]</div>
+<span class="eqno">(76)<a class="headerlink" href="#equation-equ-manifolds-1" title="Permalink to this equation">#</a></span>\[Q = \{x \in U \mid F(x) = 0\}\]</div>
 <p>with</p>
 <div class="math notranslate nohighlight" id="equation-equ-manifolds-2">
-<span class="eqno">(77)<a class="headerlink" href="#equation-equ-manifolds-2" title="Link to this equation">#</a></span>\[\text{rank } \partial F(x) = n - k\]</div>
+<span class="eqno">(77)<a class="headerlink" href="#equation-equ-manifolds-2" title="Permalink to this equation">#</a></span>\[\text{rank } \partial F(x) = n - k\]</div>
 <p>The matrix <span class="math notranslate nohighlight">\(\partial F(x)\)</span> is the Jacobi matrix of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial F(x)    = \begin{bmatrix}
@@ -551,11 +546,11 @@ which allows for different constraint functions <span class="math notranslate no
 <p>Let <span class="math notranslate nohighlight">\(Q \subseteq \mathbb{R}^n\)</span>. <span class="math notranslate nohighlight">\(Q\)</span> is called a <strong>k-dimensional manifold</strong> iff,
 for all <span class="math notranslate nohighlight">\(x \in Q\)</span>, there is an open environment <span class="math notranslate nohighlight">\(U(x)\)</span> of <span class="math notranslate nohighlight">\(x\)</span> such that the following holds:</p>
 <div class="math notranslate nohighlight" id="equation-equ-manifolds-1g">
-<span class="eqno">(78)<a class="headerlink" href="#equation-equ-manifolds-1g" title="Link to this equation">#</a></span>\[\exists F \in C^\infty(U(x)), \mathbb{R}^{n-k}):
+<span class="eqno">(78)<a class="headerlink" href="#equation-equ-manifolds-1g" title="Permalink to this equation">#</a></span>\[\exists F \in C^\infty(U(x)), \mathbb{R}^{n-k}):
 Q \cap U_(x) = \{x \in U_\epsilon(x) \mid F(x) = 0\}\]</div>
 <p>with</p>
 <div class="math notranslate nohighlight" id="equation-equ-manifolds-2g">
-<span class="eqno">(79)<a class="headerlink" href="#equation-equ-manifolds-2g" title="Link to this equation">#</a></span>\[\text{rank } \partial F(x) = n - k\]</div>
+<span class="eqno">(79)<a class="headerlink" href="#equation-equ-manifolds-2g" title="Permalink to this equation">#</a></span>\[\text{rank } \partial F(x) = n - k\]</div>
 </section>
 </div><div class="proof definition admonition" id="def-manifolds-curves">
 <p class="admonition-title"><span class="caption-number">Definition 33 </span> (Manifolds via Curves)</p>
@@ -563,10 +558,10 @@ Q \cap U_(x) = \{x \in U_\epsilon(x) \mid F(x) = 0\}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(Q \subseteq \mathbb{R}^n\)</span>. <span class="math notranslate nohighlight">\(Q\)</span> is called a <strong>k-dimensional manifold</strong> iff,
 there is an open set <span class="math notranslate nohighlight">\(U \subseteq \mathbb{R}^n\)</span> and a <span class="math notranslate nohighlight">\(F \in C^\infty(U, \mathbb{R}^{n-k})\)</span> such that:</p>
 <div class="math notranslate nohighlight" id="equation-equ-manifolds-1c">
-<span class="eqno">(80)<a class="headerlink" href="#equation-equ-manifolds-1c" title="Link to this equation">#</a></span>\[Q = \{x \in U \mid F(x) = 0\}\]</div>
+<span class="eqno">(80)<a class="headerlink" href="#equation-equ-manifolds-1c" title="Permalink to this equation">#</a></span>\[Q = \{x \in U \mid F(x) = 0\}\]</div>
 <p>with</p>
 <div class="math notranslate nohighlight" id="equation-equ-manifolds-2c">
-<span class="eqno">(81)<a class="headerlink" href="#equation-equ-manifolds-2c" title="Link to this equation">#</a></span>\[\text{rank } \partial F(x) = n - k\]</div>
+<span class="eqno">(81)<a class="headerlink" href="#equation-equ-manifolds-2c" title="Permalink to this equation">#</a></span>\[\text{rank } \partial F(x) = n - k\]</div>
 <p>The matrix <span class="math notranslate nohighlight">\(\partial F(x)\)</span> is the Jacobi matrix of <span class="math notranslate nohighlight">\(F\)</span> at <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\partial F(x)    = \begin{bmatrix}
@@ -616,7 +611,7 @@ The tangent space of <span class="math notranslate nohighlight">\(Q\)</span> at 
 </div><p>Let Q be an n-dimensional manifold with a smooth parameterization: <span class="math notranslate nohighlight">\(\phi: U \to V\)</span>
 where <span class="math notranslate nohighlight">\(U \subseteq \mathbb{R}^n\)</span> is an open set, <span class="math notranslate nohighlight">\(V\)</span> is a vector space, and <span class="math notranslate nohighlight">\(\phi \in C^\infty(U, V)\)</span>.</p>
 <section id="tangent-space">
-<h2>Tangent Space<a class="headerlink" href="#tangent-space" title="Link to this heading">#</a></h2>
+<h2>Tangent Space<a class="headerlink" href="#tangent-space" title="Permalink to this heading">#</a></h2>
 <p>At each point <span class="math notranslate nohighlight">\(\phi(u_0) \in Q\)</span> where <span class="math notranslate nohighlight">\(u_0 = (u^1_0, \ldots, u^n_0) \in U\)</span>, we define the <strong>directional derivative operators</strong> <span class="math notranslate nohighlight">\(\partial_{u^i}|_{u_0}\)</span> for <span class="math notranslate nohighlight">\(i = 1, \ldots, n\)</span> by their action on smooth functions:</p>
 <p><span class="math notranslate nohighlight">\(
 \partial_{u^i}|_{u_0}: C^{\infty}(Q) \to \mathbb{R}, \quad f \mapsto \frac{\partial}{\partial u^i}\bigg|_{u=u_0} f(\phi(u))
@@ -628,7 +623,7 @@ T_{\phi(u_0)} Q = \text{span}\{\partial_{u^1}|_{u_0}, \ldots, \partial_{u^n}|_{u
 <p>This is an n-dimensional vector space. A general tangent vector has the form <span class="math notranslate nohighlight">\(v = \sum_{i=1}^n v^i \partial_{u^i}|_{u_0}\)</span> for <span class="math notranslate nohighlight">\(v^i \in \mathbb{R}\)</span>.</p>
 </section>
 <section id="cotangent-space">
-<h2>Cotangent Space<a class="headerlink" href="#cotangent-space" title="Link to this heading">#</a></h2>
+<h2>Cotangent Space<a class="headerlink" href="#cotangent-space" title="Permalink to this heading">#</a></h2>
 <p>The <strong>cotangent space</strong> <span class="math notranslate nohighlight">\(T^*_{\phi(u_0)}Q\)</span> is the dual space of <span class="math notranslate nohighlight">\(T_{\phi(u_0)}Q\)</span>. It is also n-dimensional,
 with basis elements <span class="math notranslate nohighlight">\(du^i|_{u_0}\)</span> for <span class="math notranslate nohighlight">\(i = 1, \ldots, n\)</span> defined by:</p>
 <p><span class="math notranslate nohighlight">\(
@@ -637,7 +632,7 @@ du^i|_{u_0}: T_{\phi(u_0)}Q \to \mathbb{R}, \quad \text{where } du^i|_{u_0}(\par
 <p>For a general tangent vector <span class="math notranslate nohighlight">\(v = \sum_{j=1}^n v^j \partial_{u^j}|_{u_0}\)</span>, we have <span class="math notranslate nohighlight">\(du^i|_{u_0}(v) = v^i\)</span>.</p>
 </section>
 <section id="differential-of-a-function">
-<h2>Differential of a Function<a class="headerlink" href="#differential-of-a-function" title="Link to this heading">#</a></h2>
+<h2>Differential of a Function<a class="headerlink" href="#differential-of-a-function" title="Permalink to this heading">#</a></h2>
 <p>For any smooth function <span class="math notranslate nohighlight">\(f \in C^{\infty}(Q)\)</span>, the <strong>differential</strong> <span class="math notranslate nohighlight">\(df\)</span> is the covector:</p>
 <p><span class="math notranslate nohighlight">\(
 df: T_{\phi(u_0)}Q \to \mathbb{R}, \quad df(v) = v(f)
@@ -653,7 +648,7 @@ du^j(v) = \sum_{i=1}^n v^i \cdot \partial_{u^i}|_{u_0} u^j = v^j
 <p>In the basis <span class="math notranslate nohighlight">\(\{du^1, \ldots, du^n\}\)</span>, we can write: <span class="math notranslate nohighlight">\(df = \sum_{i=1}^n (\partial_{u^i} f) \cdot du^i\)</span>.</p>
 </section>
 <section id="tangent-bundle">
-<h2>Tangent Bundle<a class="headerlink" href="#tangent-bundle" title="Link to this heading">#</a></h2>
+<h2>Tangent Bundle<a class="headerlink" href="#tangent-bundle" title="Permalink to this heading">#</a></h2>
 <p>The <strong>tangent bundle</strong> is the collection of all tangent spaces:</p>
 <p><span class="math notranslate nohighlight">\(
 TQ = \bigcup_{x \in Q} \{x\} \times T_x Q = \{(x, v) \mid x \in Q, v \in T_x Q\}
@@ -669,7 +664,7 @@ TQ = \left\{\left(\phi(u), \sum_{i=1}^n v^i \partial_{u^i}|_u\right) \mid u \in 
 <p>Note that the basis vectors <span class="math notranslate nohighlight">\(\partial_{u^i}|_u\)</span> depend on the point <span class="math notranslate nohighlight">\(\phi(u)\)</span> — they represent the tangent vectors at that specific point. The tangent bundle TQ is a 2n-dimensional manifold.</p>
 </section>
 <section id="cotangent-bundle">
-<h2>Cotangent Bundle<a class="headerlink" href="#cotangent-bundle" title="Link to this heading">#</a></h2>
+<h2>Cotangent Bundle<a class="headerlink" href="#cotangent-bundle" title="Permalink to this heading">#</a></h2>
 <p>The <strong>cotangent bundle</strong> is the collection of all cotangent spaces:</p>
 <p><span class="math notranslate nohighlight">\(
 T^*Q = \bigcup_{x \in Q} \{x\} \times T^*_x Q = \{(x, p) \mid x \in Q, p \in T^*_x Q\}
@@ -685,7 +680,7 @@ T^*Q = \left\{\left(\phi(u), \sum_{i=1}^n p_i \, du^i\right) \mid u \in U, p_i \
 <p>The cotangent bundle <span class="math notranslate nohighlight">\(T^*Q\)</span> is also a 2n-dimensional manifold and serves as the <strong>phase space</strong> for Hamiltonian mechanics.</p>
 </section>
 <section id="key-points">
-<h2>Key Points<a class="headerlink" href="#key-points" title="Link to this heading">#</a></h2>
+<h2>Key Points<a class="headerlink" href="#key-points" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The tangent space <span class="math notranslate nohighlight">\(T_x Q\)</span> at each point <span class="math notranslate nohighlight">\(x\)</span> is an n-dimensional vector space containing tangent vectors (velocities)</p></li>
 <li><p>The cotangent space <span class="math notranslate nohighlight">\(T^*_x Q\)</span> at each point <span class="math notranslate nohighlight">\(x\)</span> is the dual n-dimensional vector space containing covectors (momenta)</p></li>

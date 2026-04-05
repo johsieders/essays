@@ -2,11 +2,12 @@
 
 *Eine Diskussionsgrundlage – historisch, nicht parteiisch*
 
+*Claude Sonnet 4.6, Gemini 3, Johannes Siedersleben (Editor)*
+
 April 2026
 
 ---
 
-## Vorbemerkung
 
 Dieses Papier ist das zweite in einer Reihe. Das erste – *„Heimstätte und Katastrophe"* – behandelte die Vorgeschichte: Zionismus, Einwanderung, die Rolle der Großmächte und die Gründung des Staates Israel 1948. Dieses Papier setzt dort an und folgt Israels erstem Jahrzehnt bis zum Sechs-Tage-Krieg 1967. Ein drittes Papier wird den Wendepunkt behandeln: wie aus dem bewunderten kleinen Staat ein international umstrittener Akteur wurde.
 
@@ -20,7 +21,7 @@ Hinzu kamen die Bilder: junge Menschen, die Sümpfe trockenlegten, Wüsten bebau
 
 In Deutschland hatte diese Sympathie eine zusätzliche, spezifische Dimension: Schuld und das Bedürfnis nach Wiedergutmachung. Israel zu unterstützen war eine Form der Buße – real empfunden, nicht nur rhetorisch. Die Sicherheit Israels wurde zur deutschen Staatsräson erklärt, und dieser Satz hatte in den ersten Jahrzehnten noch echtes moralisches Gewicht.
 
-**Der Sechs-Tage-Krieg 1967** war der letzte Moment dieser ungebrochenen Sympathie – und zugleich ihr Ende. Israel gewann in sechs Tagen einen verblüffenden militärischen Sieg und besetzte dabei Westjordanland, Gazastreifen, Sinai und Golanhöhen. Mit diesem Sieg begann eine Besatzung, die bis heute andauert, und damit die langsame Erosion des westlichen Wohlwollens. Aus David wurde, in den Augen vieler, Goliath.
+**Der Sechs-Tage-Krieg 1967** war der letzte Moment dieser ungebrochenen Sympathie – und zugleich ihr Ende. Israel gewann in sechs Tagen einen verblüffenden militärischen Sieg und besetzte dabei Westjordanland, Gazastreifen, Sinai und Golanhöhen. In der westlichen Wahrnehmung begann hier die Metamorphose: Das Bild des bedrohten David wurde durch das Bild eines militärischen Goliath ersetzt, der nun als Besatzungsmacht über Millionen Palästinenser herrschte. Mit diesem Sieg begann eine Besatzung, die bis heute andauert, und damit die langsame Erosion des westlichen Wohlwollens. Aus David wurde, in den Augen vieler, Goliath.
 
 Dieses Papier handelt von der Zeit davor: dem Israel der Gründungsphase, seinen Widersprüchen, seinen Leistungen und seinen Schattenseiten.
 
@@ -32,13 +33,16 @@ Dieses Papier handelt von der Zeit davor: dem Israel der Gründungsphase, seinen
 
 Elf Minuten nach Ben-Gurions Unabhängigkeitserklärung am 14. Mai 1948 erkannte Truman Israel an. Elf Stunden später griffen die Armeen Ägyptens, Jordaniens, Syriens, des Irak und des Libanon an. Der Krieg – *Milhemet HaAtzma'ut* auf Hebräisch, Teil der Nakba für die Palästinenser – dauerte bis März 1949.
 
-Das Ergebnis überraschte die Welt. Israel überlebte nicht nur, sondern kontrollierte am Waffenstillstand **78 Prozent** des Mandatsgebiets statt der 56 Prozent, die der UN-Teilungsplan vorgesehen hatte. Die arabische Koalition war militärisch weniger schlagkräftig als sie wirkte: schlecht koordiniert, mit rivalisierenden Kommandos und politisch zerstritten. Jordanien unter König Abdullah verfolgte eigene Ziele – die Annexion des Westjordanlands – und kämpfte nicht wirklich für einen palästinensischen Staat. Die israelische Haganah dagegen hatte nach zwei Jahrzehnten des Aufbaus eine de-facto-Armee, die schnell zur regulären *Israel Defense Forces* (IDF) umgebaut wurde. In entscheidenden Momenten kam Waffennachschub aus der Tschechoslowakei – mit Stalins Billigung.
+Das Ergebnis überraschte die Welt. Während das Narrativ oft von einer absoluten arabischen Übermacht spricht, zeigen moderne historische Analysen, dass Israel nach der ersten Waffenruhe im Juli 1948 oft über mehr mobilisierte Truppen und bessere Ausrüstung (v.a. durch Lieferungen aus der Tschechoslowakei) verfügte als die zerstrittene arabische Koalition.
+
+Israel überlebte nicht nur, sondern kontrollierte am Waffenstillstand **78 Prozent** des Mandatsgebiets statt der 56 Prozent, die der UN-Teilungsplan vorgesehen hatte. Die arabische Koalition war militärisch weniger schlagkräftig als sie wirkte: schlecht koordiniert, mit rivalisierenden Kommandos und politisch zerstritten. Jordanien unter König Abdullah verfolgte eigene Ziele – die Annexion des Westjordanlands – und kämpfte nicht wirklich für einen palästinensischen Staat. Die israelische Haganah dagegen hatte nach zwei Jahrzehnten des Aufbaus eine de-facto-Armee, die schnell zur regulären *Israel Defense Forces* (IDF) umgebaut wurde. In entscheidenden Momenten kam Waffennachschub aus der Tschechoslowakei – mit Stalins Billigung.
 
 **Jordanien** behielt das Westjordanland und Ostjerusalem einschließlich der Altstadt und der Klagemauer. **Ägypten** behielt den Gazastreifen. Ein palästinensischer Staat entstand nicht – was weder Israel noch Jordanien ernsthaft anstrebte. Die Waffenstillstandslinien von 1949 wurden zur sogenannten **Grünen Linie** – de-facto-Grenze bis 1967, aber nie international anerkannte Staatsgrenze.
 
 ### Masseneinwanderung und ihre Folgen
 
-Die erste Dekade war geprägt von einer Einwanderungswelle, die jeden Planungshorizont sprengte. Zwischen 1948 und 1951 verdoppelte sich die jüdische Bevölkerung – von 650.000 auf 1,3 Millionen. Es kamen Holocaust-Überlebende aus Europa und, in noch größerer Zahl, Juden aus arabischen Ländern: aus Irak, Jemen, Marokko, Ägypten, Libyen, Tunesien. Diese **Mizrahim** – orientalische Juden – waren in ihren Heimatländern nach 1948 massiver Verfolgung ausgesetzt; etwa 850.000 Menschen wurden in den folgenden Jahren vertrieben oder flohen. Diese Bevölkerungsbewegung ist im Westen weit weniger bekannt als die Nakba, hat aber ähnliche Dimensionen.
+Die erste Dekade war geprägt von einer Einwanderungswelle, die jeden Planungshorizont sprengte. Zwischen 1948 und 1951 verdoppelte sich die jüdische Bevölkerung – von 650.000 auf 1,3 Millionen. Es kamen Holocaust-Überlebende aus Europa und, in noch größerer Zahl, Juden aus arabischen Ländern: aus Irak, Jemen, Marokko, Ägypten, Libyen, Tunesien. Diese **Mizrahim** – orientalische Juden – waren in ihren Heimatländern nach 1948 massiver Verfolgung ausgesetzt; etwa 850.000 Menschen wurden in den folgenden Jahren vertrieben oder flohen. Historiker debattieren heute, inwieweit diese Bewegung als „jüdische Nakba“ oder als Resultat zionistischer Mobilisierung zu werten ist; faktisch führte sie zu einem Bevölkerungsaustausch in der Region.
+Diese Bevölkerungsbewegung ist im Westen weit weniger bekannt als die Nakba, hat aber ähnliche Dimensionen.
 
 Die Aufnahme dieser Massen unter Kriegsbedingungen und mit einer Wirtschaft im Aufbau war eine logistische Herausforderung gigantischen Ausmaßes. Die Einwanderer wurden in provisorischen Lagern untergebracht – *Ma'abarot* aus Zeltlagern und Wellblechhütten, die manchmal jahrelang Bestand hatten. Die Bedingungen waren hart, die sozialen Spannungen erheblich. Ein irakischer Jude, der in Bagdad Arzt oder Anwalt gewesen war, fand sich in einem Ma'abara wieder, verwaltet von aschkenasischen Bürokraten, die ihn als kulturell rückständig betrachteten. Diese Erfahrung prägte eine Generation und erklärt die tiefe Feindseligkeit der mizrachischen Gemeinschaft gegenüber der Arbeitspartei-Elite, die noch Jahrzehnte später politisch wirksam war.
 
@@ -48,13 +52,13 @@ Von 1949 bis 1959 galt die **Tzena** – ein striktes Rationierungssystem für G
 
 Ben-Gurion verhandelte gegen massiven innenpolitischen Widerstand das Wiedergutmachungsabkommen mit der Bundesrepublik. Menachem Begin sprach im Parlament von "Blutgeld" und führte Demonstranten an, die die Knesset stürmten. Ben-Gurion ließ abstimmen und setzte das Abkommen durch.
 
-Die Ergebnisse: 3 Milliarden DM über zwölf Jahre, zusätzlich 450 Millionen DM an die Jewish Claims Conference – nicht als Bargeld, sondern als Sachleistungen: Schiffe, Stahlwerke, Lokomotiven, Maschinen. Das baute industrielle Kapazität auf, die Israel aus eigener Kraft nicht hätte finanzieren können. Für die israelische Wirtschaft war es rettend. Für die deutsch-israelischen Beziehungen begründete es eine Sonderbeziehung, die strukturell bis heute besteht.
+Die Ergebnisse: 3 Milliarden DM über zwölf Jahre, zusätzlich 450 Millionen DM an die Jewish Claims Conference – nicht als Bargeld, sondern als Sachleistungen: Schiffe, Stahlwerke, Lokomotiven, Maschinen. Das baute industrielle Kapazität auf, die Israel aus eigener Kraft nicht hätte finanzieren können. Für die israelische Wirtschaft war es rettend. Es markiert den Beginn eines israelischen „Wirtschaftswunders“, das ohne diese externe Kapitalspritze kaum möglich gewesen wäre. Für die deutsch-israelischen Beziehungen begründete es eine Sonderbeziehung, die strukturell bis heute besteht.
 
 ### Die Suez-Krise 1956
 
 Gamal Abdel Nasser verstaatlichte im Juli 1956 den Suezkanal – ein Schock für England und Frankreich. Gleichzeitig blockierte Ägypten israelische Schiffe und unterstützte palästinensische Fedajin-Angriffe auf israelisches Territorium.
 
-Im Oktober 1956 wurde im geheimen **Protokoll von Sèvres** eine Absprache getroffen: Israel, England und Frankreich koordinierten einen Angriff. Israel schlug am 29. Oktober 1956 militärisch ein und erreichte in wenigen Tagen den Suezkanal – vollständiger militärischer Erfolg.
+Im Oktober 1956 wurde im geheimen **Protokoll von Sèvres** eine Absprache getroffen: Israel, England und Frankreich koordinierten einen Angriff. Als „Bezahlung“ für Israels Beteiligung unterstützte Frankreich den Bau des Nuklearreaktors in Dimona – ein technologischer Quantensprung, der Israel zur (inoffiziellen) Atommacht machte. Israel griff am 29. Oktober 1956 militärisch ein und erreichte in wenigen Tagen den Suezkanal – vollständiger militärischer Erfolg.
 
 Die politische Reaktion war verheerend. Eisenhower, nicht informiert und außer sich vor Wut, zwang alle drei Länder durch massiven wirtschaftlichen und politischen Druck zum Rückzug. Er drohte, israelische Anleihen auf dem amerikanischen Kapitalmarkt zu blockieren und private Spenden zu stoppen. Israel zog sich zurück – und zog die Konsequenz mit eiserner Klarheit: Ohne amerikanische Rückendeckung ist keine eigenständige Militärpolitik möglich. Die Bindung an Washington wurde zur strategischen Priorität ersten Ranges.
 
@@ -98,7 +102,7 @@ Darunter: Die **aschkenasischen Einwanderer** der dritten bis fünften Aliya –
 
 Eine spezifisch komplizierte Gruppe: Die **Holocaust-Überlebenden**. Israel behandelte sie anfangs mit einer Mischung aus echtem Mitgefühl und unterschwelligem Unbehagen. Die Sabra-Kultur – der neue, starke, selbstbewusste Israeli – war als bewusster Gegenentwurf zum diasporischen Juden konzipiert. Diese grauenhafte Vereinfachung belastete die Überlebenden; viele schwiegen jahrzehntelang. Erst der Eichmann-Prozess brach dieses Schweigen auf.
 
-Ganz unten in der jüdischen Hierarchie: Die **Mizrahim** – Juden aus arabischen Ländern. Ohne Kapital, mit anderen Sprachen und Traditionen, wurden sie von der aschkenasischen Elite als kulturell rückständig betrachtet. Ihre Kinder wurden in schlechtere Schulen gesteckt, in Entwicklungsstädte an der Peripherie umgesiedelt – Sderot, Dimona, Kiryat Shmona – während die aschkenasische Elite Tel Aviv und die Küstenebene bewohnte. Diese geografische und soziale Segregation ist bis heute sichtbar.
+Ganz unten in der jüdischen Hierarchie: Die **Mizrahim** – Juden aus arabischen Ländern. Diese soziale Kluft wurde durch eine „kulturelle Hegemonie“ der aschkenasischen Elite zementiert, die den Orient als rückständig definierte – ein struktureller Fehler im Systemdesign, der erst Jahrzehnte später durch den politischen Aufstieg des Likud zu einem Absturz der Arbeitspartei führte. Die Kinder der Mizrahim wurden in schlechtere Schulen gesteckt, sie selbst in Entwicklungsstädte an der Peripherie umgesiedelt – Sderot, Dimona, Kiryat Shmona – während die aschkenasische Elite Tel Aviv und die Küstenebene bewohnte. Diese geografische und soziale Segregation ist bis heute sichtbar.
 
 ### Der Kibbuz – Mythos und Realität
 
@@ -108,7 +112,7 @@ Der Kibbuz war das ideologische Herz des frühen Israel: kollektives Eigentum, g
 
 **Sabra** – die Frucht des Kaktus, außen stachelig, innen süß – wurde zum Begriff für den in Israel geborenen Juden. Die Sabra-Kultur war eine bewusste kulturelle Revolution: weg vom diasporischen Juden, der sich anpasst und duckt; hin zum selbstbewussten, körperlich arbeitenden, Waffen tragenden Israeli. Die Sabras sprachen nur Hebräisch, wanderten in der Wüste, verachteten Überschwang und Sentimentalität.
 
-Der nationale Mythos von **Masada** – der Felsenfestung, wo 960 jüdische Aufständische sich 73 n. Chr. gegen die Römer das Leben genommen hatten statt sich zu ergeben – wurde Teil der israelischen Militärdoktrin: lieber sterben als sich unterwerfen. Der "Masada-Komplex" prägte eine Generation, hatte aber auch Schattenseiten: Gefühlskälte, mangelndes Verständnis für Traumata, eine gewisse Unfähigkeit zur Empathie mit der eigenen Schwäche.
+Der nationale Mythos von **Masada** – der Felsenfestung, wo 960 jüdische Aufständische sich 73 n. Chr. gegen die Römer das Leben genommen hatten statt sich zu ergeben – wurde Teil der israelischen Militärdoktrin: lieber sterben als sich unterwerfen. Der "Masada-Komplex" prägte eine Generation, hatte aber auch Schattenseiten: Gefühlskälte, mangelndes Verständnis für Traumata, eine gewisse Unfähigkeit zur Empathie mit der eigenen Schwäche. Es war der Versuch, eine neue Identität zu kompilieren, die keine Backwards-Compatibility zur jüdischen Diaspora-Geschichte mehr aufwies.
 
 ### Wann endete die Aufbruchsstimmung?
 
@@ -126,7 +130,7 @@ Israel hatte von Anfang an ein **Verhältniswahlrecht ohne Sperrklausel** – je
 
 ### Mapai – die Staatspartei
 
-**Mapai** (*Mifleget Poalei Eretz Yisrael* – Partei der Arbeiter des Landes Israel) war von 1930 bis 1968 die mit Abstand stärkste Partei. Sozialdemokratisch, säkular, aschkenasisch dominiert, verkörperte sie den Geist der zweiten Aliya. Mapai kontrollierte die Histadrut, die Jewish Agency, das Militär, die Kibbuzbewegung und weite Teile der Bürokratie. Es war, ehrlich gesagt, eine Art sanfter Einparteienstaat – demokratisch in Form, aber mit einer Hegemonie, die Patronage und ideologische Dominanz umfasste.
+**Mapai** (*Mifleget Poalei Eretz Yisrael* – Partei der Arbeiter des Landes Israel) war von 1930 bis 1968 die mit Abstand stärkste Partei. Sozialdemokratisch, säkular, aschkenasisch dominiert, verkörperte sie den Geist der zweiten Aliya. Mapai kontrollierte die Histadrut, die Jewish Agency, das Militär, die Kibbuzbewegung und weite Teile der Bürokratie. Es war, ehrlich gesagt, eine Art sanfter Einparteienstaat – demokratisch in Form, aber mit einer Hegemonie, die Patronage und ideologische Dominanz umfasste. Es war ein System der „Mamlakhtiyut“ (Staatlichkeit), in dem Partei und Staat fast ununterscheidbar waren – eine Form von politischer Monokultur.
 
 1968 fusionierte Mapai mit anderen Linksparteien zur **Israelischen Arbeitspartei** – die bis 1977 regierte und dann dramatisch abstürzte.
 
@@ -140,11 +144,13 @@ In der Phase 1948–1967 war der Likud also noch nicht existent, aber Begin und 
 
 ### Die religiösen Parteien
 
-Hier liegt ein fundamentales Missverständnis vor, das man klären muss: **Die orthodoxe jüdische Welt war ursprünglich mehrheitlich antizionistisch.** Die theologische Logik: Die Rückkehr nach Zion kann nur durch göttliche Erlösung geschehen. Ein jüdischer Staat, der von säkularen Sozialisten gegründet wird, ist eine Anmaßung – ein Versuch, Gottes Zeitplan zu überholen.
+Was viele nicht wissen: **Die orthodoxe jüdische Welt war ursprünglich mehrheitlich antizionistisch.** Die theologische Logik: Die Rückkehr nach Zion kann nur durch göttliche Erlösung geschehen. Ein jüdischer Staat, der von säkularen Sozialisten gegründet wird, ist eine Anmaßung – ein Versuch, Gottes Zeitplan zu überholen.
 
 Ben-Gurion schloss vor der Staatsgründung einen **informellen Kompromiss** mit der religiösen Gemeinschaft – in einem Brief von 1947 an die Agudat Yisrael. Die Kernpunkte: Sabbat als offizieller Ruhetag, Kaschrut in staatlichen Institutionen, Personenstandsrecht (Heirat, Scheidung, Konversion) in den Händen der Rabbinatsgerichte, Autonomie religiöser Schulen mit staatlicher Finanzierung, und – folgenreich – **Befreiung von Jeschiwa-Studenten vom Militärdienst**, ursprünglich für einige hundert gedacht.
 
-Dieser Kompromiss hielt den frühen Staat zusammen, schrieb aber Privilegien fest, die sich verselbständigten. Heute sind es Zehntausende ultra-orthodoxe Männer, die nicht dienen, nicht arbeiten und staatlich finanziert Tora studieren – einer der schärfsten innenpolitischen Konflikte Israels heute.
+Dieser Kompromiss hielt den frühen Staat zusammen, schrieb aber Privilegien fest, die sich verselbständigten.
+In der Informatik würde man dies als „Technical Debt“ bezeichnen: Um den schnellen Release des Staates zu ermöglichen, wurden theologische Konflikte nicht gelöst, sondern durch Ausnahmeregelungen „gepatcht“. Diese Altlasten belasten die Systemarchitektur Israels bis heute massiv.
+Heute sind es Zehntausende ultra-orthodoxe Männer, die nicht dienen, nicht arbeiten und staatlich finanziert Tora studieren – einer der schärfsten innenpolitischen Konflikte Israels heute.
 
 Die **Mafdal** (Nationalreligiöse Partei) vertrat den religiösen Zionismus – die Überzeugung, dass die Staatsgründung religiöse Bedeutung hat, der Beginn der Erlösung. Mafdal war moderat, koalitionsfähig, saß fast durchgehend in Regierungen. Nach 1967 radikalisierte sich der religiöse Zionismus tiefgreifend: Die Eroberung des Westjordanlands wurde als messianisches Zeichen gedeutet. Aus dieser Strömung entstand die Siedlerbewegung Gush Emunim – der Motor des Siedlungsbaus, der die Zwei-Staaten-Lösung bis heute torpediert.
 
@@ -170,7 +176,7 @@ Kennedy brachte echte Sympathie und genehmigte 1962 den Verkauf von Hawk-Luftabw
 
 ### Johnson: Der Durchbruch zur Allianz
 
-Johnson dachte den Kalten Krieg binär. Nassers Ägypten hatte sich sowjetischen Waffen geöffnet; Syrien ebenso. Israel war damit klar auf der richtigen Seite. 1966 genehmigte Johnson den Verkauf von A-4 Skyhawk-Kampfflugzeugen – offensive Waffen, kein Defensivsystem mehr. Das **Gleichgewichtsprinzip** ersetzte die frühere Zurückhaltung: Was die Sowjets arabischen Staaten lieferten, musste durch amerikanische Lieferungen an Israel ausgeglichen werden.
+Johnson dachte den Kalten Krieg binär. Nassers Ägypten hatte sich sowjetischen Waffen geöffnet; Syrien ebenso. Israel war damit klar auf der richtigen Seite. 1966 genehmigte Johnson den Verkauf von A-4 Skyhawk-Kampfflugzeugen – offensive Waffen, kein Defensivsystem mehr. Das **Gleichgewichtsprinzip** ersetzte die frühere Zurückhaltung: Was die Sowjets arabischen Staaten lieferten, musste durch amerikanische Lieferungen an Israel ausgeglichen werden. Die USA erkannten, dass Israel als „Proxy“ im Kalten Krieg die sowjetisch bewaffneten arabischen Armeen effizient neutralisieren konnte. Damit wandelte sich die Beziehung von einer moralischen Verpflichtung zu einer harten strategischen Partnerschaft.
 
 In der Nuklearfrage entstand ein stillschweigendes Einverständnis: Israel bekommt seine Bombe, Amerika schaut weg – solange Israel die **Ambiguitätspolitik** aufrecht erhält: keine Tests, keine Erklärungen, niemanden zwingen, offiziell zu reagieren. Diese Übereinkunft, nie schriftlich, nie offiziell, gilt bis heute.
 
@@ -198,6 +204,7 @@ Ab Ende der 1950er stieg der Lebensstandard deutlicher. Eine Mittelklasse entsta
 
 ### Arabische Bürger: Bürger zweiter Klasse
 
+Die **innenpolitische Dimension**: Die jüdische Gemeinschaft in den USA war politisch aktiv, gut organisiert, finanzkräftig. AIPAC, 1951 gegründet, wurde zur effektivsten Lobbyorganisation in Washington – was erklärt, warum der Kongress oft israelnäher war als das State Department.
 Etwa 160.000 Araber blieben 1948 in Israel und wurden israelische Staatsbürger mit formalem Wahlrecht. In der Praxis lebten sie bis 1966 unter **Militärverwaltung** – einem System aus den britischen Notstandsgesetzen: Reisegenehmigungen, Ausgangssperren, eingeschränkte Versammlungsfreiheit. Land wurde systematisch enteignet durch das **Abwesenheitseigentumsgesetz (1950)**: Wer 1948 auch nur kurzzeitig sein Dorf verlassen hatte, wurde als "Abwesender" definiert, sein Land fiel an den Staat. Es gab groteske Fälle von "anwesenden Abwesenden" – Araber, die in Israel geblieben, aber vorübergehend geflohen waren und als abwesend galten, obwohl sie physisch anwesend waren.
 
 Die **Histadrut** nahm bis 1959 keine arabischen Mitglieder auf. Staatliche Unternehmen stellten kaum Araber ein. Militärdienst – Voraussetzung für viele Sozialleistungen und Karrieren – war für Araber nicht zugänglich (Ausnahmen: Drusen und Beduinen). Arabische Gemeinden bekamen weniger Baugenehmigungen, schlechtere Infrastruktur, niedrigere Gemeindezuweisungen.
@@ -219,6 +226,7 @@ Die Musik – *Shir Eretz Yisrael*, Lieder des Landes Israel – war melancholis
 ### Ein singuläres Ereignis der Sprachgeschichte
 
 Was mit dem Hebräischen geschah, ist in der dokumentierten Sprachgeschichte **einmalig**. Es gibt keine andere tote Sprache, die erfolgreich zur Muttersprache von Millionen gemacht wurde. Latein blieb tot. Sanskrit blieb tot. Versuche, Keltisch oder Cornisch zu revitalisieren, blieben marginal. Das Hebräische ist der einzige Fall, in dem eine Sprache, die jahrhundertelang nur als Schrift- und Liturgiesprache existiert hatte, innerhalb weniger Generationen zur Alltagssprache einer modernen Gesellschaft wurde.
+Linguistisch gesehen folgt das Hebräische einer faszinierenden Logik: Es basiert auf einem dreibuchstabigen Wurzelsystem (Shoresh). Man kann sich dies wie eine Basisklasse vorstellen: Aus der Wurzel K-T-V (Schreiben) werden durch verschiedene „Methoden“ (Vokalschablonen) Objekte wie KaTaV (er schrieb), MiKTaV (Brief) oder KiTuV (Untertitel) abgeleitet. Diese algorithmische Struktur ermöglichte es, eine antike Sprache mit modernen Fachbegriffen zu erweitern, ohne ihre Identität zu verlieren.
 
 ### Eliezer Ben-Yehuda – der Fanatiker
 
@@ -262,7 +270,7 @@ Das Israel der Jahre 1948 bis 1967 war eine Gesellschaft im Widerspruch: arm und
 
 Und doch: Was in diesen zwei Jahrzehnten entstand, war bemerkenswert. Ein Staat aus dem Nichts, eine Wirtschaft aus dem Nichts, eine Sprache aus dem Nichts – oder genauer: aus dem Geist und der Entschlossenheit einer Gemeinschaft, die keine Alternative mehr sah. Die westliche Sympathie dieser Jahre war nicht nur Projektion und Schuldgefühl. Sie hatte einen realen Gegenstand.
 
-Der Sechs-Tage-Krieg 1967 veränderte alles – nicht weil Israel unrecht hatte, sich zu verteidigen, sondern weil der Sieg eine Besatzung begründete, für die Israel keine überzeugende politische Antwort fand. Aus dem David der Gründungsphase wurde, langsam und unter vielen Widersprüchen, ein Goliath – zumindest in den Augen der Welt. Was das bedeutete und wie es geschah, ist das Thema des nächsten Papiers.
+Der Sechs-Tage-Krieg 1967 veränderte alles – nicht weil Israel unrecht hatte, sich zu verteidigen, sondern weil der Sieg eine Besatzung begründete, für die Israel keine überzeugende politische Antwort fand. Der Sieg war militärisch brillant, aber er schuf eine politische Sackgasse: Israel kontrollierte nun Gebiete, die es aus Sicherheitsgründen nicht verlassen wollte, aber aus demografischen Gründen nicht integrieren konnte. Das „System Israel“ lief ab 1967 auf einer neuen, instabilen Hardware. Aus dem David der Gründungsphase wurde, langsam und unter vielen Widersprüchen, ein Goliath – zumindest in den Augen der Welt. Was das bedeutete und wie es geschah, ist das Thema des nächsten Papiers.
 
 ---
 
