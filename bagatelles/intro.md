@@ -11,6 +11,7 @@ Why English? It is the Latin of our days, the lingua franca of the Western intel
 No peer reviewers, no limits on the word count, no deadlines. Oh century, oh science, it is a joy to live!
 (Ulrich von Säckingen, 1518)
 
+
 ---
 
 I am a committed, shameless, and unrepentant user of AI, and

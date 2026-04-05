@@ -118,7 +118,9 @@ parts:
       - file: history/israel-1
         title: Der Weg zum Staat Israel *
       - file: history/israel-2
-        title: Israel zwischen Gründung und Sechs-Tage-Krieg *
+        title: Von der Gründung Israels zum Sechs-Tage-Krieg *
+      - file: history/israel-3
+        title: Vom Sechs-Tage-Krieg bis Oslo*        
   
   - caption: Religion
     chapters:
