@@ -120,7 +120,9 @@ parts:
       - file: history/israel-2
         title: Von der Gründung Israels zum Sechs-Tage-Krieg *
       - file: history/israel-3
-        title: Vom Sechs-Tage-Krieg bis Oslo*        
+        title: Vom Sechs-Tage-Krieg bis Oslo * 
+      - file: history/israel-4
+        title: Von Oslo bis 2026 * 
   
   - caption: Religion
     chapters:
