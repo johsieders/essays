@@ -1,0 +1,41 @@
+/* Bottom padding for article content so prev/next footer doesn't crowd the text */
+.bd-article-container .bd-article {
+    padding-bottom: 100px;
+}
+
+/*
+ * Fix: sphinxcontrib-bibtex breaks the DOM nesting on pages with a
+ * {bibliography} directive.  The prev-next-footer and bd-sidebar-secondary
+ * escape from their normal containers.
+ */
+
+/* Let the flex container wrap so the footer can drop below */
+.bd-content:has(> .prev-next-footer) {
+    flex-wrap: wrap;
+}
+
+/* Make the orphaned footer span the full row and sit at the bottom */
+.bd-content > .prev-next-footer {
+    flex-basis: 100%;
+    order: 999;
+    max-width: 60em;
+}
+
+/* When the sidebar escapes to bd-main, replicate its normal position
+   on desktop; hide it on mobile where it should not appear anyway. */
+@media (min-width: 1200px) {
+    .bd-main > .bd-sidebar-secondary {
+        position: fixed;
+        top: calc(var(--pst-header-height) + var(--pst-header-article-height));
+        right: 0;
+        width: var(--pst-sidebar-secondary);
+        height: calc(100vh - var(--pst-header-height) - var(--pst-header-article-height));
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    .bd-main > .bd-sidebar-secondary {
+        display: none !important;
+    }
+}
