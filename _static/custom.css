@@ -36,12 +36,21 @@
     max-width: 60em;
 }
 
-/* When the sidebar escapes to bd-main, replicate its normal position */
-.bd-main > .bd-sidebar-secondary {
-    position: fixed;
-    top: calc(var(--pst-header-height) + var(--pst-header-article-height));
-    right: 0;
-    width: var(--pst-sidebar-secondary);
-    height: calc(100vh - var(--pst-header-height) - var(--pst-header-article-height));
-    overflow-y: auto;
+/* When the sidebar escapes to bd-main, replicate its normal position
+   on desktop; hide it on mobile where it should not appear anyway. */
+@media (min-width: 1200px) {
+    .bd-main > .bd-sidebar-secondary {
+        position: fixed;
+        top: calc(var(--pst-header-height) + var(--pst-header-article-height));
+        right: 0;
+        width: var(--pst-sidebar-secondary);
+        height: calc(100vh - var(--pst-header-height) - var(--pst-header-article-height));
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    .bd-main > .bd-sidebar-secondary {
+        display: none;
+    }
 }
