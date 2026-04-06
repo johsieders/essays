@@ -4,13 +4,13 @@
 
 *Claude Sonnet 4.6, Gemini 3, Johannes Siedersleben (Editor)*
 
-April 2026
+*April 2026*
 
 ---
 
 ## 1.800 Jahre ohne Heimat – eine historische Ausnahmeerscheinung
 
-Dieses Papier ist das sechste in einer Reihe zur Geschichte des jüdischen Volkes und des Staates Israel. Das vorige Papier endete 135 CE mit dem Bar-Kochba-Aufstand und der hadrianischen Vernichtung: Juden wurden aus Jerusalem verbannt, die Provinz Judäa in Syria Palaestina umbenannt, der letzte Rest jüdischer Staatlichkeit ausgelöscht.
+Das vorige Papier endete 135 CE mit dem Bar-Kochba-Aufstand und der hadrianischen Vernichtung: Juden wurden aus Jerusalem verbannt, die Provinz Judäa in Syria Palaestina umbenannt, der letzte Rest jüdischer Staatlichkeit ausgelöscht.
 
 Was folgte, ist in der Weltgeschichte ohne Parallele: Rund **1.800 Jahre Diaspora** – ohne Territorium, ohne politische Souveränität, als Minderheit unter fremden Mehrheiten, verteilt über drei Kontinente, in wechselnden Verhältnissen von Toleranz, Duldung und Vernichtung.
 
@@ -306,3 +306,6 @@ Was nach 1492 kommt – das Osmanische Reich als Zufluchtsort, die niederländis
 ---
 
 *Quellen und Vertiefung: Shlomo Goitein, „A Mediterranean Society" (jüdisches Leben in der islamischen Welt); Mark R. Cohen, „Under Crescent and Cross"; Yitzhak Baer, „A History of the Jews in Christian Spain"; Heinrich Graetz, „Geschichte der Juden" (klassisches Standardwerk); Simon Dubnow, „Weltgeschichte des jüdischen Volkes"; Jane Gerber, „The Jews of Spain"*
+
+
+<div style="margin-bottom: 100px;"></div>

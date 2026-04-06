@@ -2,10 +2,14 @@
 
 *Eine Diskussionsgrundlage – historisch, nicht parteiisch*
 
+*Claude Sonnet 4.6, Gemini 3, Johannes Siedersleben (Editor)*
+
+*April 2026*
+
 ---
 
-Dieses Papier ist das dritte in einer Reihe. Das erste – *„Heimstätte und Katastrophe"* – behandelte die Vorgeschichte und Gründung des Staates Israel. Das zweite – *„David und Goliath"* – folgte Israels ersten zwei Jahrzehnten bis zum Sechs-Tage-Krieg 1967. Dieses Papier beginnt mit dem Rausch des Sieges von 1967 und endet 1993 mit dem Händedruck, der alles hätte verändern können. Ein viertes Papier wird den Zeitraum von Oslo bis heute behandeln.
-
+Dieses Papier beginnt mit dem Rausch des Sieges von 1967 
+und endet 1993 mit dem Händedruck, der alles hätte verändern können.
 Die Phase 1967 bis 1993 ist in vielerlei Hinsicht die tragischste der israelischen Geschichte – nicht weil Israel besonders viel verloren hätte, sondern weil es so viel gewonnen hatte und nicht wusste, was damit anfangen.
 
 ---
