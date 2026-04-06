@@ -161,9 +161,3 @@ Dover Publications, 1992
 [6] Alfred Tarski: The Semantic Conception of Truth and the Foundations of Semantics. In: Philosophy and Phenomenological Research. IV,3 (1944), S. 341–375.
 
 [7] Alan Turing: On Computable Numbers, with an Application to the Entscheidungsproblem, 1936 https://www.wolframscience.com/prizes/tm23/images/Turing.pdf
-
-
-
-
-
-<div style="margin-bottom: 100px;"></div>

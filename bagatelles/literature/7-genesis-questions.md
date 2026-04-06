@@ -128,5 +128,3 @@ The Bible. Authorized King James Version, Oxford University Press, 1997
 Die Bibel nach der Übersetzung Martin Luthers. Deutsche Bibelstiftung Stuttgart, 1972
 
 The SPCK Bible Guide. Henry Wansbrough. 2013
-
-<div style="margin-bottom: 100px;"></div>

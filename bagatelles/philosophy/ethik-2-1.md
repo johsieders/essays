@@ -311,5 +311,3 @@ Wir predigen stoische Verantwortung für das Weltklima, während wir epikureisch
 **Wir sind Stoiker in der Bio (LinkedIn-Profil) und Epikureer in der Runtime.**
 
 ---
-
-<div style="margin-bottom: 100px;"></div>

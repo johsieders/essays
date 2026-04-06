@@ -700,4 +700,3 @@ Stellen wir uns vor, Descartes und Spinoza müssten ein System entwerfen:
 **Spinoza**: Sieht Tiere als Modi Gottes (wie alles). Aber: Gesteht ihnen **keine "menschlichen" Rechte** zu, da ihr **Nutzen für den Menschen** Vorrang hat. Spinoza ist kein moderner Tierrechtler, aber er sieht Tiere nicht als bloße Maschinen.
 
 ---
-<div style="margin-bottom: 100px;"></div>

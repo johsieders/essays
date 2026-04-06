@@ -579,6 +579,3 @@ Die Fragen sind **lebendig** – und das Ringen um Antworten ist selbst **wertvo
 **Deine Antwort**: ?
 
 ---
-
-
-<div style="margin-bottom: 100px;"></div>

@@ -95,21 +95,3 @@ and large parts of the universe have probably never been perceived by any being.
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="margin-bottom: 100px;"></div>

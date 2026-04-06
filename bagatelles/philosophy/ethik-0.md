@@ -91,6 +91,3 @@ Jeder kann ähnliche Papiere erstellen, mit den Philosophen und den thematischen
 Die Frage ist, was wir mit der KI machen, und nicht, was die KI mit uns macht.
 
 ---
-
-
-<div style="margin-bottom: 100px;"></div>

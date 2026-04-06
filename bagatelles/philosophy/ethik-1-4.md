@@ -691,5 +691,3 @@ Drei Philosophen versuchen **Synthesen**:
 **Die offene Frage**: Reicht **Regelkonsens** ohne **Begründungskonsens**? Oder ist das **brüchig**?
 
 ---
-
-<div style="margin-bottom: 100px;"></div>

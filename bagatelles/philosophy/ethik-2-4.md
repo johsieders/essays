@@ -505,6 +505,3 @@ Wir haben uns **für Mill** entschieden (utilitaristische Triage). Aber wir **pr
 **Die Frage bleibt**: Sind wir heimlich **Kantianer** (wenn es um uns geht) und **Millianer** (wenn es um andere geht)?
 
 ---
-
-
-<div style="margin-bottom: 100px;"></div>

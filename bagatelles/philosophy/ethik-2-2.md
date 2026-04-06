@@ -383,5 +383,3 @@ Westliche Gesellschaften schwanken zwischen beiden:
 Können wir beides vereinen? Oder ist die Spannung unauflösbar?
 
 ---
-
-<div style="margin-bottom: 100px;"></div>

@@ -878,6 +878,3 @@ But this is a different story, to be told in another paper.
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-<div style="margin-bottom: 100px;"></div>
-

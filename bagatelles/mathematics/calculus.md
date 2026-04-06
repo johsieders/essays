@@ -1662,5 +1662,3 @@ Big O means: $f$ grows not faster than $g$, or, equivalently, $f/g$ is bounded a
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-<div style="margin-bottom: 100px;"></div>

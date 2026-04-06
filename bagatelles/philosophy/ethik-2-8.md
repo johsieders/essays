@@ -846,6 +846,3 @@ Oder ist das Christentum – wie Platon – ein **schönes Ideal**, das in der P
 Die **Botschaft** ist wunderbar. Die **Geschichte** ist grauenvoll. Die **Zukunft** ist offen.
 
 ---
-
-
-<div style="margin-bottom: 100px;"></div>

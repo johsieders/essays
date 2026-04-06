@@ -21,5 +21,3 @@ endlich ab, und zwar lange vor 2035, dem geplanten Ausstieg aus dem Strom aus Ko
 Ihr sitzt am langen Hebel! Zweitens an die Energie-Veganer: Ihr verdient Respekt, 
 Bewunderung und Nachahmung, aber die Welt rettet ihr nicht! Und drittens an alle anderen 
 Energieverbraucher: Vermeidet Exzesse und folgt Eurem Gewissen!
-
-<div style="margin-bottom: 100px;"></div>
