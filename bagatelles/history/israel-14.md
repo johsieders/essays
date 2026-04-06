@@ -295,4 +295,14 @@ Aber Geschichte braucht auch Akteure, die bereit sind, das Undenkbare zu denken.
 
 ---
 
-*Quellen und Vertiefung: Dennis Ross, „The Missing Peace"; Yossi Beilin, „Touching Peace"; Benny Morris / Ehud Barak, „Back to the Future" (Camp David-Debatte); Gideon Levy, „The Punishment of Gaza"; Ari Shavit, „My Promised Land"; Rashid Khalidi, „The Hundred Years' War on Palestine"; Yuval Noah Harari, diverse Kommentare zum 7. Oktober 2023*
+## Quellen und Vertiefung
+
+- {cite}`ross2004missing`
+- {cite}`beilin1999touching`
+- {cite}`levy2010punishment`
+- {cite}`shavit2013promised`
+- {cite}`khalidi2020hundred`
+
+```{bibliography}
+:filter: docname in docnames
+```

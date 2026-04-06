@@ -759,5 +759,3 @@ dieser Abschnitt auf die **Bruchlinien** – jene fundamentalen Divergenzen, die
 **Die größte offene Frage der Philosophie**: Kann pluralistische Gesellschaft mit **Spaltungen** leben?
 
 ---
-
-<div style="margin-bottom: 100px;"></div>

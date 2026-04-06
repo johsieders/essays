@@ -274,5 +274,3 @@ Prime numbers exist exactly as much as the Sicilian Defense exists—as patterns
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-<div style="margin-bottom: 100px;"></div>

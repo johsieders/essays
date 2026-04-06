@@ -977,12 +977,6 @@ on objects in motion than a thermometer has on temperature.
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-
-
-<div style="margin-bottom: 100px;"></div>
-
-
 Let us apply this result to a boat (or a swimmer, for example) starting on the left bank of a one-unit-wide river at point $(0,0)$, 
 and going to point $B = (1, b_2)$ on the right bank. The current flows from top to bottom with a constant acceleration of $-a_2$. 
 Moving a mass of $m$ units upstream over a distance of $b_2$ units requires an amount of work equal to $amb_2$.

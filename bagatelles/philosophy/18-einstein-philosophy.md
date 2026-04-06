@@ -144,5 +144,3 @@ a Nobel Prize.
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-<div style="margin-bottom: 100px;"></div>

@@ -351,7 +351,15 @@ Die Tempelzerstörung 70 CE hätte das Ende sein können – wie die assyrische 
 
 ---
 
-*Quellen und Vertiefung: Israel Finkelstein / Neil Asher Silberman, „Keine Posaunen vor Jericho" (Archäologie und Bibel); Josephus Flavius, „Der Jüdische Krieg"; Shaye J.D. Cohen, „From the Maccabees to the Mishnah"; Martin Goodman, „Rom und Jerusalem"; Nahum Sarna, „Exploring Exodus"; James Kugel, „How to Read the Bible"*
+## Quellen und Vertiefung
 
+- {cite}`finkelstein2001posaunen`
+- {cite}`josephus_krieg`
+- {cite}`cohen1987maccabees`
+- {cite}`goodman2007rome`
+- {cite}`sarna1986exodus`
+- {cite}`kugel2007bible`
 
-<div style="margin-bottom: 100px;"></div>
+```{bibliography}
+:filter: docname in docnames
+```

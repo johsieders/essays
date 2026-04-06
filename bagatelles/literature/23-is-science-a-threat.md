@@ -318,26 +318,3 @@ simultaneity, time and much more. We can give up outdated theories, but not real
 References
 [1] Law, S. ‘Scientism’, in (eds.) Pigliucci, M. and Boudry, M. Science Unlimited (Chicago
 University Press 2018)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="margin-bottom: 100px;"></div>

@@ -313,7 +313,15 @@ Der Rest dieser Geschichte – die Verwirklichung und die Kosten des zionistisch
 
 ---
 
-*Quellen und Vertiefung: Salo Wittmayer Baron, „A Social and Religious History of the Jews"; Paul Johnson, „Geschichte des jüdischen Volkes"; Gershom Scholem, „Sabbatai Sevi: The Mystical Messiah"; Michael Meyer, „Response to Modernity: A History of the Reform Jewish Movement"; Steven Zipperstein, „Pogrom: Kishinev and the Tilt of History"; Irving Howe, „World of Our Fathers" (jüdisches Leben in Amerika)*
+## Quellen und Vertiefung
 
+- {cite}`baron1952social`
+- {cite}`johnson1987history`
+- {cite}`scholem1973sabbatai`
+- {cite}`meyer1988response`
+- {cite}`zipperstein2018pogrom`
+- {cite}`howe1976world`
 
-<div style="margin-bottom: 100px;"></div>
+```{bibliography}
+:filter: docname in docnames
+```

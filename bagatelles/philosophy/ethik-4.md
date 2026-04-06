@@ -381,4 +381,3 @@ Diese Bibliographie listet die wichtigsten Primär- und Sekundärquellen zu den 
 - **PhilPapers** (philpapers.org): Bibliographische Datenbank für Philosophie
 
 ---
-<div style="margin-bottom: 100px;"></div>

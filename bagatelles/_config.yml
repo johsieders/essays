@@ -64,6 +64,8 @@ sphinx:
     # proof_theorem_title: name
     html_static_path:
       - _static
+    html_css_files:
+      - custom.css
     mathjax3_config:
       chtml:
         displayAlign: 'left'

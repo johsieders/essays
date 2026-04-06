@@ -411,7 +411,16 @@ Oslo war der Versuch, aufzuholen, was in zwei Jahrzehnten versäumt worden war. 
 
 ---
 
-*Quellen und Vertiefung: Avi Shlaim, „The Iron Wall"; Benny Morris, „Righteous Victims"; Dennis Ross, „The Missing Peace"; Yossi Beilin, „Touching Peace"; Gershom Gorenberg, „The Accidental Empire"; Zeev Maoz, „Defending the Holy Land"; Patrick Seale, „Asad of Syria"*
+## Quellen und Vertiefung
 
+- {cite}`shlaim2000iron`
+- {cite}`morris1999righteous`
+- {cite}`ross2004missing`
+- {cite}`beilin1999touching`
+- {cite}`gorenberg2006accidental`
+- {cite}`maoz2006defending`
+- {cite}`seale1988asad`
 
-<div style="margin-bottom: 100px;"></div>
+```{bibliography}
+:filter: docname in docnames
+```

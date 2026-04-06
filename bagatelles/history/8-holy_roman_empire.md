@@ -129,6 +129,3 @@ Joachim Whaley: Germany and the Holy Roman Empire Volume II. Oxford University P
 Joachim Whaley: The Holy Roman Empire. A Very Short Introduction. Oxford University Press, 2018
 
 Peter H. Wilson: The Holy Roman Empire. Penguin Books, 2016
-
-
-<div style="margin-bottom: 100px;"></div>

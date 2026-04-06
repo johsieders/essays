@@ -599,5 +599,3 @@ Und: Kann eine Gesellschaft funktionieren, wenn sie Humes Skepsis konsequent ern
 ```
 
 ---
-
-<div style="margin-bottom: 100px;"></div>

@@ -376,6 +376,3 @@ Vielleicht ist die Antwort: **Beide haben recht – je nach Zeitskala**. Kurzfri
 Kohelet ist der Realist, der sagt: "Selbst wenn die Sprüche statistisch oft recht haben – sie versprechen zu viel. Und wenn es darauf ankommt, kann alles schiefgehen."
 
 ---
-
-
-<div style="margin-bottom: 100px;"></div>

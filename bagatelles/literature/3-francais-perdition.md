@@ -84,6 +84,3 @@ norvégien toujours à l’époque de nos arrière-petits-fils. Et si c’est vr
 plus forte raison pour le français. Celui-ci occupera toujours une place importante au premier rang
 des grandes langues telles que l’allemand, l’espagnol, le russe ou l’anglais véritable, mais il n’est ni
 universel ni à priori supérieur à d’autres. 
-
-
-<div style="margin-bottom: 100px;"></div>

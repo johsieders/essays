@@ -188,7 +188,14 @@ Das ist keine antisemitische Aussage – es ist die nüchterne historische Einsc
 
 ---
 
-*Quellen und Vertiefung: Benny Morris, „1948"; Avi Shlaim, „The Iron Wall"; James Barr, „A Line in the Sand"; David Fromkin, „A Peace to End All Peace"; Tom Segev, „One Palestine, Complete"*
+## Quellen und Vertiefung
 
+- {cite}`morris2008_1948`
+- {cite}`shlaim2000iron`
+- {cite}`barr2011line`
+- {cite}`fromkin1989peace`
+- {cite}`segev2000palestine`
 
-<div style="margin-bottom: 100px;"></div>
+```{bibliography}
+:filter: docname in docnames
+```

@@ -836,6 +836,3 @@ Wenn es erschaffen ist – warum dann **diese** Werte und nicht andere? **Belieb
 **Die offene Frage für das 21. Jahrhundert**: Können wir mit **Zielvielfalt** leben, oder brauchen wir **Konsens** über das summum bonum?
 
 ---
-
-
-<div style="margin-bottom: 100px;"></div>
