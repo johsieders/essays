@@ -2,3 +2,16 @@
 .bd-article-container .bd-article {
     padding-bottom: 100px;
 }
+
+/* The global references page is the only page with a {bibliography} directive.
+   That directive breaks the DOM, pushing the prev-next footer outside
+   bd-article-container. These rules fix its layout. */
+.bd-content:has(> .prev-next-footer) {
+    flex-wrap: wrap;
+}
+
+.bd-content > .prev-next-footer {
+    flex-basis: 100%;
+    order: 999;
+    max-width: 60em;
+}
