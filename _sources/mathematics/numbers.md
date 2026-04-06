@@ -873,8 +873,3 @@ But this is a different story, to be told in another paper.
 ````
 
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

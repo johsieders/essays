@@ -57,7 +57,7 @@ Der Konflikt im Nahen Osten ist deshalb so schwer zu lösen, weil beide Seiten h
 *Die sieben Papiere können unabhängig voneinander gelesen werden. Wer sich für die moderne Geschichte Israels interessiert, beginnt mit Papier 4. Wer die tieferen historischen Wurzeln sucht, beginnt mit Papier 1. Wer die Gegenwart verstehen will, beginnt mit Papier 7 – und liest dann rückwärts.*
 
 
-## Entstehung
+## Wie diese Papiere entstanden sind
 
 Alle Texte wurden von Claude Sonnet 4.6 nach meinen Vorgaben generiert und von Gemini 3 und mir geprüft.
 

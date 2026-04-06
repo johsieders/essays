@@ -322,6 +322,3 @@ Der Rest dieser Geschichte – die Verwirklichung und die Kosten des zionistisch
 - {cite}`zipperstein2018pogrom`
 - {cite}`howe1976world`
 
-```{bibliography}
-:filter: docname in docnames
-```

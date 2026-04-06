@@ -90,8 +90,3 @@ and large parts of the universe have probably never been perceived by any being.
 
 
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

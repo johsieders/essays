@@ -196,6 +196,3 @@ Das ist keine antisemitische Aussage – es ist die nüchterne historische Einsc
 - {cite}`fromkin1989peace`
 - {cite}`segev2000palestine`
 
-```{bibliography}
-:filter: docname in docnames
-```

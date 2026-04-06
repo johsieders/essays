@@ -139,8 +139,3 @@ relativity and gravitation theory" ({cite}`tegmark2014mathematical`, p. 243). Th
 a Nobel Prize.
 
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

@@ -296,6 +296,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
 </ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references-page.html">References</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -552,7 +555,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -570,13 +572,13 @@ document.write(`
 <p><em>Johannes Siedersleben, assisted by Claude Sonnet 4.5<br />
 November 2025</em></p>
 <hr class="docutils" />
-<p>We are easily fooled. Daniel Kahneman’s <em>Thinking, Fast and Slow</em> <span id="id1">[<a class="reference internal" href="bayesian-tests.html#id71" title="Daniel Kahneman. Thinking, Fast and Slow. Farrar, Straus and Giroux, 2011.">Kahneman, 2011</a>]</span> opens with a devastating example. Imagine two lists. The first contains personality descriptions: “a meek and tidy soul with a need for order and structure.” The second lists professions: librarian, farmer, airline pilot, accountant. Your task: estimate how likely a given individual works in each profession.</p>
+<p>We are easily fooled. Daniel Kahneman’s <em>Thinking, Fast and Slow</em> <span id="id1">[<a class="reference internal" href="../references-page.html#id67" title="Daniel Kahneman. Thinking, Fast and Slow. Farrar, Straus and Giroux, 2011.">Kahneman, 2011</a>]</span> opens with a devastating example. Imagine two lists. The first contains personality descriptions: “a meek and tidy soul with a need for order and structure.” The second lists professions: librarian, farmer, airline pilot, accountant. Your task: estimate how likely a given individual works in each profession.</p>
 <p>Most people ask: “How well does the description match?” Meek and tidy? Sounds like a librarian!
 But this intuition ignores the fact that some professions are vastly more common than others.
 However perfectly a personality fits an astronaut or lighthouse keeper, these professions are so rare that the actual probability remains minuscule.</p>
 <p>Kahneman calls this “What You See Is All There Is” (WYSIATI, pronounced ‘wizzy-AH-tee’)—our tendency to judge based solely on available information while ignoring what’s missing. What people systematically forget is the <strong>base rate</strong>: the underlying frequency of each profession. There are thousands of accountants for every lighthouse keeper, regardless of personality fit.</p>
-<p>The correct probability must be approximately the product of base rate (how common is this profession?) and personality match (how well does this person fit?). Understanding this product is the gateway to Bayesian reasoning <span id="id2">[<a class="reference internal" href="bayesian-tests.html#id74" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>.
-For a readable, instructive, and, at times, humorous introduction to the strange world of Bayes, see <span id="id3">[<a class="reference internal" href="#id86" title="Sharon Bertsch McGrayne. The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy. Yale University Press, 2011.">McGrayne, 2011</a>]</span>.</p>
+<p>The correct probability must be approximately the product of base rate (how common is this profession?) and personality match (how well does this person fit?). Understanding this product is the gateway to Bayesian reasoning <span id="id2">[<a class="reference internal" href="../references-page.html#id70" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>.
+For a readable, instructive, and, at times, humorous introduction to the strange world of Bayes, see <span id="id3">[<a class="reference internal" href="../references-page.html#id74" title="Sharon Bertsch McGrayne. The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy. Yale University Press, 2011.">McGrayne, 2011</a>]</span>.</p>
 <p>This essay traces a journey: from Kahneman’s insights about human fallibility through Bayesian tests to a surprising conclusion—trained automatons (neural networks making decisions from weighted scores) systematically outperform human experts. The implications for medicine, insurance, criminal justice are profound and troubling. We begin with musicians.</p>
 <section id="musicians-and-base-rates">
 <h2>Musicians and Base Rates<a class="headerlink" href="#musicians-and-base-rates" title="Permalink to this heading">#</a></h2>
@@ -651,8 +653,8 @@ For a readable, instructive, and, at times, humorous introduction to the strange
 <li><p>Total positive tests: TP + FP = 9.5 + 499.5 = 509</p></li>
 <li><p>Precision (positive predictive value): TP/(TP + FP) = 9.5/509 = <strong>1.9%</strong></p></li>
 </ul>
-<p>Out of 509 people who test positive, only 9.5 actually have cancer. That’s 98.1% false positives. Most patients—and many physicians—find this deeply counterintuitive <span id="id4">[<a class="reference internal" href="#id85" title="Gerd Gigerenzer. Calculated Risks: How to Know When Numbers Deceive You. Simon &amp; Schuster, New York, 2002.">Gigerenzer, 2002</a>]</span>. A test that is “95% accurate” produces overwhelming numbers of false alarms.</p>
-<p>This is not a defect of the test. It’s an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives <span id="id5">[<a class="reference internal" href="#id87" title="John P. A. Ioannidis. Why most published research findings are false. PLOS Medicine, 2(8):e124, 2005. doi:10.1371/journal.pmed.0020124.">Ioannidis, 2005</a>]</span>.</p>
+<p>Out of 509 people who test positive, only 9.5 actually have cancer. That’s 98.1% false positives. Most patients—and many physicians—find this deeply counterintuitive <span id="id4">[<a class="reference internal" href="../references-page.html#id73" title="Gerd Gigerenzer. Calculated Risks: How to Know When Numbers Deceive You. Simon &amp; Schuster, New York, 2002.">Gigerenzer, 2002</a>]</span>. A test that is “95% accurate” produces overwhelming numbers of false alarms.</p>
+<p>This is not a defect of the test. It’s an inevitable consequence of screening for rare conditions. When the base rate is 0.1% and the false positive rate is 5%, you will necessarily get 50 times more false positives than true positives. This fundamental asymmetry affects not just medical screening but scientific research itself: most published findings in fields with low prior probabilities are likely to be false positives <span id="id5">[<a class="reference internal" href="../references-page.html#id75" title="John P. A. Ioannidis. Why most published research findings are false. PLOS Medicine, 2(8):e124, 2005. doi:10.1371/journal.pmed.0020124.">Ioannidis, 2005</a>]</span>.</p>
 <section id="the-confusion-matrix">
 <h3>The Confusion Matrix<a class="headerlink" href="#the-confusion-matrix" title="Permalink to this heading">#</a></h3>
 <p>The confusion matrix organizes these four outcomes systematically:</p>
@@ -751,7 +753,7 @@ only the evidence is available and the hypothesis has to be predicted.</p>
 <p>Not all correlations involve causation. Bald men tend to be wealthier than men with full heads of hair—but baldness doesn’t cause wealth. Both correlate with age: older men are balder and wealthier. Let evidence be “is bald” and hypothesis “is wealthy”. The causality runs neither way; shaving your head won’t improve your finances. This is spurious correlation driven by a third variable (age).</p>
 <p>Finally, the hardest case: philosophy students tend to be intelligent. Evidence: “intelligent”. Hypothesis: “philosopher”. Which direction does causality run? Does studying philosophy make you smarter, or do smart people choose philosophy? Probably the latter—self-selection—but this is educated guessing, not rigorous causal inference.</p>
 <p>Automated decision systems face a particular challenge here: trained on correlational data, they cannot distinguish causation from spurious correlation. A model that learns “baldness predicts wealth” might mistakenly recommend hair loss treatments to increase income—confusing prediction with intervention. Models trained on “philosophy students score high on intelligence tests” cannot determine whether philosophy caused the intelligence or intelligence caused the career choice. This matters profoundly when deploying automated systems: a model trained to predict outcomes from correlations may fail catastrophically in settings where interventions change the causal structure.</p>
-<p>This was a glimpse of causality—a deep topic developed by Pearl and colleagues <span id="id6">[<a class="reference internal" href="bayesian-tests.html#id74" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>, <span id="id7">[<a class="reference internal" href="bayesian-tests.html#id75" title="Judea Pearl. Causality: Models, Reasoning, and Inference. Cambridge University Press, 2nd edition edition, 2009.">Pearl, 2009</a>]</span>, <span id="id8">[<a class="reference internal" href="bayesian-tests.html#id76" title="Judea Pearl, Madelyn Glymour, and Nicholas P. Jewell. Causal Inference in Statistics: A Primer. Wiley, 2016.">Pearl <em>et al.</em>, 2016</a>]</span>. The key insight for our purposes: Bayesian inference tells us how evidence updates beliefs, but it doesn’t tell us which direction causality runs or where we can intervene. That limitation becomes critical when we automate decisions based on correlational patterns.</p>
+<p>This was a glimpse of causality—a deep topic developed by Pearl and colleagues <span id="id6">[<a class="reference internal" href="../references-page.html#id70" title="Judea Pearl and Dana Mackenzie. The Book of Why: The New Science of Cause and Effect. Basic Books, 2018.">Pearl and Mackenzie, 2018</a>]</span>, <span id="id7">[<a class="reference internal" href="../references-page.html#id71" title="Judea Pearl. Causality: Models, Reasoning, and Inference. Cambridge University Press, 2nd edition edition, 2009.">Pearl, 2009</a>]</span>, <span id="id8">[<a class="reference internal" href="../references-page.html#id72" title="Judea Pearl, Madelyn Glymour, and Nicholas P. Jewell. Causal Inference in Statistics: A Primer. Wiley, 2016.">Pearl <em>et al.</em>, 2016</a>]</span>. The key insight for our purposes: Bayesian inference tells us how evidence updates beliefs, but it doesn’t tell us which direction causality runs or where we can intervene. That limitation becomes critical when we automate decisions based on correlational patterns.</p>
 </section>
 </section>
 <section id="the-apgar-test-is-a-neural-network">
@@ -880,7 +882,7 @@ But the key ideas are identical.</p>
 </section>
 <section id="why-automatons-beat-humans-anyway">
 <h2>Why Automatons Beat Humans Anyway<a class="headerlink" href="#why-automatons-beat-humans-anyway" title="Permalink to this heading">#</a></h2>
-<p>Given that models learn from flawed human decisions, why would they outperform humans? This is the central thesis of Kahneman’s <em>Noise: A Flaw in Human Judgment</em> <span id="id9">[<a class="reference internal" href="#id80" title="Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. Noise: A Flaw in Human Judgment. Little, Brown Spark, 2021.">Kahneman <em>et al.</em>, 2021</a>]</span>: trained automatons systematically beat human experts at decision-making because they eliminate <strong>noise</strong>.</p>
+<p>Given that models learn from flawed human decisions, why would they outperform humans? This is the central thesis of Kahneman’s <em>Noise: A Flaw in Human Judgment</em> <span id="id9">[<a class="reference internal" href="../references-page.html#id68" title="Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. Noise: A Flaw in Human Judgment. Little, Brown Spark, 2021.">Kahneman <em>et al.</em>, 2021</a>]</span>: trained automatons systematically beat human experts at decision-making because they eliminate <strong>noise</strong>.</p>
 <section id="what-is-noise">
 <h3>What is Noise?<a class="headerlink" href="#what-is-noise" title="Permalink to this heading">#</a></h3>
 <p>Noise is random variability in human judgment:</p>
@@ -970,7 +972,7 @@ But the key ideas are identical.</p>
 </section>
 <section id="three-critical-problems">
 <h3>Three Critical Problems<a class="headerlink" href="#three-critical-problems" title="Permalink to this heading">#</a></h3>
-<p>Even in appropriate domains, automation faces three serious problems that can cause significant harm <span id="id10">[<a class="reference internal" href="#id21" title="Cathy O'Neil. Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown, 2016.">O'Neil, 2016</a>]</span>:</p>
+<p>Even in appropriate domains, automation faces three serious problems that can cause significant harm <span id="id10">[<a class="reference internal" href="../references-page.html#id9" title="Cathy O'Neil. Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy. Crown, 2016.">O'Neil, 2016</a>]</span>:</p>
 <section id="the-training-data-problem">
 <h4>1. The Training Data Problem<a class="headerlink" href="#the-training-data-problem" title="Permalink to this heading">#</a></h4>
 <p>Models learn exactly what they’re taught—including biases. If historical decisions show:</p>
@@ -981,11 +983,11 @@ But the key ideas are identical.</p>
 <li><p>Geographic prejudices in medical care</p></li>
 </ul>
 <p>…the model will faithfully reproduce these patterns. It doesn’t distinguish between legitimate expertise and unjust bias. Both appear as correlations in the training data.</p>
-<p><strong>Example</strong>: The COMPAS recidivism predictor was trained on historical criminal justice data that reflected systemic racial biases <span id="id11">[<a class="reference internal" href="#id88" title="Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. ProPublica, May 23 2016. URL: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing.">Angwin <em>et al.</em>, 2016</a>]</span>. It learned to assign higher risk scores to Black defendants, not because of any individual characteristics, but because the training data showed Black defendants were more likely to be re-arrested (reflecting both higher policing in Black communities and judicial biases). The model amplified existing injustice.</p>
+<p><strong>Example</strong>: The COMPAS recidivism predictor was trained on historical criminal justice data that reflected systemic racial biases <span id="id11">[<a class="reference internal" href="../references-page.html#id76" title="Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. ProPublica, May 23 2016. URL: https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing.">Angwin <em>et al.</em>, 2016</a>]</span>. It learned to assign higher risk scores to Black defendants, not because of any individual characteristics, but because the training data showed Black defendants were more likely to be re-arrested (reflecting both higher policing in Black communities and judicial biases). The model amplified existing injustice.</p>
 </section>
 <section id="the-feedback-loop-problem">
 <h4>2. The Feedback Loop Problem<a class="headerlink" href="#the-feedback-loop-problem" title="Permalink to this heading">#</a></h4>
-<p>Once deployed, models create their own training data. If an automated loan system denies credit to certain demographics, those people never get loans, never demonstrate creditworthiness, and the system “learns” that denying them was correct. The model’s decisions become self-fulfilling prophecies. Healthcare algorithms exhibit this problem acutely: systems trained to predict healthcare costs learn to allocate fewer resources to Black patients because historical data shows lower spending on them—not because they need less care, but because they received less care <span id="id12">[<a class="reference internal" href="#id89" title="Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464):447–453, 2019. doi:10.1126/science.aax2342.">Obermeyer <em>et al.</em>, 2019</a>]</span>.</p>
+<p>Once deployed, models create their own training data. If an automated loan system denies credit to certain demographics, those people never get loans, never demonstrate creditworthiness, and the system “learns” that denying them was correct. The model’s decisions become self-fulfilling prophecies. Healthcare algorithms exhibit this problem acutely: systems trained to predict healthcare costs learn to allocate fewer resources to Black patients because historical data shows lower spending on them—not because they need less care, but because they received less care <span id="id12">[<a class="reference internal" href="../references-page.html#id77" title="Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. Science, 366(6464):447–453, 2019. doi:10.1126/science.aax2342.">Obermeyer <em>et al.</em>, 2019</a>]</span>.</p>
 <p><strong>Example</strong>: Amazon’s automated recruiting tool learned to penalize résumés containing the word “women’s” (as in “women’s chess club”) because historical hiring data showed men were more often hired. The system then reinforced this pattern by recommending male candidates, creating training data that confirmed its bias.</p>
 </section>
 <section id="the-accountability-problem">
@@ -1042,57 +1044,6 @@ But the key ideas are identical.</p>
 <p>Kahneman’s insight cuts both ways: humans are flawed, but so are models trained on human decisions. The question is not whether to automate, but when, how, and with what safeguards.</p>
 <p>The Bayesian pattern—from evidence to hypothesis, observation to probability, features to decisions—is powerful and ubiquitous. Understanding it matters for anyone making decisions, evaluating tests, or deploying AI systems.</p>
 <p>Your model might beat you. But only you can decide when it should.</p>
-</section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
-<div class="docutils container" id="id13">
-<div class="citation" id="id88" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">ALMK16</a><span class="fn-bracket">]</span></span>
-<p>Julia Angwin, Jeff Larson, Surya Mattu, and Lauren Kirchner. Machine bias: there's software used across the country to predict future criminals. and it's biased against blacks. <em>ProPublica</em>, May 23 2016. URL: <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a>.</p>
-</div>
-<div class="citation" id="id85" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Gig02</a><span class="fn-bracket">]</span></span>
-<p>Gerd Gigerenzer. <em>Calculated Risks: How to Know When Numbers Deceive You</em>. Simon &amp; Schuster, New York, 2002.</p>
-</div>
-<div class="citation" id="id87" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">Ioa05</a><span class="fn-bracket">]</span></span>
-<p>John P. A. Ioannidis. Why most published research findings are false. <em>PLOS Medicine</em>, 2(8):e124, 2005. <a class="reference external" href="https://doi.org/10.1371/journal.pmed.0020124">doi:10.1371/journal.pmed.0020124</a>.</p>
-</div>
-<div class="citation" id="id79" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Kah11</a><span class="fn-bracket">]</span></span>
-<p>Daniel Kahneman. <em>Thinking, Fast and Slow</em>. Farrar, Straus and Giroux, 2011.</p>
-</div>
-<div class="citation" id="id80" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">KSS21</a><span class="fn-bracket">]</span></span>
-<p>Daniel Kahneman, Olivier Sibony, and Cass R. Sunstein. <em>Noise: A Flaw in Human Judgment</em>. Little, Brown Spark, 2021.</p>
-</div>
-<div class="citation" id="id86" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">McG11</a><span class="fn-bracket">]</span></span>
-<p>Sharon Bertsch McGrayne. <em>The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, and Emerged Triumphant from Two Centuries of Controversy</em>. Yale University Press, 2011.</p>
-</div>
-<div class="citation" id="id21" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">ONeil16</a><span class="fn-bracket">]</span></span>
-<p>Cathy O'Neil. <em>Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy</em>. Crown, 2016.</p>
-</div>
-<div class="citation" id="id89" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">OPVM19</a><span class="fn-bracket">]</span></span>
-<p>Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. Dissecting racial bias in an algorithm used to manage the health of populations. <em>Science</em>, 366(6464):447–453, 2019. <a class="reference external" href="https://doi.org/10.1126/science.aax2342">doi:10.1126/science.aax2342</a>.</p>
-</div>
-<div class="citation" id="id83" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">Pea09</a><span class="fn-bracket">]</span></span>
-<p>Judea Pearl. <em>Causality: Models, Reasoning, and Inference</em>. Cambridge University Press, 2nd edition edition, 2009.</p>
-</div>
-<div class="citation" id="id84" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">PGJ16</a><span class="fn-bracket">]</span></span>
-<p>Judea Pearl, Madelyn Glymour, and Nicholas P. Jewell. <em>Causal Inference in Statistics: A Primer</em>. Wiley, 2016.</p>
-</div>
-<div class="citation" id="id82" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>PM18<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
-<p>Judea Pearl and Dana Mackenzie. <em>The Book of Why: The New Science of Cause and Effect</em>. Basic Books, 2018.</p>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -1205,7 +1156,6 @@ But the key ideas are identical.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 

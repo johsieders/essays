@@ -451,8 +451,3 @@ The Bayesian pattern—from evidence to hypothesis, observation to probability, 
 
 Your model might beat you. But only you can decide when it should.
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```
