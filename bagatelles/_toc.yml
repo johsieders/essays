@@ -103,7 +103,7 @@ parts:
       - file: mathematics/tensors
         title: Tensors
       - file: mathematics/calculus-rn
-        title: Differential Calculus in $\mathbb{R}^n$
+        title: Differential Calculus
         
   - caption: History
     chapters:
@@ -115,14 +115,19 @@ parts:
         title: The way to the Korean War
       - file: history/31-edinburgh
         title: Edinburgh
-      - file: history/israel-1
-        title: Der Weg zum Staat Israel *
-      - file: history/israel-2
-        title: Von der Gründung Israels zum Sechs-Tage-Krieg *
-      - file: history/israel-3
-        title: Vom Sechs-Tage-Krieg bis Oslo * 
-      - file: history/israel-4
-        title: Von Oslo bis 2026 * 
+      - file: history/israel-0
+        title: Geschichte des Judentums *
+        sections:
+          - file: history/israel-01
+            title: Von den Anfängen bis zum Ende Jerusalems
+          - file: history/israel-11
+            title: Der Weg zum Staat Israel
+          - file: history/israel-12
+            title: Von der Gründung Israels zum Sechs-Tage-Krieg
+          - file: history/israel-13
+            title: Vom Sechs-Tage-Krieg bis Oslo 
+          - file: history/israel-14
+            title: Von Oslo bis 2026 
   
   - caption: Religion
     chapters:
