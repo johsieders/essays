@@ -285,6 +285,3 @@ Der Sechs-Tage-Krieg 1967 veränderte alles – nicht weil Israel unrecht hatte,
 - {cite}`sand2008invention`
 - {cite}`rejwan2004israel`
 
-```{bibliography}
-:filter: docname in docnames
-```

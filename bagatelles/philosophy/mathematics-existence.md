@@ -269,8 +269,3 @@ The position represents a form of pragmatic nominalism. We use mathematics becau
 
 Prime numbers exist exactly as much as the Sicilian Defense exists—as patterns within rule structures humans created. Whether that constitutes "real" existence depends on what we mean by existence. And that question, like so many in philosophy, may have no final answer.
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

@@ -15,8 +15,3 @@ Klein–Gordon, and Dirac).
 
 [Download/View PDF](../_static/29-physics-one-page.pdf)
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

@@ -314,6 +314,3 @@ Was nach 1492 kommt – das Osmanische Reich als Zufluchtsort, die niederländis
 - {cite}`dubnow1925weltgeschichte`
 - {cite}`gerber1992jews`
 
-```{bibliography}
-:filter: docname in docnames
-```

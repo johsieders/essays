@@ -360,6 +360,3 @@ Die Tempelzerstörung 70 CE hätte das Ende sein können – wie die assyrische 
 - {cite}`sarna1986exodus`
 - {cite}`kugel2007bible`
 
-```{bibliography}
-:filter: docname in docnames
-```

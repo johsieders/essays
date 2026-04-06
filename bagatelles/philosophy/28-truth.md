@@ -88,8 +88,3 @@ friendly and do no harm. Freedom of speech does not cover the hatred, slander, a
 spread by less benign groups. What if they win the next election?
 
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

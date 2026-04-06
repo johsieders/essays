@@ -97,8 +97,3 @@ If in principle my choices are determined by my repository, then in principle th
 
 The freedom worth wanting is not metaphysical immunity from causation. It is the capacity to act from one's own nature, to have one's choices flow from the rich, complex repository that constitutes the self. This is the only freedom that ever existed, and it is sufficient for morality, dignity, and human flourishing. The traditional free will problem, properly understood, dissolves once we recognize that we are regions of the causal order rather than spirits imprisoned within it.
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

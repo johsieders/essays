@@ -9,8 +9,3 @@ and {cite}`pearl2016causal`, {cite}`kahneman2011thinking`
 
 [Download/View PDF](../_static/25-physics-roadmap.pdf)
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

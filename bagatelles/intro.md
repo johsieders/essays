@@ -61,8 +61,3 @@ Johannes Siedersleben
 
 ---
 
-## References
-
-```{bibliography}
-:filter: docname in docnames
-```

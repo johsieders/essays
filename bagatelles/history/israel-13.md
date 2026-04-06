@@ -421,6 +421,3 @@ Oslo war der Versuch, aufzuholen, was in zwei Jahrzehnten versäumt worden war. 
 - {cite}`maoz2006defending`
 - {cite}`seale1988asad`
 
-```{bibliography}
-:filter: docname in docnames
-```

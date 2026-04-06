@@ -303,6 +303,3 @@ Aber Geschichte braucht auch Akteure, die bereit sind, das Undenkbare zu denken.
 - {cite}`shavit2013promised`
 - {cite}`khalidi2020hundred`
 
-```{bibliography}
-:filter: docname in docnames
-```

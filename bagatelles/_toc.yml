@@ -177,3 +177,8 @@ parts:
     chapters:
       - file: literature/2-baviere
         title: Qu'est-ce qu'elle est belle, la Bavière!
+
+  - caption: ""
+    chapters:
+      - file: references-page
+        title: References
