@@ -9,7 +9,7 @@ April 2026
 
 ---
 
-## Vorbemerkung: Was wissen wir wirklich?
+## Was wissen wir wirklich?
 
 Dieses Papier ist das fünfte in einer Reihe zur Geschichte des jüdischen Volkes und des Staates Israel. Die ersten vier Papiere behandelten die Entstehung und Geschichte des modernen Staates Israel. Mit diesem Papier beginnt eine zweite Reihe, die tiefer in die Geschichte zurückgreift – bis zu den Ursprüngen des jüdischen Volkes in der Bronzezeit.
 

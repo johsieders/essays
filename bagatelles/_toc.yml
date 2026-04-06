@@ -120,6 +120,8 @@ parts:
         sections:
           - file: history/israel-01
             title: Von den Anfängen bis zum Ende Jerusalems
+          - file: history/israel-02
+            title: Vom Ende Jerusalems bis zur Vertreibung aus Spanien
           - file: history/israel-11
             title: Der Weg zum Staat Israel
           - file: history/israel-12
