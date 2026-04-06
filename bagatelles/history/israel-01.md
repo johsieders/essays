@@ -5,15 +5,15 @@
 
 *Claude Sonnet 4.6, Gemini 3, Johannes Siedersleben (Editor)*
 
-April 2026
+*April 2026*
 
 ---
 
 ## Was wissen wir wirklich?
 
-Dieses Papier ist das fünfte in einer Reihe zur Geschichte des jüdischen Volkes und des Staates Israel. Die ersten vier Papiere behandelten die Entstehung und Geschichte des modernen Staates Israel. Mit diesem Papier beginnt eine zweite Reihe, die tiefer in die Geschichte zurückgreift – bis zu den Ursprüngen des jüdischen Volkes in der Bronzezeit.
-
-Diese zweite Reihe stellt uns vor ein methodisches Problem, das bei den Israel-Papieren so nicht existierte: **Wir wissen sehr viel weniger, als allgemein angenommen wird.**
+Dieses Papier ist das erste in einer Reihe zur Geschichte des jüdischen Volkes und des Staates Israel.
+Es greift tief in die Geschichte zurück – bis zu den Ursprüngen des jüdischen Volkes in der Bronzezeit.
+Dabei stellt sich ein methodisches Problem: **Wir wissen sehr viel weniger, als allgemein angenommen wird.**
 
 Die Hebräische Bibel – das Alte Testament – ist das zentrale Quellenwerk. Aber sie ist primär **Theologie und Literatur**, erst sekundär Geschichte. Sie wurde nicht von Chronisten geschrieben, die Ereignisse zeitgenössisch festhielten, sondern von Priestern, Propheten und Schreibern, die theologische Botschaften vermitteln, religiöse Identität stiften und das Verhältnis zwischen Gott und seinem Volk deuten wollten. Das macht sie zu einem außerordentlichen Dokument der Geistesgeschichte – aber zu einer komplizierten historischen Quelle.
 

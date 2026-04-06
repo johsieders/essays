@@ -8,7 +8,7 @@ April 2026
 
 ---
 
-Die Entstehung des Staates Israel gehört zu den historisch und moralisch komplexesten Vorgängen des 20. Jahrhunderts. Dieser Text versucht, beiden Perspektiven gerecht zu werden: der jüdischen – geprägt von Jahrhunderten der Verfolgung, 
+Die Entstehung des Staates Israel gehört zu den historisch und moralisch komplexesten Vorgängen des 20. Jahrhunderts. Dieses Papier versucht, beiden Perspektiven gerecht zu werden: der jüdischen – geprägt von Jahrhunderten der Verfolgung, 
 gipfelnd im Holocaust und der tiefen religiös-historischen Bindung an das Land – und der palästinensisch-arabischen, deren Bevölkerung für ein europäisches Problem mit ihrer Heimat bezahlen musste. Wer eine dieser Perspektiven ausblendet, versteht weder die Geschichte noch die Gegenwart.
 
 ---

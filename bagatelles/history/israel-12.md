@@ -4,12 +4,14 @@
 
 *Claude Sonnet 4.6, Gemini 3, Johannes Siedersleben (Editor)*
 
-April 2026
+*April 2026*
 
 ---
 
 
-Dieses Papier ist das zweite in einer Reihe. Das erste – *„Heimstätte und Katastrophe"* – behandelte die Vorgeschichte: Zionismus, Einwanderung, die Rolle der Großmächte und die Gründung des Staates Israel 1948. Dieses Papier setzt dort an und folgt Israels erstem Jahrzehnt bis zum Sechs-Tage-Krieg 1967. Ein drittes Papier wird den Wendepunkt behandeln: wie aus dem bewunderten kleinen Staat ein international umstrittener Akteur wurde.
+Das letzte Papier behandelte die Vorgeschichte: Zionismus, Einwanderung, 
+die Rolle der Großmächte und die Gründung des Staates Israel 1948. 
+Dieses Papier setzt dort an und folgt Israels erstem Jahrzehnt bis zum Sechs-Tage-Krieg 1967. 
 
 ---
 

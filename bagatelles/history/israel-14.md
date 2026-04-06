@@ -2,11 +2,18 @@
 
 *Eine Diskussionsgrundlage – historisch, nicht parteiisch*
 
+
+*Claude Sonnet 4.6, Gemini 3, Johannes Siedersleben (Editor)*
+
+*April 2026*
+
 ---
 
-Dieses Papier ist das vierte und vorerst letzte in einer Reihe zur Geschichte Israels. Die ersten drei Papiere behandelten die Vorgeschichte und Gründung des Staates (*„Heimstätte und Katastrophe"*), die ersten zwei Jahrzehnte bis zum Sechs-Tage-Krieg (*„David und Goliath"*) und die Phase von 1967 bis zu den Oslo-Abkommen (*„Vom Triumph zur Sackgasse"*). Dieses Papier beginnt mit dem Händedruck auf dem Rasen des Weißen Hauses 1993 und endet Anfang 2026 – vor dem sich abzeichnenden Konflikt mit dem Iran, der einem gesonderten Papier vorbehalten bleibt.
+Dieses Papier beginnt mit dem Händedruck auf dem Rasen des Weißen Hauses 1993 und 
+endet Anfang 2026 – vor dem sich abzeichnenden Konflikt mit dem Iran.
 
-Es ist die schwierigste Phase zu beschreiben – nicht weil die Fakten unbekannt wären, sondern weil sie noch nicht Geschichte sind. Was hier erzählt wird, ist Gegenwart, und Gegenwart ist immer umstritten.
+Es ist die schwierigste Phase zu beschreiben – nicht weil die Fakten unbekannt wären, 
+sondern weil sie noch nicht Geschichte sind. Was hier erzählt wird, ist Gegenwart, und Gegenwart ist immer umstritten.
 
 ---
 
