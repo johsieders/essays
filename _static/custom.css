@@ -7,21 +7,6 @@
  * Fix: sphinxcontrib-bibtex breaks the DOM nesting on pages with a
  * {bibliography} directive.  The prev-next-footer and bd-sidebar-secondary
  * escape from their normal containers.
- *
- * Normal structure:
- *   .bd-content  (display:flex, row)
- *     .bd-article-container
- *     .bd-sidebar-secondary
- *
- * Broken structure:
- *   .bd-content  (display:flex, row)
- *     .bd-article-container
- *     .prev-next-footer      ← orphaned, becomes a flex column
- *   .bd-sidebar-secondary    ← escaped one level up
- *
- * Fix: when .bd-content has an orphaned footer, switch to column+wrap
- * layout so the footer flows below the article instead of beside it.
- * Also handle the sidebar that escaped to .bd-main.
  */
 
 /* Let the flex container wrap so the footer can drop below */
@@ -51,6 +36,6 @@
 
 @media (max-width: 1199px) {
     .bd-main > .bd-sidebar-secondary {
-        display: none;
+        display: none !important;
     }
 }
