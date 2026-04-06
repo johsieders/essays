@@ -778,5 +778,3 @@ Stellen wir uns vor, Thomas und Sartre müssten eine KI entwickeln:
 **Sartre**: Das Böse ist eine **Wahl**. Es gibt keine "Mängel" – nur unterschiedliche **Entwürfe der Freiheit**. Manche wählen **mauvaise foi** (Selbsttäuschung, Flucht vor Freiheit), andere wählen Grausamkeit. Aber es sind **Wahlen**, keine ontologischen Defizite. Das Böse ist **real** (nicht bloß Mangel), weil Freiheit real ist.
 
 ---
-
-<div style="margin-bottom: 100px;"></div>

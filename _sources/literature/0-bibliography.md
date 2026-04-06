@@ -45,6 +45,3 @@ Plato and Aristotle are particularly well presented.
 > **Gaspard Koenig: Notre vagabonde liberté**
 > 
 > Éditions de l'Observatoire, 2021> 
-
-
-<div style="margin-bottom: 100px;"></div>

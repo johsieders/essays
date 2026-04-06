@@ -440,4 +440,3 @@ Die folgende Matrix bietet eine Übersicht über die wichtigsten Dimensionen all
 - **Konvergenz**: Fast alle (außer Nietzsche) sehen Mitleid/Sympathie als moralisch wertvoll
 
 ---
-<div style="margin-bottom: 100px;"></div>

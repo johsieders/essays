@@ -14,5 +14,3 @@ and {cite}`pearl2016causal`, {cite}`kahneman2011thinking`
 ```{bibliography}
 :filter: docname in docnames
 ```
-
-<div style="margin-bottom: 100px;"></div>

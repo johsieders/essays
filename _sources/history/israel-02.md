@@ -305,7 +305,15 @@ Was nach 1492 kommt – das Osmanische Reich als Zufluchtsort, die niederländis
 
 ---
 
-*Quellen und Vertiefung: Shlomo Goitein, „A Mediterranean Society" (jüdisches Leben in der islamischen Welt); Mark R. Cohen, „Under Crescent and Cross"; Yitzhak Baer, „A History of the Jews in Christian Spain"; Heinrich Graetz, „Geschichte der Juden" (klassisches Standardwerk); Simon Dubnow, „Weltgeschichte des jüdischen Volkes"; Jane Gerber, „The Jews of Spain"*
+## Quellen und Vertiefung
 
+- {cite}`goitein1967mediterranean`
+- {cite}`cohen1994crescent`
+- {cite}`baer1961jews`
+- {cite}`graetz1853geschichte`
+- {cite}`dubnow1925weltgeschichte`
+- {cite}`gerber1992jews`
 
-<div style="margin-bottom: 100px;"></div>
+```{bibliography}
+:filter: docname in docnames
+```

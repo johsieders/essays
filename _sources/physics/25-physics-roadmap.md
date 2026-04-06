@@ -9,5 +9,3 @@ No torches and no superfast trains, but clean ideas you can talk about over a pi
 <embed src="../_static/25-physics-roadmap.pdf" type="application/pdf" width="100%" height="800px" />
 
 [Download/View PDF](../_static/25-physics-roadmap.pdf)
-
-<div style="margin-bottom: 100px;"></div>

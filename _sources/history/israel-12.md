@@ -276,7 +276,15 @@ Der Sechs-Tage-Krieg 1967 veränderte alles – nicht weil Israel unrecht hatte,
 
 ---
 
-*Quellen und Vertiefung: Tom Segev, „1949 – Die ersten Israelis"; Anita Shapira, „Israel – A History"; Benny Morris, „1948"; Avi Shlaim, „The Iron Wall"; Shlomo Sand, „Die Erfindung des jüdischen Volkes"; Nissim Rejwan, „Israel's Place in the Middle East"*
+## Quellen und Vertiefung
 
+- {cite}`segev1986_1949`
+- {cite}`shapira2012israel`
+- {cite}`morris2008_1948`
+- {cite}`shlaim2000iron`
+- {cite}`sand2008invention`
+- {cite}`rejwan2004israel`
 
-<div style="margin-bottom: 100px;"></div>
+```{bibliography}
+:filter: docname in docnames
+```

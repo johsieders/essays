@@ -62,6 +62,3 @@ Der Konflikt im Nahen Osten ist deshalb so schwer zu lösen, weil beide Seiten h
 Alle Texte wurden von Claude Sonnet 4.6 nach meinen Vorgaben generiert und von Gemini 3 und mir geprüft.
 
 ---
-
-
-<div style="margin-bottom: 100px;"></div>
