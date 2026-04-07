@@ -132,7 +132,9 @@ parts:
             title: Vom Sechs-Tage-Krieg bis Oslo 
           - file: history/israel-14
             title: Von Oslo bis 2026 
-  
+          - file: history/israel-20
+            title: Die Stationen des jüdischen Volkes             
+
   - caption: Religion
     chapters:
       - file: literature/22-god-and-evil

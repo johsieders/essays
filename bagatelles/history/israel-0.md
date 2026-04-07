@@ -22,7 +22,7 @@ Die Geschichte beginnt mit einer methodischen Herausforderung: Wir wissen weit w
 
 **[Papier 2](israel-02.md): Zwischen den Völkern – Die Juden in der Diaspora (135–1492)**
 
-Rund 1.800 Jahre ohne Territorium, ohne Staat, ohne Armee – und trotzdem überlebt. Das ist das Rätsel dieses Papiers. Es analysiert zunächst, was das jüdische Überleben strukturell ermöglichte: Text als portable Heimat, Halacha als Verfassung ohne Staat, Gemeinde als Mikrostaat. Dann folgt die Chronologie: das rabbinische Judentum, das Goldene Zeitalter im islamischen Spanien mit Maimonides als Gipfelpunkt, die Kreuzzüge als Wendepunkt in Europa, Pogrome und Pestanklagen und schließlich 1492 – die Vertreibung aus Spanien, das Ende einer Welt und der Beginn einer anderen.
+Rund 1.800 Jahre ohne Territorium, ohne Staat, ohne Armee – und trotzdem überlebt. Dieses Papier analysiert zunächst, was das jüdische Überleben strukturell ermöglichte: Text als portable Heimat, Halacha als Verfassung ohne Staat, Gemeinde als Mikrostaat. Dann folgt die Chronologie: das rabbinische Judentum, das Goldene Zeitalter im islamischen Spanien mit Maimonides als Gipfelpunkt, die Kreuzzüge als Wendepunkt in Europa, Pogrome und Pestanklagen und schließlich 1492 – die Vertreibung aus Spanien, das Ende einer Welt und der Beginn einer anderen.
 
 **[Papier 3](israel-03.md): Emanzipation und Verfolgung – Die Juden in der Neuzeit (1492–1897)**
 

@@ -2,10 +2,12 @@ matplotlib
 numpy
 torch
 
-jupyter-book>=0.15.0
+jupyter-book==0.15.1
+sphinx-book-theme==1.0.1
+pydata-sphinx-theme==0.15.4
 sphinx-proof
 sphinx-togglebutton
-sphinxcontrib-bibtex
+sphinxcontrib-bibtex==2.5.0
 myst_nb
 
 git+https://github.com/johsieders/sandbox.git@main#subdirectory=sandbox/math4phys
