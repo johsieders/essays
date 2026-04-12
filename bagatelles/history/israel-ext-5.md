@@ -1,6 +1,5 @@
 # Kapitel 5: Heimstätte und Katastrophe – Die Entstehung des Staates Israel
 
-## Vorbemerkung
 
 Die Entstehung des Staates Israel gehört zu den historisch und moralisch komplexesten Vorgängen des 20. Jahrhunderts. Sie ist gleichzeitig eine Geschichte der Befreiung und eine Geschichte der Vertreibung – je nachdem, von welcher Seite man schaut. Dieses Kapitel versucht, beiden Perspektiven gerecht zu werden: der jüdischen, geprägt von Jahrhunderten der Verfolgung und gipfelnd im Holocaust, und der palästinensisch-arabischen, deren Bevölkerung für ein europäisches Verbrechen mit ihrer Heimat bezahlte.
 
@@ -16,7 +15,7 @@ Um 1880 herrschten die Osmanen seit über vier Jahrhunderten über einen der gr�
 
 Die arabischsprachige Bevölkerung des Reiches war demografisch dominant in der Levante, in Mesopotamien und auf der arabischen Halbinsel – aber politisch hatte sie kaum Gewicht. Die osmanische Elite war türkisch; Arabisch war die Sprache der Religion und der Straße, Türkisch die Sprache der Macht.
 
-In **Palästina** selbst lebten um 1880 etwa 500.000 Menschen: rund 90 Prozent Araber (muslimisch und christlich), rund 10 Prozent Juden – letztere konzentriert in den vier heiligen Städten Jerusalem, Hebron, Safed und Tiberias, religiös orientiert, politisch passiv, von Spenden der Diaspora lebend. Es war kein leeres Land – aber es war ein Land ohne Nationalstaat, ohne politische Struktur, die über Dorf und Clan hinausgegangen wäre.
+In **Palästina** selbst lebten um 1880 etwa 500.000 Menschen: rund 90 Prozent Araber (muslimisch und christlich), rund 10 Prozent Juden – letztere konzentriert in den vier heiligen Städten Jerusalem, Hebron, Safed und Tiberias, religiös orientiert, politisch passiv, von Spenden der Diaspora lebend. In Jerusalem selbst stellten Juden bereits zu dieser Zeit eine relative Bevölkerungsmehrheit dar. Es war kein leeres Land – aber es war ein Land ohne Nationalstaat, ohne politische Struktur, die über Dorf und Clan hinausgegangen wäre.
 
 ### Der Zerfall des Reiches
 
@@ -38,7 +37,7 @@ Als das Osmanische Reich 1914 in den Krieg eintrat, brauchte England Verbündete
 
 **Versprechen 2 – Sykes-Picot (1916):** Während der Arabische Aufstand noch lief, trafen der britische Diplomat Sir Mark Sykes und sein französischer Kollege François Georges-Picot eine geheime Vereinbarung über die Aufteilung desselben Gebiets nach dem erwarteten Sieg. Russland wurde eingeweiht und stimmte zu. Was Hussein nicht wusste: Das Land, für dessen Befreiung er kämpfte, war bereits unter England und Frankreich aufgeteilt.
 
-**Versprechen 3 – Balfour-Deklaration (1917):** Am 2. November 1917 schrieb Außenminister Arthur James Balfour einen Brief an Lord Walter Rothschild, den prominentesten jüdischen Peer Englands. Die britische Regierung betrachte die Errichtung einer "nationalen Heimstätte für das jüdische Volk" in Palästina wohlwollend – mit dem Zusatz, dass die Rechte der nichtjüdischen Bevölkerung nicht beeinträchtigt werden dürften. Dieser Zusatz sollte in der Praxis keine große Rolle spielen.
+**Versprechen 3 – Balfour-Deklaration (1917):** Am 2. November 1917 schrieb Außenminister Arthur James Balfour einen Brief an Lord Walter Rothschild, den prominentesten jüdischen Peer Englands. Die britische Regierung betrachte die Errichtung einer "nationalen Heimstätte für das jüdische Volk" in Palästina wohlwollend – mit dem Zusatz, dass die Rechte der nichtjüdischen Bevölkerung nicht beeinträchtigt werden dürften. Dieser Zusatz wurde später von den Briten wiederholt angeführt, um jüdische Einwanderungsquoten zu rechtfertigen (etwa im Weißbuch 1939), was zu Spannungen mit der zionistischen Bewegung führte. Davon abgesehen wurde er in der Praxis weitgehend ignoriert.
 
 England hatte damit dasselbe Territorium dreimal vergeben: den Arabern, den Franzosen und den Juden. Das strukturelle Dilemma der nächsten dreißig Jahre war damit vorprogrammiert.
 
@@ -89,7 +88,7 @@ Das erklärt – ohne es zu rechtfertigen –, warum die arabischen Staaten 1948
 
 ### Herzl und die Geburt des politischen Zionismus
 
-Jüdische Sehnsucht nach Rückkehr nach Zion war religiös so alt wie die Diaspora. Was **Theodor Herzl** 1896 mit seiner Schrift *Der Judenstaat* begründete, war etwas anderes: ein politisches Programm. Herzl, österreichisch-ungarischer Journalist, hatte den Dreyfus-Prozess in Paris hautnah erlebt – einem assimilierten jüdischen Offizier war Verrat angehängt worden, begleitet von offenem Antisemitismus auf den Straßen. Herzls Schlussfolgerung war radikal: Der Antisemitismus ist in Europa strukturell und unheilbar. Die einzige Lösung ist ein eigener Staat.
+Jüdische Sehnsucht nach Rückkehr nach Zion war religiös so alt wie die Diaspora. Was **Theodor Herzl** 1896 mit seiner Schrift *Der Judenstaat* begründete, war etwas anderes: ein politisches Programm. Herzl, österreichisch-ungarischer Journalist, hatte den Dreyfus-Prozess in Paris hautnah erlebt – einem assimilierten jüdischen Offizier war Verrat angehängt worden, begleitet von offenem Antisemitismus auf den Straßen. Dazu kam seine Überzeugung, dass das jüdische Volk ein Anrecht auf Selbstbestimmung in seiner historischen Ur-Heimat habe. Herzls Schlussfolgerung war radikal: Der Antisemitismus ist in Europa strukturell und unheilbar. Die einzige Lösung ist ein eigener Staat.
 
 1897 organisierte er in Basel den Ersten Zionistischen Kongress. Das Ziel: eine öffentlich-rechtlich gesicherte Heimstätte in Palästina. Herzl selbst war pragmatisch – als England 1903 Uganda anbot, erwog er es ernsthaft. Die Bewegung bestand auf Palästina.
 
@@ -113,7 +112,7 @@ Das vielleicht Entscheidendste an der zionistischen Einwanderung war nicht ihre 
 
 **Histadrut (1920):** Ein Gewerkschaftsdachverband, der zugleich Fabriken, Banken und Krankenhäuser besaß – eine Wirtschaft innerhalb der Wirtschaft, ohne Parallele in der Einwanderungsgeschichte anderer Völker.
 
-**Jüdischer Nationalfonds:** Kaufte Land als kollektives jüdisches Eigentum mit einer Klausel, die bis heute gilt: Es darf nie wieder an Nichtjuden verkauft werden. Jüdisches Land mit jüdischer Arbeit – die Ideologie der *Avoda Ivrit* – war nicht nur Pioniergeist, sondern struktureller Ausschluss der arabischen Arbeitskraft.
+**Jüdischer Nationalfonds:** Kaufte Land als kollektives jüdisches Eigentum mit einer Klausel, die bis heute gilt: Es darf nie wieder an Nichtjuden verkauft werden. Eng damit verbunden war das Prinzip der *Avoda Ivrit* (jüdische Arbeit) – kein Gesetz, aber ein von der zionistischen Arbeiterbewegung propagiertes und durch die Histadrut aktiv durchgesetztes Programm: Jüdisches Land sollte ausschließlich mit jüdischer Arbeit bewirtschaftet werden. Wer als jüdischer Arbeitgeber arabische Arbeiter beschäftigte, wurde boykottiert. Das verband sozialistische Pionierideologie mit nationaler Verdrängungslogik.
 
 **Haganah (1920):** Eine geheime Verteidigungsorganisation, die sich zur Keimzelle der späteren israelischen Armee entwickelte. Formal illegal unter dem Mandat – tatsächlich von den Briten situativ geduldet bis aktiv gefördert, je nach politischer Lage.
 
@@ -155,11 +154,13 @@ Auf der **zionistischen Seite** gab es spiegelbildliche Fehler. Die **Irgun** �
 
 ### Landkauf und stille Verdrängung
 
-Die frühe zionistische Strategie war zunächst legaler Landkauf über den Jüdischen Nationalfonds. Das Problem: Das Land gehörte oft abwesenden Großgrundbesitzern in Beirut oder Istanbul. Wenn es verkauft wurde, verloren die arabischen Pächter, die es seit Generationen bewirtschafteten, ihre Existenzgrundlage – denn die Ideologie der *Avoda Ivrit* (jüdische Arbeit) verlangte, dass jüdisches Land ausschließlich mit jüdischer Arbeit bewirtschaftet wurde.
+Die frühe zionistische Strategie war zunächst legaler Landkauf über den Jüdischen Nationalfonds. Eine entscheidende Rolle spielte dabei **Baron Edmond de Rothschild** – der Pariser Bankier, der ab 1882 die frühen jüdischen Siedlungen in Palästina finanziell rettete, als sie zu scheitern drohten. Ohne sein Geld wäre die erste Aliya weitgehend zusammengebrochen. Seine Unterstützung hatte jedoch einen Preis: Rothschilds Verwalter übten eine enge, oft als bevormundend empfundene Aufsicht über die Siedlungen aus und schrieben vor, was angebaut wurde und wie gewirtschaftet werden sollte. Die Pioniere schätzten das Geld – und hassten die Kontrolle.
 
-Gleichzeitig etablierten Histadrut und Haganah einen wirtschaftlichen Boykott arabischer Waren und Arbeit. Es entstand eine vollständige Parallelwirtschaft ohne Berührungspunkte: Was für die jüdische Seite ein Aufbauprojekt war, bedeutete für die arabische Seite systematischen Ausschluss.
+Der Landkauf selbst war formal legal. Gelegentlich wird daraus das Argument abgeleitet, die arabische Bevölkerung habe keinen Grund zur Beschwerde gehabt – schließlich sei nichts gestohlen worden. Dieses Argument ist falsch, und zwar nicht wegen juristischer Spitzfindigkeiten, sondern weil es Legalität mit Gerechtigkeit verwechselt.
 
-Das war keine zufällige Diskriminierung – es war bewusste Politik, in der sozialistische Pionierideologie und nationale Verdrängungslogik Hand in Hand liefen.
+Das Land gehörte oft abwesenden Großgrundbesitzern in Beirut oder Istanbul. Wenn es verkauft wurde, verloren die arabischen Pächter, die es seit Generationen bewirtschafteten, ihre Existenzgrundlage – ohne Entschädigung, ohne Rückkehrmöglichkeit, ohne dass sie auch nur gefragt worden wären. Ein Rechtsgeschäft zwischen einem fernen Eigentümer und einem Käufer, das die tatsächlichen Bewohner ihres Lebensunterhalts beraubt, mag legal sein. Gerecht ist es nicht.
+
+Dazu kam das Prinzip der *Avoda Ivrit*: Die vertriebenen Pächter konnten auf dem verkauften Land nicht als Lohnarbeiter bleiben, weil jüdische Arbeit gefordert war. Gleichzeitig etablierten Histadrut und Haganah einen wirtschaftlichen Boykott arabischer Waren und Arbeit. Es entstand eine vollständige Parallelwirtschaft ohne Berührungspunkte: Was für die jüdische Seite ein Aufbauprojekt war, bedeutete für die arabische Seite systematischen Ausschluss.
 
 ---
 
@@ -169,7 +170,7 @@ England erhielt 1920/22 das Völkerbundmandat über Palästina und war damit off
 
 Jede Maßnahme zugunsten der Juden provozierte arabischen Widerstand; jede Maßnahme zugunsten der Araber verletzte die Balfour-Verpflichtung und erzeugte jüdischen Widerstand. England versuchte, beide zu beschwichtigen, und verfeindete sich mit beiden.
 
-Die **Weißbücher** – 1922, 1930, 1939 – zeigen das Pendel: Mal wurden Einwanderung und Landkauf eingeschränkt (auf arabischen Druck), mal wurden Einschränkungen zurückgenommen (auf zionistischen Druck). Das Weißbuch von 1939 war das extremste Pendel: Im Moment der größten Not europäischer Juden schloss England die Tür.
+Die **Weißbücher** – 1922, 1930, 1939 – zeigen das Pendel: Mal wurden Einwanderung und Landkauf eingeschränkt (auf arabischen Druck), mal wurden Einschränkungen zurückgenommen (auf zionistischen Druck). Das Weißbuch von 1939 war ein extremes Beispiel: Im Moment der größten Not europäischer Juden schloss England die Tür.
 
 Nach dem Zweiten Weltkrieg bekämpften jüdische Untergrundorganisationen – Haganah, Irgun, Lehi – die Briten offen. Die Irgun sprengte 1946 das King-David-Hotel. England, erschöpft und bankrott nach dem Krieg, gab im Februar 1947 das Mandat an die UNO zurück – weniger als souveräne Entscheidung, mehr als Kapitulation vor einer unlösbaren Situation.
 
@@ -179,7 +180,7 @@ Nach dem Zweiten Weltkrieg bekämpften jüdische Untergrundorganisationen – Ha
 
 ### Der UN-Teilungsplan
 
-Die UNO schlug mit **Resolution 181** (November 1947) die Teilung Palästinas vor: ein jüdischer Staat (56% des Gebiets), ein arabischer Staat (43%), Jerusalem als internationales Territorium. Die demographische Asymmetrie war erheblich: Juden stellten nur rund ein Drittel der Bevölkerung, sollten aber mehr als die Hälfte des Landes erhalten.
+Die UNO schlug mit **Resolution 181** (November 1947) die Teilung Palästinas vor: ein jüdischer Staat (56% des Gebiets), ein arabischer Staat (43%), Jerusalem als internationales Territorium. Die demographische Asymmetrie war erheblich: Der jüdische Staat sollte etwa 56 Prozent des Landes erhalten, wobei ein Großteil dieses Territoriums auf die damals kaum besiedelte Negev-Wüste entfiel. Dennoch war der Plan demographisch problematisch, da Juden nur rund ein Drittel der Gesamtbevölkerung ausmachten.
 
 Die zionistische Führung akzeptierte den Plan als Ausgangsbasis. Die arabischen Staaten und die palästinensische Führung lehnten ihn ab – aus ihrer Sicht nachvollziehbar: Man sollte einer Mehrheitsbevölkerung Land wegnehmen, das ihr gehörte, ohne ihre Zustimmung.
 
@@ -230,6 +231,3 @@ Der Konflikt ist bis heute so schwer zu lösen, weil beide Seiten historisch Rec
 ---
 
 *Quellen und Vertiefung: Benny Morris, „1948"; Tom Segev, „One Palestine, Complete"; David Fromkin, „A Peace to End All Peace" (Sykes-Picot und Nachkriegsordnung); James Barr, „A Line in the Sand" (britisch-französische Rivalität); Rashid Khalidi, „The Hundred Years' War on Palestine"; Avi Shlaim, „The Iron Wall"*
-
-
-
