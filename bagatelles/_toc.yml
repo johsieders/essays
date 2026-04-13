@@ -115,26 +115,34 @@ parts:
         title: The way to the Korean War
       - file: history/31-edinburgh
         title: Edinburgh
-      - file: history/israel-0
+      - file: history/israel-ext-0
         title: Geschichte des Judentums *
         sections:
-          - file: history/israel-01
+          - file: history/israel-ext-1
             title: Von den Anfängen bis zum Ende Jerusalems
-          - file: history/israel-02
+          - file: history/israel-ext-2
             title: Vom Ende Jerusalems bis zur Vertreibung aus Spanien
-          - file: history/israel-03
+          - file: history/israel-ext-3
             title: Von der Vertreibung aus Spanien bis zum Baseler Kongress
-          - file: history/israel-11
+          - file: history/israel-ext-4
+            title: Vom Baseler Kongress bis Auschwitz
+          - file: history/israel-ext-5
             title: Der Weg zum Staat Israel
-          - file: history/israel-12
-            title: Von der Gründung Israels zum Sechs-Tage-Krieg
-          - file: history/israel-13
+          - file: history/israel-ext-6
+            title: Von der Gründung Israels bis zum Sechs-Tage-Krieg
+          - file: history/israel-ext-7
             title: Vom Sechs-Tage-Krieg bis Oslo 
-          - file: history/israel-14
+          - file: history/israel-ext-8
             title: Von Oslo bis 2026 
-          - file: history/israel-20
-            title: Die Stationen des jüdischen Volkes             
-
+          - file: history/israel-ext-9
+            title: Das Flüchtlingsproblem   
+          - file: history/israel-ext-10
+            title: Die Stationen des jüdischen Volkes
+          - file: history/israel-ext-11
+            title: Glossar
+          - file: history/israel-ext-12
+            title: Personen
+  
   - caption: Religion
     chapters:
       - file: literature/22-god-and-evil
