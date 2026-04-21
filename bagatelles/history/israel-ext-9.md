@@ -1,4 +1,4 @@
-# Kapitel 9: Das Flüchtlingsproblem – Vertreibung, Lager und Widerstand
+# Das Flüchtlingsproblem – Vertreibung, Lager und Widerstand
 
 
 Dieses Kapitel folgt einer Kausalität, die unbequem ist, aber historisch unausweichlich: Die Vertreibung von 700.000 Palästinensern 1948 schuf sozialpsychologische Bedingungen, unter denen eine hohe Wahrscheinlichkeit für Radikalisierung und schließlich Terrorismus bestand. Das zu sagen, ist keine Rechtfertigung von Gewalt gegen Zivilisten. Es ist die Beschreibung eines Mechanismus, den die Geschichte immer wieder bestätigt: Wer eine Bevölkerung ohne Heimat, ohne Perspektive und ohne Hoffnung in Lagern festsetzt, züchtet Verzweiflung. Und Verzweiflung sucht sich Wege – nicht immer die, die wir für legitim halten.

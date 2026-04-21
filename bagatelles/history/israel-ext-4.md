@@ -1,4 +1,4 @@
-# Kapitel 4: Von Basel nach Auschwitz – Zionismus, Krieg und Vernichtung (1897–1948)
+# Von Basel nach Auschwitz – Zionismus, Krieg und Vernichtung (1897–1948)
 
 
 Dieses Kapitel schlägt die Brücke zwischen zwei Welten: der jüdischen Neuzeit, die im vorigen Kapitel mit dem Ersten Zionistischen Kongress 1897 endete, und der Staatsgründung Israels 1948, die das nächste Kapitel behandelt. Zwischen diesen fünfzig Jahren liegt das Dunkelste, was die Geschichte kennt: die systematische Vernichtung von sechs Millionen Juden durch das nationalsozialistische Deutschland.

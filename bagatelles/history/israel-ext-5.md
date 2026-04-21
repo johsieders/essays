@@ -1,4 +1,4 @@
-# Kapitel 5: Heimstätte und Katastrophe – Die Entstehung des Staates Israel
+# Heimstätte und Katastrophe – Die Entstehung des Staates Israel
 
 
 Die Entstehung des Staates Israel gehört zu den historisch und moralisch komplexesten Vorgängen des 20. Jahrhunderts. Sie ist gleichzeitig eine Geschichte der Befreiung und eine Geschichte der Vertreibung – je nachdem, von welcher Seite man schaut. Dieses Kapitel versucht, beiden Perspektiven gerecht zu werden: der jüdischen, geprägt von Jahrhunderten der Verfolgung und gipfelnd im Holocaust, und der palästinensisch-arabischen, deren Bevölkerung für ein europäisches Verbrechen mit ihrer Heimat bezahlte.

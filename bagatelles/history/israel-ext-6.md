@@ -1,4 +1,4 @@
-# Kapitel 6: David und Goliath – Israel zwischen Gründung und Sechs-Tage-Krieg (1948–1967)
+# David und Goliath – Israel zwischen Gründung und Sechs-Tage-Krieg (1948–1967)
 
 
 In den ersten zwei Jahrzehnten seiner Existenz genoss Israel im Westen ein Maß an Sympathie, das heute kaum noch vorstellbar ist. Das lag an der Erzählung: Ein Volk, das die schlimmste Verfolgung der modernen Geschichte überlebt hatte, hatte sich einen Staat erkämpft. Ein Volk, das Sümpfe trockenlegte und Wüsten bebaute. Eine kleine Demokratie gegen eine arabische Übermacht. David gegen Goliath.

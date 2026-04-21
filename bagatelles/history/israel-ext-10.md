@@ -1,4 +1,4 @@
-# Kapitel 10: Die Stationen – jüdisches Leben von der Antike bis heute
+# Die Stationen – jüdisches Leben von der Antike bis heute
 
 *Ein Querschnittskapitel zur Geschichte des jüdischen Volkes*
 
@@ -10,8 +10,7 @@ Dieses Kapitel erzählt die Geschichte der wichtigsten Stationen jüdischen Lebe
 
 Eine Beobachtung vorweg, die die Graphik sichtbar macht: **Von den dreitausend Jahren jüdischer Geschichte waren rund 2.800 Jahre Diaspora.** Kanaan/Judäa als Ursprungsland und das moderne Israel seit 1948 sind die einzigen zwei Stationen ohne Diaspora-Charakter. Alle anderen – Babylon, Alexandria, das Römische Reich, Spanien, Polen, Amerika – waren Existenz unter fremder Herrschaft, auf fremdem Boden, ohne staatliche Souveränität. Dass das jüdische Volk unter diesen Bedingungen nicht nur überlebte, sondern in vielen dieser Stationen kulturell blühte, ist das eigentliche Rätsel dieser Geschichte.
 
-<embed src="../_static/stationen_zeitachse.pdf" type="application/pdf" width="100%" height="800px" />
-
+![](stationen.png)
 ---
 
 ## 1. Kanaan / Judäa (ca. 1200 BCE – 135 CE)

@@ -1,4 +1,4 @@
-# Kapitel 7: Vom Triumph zur Sackgasse – Israel 1967 bis Oslo
+# Vom Triumph zur Sackgasse – Israel 1967 bis Oslo
 
 Die Phase von 1967 bis 1993 ist in vielerlei Hinsicht die tragischste der israelischen Geschichte – nicht weil Israel besonders viel verloren hätte, sondern weil es so viel gewonnen hatte und nicht wusste, was damit anfangen.
 

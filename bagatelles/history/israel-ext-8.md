@@ -1,4 +1,4 @@
-# Kapitel 8: Das Ende der Hoffnung? – Israel von Oslo bis heute (1993–2026)
+# Das Ende der Hoffnung? – Israel von Oslo bis heute (1993–2026)
 
 
 Dieses Kapitel ist das schwierigste der Reihe – nicht weil die Fakten unbekannt wären, sondern weil viele von ihnen noch keine Geschichte sind. Was hier erzählt wird, ist teilweise Gegenwart, und Gegenwart ist immer umstritten.
