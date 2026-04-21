@@ -187,7 +187,99 @@ Hannah Arendts Berichterstattung für den *New Yorker* – später als *Eichmann
 
 ---
 
-## Schluss: Was bleibt
+## 8. Christentum und Judentum – eine späte Annäherung
+
+Der Holocaust wurde nicht im luftleeren Raum möglich. Er stand am Ende einer fast zweitausendjährigen Tradition christlicher Judenfeindschaft, die das religiöse Klima Europas geprägt hatte. Ohne diesen langen Vorlauf – ohne die Vorstellung vom "Gottesmörder", ohne die mittelalterlichen Blutverleumdungen, ohne die theologische Entwertung des Judentums als überholter Religion – wäre der rassische Antisemitismus der Nationalsozialisten auf weit weniger empfänglichen Boden gefallen. Das heißt nicht, dass das Christentum den Holocaust verursacht hätte; Hitler verachtete das Christentum als "jüdische Erfindung" und plante langfristig dessen Beseitigung. Aber die kulturelle Geläufigkeit der Judenfeindschaft – die Selbstverständlichkeit, mit der "der Jude" als Problem gedacht werden konnte – war christlich vorbereitet.
+
+Nach 1945 stand die christliche Welt vor einer Aufgabe, die sie fast 20 Jahrhunderte lang vermieden hatte: die eigene Rolle in der Geschichte der Judenfeindschaft zu prüfen und zu korrigieren. Diese Aufarbeitung begann spät, sie verlief ungleichmäßig, und sie ist nicht abgeschlossen. Aber sie hat das Verhältnis zwischen Juden und Christen in einer Weise verändert, die vor 1945 undenkbar gewesen wäre.
+
+### Der lange Schatten: zwei Jahrtausende Antijudaismus
+
+Die christliche Judenfeindschaft hatte ihre Wurzeln in der Trennung beider Religionen im ersten und zweiten Jahrhundert (→ Kapitel 1). Sie wurde institutionell ab dem vierten Jahrhundert, als das Christentum Staatsreligion des Römischen Reichs wurde. **Augustinus** formulierte die sogenannte Zeugnislehre: Juden sollten leben, um als lebendiges Zeugnis der Wahrheit des Alten Testaments und des göttlichen Gerichts zu dienen – aber gedemütigt, machtlos, sichtbar unterlegen. Das war die Leitlinie der katholischen Theologie über 1.500 Jahre.
+
+Luther verschärfte die Feindschaft im Protestantismus. Seine Spätschrift "Von den Juden und ihren Lügen" (1543) forderte die Verbrennung von Synagogen, die Zerstörung jüdischer Häuser, die Konfiszierung heiliger Bücher, das Verbot des Rabbinertums, die Zwangsarbeit für jüdische Männer. 400 Jahre später zitierten die Nationalsozialisten Luther mit Genuss. Die evangelische Kirche hatte an diesem Erbe lange zu tragen.
+
+Die katholische Karwochenliturgie enthielt bis in die Mitte des 20. Jahrhunderts ein Gebet "pro perfidis Judaeis" – für die "treulosen Juden". Die Passionsspiele in Oberammergau und anderswo stellten die Juden kollektiv als Mörder Christi dar. Das war nicht Extremismus am Rand, sondern Mainstream der Frömmigkeit.
+
+### Das Schweigen der Kirchen im Holocaust
+
+Die Rolle der Kirchen während des Holocaust ist eine der schmerzhaftesten Fragen der modernen Theologie. Sie ist komplex und zulässt keine einfachen Urteile – aber die Bilanz ist ernüchternd.
+
+**Papst Pius XII.** (Amtszeit 1939–1958) sprach während des Kriegs nie öffentlich und konkret die Vernichtung der Juden an. Seine Verteidiger verweisen auf diplomatische Rücksichtnahmen, auf die Angst vor Vergeltung, auf die stille Hilfe, die der Vatikan in Einzelfällen leistete (Verstecke in römischen Klöstern, gefälschte Papiere). Seine Kritiker – unter ihnen Rolf Hochhuth mit seinem Stück "Der Stellvertreter" (1963) – werfen ihm moralisches Versagen vor: das Unterlassen einer öffentlichen Anklage, die auf Seiten der Täter Wirkung hätte haben können. Die Debatte dauert bis heute, die vatikanischen Archive sind seit 2020 für die Forschung geöffnet.
+
+Die deutschen evangelischen Kirchen waren gespalten. Die **Deutschen Christen** – eine völkische Strömung innerhalb des Protestantismus – unterstützten das NS-Regime aktiv und forderten ein "entjudetes" Christentum ohne Altes Testament. Die **Bekennende Kirche** (Barmer Erklärung 1934) widerstand, aber vor allem zur Verteidigung ihrer eigenen Unabhängigkeit, nicht primär zur Verteidigung der Juden. Einzelne – **Dietrich Bonhoeffer**, **Martin Niemöller**, die Geschwister Scholl – traten mutig ein. Aber das Gesamtbild ist das einer Kirche, die die systematische Vernichtung geschehen ließ.
+
+Die katholische Kirche in Deutschland schwieg weitgehend. Einzelne Ausnahmen – Kardinal **Clemens August von Galen** in Münster gegen die Euthanasie, der Berliner Dompropst **Bernhard Lichtenberg**, der öffentlich für die Juden betete und im KZ Dachau starb – stehen gegen das größere Muster des Schweigens.
+
+### Nostra Aetate – der Wendepunkt (1965)
+
+Die erste große theologische Umkehr kam zwei Jahrzehnte nach dem Krieg. Sie brauchte einen Papst mit persönlicher Erfahrung und ein Konzil mit dem Mut zu grundsätzlichem Neudenken.
+
+**Johannes XXIII.** (Amtszeit 1958–1963) – ein Papst, der als Nuntius in der Türkei während des Kriegs Tausenden Juden Visa verschafft hatte – berief 1962 das **Zweite Vatikanische Konzil** ein. Eines seiner frühesten Anliegen war eine Neubestimmung des Verhältnisses zum Judentum. Er strich das Wort "perfidis" aus dem Karfreitagsgebet. Er empfing jüdische Delegationen mit den Worten: *"Ich bin Joseph, euer Bruder"* – eine Anspielung auf die biblische Versöhnungsszene.
+
+Johannes starb vor Abschluss des Konzils. Sein Nachfolger **Paul VI.** führte das Werk zu Ende. Am 28. Oktober 1965 verabschiedete das Konzil die Erklärung **Nostra Aetate** ("In unserer Zeit") – ein kurzer Text, der in vier Absätzen über das Verhältnis der Kirche zu den nichtchristlichen Religionen spricht. Der vierte Absatz, der den Juden gewidmet ist, war revolutionär:
+
+- **Die Juden sind nicht kollektiv schuld an der Kreuzigung Jesu.** Weder die damaligen Juden noch die heutigen können für den Tod Christi verantwortlich gemacht werden. Damit wurde die Gottesmord-Anklage offiziell zurückgenommen.
+- **Die Juden sind von Gott nicht verworfen.** Der Bund Gottes mit Israel bleibt gültig; das Judentum ist nicht durch das Christentum abgelöst.
+- **Der Antisemitismus ist zu verurteilen** – "jederzeit und von wem auch immer".
+
+Das klingt heute nach Selbstverständlichkeiten. In der katholischen Lehre war es ein Bruch mit anderthalb Jahrtausenden Tradition. Nostra Aetate passierte das Konzil nicht ohne Widerstand – konservative Bischöfe, besonders aus arabischen Ländern, hatten die Erklärung bis zuletzt zu verhindern versucht. Die Mehrheit war dennoch überwältigend: 2.221 zu 88 Stimmen.
+
+### Die Folgen – schrittweise, aber real
+
+Nostra Aetate war ein Anfang, kein Abschluss. Die folgenden Jahrzehnte brachten eine Reihe weiterer Schritte:
+
+**1974** – Der Vatikan veröffentlicht *Richtlinien für die Anwendung von Nostra Aetate*. Erstmals wird empfohlen, das Judentum in katholischer Unterweisung nicht mehr als überholte Vorläuferreligion, sondern als eigenständige lebendige Religion darzustellen.
+
+**1980** – Die **Evangelische Kirche im Rheinland** verabschiedet die Erklärung "Zur Erneuerung des Verhältnisses von Christen und Juden". Sie bekennt die Mitschuld am Holocaust, erkennt die "bleibende Erwählung Israels" an und verzichtet auf die Judenmission. Andere evangelische Landeskirchen in Deutschland folgen.
+
+**1986** – Papst **Johannes Paul II.** besucht die Große Synagoge von Rom. Es ist der erste Synagogenbesuch eines Papstes seit der Antike. Er spricht von den Juden als den "älteren Brüdern" der Christen.
+
+**1993** – Der Vatikan nimmt **diplomatische Beziehungen zum Staat Israel** auf. Fünfundvierzig Jahre nach dessen Gründung. Die Verzögerung hatte theologische Gründe gehabt: Die Rückkehr der Juden in ihr Land widersprach der augustinischen Zeugnislehre, nach der die Zerstreuung göttliche Strafe und Dauerzustand sei. Die offizielle Anerkennung war implizit auch die Aufgabe dieser Theologie.
+
+**1998** – Der Vatikan veröffentlicht das Dokument *"Wir erinnern: Eine Reflexion über die Shoah"*. Es bekennt das Versagen einzelner Christen, verteidigt aber Pius XII. Das Dokument wurde von jüdischer Seite mit gemischten Gefühlen aufgenommen – als wichtiger Schritt, aber auch als unzureichende Selbstkritik.
+
+**2000** – Johannes Paul II. besucht **Yad Vashem** und die **Klagemauer**. An der Klagemauer legt er, nach jüdischem Brauch, einen Zettel in eine Ritze – darauf die Bitte um Vergebung für das Leid, das Christen den Juden zugefügt hatten. Dieser Moment – ein Papst, der vor der zentralen jüdischen Erinnerungsstätte um Vergebung bittet – war symbolisch wichtiger als viele Dokumente.
+
+**2015** – Zum fünfzigsten Jahrestag von Nostra Aetate veröffentlicht der Vatikan das Dokument *"Die Gaben und die Berufung Gottes sind unwiderruflich"*. Es stellt explizit fest, dass die katholische Kirche **keine institutionelle Mission unter Juden** betreibt. Die Heilswege Gottes mit seinem Volk Israel werden als eigenständig anerkannt. Das ist theologisch eine der weitesten denkbaren Positionen – nicht alle Katholiken teilen sie, aber sie ist offizielle Lehre.
+
+### Die Benedikt-Episode: Ein Rückschritt?
+
+Die Annäherung verlief nicht geradlinig. Das Pontifikat **Benedikts XVI.** (2005–2013) – des deutschen Theologen Joseph Ratzinger – brachte in dieser Frage Ambivalenzen, die bis heute nachwirken.
+
+Einerseits setzte Benedikt den Weg seines Vorgängers sichtbar fort: Er besuchte 2005 die Synagoge in Köln, 2008 die Große Synagoge in New York, 2010 die Synagoge in Rom, 2009 Yad Vashem. Sein theologisches Bild des Judentums war respektvoll, sein Buch "Jesus von Nazareth" zitierte ausführlich den jüdischen Gelehrten Jacob Neusner.
+
+Andererseits traf er Entscheidungen, die als Schritte zurück gelesen wurden. 2007 erleichterte er mit dem Motu proprio *Summorum Pontificum* die Rückkehr zur tridentinischen Messe im "außerordentlichen Ritus". Damit wurde das alte Karfreitagsgebet mit seiner Bitte um Bekehrung der Juden wieder liturgisch relevant. 2008 formulierte Benedikt es neu: die Schmähbegriffe ("treulos", "Schleier von den Herzen") fielen weg, aber die Grundrichtung blieb – gebetet wurde, *"dass Gott, unser Herr, ihre Herzen erleuchte, damit sie Jesus Christus erkennen, den Heiland aller Menschen."* Die Überschrift im Messbuch lautete weiterhin *pro conversione Iudaeorum* – für die Bekehrung der Juden.
+
+Die Reaktion der jüdischen Seite war überwiegend enttäuscht bis ablehnend. Die Italienische Rabbinerversammlung legte den Dialog vorübergehend auf Eis. Die Fürbitte des regulären Messbuchs von 1974 bittet lediglich, Gott möge die Juden "in der Treue zu seinem Bund" bewahren – ohne jede missionarische Konnotation. Die Fürbitte von 2008 blieb dahinter zurück. Vatikanische Verteidiger (besonders Kardinal Walter Kasper) argumentierten, die Formel sei **eschatologisch** zu verstehen: eine Hoffnung auf das Ende der Geschichte im Sinne von Römer 11, nicht ein Aufruf zur aktiven Mission im Hier und Jetzt. Das ist theologisch subtil, aber politisch missverständlich – und für viele jüdische Dialogpartner ein Rückschritt hinter den Stand von 1974.
+
+2018, fünf Jahre nach seinem Rücktritt, veröffentlichte der emeritierte Papst in der Zeitschrift *Communio* einen Aufsatz ("Gnade und Berufung ohne Reue"), in dem er die Theologie des **"ungekündigten Bundes"** – seit 1965 das theologische Fundament der Versöhnung – einer differenzierenden Revision unterzog. Die jüdische Reaktion war scharf. Rabbiner Walter Homolka warf Ratzinger vor, er baue "am Fundament für neuen Antisemitismus auf christlicher Grundlage". Auch innerhalb der katholischen Theologie war die Kritik deutlich.
+
+Die Bilanz ist gemischt und sollte nicht schöngeredet werden: Benedikt hat Nostra Aetate nie formal in Frage gestellt und blieb im persönlichen Umgang respektvoll. Aber er hat gezeigt, dass die theologische Konsenslinie seit 1965 in der katholischen Kirche nicht unumstritten ist. Rabbi David Rosen formulierte es nach dem Karfreitagsfürbitten-Streit prägnant: Die neue Formel sei "das Beste, was in der Theologie von Papst Benedikt XVI. möglich gewesen ist bei dem Bemühen, nett zu uns Juden zu sein." Das war kein Kompliment – es war eine Bestandsaufnahme der Grenzen eines Pontifikats.
+
+Unter **Papst Franziskus** (ab 2013) kehrte der Dialog zu einer entspannteren Tonlage zurück; Franziskus hatte in Buenos Aires enge persönliche Beziehungen zur dortigen jüdischen Gemeinde gepflegt. Aber der Vorgang bleibt aufschlussreich: Selbst innerhalb von fünfzig Jahren nach Nostra Aetate kann die Theologie nicht als abgeschlossenes Thema gelten.
+
+### Die Grenzen der Versöhnung
+
+Die Annäherung der letzten sechzig Jahre ist historisch einzigartig. Aber sie hat Grenzen, die nicht verschwiegen werden sollten.
+
+**Innerkirchlich:** Die theologische Umkehr ist in den großen westlichen Kirchen weit vollzogen, in traditionalistischen Strömungen aber umstritten. Die Piusbruderschaft und Teile des rechtskatholischen Spektrums lehnen Nostra Aetate ab. Die orthodoxen Kirchen haben keinen vergleichbaren Prozess durchlaufen – das Verhältnis zum Judentum ist dort theologisch weniger bearbeitet.
+
+**In der arabischen Christenheit:** Die Nähe zur palästinensischen Sache macht die theologische Neubewertung schwieriger. Manche palästinensisch-christlichen Theologen sehen die Anerkennung des bleibenden Bundes mit Israel als politisch motiviert und lehnen sie ab.
+
+**Gesellschaftlich:** Der Antisemitismus ist nach 1945 in eine Unterströmung gedrängt, aber nicht verschwunden. Seit etwa 2010 beobachten alle westlichen Länder einen Wiederanstieg antisemitischer Vorfälle. Der klassische christliche Antijudaismus ist dabei weitgehend verschwunden; an seine Stelle sind neue Formen getreten – rechtsextremer Rassenantisemitismus, islamistisch motivierter Antisemitismus, antizionistisch gewendeter Antisemitismus. Die Grenze zwischen legitimer Kritik an israelischer Politik und Antisemitismus ist eine Dauerdebatte.
+
+**In Israel selbst:** Die Beziehungen zum Vatikan sind korrekt, aber nicht frei von Spannungen. Fragen nach den vatikanischen Archiven zur NS-Zeit, nach der geplanten Seligsprechung Pius' XII., nach christlichem Zionismus – das sind Felder, in denen die Gespräche weitergehen.
+
+
+
+**Fazit:** Zweitausend Jahre strukturierter Feindschaft. Sechzig Jahre bewusster Versöhnung. Das ist das Verhältnis der Proportionen. Nostra Aetate war nicht das Ende der Geschichte, sondern ein Anfang, dessen Tragweite noch offen ist.
+Was bleibt, ist eine theologische und kulturelle Verschiebung, die nicht ohne weiteres rückgängig zu machen ist. Ein katholischer Christ, der heute die Bibel liest, liest das Alte Testament nicht mehr als überholte Vorstufe, sondern als Heilige Schrift Israels, die als solche gültig bleibt. Ein evangelischer Theologe, der heute über Paulus schreibt, tut das mit dem Bewusstsein, dass Paulus Jude war und blieb. Ein katholischer Schüler, der in den Religionsunterricht geht, lernt, dass Jesus Jude war und dass die Juden von Gott nicht verworfen sind.
+
+Diese Verschiebung ist einer der großen kulturellen Umbrüche der Nachkriegszeit – weniger beachtet als die Entkolonialisierung oder die Frauenbewegung, aber in ihrer zivilisatorischen Bedeutung vergleichbar. Ob sie hält, wird die nächste Generation zeigen müssen.
+
+
+## Schluss
 
 Der Holocaust ist das Fundament, auf dem der Staat Israel steht – nicht im Sinne einer Rechtfertigung, die einer juristischen Prüfung standhielte, sondern im Sinne einer historischen Realität, die nicht wegzudenken ist. Er war Katalysator und Legitimationsbeschleuniger: Er trieb die Überlebenden nach Palästina und die internationale Gemeinschaft zur Anerkennung.
 
