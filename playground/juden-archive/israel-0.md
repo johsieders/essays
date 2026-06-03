@@ -1,10 +1,10 @@
 
 
-# Eine Geschichte des jüdischen Volkes und des Staates Israel
+# Die Geschichte der Juden von Abraham bis Netanyahu
 
 *Claude Sonnet 4.6, Gemini 3, Johannes Siedersleben (Editor)*
 
-*April 2026*
+*Juni 2026*
 
 ---
 

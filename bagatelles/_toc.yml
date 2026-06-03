@@ -116,7 +116,7 @@ parts:
       - file: history/31-edinburgh
         title: Edinburgh
       - file: history/israel-ext-0
-        title: Geschichte des Judentums *
+        title: Geschichte der Juden *
         sections:
           - file: history/israel-ext-1
             title: Von den Anfängen bis zum Ende Jerusalems

@@ -1,18 +1,20 @@
-# Die Geschichte des jüdischen Volkes
+# Die Geschichte der Juden von Abraham bis Netanyahu
 
 *Claude Opus 4.7, Gemini 3, Johannes Siedersleben (Editor)*
 
-*April 2026*
+*Juni 2026*
 
 ## Vier Rätsel
 
-Die Geschichte des jüdischen Volkes ist voller Tatsachen, die sich mit historischer Normalität nicht erklären lassen. Vier Rätsel bilden den Hintergrund, gegen den dieses Buch geschrieben ist. Sie sind nicht Fragen, auf die ein Kapitel eine Antwort gibt – sie sind Leitspuren, die sich durch das gesamte Werk ziehen und die nur im Zusammenhang verständlich werden.
+Die Geschichte der Juden ist voller Tatsachen, die sich mit historischer Normalität nicht erklären lassen. 
+Vier Rätsel bilden den Hintergrund, gegen den dieses Buch geschrieben ist. 
+Sie sind nicht Fragen, auf die ein Kapitel eine Antwort gibt, sondern Themen, die sich durch das gesamte Werk ziehen und nur im Zusammenhang verständlich werden.
 
 ### Rätsel 1: Überleben
 
 Andere Völker der Antike verschwanden unter ähnlichen Bedingungen spurlos. Die Phönizier, deren Handelsnetze das Mittelmeer verbanden. Die Philister, die den Küstenstreifen Kanaans bewohnten. Die Moabiter, die Edomiter, die Ammoniter – alle aufgesogen, assimiliert, vergessen. Von keinem dieser Völker spricht heute jemand, der nicht Altertumswissenschaftler ist.
 
-Das jüdische Volk überlebte. **Fast 1.800 Jahre ohne Territorium, ohne Staat, ohne Armee, als Minderheit unter fremden Mehrheiten, verteilt über drei Kontinente.** Es überlebte den Fall Jerusalems 586 BCE, die Tempelzerstörung 70 CE, das babylonische Exil, die römische Zerstörung, die Kreuzzüge, die spanische Inquisition, die Chmelnizkij-Massaker, die russischen Pogrome. Es schrumpfte dabei – von vielleicht 5 Millionen im 1. Jahrhundert auf eine Million um 1500 –, aber es verschwand nicht. Seine Sprache, seine Bücher, seine Feste, seine Erinnerung blieben erkennbar dieselben.
+Das jüdische Volk überlebte. **Fast 1.800 Jahre ohne Territorium, ohne Staat, ohne Armee, als Minderheit unter fremden Mehrheiten, verteilt über drei Kontinente.** Es überlebte den Fall Jerusalems 586 BCE, die Tempelzerstörung 70 CE, das babylonische Exil, die römische Zerstörung, die Kreuzzüge, die spanische Inquisition, die Chmelnizkij-Massaker, die russischen Pogrome. Es schrumpfte dabei – von vielleicht 5 Millionen im 1. Jahrhundert auf eine Million um 1500 –, aber es verschwand nicht. Seine Sprache, seine Bücher, seine Feste, seine Erinnerung blieben dieselben.
 
 Wie war das möglich? Die Antwort ist mehrschichtig – Text, Gemeinschaft, Recht, Endogamie, messianische Hoffnung. Die Kapitel 1 und 2 arbeiten sie heraus. Aber das Phänomen bleibt auch nach aller Erklärung ein Rätsel: Eine kleine kulturelle Gemeinschaft, die die Weltreiche überdauert hat, die sie unterwarfen.
 
@@ -48,37 +50,37 @@ Seit etwa 2010 beobachten alle westlichen Länder einen **Wiederanstieg antisemi
 
 Nach dem Hamas-Angriff vom 7. Oktober 2023 und dem darauf folgenden Gaza-Krieg haben diese Tendenzen eine Intensität erreicht, die seit 1945 nicht mehr gesehen wurde. An westlichen Universitäten, auf Demonstrationen, in sozialen Medien wird eine Sprache verwendet, die vor zehn Jahren noch undenkbar war.
 
-Warum? Weil der Antisemitismus offenbar zu den Grundstrukturen bestimmter kollektiver Ressentiments gehört. Er kann vergessen scheinen, aber er ist in verschiedenen ideologischen Gestalten jederzeit abrufbar. Das ist eine der verstörendsten Erkenntnisse der letzten Jahre – und eine, vor der dieses Buch sich nicht drückt.
+Warum? Weil der Antisemitismus offenbar zu den Grundstrukturen bestimmter kollektiver Ressentiments gehört. Er kann vergessen scheinen, aber er ist in verschiedenen ideologischen Gestalten jederzeit abrufbar. Das ist eine der verstörendsten Erkenntnisse der letzten Jahre.
 
 ---
 
 ## Methodik: Die Neuen Historiker und das Righteous-Victims-Paradigma
 
-Die Geschichte Israels und des Nahostkonflikts ist ein intellektuelles Schlachtfeld. Fast jede Darstellung ist für eine Seite gemacht: Die einen erzählen die Heldengeschichte einer verfolgten Nation, die gegen alle Widerstände ihren Staat errichtete und sich seitdem gegen fanatische Feinde verteidigt. Die anderen erzählen die Geschichte eines kolonialen Unternehmens, das eine indigene Bevölkerung verdrängte und seitdem einen Unterdrückungsstaat führt. Beide Erzählungen enthalten richtige Elemente. Beide sind als Ganzes unzureichend.
+Die Geschichte Israels und des Nahostkonflikts ist ein intellektuelles Schlachtfeld. Fast jede Darstellung ist für nur eine Seite gemacht: Die einen erzählen die Heldengeschichte einer verfolgten Nation, die gegen alle Widerstände ihren Staat errichtete und sich seitdem gegen fanatische Feinde verteidigt. Die anderen erzählen die Geschichte eines kolonialen Unternehmens, das eine indigene Bevölkerung verdrängte und seitdem einen Unterdrückungsstaat führt. Beide Erzählungen enthalten richtige Elemente. Beide sind als Ganzes unzureichend.
 
 Dieses Buch folgt einer anderen Schule – der der **Neuen Historiker** (*New Historians*), die in den späten 1980er Jahren in Israel entstand. Die wichtigsten Vertreter sind **Benny Morris**, **Tom Segev** und **Avi Shlaim**. Sie nutzten die Öffnung israelischer Staatsarchive nach der 30-Jahres-Sperrfrist und lasen die Akten der Staatsgründung. Was sie fanden, widersprach der offiziellen israelischen Geschichtsschreibung an zentralen Punkten: die palästinensische Flucht von 1948 war teilweise erzwungen, nicht nur Folge arabischer Rufe zur Flucht; einzelne Massaker durch israelische Streitkräfte waren keine Ausnahmen, sondern Teil eines Musters; die arabische Welt war militärisch schwächer und politisch zerstrittener als das israelische Narrativ behauptete. Die Neuen Historiker lieferten keine anti-israelische Polemik – sie lieferten eine professionellere Geschichtsschreibung.
 
 Morris' Hauptwerk *Righteous Victims* (1999) – "Gerechte Opfer" – hat diesem Buch seine Leitformel gegeben. Die These: **Beide Seiten des israelisch-palästinensischen Konflikts sehen sich mit gutem Grund als gerechte Opfer.** Die Juden, nach zweitausend Jahren Verfolgung und sechs Millionen Ermordeten im Holocaust. Die Palästinenser, nach der Vertreibung oder Flucht von 700.000 Menschen 1948 und der fortdauernden Besetzung seit 1967. Beide Selbstbilder haben empirische Grundlagen. Beide haben blinde Flecken. Und beide führen, wenn sie absolut gesetzt werden, zur Blockade jeder Verständigung.
 
-Dieses Buch versucht, **beide Perspektiven mit gleicher Ernsthaftigkeit** darzustellen – ohne in falsche Äquidistanz zu verfallen. Asymmetrien werden benannt, wo sie existieren: Israel ist der militärisch stärkere Akteur, die Palästinenser sind die Bevölkerung unter Besatzung. Aber auch: Die palästinensische Führung hat in entscheidenden Momenten Kompromissangebote ausgeschlagen (1947, 1978, 2000, 2008), deren Annahme ihrer Bevölkerung viel erspart hätte. Beides stimmt gleichzeitig.
+Dieses Buch versucht, **beide Perspektiven mit gleicher Ernsthaftigkeit** darzustellen – ohne in falsche Äquidistanz zu verfallen. Asymmetrien werden benannt, wo sie existieren: Israel ist der militärisch stärkere Akteur, die Palästinenser sind die Bevölkerung unter Besatzung. Aber auch: Die palästinensische Führung hat in entscheidenden Momenten Kompromissangebote ausgeschlagen (1947, 1978, 2000, 2008), deren Annahme ihrer Bevölkerung viel erspart hätte. Beides stimmt.
 
 Dieselbe Haltung gilt für das innerjüdische Spektrum. Das Buch behandelt Orthodoxe und Säkulare, Aschkenasim und Mizrachim, Zionisten und Antizionisten mit gleichem Respekt. Es nimmt religiöse Positionen ernst, ohne sie theologisch zu bewerten. Es nimmt säkulare Kritik ernst, ohne sie ideologisch zu bevormunden. Diskussionsgrundlage heißt: Der Leser soll sich ein eigenes Urteil bilden können – gut informiert, nicht vorgeformt.
 
-Methodisch heißt das konkret: Wo die Forschung strittig ist, wird sie als strittig dargestellt. Wo Quellen unsicher sind, wird die Unsicherheit benannt. Wo Zahlen umstritten sind (Exodus, Chmelnizkij, 1948er Flüchtlinge), werden die Bandbreiten angegeben. Dieses Buch will nicht überreden. Es will informieren.
+Methodisch heißt das: Wo die Forschung strittig ist, wird sie als strittig dargestellt. Wo Quellen unsicher sind, wird die Unsicherheit benannt. Wo Zahlen umstritten sind (Exodus, Chmelnizkij, 1948er Flüchtlinge), werden die Bandbreiten angegeben. Dieses Buch will informieren, nicht überreden.
 
 ---
 
-## Begriffsklärung: Was der Leser wissen muss
+## Begriffe
 
 Die folgenden Begriffe tauchen immer wieder auf. Das Glossar im Anhang liefert ausführlichere Erklärungen; hier die Minimalversion, die zum Lesen genügt.
 
 **Hebräer / Israeliten / Juden / Judäer.** Das jüdische Volk trug verschiedene Namen zu verschiedenen Zeiten. *Hebräer* (*Ivrim*) ist der älteste Begriff, wahrscheinlich mit sozialer statt ethnischer Bedeutung. *Israeliten* bezeichnet das Volk zur Zeit der Könige und des ersten Tempels. *Judäer* (*Yehudim*) entsteht nach dem babylonischen Exil als Bezeichnung der Deportierten aus Juda; daraus wird *Juden* als Selbst- und Fremdbezeichnung der Gemeinschaft in der Diaspora. Die Geschichte der Namen ist ein Teil der Geschichte selbst.
 
-**Diaspora.** Griechisch "Zerstreuung". Die Existenz jüdischer Gemeinden außerhalb des Landes Israel. Beginnt schon mit dem babylonischen Exil 586 BCE, wird nach 135 CE zur Dauerexistenz.
+**Diaspora.** Griechisch "Zerstreuung". Die Existenz jüdischer Gemeinden außerhalb des Landes Israel. Beginnt schon mit dem babylonischen Exil 586 BCE, wird nach 135 CE zum Dauerzustand.
 
 **Antijudaismus vs. Antisemitismus.** Der *Antijudaismus* ist die christlich-theologische Judenfeindschaft des Mittelalters: Juden als ungläubige Gegner des wahren Glaubens, überwindbar durch Konversion. Der *Antisemitismus* ist die rassistische Judenfeindschaft der Moderne (der Begriff wurde 1879 von Wilhelm Marr geprägt): Juden als biologisch andere Rasse, unveränderbar durch Konversion. Der Unterschied ist historisch und politisch bedeutsam.
 
-**Zionismus.** Die politische Bewegung, die ab 1897 (Basler Kongress) einen jüdischen Staat in Palästina anstrebte. Es gab verschiedene Strömungen: der *politische Zionismus* Herzls strebte diplomatisch einen Staat an; der *sozialistische Zionismus* wollte ihn durch Arbeit aufbauen; der *religiöse Zionismus* verband ihn mit messianischen Erwartungen; der *Revisionismus* Jabotinskys forderte Maximalforderungen und Kampfbereitschaft. Alle speisen das heutige Israel – und erklären seine inneren Spannungen.
+**Zionismus.** Die politische Bewegung, die ab 1897 (Basler Kongress) einen jüdischen Staat in Palästina anstrebte. Es gab verschiedene Strömungen: der *politische Zionismus* Herzls strebte diplomatisch einen Staat an; der *sozialistische Zionismus* wollte ihn durch Arbeit aufbauen; der *religiöse Zionismus* verband ihn mit messianischen Erwartungen; der *Revisionismus* Jabotinskys forderte Maximalforderungen und Kampfbereitschaft. Alle speisen das heutige Israel und erklären seine inneren Spannungen.
 
 **Palästina.** Der Name geht auf den römischen Kaiser Hadrian zurück, der 135 CE die Provinz Judäa in *Syria Palaestina* umbenannte – nach den Philistern, den längst verschwundenen alten Feinden Israels. Der Name blieb im Mittelalter und in der Neuzeit die übliche Bezeichnung der Region. Im 20. Jahrhundert wurde er zur Grundlage palästinensischer Nationalidentität. Dass Juden und Palästinenser beide einen Anspruch auf dieses Land erheben, ist Teil des Konflikts.
 
@@ -94,11 +96,11 @@ Die folgenden Begriffe tauchen immer wieder auf. Das Glossar im Anhang liefert a
 
 ---
 
-## Struktur des Buchs
+## Struktur
 
 Das Buch ist in drei Teile gegliedert, dazu kommt ein Anhang.
 
-### Teil I: Geschichte des jüdischen Volkes (Kapitel 1–5)
+### Teil I: Geschichte der Juden bis zur Staatsgründung (Kapitel 1–5)
 
 **Kapitel 1 – Am Anfang (Ursprünge bis 135 CE).** Die biblische und nachbiblische Antike: die Entstehung Israels in Kanaan, die Königszeit, die Propheten, das babylonische Exil, der Zweite Tempel, die Römerzeit, die Zerstörung Jerusalems, das Ende mit Bar Kochba.
 
@@ -133,9 +135,9 @@ Das Buch ist in drei Teile gegliedert, dazu kommt ein Anhang.
 
 ---
 
-## Ein Wort zur Aktualität
+## Aktualität
 
-Dieses Buch erscheint in einer Zeit, in der der Nahostkonflikt eine neue Eskalationsstufe erreicht hat. Der Angriff der Hamas auf Israel am 7. Oktober 2023 – mit 1.200 Toten und der Entführung von 250 Menschen – war das blutigste Ereignis für Juden seit dem Holocaust. Die darauf folgende israelische Militäroperation in Gaza forderte über 50.000 palästinensische Todesopfer. Hisbollah und Iran wurden in direkte Konfrontation mit Israel verwickelt. Die Lage ist offen, die Zahl der Toten steigt, während dieses Vorwort geschrieben wird.
+Dieses Buch erscheint in einer Zeit, in der der Nahostkonflikt eine neue Eskalationsstufe erreicht hat. Der Angriff der Hamas auf Israel am 7. Oktober 2023 – mit 1.200 Toten und der Entführung von 250 Menschen – war das blutigste Ereignis für die Juden seit dem Holocaust. Die darauf folgende israelische Militäroperation in Gaza forderte über 50.000 palästinensische Todesopfer. Hisbollah und Iran wurden in direkte Konfrontation mit Israel verwickelt. Die Lage ist offen, die Zahl der Toten steigt, während dieser Text geschrieben wird.
 
 Ein Buch, das solche Ereignisse behandelt, kann nicht das letzte Wort haben. Es kann nur den Stand der Dinge bis zu einem bestimmten Zeitpunkt festhalten und dabei hoffen, dass die Strukturen, die es beschreibt, dem Leser helfen, die weiteren Entwicklungen zu verstehen. Das vorliegende Buch schließt seinen zeithistorischen Stoff mit dem Frühjahr 2026 ab. Was danach kommt, muss die Leserunde selbst weiterdenken – mit anderen Quellen, mit neuen Ereignissen, aber hoffentlich mit besserem Rüstzeug, als vor der Lektüre dieses Buchs.
 
@@ -143,12 +145,6 @@ Ein Buch, das solche Ereignisse behandelt, kann nicht das letzte Wort haben. Es 
 
 ## Eine Einladung
 
-Dieses Buch ist eine Diskussionsgrundlage, keine Doktrin. Es erhebt nicht den Anspruch, alle Fragen zu beantworten, und es schon gar nicht den Anspruch, alle Streitfragen zu entscheiden. Sein Ziel ist bescheidener: genügend Material zu liefern, damit eine Lesegruppe miteinander ins Gespräch kommen kann – über die Geschichte des jüdischen Volkes, über die Entstehung des Staates Israel, über den Konflikt, der die Region prägt.
+Dieses Buch ist eine Diskussionsgrundlage, keine Doktrin. Es erhebt nicht den Anspruch, alle Fragen zu beantworten, und es schon gar nicht den Anspruch, alle Streitfragen zu entscheiden. Sein Ziel ist bescheidener: genügend Material zu liefern, damit eine Lesegruppe ins Gespräch kommen kann – über die Geschichte der Juden, über die Entstehung des Staates Israel, über den Konflikt, der die Region prägt.
 
 Wer dem Buch widerspricht, tut ihm keine Gewalt an. Widerspruch ist in dieser Sache die angemessenere Haltung als Zustimmung. Zustimmung schließt Gespräche; Widerspruch öffnet sie. Wenn dieses Buch dazu führt, dass seine Leser besser informiert und gleichzeitig offener streiten als vorher, hat es seinen Zweck erfüllt.
-
-Die vier Rätsel, mit denen diese Einleitung begann, werden vom Buch nicht gelöst. Sie werden beleuchtet – aus verschiedenen Winkeln, mit verschiedenen Methoden, mit der Ehrlichkeit zuzugeben, wo die Erklärungen aufhören. Am Ende des Buchs wird der Leser, hoffentlich, besser wissen, warum diese Rätsel so bestehen bleiben, wie sie bestehen. Nicht mehr. Aber auch nicht weniger.
-
----
-
-*[Hier folgt das persönliche Vorwort des Autors]*
