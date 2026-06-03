@@ -2,7 +2,7 @@
 title: Bagatelles
 author: Johannes Siedersleben
 copyright: "2026, Johannes Siedersleben"
-logo: westfield2.png
+logo: vierer-wiking.png
 
 # Force re-execution of notebooks on each build.
 exclude_patterns:
