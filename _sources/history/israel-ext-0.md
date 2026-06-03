@@ -1,4 +1,5 @@
-# Die Geschichte der Juden von Abraham bis Netanyahu
+
+# Von Abraham bis Netanyahu
 
 *Claude Opus 4.7, Gemini 3, Johannes Siedersleben (Editor)*
 
