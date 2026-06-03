@@ -1,4 +1,4 @@
-# Die Geschichte der Juden von Abraham bis Netanyahu
+# Von Abraham bis Netanyahu
 
 *Claude Opus 4.7, Gemini 3, Johannes Siedersleben (Editor)*
 
@@ -7,10 +7,9 @@
 ## Vier Rätsel
 
 Die Geschichte der Juden ist voller Tatsachen, die sich mit historischer Normalität nicht erklären lassen. 
-Vier Rätsel bilden den Hintergrund, gegen den dieses Buch geschrieben ist. 
-Sie sind nicht Fragen, auf die ein Kapitel eine Antwort gibt, sondern Themen, die sich durch das gesamte Werk ziehen und nur im Zusammenhang verständlich werden.
+Vier Rätsel bilden den Hintergrund der folgenden Kapitel.
 
-### Rätsel 1: Überleben
+### Überleben
 
 Andere Völker der Antike verschwanden unter ähnlichen Bedingungen spurlos. Die Phönizier, deren Handelsnetze das Mittelmeer verbanden. Die Philister, die den Küstenstreifen Kanaans bewohnten. Die Moabiter, die Edomiter, die Ammoniter – alle aufgesogen, assimiliert, vergessen. Von keinem dieser Völker spricht heute jemand, der nicht Altertumswissenschaftler ist.
 
@@ -18,7 +17,7 @@ Das jüdische Volk überlebte. **Fast 1.800 Jahre ohne Territorium, ohne Staat, 
 
 Wie war das möglich? Die Antwort ist mehrschichtig – Text, Gemeinschaft, Recht, Endogamie, messianische Hoffnung. Die Kapitel 1 und 2 arbeiten sie heraus. Aber das Phänomen bleibt auch nach aller Erklärung ein Rätsel: Eine kleine kulturelle Gemeinschaft, die die Weltreiche überdauert hat, die sie unterwarfen.
 
-### Rätsel 2: Exzellenz
+### Exzellenz
 
 Heute leben rund 15 Millionen Juden auf der Welt – etwa 0,2 Prozent der Weltbevölkerung. Sie sind zur Hälfte in den USA konzentriert, zu einem weiteren Drittel in Israel, der Rest verteilt auf ein Dutzend Länder.
 
@@ -28,7 +27,7 @@ Die Zahlen sind nicht Ausdruck von Genetik oder göttlicher Auserwähltheit. Sie
 
 Aber die Zahlen sind auch ein Mahnmal. Was wäre, wenn das osteuropäische Judentum nicht vernichtet worden wäre? Die Wissenschaftler aus Wilna, Lemberg, Warschau – sie hätten ebenso ihren Weg gemacht wie ihre Vettern, die rechtzeitig flohen. Die Zahl von 220 ist nicht die natürliche Zahl. Sie ist die Zahl nach dem Holocaust. Kapitel 10 geht dieser Statistik nach.
 
-### Rätsel 3: Rückkehr nach Palästina
+### Rückkehr nach Palästina
 
 Im August 1897 saßen 208 Delegierte aus siebzehn Ländern in einem Hotel in Basel und beschlossen, einen jüdischen Staat zu errichten. Theodor Herzl schrieb in sein Tagebuch: *"In Basel habe ich den Judenstaat gegründet. In fünfzig Jahren sicher wird es jeder wissen."* Er irrte um neun Monate. Der Staat Israel wurde am 14. Mai 1948 ausgerufen – fünfzig Jahre und neun Monate nach Basel.
 
@@ -42,7 +41,7 @@ Aus dieser Asymmetrie entstand ein Konflikt, der bis heute andauert.
 
 Die Kapitel 5 bis 9 erzählen diese Geschichte – mit ihrem Triumph, ihrer Tragik und ihrer offenen Zukunft.
 
-### Rätsel 4: Wiederkehr des Antisemitismus
+### Wiederkehr des Antisemitismus
 
 Nach 1945 hielten viele den Antisemitismus für erledigt. Das Menschheitsverbrechen von Auschwitz, so die Hoffnung, habe die Judenfeindschaft so gründlich diskreditiert, dass sie nicht mehr wiederkommen könne. Diese Hoffnung erwies sich als verfrüht.
 
@@ -54,7 +53,7 @@ Warum? Weil der Antisemitismus offenbar zu den Grundstrukturen bestimmter kollek
 
 ---
 
-## Methodik: Die Neuen Historiker und das Righteous-Victims-Paradigma
+## Die Neuen Historiker und das Righteous-Victims-Paradigma
 
 Die Geschichte Israels und des Nahostkonflikts ist ein intellektuelles Schlachtfeld. Fast jede Darstellung ist für nur eine Seite gemacht: Die einen erzählen die Heldengeschichte einer verfolgten Nation, die gegen alle Widerstände ihren Staat errichtete und sich seitdem gegen fanatische Feinde verteidigt. Die anderen erzählen die Geschichte eines kolonialen Unternehmens, das eine indigene Bevölkerung verdrängte und seitdem einen Unterdrückungsstaat führt. Beide Erzählungen enthalten richtige Elemente. Beide sind als Ganzes unzureichend.
 
@@ -98,7 +97,7 @@ Die folgenden Begriffe tauchen immer wieder auf. Das Glossar im Anhang liefert a
 
 ## Struktur
 
-Das Buch ist in drei Teile gegliedert, dazu kommt ein Anhang.
+Das Buch besteht aus drei Teilen.
 
 ### Teil I: Geschichte der Juden bis zur Staatsgründung (Kapitel 1–5)
 
@@ -126,13 +125,6 @@ Das Buch ist in drei Teile gegliedert, dazu kommt ein Anhang.
 
 **Kapitel 10 – Die Stationen.** Ein Querschnitt durch die Zentren jüdischen Lebens in der Diaspora: Babylon, Alexandria, Spanien, Polen, Osmanisches Reich, Amerika, Israel. Mit einem Exkurs über die jüdischen Nobelpreisträger.
 
-### Anhang
-
-**Literaturverzeichnis** – thematisch geordnet.
-**Glossar** – ausführliche Begriffserklärungen.
-**Personenverzeichnis** – die wichtigsten historischen Figuren mit Kurzbiographien.
-**Zeittafel** – eine chronologische Übersicht.
-
 ---
 
 ## Aktualität
@@ -140,11 +132,3 @@ Das Buch ist in drei Teile gegliedert, dazu kommt ein Anhang.
 Dieses Buch erscheint in einer Zeit, in der der Nahostkonflikt eine neue Eskalationsstufe erreicht hat. Der Angriff der Hamas auf Israel am 7. Oktober 2023 – mit 1.200 Toten und der Entführung von 250 Menschen – war das blutigste Ereignis für die Juden seit dem Holocaust. Die darauf folgende israelische Militäroperation in Gaza forderte über 50.000 palästinensische Todesopfer. Hisbollah und Iran wurden in direkte Konfrontation mit Israel verwickelt. Die Lage ist offen, die Zahl der Toten steigt, während dieser Text geschrieben wird.
 
 Ein Buch, das solche Ereignisse behandelt, kann nicht das letzte Wort haben. Es kann nur den Stand der Dinge bis zu einem bestimmten Zeitpunkt festhalten und dabei hoffen, dass die Strukturen, die es beschreibt, dem Leser helfen, die weiteren Entwicklungen zu verstehen. Das vorliegende Buch schließt seinen zeithistorischen Stoff mit dem Frühjahr 2026 ab. Was danach kommt, muss die Leserunde selbst weiterdenken – mit anderen Quellen, mit neuen Ereignissen, aber hoffentlich mit besserem Rüstzeug, als vor der Lektüre dieses Buchs.
-
----
-
-## Eine Einladung
-
-Dieses Buch ist eine Diskussionsgrundlage, keine Doktrin. Es erhebt nicht den Anspruch, alle Fragen zu beantworten, und es schon gar nicht den Anspruch, alle Streitfragen zu entscheiden. Sein Ziel ist bescheidener: genügend Material zu liefern, damit eine Lesegruppe ins Gespräch kommen kann – über die Geschichte der Juden, über die Entstehung des Staates Israel, über den Konflikt, der die Region prägt.
-
-Wer dem Buch widerspricht, tut ihm keine Gewalt an. Widerspruch ist in dieser Sache die angemessenere Haltung als Zustimmung. Zustimmung schließt Gespräche; Widerspruch öffnet sie. Wenn dieses Buch dazu führt, dass seine Leser besser informiert und gleichzeitig offener streiten als vorher, hat es seinen Zweck erfüllt.
