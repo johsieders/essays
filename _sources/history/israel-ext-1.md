@@ -12,7 +12,7 @@ In den letzten fünfzig Jahren hat die **Biblische Archäologie** erhebliche For
 - Ab etwa **800 BCE** wird die Geschichte durch assyrische, babylonische und ägyptische Quellen zunehmend belegbar.
 - Ab dem **Babylonischen Exil (586 BCE)** ist die Geschichte gut dokumentiert.
 
-Dieses Kapitel geht diese Grenze ehrlich an: Es unterscheidet zwischen dem, was historisch belegt ist, dem, was wahrscheinlich ist, und dem, was religiöse Überlieferung ohne historischen Beleg ist. Verweise auf die Bibel sind willkommen – als Zeugnis dessen, was das jüdische Volk von sich selbst glaubte und erzählte, was mindestens so wichtig ist wie die bloße Faktizität.
+Dieses Kapitel unterscheidet zwischen dem, was historisch belegt ist, dem, was wahrscheinlich ist, und dem, was religiöse Überlieferung ohne historischen Beleg ist. Verweise auf die Bibel sind willkommen – als Zeugnis dessen, was das jüdische Volk von sich selbst glaubte und erzählte, was mindestens so wichtig ist wie die bloße Faktizität.
 
 Ein zweiter Hinweis vorweg: Im kollektiven Gedächtnis erscheint die antike jüdische Geschichte oft als lange Phase der Normalität, unterbrochen von der babylonischen Katastrophe und der Tempelzerstörung 70 CE. Das ist ein Zerrbild. Von über tausend Jahren jüdischer Existenz im Land bis 135 CE war die Phase echter politischer Unabhängigkeit ausgesprochen kurz – im Grunde ein einziges Jahrhundert. Alles andere war Fremdherrschaft, Tribut, Exil, Aufstand, Verfolgung oder Katastrophe. Diese Proportionen sind wichtig, weil sie erklären, warum das Judentum eine so ausgeprägte Fähigkeit entwickelte, ohne Staat zu existieren: Es war diese Existenz längst gewohnt, als sie ab 135 CE zur Dauerlage wurde.
 
@@ -48,7 +48,7 @@ Die moderne Religionsgeschichte (Othmar Keel, Christoph Uehlinger und andere) ze
 
 Die Bibel selbst enthält Spuren dieses Übergangs: Texte, in denen andere Götter neben Jhwh existieren (*"Du sollst keine anderen Götter haben neben mir"* – das setzt andere Götter voraus). Die Propheten des 8. und 7. Jahrhunderts BCE kämpfen noch immer gegen die Verehrung fremder Götter **in Israel** – was zeigt, dass der Monotheismus keineswegs selbstverständlich war.
 
-Ein konkreter archäologischer Beleg: In **Kuntillet Ajrud** im Sinai wurden Inschriften aus dem 8. Jahrhundert BCE gefunden, die von "Jhwh und seiner Aschera" sprechen. Offenbar verehrten manche frühe Israeliten Jhwh mit einer weiblichen Partnerin – ein Befund, der das spätere biblische Bild einer reinen Jhwh-Religion kompliziert.
+Ein konkreter archäologischer Beleg: In **Kuntillet Ajrud** im Sinai wurden Inschriften aus dem 8. Jahrhundert BCE gefunden, die von "Jhwh und seiner Aschera" sprechen. Offenbar verehrten manche frühe Israeliten Jhwh mit einer weiblichen Partnerin – ein Befund, der das spätere biblische Bild einer reinen Jhwh-Religion stört.
 
 ### Abraham – historischer Kern oder theologische Konstruktion?
 
@@ -84,13 +84,13 @@ Die außerbiblische Evidenz für diese Periode ist mager, aber vorhanden:
 - Die **Mesha-Stele** (ca. 840 BCE), aufgestellt vom moabitischen König Mesha, erwähnt Israel und seinen Gott Jhwh.
 - Ägyptische Quellen des 10. Jahrhunderts erwähnen einen Feldzug Pharao Schoschenqs in die Region – entsprechend der biblischen Erzählung eines ägyptischen Angriffs unter Rehabeam.
 
-Was die Archäologie **nicht bestätigt**, ist das Ausmaß von Davids und Salomos Reich. Jerusalem im 10. Jahrhundert war eine kleine Bergstadt – Ausgrabungen zeigen keine monumentale Architektur dieser Zeit, kein Zeichen eines Großreichs. Der Tempel Salomos – falls er in dieser Form existierte – hat keine archäologischen Spuren hinterlassen, was zum Teil durch die spätere Bebauung des Tempelbergs erklärbar ist, aber nicht vollständig.
+Was die Archäologie **nicht bestätigt**, ist das Ausmaß von Davids und Salomos Reich. Jerusalem im 10. Jahrhundert war eine kleine Bergstadt – Ausgrabungen zeigen keine monumentale Architektur dieser Zeit, kein Zeichen eines Großreichs. Der Tempel Salomos – falls er in dieser Form existierte – hat keine archäologischen Spuren hinterlassen, was nur zum Teil durch die spätere Bebauung des Tempelbergs erklärbar ist.
 
 ### Die "Salomonischen Tore" – ein Fallbeispiel
 
 Wie die archäologische Revision der biblischen Geschichte funktioniert, lässt sich an einem konkreten Beispiel zeigen: den **dreiteiligen Stadttoren** in Megiddo, Gezer und Hazor. Jahrzehntelang galten sie als Beweis des salomonischen Großreichs – monumentale Bauten an drei Städten, die die Bibel ausdrücklich als salomonische Gründungen nennt (1 Kön 9,15). Die Archäologen des 20. Jahrhunderts datierten sie in die Zeit Salomos und feierten den Befund als biblische Bestätigung.
 
-Israel Finkelstein und seine Schule haben diese Datierung in den 1990er Jahren systematisch angegriffen. Durch **neue Keramikanalyse** und Radiokarbon-Datierung zeigten sie: Die Tore stammen wahrscheinlich aus dem 9. Jahrhundert – also aus der Zeit der Omri-Dynastie und König Ahabs im Nordreich, nicht aus der Zeit Salomos. Das salomonische Großreich verliert damit seinen zentralen archäologischen Beleg.
+Israel Finkelstein und seine Schule haben diese Datierung in den 1990er Jahren systematisch angegriffen. Durch **neue Keramikanalyse** und Radiokarbon-Datierung zeigten sie: Die Tore stammen wahrscheinlich aus dem 9. Jahrhundert BCE – also aus der Zeit der Omri-Dynastie und König Ahabs im Nordreich, nicht aus der Zeit Salomos. Das salomonische Großreich verliert damit seinen zentralen archäologischen Beleg.
 
 Die Debatte ist nicht abgeschlossen – konservative Archäologen wie Amihai Mazar halten teilweise an der Spätdatierung fest. Aber das Beispiel zeigt, wie die biblische Archäologie funktioniert: nicht als "Widerlegung" der Bibel, sondern als präzise Neujustierung dessen, was wir tatsächlich wissen. Die "minimalistische" Schule (Finkelstein, Silberman) argumentiert: David und Salomo regierten über ein Kleinkönigreich in den judäischen Bergen – bedeutend für die Region, aber weit entfernt vom Großreich, das die Bibel beschreibt. Dieses Großreich sei eine spätere literarische Konstruktion, entstanden im 7. Jahrhundert BCE unter König Joschija als politisches Programm: die glorreiche Vergangenheit wird zum Vorbild für die Gegenwart gemacht.
 
@@ -259,7 +259,7 @@ Interne Rivalitäten und Dynastiestreitigkeiten schwächten das Königreich. Als
 
 ### Pompeius und das Ende der Unabhängigkeit
 
-**63 BCE** betrat Pompeius mit seinen Legionen Jerusalem und drang – zur Bestürzung der Juden – ins Allerheiligste des Tempels vor. Er raubte es nicht, tötete niemanden, und ließ den Tempeldienst fortführen. Aber er machte deutlich, wer nun das Sagen hatte. Das hundertjährige Jahrhundert der Unabhängigkeit war vorbei.
+**63 BCE** betrat Pompeius mit seinen Legionen Jerusalem und drang – zur Bestürzung der Juden – ins Allerheiligste des Tempels vor. Er raubte es nicht, tötete niemanden, und ließ den Tempeldienst fortführen. Aber er machte deutlich, wer nun das Sagen hatte. Das Jahrhundert der Unabhängigkeit war vorbei.
 
 Judäa wurde römisches Protektorat. Die hasmonäische Königslinie regierte formal noch eine Generation weiter – als Vasallen Roms. Echte Macht hatte keiner mehr.
 
@@ -269,7 +269,7 @@ Judäa wurde römisches Protektorat. Die hasmonäische Königslinie regierte for
 
 Er war kein Jude im vollen Sinne der damaligen religiösen Elite – sein Vater war Idumäer (also Nachkomme der hasmonäischen Zwangskonvertiten), seine Mutter Nabatäerin. Er kam durch römische Unterstützung an die Macht, gegen die letzten Hasmonäer, und heiratete zur Legitimation eine hasmonäische Prinzessin – **Mariamne** –, die er später aus Eifersucht ermorden ließ, ebenso wie mehrere seiner Söhne.
 
-Herodes war ein Baumeister von Weltrang. Sein größtes Projekt: die **Renovierung und Erweiterung des Zweiten Tempels** – in einem Ausmaß, das alle früheren Bauten übertraf. Der herodianische Tempel war eines der beeindruckendsten Gebäude der antiken Welt, sichtbar aus weiter Ferne, mit einer Tempelplattform, deren Ausmaße noch heute zu sehen sind (die Klagemauer ist eine Stützmauer dieser Plattform). Er baute auch **Cäsarea Maritima** – einen modernen Hafen nach griechisch-römischem Vorbild – und **Masada** – die Felsenfestung über dem Toten Meer.
+Herodes war ein Baumeister von Weltrang. Sein größtes Projekt war die **Renovierung und Erweiterung des Zweiten Tempels** – etwas, das alle früheren Bauten übertraf. Der herodianische Tempel war eines der beeindruckendsten Gebäude der antiken Welt, sichtbar aus weiter Ferne, mit einer Tempelplattform, deren Ausmaße noch heute zu sehen sind (die Klagemauer ist eine Stützmauer dieser Plattform). Er baute auch **Cäsarea Maritima** – einen modernen Hafen nach griechisch-römischem Vorbild – und **Masada** – die Felsenfestung über dem Toten Meer.
 
 Herodes starb 4 BCE. Sein Reich wurde unter seinen Söhnen aufgeteilt, dann schrittweise direkt unter römische Verwaltung gestellt. Der Titel "Präfekt" von Judäa – später "Prokurator" – bezeichnet die römischen Statthalter, von denen einer Geschichte schreiben sollte: **Pontius Pilatus** (26–36 CE).
 
@@ -283,7 +283,7 @@ Das Judentum des 1. Jahrhunderts BCE/CE war keine einheitliche Religion. Es war 
 
 Die **Pharisäer** (hebr. *Peruschim*, "die Abgesonderten") waren eine mittelständisch-urbane Bewegung von Laiengelehrten. Sie glaubten nicht nur an die geschriebene Tora, sondern auch an eine **mündliche Tora** – Auslegungstraditionen, die auf Mose zurückgeführt wurden. Sie glaubten an Auferstehung, Engel, göttliches Gericht. Sie waren die Bewegung des durchschnittlichen gebildeten Juden, nicht die Elite.
 
-Die neutestamentliche Darstellung der Pharisäer als Heuchler und Gegner Jesu ist historisch verzerrt. Jesus selbst stand den Pharisäern in vielen Fragen nahe – seine Diskussionen mit ihnen waren innerjüdische Debatten, nicht Kämpfe mit religiösen Feinden. Die Pharisäer waren die Vorgänger der Rabbiner. Nach 70 CE würden ihre Nachfolger in Yavne das rabbinische Judentum begründen, das alle anderen Strömungen überlebte.
+Die neutestamentliche Darstellung der Pharisäer als Heuchler und Gegner Jesu ist historisch verzerrt. Jesus selbst stand den Pharisäern in vielen Fragen nahe – seine Diskussionen mit ihnen waren innerjüdische Debatten, nicht Kämpfe mit religiösen Feinden. Die Pharisäer waren die Vorgänger der Rabbiner. Nach 70 CE werden ihre Nachfolger in Yavne das rabbinische Judentum begründen, das alle anderen Strömungen überlebte.
 
 ### Sadduzäer
 
@@ -307,7 +307,7 @@ Die Zeloten waren die treibende Kraft des Ersten Jüdisch-Römischen Krieges (66
 
 Das Judentum dieser Zeit hatte **keine zentrale Autorität**, die festgelegt hätte, was richtiger Glaube sei. Der Hohepriester war politisch zu kompromittiert; der Sanhedrin war ein Rat, kein Lehramt. Verschiedene Strömungen stritten miteinander, lebten nebeneinander, lasen dieselben Bücher unterschiedlich. Das Judentum war vielfältiger, streitiger, offener als das, was später im rabbinischen Judentum zur Normalität wurde.
 
-In diesen pluralistischen Kontext gehörten auch die ersten **Jesus-Nachfolger**. Sie waren nicht eine neue Religion, sondern eine weitere jüdische Strömung – messianisch-apokalyptisch, mit eigener Autorität (dem hingerichteten und auferstandenen Lehrer), aber innerhalb des jüdischen Spektrums verortet.
+In diesen pluralistischen Kontext gehörten auch die ersten **Jesus-Nachfolger**. Sie repräsentierten keine neue Religion, sondern eine weitere jüdische Strömung – messianisch-apokalyptisch, mit eigener Autorität (dem hingerichteten und auferstandenen Lehrer), aber innerhalb des jüdischen Spektrums verortet.
 
 ---
 
@@ -323,13 +323,13 @@ Zwischen 1947 und 1956 wurden in elf Höhlen nahe der Ruine **Qumran** insgesamt
 
 **Sektenschriften.** Texte der Qumran-Gemeinschaft selbst: die Gemeinderegel (*Serech ha-Yachad*), die Kriegsrolle (*Milchama*), Hymnen, Bibelkommentare. Sie geben Einblick in eine jüdische Sekte – höchstwahrscheinlich die Essener –, die sich als die eigentlichen Erben des Bundes verstand, die Tempelpriesterschaft als illegitim ansah und eine baldige apokalyptische Endschlacht erwartete.
 
-Die Bedeutung der Qumran-Rollen kann kaum überschätzt werden. Sie zeigen, wie **vielfältig** das Judentum des 1. Jahrhunderts war, bevor das rabbinische Judentum nach 70 CE alle Alternativen verdrängte. Sie zeigen auch, dass frühchristliche Vorstellungen – messianische Erwartung, Täufersymbolik, apokalyptische Bildsprache – tief im zeitgenössischen Judentum verwurzelt waren. Jesus und Johannes der Täufer sind ohne den apokalyptischen Rand des zeitgenössischen Judentums, zu dem Qumran gehört, nicht zu verstehen.
+Die Bedeutung der Qumran-Rollen kann kaum überschätzt werden. Sie zeigen, wie **vielfältig** das Judentum des 1. Jahrhunderts war, bevor das rabbinische Judentum nach 70 CE alle Alternativen verdrängte. Sie zeigen auch, dass frühchristliche Vorstellungen – messianische Erwartung, Täufersymbolik, apokalyptische Bildsprache – tief im zeitgenössischen Judentum verwurzelt waren.
 
 ---
 
 ## 9. Jesus und die Entstehung des Christentums
 
-Wer die jüdische Geschichte dieser Periode erzählt, kommt an **Jesus von Nazareth** nicht vorbei – nicht aus religiösen Gründen, sondern weil die Entstehung des Christentums die jüdische Geschichte tief beeinflusste: Sie erzeugte eine neue religiöse Weltkraft, die das Verhältnis zu den Juden über fast zwei Jahrtausende definieren sollte.
+Wer die jüdische Geschichte dieser Periode erzählt, kommt an **Jesus von Nazareth** nicht vorbei – nicht aus religiösen Gründen, sondern weil die Entstehung des Christentums die jüdische Geschichte tief beeinflusste: Sie erzeugte eine neue religiöse Kraft, die das Verhältnis zu den Juden über fast zwei Jahrtausende definieren sollte.
 
 ### Der historische Jesus
 
@@ -345,7 +345,7 @@ Die spätere christliche Überlieferung – besonders die Evangelien nach Matth�
 
 ### Die Trennung – ein langer Weg
 
-Die **Trennung** zwischen Judentum und dem entstehenden Christentum war ein Prozess, der sich über Jahrzehnte, eigentlich Jahrhunderte vollzog. In den ersten Jahren nach Jesu Tod waren seine Anhänger schlicht eine jüdische Sekte – sie besuchten den Tempel, hielten die Speisegebote, betrachteten sich als Juden. Die Auseinandersetzungen, die das Neue Testament beschreibt (etwa die Steinigung des Stephanus in der Apostelgeschichte), waren **innerjüdische Konflikte**, wie sie zwischen verschiedenen Strömungen des damaligen Judentums durchaus vorkamen.
+Die **Trennung** zwischen Judentum und dem entstehenden Christentum war ein Prozess, der sich über Jahrzehnte, eigentlich Jahrhunderte vollzog. In den ersten Jahren nach Jesu Tod waren seine Anhänger schlicht eine jüdische Sekte – sie besuchten den Tempel, befolgten die Speisegebote, betrachteten sich als Juden. Die Auseinandersetzungen, die das Neue Testament beschreibt (etwa die Steinigung des Stephanus in der Apostelgeschichte), waren **innerjüdische Konflikte**, wie sie zwischen verschiedenen Strömungen des damaligen Judentums durchaus vorkamen.
 
 **Paulus** – ursprünglich Saulus, ein jüdischer Schriftgelehrter aus Tarsus – war die entscheidende theologische Figur der Trennung. Er öffnete die neue Bewegung für Nichtjuden, ohne Beschneidungspflicht (ca. 45–60 CE). Das machte das Christentum universal – und trieb eine Grenze zwischen denen, die die Tora weiter hielten, und denen, die das für Heiden nicht mehr verlangten.
 
