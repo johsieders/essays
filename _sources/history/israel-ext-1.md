@@ -14,7 +14,7 @@ In den letzten fünfzig Jahren hat die **Biblische Archäologie** erhebliche For
 
 Dieses Kapitel unterscheidet zwischen dem, was historisch belegt ist, dem, was wahrscheinlich ist, und dem, was religiöse Überlieferung ohne historischen Beleg ist. Verweise auf die Bibel sind willkommen – als Zeugnis dessen, was das jüdische Volk von sich selbst glaubte und erzählte, was mindestens so wichtig ist wie die bloße Faktizität.
 
-Ein zweiter Hinweis vorweg: Im kollektiven Gedächtnis erscheint die antike jüdische Geschichte oft als lange Phase der Normalität, unterbrochen von der babylonischen Katastrophe und der Tempelzerstörung 70 CE. Das ist ein Zerrbild. Von über tausend Jahren jüdischer Existenz im Land bis 135 CE war die Phase echter politischer Unabhängigkeit ausgesprochen kurz – im Grunde ein einziges Jahrhundert. Alles andere war Fremdherrschaft, Tribut, Exil, Aufstand, Verfolgung oder Katastrophe. Diese Proportionen sind wichtig, weil sie erklären, warum das Judentum eine so ausgeprägte Fähigkeit entwickelte, ohne Staat zu existieren: Es war diese Existenz längst gewohnt, als sie ab 135 CE zur Dauerlage wurde.
+Noch ein Hinweis vorweg: Im kollektiven Gedächtnis erscheint die antike jüdische Geschichte oft als lange Phase der Normalität, unterbrochen von der babylonischen Katastrophe und der Tempelzerstörung 70 CE. Das ist ein Zerrbild. Von über tausend Jahren jüdischer Existenz im Land bis 135 CE war die Phase echter politischer Unabhängigkeit ausgesprochen kurz – im Grunde ein einziges Jahrhundert. Alles andere war Fremdherrschaft, Tribut, Exil, Aufstand, Verfolgung oder Katastrophe. Diese Proportionen sind wichtig, weil sie erklären, warum das Judentum eine so ausgeprägte Fähigkeit entwickelte, ohne Staat zu existieren: Es war diese Existenz längst gewohnt, als sie ab 135 CE zur Dauerlage wurde.
 
 ---
 
@@ -25,6 +25,14 @@ Ein zweiter Hinweis vorweg: Im kollektiven Gedächtnis erscheint die antike jüd
 Um 1200 BCE war die östliche Mittelmeerküste – das heutige Israel, Palästina, Libanon, Teile Syriens – Teil einer hochkomplexen Welt. Ägypten dominierte die Küstenregion als Schutzmacht. Stadtstaaten wie Megiddo, Hazor und Gezer kontrollierten das Binnenland. Die Region war ethnisch und kulturell heterogen: Kanaaniter, Philister, Aramäer, Phönizier – Völker, die miteinander Handel trieben, kämpften und sich vermischten.
 
 In diesem Kontext tauchen die **Israeliten** auf – aber nicht als scharf abgegrenzte ethnische Gruppe, sondern als Teil des kanaanäischen Milieus. Die Archäologie zeigt: Die frühen Israeliten waren **kulturell kaum von ihren kanaanäischen Nachbarn zu unterscheiden**. Ihre Keramik, ihre Häuser, ihre Bestattungsformen – weitgehend identisch. Was sie allmählich zu unterscheiden begann, war zunächst nicht so sehr Ethnizität als eine religiöse Praxis: die Verehrung eines einzigen Gottes, Jhwh (*YHWH*), verbunden mit einem Verbot der Götterbilder.
+
+### Die Philister – die Erzfeinde
+
+Unter den Nachbarn Israels nehmen die Philister eine Sonderstellung ein – nicht nur historisch, sondern vor allem in der biblischen Erinnerung. Sie waren keine Semiten und keine Kanaaniter, sondern gehörten zu den "Seevölkern", einer Gruppe von Wanderern und Eroberern, die um 1200 BCE den östlichen Mittelmeerraum erschütterten – möglicherweise aus der Ägäis oder Kleinasien stammend. Ägyptische Quellen (die Inschriften Ramses' III. in Medinet Habu) berichten von ihren Angriffen; die Archäologie bestätigt ihre Herkunft durch Keramik mykenischen Typs, die sich deutlich von der kanaanäischen unterscheidet.
+
+Die Philister siedelten an der südlichen Küstenebene und bildeten einen Bund von fünf Stadtstaaten (die Pentapolis: Gaza, Aschkelon, Aschdod, Ekron und Gat). Sie waren technologisch und militärisch überlegen – die Bibel führt ihre Stärke auf die Beherrschung der Eisenverarbeitung zurück (1 Sam 13,19–22). Über Jahrhunderte waren sie die gefährlichsten Rivalen der Israeliten um die Kontrolle des Landes.
+
+In der biblischen Erzählung sind die Philister der Erzfeind schlechthin: Simson kämpft und stirbt unter ihnen, der junge David besiegt ihren Riesen Goliath, König Saul fällt in der Schlacht gegen sie auf dem Gilboa. Erst David soll sie endgültig zurückgedrängt haben. Historisch verloren die Philister ihre eigenständige Identität spätestens mit den assyrischen und babylonischen Eroberungen; bis zur Zeitenwende waren sie als Volk längst verschwunden. Aber ihr Name blieb haften – an der Landschaft und in der Erinnerung. Dass die Römer 135 CE ausgerechnet diesen Namen wählten, um Judäa symbolisch auszulöschen (→ Abschnitt 13), war kein Zufall: Sie griffen auf den ältesten und am stärksten besetzten Feindnamen der jüdischen Tradition zurück.
 
 ### Die Merenptah-Stele – der erste Beleg
 
@@ -90,7 +98,7 @@ Was die Archäologie **nicht bestätigt**, ist das Ausmaß von Davids und Salomo
 
 Wie die archäologische Revision der biblischen Geschichte funktioniert, lässt sich an einem konkreten Beispiel zeigen: den **dreiteiligen Stadttoren** in Megiddo, Gezer und Hazor. Jahrzehntelang galten sie als Beweis des salomonischen Großreichs – monumentale Bauten an drei Städten, die die Bibel ausdrücklich als salomonische Gründungen nennt (1 Kön 9,15). Die Archäologen des 20. Jahrhunderts datierten sie in die Zeit Salomos und feierten den Befund als biblische Bestätigung.
 
-Israel Finkelstein und seine Schule haben diese Datierung in den 1990er Jahren systematisch angegriffen. Durch **neue Keramikanalyse** und Radiokarbon-Datierung zeigten sie: Die Tore stammen wahrscheinlich aus dem 9. Jahrhundert BCE – also aus der Zeit der Omri-Dynastie und König Ahabs im Nordreich, nicht aus der Zeit Salomos. Das salomonische Großreich verliert damit seinen zentralen archäologischen Beleg.
+Salomo regierte nach konventioneller Chronologie im 10. Jahrhundert BCE (ca. 970–931). Israel Finkelstein und seine Schule haben die Datierung der Tore in den 1990er Jahren systematisch angegriffen. Durch **neue Keramikanalyse** und Radiokarbon-Datierung zeigten sie: Die Tore stammen wahrscheinlich erst aus dem 9. Jahrhundert BCE – also rund hundert Jahre nach Salomo, aus der Zeit der Omri-Dynastie und König Ahabs im Nordreich. Das salomonische Großreich verliert damit seinen zentralen archäologischen Beleg.
 
 Die Debatte ist nicht abgeschlossen – konservative Archäologen wie Amihai Mazar halten teilweise an der Spätdatierung fest. Aber das Beispiel zeigt, wie die biblische Archäologie funktioniert: nicht als "Widerlegung" der Bibel, sondern als präzise Neujustierung dessen, was wir tatsächlich wissen. Die "minimalistische" Schule (Finkelstein, Silberman) argumentiert: David und Salomo regierten über ein Kleinkönigreich in den judäischen Bergen – bedeutend für die Region, aber weit entfernt vom Großreich, das die Bibel beschreibt. Dieses Großreich sei eine spätere literarische Konstruktion, entstanden im 7. Jahrhundert BCE unter König Joschija als politisches Programm: die glorreiche Vergangenheit wird zum Vorbild für die Gegenwart gemacht.
 
@@ -347,7 +355,7 @@ Die spätere christliche Überlieferung – besonders die Evangelien nach Matth�
 
 Die **Trennung** zwischen Judentum und dem entstehenden Christentum war ein Prozess, der sich über Jahrzehnte, eigentlich Jahrhunderte vollzog. In den ersten Jahren nach Jesu Tod waren seine Anhänger schlicht eine jüdische Sekte – sie besuchten den Tempel, befolgten die Speisegebote, betrachteten sich als Juden. Die Auseinandersetzungen, die das Neue Testament beschreibt (etwa die Steinigung des Stephanus in der Apostelgeschichte), waren **innerjüdische Konflikte**, wie sie zwischen verschiedenen Strömungen des damaligen Judentums durchaus vorkamen.
 
-**Paulus** – ursprünglich Saulus, ein jüdischer Schriftgelehrter aus Tarsus – war die entscheidende theologische Figur der Trennung. Er öffnete die neue Bewegung für Nichtjuden, ohne Beschneidungspflicht (ca. 45–60 CE). Das machte das Christentum universal – und trieb eine Grenze zwischen denen, die die Tora weiter hielten, und denen, die das für Heiden nicht mehr verlangten.
+**Paulus** – ursprünglich Saulus, ein jüdischer Schriftgelehrter aus Tarsus – war die entscheidende theologische Figur der Trennung. Er öffnete die neue Bewegung für Nichtjuden, ohne Beschneidungspflicht (ca. 45–60 CE). Das machte das Christentum universal – und trieb eine Grenze zwischen denen, die die Tora weiterhin befolgten, und denen, die das von den Heiden nicht mehr verlangten.
 
 Die Tempelzerstörung 70 CE beschleunigte die Trennung, vollzog sie aber nicht. Noch im späten 1. Jahrhundert nahmen die Synagogen in ihr Achtzehngebet einen **"Segen gegen die Ketzer"** (*Birkat ha-Minim*) auf, der sich wahrscheinlich auch gegen die Jesus-Nachfolger richtete. Das war der Versuch, die jüdische Identität nach der Katastrophe neu zu definieren – unter Ausschluss der Gruppen, die als abgefallen galten.
 
@@ -455,7 +463,7 @@ Die hadrianische Reaktion war ohne Präzedenz in ihrer Konsequenz:
 
 - Jerusalem wurde zur römischen Kolonie **Aelia Capitolina** umgebaut – auf dem Tempelberg ein Jupiter-Tempel, die Stadt nach römischem Rastermuster angelegt.
 - **Juden wurde verboten, Jerusalem zu betreten** – unter Todesstrafe, außer einmal im Jahr am Jahrestag der Tempelzerstörung, um zu trauern.
-- Die Provinz **Judäa** wurde in **Syria Palaestina** umbenannt – nach den Philistern, den alten Feinden Israels, die längst von der historischen Bühne verschwunden waren. Ein bewusster Akt der symbolischen Auslöschung.
+- Die Provinz **Judäa** wurde in **Syria Palaestina** umbenannt – nach den Philistern (→ Abschnitt 1), den biblischen Erzfeinden Israels, die als Volk längst von der historischen Bühne verschwunden waren. Gerade die Wahl dieses Namens war ein bewusster Akt der symbolischen Auslöschung.
 
 **"Palaestina"** – ein Name mit langer Zukunft. Er stammt von Hadrian, als Akt der Demütigung. Er bezeichnete eine römische Provinz. Er wurde im Mittelalter zu "Palestine". Er wurde im 20. Jahrhundert zur Grundlage des Namens "Palästinenser". Die Geschichte der Namen ist manchmal die Geschichte selbst.
 
@@ -471,7 +479,7 @@ Und die Erinnerung an den Tempel – die Hoffnung auf Wiederkehr nach Jerusalem 
 
 ---
 
-## Schluss: Was diese Periode lehrt
+## Was uns diese Periode lehrt
 
 Die Geschichte der Juden von den Anfängen bis 135 CE ist die Geschichte eines kleinen Volkes, das durch außergewöhnliche kulturelle und religiöse Kreativität die Katastrophen überlebte, die andere vernichteten.
 
