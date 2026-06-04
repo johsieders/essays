@@ -138,10 +138,6 @@ parts:
             title: Das Flüchtlingsproblem   
           - file: history/israel-ext-10
             title: Die Stationen des jüdischen Volkes
-          - file: history/israel-ext-11
-            title: Glossar
-          - file: history/israel-ext-12
-            title: Personen
   
   - caption: Religion
     chapters:
