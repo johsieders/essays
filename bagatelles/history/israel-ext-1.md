@@ -479,7 +479,7 @@ Und die Erinnerung an den Tempel – die Hoffnung auf Wiederkehr nach Jerusalem 
 
 ---
 
-## Schluss: Was diese Periode lehrt
+## Was uns diese Periode lehrt
 
 Die Geschichte der Juden von den Anfängen bis 135 CE ist die Geschichte eines kleinen Volkes, das durch außergewöhnliche kulturelle und religiöse Kreativität die Katastrophen überlebte, die andere vernichteten.
 
