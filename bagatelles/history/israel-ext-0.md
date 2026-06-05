@@ -1,5 +1,5 @@
 
-# Von Abraham bis Netanyahu: Die Geschichte der Juden
+# Von Abraham bis Netanyahu: <br> die Geschichte der Juden
 
 
 *Claude Opus 4.7, Gemini 3, Johannes Siedersleben (Editor)*
@@ -46,8 +46,10 @@ Die Kapitel 5 bis 9 erzählen diese Geschichte mit ihrem Triumph, ihrer Tragik u
 
 Nach 1945 hielten viele den Antisemitismus für erledigt. Das Menschheitsverbrechen von Auschwitz, so die Hoffnung, habe die Judenfeindschaft so gründlich diskreditiert, dass sie nicht mehr wiederkommen könne. Diese Hoffnung erwies sich als verfrüht.
 
-Seit etwa 2010 beobachten alle westlichen Länder einen **Wiederanstieg antisemitischer Vorfälle**. In Frankreich, Deutschland, Großbritannien, den USA, überall. Die neuen Formen sind vielfältig: rechtsextremer Rassenantisemitismus, der auf die alten Bahnen von Chamberlain und den Protokollen zurückgreift; islamistischer Antisemitismus, der jüdische Ziele ins Fadenkreuz nimmt; antizionistischer Antisemitismus, der die Grenze zwischen Kritik an Israel und Judenfeindschaft verwischt.
-Chamberlain (Die Grundlagen des neunzehnten Jahrhunderts, 1899) steht dabei für die rassenbiologische, die Protokolle der Weisen von Zion – eine antisemitische Fälschung um 1900 – für die verschwörungstheoretische Spielart des modernen Antisemitismus (Kapitel 3.7)
+Seit etwa 2010 beobachten alle westlichen Länder einen **Wiederanstieg antisemitischer Vorfälle**. 
+In Frankreich, Deutschland, Großbritannien, den USA, überall. Die neuen Formen sind vielfältig: rechtsextremer Rassenantisemitismus, 
+basierend auf Houston Stewart Chamberlain (Die Grundlagen des neunzehnten Jahrhunderts, 1899) und den Protokollen der Weisen von Zion, eine antisemitische Fälschung um 1900.
+Dazu kommen der islamistische Antisemitismus, der jüdische Ziele ins Fadenkreuz nimmt, und der antizionistischer Antisemitismus, der die Grenze zwischen Kritik an Israel und Judenfeindschaft verwischt.
 
 Nach dem Hamas-Angriff vom 7. Oktober 2023 und dem darauf folgenden Gaza-Krieg haben diese Tendenzen eine Intensität erreicht, die seit 1945 nicht mehr gesehen wurde. An westlichen Universitäten, auf Demonstrationen, in sozialen Medien wird eine Sprache verwendet, die vor zehn Jahren noch undenkbar war.
 
