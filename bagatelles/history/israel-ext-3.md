@@ -1,4 +1,4 @@
-# Kapitel 3: Emanzipation und Verfolgung – Die Juden in der Neuzeit (1492–1897)
+# III. Emanzipation und Verfolgung – Die Juden in der Neuzeit (1492–1897)
 
 
 Die Neuzeit ist für die jüdische Geschichte eine Periode von außerordentlicher Widersprüchlichkeit. Einerseits brachte sie – nach Jahrhunderten der mittelalterlichen Rechtlosigkeit – formale Gleichstellung, bürgerliche Emanzipation, intellektuelle Befreiung: Juden wurden Wissenschaftler, Dichter, Politiker, Unternehmer, Bürger. Andererseits erzeugte dieselbe Moderne einen neuen, gefährlicheren Antisemitismus – nicht religiös und damit prinzipiell überwindbar durch Konversion, sondern rassistisch und damit unentrinnbar durch Geburt.

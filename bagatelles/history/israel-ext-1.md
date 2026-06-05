@@ -1,4 +1,4 @@
-# Kapitel 1: Am Anfang – Die Juden von den Ursprüngen bis 135 CE
+# I. Am Anfang – Die Juden von den Ursprüngen bis 135 CE
 
 Dieses Kapitel geht zurück bis zu den Ursprüngen des jüdischen Volkes in der späten Bronzezeit. 
 Das Problem: **Wir wissen viel weniger, als allgemein angenommen wird.**
@@ -480,7 +480,7 @@ Und die Erinnerung an den Tempel – die Hoffnung auf Wiederkehr nach Jerusalem 
 
 ---
 
-## Was uns diese Periode lehrt
+## 14. Schluss
 
 Die Geschichte der Juden von den Anfängen bis 135 CE ist die Geschichte eines kleinen Volkes, das durch außergewöhnliche kulturelle und religiöse Kreativität Katastrophen überlebte, die andere vernichtet hätten.
 
