@@ -1,4 +1,4 @@
-# II. Zwischen den Völkern – Die Juden in der Diaspora (135–1492)
+# II. Diaspora (135–1492)
 
 Dieses Kapitel beginnt 135 CE mit dem Bar-Kochba-Aufstand und der hadrianischen Vernichtung: Juden wurden aus Jerusalem verbannt, die Provinz Judäa in Syria Palaestina umbenannt, der letzte Rest jüdischer Staatlichkeit ausgelöscht.
 
