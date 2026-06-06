@@ -119,13 +119,13 @@ parts:
         title: Geschichte der Juden *
         sections:
           - file: history/israel-ext-1
-            title: Von den Anfängen bis zum Ende Jerusalems
+            title: Die Ursprünge (bis 135 CE)
           - file: history/israel-ext-2
-            title: Vom Ende Jerusalems bis zur Vertreibung aus Spanien
+            title: Diaspora (135–1492)
           - file: history/israel-ext-3
-            title: Von der Vertreibung aus Spanien bis zum Baseler Kongress
+            title: Neuzeit (1492–1897)
           - file: history/israel-ext-4
-            title: Vom Baseler Kongress bis Auschwitz
+            title: Von Basel bis Auschwitz
           - file: history/israel-ext-5
             title: Der Weg zum Staat Israel
           - file: history/israel-ext-6

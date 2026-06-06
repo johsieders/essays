@@ -1,4 +1,4 @@
-# I. Am Anfang – Die Juden von den Ursprüngen bis 135 CE
+# I. Die Ursprünge
 
 Dieses Kapitel geht zurück bis zu den Ursprüngen des jüdischen Volkes in der späten Bronzezeit. 
 Das Problem: **Wir wissen viel weniger, als allgemein angenommen wird.**

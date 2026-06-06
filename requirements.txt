@@ -1,6 +1,11 @@
 matplotlib
 numpy
 torch
+google-genai
+openai
+mistralai<2
+anthropic
+python-dotenv
 
 jupyter-book==0.15.1
 sphinx-book-theme==1.0.1

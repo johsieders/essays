@@ -2,6 +2,9 @@
 archive/philosophy_old/_build/
 **/_build/
 
+# Secrets — never commit real keys (.env.example is safe to commit)
+.env
+
 # Python
 __pycache__/
 *.py[cod]
@@ -29,3 +32,7 @@ build/
 * 3
 * 4
 * 5
+# Generated QA artifacts (qa_review.py output)
+*-qa.md
+*-qa-gemini.md
+*-rev-claude.md
