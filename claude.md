@@ -12,6 +12,41 @@ The site is live at **https://www.jsiedersleben.de/** with HTTPS enabled.
 
 ---
 
+## Tooling: `improve.py`
+
+A multi-model writing pipeline for revising essay chapters (successor to the
+old `qa_review.py`). For each file it runs three roles in sequence:
+
+```
+REVIEW  ->  PLAN  ->  WRITE
+```
+
+- **REVIEW** — several models critique the chapter in parallel; comments are
+  merged into `<stem>-comments.md` with reviewers anonymized as
+  *Reviewer A / B / C* (to neutralize LLM self-preference bias).
+- **PLAN** — one model accepts/refutes each point → `<stem>-plan.md` (kept,
+  tracked in git; holds the valuable editorial reasoning).
+- **WRITE** — one model rewrites the chapter, overwriting the original in
+  place; the untouched original is first copied to `<stem>-backup.md`.
+
+Roles are decoupled from providers via a `MODELS` registry, so any model can
+play any role:
+
+```bash
+improve myfile.md                                            # defaults
+improve myfile.md --review gemini,mistral --plan openai --write claude
+improve --dry-run FILE        # print prompts, call no APIs
+improve --no-write FILE       # stop after PLAN
+improve --jobs 2 FILE...      # bounded multi-file concurrency
+```
+
+Each model receives the author profile + reference papers as context (system
+prompt); `--no-context` omits it. Per-stage and total timers are printed.
+Artifacts `*-backup.md` and `*-comments.md` are git-ignored; `*-plan.md` is
+tracked. See `README.md` for full documentation.
+
+---
+
 ## Version 0.8 Changes (October 23, 2025)
 
 ### Content Expansion & Reorganization ✅
