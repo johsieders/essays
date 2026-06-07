@@ -32,7 +32,12 @@ build/
 * 3
 * 4
 * 5
-# Generated QA artifacts (qa_review.py output)
+# Generated artifacts (improve.py output)
+# Note: *-plan.md is deliberately NOT ignored — it holds valuable insights
+# and is tracked in git. Only the throwaway intermediates are excluded.
+*-backup.md
+*-comments.md
+# legacy qa_review.py artifacts
 *-qa.md
 *-qa-gemini.md
 *-rev-claude.md
