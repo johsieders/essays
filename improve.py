@@ -72,6 +72,7 @@ import concurrent.futures
 import pathlib
 import shutil
 import sys
+import time
 
 from dotenv import load_dotenv
 
@@ -249,6 +250,14 @@ def _anon_label(index: int) -> str:
     return f"Reviewer {chr(ord('A') + index)}"
 
 
+def _fmt_secs(seconds: float) -> str:
+    """0.4 -> '0.4s', 73.2 -> '1m13.2s' for human-readable timings."""
+    if seconds < 60:
+        return f"{seconds:.1f}s"
+    minutes, secs = divmod(seconds, 60)
+    return f"{int(minutes)}m{secs:04.1f}s"
+
+
 def merge_comments(reviews: list[tuple[str, str]]) -> str:
     """Merge critiques into one document, ANONYMIZING the authors.
 
@@ -278,6 +287,9 @@ def process(
     context: str,
 ) -> None:
     chapter = path.read_text()
+    # perf_counter is monotonic and unaffected by clock changes — the right
+    # tool for measuring elapsed wall-clock time of each stage.
+    t_start = time.perf_counter()
 
     # --- dry run: show exactly what each role would send, hit no API --------
     if dry_run:
@@ -319,19 +331,24 @@ def process(
     for name in review_models:
         print(f"[{path.name}] REVIEW: asking {name} ({MODELS[name][1]})...")
 
+    t_review = time.perf_counter()
     critiques: dict[str, str] = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=len(review_models)) as pool:
-        futures = {
-            pool.submit(run_model, name, context, REVIEW_PROMPT.format(chapter=chapter)): name
-            for name in review_models
-        }
+        # Each future records its own start so we can report per-reviewer time
+        # alongside the wall-clock for the whole (parallel) stage.
+        starts = {}
+        futures = {}
+        for name in review_models:
+            starts[name] = time.perf_counter()
+            futures[pool.submit(run_model, name, context, REVIEW_PROMPT.format(chapter=chapter))] = name
         for future in concurrent.futures.as_completed(futures):
             name = futures[future]
             try:
                 critiques[name] = future.result()
-                print(f"  [{name}] done")
+                print(f"  [{name}] done in {_fmt_secs(time.perf_counter() - starts[name])}")
             except Exception as exc:  # noqa: BLE001 - keep the run alive
                 print(f"  [{name}] FAILED, skipping: {exc}", file=sys.stderr)
+    review_secs = time.perf_counter() - t_review
 
     if not critiques:
         print(f"[{path.name}] all reviewers failed; nothing to do.", file=sys.stderr)
@@ -346,34 +363,43 @@ def process(
     comments_path = with_suffix(path, "-comments")
     comments_path.write_text(comments)
     print(f"  -> {comments_path}  (merged anonymized comments — delete manually)")
+    print(f"  REVIEW done in {_fmt_secs(review_secs)}")
 
     # --- 2. PLAN: accept/refute each point. Kept (tracked in git). ----------
     print(f"[{path.name}] PLAN: asking {plan_model} ({MODELS[plan_model][1]})...")
+    t_plan = time.perf_counter()
     plan = run_model(plan_model, context, PLAN_PROMPT.format(chapter=chapter, comments=comments))
+    plan_secs = time.perf_counter() - t_plan
     plan_path = with_suffix(path, "-plan")
     plan_path.write_text(plan)
     print(f"  -> {plan_path}  (the plan: accept/refute per point — KEPT)")
+    print(f"  PLAN done in {_fmt_secs(plan_secs)}")
 
     # --- 3. WRITE: rewrite and overwrite the original. ----------------------
     # If WRITE fails, leave the original untouched and report — the backup,
     # comments, and plan are already on disk, so no work is lost.
     if write:
         print(f"[{path.name}] WRITE: asking {write_model} ({MODELS[write_model][1]})...")
+        t_write = time.perf_counter()
         try:
             revised = run_model(
                 write_model, context, WRITE_PROMPT.format(chapter=chapter, comments=comments)
             )
         except Exception as exc:  # noqa: BLE001 - don't clobber the original on failure
             print(
-                f"  [WRITE] FAILED, original NOT overwritten: {exc}\n"
+                f"  [WRITE] FAILED after {_fmt_secs(time.perf_counter() - t_write)}, "
+                f"original NOT overwritten: {exc}\n"
                 f"      Re-run to retry (comments cached in {comments_path}).",
                 file=sys.stderr,
             )
             return
         path.write_text(revised)
         print(f"  -> {path}  (OVERWRITTEN — original in {backup_path} and git)")
+        print(f"  WRITE done in {_fmt_secs(time.perf_counter() - t_write)}")
     else:
         print("  (WRITE skipped: --no-write)")
+
+    print(f"[{path.name}] TOTAL {_fmt_secs(time.perf_counter() - t_start)}")
 
 
 # =========================================================================
