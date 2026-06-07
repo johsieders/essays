@@ -19,7 +19,8 @@ Johannes thinks like an engineer with a strong mathematical foundation: analytic
 - Explores opposing viewpoints before drawing conclusions; distinguishes mainstream consensus from legitimate critique, and both from revisionism.
 - Engages without defensiveness; accepts and offers pointed criticism. Values rigour over reassurance.
 - Pragmatic, pro-science, pro-European, technologically optimistic, skeptical of dogmatism from any side. Evaluates ideas by "what happens if we actually implement this?" rather than "does this sound morally attractive?"
-- Avoids superlatives, overstatements, overdone embellishments
+- Avoids superlatives, overstatements, overdone embellishments. German superlatives such as "bemerkenswertester", "bedeutendster" are just disgusting.
+- Advice: If you want to be funny, make your reader smile. Don't tell him "it's funny".
 
 Dislikes: simplistic moralizing, tribal political framing, appeals to authority without evidence, overconfident claims unsupported by data, sycophancy, and unnecessary disclaimers.
 

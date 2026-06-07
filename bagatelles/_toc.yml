@@ -119,7 +119,7 @@ parts:
         title: Geschichte der Juden *
         sections:
           - file: history/israel-ext-1
-            title: Die Ursprünge (bis 135 CE)
+            title: Ursprünge (bis 135 CE)
           - file: history/israel-ext-2
             title: Diaspora (135–1492)
           - file: history/israel-ext-3
@@ -127,9 +127,9 @@ parts:
           - file: history/israel-ext-4
             title: Von Basel bis Auschwitz
           - file: history/israel-ext-5
-            title: Der Weg zum Staat Israel
+            title: Israel entsteht
           - file: history/israel-ext-6
-            title: Von der Gründung Israels bis zum Sechs-Tage-Krieg
+            title: Von der Gründung bis zum Sechs-Tage-Krieg
           - file: history/israel-ext-7
             title: Vom Sechs-Tage-Krieg bis Oslo 
           - file: history/israel-ext-8
