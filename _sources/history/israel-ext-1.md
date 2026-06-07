@@ -1,4 +1,4 @@
-# I. Die Ursprünge
+# I. Ursprünge
 
 Dieses Kapitel geht zurück bis zu den Ursprüngen des jüdischen Volkes in der späten Bronzezeit. 
 Das Problem: **Wir wissen viel weniger, als allgemein angenommen wird.**
