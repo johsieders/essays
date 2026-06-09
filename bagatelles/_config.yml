@@ -8,6 +8,10 @@ logo: pict-03.png
 exclude_patterns:
   - mathematics/pontryagin.md
   - mathematics/tangent-cotangent.md
+  # improve.py artifacts: tracked in git, but not built/published
+  - "**/*-plan.md"
+  - "**/*-backup.md"
+  - "**/*-comments.md"
 
 execute:
   execute_notebooks: off  # Use pre-executed outputs from notebooks
