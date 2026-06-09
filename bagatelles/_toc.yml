@@ -115,29 +115,35 @@ parts:
         title: The way to the Korean War
       - file: history/31-edinburgh
         title: Edinburgh
-      - file: history/israel-ext-0
+      - file: israel/israel-0
         title: Geschichte der Juden *
         sections:
-          - file: history/israel-ext-1
+          - file: israel/israel-1
             title: Ursprünge (bis 135 CE)
-          - file: history/israel-ext-2
+          - file: israel/israel-2
             title: Diaspora (135–1492)
-          - file: history/israel-ext-3
+          - file: israel/israel-3
             title: Neuzeit (1492–1897)
-          - file: history/israel-ext-4
+          - file: israel/israel-4
             title: Von Basel bis Auschwitz
-          - file: history/israel-ext-5
-            title: Israel entsteht
-          - file: history/israel-ext-6
-            title: Von der Gründung bis zum Sechs-Tage-Krieg
-          - file: history/israel-ext-7
-            title: Vom Sechs-Tage-Krieg bis Oslo 
-          - file: history/israel-ext-8
+          - file: israel/israel-5
+            title: Israel
+          - file: israel/israel-6
+            title: Von der Gründung bis zum Sechstagekrieg
+          - file: israel/israel-7
+            title: Vom Sechstagekrieg bis Oslo 
+          - file: israel/israel-8
             title: Von Oslo bis 2026 
-          - file: history/israel-ext-9
+          - file: israel/israel-9
             title: Das Flüchtlingsproblem   
-          - file: history/israel-ext-10
-            title: Die Stationen des jüdischen Volkes
+          - file: israel/israel-10
+            title: Stationen des jüdischen Volkes
+          - file: israel/glossary
+            title: Glossar
+          - file: israel/index-of-names
+            title: Namensverzeichnis
+          - file: israel/references
+            title: Literatur
   
   - caption: Religion
     chapters:
