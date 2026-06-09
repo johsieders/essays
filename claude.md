@@ -126,8 +126,9 @@ essays/
 │   ├── westfield2.png               # Logo
 │   ├── references.bib               # Bibliography (40+ entries)
 │   └── requirements.txt             # Python dependencies
+├── deploy.sh                        # ACTIVE: local build + publish to gh-pages
 ├── .github/workflows/
-│   └── deploy.yml                   # ACTIVE: Simple workflow
+│   └── deploy.yml.disabled          # DISABLED (Jupyter Book CI version trouble)
 ├── content/                         # ARCHIVED: Old Jekyll markdown files
 ├── philosophy_old/                  # ARCHIVED: Old separate Jupyter Book
 ├── index.md                         # ARCHIVED: Old Jekyll landing page
@@ -137,8 +138,9 @@ essays/
 ### Active vs Archived
 
 **Active (deployed)**:
-- `bagatelles/` → Built and deployed by workflow
-- `.github/workflows/deploy.yml` → Current deployment workflow
+- `bagatelles/` → Built locally by `deploy.sh` and published to `gh-pages`
+- `deploy.sh` → Current deployment script (run locally)
+- `.github/workflows/deploy.yml.disabled` → Old Actions workflow, disabled
 
 **Archived (not deployed, kept for reference)**:
 - `content/` → Original 38+ markdown essays
@@ -212,34 +214,30 @@ essays/
 
 **Live Site**: https://jsiedersleben.de/
 **GitHub Repo**: https://github.com/johsieders/essays
-**Deployment**: GitHub Actions → GitHub Pages
+**Deployment**: **local build via `./deploy.sh`** → `gh-pages` branch → GitHub Pages
 **SSL**: Let's Encrypt (automatic via GitHub Pages)
 
-### Workflow (`.github/workflows/deploy.yml`)
+### Publishing with `deploy.sh`
 
-```yaml
-name: Deploy Bagatelles
+Publishing is done **locally**, not by GitHub Actions. The Actions workflow
+(`.github/workflows/deploy.yml.disabled`) is **disabled** because of recurring
+Jupyter Book version trouble in CI.
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'bagatelles/**'
-      - '.github/workflows/deploy.yml'
+> **Important:** `git push origin main` only syncs source — it does **not** build
+> or deploy. The live site changes only when `./deploy.sh` is run.
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - Checkout repository
-      - Set up Python 3.10
-      - Install dependencies from bagatelles/requirements.txt
-      - Build Jupyter Book (jupyter-book build bagatelles/)
-      - Deploy to GitHub Pages (peaceiris/actions-gh-pages@v3)
-```
+`./deploy.sh` (run from a clean `main`):
 
-**Simple, clean, works perfectly.**
+1. Verifies you are on `main` with no uncommitted changes.
+2. `git push origin main` (sync source).
+3. `jupyter-book build bagatelles/` — builds the HTML locally.
+4. Checks out `gh-pages`, copies `bagatelles/_build/html/*` to the repo root,
+   removes build cruft, commits as `Deploy: <timestamp>`, and pushes `gh-pages`.
+5. Switches back to `main`.
+
+GitHub's built-in *pages build and deployment* (the only Actions runs you will
+see, on branch `gh-pages`) then serves the pushed static files; the site is live
+in 1–2 minutes.
 
 ### Domain Configuration
 
@@ -584,7 +582,7 @@ The repository now showcases 35+ high-quality essays and presentations across ph
 - **Live URL**: https://jsiedersleben.de/
 - **GitHub**: https://github.com/johsieders/essays
 - **Structure**: Unified Jupyter Book (`bagatelles/`)
-- **Deployment**: GitHub Actions → GitHub Pages
+- **Deployment**: local `./deploy.sh` → `gh-pages` → GitHub Pages
 - **SSL**: Let's Encrypt (auto-renewed)
 - **Build time**: ~45 seconds
 - **Content**: 35+ essays & presentations, 10 sections (including PDF presentations)
