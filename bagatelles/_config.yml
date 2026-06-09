@@ -12,6 +12,7 @@ exclude_patterns:
   - "**/*-plan.md"
   - "**/*-backup.md"
   - "**/*-comments.md"
+  - israel/next-steps.md   # internal working doc, not for publication
 
 execute:
   execute_notebooks: off  # Use pre-executed outputs from notebooks
@@ -66,6 +67,10 @@ sphinx:
       navigation_with_keys: true
       show_prev_next: true
     bibtex_reference_style: author_year
+    # The essays use intentional heading schemes (section-numbered sub-pages,
+    # e.g. "## 2.1 …"); silence MyST's H1/level-jump lint.
+    suppress_warnings:
+      - myst.header
     # proof_theorem_title: name
     html_static_path:
       - _static
