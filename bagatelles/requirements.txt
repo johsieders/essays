@@ -1,9 +1,35 @@
+# Pinned to the toolchain validated locally (June 2026).
+# These versions build the book reproducibly; do not loosen without a test build.
+# The four "core" pins below (esp. myst-parser/sphinx/docutils) are what broke
+# CI in the past when resolved freely — keep them exact.
+
+# --- Jupyter Book core (pinned) ---
 jupyter-book==0.15.1
+myst-parser==0.18.1
+myst-nb==0.17.2
+sphinx==5.0.2
+docutils==0.18.1
+
+# --- Themes (pinned) ---
 sphinx-book-theme==1.0.1
 pydata-sphinx-theme==0.15.4
-sphinx-proof
-sphinx-togglebutton
+
+# --- Extensions (pinned) ---
+sphinx-proof==0.4.0
+sphinx-togglebutton==0.3.2
 sphinxcontrib-bibtex==2.5.0
-myst_nb
-torch
-git+https://github.com/johsieders/sandbox.git@main#subdirectory=sandbox/math4phys
+
+# --- Python 3.13 compatibility ---
+# Sphinx 5.0.2's epub builder imports stdlib `imghdr`, which was REMOVED in
+# Python 3.13. This backport restores it. Without this line the build fails with
+# "No module named 'imghdr'" on any 3.13 interpreter. (Was installed but
+# undocumented in the working venv until the June 2026 reproducibility audit.)
+standard-imghdr==3.13.0
+
+# --- Optional / dev only ---------------------------------------------------
+# math4phys is NOT needed to build the site: notebooks execute with
+# `execute_notebooks: off` and diff-operators.ipynb ships pre-executed outputs.
+# It is only required to RE-RUN that one notebook. Pinned to a commit (not @main)
+# so it never floats. Uncomment to regenerate the notebook.
+# (torch was removed: nothing in the book imports it — math4phys uses sympy.)
+# git+https://github.com/johsieders/sandbox.git@381a3c6de073b26877b37cc6b93307ff869f3de9#subdirectory=sandbox/math4phys
