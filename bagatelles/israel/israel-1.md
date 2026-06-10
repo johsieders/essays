@@ -510,5 +510,29 @@ Die Tempelzerstörung 70 CE hätte das Ende sein können, so wie die assyrische 
 
 ---
 
-*Quellen und Vertiefung:* {cite}`finkelstein2002` (Archäologie und Bibel); {cite}`keel1992` (Religionsgeschichte Israels); {cite}`josephus_krieg_il`; {cite}`cohen1987maccabees_il`; {cite}`goodman2007`; {cite}`sarna1986`; {cite}`kugel2007`; {cite}`vermes1973`; {cite}`sanders1992`; {cite}`boyarin2004` (Trennung Judentum/Christentum); {cite}`yadin1971` (die Briefe); {cite}`eshel_scrolls`.
+*Quellen und Vertiefung:* 
+
+{cite}`finkelstein2002` << zwei, drei Sätze über das Buch >>
+
+{cite}`keel1992` (Religionsgeschichte Israels)
+
+{cite}`josephus_krieg_il`
+
+{cite}`cohen1987maccabees_il`
+
+{cite}`goodman2007`
+
+{cite}`sarna1986`
+
+{cite}`kugel2007`
+
+{cite}`vermes1973`
+
+{cite}`sanders1992`
+
+{cite}`boyarin2004` (Trennung Judentum/Christentum)
+
+{cite}`yadin1971` (die Briefe)
+
+{cite}`eshel_scrolls`.
 
