@@ -689,5 +689,3 @@ Drei Philosophen versuchen **Synthesen**:
 2. **Pessimistisch** (MacIntyre): Konsens ist **instabil** – ohne gemeinsame Begründung kollabieren Regeln im Konfliktfall
 
 **Die offene Frage**: Reicht **Regelkonsens** ohne **Begründungskonsens**? Oder ist das **brüchig**?
-
----

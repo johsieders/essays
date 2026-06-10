@@ -374,5 +374,3 @@ Wir schwanken zwischen beiden:
 Vielleicht ist die Antwort: **Beide haben recht – je nach Zeitskala**. Kurzfristig ist vieles Zufall (Prediger). Langfristig setzt sich oft Kompetenz durch (Sprüche). Aber **garantiert** ist nichts.
 
 Kohelet ist der Realist, der sagt: "Selbst wenn die Sprüche statistisch oft recht haben – sie versprechen zu viel. Und wenn es darauf ankommt, kann alles schiefgehen."
-
----

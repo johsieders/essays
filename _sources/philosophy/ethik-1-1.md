@@ -438,5 +438,3 @@ Die folgende Matrix bietet eine Übersicht über die wichtigsten Dimensionen all
 - **Freiheit-Streit**: Sartre, Kant (radikal frei) vs. Stoiker, Spinoza (Determinismus)
 - **Jenseits-Streit**: Platon, NT, Thomas (ja) vs. Epikur, Nietzsche, Sartre (nein)
 - **Konvergenz**: Fast alle (außer Nietzsche) sehen Mitleid/Sympathie als moralisch wertvoll
-
----

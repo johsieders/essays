@@ -309,5 +309,3 @@ Die Trennlinie verläuft entlang der **Metaphysik der Pflicht**:
 Wir predigen stoische Verantwortung für das Weltklima, während wir epikureisch optimierte Lieferdienste nutzen, um die Unannehmlichkeiten des Regens zu vermeiden. 
 
 **Wir sind Stoiker in der Bio (LinkedIn-Profil) und Epikureer in der Runtime.**
-
----

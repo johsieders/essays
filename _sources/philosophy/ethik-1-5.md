@@ -757,5 +757,3 @@ dieser Abschnitt auf die **Bruchlinien** – jene fundamentalen Divergenzen, die
 **Pessimistische Deutung**: Nein – ohne Begründung sind Regeln **brüchig** (im Konfliktfall kollabieren sie).
 
 **Die größte offene Frage der Philosophie**: Kann pluralistische Gesellschaft mit **Spaltungen** leben?
-
----

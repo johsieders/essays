@@ -834,5 +834,3 @@ Wenn es erschaffen ist – warum dann **diese** Werte und nicht andere? **Belieb
 2. **Pessimistisch** (Nietzsche, MacIntyre): Ohne Konsens über Ziele ist Ethik **fragmentiert** – nur noch Regeln ohne Begründung. Warum tugendhaft sein, wenn wir nicht wissen, **wozu**?
 
 **Die offene Frage für das 21. Jahrhundert**: Können wir mit **Zielvielfalt** leben, oder brauchen wir **Konsens** über das summum bonum?
-
----

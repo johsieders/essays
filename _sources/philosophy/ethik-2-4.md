@@ -503,5 +503,3 @@ Beide waren politisch engagiert:
 Wir haben uns **für Mill** entschieden (utilitaristische Triage). Aber wir **predigen** Kant (Menschenwürde). Heuchelei?
 
 **Die Frage bleibt**: Sind wir heimlich **Kantianer** (wenn es um uns geht) und **Millianer** (wenn es um andere geht)?
-
----
