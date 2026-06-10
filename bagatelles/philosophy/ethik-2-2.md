@@ -381,5 +381,3 @@ Westliche Gesellschaften schwanken zwischen beiden:
 - **Buddhistische Elemente**: Achtsamkeit, Selbstfindung, Loslösung, Work-Life-Balance (liberale Werte)
 
 Können wir beides vereinen? Oder ist die Spannung unauflösbar?
-
----

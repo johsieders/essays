@@ -688,5 +688,3 @@ Philosophische Traditionen überleben nicht unbedingt, weil sie **wahr** sind, s
 
 **Und heute?** 
 Seit dem 19. Jahrhundert lesen wir Aristoteles wieder **historisch** statt thomistisch. Wir sehen: Der Mann, der die Grundlage der katholischen Theologie wurde, hätte selbst – streng genommen – von der Kirche verdammt werden müssen.
-
----
