@@ -54,7 +54,6 @@ The paradox is double: why it lasted so long, and how it ended at all. The long 
 ---
 
 ## Irish and Jews - a Similar Fate?
-<< tentative title >>
 
 The Irish and the Jews have long invited comparison, and the comparison is worth making briefly — provided it is not pressed too hard, for the differences matter as much as the likenesses.
 
