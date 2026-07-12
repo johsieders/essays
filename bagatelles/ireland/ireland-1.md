@@ -1,4 +1,4 @@
-# Chapter 1 — The World Before England (1 CE – 1168)
+# I. The World Before England (1 CE – 1168)
 
 *[Draft 0.2 — incorporates margin comments on Draft 0.1. Irish terms use natural English forms pending glossary lock. Change-log at end.]*
 
@@ -98,8 +98,22 @@ They did it under the banner of an idea peculiarly their own: *peregrinatio pro 
 
 The roll of these wandering monks is long and consequential. Columba — Colum Cille, "dove of the church" — left Ireland in 563 for the island of Iona off the Scottish coast, and from that windswept base the conversion of Pictish and northern Britain was driven; Iona became a mother-house whose influence reached down into Northumbria and seeded the great monastery of Lindisfarne. Columbanus, the more austere and combative of the two great Columban figures, struck out around 590 into Gaul and beyond, founding monasteries at Luxeuil and, eventually, at Bobbio in northern Italy, scolding kings and even popes in his fierce Latin along the way, and planting Irish monastic discipline deep in the continental ground. Behind and after them came others — Gall, who gave his name to the great Swiss abbey of Sankt Gallen; Aidan, who carried Iona's Christianity into Northumbria; Killian at Würzburg; Irish scholars who would later ornament the court of Charlemagne. Wherever they went they carried books, learning, the private confessional discipline that would eventually become the norm for the whole Western Church, and the conviction that exile itself was holy.
 
-This is the inversion to sit with. The periphery re-evangelised the centre. The pupil became the teacher. The island that received the faith last, and from others, gave it back to the continent in its hour of collapse — so that a meaningful share of the learning and religious structure of early medieval Europe runs back through these Irish wanderers and the bare island scriptoria that trained them. One can overstate it; the popular slogan that the Irish "saved civilisation" flattens a tangled story in which Byzantium and the continental houses and, later, the Islamic world all preserved and transmitted at least as much. But the core of it is true and remarkable, and it is the first time in this book — it will not be the last — that we watch Ireland's very marginality become, paradoxically, a kind of power: the edge outlasting the centre, and feeding it.
-<< a few lines on John Scotus >>
+And the outflow carried more than scribes. In the middle of the ninth century a man called John Scotus Eriugena — a name that says Irishman twice over, 
+in two languages, as though one assertion were not enough — appeared at the court of Charles the Bald and proceeded to think more daringly 
+than anyone else in Carolingian Europe. He read Greek, which almost no one in the West could still do, and he translated the most difficult 
+Greek theology into Latin. Then he wrote a vast work of his own, the Periphyseon, in which he set out to reason his way through the whole structure of reality 
+from God outward and back again. It was too much for later authorities, who condemned it, some four hundred years after his death, and ordered the copies burned. 
+But the point for us is the geography of the thing. The sharpest speculative mind on the continent, at the court of Charlemagne's grandson, 
+had been formed on a rain-soaked island at the edge of the world that had been pagan four centuries earlier — and he was reading Greek there when Rome could not.
+
+This is the inversion to sit with. The periphery re-evangelised the centre. The pupil became the teacher. 
+The island that received the faith last, and from others, gave it back to the continent in its hour of collapse — so that a meaningful share of the learning 
+and religious structure of early medieval Europe runs back through these Irish wanderers and the bare island scriptoria that trained them. 
+One can overstate it; the popular slogan that the Irish "saved civilisation" flattens a tangled story in which Byzantium and the continental houses and, later, 
+the Islamic world all preserved and transmitted at least as much. But the core of it is true and remarkable, 
+and it is the first time in this book — it will not be the last — that we watch Ireland's very marginality become, paradoxically, a kind of power: 
+the edge outlasting the centre, and feeding it.
+
 
 ### The messy reality beneath the gold
 
