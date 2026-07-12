@@ -273,6 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ireland-0.html">Story of the Irish *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="ireland-1.html">The World Before England (1 CE–1168)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ireland-2.html">The Lordship and the Two Nations (1169–1541)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -497,7 +498,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -513,6 +516,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">init.md — chapter chat bootstrap (Irish history)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-invoke">HOW TO INVOKE</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -524,6 +537,38 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="init-md-chapter-chat-bootstrap-irish-history">
 <h1><a class="reference external" href="http://init.md">init.md</a> — chapter chat bootstrap (Irish history)<a class="headerlink" href="#init-md-chapter-chat-bootstrap-irish-history" title="Permalink to this heading">#</a></h1>
+<!--
+BOOT NOTE — read me first (a note to myself)
+
+Claude can only fetch a URL that reaches it through a *trusted* path: a link I
+paste into the chat myself, or one returned by a prior web search or fetch. A URL
+that appears *only* inside a fetched file — like this manifest — does NOT count as
+trusted, even if I trust the file completely. Claude will refuse it with a
+permissions error. This is a deliberate prompt-injection guard and there is no way
+to mark a file or repo as "trusted" to get around it.
+
+Practical consequence for booting a session:
+
+  - Don't expect Claude to walk this manifest and fetch each file on its own.
+    The links named below are refused when Claude only knows them from here.
+
+  - Instead, EITHER paste the raw URLs into the chat myself, one message,
+    in load order — then every link counts as user-provided and resolves —
+    OR paste the contents of this file inline rather than having Claude fetch it,
+    which has the same effect (the URLs arrive as my text, not as fetched content).
+
+  - If a boot step still fails on provenance, just drop that raw link into the
+    chat and it goes through. Same URL, trusted path.
+
+In short: I supply the links; the manifest only says which ones and in what order.
+-->
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-to-invoke">
+<h1>HOW TO INVOKE<a class="headerlink" href="#how-to-invoke" title="Permalink to this heading">#</a></h1>
+<p>Fetch <a class="reference external" href="https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/ireland/init.md">https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/ireland/init.md</a></p>
+<p>The chat starts with none of your files in view, so it must fetch this
+file first; the URLs below then chain from it. (Alternatively, just paste
+the three URLs below directly with N filled in.)</p>
 <p>To start a chapter working session, fetch these three files in order and
 treat them as the authoritative context for everything that follows. Then
 give me a one-line confirmation of each (title + draft version) before we
@@ -534,8 +579,6 @@ revisionism stance, glossary):
 <a class="reference external" href="https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/ireland/canon.md">https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/ireland/canon.md</a></p></li>
 <li><p>Style guide (how the prose should read):
 <a class="reference external" href="https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/style.md">https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/style.md</a></p></li>
-<li><p>The chapter in play — replace N with the chapter number:
-<a class="reference external" href="https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/ireland/ireland-N.md">https://raw.githubusercontent.com/johsieders/essays/main/bagatelles/ireland/ireland-N.md</a></p></li>
 </ol>
 <p>If any fetch fails, say so and stop — do not proceed on a stale or
 missing file.</p>
@@ -577,6 +620,23 @@ missing file.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">init.md — chapter chat bootstrap (Irish history)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-invoke">HOW TO INVOKE</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
