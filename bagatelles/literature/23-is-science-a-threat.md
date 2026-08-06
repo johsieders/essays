@@ -65,7 +65,7 @@ all is Richard Dawkins, renown as a biologist and as a critic of religion. His b
 (hard science) tells the story of evolution, and his book *The God Delusion* (soft science and
 heavily criticized for scientism) is a philosophical examination of the fallacies of religion.
 
-### 2 History
+## 2 History
 Let us begin with the Greeks. 
 Before about 600 BCE, everything was down to the gods: sunshine, rain, hail and thunderstorms.
 Anaximander of Milet, a pupil of Thales, was the first to question this attitude. He correctly observed
@@ -112,7 +112,7 @@ every unsolved scientific problem, every phenomenon that science cannot explain,
 defended against the attacks of science. They are, of course, dead wrong. To see why, let us look at
 three prominent examples: classical physics, modern physics, and evolution.
 
-### 3 Classical Physics
+## 3 Classical Physics
 I will use classical mechanics to make my point, which is to explain the nature of classical physics and
 what it means for religion. Classical mechanics includes the law of gravity, Newton's three laws and
 the equations of motion. It has been accepted by virtually everyone except a few stubborn people
@@ -156,7 +156,7 @@ Does He really? The theist is free to choose his preferred answer without interf
 Hard science completely ignores his choice, it ignores religion altogether. There is no conflict at all,
 unless the theist takes the Bible literally. But then no dialogue is possible.
 
-### 4 Modern Physics
+## 4 Modern Physics
 I will use relativity and quantum mechanics to make my point, which is to explain the nature
 of modern physics and what it means for religion. Relativity and quantum mechanics are
 models in exactly the same way as classical mechanics. Classical mechanics fails when there are two
@@ -200,7 +200,7 @@ that modern physics is so weird that it doesn't raise any new contradictions wit
 where the story ends for both theist and atheist.
 
 
-### 5 Evolution
+## 5 Evolution
 In his book, *On the Origin of Species*, Darwin conveys two messages: (1) the evolution of animals from
 single-celled organisms to Homo sapiens and (2) the mechanisms of mutation and selection. When he
 says that animals evolved over millions of years, he contradicts the Bible in at least two ways: first, he
@@ -238,7 +238,7 @@ being entirely by chance, a claim that no one makes. The bomb, of course, will n
 how many trillion times you fire it.
 
 
-### 6 The Veil
+## 6 The Veil
 We humans are an insignificant species, tiny creatures, living for a few world seconds on a planet that
 is not even a grain of dust in the universe, equipped with the senses and the brain that evolution has
 happened to give us. We don't smell carbon monoxide because it hardly exists in nature, we have no
@@ -274,8 +274,7 @@ the veil where God lives, where the ghosts are, where my ancestors float around 
 and so on. Fair enough, why not? But who cares?
 
 
-
-### Appendix A: Evolution Revisited
+## Appendix A: Evolution Revisited
 The evolution argument can lead us a long way: I said earlier that both the hard and soft sciences are 
 an eternal discourse, a sequence of competing theories that come and go without ever reaching a conclusion.
 Let's assume that selection also applies to physical theories: the ones we use (Newton, Einstein,
@@ -297,7 +296,7 @@ eternal discourse, taking sides, defending our favourites and fighting all the o
 Notice that this is exactly the opposite of the anything-goes attitude of moral relativity.
 
 
-### Appendix B: Truth and Reality
+## Appendix B: Truth and Reality
 Here is another question: Given their precarious existence, can physical theories contain any kind of 
 truth? If anything, classical physics is true in an ideal space with no friction and dimensions that 
 go straight to infinity. But there is no such ideal space.
