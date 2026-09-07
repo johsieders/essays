@@ -107,7 +107,11 @@ $K$ and $K'$ do not agree on simultaneity
 Two observers moving relative to each other cannot agree on the simultaneity of events out there.
 Look at figure {numref}`fig-simultaneity` where $K'$ is moving with respect to $K$. A photon starts at $A$, is reflected at $B$
 and returns to $K$ at $C$. Seen from $K$, the event $0$ halfway between $A$ and $C$ is simultaneous with $B$. But $K'$ wouldn't agree: 
-He meets the photon at $P$ and then again at $Q$. So, he would consider the event $R$ halfway between $P$ and $Q$ to be simultaneous with $B$.
+He meets the photon at $P$ and then again at $Q$. 
+So, he would consider the event $R$ halfway between $P$ and $Q$ to be simultaneous with $B$.
+
+
+
 
 ## Lorentz transformation
 
@@ -157,14 +161,26 @@ The Lorentz transformation $\Lambda$ is similar to $G$:
 :align: center
 :width: 400px
 
-Light clock at rest (left), in motion with respect to the other clock (right) 
+Light clock at rest (left), in motion with respect to the observer (right) 
 ```
 
+The speed of light is constant. Therefore, given the time, we get the distance travelled, 
+and given the distance, we get the time elapsed.
 The light clock is a photon bouncing between two parallel mirrors, $L$ length units apart. 
-Time is measured by counting the number of bounces. This is what you see on the left of {numref}`fig-lorentz`.
+We call $\tau$ the time needed to cover the distance $L$, 
+and time is measured in multiples of $\tau$, counting the number of bounces. 
 
-On the right you see the light clock moving at a velocity $v < 1$ with respect to the observer in a direction 
-perpendicular to the bouncing photon. After time $t$, the clock will have reached $B$ at $x = vt$, 
+On the left of {numref}`fig-lorentz` you see the clock at rest, as seen by a local observer.
+
+On the right of {numref}`fig-lorentz` you see the clock moving to the right 
+at a velocity $v < 1$ with respect to a remote observer in a direction 
+perpendicular to the bouncing photon. The observer now sees a zigzag: the light travels a greater distance,
+and more time elapses: the time $t$ measured by the remote observer is longer that the time $\tau$ 
+measured by the local observer. 
+
+This is almost all there is about time dilation. Let's get down to the formula.
+
+After time $t$, the clock will have reached $B$ at $x = vt$, 
 and the light will have travelled from $0$ to $A$. The length of the hypotenuse $0A$ equals $t$, because
 in $t$ time units, the light travels $t$ length units. Pythagoras gives us:
 
@@ -230,16 +246,37 @@ The one who travelled (accelerated and decelerated) is in fact younger than the 
 ## Relativistic Mechanics
 
 ```{math}
-L(X, V) = m - m \sqrt{1- V^2} \approx \frac{1}{2}m V^2
+L(x, v) = - m \sqrt{1 - v^2} - V(x) \approx \frac{1}{2}m v^2 - V(x)
+```
+
+
+
+```{math}
+:nowrap:
+
+\begin{alignat*}{2}
+v &= \dot{x} &&= \frac{dx}{dt} \\
+u &= \gamma \dot{x} &&= \frac{dx}{d\tau} = \frac{dx}{dt} \frac{dt}{d\tau} 
+\end{alignat*}
 ```
 
 ```{math}
 :nowrap:
 
 \begin{alignat*}{2}
-U^{\mu} &= \frac{X^{\mu}}{d\tau} &&= \frac{X^{\mu}}{dt} \frac{dt}{d\tau} = \frac{V^{\mu}}{\sqrt{1- V^2}} \\
-P^{\mu} &= \frac{\partial L}{\partial V} &&= \frac{mV^{\mu}}{\sqrt{1 - V^2}} \\
-E &= V \cdot P -L &&= \frac{m}{\sqrt{1- V^2}} = P^0
+p &= \frac{\partial L}{\partial v} = m \frac{v}{\sqrt{1 - v^2}}  \\
+\\
+E &= p \cdot v - L &&= \frac{m}{\sqrt{1 - v^2}} = p^0
 \end{alignat*}
 ```
 
+```{math}
+:nowrap:
+
+\begin{alignat*}{2}
+v &= \dot{x} &&= \frac{dx}{dt} \\
+u &= \gamma \dot{x} &&= \frac{dx}{d\tau} = \frac{dx}{dt} \frac{dt}{d\tau} 
+\\
+u^{\mu} &= \frac{dx^{\mu}}{d\tau} &&= \frac{dx^{\mu}}{dt} \frac{dt}{d\tau} = \frac{v^{\mu}}{\sqrt{1 - v^2}} 
+\end{alignat*}
+```

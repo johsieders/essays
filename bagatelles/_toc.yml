@@ -70,6 +70,8 @@ parts:
         title: The Spy Who Came in from the Cloud
       - file: computer-science/30-formal-logic
         title: Formal Logic
+      - file: computer-science/dein-android
+        title: Dein Android-Smartphone
 
   - caption: Physics
     chapters:

@@ -9,7 +9,16 @@ Wir sprechen über Mathematik, Physik, Informatik, Chemie, Biologie, Ingenieurwi
 
 ## 2 Kann die Wissenschaft alles erklären?
 
-Mit Sicherheit nicht, denn: Wir Menschen leben seit ein paar Weltsekunden auf einem Planeten, der im Universum nur ein Staubkorn ist. Wir haben das Gehirn und die Sinnesorgane, die uns die Evolution gegeben hat. Wir können nur wahrnehmen, was unsere Sinnesorgane (mit allen denkbaren Messinstrumenten) liefern, wir können nur verstehen, wozu unser Gehirn in der Lage ist. Es gibt mit Sicherheit Phänomene, für die wir keine Sinnesorgane haben, und Gedanken, die wir nicht denken können. Die Wissenschaft agiert diesseits einer unverrückbaren Grenze, die sie aber kaum jemals erreichen wird. Es wird keinen Tag X geben in 100 oder 1000 Jahren, an dem die Physiker sagen: OK, alles erledigt, alle Fragen geklärt. Überall, in jeder Disziplin, gibt es Listen offener Probleme, die mit jeder neuen Erkenntnis länger werden. Ob ein bisher ungelöstes Problem diesseits (prinzipiell lösbar) oder jenseits (prinzipiell unlösbar) der Grenze liegt, erfahren wir erst, wenn eine Lösung da ist, vorher nicht. Das Reich jenseits der Grenze ist nicht Thema der Wissenschaft. Jeder darf sich vorstellen, was er will: Gott, Götter, Geister, anonyme Kräfte, Himmel, Hölle, Nirwana.
+Mit Sicherheit nicht, denn: Wir Menschen leben seit ein paar Weltsekunden auf einem Planeten, der im Universum nur ein Staubkorn ist. 
+Wir haben das Gehirn und die Sinnesorgane, die uns die Evolution gegeben hat. Wir können nur wahrnehmen, 
+was unsere Sinnesorgane (mit allen denkbaren Messinstrumenten) liefern, wir können nur verstehen, wozu unser Gehirn in der Lage ist. 
+Es gibt mit Sicherheit Phänomene, für die wir keine Sinnesorgane haben, und Gedanken, die wir nicht denken können. 
+Die Wissenschaft agiert diesseits einer unverrückbaren Grenze, die sie aber kaum jemals erreichen wird. 
+Es wird keinen Tag X geben in 100 oder 1000 Jahren, an dem die Physiker sagen: OK, alles erledigt, alle Fragen geklärt. 
+Überall, in jeder Disziplin, gibt es Listen offener Probleme, die mit jeder neuen Erkenntnis länger werden. 
+Ob ein bisher ungelöstes Problem diesseits (prinzipiell lösbar) oder jenseits (prinzipiell unlösbar) der Grenze liegt, erfahren wir erst, 
+wenn eine Lösung da ist, vorher nicht. Das Reich jenseits der Grenze ist nicht Thema der Wissenschaft. 
+Jeder darf sich vorstellen, was er will: Gott, Götter, Geister, anonyme Kräfte, Himmel, Hölle, Nirwana.
 
 ## 3 Wer darf in der Wissenschaft mitreden?
 
@@ -34,17 +43,57 @@ Vielleicht. Für den Menschen gibt es Ersatzteile wie fürs Auto: Knie, Hüfte, 
 Nehmen wir Newton mit seinen Bewegungsgleichungen: Wie in aller Welt ist es möglich, dass alles, was sich im Universum bewegt, vom Regentropfen bis zum Planeten, durch eine Handvoll Gleichungen beschrieben werden kann? Wer hat sich das ausgedacht? Wer stellt sicher, dass kein Regentropfen, kein Planet aus der Reihe tanzt, weder hier noch im entferntesten Winkel des Weltraums? Wenn es überhaupt ein Argument gibt für die Existenz eines Höheren Wesens, dann ist es diese Beobachtung. Die Wunder sind die verstandenen Probleme, nicht die offenen.
 
 ## 8 Gibt es den Gott der Bibel?
-Jeder muss seine Antwort selbst finden. Die Idee eines allmächtigen, allwissenden, allgütigen Gottes führt allerdings zu logischen Problemen. Die Bibel enthält einige schöne Stellen und viele schreckliche, sie ist voller Widersprüche und lässt sich in jede Richtung interpretieren: 
+Jeder muss seine Antwort selbst finden. Die Idee eines allmächtigen, allwissenden, allgütigen Gottes führt allerdings zu logischen Problemen. 
+Die Bibel enthält einige schöne Stellen und viele schreckliche, sie ist voller Widersprüche und lässt sich in jede Richtung interpretieren: 
 
-> The devil can cite scripture for his purpose  
+> The devil can cite scripture for his purpose.    
 > (Merchant of Venice, I.3) 
 
-Die Gottesbeweise sind sehr angreifbar und haben mit mathematischer Logik nichts zu tun. Sie beweisen auf keinen Fall den Gott der Bibel, sondern bestenfalls die Existenz von Kräften jenseits der Grenze, und dafür liefern die Abschnitte 1 und 7 bessere Argumente. 
+Die Gottesbeweise sind sehr angreifbar und haben mit mathematischer Logik nichts zu tun. Sie beweisen auf keinen Fall den Gott der Bibel, 
+sondern bestenfalls die Existenz von Kräften jenseits der Grenze, und dafür liefern die Abschnitte 2 und 7 bessere Argumente. 
 
 ## 9 Gibt es ein Leben nach dem Tod?
 Lassen wir uns überraschen.
 
-## 10 Warum leben wir überhaupt?
+
+
+# Anhang
+
+## 10 Was sagt Dawkin?
+
+Es gibt zwei gravierende Unterschiede zu diesem Text: (1) Dawkins wird nicht zu Unrecht vorgeworfen, den Atheismus wie ein Kreuzritter zu propagieren. 
+Dieser Text formuliert eine offene, tolerante Position mit Raum für religiöse Ansichten. 
+Jenseits der Grenze kann sich jeder vorstellen, was er will: Gott, Götter, Geister, anonyme Kräfte, Himmel, Hölle, Nirwana.
+(2) Dawkins
+
+## 11 Was sagt Lennox?
+John Lennox vertritt eine christlich orientierte Wissenschaft. Er macht im Kern drei Aussagen: 
+(1) Er rechnet vor, wie unwahrscheinlich viele Entwicklungen sind (Evolution) und folgert daraus, dass Gott die Baustelle geleitet hat,
+und zwar nicht irgendeiner, sondern der der Bibel. (2) Er sagt, dass die Naturwissenschaft nur deshalb stattfinden kann, 
+weil es einen Bauplan gibt, den die Wissenschaftler nach und nach rekonstruieren, wie z.B. die Newtonschen Bewegungsgleichungen. 
+Ohne Bauplan keine Naturwissenschaft.
+(3) Er interpretiert die Bibel im Kontext der Wissenschaft. In seinem Buch xxx zeigt er, wie sich die sieben Schöpfungstage der Bibel auf
+das heutige Weltbild abbilden lassen. 
+
+Die Punkte (1) und (2) sind Argumente gegen den extremen atheistischen Standpunkt, der mit der Wissenschaft alles erklären will.
+Aber für den Nicht-Christen sind die Aussagen "Es war Gott" und "Ich weiß es nicht" absolut gleichbedeutend. Und es gibt mehr Einwände: 
+(a) Lennox zeigt bestenfalls die Existenz *irgendwelcher Kräfte* außerhalb unserer Wahrnehmung. 
+Der Sprung zum Gott der Bibel ist völlig willkürlich. 
+(b) Oft finden die Physiker einen eleganten Bauplan (Newton, Relativitätstheorie, Quantenmechanik), oft aber auch ein unsortiertes Chaos
+(Standard-Teilchenmodell). Die These dass jede Theorie "elegant" sein muss (nach welchen Kriterien auch immer) ist sehr umstritten. 
+War Gott nur für die eleganten Theorien zuständig, oder war er bei den anderen nicht ausgeschlafen?
+(c) Auch die eleganten Theorien sind nur Approximationen, nützlich in bestimmten Situationen, unbrauchbar in anderen. 
+Warum so kompliziert?
+(d) Nach welchen Kriterien können wir Menschen sagen: Dieses Phänomen ist ohne weiteres Zutun möglich, 
+für jenes andere brauchen wir Gott? Wir können unterscheiden zwischen den Phänomenen wie wir erklären können und den anderen.
+
+## 12 Warum sollten wir uns gut verhalten?
+
+
+## 13 Wo bleiben die Gefühle?
+
+
+## 14 Warum leben wir überhaupt?
 
 Hat Macbeth recht, wenn er sagt: 
 > Life’s but a walking shadow, a poor player  
@@ -54,5 +103,7 @@ Hat Macbeth recht, wenn er sagt:
 > Signifying nothing.  
 > (Macbeth, V.5)
 
-Nein. Macbeth steht vor einem Scherbenhaufen: Seine Pläne sind gescheitert, seine Frau hat sich gerade umgebracht, er selbst hat den Tod vor Augen. Da vergisst er, was das Leben lebenswert macht, z.B. Familie, Liebe, Arbeit, Musik, Literatur, Kunst, Wissenschaft, Natur, Sport; jeder kann ergänzen, was ihm wichtig ist. Diesen Schatz hat jeder von uns geschenkt bekommen. Er sollte langen für ein erfülltes Leben. Man kann nicht mehr erreichen als abends zufrieden ins Bett zu gehen und morgens fröhlich aufzuwachen.
-
+Nein. Macbeth steht vor einem Scherbenhaufen: Seine Pläne sind gescheitert, seine Frau hat sich gerade umgebracht, er selbst hat den Tod vor Augen. 
+Da vergisst er, was das Leben lebenswert macht, z.B. Familie, Liebe, Arbeit, Musik, Literatur, Kunst, Wissenschaft, Natur, Sport; 
+jeder kann ergänzen, was ihm wichtig ist. Diesen Schatz hat jeder von uns geschenkt bekommen. Er sollte langen für ein erfülltes Leben. 
+Man kann nicht mehr erreichen als abends zufrieden ins Bett zu gehen und morgens fröhlich aufzuwachen.
