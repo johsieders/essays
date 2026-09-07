@@ -1,0 +1,883 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Special Relativity &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/sr';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Lorentz Group \(O(1,3)\)" href="minkowski.html" />
+    <link rel="prev" title="Newton" href="newton.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pict-03.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/pict-03.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-5.html">1.5 Spaltungen</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-3.html">2.3 Prediger vs. Sprüche Salomos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-4.html">2.4 Kant vs. Mill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-6.html">2.6 Platon vs. Hume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-4.html">4. Literatur</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/dein-android.html">Dein Android-Smartphone</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="energy-modelling.html">Energie-Modellierung *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton.html">Newton</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Special Relativity</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="minkowski.html">SO(3) and O(1,3)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/tangent-cotangent-n.html">Tangent and Cotangent Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/tensors.html">Tensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus-rn.html">Differential Calculus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../israel/israel-0.html">Geschichte der Juden *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-1.html">Ursprünge (bis 135 CE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-2.html">Diaspora (135–1492)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-3.html">Neuzeit (1492–1897)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-4.html">Von Basel bis Auschwitz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-5.html">Israel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-6.html">Von der Gründung bis zum Sechstagekrieg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-7.html">Vom Sechstagekrieg bis Oslo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-8.html">Von Oslo bis 2026</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-9.html">Das Flüchtlingsproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-10.html">Stationen des jüdischen Volkes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/glossary.html">Glossar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/index-of-names.html">Namensverzeichnis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/references.html">Literatur</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ireland/ireland-0.html">Story of the Irish *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ireland/ireland-1.html">The World Before England (1 CE–1168)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ireland/ireland-2.html">The Lordship and the Two Nations (1169–1541)</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/wissenschaft-religion.html">Wissenschaft und Religion</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references-page.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/physics/sr.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fphysics/sr.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/physics/sr.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Special Relativity</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Special Relativity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-nutshell">In a Nutshell</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-transformation">Galileo Transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#there-is-no-simultaneity">There is No Simultaneity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-transformation">Lorentz transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relativistic-mechanics">Relativistic Mechanics</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="special-relativity">
+<h1>Special Relativity<a class="headerlink" href="#special-relativity" title="Permalink to this heading">#</a></h1>
+<p><em>Johannes Siedersleben, July 2026</em></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="in-a-nutshell">
+<h1>In a Nutshell<a class="headerlink" href="#in-a-nutshell" title="Permalink to this heading">#</a></h1>
+<p>In Newtonian physics, we are familiar with the system of three perpendicular coordinates, designated by <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>.
+Each point in space can be defined by three numbers, with the origin being arbitrarily fixed.</p>
+<p>Special relativity is all about two or more observers or reference frames.</p>
+<p>In what follows, we restrict ourselves two one time dimension <span class="math notranslate nohighlight">\(t\)</span> and one space dimension <span class="math notranslate nohighlight">\(x\)</span>.
+This can be easily extended to three space dimensions by using explicit coordinates <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(z\)</span> or by interpreting <span class="math notranslate nohighlight">\(x\)</span>
+as the vector <span class="math notranslate nohighlight">\(\begin{bmatrix}
+        x \\ 
+        y \\
+        z \\
+\end{bmatrix}\)</span>.
+A four-dimensional vector (one time dimension, three space dimensions) can be denoted by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+        t \\ 
+        x \\ 
+        y \\
+        z \\
+\end{bmatrix}\end{split}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_{\mu} = \begin{bmatrix}
+        x_0 \\ 
+        x_1 \\ 
+        x_2 \\
+        x_3 \\
+\end{bmatrix}\end{split}\]</div>
+<section id="galileo-transformation">
+<h2>Galileo Transformation<a class="headerlink" href="#galileo-transformation" title="Permalink to this heading">#</a></h2>
+<p>The Galileo transformation relates two reference frames, <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span>,
+with <span class="math notranslate nohighlight">\(K'\)</span> moving to the right with respect to <span class="math notranslate nohighlight">\(K\)</span> at a velocity <span class="math notranslate nohighlight">\(v\)</span>. Here is the idea:</p>
+<p>a) <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span> share the same time: <span class="math notranslate nohighlight">\(t = t'\)</span></p>
+<p>b) Consider a point <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(K\)</span>. As <span class="math notranslate nohighlight">\(K'\)</span> moves to the right,
+it gets closer to <span class="math notranslate nohighlight">\(x\)</span>: It is at <span class="math notranslate nohighlight">\(x' = x - vt\)</span> in <span class="math notranslate nohighlight">\(K'\)</span>.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/galileo.png"><img alt="../_images/galileo.png" src="../_images/galileo.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Galileo Transformation</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Setting</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}G = \begin{bmatrix}
+        1 &amp; 0 \\ 
+        -v &amp; 1 \\
+\end{bmatrix}\end{split}\]</div>
+<p>gives us:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+        t' \\ 
+        x' \\
+\end{bmatrix} = 
+G(v) \cdot
+\begin{bmatrix}
+        t \\ 
+        x \\
+\end{bmatrix} = 
+\begin{bmatrix}
+        t \\ 
+        x - vt \\
+\end{bmatrix}\end{split}\]</div>
+<p>We get immediately</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}G^{-1}(v) = \begin{bmatrix}
+        1 &amp; 0 \\ 
+        v &amp; 1 \\
+\end{bmatrix}\end{split}\]</div>
+<p>This is the <strong>principle of relativity</strong>: <span class="math notranslate nohighlight">\(K'\)</span> moving to the right with respect to <span class="math notranslate nohighlight">\(K\)</span> at a velocity <span class="math notranslate nohighlight">\(v\)</span>
+is indistinguishable from <span class="math notranslate nohighlight">\(K\)</span> moving to the left with respect to <span class="math notranslate nohighlight">\(K'\)</span> at a velocity <span class="math notranslate nohighlight">\(-v\)</span>: You cannot tell which train is moving.</p>
+</section>
+<section id="there-is-no-simultaneity">
+<h2>There is No Simultaneity<a class="headerlink" href="#there-is-no-simultaneity" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="fig-simultaneity">
+<a class="reference internal image-reference" href="../_images/simultaneity.png"><img alt="../_images/simultaneity.png" src="../_images/simultaneity.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text"><span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span> do not agree on simultaneity</span><a class="headerlink" href="#fig-simultaneity" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Two observers moving relative to each other cannot agree on the simultaneity of events out there.
+Look at figure <a class="reference internal" href="#fig-simultaneity"><span class="std std-numref">Fig. 3</span></a> where <span class="math notranslate nohighlight">\(K'\)</span> is moving with respect to <span class="math notranslate nohighlight">\(K\)</span>. A photon starts at <span class="math notranslate nohighlight">\(A\)</span>, is reflected at <span class="math notranslate nohighlight">\(B\)</span>
+and returns to <span class="math notranslate nohighlight">\(K\)</span> at <span class="math notranslate nohighlight">\(C\)</span>. Seen from <span class="math notranslate nohighlight">\(K\)</span>, the event <span class="math notranslate nohighlight">\(0\)</span> halfway between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(C\)</span> is simultaneous with <span class="math notranslate nohighlight">\(B\)</span>. But <span class="math notranslate nohighlight">\(K'\)</span> wouldn’t agree:
+He meets the photon at <span class="math notranslate nohighlight">\(P\)</span> and then again at <span class="math notranslate nohighlight">\(Q\)</span>.
+So, he would consider the event <span class="math notranslate nohighlight">\(R\)</span> halfway between <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> to be simultaneous with <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</section>
+<section id="lorentz-transformation">
+<h2>Lorentz transformation<a class="headerlink" href="#lorentz-transformation" title="Permalink to this heading">#</a></h2>
+<p>The Lorentz transformation serves the same purpose as the Galileo transformation:
+It relates two reference frames, <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span>, with <span class="math notranslate nohighlight">\(K'\)</span> moving to the right with respect to <span class="math notranslate nohighlight">\(K\)</span> at a velocity <span class="math notranslate nohighlight">\(v\)</span>.
+The difference ist that the Lorentz transformation takes into account the time the light takes to travel between <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span>.
+We measure the velocity not in <span class="math notranslate nohighlight">\(m/s\)</span> but in lightyear/year, so <span class="math notranslate nohighlight">\(c=1\)</span> and all velocities are in the interval <span class="math notranslate nohighlight">\([0, 1)\)</span></p>
+<p>a) The speed of light is the same for all observers however fast they move.
+The Lorentz factor <span class="math notranslate nohighlight">\(\gamma\)</span> is ubiquituous in relativity. It governs, among others, time dilation length contration.
+The Lorentz transformation <span class="math notranslate nohighlight">\(\Lambda\)</span> is similar to <span class="math notranslate nohighlight">\(G\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \frac{1}{\sqrt{1 - v^2}}  \]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Lambda = \gamma \, \begin{bmatrix}
+        1 &amp; -v \\ 
+        -v &amp; 1 \\
+\end{bmatrix}  \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Lambda^{-1} = \gamma \, \begin{bmatrix}
+        1 &amp; v \\ 
+        v &amp; 1 \\
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+        t' \\ 
+        x' \\
+\end{bmatrix} = 
+\Lambda \cdot
+\begin{bmatrix}
+        t \\ 
+        x \\
+\end{bmatrix} \end{split}\]</div>
+<figure class="align-center" id="fig-lorentz">
+<a class="reference internal image-reference" href="../_images/lorentz.png"><img alt="../_images/lorentz.png" src="../_images/lorentz.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Light clock at rest (left), in motion with respect to the observer (right)</span><a class="headerlink" href="#fig-lorentz" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The speed of light is constant. Therefore, given the time, we get the distance travelled,
+and given the distance, we get the time elapsed.
+The light clock is a photon bouncing between two parallel mirrors, <span class="math notranslate nohighlight">\(L\)</span> length units apart.
+We call <span class="math notranslate nohighlight">\(\tau\)</span> the time needed to cover the distance <span class="math notranslate nohighlight">\(L\)</span>,
+and time is measured in multiples of <span class="math notranslate nohighlight">\(\tau\)</span>, counting the number of bounces.</p>
+<p>On the left of <a class="reference internal" href="#fig-lorentz"><span class="std std-numref">Fig. 4</span></a> you see the clock at rest, as seen by a local observer.</p>
+<p>On the right of <a class="reference internal" href="#fig-lorentz"><span class="std std-numref">Fig. 4</span></a> you see the clock moving to the right
+at a velocity <span class="math notranslate nohighlight">\(v &lt; 1\)</span> with respect to a remote observer in a direction
+perpendicular to the bouncing photon. The observer now sees a zigzag: the light travels a greater distance,
+and more time elapses: the time <span class="math notranslate nohighlight">\(t\)</span> measured by the remote observer is longer that the time <span class="math notranslate nohighlight">\(\tau\)</span>
+measured by the local observer.</p>
+<p>This is almost all there is about time dilation. Let’s get down to the formula.</p>
+<p>After time <span class="math notranslate nohighlight">\(t\)</span>, the clock will have reached <span class="math notranslate nohighlight">\(B\)</span> at <span class="math notranslate nohighlight">\(x = vt\)</span>,
+and the light will have travelled from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(A\)</span>. The length of the hypotenuse <span class="math notranslate nohighlight">\(0A\)</span> equals <span class="math notranslate nohighlight">\(t\)</span>, because
+in <span class="math notranslate nohighlight">\(t\)</span> time units, the light travels <span class="math notranslate nohighlight">\(t\)</span> length units. Pythagoras gives us:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tau^2 &amp;= t^2 - x^2 &amp;= t^2(1 - v^2) &amp;&lt; t^2 \\
+\tau &amp;= \sqrt{t^2 - x^2} &amp;= t \sqrt{1 - v^2} &amp;&lt; t \\
+\frac{\tau}{t} &amp;= \sqrt{1 - v^2} &amp; &amp;&lt; 1\end{split}\]</div>
+<p>This means: The observer experiences the time <span class="math notranslate nohighlight">\(\tau\)</span> elapsed for the travelling clock as <span class="math notranslate nohighlight">\(t = 1/\sqrt{1 - v^2} &gt; \tau\)</span>.
+With <span class="math notranslate nohighlight">\(v = 3/5\)</span> we get <span class="math notranslate nohighlight">\(t = 5/4\)</span>. The fact that <span class="math notranslate nohighlight">\(t &gt; \tau\)</span> is called <strong>time dilation</strong>. The term <span class="math notranslate nohighlight">\(\tau\)</span> is called
+<strong>proper time</strong>. The <strong>Lorentz factor</strong>, defined as</p>
+<div class="math notranslate nohighlight">
+\[\gamma(v) = \frac{1}{\sqrt{1 - v^2}} = \frac{t}{\tau} &gt; 1\]</div>
+<p>is ubiquitous in relativity. Here is an important approximation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sqrt{1 - v^2} &amp;\approx 1 - \frac{v^2}{2} &amp;&lt; 1 \\
+\frac{1}{\sqrt{1 - v^2}} &amp;\approx 1 + \frac{v^2}{2} &amp;&gt; 1\end{split}\]</div>
+<p>The difference is in the order of <span class="math notranslate nohighlight">\(v^4\)</span> which is tiny for small <span class="math notranslate nohighlight">\(v\)</span>. Remember that <span class="math notranslate nohighlight">\(v = 1\)</span> is the speed of light.
+The math is trivial:</p>
+<div class="math notranslate nohighlight">
+\[(1 - \frac{v^2}{2})^2 = 1 - v^2 + \frac{v^4}{4} \approx 1 - v^2\]</div>
+<p>The second approximation is similarly handled.
+Qualifying one clock at rest and the other travelling is arbitrary.
+The left clock at rest and the right one moving to the right are indistinguishable
+from the left one moving to the left and the right one at rest.</p>
+<p>Now assume the light clock is moving at a velocity <span class="math notranslate nohighlight">\(v(t) &lt; 1\)</span> during the interval <span class="math notranslate nohighlight">\([0, T]\)</span>.
+Partition <span class="math notranslate nohighlight">\([0, T]\)</span> by <span class="math notranslate nohighlight">\(0 = t_0 &lt; t_1 &lt; \ldots &lt; t_n = T\)</span>, let <span class="math notranslate nohighlight">\(v_i = v(t_i)\)</span> and <span class="math notranslate nohighlight">\(\Delta t_i = t_i - t_{i-1}\)</span>. We get</p>
+<div class="math notranslate nohighlight">
+\[\tau(T) \approx \sum_{i=1}^n \Delta t_i \sqrt{1 - v_i^2}\]</div>
+<p>and, with ever finer partitions, arrive at</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tau(T) &amp;= \int_0^T dt \, \sqrt{1- v(t)^2} &lt; T \\
+\frac{d\tau}{dt} &amp;= \sqrt{1- v(t)^2}\end{split}\]</div>
+<p>Let’s emphasize: <span class="math notranslate nohighlight">\(T\)</span> is the time elapsed for the clock travelling at a velocity of <span class="math notranslate nohighlight">\(v(t)\)</span> as seen by the observer.
+Let’s <span class="math notranslate nohighlight">\(t\)</span> express in terms of <span class="math notranslate nohighlight">\(\tau\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{dt}{d\tau} &amp;= \frac{1}{\sqrt{1- v(t)^2}} \\
+t(\mathcal{T}) &amp;= \int_0^{\mathcal{T}} \frac{d\tau}{\sqrt{1- v(t)^2}} &gt; \mathcal{T}\end{split}\]</div>
+<p>The observer experiences the time <span class="math notranslate nohighlight">\(\mathcal{T}\)</span> elapsed for the travelling clock as <span class="math notranslate nohighlight">\(T = \int_0^{\mathcal{T}} \frac{d\tau}{\sqrt{1- v(t)^2}} &gt; \mathcal{T}\)</span>:
+The observer ages faster. How can this be, given that the roles of observer and observed are interchangeable?
+Here is the answer: As long as they don’t meet, there is no contradiction. Relativity is all about perception, and there is
+nothing wrong with <span class="math notranslate nohighlight">\(K\)</span> seeing <span class="math notranslate nohighlight">\(K'\)</span> ageing slower and vice versa. The paradox occurs when they meet, and that is not symmetric:
+One of them must have been accelerating and decelerating; the other one can be assumed to have been at rest.
+The one who travelled (accelerated and decelerated) is in fact younger than the one who stayed home.</p>
+</section>
+<section id="relativistic-mechanics">
+<h2>Relativistic Mechanics<a class="headerlink" href="#relativistic-mechanics" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[L(x, v) = - m \sqrt{1 - v^2} - V(x) \approx \frac{1}{2}m v^2 - V(x)\]</div>
+<div class="math notranslate nohighlight">
+\begin{alignat*}{2}
+v &amp;= \dot{x} &amp;&amp;= \frac{dx}{dt} \\
+u &amp;= \gamma \dot{x} &amp;&amp;= \frac{dx}{d\tau} = \frac{dx}{dt} \frac{dt}{d\tau} 
+\end{alignat*}</div><div class="math notranslate nohighlight">
+\begin{alignat*}{2}
+p &amp;= \frac{\partial L}{\partial v} = m \frac{v}{\sqrt{1 - v^2}}  \\
+\\
+E &amp;= p \cdot v - L &amp;&amp;= \frac{m}{\sqrt{1 - v^2}} = p^0
+\end{alignat*}</div><div class="math notranslate nohighlight">
+\begin{alignat*}{2}
+v &amp;= \dot{x} &amp;&amp;= \frac{dx}{dt} \\
+u &amp;= \gamma \dot{x} &amp;&amp;= \frac{dx}{d\tau} = \frac{dx}{dt} \frac{dt}{d\tau} 
+\\
+u^{\mu} &amp;= \frac{dx^{\mu}}{d\tau} &amp;&amp;= \frac{dx^{\mu}}{dt} \frac{dt}{d\tau} = \frac{v^{\mu}}{\sqrt{1 - v^2}} 
+\end{alignat*}</div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="newton.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Newton</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="minkowski.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Lorentz Group <span class="math notranslate nohighlight">\(O(1,3)\)</span></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Special Relativity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-nutshell">In a Nutshell</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-transformation">Galileo Transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#there-is-no-simultaneity">There is No Simultaneity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-transformation">Lorentz transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relativistic-mechanics">Relativistic Mechanics</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -6,7 +6,7 @@
 
 ## 1. At the Speed of Earthworks
 
-The knights who landed on the Wexford coast in 1169 brought with them, in their baggage and their heads, every single thing that Chapter 1 said Ireland had done without. The castle. The charter. The county and the sheriff. The written survey, the money rent, the borough with its market and its royal grant. Behind all of it stood an idea so foreign to Ireland that the language had no word for it: that authority is a thing exercised over a defined patch of ground, by an officer who holds it from a king, and that it is written down.
+The knights who landed on the Wexford coast in 1169 brought with them, in their baggage and their heads, every single thing that Chapter I said Ireland had done without. The castle. The charter. The county and the sheriff. The written survey, the money rent, the borough with its market and its royal grant. Behind all of it stood an idea so foreign to Ireland that the language had no word for it: that authority is a thing exercised over a defined patch of ground, by an officer who holds it from a king, and that it is written down.
 
 None of it was any use on its own. What made the difference was the way the parts geared together. A castle took ground; the ground was surveyed into a manor; the manor paid rents in coin; the rents paid for the next castle. Each turn of the crank financed the following one, and the apparatus had been assembled and tested in Wales, on a Celtic frontier, before it was ever pointed at Ireland. The men who brought it over were the second and third sons of the Welsh March, and they were not improvising.
 

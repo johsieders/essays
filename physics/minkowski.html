@@ -1,0 +1,814 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Lorentz Group \(O(1,3)\) &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/minkowski';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Why Your Model Beats You: Bayesian Decision-Making Without Noise" href="../mathematics/bayesian-decisions.html" />
+    <link rel="prev" title="Special Relativity" href="sr.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pict-03.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/pict-03.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-5.html">1.5 Spaltungen</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-3.html">2.3 Prediger vs. Sprüche Salomos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-4.html">2.4 Kant vs. Mill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-6.html">2.6 Platon vs. Hume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-4.html">4. Literatur</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/dein-android.html">Dein Android-Smartphone</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="energy-modelling.html">Energie-Modellierung *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton.html">Newton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sr.html">Special Relativity</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">SO(3) and O(1,3)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/tangent-cotangent-n.html">Tangent and Cotangent Spaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/tensors.html">Tensors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus-rn.html">Differential Calculus</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../israel/israel-0.html">Geschichte der Juden *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-1.html">Ursprünge (bis 135 CE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-2.html">Diaspora (135–1492)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-3.html">Neuzeit (1492–1897)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-4.html">Von Basel bis Auschwitz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-5.html">Israel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-6.html">Von der Gründung bis zum Sechstagekrieg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-7.html">Vom Sechstagekrieg bis Oslo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-8.html">Von Oslo bis 2026</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-9.html">Das Flüchtlingsproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-10.html">Stationen des jüdischen Volkes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/glossary.html">Glossar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/index-of-names.html">Namensverzeichnis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/references.html">Literatur</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ireland/ireland-0.html">Story of the Irish *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ireland/ireland-1.html">The World Before England (1 CE–1168)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ireland/ireland-2.html">The Lordship and the Two Nations (1169–1541)</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/wissenschaft-religion.html">Wissenschaft und Religion</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references-page.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/physics/minkowski.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fphysics/minkowski.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/physics/minkowski.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Lorentz Group O(1,3)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-invariant-form">1. The invariant form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-preserved-orbits-and-the-cone-that-has-no-euclidean-cousin">2. What is preserved — orbits, and the cone that has no Euclidean cousin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generators-split-rotations-and-boosts">3. Generators split: rotations <em>and</em> boosts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness-and-why-you-cannot-boost-past-light">4. Compactness, and why you cannot boost past light</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-triangle-inequality-and-its-reversal">5. The triangle inequality — and its reversal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composition-adding-angles-adding-rapidities-and-the-sting-in-the-tail">6. Composition — adding angles, adding rapidities, and the sting in the tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coda-the-slogan-with-its-three-asterisks-attached">Coda: the slogan, with its three asterisks attached</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="the-lorentz-group-o-1-3">
+<h1>The Lorentz Group <span class="math notranslate nohighlight">\(O(1,3)\)</span><a class="headerlink" href="#the-lorentz-group-o-1-3" title="Permalink to this heading">#</a></h1>
+<p><em>A structural sketch for special relativity. Plausibility level — no proofs. Units: <span class="math notranslate nohighlight">\(c = 1\)</span> throughout, so velocities are dimensionless and <span class="math notranslate nohighlight">\(|v| &lt; 1\)</span> for material bodies, <span class="math notranslate nohighlight">\(|v| = 1\)</span> for light.</em></p>
+<p>The organizing idea of these notes is a single substitution:</p>
+<blockquote>
+<div><p>Take the rotation group <span class="math notranslate nohighlight">\(SO(3)\)</span>, flip one sign in the metric, and the circular functions that describe rotations turn hyperbolic. That flip — and <em>only</em> that flip — is special relativity’s kinematics.</p>
+</div></blockquote>
+<p>Everything below is an unpacking of that sentence, together with the three things it quietly hides. We will meet those three caveats as we go, and collect them at the end.</p>
+<hr class="docutils" />
+<section id="the-invariant-form">
+<h2>1. The invariant form<a class="headerlink" href="#the-invariant-form" title="Permalink to this heading">#</a></h2>
+<p>A group of linear transformations is defined by <em>what it leaves unchanged</em>. For the rotation group <span class="math notranslate nohighlight">\(SO(3)\)</span> the invariant is the Euclidean squared length</p>
+<div class="math notranslate nohighlight">
+\[
+|\mathbf{x}|^2 = x^2 + y^2 + z^2,
+\]</div>
+<p>a <strong>positive-definite</strong> form: it is zero only for the zero vector, positive otherwise.</p>
+<p>The Lorentz group <span class="math notranslate nohighlight">\(O(1,3)\)</span> is defined by exactly the same move, applied to a different form — the <strong>spacetime interval</strong></p>
+<div class="math notranslate nohighlight">
+\[
+Q(t, x, y, z) = t^2 - x^2 - y^2 - z^2 ,
+\]</div>
+<p>of signature <span class="math notranslate nohighlight">\((+\,-\,-\,-)\)</span>. This form is <strong>indefinite</strong>: it is positive for <em>timelike</em> vectors (more time than space — worldlines of material bodies), negative for <em>spacelike</em> vectors, and zero for a whole cone of nonzero <em>null</em> vectors (light). <span class="math notranslate nohighlight">\(O(1,3)\)</span> is precisely the set of linear maps <span class="math notranslate nohighlight">\(\Lambda\)</span> on spacetime with</p>
+<div class="math notranslate nohighlight">
+\[
+Q(\Lambda v) = Q(v) \quad \text{for all } v .
+\]</div>
+<p>This one line is the premise; every feature in the remaining sections is downstream of it. In particular, the famous cosh/sinh substitution is <strong>not</strong> the axiom — it is the <em>symptom</em> of the single sign that distinguishes <span class="math notranslate nohighlight">\(Q\)</span> from <span class="math notranslate nohighlight">\(|\mathbf{x}|^2\)</span>. Keep the signature as primary and the trigonometry will follow on its own; take the trigonometry as primary and it will mislead you the moment you leave a single plane.</p>
+<p>The whole parallel-and-difference story is: <span class="math notranslate nohighlight">\(SO(3)\)</span> and <span class="math notranslate nohighlight">\(O(1,3)\)</span> are the isometry groups of two quadratic forms that differ by the sign of three terms. Same construction, one flip.</p>
+</section>
+<hr class="docutils" />
+<section id="what-is-preserved-orbits-and-the-cone-that-has-no-euclidean-cousin">
+<h2>2. What is preserved — orbits, and the cone that has no Euclidean cousin<a class="headerlink" href="#what-is-preserved-orbits-and-the-cone-that-has-no-euclidean-cousin" title="Permalink to this heading">#</a></h2>
+<p>An isometry group moves each vector only within the surface where the invariant form is constant. These surfaces — the <strong>orbits</strong> — are the cleanest picture of the group’s action.</p>
+<p>For <span class="math notranslate nohighlight">\(SO(3)\)</span> the level sets <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 = \text{const}\)</span> are <strong>spheres</strong>, nested around the origin, and the group acts <strong>transitively</strong> on each: any point of a sphere can be rotated to any other point of the same sphere. Space is cleanly foliated into orbits and there are no exceptional directions.</p>
+<p>For <span class="math notranslate nohighlight">\(O(1,3)\)</span> the level sets of <span class="math notranslate nohighlight">\(Q\)</span> are <strong>hyperboloids</strong>, and they come in two geometrically distinct families separated by a wall:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Q &gt; 0\)</span> (timelike): <strong>two-sheeted hyperboloids</strong>, one sheet in the future (<span class="math notranslate nohighlight">\(t&gt;0\)</span>), one in the past. A given constant, say <span class="math notranslate nohighlight">\(Q = \tau^2\)</span>, is the locus “proper time <span class="math notranslate nohighlight">\(\tau\)</span> from the origin” — the surface of constant aging that the twin story lives on.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q &lt; 0\)</span> (spacelike): <strong>one-sheeted hyperboloids</strong>, the loci of constant spacelike separation.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q = 0\)</span> (null): the <strong>light cone</strong> itself, the boundary between the two families.</p></li>
+</ul>
+<p>Two differences from <span class="math notranslate nohighlight">\(SO(3)\)</span> are worth stating sharply, because they have no Euclidean analogue at all:</p>
+<ol class="arabic simple">
+<li><p><strong>The action is not transitive across the whole space.</strong> No Lorentz transformation carries a timelike vector to a spacelike one, or either to a null one — the sign of <span class="math notranslate nohighlight">\(Q\)</span> is invariant, so the three regions are sealed off from one another. (Within a single sheet the action <em>is</em> transitive, which is the relativity principle: any inertial state of motion is equivalent to any other.)</p></li>
+<li><p><strong>The light cone is a fixed invariant boundary.</strong> Every Lorentz transformation maps the cone <span class="math notranslate nohighlight">\(Q=0\)</span> to itself, and no transformation moves a null vector off it. This is the geometric residence of the light postulate: the invariance of the speed of light is the statement that the <span class="math notranslate nohighlight">\(45^\circ\)</span> cone is a structural feature of the group, not a frame-dependent accident.</p></li>
+</ol>
+<p>A rotation group has nothing like an invariant cone — a positive-definite form has no nonzero null vectors to build one from. So the very first thing the substitution slogan hides is that <span class="math notranslate nohighlight">\(O(1,3)\)</span> carries an extra piece of furniture, the null cone, that <span class="math notranslate nohighlight">\(SO(3)\)</span> simply lacks.</p>
+</section>
+<hr class="docutils" />
+<section id="generators-split-rotations-and-boosts">
+<h2>3. Generators split: rotations <em>and</em> boosts<a class="headerlink" href="#generators-split-rotations-and-boosts" title="Permalink to this heading">#</a></h2>
+<p>Both groups are described near the identity by their <strong>generators</strong> — the independent “infinitesimal moves” you can exponentiate to build finite transformations.</p>
+<p><span class="math notranslate nohighlight">\(SO(3)\)</span> has <strong>three</strong> generators, the rotations <span class="math notranslate nohighlight">\(J_x, J_y, J_z\)</span> about the three axes. They are all of the same kind. Each generates rotation in a coordinate <em>plane</em> (<span class="math notranslate nohighlight">\(J_z\)</span> in the <span class="math notranslate nohighlight">\(xy\)</span>-plane, etc.), each orbit is a circle, and each is <strong>periodic</strong>: rotate by <span class="math notranslate nohighlight">\(2\pi\)</span> and you are back where you started.</p>
+<p><span class="math notranslate nohighlight">\(O(1,3)\)</span> has <strong>six</strong> generators, and — this is the crucial structural fact — they split into two kinds of three:</p>
+<ul class="simple">
+<li><p><strong>Three rotations</strong> <span class="math notranslate nohighlight">\(J_x, J_y, J_z\)</span>, acting in the purely spatial planes <span class="math notranslate nohighlight">\(yz, zx, xy\)</span>. These are <em>literally an <span class="math notranslate nohighlight">\(SO(3)\)</span> sitting inside <span class="math notranslate nohighlight">\(O(1,3)\)</span></em>: they leave <span class="math notranslate nohighlight">\(t\)</span> untouched and do nothing but reorient the spatial axes. They keep their ordinary circular character — periodic, cos/sin, exactly as before.</p></li>
+<li><p><strong>Three boosts</strong> <span class="math notranslate nohighlight">\(K_x, K_y, K_z\)</span>, acting in the three planes that contain the <em>time</em> axis: <span class="math notranslate nohighlight">\(tx, ty, tz\)</span>. A boost is the transformation to a frame in <em>relative motion</em>; it is the group element that changes velocity rather than reorienting rulers. These are the elements that go hyperbolic.</p></li>
+</ul>
+<p>Here, then, is the <strong>second caveat</strong>, and the one your slogan most needs pinned to it. The substitution <span class="math notranslate nohighlight">\(\cos \to \cosh\)</span>, <span class="math notranslate nohighlight">\(\sin \to \sinh\)</span> applies <strong>only in the three planes that contain the time axis</strong> — the boost planes. In the three purely spatial planes, nothing changes: those are ordinary rotations with ordinary trigonometry. So the honest form of the slogan is:</p>
+<blockquote>
+<div><p><em>Replace <span class="math notranslate nohighlight">\(\cos\)</span> with <span class="math notranslate nohighlight">\(\cosh\)</span> in the planes that mix time with space; keep <span class="math notranslate nohighlight">\(\cos\)</span> in the planes that mix space with space.</em></p>
+</div></blockquote>
+<p>Half of <span class="math notranslate nohighlight">\(O(1,3)\)</span> is Euclidean-as-before. Only the half that entangles time with space is new.</p>
+<p>Explicitly, a boost in the <span class="math notranslate nohighlight">\(tx\)</span>-plane with rapidity <span class="math notranslate nohighlight">\(\theta\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} t' \\ x' \end{pmatrix}
+=
+\begin{pmatrix} \cosh\theta &amp; -\sinh\theta \\ -\sinh\theta &amp; \cosh\theta \end{pmatrix}
+\begin{pmatrix} t \\ x \end{pmatrix},
+\qquad
+v = \tanh\theta,\quad \gamma = \cosh\theta,\quad \gamma v = \sinh\theta,
+\end{split}\]</div>
+<p>the same matrix as a rotation with <span class="math notranslate nohighlight">\(\cos,\sin\)</span> replaced by <span class="math notranslate nohighlight">\(\cosh,\sinh\)</span>. A spatial rotation slides points along circles <span class="math notranslate nohighlight">\(x^2+y^2=\text{const}\)</span>; a boost slides events along the hyperbolas <span class="math notranslate nohighlight">\(t^2-x^2=\text{const}\)</span> of §2 — same picture, conic section changed by the sign flip.</p>
+<p>A general Lorentz transformation (in the part connected to the identity) is a boost followed by a rotation. So <span class="math notranslate nohighlight">\(O(1,3)\)</span> is not “<span class="math notranslate nohighlight">\(SO(3)\)</span> with cosh”; it is “<span class="math notranslate nohighlight">\(SO(3)\)</span>, <em>plus</em> three new boost directions that are <span class="math notranslate nohighlight">\(SO(3)\)</span>’s rotations with cosh.” The rotations are inherited unchanged; the boosts are the genuinely new content.</p>
+</section>
+<hr class="docutils" />
+<section id="compactness-and-why-you-cannot-boost-past-light">
+<h2>4. Compactness, and why you cannot boost past light<a class="headerlink" href="#compactness-and-why-you-cannot-boost-past-light" title="Permalink to this heading">#</a></h2>
+<p>The split in §3 is not merely a bookkeeping of six generators into <span class="math notranslate nohighlight">\(3+3\)</span>. The two kinds differ in a property with direct physical teeth: <strong>compactness</strong>.</p>
+<p><span class="math notranslate nohighlight">\(SO(3)\)</span> is <strong>compact</strong>. Concretely: the rotation angle is <em>bounded</em> — it lives on a circle, wraps at <span class="math notranslate nohighlight">\(2\pi\)</span>, and you can always rotate back to where you began. The group is a closed, bounded object; there is nowhere to run off to.</p>
+<p>The boost part of <span class="math notranslate nohighlight">\(O(1,3)\)</span> is <strong>non-compact</strong>. The rapidity <span class="math notranslate nohighlight">\(\theta\)</span> runs over the <em>entire</em> real line, <span class="math notranslate nohighlight">\(-\infty &lt; \theta &lt; \infty\)</span>, with no wrapping and no bound. You can always boost more. Yet the <em>velocity</em> does not run away with the rapidity, because</p>
+<div class="math notranslate nohighlight">
+\[
+v = \tanh\theta ,
+\]</div>
+<p>and <span class="math notranslate nohighlight">\(\tanh\)</span> <strong>saturates at <span class="math notranslate nohighlight">\(1\)</span></strong>: as <span class="math notranslate nohighlight">\(\theta \to \infty\)</span>, <span class="math notranslate nohighlight">\(v \to 1\)</span> but never reaches it. This is the whole content of “you cannot accelerate past light speed,” read straight off the shape of <span class="math notranslate nohighlight">\(\tanh\)</span>. Unbounded rapidity, bounded velocity.</p>
+<p>The light cone reappears here as the <strong>unreachable asymptote</strong>: the null directions <span class="math notranslate nohighlight">\(x = \pm t\)</span> correspond to <span class="math notranslate nohighlight">\(\theta \to \pm\infty\)</span>, the boundary the boosts approach forever and never cross. Non-compactness <em>is</em> the statement that this boundary sits at infinite rapidity. A compact group like <span class="math notranslate nohighlight">\(SO(3)\)</span> has no analogue — its orbits close up, so there is no asymptotic edge to fail to reach.</p>
+<p>This is the <strong>third thing the substitution hides</strong>: “cosh instead of cos” looks like a cosmetic change of special function, but <span class="math notranslate nohighlight">\(\cos\)</span> is bounded and periodic while <span class="math notranslate nohighlight">\(\cosh\)</span> is unbounded and non-periodic, and that qualitative difference — compact vs. non-compact — is exactly what encodes the speed limit and the one-way, never-arriving character of acceleration. The functions are siblings; their global shapes are opposite.</p>
+</section>
+<hr class="docutils" />
+<section id="the-triangle-inequality-and-its-reversal">
+<h2>5. The triangle inequality — and its reversal<a class="headerlink" href="#the-triangle-inequality-and-its-reversal" title="Permalink to this heading">#</a></h2>
+<p>This is the sharpest place the analogy stops being cosmetic, and the single fact most worth carrying away.</p>
+<p>In the Euclidean world of <span class="math notranslate nohighlight">\(SO(3)\)</span>, the <strong>triangle inequality</strong> holds: for the length induced by <span class="math notranslate nohighlight">\(x^2+y^2+z^2\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+|a + b| \;\le\; |a| + |b| ,
+\]</div>
+<p>with equality only when <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are parallel. Geometrically: <strong>the straight line is the shortest path</strong> between two points; any detour is longer. This is so ingrained that we rarely name it as a property of the <em>positive-definite</em> form — but that is exactly what it is.</p>
+<p>Flip the signature and the inequality <strong>reverses</strong>. For <em>timelike</em> vectors, with proper time <span class="math notranslate nohighlight">\(\tau(v) = \sqrt{Q(v)}\)</span> playing the role of “length,” one has the <strong>reversed (or inverted) triangle inequality</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\tau(a + b) \;\ge\; \tau(a) + \tau(b),
+\]</div>
+<p>again with equality only when <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are parallel (same velocity). Geometrically: between two timelike-separated events, <strong>the straight worldline is the <em>longest</em> path in proper time</strong>, and any detour — any change of velocity along the way — makes the elapsed proper time <em>shorter</em>.</p>
+<p>That is the <strong>twin paradox</strong>, stated as a theorem of geometry rather than a puzzle of clocks. The twin who travels inertially from departure to reunion follows the straight worldline and ages the most; the twin who accelerates away and back follows a bent worldline — two timelike segments <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> — and by the reversed inequality ages <span class="math notranslate nohighlight">\(\tau(a)+\tau(b) \le \tau(a+b)\)</span>, i.e. <em>less</em>. The kink costs proper time, exactly as a Euclidean detour costs extra length, but with the sign of the effect turned over.</p>
+<p>This is the fact that proves cosh is <em>not</em> merely cos in disguise. The two functions share every algebraic identity up to signs, but the geometry they generate is opposite in its most basic ordering property: shortest becomes longest. If you remember one “keep in mind that…”, make it this one.</p>
+<p><em>(Why the reversal, in one line of plausibility: the sign flip in <span class="math notranslate nohighlight">\(Q\)</span> puts a <strong>minus</strong> in front of the spatial part, so adding spatial displacement now</em> subtracts <em>from the interval. A detour spends its extra motion in space, and space counts negatively — so the detour shortens the proper time instead of lengthening a distance. The minus sign that flipped the trig is the same minus sign that flips the inequality.)</em></p>
+</section>
+<hr class="docutils" />
+<section id="composition-adding-angles-adding-rapidities-and-the-sting-in-the-tail">
+<h2>6. Composition — adding angles, adding rapidities, and the sting in the tail<a class="headerlink" href="#composition-adding-angles-adding-rapidities-and-the-sting-in-the-tail" title="Permalink to this heading">#</a></h2>
+<p>Finally, how transformations combine. Here the analogy is at its most <em>generative</em> — it predicts real effects — but also delivers a genuine surprise with no Euclidean counterpart.</p>
+<p><strong>Within a single plane</strong>, both groups compose by <em>adding the angle</em>. Two rotations in the <span class="math notranslate nohighlight">\(xy\)</span>-plane by <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2\)</span> give a rotation by <span class="math notranslate nohighlight">\(\alpha_1 + \alpha_2\)</span>. Two boosts in the <span class="math notranslate nohighlight">\(tx\)</span>-plane by rapidities <span class="math notranslate nohighlight">\(\theta_1, \theta_2\)</span> give a boost by <span class="math notranslate nohighlight">\(\theta_1 + \theta_2\)</span>: <strong>rapidities add</strong>. Feeding this through <span class="math notranslate nohighlight">\(v = \tanh\theta\)</span> and the addition formula for <span class="math notranslate nohighlight">\(\tanh\)</span> reproduces the relativistic velocity-addition law</p>
+<div class="math notranslate nohighlight">
+\[
+v = \frac{v_1 + v_2}{1 + v_1 v_2},
+\]</div>
+<p>and the saturation of <span class="math notranslate nohighlight">\(\tanh\)</span> at <span class="math notranslate nohighlight">\(1\)</span> guarantees that stacking any number of sub-light boosts never reaches light speed. So “why don’t velocities just add?” has the clean answer: <em>the additive quantity is rapidity, and <span class="math notranslate nohighlight">\(v\)</span> is its <span class="math notranslate nohighlight">\(\tanh\)</span>.</em> This is the analogy working for you — the same “angles add” law, read through the hyperbolic function.</p>
+<p><strong>Across different planes</strong>, both groups are <strong>non-commutative</strong>, and this is where <span class="math notranslate nohighlight">\(O(1,3)\)</span> springs its surprise. In <span class="math notranslate nohighlight">\(SO(3)\)</span>, rotations about different axes fail to commute — the order matters — and their non-commutation is the whole substance of the group; the commutator of two rotations is a third rotation. In <span class="math notranslate nohighlight">\(O(1,3)\)</span> the rotation part behaves identically. But now ask what two <strong>boosts</strong> about different spatial directions do when composed. The startling answer:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{boost}_x \ \text{then} \ \text{boost}_y \;\ne\; \text{a pure boost} \;=\; \text{a boost combined with a *rotation*.}
+\]</div>
+<p>Schematically, the commutator of two boosts is a rotation — <span class="math notranslate nohighlight">\([K_x, K_y] \sim J_z\)</span> — “two boosts make a turn.” Physically this is <strong>Thomas–Wigner rotation</strong> (and its dynamical form, Thomas precession): an object cycled through boosts in different directions, with no torque and no spatial rotation applied anywhere, nonetheless comes back <em>rotated</em>. It is a real, measured effect — it corrects the spin–orbit coupling of the electron by the notorious factor of one-half.</p>
+<p>This has <strong>no analogue whatsoever in the substitution slogan</strong>. “Replace cos with cosh” says nothing about how boosts in <em>different</em> planes interlock; only the full group structure — the commutation relations of the six generators — reveals that boosts and rotations are woven together so tightly that the boosts cannot form a subgroup on their own. It is the deepest signal that <span class="math notranslate nohighlight">\(O(1,3)\)</span> is a real, irreducibly new object and not a cosmetic recolouring of <span class="math notranslate nohighlight">\(SO(3)\)</span>: the three “cosh” directions and the three “cos” directions do not live in separate rooms; compose the hyperbolic ones and a circular one falls out.</p>
+</section>
+<hr class="docutils" />
+<section id="coda-the-slogan-with-its-three-asterisks-attached">
+<h2>Coda: the slogan, with its three asterisks attached<a class="headerlink" href="#coda-the-slogan-with-its-three-asterisks-attached" title="Permalink to this heading">#</a></h2>
+<p>The one-line story we promised, now safe to state because every caveat has been earned:</p>
+<blockquote>
+<div><p><strong>Minkowski spacetime is Euclidean space with one sign flipped in the metric.</strong> The visible symptom is <span class="math notranslate nohighlight">\(\cos \to \cosh\)</span>, <span class="math notranslate nohighlight">\(\sin \to \sinh\)</span>, circle <span class="math notranslate nohighlight">\(\to\)</span> hyperbola — <em>but only in the planes that contain the time axis (the boosts); the purely spatial planes stay ordinary rotations.</em> The price of the flip is that <span class="math notranslate nohighlight">\(\cosh\)</span> is unbounded where <span class="math notranslate nohighlight">\(\cos\)</span> was periodic — so rapidity is limitless while velocity saturates at <span class="math notranslate nohighlight">\(1\)</span> — and that the triangle inequality <strong>reverses</strong>, making the straight worldline the path of <strong>greatest</strong> proper time. And composing boosts in different directions secretly produces a rotation, so the two halves of the group are inseparable.</p>
+</div></blockquote>
+<p>Read the substitution as the <em>symptom of the signature</em>, never as the axiom, and it becomes a reliable guide instead of a trap. Everything an introduction to special relativity needs — the speed limit, time dilation, the velocity-addition law, the twin asymmetry, even Thomas precession — is the geometry of that single flipped sign.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="sr.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Special Relativity</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../mathematics/bayesian-decisions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Why Your Model Beats You: Bayesian Decision-Making Without Noise</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-invariant-form">1. The invariant form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-preserved-orbits-and-the-cone-that-has-no-euclidean-cousin">2. What is preserved — orbits, and the cone that has no Euclidean cousin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generators-split-rotations-and-boosts">3. Generators split: rotations <em>and</em> boosts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compactness-and-why-you-cannot-boost-past-light">4. Compactness, and why you cannot boost past light</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-triangle-inequality-and-its-reversal">5. The triangle inequality — and its reversal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#composition-adding-angles-adding-rapidities-and-the-sting-in-the-tail">6. Composition — adding angles, adding rapidities, and the sting in the tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coda-the-slogan-with-its-three-asterisks-attached">Coda: the slogan, with its three asterisks attached</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
