@@ -28,6 +28,8 @@ parts:
         title: Problem of Free Will Dissolved *
       - file: philosophy/mathematics-existence
         title: What Exists in Mathematics? *
+      - file: philosophy/meinungsfreiheit-toleranz
+        title: Meinungsfreiheit und Toleranz
       - file: philosophy/ethik-0
         title: Wie soll man leben? *
         sections:
