@@ -16,6 +16,20 @@ Die Anhänge {ref}`A1 <android-a1>` bis {ref}`A5 <android-a5>` sind gedacht als 
 
 **Betrug**: Jemand entlockt dir deine Zugangsdaten oder überredet dich, Geld an ein obskures Konto zu überweisen. Das ist mit großem Abstand die größte Gefahr.
 
+Bessere Liste
+
+**Vergiftete App**
+
+**Phishing**
+
+**Vergifteter Anruf**
+
+**Malware** Viren, Trojaner
+
+
+
+
+
 (android-2)=
 ## 2 Google oder nicht Google?
 Wer Google nicht mag, sollte kein Android-Gerät kaufen. Als Android-Benutzer muss ich Google vertrauen, ob ich will oder nicht. Ist das schlimm? Richtig ist: Google verdient mit Werbung viel Geld. Richtig ist aber auch:
@@ -155,7 +169,13 @@ Das Geschäftsmodell sieht so aus (Beispiel): Ein Windelhersteller möchte junge
 
 
 (android-a5)=
-## A5 Die Schattenseite
+## A5 Ist Google gut?
+
+Google ist nicht gemeinützig.
+
+Hier was auch Google und Microsoft angestellt haben.
+
+Apple ist relativ der Musterknabe, verdienen ihr Geld über Hardware.
 
 Der Skandal mit Facebook und Cambridge Analytica wurde im März 2018 aufgedeckt: Cambridge Analytica erhielt
 Zugriff auf über 80 Millionen Facebook-Benutzer, die per Microtargeting bearbeitet wurden: Sie bekamen politische Werbung,
@@ -166,13 +186,29 @@ TikTok und ByteDance wurde 2024 vorgeworfen, über Jahre Daten von Kindern unter
 die vorgeschriebene elterliche Zustimmung gesammelt und genutzt zu haben; 
 teilweise seien sogar Mechanismen vorhanden gewesen, um Altersbeschränkungen zu umgehen.
 
-2021 tauchten große Datensätze mit LinkedIn-Informationen auf. LinkedIn betonte, dass keine privaten Daten gehackt worden seien; 
-die Informationen seien vielmehr aus öffentlich sichtbaren Profilen und anderen Quellen automatisiert „gescraped“ worden.
+## Todo
 
-Das sind drei Beispiele für Datenmissbrauch in ganz großem Maßstab. Sie erlauben zwei Interpretationen:
+- A5 Ist Google gut?
 
-- Man bekommt Angst vor der ungeheuren Menge an krimineller Energie in den oberen Etagen mancher Unternehmen.
-- Man könnte sagen: Ok, das waren Facebook und TikTok, und die anderen Großen sind nicht dabei, gehören also zu den Guten.
+- "Was kann passieren" "neu schreiben
 
-Die erste Interpretation ist unstrittig. Die zweite?
+- Rolle der Cookies: Was machen die wirklich
 
+- Ad Blocker auch als Schutz gegen Malware
+
+- Wie verhindere ich Werbung? Ad Blocker; auch Kombination von Brave, 1Password oder Bitwarden (als Beispiel wie alles zusammenhängt)
+
+- Welche Apps: Honweis darauf, dass gerade harmlose Apps manchmal vergiftet sind.
+
+- öffentliche Rechner
+
+- 9quad oder next auf dem Chrombook ausprobieren
+
+- eine txt-Datei (auf Stick, sicher hinterlegt), 
+wo alle Notfall-Informationen, Recovery-Keys usw. gespeichert sind.
+Andere Option: txt-Datei auf Google Drive die man konvertieren muss. 
+
+- Cryptomator ausprobieren
+
+- Fallback wenn 1Password verschwindet
+  
