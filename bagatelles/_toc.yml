@@ -166,14 +166,14 @@ parts:
         title: Is God responsible for evil?
       - file: literature/23-is-science-a-threat
         title: Is science a threat to religion?
-      - file: literature/wissenschaft-religion
-        title: Wissenschaft und Religion
       - file: literature/7-genesis-questions
         title: Questions about Genesis
       - file: literature/20-revelations
         title: Die Offenbarungen
       - file: literature/32-religions-in-britain
         title: Religions in Britain
+      - file: religion/wissenschaft-religion
+        title: Wissenschaft und Religion
 
   - caption: Shakespeare
     chapters:
