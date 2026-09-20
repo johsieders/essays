@@ -91,6 +91,35 @@ git_retry pull origin gh-pages
 echo "OK: On gh-pages branch"
 echo ""
 
+# Remove the previously deployed site before copying in the new build. Without
+# this, every page the book no longer generates (a renamed or deleted chapter)
+# stays on gh-pages and keeps being served forever. Everything tracked here is
+# build output apart from the keepers in the case statement below.
+if [ "$(git branch --show-current)" != "gh-pages" ]; then
+    echo "Error: expected to be on gh-pages before cleaning, aborting."
+    exit 1
+fi
+
+echo "Removing previously deployed files..."
+removed=0
+while IFS= read -r -d '' f; do
+    case "$f" in
+        CNAME|.nojekyll|.gitignore) continue ;;
+    esac
+    rm -f "$f"
+    removed=$((removed + 1))
+done < <(git ls-files -z)
+
+# Drop the empty directories the removal leaves behind; never touch .git or the
+# untracked build output we are about to copy from.
+find . -mindepth 1 -type d -empty \
+     -not -path "./.git" -not -path "./.git/*" \
+     -not -path "./bagatelles" -not -path "./bagatelles/*" \
+     -delete 2>/dev/null || true
+
+echo "OK: removed $removed files from the previous deployment"
+echo ""
+
 # Copy HTML files to root
 echo "Copying HTML files to gh-pages root..."
 cp -r bagatelles/_build/html/* .
