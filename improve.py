@@ -65,18 +65,63 @@ Environment (.env is auto-loaded):
     OPENAI_API_KEY     https://platform.openai.com/api-keys
     MISTRAL_API_KEY    https://console.mistral.ai/api-keys
     ANTHROPIC_API_KEY  https://console.anthropic.com/
+
+The keys themselves live in 1Password: .env holds `op://...` references, which
+resolve_1password_refs() below resolves through the `op` CLI at startup.  A
+plain key written straight into .env keeps working.
 """
 
 import argparse
 import concurrent.futures
+import os
 import pathlib
 import shutil
+import subprocess
 import sys
 import time
 
 from dotenv import load_dotenv
 
+
+def resolve_1password_refs() -> None:
+    """Swap any `op://vault/item/field` value in the environment for the secret.
+
+    The API keys live in 1Password, so .env holds only references, never the
+    keys themselves.  The first `op read` of a session prompts for Touch ID;
+    the rest are unlocked.  Values that are not references are left alone, so
+    a plain key in .env (or an exported shell variable) still works.
+    """
+    refs = {k: v for k, v in os.environ.items() if v.startswith("op://")}
+    if not refs:
+        return
+    # GUI-launched PyCharm inherits a minimal PATH without /opt/homebrew/bin,
+    # so fall back to the Homebrew location before giving up.
+    op = shutil.which("op") or next(
+        (p for p in ("/opt/homebrew/bin/op", "/usr/local/bin/op") if os.path.exists(p)),
+        None,
+    )
+    if op is None:
+        sys.exit(
+            "improve: .env uses op:// references but the 1Password CLI is missing.\n"
+            "         brew install --cask 1password-cli"
+        )
+    for name, ref in sorted(refs.items()):
+        done = subprocess.run(
+            [op, "read", "--no-newline", ref],
+            capture_output=True,
+            text=True,
+        )
+        if done.returncode != 0:
+            sys.exit(
+                f"improve: cannot read {name} from 1Password ({ref}).\n"
+                f"         {done.stderr.strip()}\n"
+                "         Is 'Integrate with 1Password CLI' on in the desktop app?"
+            )
+        os.environ[name] = done.stdout
+
+
 load_dotenv()  # read key=value pairs from a local .env file into os.environ
+resolve_1password_refs()  # turn the op:// references in .env into real keys
 
 
 # =========================================================================
@@ -115,8 +160,6 @@ def call_openai(model_id: str, context: str, prompt: str) -> str:
 
 
 def call_mistral(model_id: str, context: str, prompt: str) -> str:
-    import os
-
     from mistralai import Mistral
 
     # Unlike the OpenAI/Gemini SDKs, mistralai (v1) does NOT auto-read the

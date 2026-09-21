@@ -42,6 +42,11 @@ improve --jobs 2 FILE...      # bounded multi-file concurrency
 
 Each model receives the author profile + reference papers as context (system
 prompt); `--no-context` omits it. Per-stage and total timers are printed.
+
+API keys are **not** stored in `.env`: it holds `op://Private/essays-api-keys/...`
+references that `resolve_1password_refs()` resolves through the 1Password CLI at
+startup. See README.md for setup and rotation.
+
 Artifacts `*-backup.md` and `*-comments.md` are git-ignored; `*-plan.md` is
 tracked. See `README.md` for full documentation.
 

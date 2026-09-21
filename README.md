@@ -89,3 +89,39 @@ OPENAI_API_KEY     https://platform.openai.com/api-keys
 MISTRAL_API_KEY    https://console.mistral.ai/api-keys
 ANTHROPIC_API_KEY  https://console.anthropic.com/
 ```
+
+### Keys live in 1Password
+
+`.env` holds no secrets. Each value is a 1Password reference:
+
+```
+OPENAI_API_KEY=op://Private/essays-api-keys/openai
+```
+
+At startup `resolve_1password_refs()` in `improve.py` resolves every `op://`
+value through the `op` CLI, so the keys exist only in the process environment.
+The first call of a session asks for Touch ID; the rest are unlocked. A plain
+`KEY=value` in `.env` still works if you need to bypass 1Password.
+
+One-time setup on a new machine:
+
+```bash
+brew install --cask 1password-cli
+# 1Password app -> Settings -> Developer -> "Integrate with 1Password CLI"
+op vault list          # approve the terminal when prompted
+cp .env.example .env   # .env itself is gitignored
+```
+
+`.env.example` is committed and carries the references; `.env` stays out of git
+even though it holds no secrets, because the plain-key fallback means a real
+key could land in it — and this repository is public.
+
+Everyday use:
+
+```bash
+op read op://Private/essays-api-keys/openai            # show one key
+op item edit essays-api-keys openai[password]=<new>    # rotate one key
+```
+
+The item is `essays-api-keys` (Secure Note) in the `Private` vault, with the
+fields `gemini`, `openai`, `mistral`, `anthropic`.
