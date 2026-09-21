@@ -49,27 +49,40 @@ Die Gottesbeweise sind sehr angreifbar und haben mit mathematischer Logik nichts
 
 Lassen wir uns überraschen.
 
-## Was sagt Lennox?
+## Was sagt John Lennox?
 
-John Lennox vertritt eine christlich orientierte Wissenschaft. Er macht im Kern drei Aussagen: 
-(1) Er rechnet vor, wie unwahrscheinlich viele Entwicklungen sind (Evolution) und folgert daraus, dass Gott die Baustelle geleitet hat,
-und zwar nicht irgendeiner, sondern der der Bibel. (2) Er sagt, dass die Naturwissenschaft nur deshalb stattfinden kann, 
+Wie passen die sieben Schöpfungstage zum Urknall und den folgenden 13,8 Milliarden Jahren?
+Für Christen ist die Frage existenziell, für alle anderen ist sie irrelevant.
+
+John Lennox gibt eine mögliche Antwort in seinem Buch *Seven Days that Divide the World*.
+Für verunsicherte Christen ist das Buch beruhigend, für alle anderen ist es irrelevant.
+
+John Lennox vertritt eine christlich orientierte Wissenschaft. Er macht im Kern drei Aussagen:
+
+1. Er rechnet vor, wie unwahrscheinlich viele Entwicklungen sind (z.B. Evolution) und folgert daraus, dass Gott die Baustelle geleitet hat,
+und zwar nicht irgendeiner, sondern der der Bibel. 
+
+2. Er sagt, dass Naturwissenschaften nur möglich sind, 
 weil es einen Bauplan gibt, den die Wissenschaftler nach und nach rekonstruieren, wie z.B. die Newtonschen Bewegungsgleichungen. 
 Ohne Bauplan keine Naturwissenschaft.
-(3) Er interpretiert die Bibel im Kontext der Wissenschaft. In seinem Buch *Seven Days that divide the World* zeigt er, wie sich die sieben Schöpfungstage der Bibel auf
-das heutige Weltbild abbilden lassen. 
+
+3. Er beruhigt verunsicherte Christen, indem er die Bibel (z.B. die Schöpfungsgeschichte) im Kontext der Wissenschaft interpretiert.
 
 Die Punkte (1) und (2) sind Argumente gegen den extremen atheistischen Standpunkt, der mit der Wissenschaft alles erklären will.
-Aber für den Nicht-Christen sind die Aussagen "Es war Gott" und "Ich weiß es nicht" absolut gleichbedeutend. Und es gibt mehr Einwände: 
-(a) Lennox zeigt bestenfalls die Existenz *irgendwelcher Kräfte* außerhalb unserer Wahrnehmung. 
-Der Sprung zum Gott der Bibel ist völlig willkürlich. 
-(b) Oft finden die Physiker einen eleganten Bauplan (Newton, Relativitätstheorie, Quantenmechanik), oft aber auch ein unsortiertes Chaos
-(Standard-Teilchenmodell). Die These dass jede Theorie "elegant" sein muss (nach welchen Kriterien auch immer) ist sehr umstritten. 
+Aber für den Nicht-Christen sind die Aussagen "Es war Gott" und "Ich weiß es nicht" absolut gleichbedeutend. Und es gibt mehr Einwände:
+
+- Lennox zeigt bestenfalls die Existenz *irgendwelcher Kräfte* außerhalb unserer Wahrnehmung.
+Der Sprung zum Gott der Bibel ist völlig willkürlich.
+
+- Oft finden die Physiker einen eleganten Bauplan (Newton, Relativitätstheorie, Quantenmechanik), oft aber auch ein unelegantes Durcheinander
+(z.B. das Standard-Teilchenmodell). Die These, dass jede Theorie "elegant" sein muss (nach welchen Kriterien auch immer) ist sehr umstritten. 
 War Gott nur für die eleganten Theorien zuständig, oder war er bei den anderen nicht ausgeschlafen?
-(c) Auch die eleganten Theorien sind nur Approximationen, nützlich in bestimmten Situationen, unbrauchbar in anderen. 
+
+- Auch die eleganten Theorien sind nur Approximationen, nützlich in bestimmten Situationen, unbrauchbar in anderen. 
 Warum so kompliziert?
-(d) Nach welchen Kriterien können wir Menschen sagen: Dieses Phänomen ist ohne weiteres Zutun möglich, 
-für jenes andere brauchen wir Gott? Wir können unterscheiden zwischen den Phänomenen wie wir erklären können und den anderen.
+
+- Nach welchen Kriterien können wir Menschen sagen: Dieses Phänomen ist ohne weiteres Zutun möglich, 
+für jenes andere brauchen wir Gott? Wir können nur unterscheiden zwischen den Phänomenen, für die wir eine Theorie haben und allen anderen.
 
 ## Warum leben wir überhaupt?
 

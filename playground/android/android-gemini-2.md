@@ -729,7 +729,7 @@ Gemini is AI and can make mistakes, including about people. Your privacy and Gem
 ## 5. Reale Angriffsvektoren: Info-Stealer, Python & Sideloading
 *   **Downgrade- & Session-Angriffe:** Passkeys schützen das Login, aber Angreifer zielen auf schwache Fallbacks (SMS/Mail-Recovery) oder stehlen per Info-Stealer einfach das Session-Cookie *nach* dem erfolgreichen Login (Session Hijacking).
 *   **Supply-Chain-Angriffe in macOS (Python):** 
-    *   Gefahr durch Typosquatting in `pip` (bösartige Pakete, die `.env` oder SSH-Keys auslesen). Klassische Antivirensoftware ist hier oft blind.
+    * Gefahr durch Typosquatting in `pip` (bösartige Pakete, die `../../.env` oder SSH-Keys auslesen). Klassische Antivirensoftware ist hier oft blind.
     *   *Gegenmaßnahme:* Egress-Filterung mit Little Snitch (Ask-Modus für den `python3`-Prozess, um unautorisierte Uploads z.B. während einer PyPSA-Modellierung abzufangen) plus Audit-Tools wie `pip-audit`.
 *   **Android-Dropper & Overlay-Angriffe:** 
     *   Schadsoftware lädt böswillige Updates nach und nutzt Bedienungshilfen (Accessibility Services) zum Screen-Scraping.
