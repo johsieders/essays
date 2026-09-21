@@ -105,12 +105,22 @@ def resolve_1password_refs() -> None:
             "improve: .env uses op:// references but the 1Password CLI is missing.\n"
             "         brew install --cask 1password-cli"
         )
-    for name, ref in sorted(refs.items()):
-        done = subprocess.run(
-            [op, "read", "--no-newline", ref],
-            capture_output=True,
-            text=True,
+    def read(ref: str) -> subprocess.CompletedProcess:
+        return subprocess.run(
+            [op, "read", "--no-newline", ref], capture_output=True, text=True
         )
+
+    signed_in = False
+    for name, ref in sorted(refs.items()):
+        done = read(ref)
+        if done.returncode != 0 and not signed_in:
+            # A locked vault fails the read outright rather than waiting for
+            # Touch ID, which would abort a run that only needed an unlock.
+            # `op signin` raises the prompt; then the same read succeeds.
+            # Tried once per run, so a genuine failure still exits promptly.
+            signed_in = True
+            subprocess.run([op, "signin"], capture_output=True, text=True)
+            done = read(ref)
         if done.returncode != 0:
             sys.exit(
                 f"improve: cannot read {name} from 1Password ({ref}).\n"
