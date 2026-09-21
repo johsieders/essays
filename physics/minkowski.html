@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>The Lorentz Group \(O(1,3)\) &#8212; Bagatelles</title>
   
@@ -28,37 +29,43 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0baad5c3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show code';</script>
     <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/minkowski';</script>
@@ -162,18 +169,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -235,7 +231,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computer-science/dein-android.html">Dein Android-Smartphone</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
 <ul class="current nav bd-sidenav">
@@ -350,9 +345,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -510,9 +505,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -552,7 +547,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-lorentz-group-o-1-3">
-<h1>The Lorentz Group <span class="math notranslate nohighlight">\(O(1,3)\)</span><a class="headerlink" href="#the-lorentz-group-o-1-3" title="Link to this heading">#</a></h1>
+<h1>The Lorentz Group <span class="math notranslate nohighlight">\(O(1,3)\)</span><a class="headerlink" href="#the-lorentz-group-o-1-3" title="Permalink to this heading">#</a></h1>
 <p><em>A structural sketch for special relativity. Plausibility level — no proofs. Units: <span class="math notranslate nohighlight">\(c = 1\)</span> throughout, so velocities are dimensionless and <span class="math notranslate nohighlight">\(|v| &lt; 1\)</span> for material bodies, <span class="math notranslate nohighlight">\(|v| = 1\)</span> for light.</em></p>
 <p>The organizing idea of these notes is a single substitution:</p>
 <blockquote>
@@ -561,7 +556,7 @@ document.write(`
 <p>Everything below is an unpacking of that sentence, together with the three things it quietly hides. We will meet those three caveats as we go, and collect them at the end.</p>
 <hr class="docutils" />
 <section id="the-invariant-form">
-<h2>1. The invariant form<a class="headerlink" href="#the-invariant-form" title="Link to this heading">#</a></h2>
+<h2>1. The invariant form<a class="headerlink" href="#the-invariant-form" title="Permalink to this heading">#</a></h2>
 <p>A group of linear transformations is defined by <em>what it leaves unchanged</em>. For the rotation group <span class="math notranslate nohighlight">\(SO(3)\)</span> the invariant is the Euclidean squared length</p>
 <div class="math notranslate nohighlight">
 \[
@@ -583,7 +578,7 @@ Q(\Lambda v) = Q(v) \quad \text{for all } v .
 </section>
 <hr class="docutils" />
 <section id="what-is-preserved-orbits-and-the-cone-that-has-no-euclidean-cousin">
-<h2>2. What is preserved — orbits, and the cone that has no Euclidean cousin<a class="headerlink" href="#what-is-preserved-orbits-and-the-cone-that-has-no-euclidean-cousin" title="Link to this heading">#</a></h2>
+<h2>2. What is preserved — orbits, and the cone that has no Euclidean cousin<a class="headerlink" href="#what-is-preserved-orbits-and-the-cone-that-has-no-euclidean-cousin" title="Permalink to this heading">#</a></h2>
 <p>An isometry group moves each vector only within the surface where the invariant form is constant. These surfaces — the <strong>orbits</strong> — are the cleanest picture of the group’s action.</p>
 <p>For <span class="math notranslate nohighlight">\(SO(3)\)</span> the level sets <span class="math notranslate nohighlight">\(x^2 + y^2 + z^2 = \text{const}\)</span> are <strong>spheres</strong>, nested around the origin, and the group acts <strong>transitively</strong> on each: any point of a sphere can be rotated to any other point of the same sphere. Space is cleanly foliated into orbits and there are no exceptional directions.</p>
 <p>For <span class="math notranslate nohighlight">\(O(1,3)\)</span> the level sets of <span class="math notranslate nohighlight">\(Q\)</span> are <strong>hyperboloids</strong>, and they come in two geometrically distinct families separated by a wall:</p>
@@ -601,7 +596,7 @@ Q(\Lambda v) = Q(v) \quad \text{for all } v .
 </section>
 <hr class="docutils" />
 <section id="generators-split-rotations-and-boosts">
-<h2>3. Generators split: rotations <em>and</em> boosts<a class="headerlink" href="#generators-split-rotations-and-boosts" title="Link to this heading">#</a></h2>
+<h2>3. Generators split: rotations <em>and</em> boosts<a class="headerlink" href="#generators-split-rotations-and-boosts" title="Permalink to this heading">#</a></h2>
 <p>Both groups are described near the identity by their <strong>generators</strong> — the independent “infinitesimal moves” you can exponentiate to build finite transformations.</p>
 <p><span class="math notranslate nohighlight">\(SO(3)\)</span> has <strong>three</strong> generators, the rotations <span class="math notranslate nohighlight">\(J_x, J_y, J_z\)</span> about the three axes. They are all of the same kind. Each generates rotation in a coordinate <em>plane</em> (<span class="math notranslate nohighlight">\(J_z\)</span> in the <span class="math notranslate nohighlight">\(xy\)</span>-plane, etc.), each orbit is a circle, and each is <strong>periodic</strong>: rotate by <span class="math notranslate nohighlight">\(2\pi\)</span> and you are back where you started.</p>
 <p><span class="math notranslate nohighlight">\(O(1,3)\)</span> has <strong>six</strong> generators, and — this is the crucial structural fact — they split into two kinds of three:</p>
@@ -629,7 +624,7 @@ v = \tanh\theta,\quad \gamma = \cosh\theta,\quad \gamma v = \sinh\theta,
 </section>
 <hr class="docutils" />
 <section id="compactness-and-why-you-cannot-boost-past-light">
-<h2>4. Compactness, and why you cannot boost past light<a class="headerlink" href="#compactness-and-why-you-cannot-boost-past-light" title="Link to this heading">#</a></h2>
+<h2>4. Compactness, and why you cannot boost past light<a class="headerlink" href="#compactness-and-why-you-cannot-boost-past-light" title="Permalink to this heading">#</a></h2>
 <p>The split in §3 is not merely a bookkeeping of six generators into <span class="math notranslate nohighlight">\(3+3\)</span>. The two kinds differ in a property with direct physical teeth: <strong>compactness</strong>.</p>
 <p><span class="math notranslate nohighlight">\(SO(3)\)</span> is <strong>compact</strong>. Concretely: the rotation angle is <em>bounded</em> — it lives on a circle, wraps at <span class="math notranslate nohighlight">\(2\pi\)</span>, and you can always rotate back to where you began. The group is a closed, bounded object; there is nowhere to run off to.</p>
 <p>The boost part of <span class="math notranslate nohighlight">\(O(1,3)\)</span> is <strong>non-compact</strong>. The rapidity <span class="math notranslate nohighlight">\(\theta\)</span> runs over the <em>entire</em> real line, <span class="math notranslate nohighlight">\(-\infty &lt; \theta &lt; \infty\)</span>, with no wrapping and no bound. You can always boost more. Yet the <em>velocity</em> does not run away with the rapidity, because</p>
@@ -643,7 +638,7 @@ v = \tanh\theta ,
 </section>
 <hr class="docutils" />
 <section id="the-triangle-inequality-and-its-reversal">
-<h2>5. The triangle inequality — and its reversal<a class="headerlink" href="#the-triangle-inequality-and-its-reversal" title="Link to this heading">#</a></h2>
+<h2>5. The triangle inequality — and its reversal<a class="headerlink" href="#the-triangle-inequality-and-its-reversal" title="Permalink to this heading">#</a></h2>
 <p>This is the sharpest place the analogy stops being cosmetic, and the single fact most worth carrying away.</p>
 <p>In the Euclidean world of <span class="math notranslate nohighlight">\(SO(3)\)</span>, the <strong>triangle inequality</strong> holds: for the length induced by <span class="math notranslate nohighlight">\(x^2+y^2+z^2\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -663,7 +658,7 @@ v = \tanh\theta ,
 </section>
 <hr class="docutils" />
 <section id="composition-adding-angles-adding-rapidities-and-the-sting-in-the-tail">
-<h2>6. Composition — adding angles, adding rapidities, and the sting in the tail<a class="headerlink" href="#composition-adding-angles-adding-rapidities-and-the-sting-in-the-tail" title="Link to this heading">#</a></h2>
+<h2>6. Composition — adding angles, adding rapidities, and the sting in the tail<a class="headerlink" href="#composition-adding-angles-adding-rapidities-and-the-sting-in-the-tail" title="Permalink to this heading">#</a></h2>
 <p>Finally, how transformations combine. Here the analogy is at its most <em>generative</em> — it predicts real effects — but also delivers a genuine surprise with no Euclidean counterpart.</p>
 <p><strong>Within a single plane</strong>, both groups compose by <em>adding the angle</em>. Two rotations in the <span class="math notranslate nohighlight">\(xy\)</span>-plane by <span class="math notranslate nohighlight">\(\alpha_1, \alpha_2\)</span> give a rotation by <span class="math notranslate nohighlight">\(\alpha_1 + \alpha_2\)</span>. Two boosts in the <span class="math notranslate nohighlight">\(tx\)</span>-plane by rapidities <span class="math notranslate nohighlight">\(\theta_1, \theta_2\)</span> give a boost by <span class="math notranslate nohighlight">\(\theta_1 + \theta_2\)</span>: <strong>rapidities add</strong>. Feeding this through <span class="math notranslate nohighlight">\(v = \tanh\theta\)</span> and the addition formula for <span class="math notranslate nohighlight">\(\tanh\)</span> reproduces the relativistic velocity-addition law</p>
 <div class="math notranslate nohighlight">
@@ -681,7 +676,7 @@ v = \frac{v_1 + v_2}{1 + v_1 v_2},
 </section>
 <hr class="docutils" />
 <section id="coda-the-slogan-with-its-three-asterisks-attached">
-<h2>Coda: the slogan, with its three asterisks attached<a class="headerlink" href="#coda-the-slogan-with-its-three-asterisks-attached" title="Link to this heading">#</a></h2>
+<h2>Coda: the slogan, with its three asterisks attached<a class="headerlink" href="#coda-the-slogan-with-its-three-asterisks-attached" title="Permalink to this heading">#</a></h2>
 <p>The one-line story we promised, now safe to state because every caveat has been earned:</p>
 <blockquote>
 <div><p><strong>Minkowski spacetime is Euclidean space with one sign flipped in the metric.</strong> The visible symptom is <span class="math notranslate nohighlight">\(\cos \to \cosh\)</span>, <span class="math notranslate nohighlight">\(\sin \to \sinh\)</span>, circle <span class="math notranslate nohighlight">\(\to\)</span> hyperbola — <em>but only in the planes that contain the time axis (the boosts); the purely spatial planes stay ordinary rotations.</em> The price of the flip is that <span class="math notranslate nohighlight">\(\cosh\)</span> is unbounded where <span class="math notranslate nohighlight">\(\cos\)</span> was periodic — so rapidity is limitless while velocity saturates at <span class="math notranslate nohighlight">\(1\)</span> — and that the triangle inequality <strong>reverses</strong>, making the straight worldline the path of <strong>greatest</strong> proper time. And composing boosts in different directions secretly produces a rotation, so the two halves of the group are inseparable.</p>
