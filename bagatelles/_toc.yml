@@ -72,7 +72,8 @@ parts:
         title: The Spy Who Came in from the Cloud
       - file: computer-science/30-formal-logic
         title: Formal Logic
-
+      - file: computer-science/ai-regulation-policy-proposal
+        title: How to Rein in AI *
   - caption: Physics
     chapters:
       - file: physics/energy-modelling
