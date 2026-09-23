@@ -213,10 +213,10 @@ def call_claude(model_id: str, context: str, prompt: str) -> str:
 # name on the command line -> (adapter function, concrete model id).
 # Add a model by adding one line here; it can then play ANY role.
 MODELS = {
-    "gemini":  (call_gemini,  "gemini-3.5-flash"),
-    "openai":  (call_openai,  "gpt-5"),
+    "gemini":  (call_gemini,  "gemini-3.8-flash"),
+    "openai":  (call_openai,  "gpt-6-sol"),
     "mistral": (call_mistral, "mistral-medium-latest"),
-    "claude":  (call_claude,  "claude-opus-4-8"),
+    "claude":  (call_claude,  "claude-opus-5-5"),
 }
 
 
