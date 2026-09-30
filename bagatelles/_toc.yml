@@ -74,6 +74,8 @@ parts:
         title: Formal Logic
       - file: computer-science/ai-regulation-policy-proposal
         title: How to Rein in AI *
+      - file: computer-science/py4alg
+        title: A Compositional Algebra Library *
   - caption: Physics
     chapters:
       - file: physics/energy-modelling
