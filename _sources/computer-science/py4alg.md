@@ -1,0 +1,298 @@
+# py4alg: A Compositional Algebra Library for Python
+
+**A mathematically rigorous, protocol-based algebraic type system for Python**
+
+
+Johannes Siedersleben, September 2026, with the support of Claude Opus 5.5
+
+https://github.com/johsieders/sandbox
+
+## Overview
+
+`py4alg` implements a compositional approach to algebraic structures, allowing the construction of arbitrarily complex
+mathematical types from simple building blocks. The library combines Python's protocol system with mathematical
+precision to create a type-safe, extensible framework for computational algebra.
+
+## Architectural Philosophy
+
+### The Compositional Type Tree
+
+The library is built around two fundamental concepts:
+
+1. **Base Types** (parameterless): Concrete implementations of basic algebraic structures
+2. **Type Constructors** (parameterized): Functors that lift algebraic properties through type composition
+
+This design creates a **tree of algebraic types** where any valid combination of constructors can be applied to base
+types, automatically inheriting the appropriate algebraic properties.
+
+```
+Base type       Type constructor               Composite type
+NativeInt    →  Polynomial[·]               →  Polynomial[NativeInt]
+EuclideanRing   Ring → Ring                    Ring
+
+NativeFloat  →  FieldPolynomial[·]          →  FieldPolynomial[NativeFloat]
+Field           Field → EuclideanRing          EuclideanRing
+```
+
+## Base Types (Foundation Layer)
+
+These parameterless classes provide the foundation of the algebraic hierarchy:
+
+| Type            | Protocols                     | Description                           |
+|-----------------|-------------------------------|---------------------------------------|
+| `NativeInt`     | `EuclideanRing`, `Comparable` | Integers with division algorithm      |
+| `NativeFloat`   | `Field`, `Comparable`         | Floating-point field (with tolerance) |
+| `NativeComplex` | `Field`                       | Complex number field                  |
+| `Fp`            | `Field`, `Comparable`         | Finite field Z/pZ (prime modulus)     |
+| `Zm`            | `EuclideanRing`, `Comparable` | Integers mod m (any modulus)          |
+| `ZmProduct`     | `Ring`                        | Direct product of Zm rings (1)        |
+| `ECpoint`       | `AbelianGroup`                | Elliptic curve points over Fp         |
+| `SymbolicInt`   | `Ring`                        | Symbolic integers Z[a, b, ...] (2)    |
+
+(1) Zero divisors, e.g. (1, 0) · (0, 1) = (0, 0), so not a Euclidean ring; `//` divides by units only.
+(2) Polynomials with integer coefficients in symbols, stored as sympy `Poly` over ZZ, with exact equality. Not
+Euclidean (no division with remainder) and not ordered (`a < b` has no truth value), so no `Fraction` over it.
+
+Each base type implements specific **protocols** that define their algebraic behavior through method signatures.
+
+## Type Constructors (Functor Layer)
+
+These parameterized classes are **functors** that lift algebraic structures to more complex domains:
+
+| Constructor          | Signature               | Result Protocol | Description                             |
+|----------------------|-------------------------|-----------------|-----------------------------------------|
+| `Matrix[T]`          | `Ring → Ring`           | `Ring`          | Matrix algebra over rings               |
+| `FieldMatrix[T]`     | `Field → Ring`          | `Ring`          | Matrices over fields: det, inverse, `/` |
+| `Complex[T]`         | `Ring → Ring`           | `Ring`          | Complex numbers over rings (e.g. Z[i])  |
+| `FieldComplex[T]`    | `Field → Field`         | `Field`         | Complex numbers over fields             |
+| `Fraction[T]`        | `EuclideanRing → Field` | `Field`         | Field of fractions (quotient field)     |
+| `Polynomial[T]`      | `Ring → Ring`           | `Ring`          | Polynomial rings                        |
+| `FieldPolynomial[T]` | `Field → EuclideanRing` | `EuclideanRing` | Polynomials over fields (with division) |
+
+### Functor Properties
+
+Each type constructor preserves and transforms algebraic structure:
+
+- **Covariant**: If `S ⊆ T` in the protocol hierarchy, then `F[S] ⊆ F[T]`
+- **Structure-preserving**: Algebraic operations are lifted consistently
+- **Composable**: Multiple constructors can be applied sequentially
+- **Idempotent (flattening)**: `Polynomial`, `Complex`, and `Fraction` detect when their argument is already of the same
+  type and flatten automatically. `Polynomial[Polynomial]` yields a `Polynomial` (by expanding the nested coefficients),
+  `Fraction[Fraction]` yields a `Fraction` (by cross-multiplying), and `Complex[Complex]` yields a `Complex`.
+- **Block matrices**: `Matrix` applied to $n^2$ matrices of size $m \times m$ builds the block matrix of size
+  $nm \times nm$ over their scalars, so `Matrix(Matrix)` is again a `Matrix[T]` (its `descent()` is `[Matrix, T]`).
+
+## Protocol System
+
+The library uses Python's `@runtime_checkable` protocols to define algebraic structures:
+
+```python
+@runtime_checkable
+class Ring(AbelianGroup, Protocol):
+    def __mul__(self, other: Any) -> Any: ...
+
+    def one(self) -> Any: ...
+    # ... inherits additive structure from AbelianGroup
+```
+
+### Protocol Hierarchy
+
+```
+AbelianGroup          __bool__, zero()
+    ↓
+   Ring               __mul__, one()
+    ↓
+EuclideanRing         __floordiv__, __mod__, __divmod__, euclidean_function(), normalize()
+    ↓
+  Field               __truediv__, inverse()
+```
+
+**Comparable** forms an orthogonal hierarchy for ordered structures.
+
+### Required Method Contracts
+
+- **`normalize()`**: Maps associates to the same canonical form. Fields/units: `one()` if nonzero, `zero()` if zero.
+  Integers: `abs(self)`. Polynomials over fields: divide by leading coefficient (monic).
+- **`euclidean_function()`**: Returns `int`. Raises `ValueError` on zero. Fields: `1`. Integers: `abs(value)`.
+  Polynomials: `degree()`.
+- **`zero()`**: Instance method (not classmethod) for parameterized types, preserving instance parameters.
+- **`__bool__()`**: Tests for non-zeroness. NativeFloat uses tolerance from `params` in `util/utils.py`.
+- **GCD**: Free function in `util/primes.py` using the generic Euclidean algorithm. Not a method on types.
+
+## Compositional Examples
+
+The power of this system lies in its **compositional nature**. Here are some valid type combinations:
+
+### Simple Compositions
+
+```python
+# Polynomials over integers
+Polynomial[NativeInt]  # → Ring
+
+# Polynomials over the rationals
+FieldPolynomial[Fraction[NativeInt]]  # → EuclideanRing
+
+# Complex numbers over rationals
+FieldComplex[Fraction[NativeInt]]  # → Field
+Complex[Fraction[NativeInt]]  # → Ring (Complex is the ring version)
+
+# Matrices over finite fields
+Matrix[Fp]  # → Ring
+```
+
+### Deep Compositions
+
+```python
+# Matrices of polynomials over complex rationals
+Matrix[Polynomial[Complex[Fraction[NativeInt]]]]  # → Ring
+
+# Polynomials over matrix rings
+Polynomial[Matrix[NativeFloat]]  # → Ring
+
+# Rational functions over the rationals (Fraction needs a Euclidean ring, so FieldPolynomial)
+Fraction[FieldPolynomial[Fraction[NativeInt]]]  # → Field
+```
+
+### Infinite Possibilities
+
+The compositional system generates **infinitely many valid types**:
+
+- Any constructor can be applied to any compatible base type
+- Multiple constructors can be chained in any valid order
+- The resulting type automatically implements appropriate protocols
+
+## Rigorous Testing Framework
+
+### Property Verification (`tests/py4alg/check_protocols.py`)
+
+The testing system validates algebraic axioms through composable check functions:
+
+- **`check_abelian_group(samples)`**: Identity, inverse, commutativity, associativity of addition
+- **`check_rings(samples)`**: All abelian group checks + multiplicative identity, associativity, distributivity,
+  annihilator
+- **`check_euclidean_rings(samples)`**: All ring checks + division, divmod, commutativity of multiplication, GCD
+  properties (divisibility, commutativity, associativity, identity)
+- **`check_fields(samples)`**: All Euclidean ring checks + true division and inverse
+
+### Sample Generation (`util/gen_samples.py`, `util/def_samples.py`)
+
+`gen_samples.py` has infinite generators and `gen_tree`; `def_samples.py` has factory functions that create typed
+sample lists for testing:
+
+- `def_nat_ints(...)`, `def_nat_floats(...)`, `def_nat_complex(...)` — base types
+- `def_fractions(...)`, `def_polynomials(...)`, `def_field_polynomials(...)` — composite types
+
+### Known Limitations
+
+- Rational functions with float coefficients (e.g., `Fraction[FieldPolynomial[NativeFloat]]`) fail associativity
+  and distributivity by rounding: the Euclidean gcd over floats is ill-conditioned, so fractions are reduced
+  inconsistently. The tower tests do not build them; the same structure over exact coefficients is tested.
+
+## Implementation Details
+
+### Type Safety Through Protocols
+
+```python
+# Runtime protocol checking ensures type safety
+isinstance(polynomial_ring, Ring)  # → True
+isinstance(polynomial_ring, Field)  # → False (unless over a field)
+```
+
+### Descent Tracking
+
+Each composite type tracks its construction history:
+
+```python
+complex_poly = Complex(Polynomial(NativeInt(1), NativeInt(2)), Polynomial(NativeInt(3)))
+complex_poly.descent()  # → [Complex, Polynomial, NativeInt]
+```
+
+### Fraction Simplification
+
+The `Fraction` constructor divides numerator and denominator by their GCD directly (without normalizing the GCD first).
+This ensures that field-valued fractions (e.g., `Fraction[NativeFloat]`) actually simplify, preventing coefficient
+blowup in deep type towers.
+
+## Usage Examples
+
+### Basic Usage
+
+```python
+from sandbox.py4alg.mapper import Polynomial
+from sandbox.py4alg.protocols.p_ring import Ring
+from sandbox.py4alg.wrapper.w_int import NativeInt as N
+
+# Polynomials over the integers: coefficients are passed one by one, lowest degree first
+p = Polynomial(N(1), N(2), N(3))  # 1 + 2x + 3x²
+q = Polynomial(N(4), N(5))  # 4 + 5x
+
+result = p * q  # 4 + 13x + 22x² + 15x³
+assert isinstance(result, Ring)  # automatic protocol satisfaction
+```
+
+### Advanced Compositions
+
+```python
+from sandbox.py4alg.mapper import FieldComplex, FieldPolynomial, Fraction
+from sandbox.py4alg.protocols.p_field import Field
+from sandbox.py4alg.wrapper.w_float import NativeFloat as F
+
+# Rational functions over the complex numbers: Fraction[FieldPolynomial[FieldComplex[NativeFloat]]]
+num = FieldPolynomial(FieldComplex(F(1.0), F(2.0)))  # the constant 1 + 2i
+den = FieldPolynomial(FieldComplex(F(3.0), F(0.0)), FieldComplex(F(1.0), F(0.0)))  # 3 + x
+f = Fraction(num, den)
+
+# This type automatically implements the Field protocol!
+assert isinstance(f, Field)
+```
+
+## Mathematical Foundations
+
+### Category Theory Inspiration
+
+The design draws from **category theory**:
+
+- **Objects**: Algebraic types and their protocol implementations
+- **Morphisms**: Structure-preserving maps between types
+- **Functors**: Type constructors that preserve algebraic relationships
+- **Composition**: Sequential application of type constructors
+
+### Algebraic Correctness
+
+Every operation is mathematically sound:
+
+- **Closure**: Operations never leave their algebraic structure
+- **Consistency**: Axioms are verified by property-based testing
+- **Completeness**: All standard algebraic structures are representable
+
+## Educational Value
+
+This library serves as a **computational textbook** of abstract algebra:
+
+- **Concepts**: Each protocol corresponds to a mathematical definition
+- **Examples**: Infinite variety of concrete algebraic structures
+- **Verification**: Axioms are tested, not assumed
+- **Exploration**: Easy to construct and experiment with new combinations
+
+## Research Applications
+
+The compositional approach enables:
+
+- **Algorithm development** for generic algebraic structures
+- **Performance analysis** across different implementations
+- **Correctness verification** through property-based testing
+- **Educational tools** for teaching abstract algebra
+
+## Future Extensions
+
+The architecture naturally accommodates:
+
+- **New base types**: Additional number systems, geometric objects
+- **New constructors**: Tensor products, group algebras, Lie algebras
+- **New protocols**: Categories, topological structures, differential forms
+- **Performance optimization**: Specialized implementations for common patterns
+
+---
+
+**py4alg** represents a new paradigm in computational algebra: a system where mathematical correctness, type safety, and
+compositional flexibility converge to create an infinitely extensible, rigorously tested algebraic universe.
