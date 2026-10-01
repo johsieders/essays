@@ -3,9 +3,10 @@
 **A mathematically rigorous, protocol-based algebraic type system for Python**
 
 
-Johannes Siedersleben, September 2026, with the support of Claude Opus 5.5
+Johannes Siedersleben, September 2026,  
+assisted by Claude Opus 5.5
 
-https://github.com/johsieders/sandbox
+https://github.com/johsieders/sandbox/py4alg
 
 ## Overview
 
@@ -294,5 +295,5 @@ The architecture naturally accommodates:
 
 ---
 
-**py4alg** represents a new paradigm in computational algebra: a system where mathematical correctness, type safety, and
+**py4alg** represents a system where mathematical correctness, type safety, and
 compositional flexibility converge to create an infinitely extensible, rigorously tested algebraic universe.

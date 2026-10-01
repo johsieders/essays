@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>py4alg: A Compositional Algebra Library for Python &#8212; Bagatelles</title>
   
@@ -28,37 +29,43 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0baad5c3" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show code';</script>
     <script>let toggleHintHide = 'Click to hide code';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'computer-science/py4alg';</script>
@@ -162,18 +169,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -351,9 +347,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -511,9 +507,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -592,20 +588,21 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="py4alg-a-compositional-algebra-library-for-python">
-<h1>py4alg: A Compositional Algebra Library for Python<a class="headerlink" href="#py4alg-a-compositional-algebra-library-for-python" title="Link to this heading">#</a></h1>
+<h1>py4alg: A Compositional Algebra Library for Python<a class="headerlink" href="#py4alg-a-compositional-algebra-library-for-python" title="Permalink to this heading">#</a></h1>
 <p><strong>A mathematically rigorous, protocol-based algebraic type system for Python</strong></p>
-<p>Johannes Siedersleben, September 2026, with the support of Claude Opus 5.5</p>
-<p><a class="github reference external" href="https://github.com/johsieders/sandbox">johsieders/sandbox</a></p>
+<p>Johannes Siedersleben, September 2026,<br />
+assisted by Claude Opus 5.5</p>
+<p><a class="github reference external" href="https://github.com/johsieders/sandbox/py4alg">johsieders/sandbox</a></p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">py4alg</span></code> implements a compositional approach to algebraic structures, allowing the construction of arbitrarily complex
 mathematical types from simple building blocks. The library combines Python’s protocol system with mathematical
 precision to create a type-safe, extensible framework for computational algebra.</p>
 </section>
 <section id="architectural-philosophy">
-<h2>Architectural Philosophy<a class="headerlink" href="#architectural-philosophy" title="Link to this heading">#</a></h2>
+<h2>Architectural Philosophy<a class="headerlink" href="#architectural-philosophy" title="Permalink to this heading">#</a></h2>
 <section id="the-compositional-type-tree">
-<h3>The Compositional Type Tree<a class="headerlink" href="#the-compositional-type-tree" title="Link to this heading">#</a></h3>
+<h3>The Compositional Type Tree<a class="headerlink" href="#the-compositional-type-tree" title="Permalink to this heading">#</a></h3>
 <p>The library is built around two fundamental concepts:</p>
 <ol class="arabic simple">
 <li><p><strong>Base Types</strong> (parameterless): Concrete implementations of basic algebraic structures</p></li>
@@ -624,7 +621,7 @@ Field           Field → EuclideanRing          EuclideanRing
 </section>
 </section>
 <section id="base-types-foundation-layer">
-<h2>Base Types (Foundation Layer)<a class="headerlink" href="#base-types-foundation-layer" title="Link to this heading">#</a></h2>
+<h2>Base Types (Foundation Layer)<a class="headerlink" href="#base-types-foundation-layer" title="Permalink to this heading">#</a></h2>
 <p>These parameterless classes provide the foundation of the algebraic hierarchy:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -675,7 +672,7 @@ Euclidean (no division with remainder) and not ordered (<code class="docutils li
 <p>Each base type implements specific <strong>protocols</strong> that define their algebraic behavior through method signatures.</p>
 </section>
 <section id="type-constructors-functor-layer">
-<h2>Type Constructors (Functor Layer)<a class="headerlink" href="#type-constructors-functor-layer" title="Link to this heading">#</a></h2>
+<h2>Type Constructors (Functor Layer)<a class="headerlink" href="#type-constructors-functor-layer" title="Permalink to this heading">#</a></h2>
 <p>These parameterized classes are <strong>functors</strong> that lift algebraic structures to more complex domains:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -725,7 +722,7 @@ Euclidean (no division with remainder) and not ordered (<code class="docutils li
 </table>
 </div>
 <section id="functor-properties">
-<h3>Functor Properties<a class="headerlink" href="#functor-properties" title="Link to this heading">#</a></h3>
+<h3>Functor Properties<a class="headerlink" href="#functor-properties" title="Permalink to this heading">#</a></h3>
 <p>Each type constructor preserves and transforms algebraic structure:</p>
 <ul class="simple">
 <li><p><strong>Covariant</strong>: If <code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">⊆</span> <span class="pre">T</span></code> in the protocol hierarchy, then <code class="docutils literal notranslate"><span class="pre">F[S]</span> <span class="pre">⊆</span> <span class="pre">F[T]</span></code></p></li>
@@ -740,7 +737,7 @@ type and flatten automatically. <code class="docutils literal notranslate"><span
 </section>
 </section>
 <section id="protocol-system">
-<h2>Protocol System<a class="headerlink" href="#protocol-system" title="Link to this heading">#</a></h2>
+<h2>Protocol System<a class="headerlink" href="#protocol-system" title="Permalink to this heading">#</a></h2>
 <p>The library uses Python’s <code class="docutils literal notranslate"><span class="pre">&#64;runtime_checkable</span></code> protocols to define algebraic structures:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@runtime_checkable</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Ring</span><span class="p">(</span><span class="n">AbelianGroup</span><span class="p">,</span> <span class="n">Protocol</span><span class="p">):</span>
@@ -751,7 +748,7 @@ type and flatten automatically. <code class="docutils literal notranslate"><span
 </pre></div>
 </div>
 <section id="protocol-hierarchy">
-<h3>Protocol Hierarchy<a class="headerlink" href="#protocol-hierarchy" title="Link to this heading">#</a></h3>
+<h3>Protocol Hierarchy<a class="headerlink" href="#protocol-hierarchy" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>AbelianGroup          __bool__, zero()
     ↓
    Ring               __mul__, one()
@@ -764,7 +761,7 @@ EuclideanRing         __floordiv__, __mod__, __divmod__, euclidean_function(), n
 <p><strong>Comparable</strong> forms an orthogonal hierarchy for ordered structures.</p>
 </section>
 <section id="required-method-contracts">
-<h3>Required Method Contracts<a class="headerlink" href="#required-method-contracts" title="Link to this heading">#</a></h3>
+<h3>Required Method Contracts<a class="headerlink" href="#required-method-contracts" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">normalize()</span></code></strong>: Maps associates to the same canonical form. Fields/units: <code class="docutils literal notranslate"><span class="pre">one()</span></code> if nonzero, <code class="docutils literal notranslate"><span class="pre">zero()</span></code> if zero.
 Integers: <code class="docutils literal notranslate"><span class="pre">abs(self)</span></code>. Polynomials over fields: divide by leading coefficient (monic).</p></li>
@@ -777,10 +774,10 @@ Polynomials: <code class="docutils literal notranslate"><span class="pre">degree
 </section>
 </section>
 <section id="compositional-examples">
-<h2>Compositional Examples<a class="headerlink" href="#compositional-examples" title="Link to this heading">#</a></h2>
+<h2>Compositional Examples<a class="headerlink" href="#compositional-examples" title="Permalink to this heading">#</a></h2>
 <p>The power of this system lies in its <strong>compositional nature</strong>. Here are some valid type combinations:</p>
 <section id="simple-compositions">
-<h3>Simple Compositions<a class="headerlink" href="#simple-compositions" title="Link to this heading">#</a></h3>
+<h3>Simple Compositions<a class="headerlink" href="#simple-compositions" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Polynomials over integers</span>
 <span class="n">Polynomial</span><span class="p">[</span><span class="n">NativeInt</span><span class="p">]</span>  <span class="c1"># → Ring</span>
 
@@ -797,7 +794,7 @@ Polynomials: <code class="docutils literal notranslate"><span class="pre">degree
 </div>
 </section>
 <section id="deep-compositions">
-<h3>Deep Compositions<a class="headerlink" href="#deep-compositions" title="Link to this heading">#</a></h3>
+<h3>Deep Compositions<a class="headerlink" href="#deep-compositions" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matrices of polynomials over complex rationals</span>
 <span class="n">Matrix</span><span class="p">[</span><span class="n">Polynomial</span><span class="p">[</span><span class="n">Complex</span><span class="p">[</span><span class="n">Fraction</span><span class="p">[</span><span class="n">NativeInt</span><span class="p">]]]]</span>  <span class="c1"># → Ring</span>
 
@@ -810,7 +807,7 @@ Polynomials: <code class="docutils literal notranslate"><span class="pre">degree
 </div>
 </section>
 <section id="infinite-possibilities">
-<h3>Infinite Possibilities<a class="headerlink" href="#infinite-possibilities" title="Link to this heading">#</a></h3>
+<h3>Infinite Possibilities<a class="headerlink" href="#infinite-possibilities" title="Permalink to this heading">#</a></h3>
 <p>The compositional system generates <strong>infinitely many valid types</strong>:</p>
 <ul class="simple">
 <li><p>Any constructor can be applied to any compatible base type</p></li>
@@ -820,9 +817,9 @@ Polynomials: <code class="docutils literal notranslate"><span class="pre">degree
 </section>
 </section>
 <section id="rigorous-testing-framework">
-<h2>Rigorous Testing Framework<a class="headerlink" href="#rigorous-testing-framework" title="Link to this heading">#</a></h2>
+<h2>Rigorous Testing Framework<a class="headerlink" href="#rigorous-testing-framework" title="Permalink to this heading">#</a></h2>
 <section id="property-verification-tests-py4alg-check-protocols-py">
-<h3>Property Verification (<code class="docutils literal notranslate"><span class="pre">tests/py4alg/check_protocols.py</span></code>)<a class="headerlink" href="#property-verification-tests-py4alg-check-protocols-py" title="Link to this heading">#</a></h3>
+<h3>Property Verification (<code class="docutils literal notranslate"><span class="pre">tests/py4alg/check_protocols.py</span></code>)<a class="headerlink" href="#property-verification-tests-py4alg-check-protocols-py" title="Permalink to this heading">#</a></h3>
 <p>The testing system validates algebraic axioms through composable check functions:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">check_abelian_group(samples)</span></code></strong>: Identity, inverse, commutativity, associativity of addition</p></li>
@@ -834,7 +831,7 @@ properties (divisibility, commutativity, associativity, identity)</p></li>
 </ul>
 </section>
 <section id="sample-generation-util-gen-samples-py-util-def-samples-py">
-<h3>Sample Generation (<code class="docutils literal notranslate"><span class="pre">util/gen_samples.py</span></code>, <code class="docutils literal notranslate"><span class="pre">util/def_samples.py</span></code>)<a class="headerlink" href="#sample-generation-util-gen-samples-py-util-def-samples-py" title="Link to this heading">#</a></h3>
+<h3>Sample Generation (<code class="docutils literal notranslate"><span class="pre">util/gen_samples.py</span></code>, <code class="docutils literal notranslate"><span class="pre">util/def_samples.py</span></code>)<a class="headerlink" href="#sample-generation-util-gen-samples-py-util-def-samples-py" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">gen_samples.py</span></code> has infinite generators and <code class="docutils literal notranslate"><span class="pre">gen_tree</span></code>; <code class="docutils literal notranslate"><span class="pre">def_samples.py</span></code> has factory functions that create typed
 sample lists for testing:</p>
 <ul class="simple">
@@ -843,7 +840,7 @@ sample lists for testing:</p>
 </ul>
 </section>
 <section id="known-limitations">
-<h3>Known Limitations<a class="headerlink" href="#known-limitations" title="Link to this heading">#</a></h3>
+<h3>Known Limitations<a class="headerlink" href="#known-limitations" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Rational functions with float coefficients (e.g., <code class="docutils literal notranslate"><span class="pre">Fraction[FieldPolynomial[NativeFloat]]</span></code>) fail associativity
 and distributivity by rounding: the Euclidean gcd over floats is ill-conditioned, so fractions are reduced
@@ -852,9 +849,9 @@ inconsistently. The tower tests do not build them; the same structure over exact
 </section>
 </section>
 <section id="implementation-details">
-<h2>Implementation Details<a class="headerlink" href="#implementation-details" title="Link to this heading">#</a></h2>
+<h2>Implementation Details<a class="headerlink" href="#implementation-details" title="Permalink to this heading">#</a></h2>
 <section id="type-safety-through-protocols">
-<h3>Type Safety Through Protocols<a class="headerlink" href="#type-safety-through-protocols" title="Link to this heading">#</a></h3>
+<h3>Type Safety Through Protocols<a class="headerlink" href="#type-safety-through-protocols" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Runtime protocol checking ensures type safety</span>
 <span class="nb">isinstance</span><span class="p">(</span><span class="n">polynomial_ring</span><span class="p">,</span> <span class="n">Ring</span><span class="p">)</span>  <span class="c1"># → True</span>
 <span class="nb">isinstance</span><span class="p">(</span><span class="n">polynomial_ring</span><span class="p">,</span> <span class="n">Field</span><span class="p">)</span>  <span class="c1"># → False (unless over a field)</span>
@@ -862,7 +859,7 @@ inconsistently. The tower tests do not build them; the same structure over exact
 </div>
 </section>
 <section id="descent-tracking">
-<h3>Descent Tracking<a class="headerlink" href="#descent-tracking" title="Link to this heading">#</a></h3>
+<h3>Descent Tracking<a class="headerlink" href="#descent-tracking" title="Permalink to this heading">#</a></h3>
 <p>Each composite type tracks its construction history:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">complex_poly</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="n">Polynomial</span><span class="p">(</span><span class="n">NativeInt</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">NativeInt</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">NativeInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
 <span class="n">complex_poly</span><span class="o">.</span><span class="n">descent</span><span class="p">()</span>  <span class="c1"># → [Complex, Polynomial, NativeInt]</span>
@@ -870,16 +867,16 @@ inconsistently. The tower tests do not build them; the same structure over exact
 </div>
 </section>
 <section id="fraction-simplification">
-<h3>Fraction Simplification<a class="headerlink" href="#fraction-simplification" title="Link to this heading">#</a></h3>
+<h3>Fraction Simplification<a class="headerlink" href="#fraction-simplification" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Fraction</span></code> constructor divides numerator and denominator by their GCD directly (without normalizing the GCD first).
 This ensures that field-valued fractions (e.g., <code class="docutils literal notranslate"><span class="pre">Fraction[NativeFloat]</span></code>) actually simplify, preventing coefficient
 blowup in deep type towers.</p>
 </section>
 </section>
 <section id="usage-examples">
-<h2>Usage Examples<a class="headerlink" href="#usage-examples" title="Link to this heading">#</a></h2>
+<h2>Usage Examples<a class="headerlink" href="#usage-examples" title="Permalink to this heading">#</a></h2>
 <section id="basic-usage">
-<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h3>
+<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sandbox.py4alg.mapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">Polynomial</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sandbox.py4alg.protocols.p_ring</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ring</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sandbox.py4alg.wrapper.w_int</span><span class="w"> </span><span class="kn">import</span> <span class="n">NativeInt</span> <span class="k">as</span> <span class="n">N</span>
@@ -894,7 +891,7 @@ blowup in deep type towers.</p>
 </div>
 </section>
 <section id="advanced-compositions">
-<h3>Advanced Compositions<a class="headerlink" href="#advanced-compositions" title="Link to this heading">#</a></h3>
+<h3>Advanced Compositions<a class="headerlink" href="#advanced-compositions" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sandbox.py4alg.mapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">FieldComplex</span><span class="p">,</span> <span class="n">FieldPolynomial</span><span class="p">,</span> <span class="n">Fraction</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sandbox.py4alg.protocols.p_field</span><span class="w"> </span><span class="kn">import</span> <span class="n">Field</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sandbox.py4alg.wrapper.w_float</span><span class="w"> </span><span class="kn">import</span> <span class="n">NativeFloat</span> <span class="k">as</span> <span class="n">F</span>
@@ -911,9 +908,9 @@ blowup in deep type towers.</p>
 </section>
 </section>
 <section id="mathematical-foundations">
-<h2>Mathematical Foundations<a class="headerlink" href="#mathematical-foundations" title="Link to this heading">#</a></h2>
+<h2>Mathematical Foundations<a class="headerlink" href="#mathematical-foundations" title="Permalink to this heading">#</a></h2>
 <section id="category-theory-inspiration">
-<h3>Category Theory Inspiration<a class="headerlink" href="#category-theory-inspiration" title="Link to this heading">#</a></h3>
+<h3>Category Theory Inspiration<a class="headerlink" href="#category-theory-inspiration" title="Permalink to this heading">#</a></h3>
 <p>The design draws from <strong>category theory</strong>:</p>
 <ul class="simple">
 <li><p><strong>Objects</strong>: Algebraic types and their protocol implementations</p></li>
@@ -923,7 +920,7 @@ blowup in deep type towers.</p>
 </ul>
 </section>
 <section id="algebraic-correctness">
-<h3>Algebraic Correctness<a class="headerlink" href="#algebraic-correctness" title="Link to this heading">#</a></h3>
+<h3>Algebraic Correctness<a class="headerlink" href="#algebraic-correctness" title="Permalink to this heading">#</a></h3>
 <p>Every operation is mathematically sound:</p>
 <ul class="simple">
 <li><p><strong>Closure</strong>: Operations never leave their algebraic structure</p></li>
@@ -933,7 +930,7 @@ blowup in deep type towers.</p>
 </section>
 </section>
 <section id="educational-value">
-<h2>Educational Value<a class="headerlink" href="#educational-value" title="Link to this heading">#</a></h2>
+<h2>Educational Value<a class="headerlink" href="#educational-value" title="Permalink to this heading">#</a></h2>
 <p>This library serves as a <strong>computational textbook</strong> of abstract algebra:</p>
 <ul class="simple">
 <li><p><strong>Concepts</strong>: Each protocol corresponds to a mathematical definition</p></li>
@@ -943,7 +940,7 @@ blowup in deep type towers.</p>
 </ul>
 </section>
 <section id="research-applications">
-<h2>Research Applications<a class="headerlink" href="#research-applications" title="Link to this heading">#</a></h2>
+<h2>Research Applications<a class="headerlink" href="#research-applications" title="Permalink to this heading">#</a></h2>
 <p>The compositional approach enables:</p>
 <ul class="simple">
 <li><p><strong>Algorithm development</strong> for generic algebraic structures</p></li>
@@ -953,7 +950,7 @@ blowup in deep type towers.</p>
 </ul>
 </section>
 <section id="future-extensions">
-<h2>Future Extensions<a class="headerlink" href="#future-extensions" title="Link to this heading">#</a></h2>
+<h2>Future Extensions<a class="headerlink" href="#future-extensions" title="Permalink to this heading">#</a></h2>
 <p>The architecture naturally accommodates:</p>
 <ul class="simple">
 <li><p><strong>New base types</strong>: Additional number systems, geometric objects</p></li>
@@ -962,7 +959,7 @@ blowup in deep type towers.</p>
 <li><p><strong>Performance optimization</strong>: Specialized implementations for common patterns</p></li>
 </ul>
 <hr class="docutils" />
-<p><strong>py4alg</strong> represents a new paradigm in computational algebra: a system where mathematical correctness, type safety, and
+<p><strong>py4alg</strong> represents a system where mathematical correctness, type safety, and
 compositional flexibility converge to create an infinitely extensible, rigorously tested algebraic universe.</p>
 </section>
 </section>
