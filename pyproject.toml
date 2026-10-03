@@ -1,0 +1,59 @@
+[project]
+name = "bagatelles"
+version = "0.8.0"
+description = "Bagatelles — essays by Johannes Siedersleben (Jupyter Book) and the improve.py writing pipeline"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    # --- Jupyter Book toolchain (pinned) ---
+    # These versions build the book reproducibly; do not loosen without a test build.
+    # The core pins (esp. myst-parser/sphinx/docutils) are what broke CI in the
+    # past when resolved freely — keep them exact. Validated on Python 3.14 (Oct 2026).
+    "jupyter-book==0.15.1",
+    "myst-parser==0.18.1",
+    "myst-nb==0.17.2",
+    "sphinx==5.0.2",
+    "docutils==0.18.1",
+    "sphinx-book-theme==1.0.1",
+    "pydata-sphinx-theme==0.15.4",
+    "sphinx-proof==0.4.0",
+    "sphinx-togglebutton==0.3.2",
+    "sphinxcontrib-bibtex==2.5.0",
+    # Sphinx 5.0.2's epub builder imports stdlib `imghdr`, which was removed in
+    # Python 3.13. This backport restores it; without it the build fails with
+    # "No module named 'imghdr'".
+    "standard-imghdr==3.13.0",
+
+    # --- improve.py ---
+    "anthropic",
+    "openai",
+    "google-genai",
+    "mistralai<2",
+    "python-dotenv",
+]
+
+[dependency-groups]
+# Not needed to build the site (execute_notebooks: off; notebooks ship with
+# pre-executed outputs). Needed to run/re-execute notebooks and playground code.
+dev = [
+    "jupyterlab",
+    "notebook",
+    "nbconvert",
+    "ipykernel",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "sympy",
+    "math4phys",
+    "torch",       # playground/linear-regression.ipynb
+    "pypsa",       # bagatelles/physics/energy-modelling.md
+    "highspy",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+# Pinned to a commit (not @main) so it never floats. 2b86fe8 passes the
+# self-tests in bagatelles/mathematics/diff-operators.ipynb; 381a3c6 does not.
+math4phys = { git = "https://github.com/johsieders/sandbox.git", rev = "2b86fe8a0899bed4e240cfe8622c8c3269428d87", subdirectory = "sandbox/math4phys" }

@@ -9,7 +9,7 @@ echo ""
 # Find all .ipynb files, excluding _build directory
 find . -name "*.ipynb" -not -path "./_build/*" -not -path "./.jupyter_cache/*" | while read -r notebook; do
     echo "▶ Executing: $notebook"
-    ../.venv/bin/jupyter nbconvert \
+    uv run --frozen jupyter nbconvert \
         --to notebook \
         --execute \
         --inplace \

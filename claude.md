@@ -47,6 +47,9 @@ API keys are **not** stored in `.env`: it holds `op://Private/essays-api-keys/..
 references that `resolve_1password_refs()` resolves through the 1Password CLI at
 startup. See README.md for setup and rotation.
 
+Run it with `uv run improve.py FILE` (project is managed by uv on Python 3.14;
+dependencies in `pyproject.toml`/`uv.lock`, `uv sync` to set up `.venv`).
+
 Artifacts `*-backup.md` and `*-comments.md` are git-ignored; `*-plan.md` is
 tracked. See `README.md` for full documentation.
 
@@ -129,8 +132,9 @@ essays/
 │   ├── literature/                   # 14 essays (13 + Religions in Britain)
 │   ├── mathematics/                  # 3 essays (arithmetic, Euclid)
 │   ├── westfield2.png               # Logo
-│   ├── references.bib               # Bibliography (40+ entries)
-│   └── requirements.txt             # Python dependencies
+│   └── references.bib               # Bibliography (40+ entries)
+├── pyproject.toml                   # uv project: all Python deps (Python 3.14)
+├── uv.lock                          # exact locked versions
 ├── deploy.sh                        # ACTIVE: local build + publish to gh-pages
 ├── .github/workflows/
 │   └── deploy.yml.disabled          # DISABLED (Jupyter Book CI version trouble)

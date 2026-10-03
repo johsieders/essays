@@ -71,7 +71,8 @@ rm -rf bagatelles/_build
 
 echo "Building Jupyter Book..."
 cd bagatelles
-jupyter-book build .
+# --frozen: build with exactly the versions in uv.lock (no re-resolve)
+uv run --frozen jupyter-book build .
 cd ..
 
 # Verify custom.css made it into the build

@@ -15,6 +15,22 @@ REVIEW  ->  PLAN  ->  WRITE
 - **WRITE** — one model rewrites the chapter, silently incorporating the points
   it accepts, and **overwrites the original in place**.
 
+## Setup
+
+The project is managed with [uv](https://docs.astral.sh/uv/) on Python 3.14
+(`.python-version`). All dependencies live in `pyproject.toml`, with exact
+versions in `uv.lock`.
+
+```bash
+uv sync                       # create/update .venv (incl. dev group: notebooks, torch, pypsa, ...)
+uv sync --no-dev              # only what's needed to build the book and run improve.py
+uv run improve.py myfile.md   # run without activating the venv
+uv add <pkg>                  # add a dependency (updates pyproject.toml + uv.lock)
+```
+
+`deploy.sh` and `execute_notebooks.sh` call `uv run --frozen`, so they use
+exactly the locked versions.
+
 ## Usage
 
 ```bash
