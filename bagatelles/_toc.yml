@@ -73,7 +73,7 @@ parts:
       - file: computer-science/30-formal-logic
         title: Formal Logic
       - file: computer-science/ai-regulation-policy-proposal
-        title: How to Rein in AI *
+        title: Reining in AI Agents *
       - file: computer-science/py4alg
         title: A Compositional Algebra Library *
   - caption: Physics
@@ -124,6 +124,8 @@ parts:
         title: The way to the Korean War
       - file: history/31-edinburgh
         title: Edinburgh
+      - file: history/marlborough
+        title: Marlborough and Paoli
       - file: israel/israel-0
         title: Geschichte der Juden *
         sections:
