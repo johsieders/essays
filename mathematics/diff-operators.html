@@ -231,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computer-science/ai-regulation-policy-proposal.html">How to Rein in AI *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/ai-regulation-policy-proposal.html">Reining in AI Agents *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/py4alg.html">A Compositional Algebra Library *</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
@@ -263,6 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/marlborough.html">Marlborough and Paoli</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../israel/israel-0.html">Geschichte der Juden *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../israel/israel-1.html">Ursprünge (bis 135 CE)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../israel/israel-2.html">Diaspora (135–1492)</a></li>
@@ -884,13 +885,13 @@ df(v) = v(f) = \lambda \partial_t f
 <span class="k">def</span><span class="w"> </span><span class="nf">test_diff_ops</span><span class="p">():</span>
     <span class="n">n_dim</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;x_1:</span><span class="si">{</span><span class="n">n_dim</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="sa">f</span><span class="s1">'x_1:</span><span class="si">{</span><span class="n">n_dim</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="n">f</span> <span class="o">=</span> <span class="n">make_scalar_field</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-    <span class="n">g</span> <span class="o">=</span> <span class="n">make_scalar_field</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">make_scalar_field</span><span class="p">(</span><span class="s1">'f'</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">make_scalar_field</span><span class="p">(</span><span class="s1">'g'</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
-    <span class="n">F</span> <span class="o">=</span> <span class="n">make_vector_field</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_dim</span><span class="p">)</span>
-    <span class="n">G</span> <span class="o">=</span> <span class="n">make_vector_field</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_dim</span><span class="p">)</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">make_vector_field</span><span class="p">(</span><span class="s1">'F'</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_dim</span><span class="p">)</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">make_vector_field</span><span class="p">(</span><span class="s1">'G'</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_dim</span><span class="p">)</span>
 
     <span class="k">assert</span> <span class="n">expr_equal</span><span class="p">(</span><span class="n">divergence</span><span class="p">(</span><span class="n">F</span> <span class="o">*</span> <span class="n">g</span><span class="p">),</span> <span class="n">divergence</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">gradient</span><span class="p">(</span><span class="n">g</span><span class="p">))[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
     <span class="k">assert</span> <span class="n">expr_equal</span><span class="p">(</span><span class="n">divergence</span><span class="p">(</span><span class="n">F</span> <span class="o">*</span> <span class="n">g</span><span class="p">),</span> <span class="n">divergence</span><span class="p">(</span><span class="n">F</span><span class="p">)</span> <span class="o">*</span> <span class="n">g</span> <span class="o">+</span> <span class="p">(</span><span class="n">gradient</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">F</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
@@ -905,7 +906,7 @@ df(v) = v(f) = \lambda \partial_t f
                            <span class="n">hessian</span><span class="p">(</span><span class="n">g</span><span class="p">)</span> <span class="o">*</span> <span class="n">f</span><span class="p">))</span>
     
 <span class="n">test_diff_ops</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;all tests passed&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'all tests passed'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -920,12 +921,12 @@ df(v) = v(f) = \lambda \partial_t f
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">myst_nb</span><span class="w"> </span><span class="kn">import</span> <span class="n">glue</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">latex</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">Matrix</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'x'</span><span class="p">)</span>
 <span class="n">expr</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;my_expr&quot;</span><span class="p">,</span> <span class="n">latex</span><span class="p">(</span><span class="n">expr</span><span class="p">),</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">"my_expr"</span><span class="p">,</span> <span class="n">latex</span><span class="p">(</span><span class="n">expr</span><span class="p">),</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">hessian</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
-<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;hessian_latex&quot;</span><span class="p">,</span> <span class="n">latex</span><span class="p">(</span><span class="n">hessian</span><span class="p">),</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;hessian_size&quot;</span><span class="p">,</span> <span class="n">hessian</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">"hessian_latex"</span><span class="p">,</span> <span class="n">latex</span><span class="p">(</span><span class="n">hessian</span><span class="p">),</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">"hessian_size"</span><span class="p">,</span> <span class="n">hessian</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
