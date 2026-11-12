@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Special Relativity &#8212; Bagatelles</title>
+    <title>Special Relativity in a Nutshell &#8212; Bagatelles</title>
   
   
   
@@ -241,21 +241,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="29-physics-one-page.html">Modern Physics One-Pager</a></li>
 <li class="toctree-l1"><a class="reference internal" href="newton.html">Newton</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Special Relativity</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="minkowski.html">SO(3) and O(1,3)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/bayesian-tests.html">Bayesian Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/numbers.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus.html">First Steps in Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mathematics/diff-operators.html">Differential Operators *</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/differentials.html">Differential Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/tangent-cotangent-n.html">Tangent and Cotangent Spaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/tensors.html">Tensors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mathematics/calculus-rn.html">Differential Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -521,7 +516,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Special Relativity</h1>
+    <h1>Special Relativity in a Nutshell</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -531,16 +526,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Special Relativity</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-nutshell">In a Nutshell</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t-and-tau-v-constant"><span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(v\)</span> constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourvectors-x-v-u">Fourvectors <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(u\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-integrals-v-depending-on-t">Two Integrals, <span class="math notranslate nohighlight">\(v\)</span> depending on <span class="math notranslate nohighlight">\(t\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-lagrangians">Two Lagrangians</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-transformation">Galileo Transformation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#there-is-no-simultaneity">There is No Simultaneity</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-transformation">Lorentz transformation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relativistic-mechanics">Relativistic Mechanics</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -551,12 +545,82 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="special-relativity">
-<h1>Special Relativity<a class="headerlink" href="#special-relativity" title="Permalink to this heading">#</a></h1>
-<p><em>Johannes Siedersleben, July 2026</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="special-relativity-in-a-nutshell">
+<h1>Special Relativity in a Nutshell<a class="headerlink" href="#special-relativity-in-a-nutshell" title="Permalink to this heading">#</a></h1>
+<p><em>Johannes Siedersleben, November 2026</em></p>
+<section id="t-and-tau-v-constant">
+<h2><span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(v\)</span> constant<a class="headerlink" href="#t-and-tau-v-constant" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tau^2 &amp;= t^2 - x^2       \\
+\tau &amp;= \sqrt{t^2 - x^2}  \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}x &amp;= vt                   \\
+\tau^2 &amp;= t^2(1 - v^2)    \\
+\tau &amp;= t \sqrt{1 - v^2}  \\
+t &amp;= \frac{\tau}{\sqrt{1 - v^2}}  \\
+v \tau &amp;= x \sqrt{1 - v^2} &lt; x\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{dt}{d\tau} &amp;= \frac{1}{\sqrt{1 - v^2}}  &gt; 1 \\
+\frac{d\tau}{dt} &amp;= \sqrt{1 - v^2}  &lt; 1           \\
+d\tau &amp;= dt \sqrt{1 - v^2} \\
+dt &amp;= \frac{d\tau}{\sqrt{1 - v^2}} \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\gamma(v) = \frac{1}{\sqrt{1 - v^2}} = \frac{t}{\tau} &amp;&gt; 1  \\\end{split}\]</div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="in-a-nutshell">
-<h1>In a Nutshell<a class="headerlink" href="#in-a-nutshell" title="Permalink to this heading">#</a></h1>
+<section id="fourvectors-x-v-u">
+<h2>Fourvectors <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(u\)</span><a class="headerlink" href="#fourvectors-x-v-u" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}x = \begin{bmatrix}
+        x_0 = t \\  
+        x_1 \\  
+        x_2 \\ 
+        x_3
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}v = \frac{dx}{dt} = \begin{bmatrix}
+        v_0 = 1 \\  
+        v_1 \\  
+        v_2 \\ 
+        v_3
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[u = \frac{dx}{d\tau} =  \frac{dx}{dt} \frac{dt}{d\tau} = \gamma(v) v\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_{\mu}x^{\mu} &amp;= x_0^2 - (x_1^2 + x_2^2 + x_3^2) \\
+v_{\mu}v^{\mu} &amp;= 1 - (v_1^2 + v_2^2 + v_3^2)    \\ 
+u_{\mu}u^{\mu} &amp;= \gamma^2  v_{\mu}v^{\mu} = 1\end{split}\]</div>
+</section>
+<section id="two-integrals-v-depending-on-t">
+<h2>Two Integrals, <span class="math notranslate nohighlight">\(v\)</span> depending on <span class="math notranslate nohighlight">\(t\)</span><a class="headerlink" href="#two-integrals-v-depending-on-t" title="Permalink to this heading">#</a></h2>
+<p>Assume the light clock is moving at a velocity <span class="math notranslate nohighlight">\(v(t) &lt; 1\)</span> during the interval <span class="math notranslate nohighlight">\([0, T]\)</span>.
+Partition <span class="math notranslate nohighlight">\([0, T]\)</span> by <span class="math notranslate nohighlight">\(0 = t_0 &lt; t_1 &lt; \ldots &lt; t_n = T\)</span>, let <span class="math notranslate nohighlight">\(v_i = v(t_i)\)</span> and <span class="math notranslate nohighlight">\(\Delta t_i = t_i - t_{i-1}\)</span>. We get</p>
+<div class="math notranslate nohighlight">
+\[\tau(T) \approx \sum_{i=1}^n \Delta t_i \sqrt{1 - v_i^2}\]</div>
+<p>and, with ever finer partitions, arrive at</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\tau(T) &amp;=  \int_{0}^{\tau(T)} d\tau = \int_{0}^T dt \sqrt{1 - v(t)^2}  \\ 
+d\tau &amp;= dt \sqrt{1- v(t)^2}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[t(\mathcal{T}) = \int_{0}^{t(\mathcal{T})} dt = \int_0^{\mathcal{T}} \frac{d\tau}{\sqrt{1- v(t)^2}}  \]</div>
+</section>
+<section id="two-lagrangians">
+<h2>Two Lagrangians<a class="headerlink" href="#two-lagrangians" title="Permalink to this heading">#</a></h2>
+<p>Newtonian Lagrangian with an arbitrary constant <span class="math notranslate nohighlight">\(-m\)</span> added.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}L_N(x,v) &amp;= \frac{1}{2}mv^2 - m       \\
+p &amp;= \frac{\partial L}{\partial v} = mv    \\ 
+E &amp;= pv - L = \frac{1}{2}mv^2\end{split}\]</div>
+<p>An approximation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{2}mv^2 - m &amp;= -m + m\frac{1}{2}v^2 + m\frac{1}{8}v^3 + 0(v^4)  \\
+  &amp;= -m \sqrt{1-v^2}     \end{split}\]</div>
+<p>Relativistic Lagrangian</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}L_R(x,v) &amp;= -m \sqrt{1-v^2}               \\
+p &amp;= \frac{\partial L}{\partial v} = m \frac{v}{\sqrt{1-v^2}} = m u    \\ 
+E &amp;= pv - L = \frac{m}{\sqrt{1-v^2}} = m u_0 \\
+E^2 - p^2 &amp;= p_{\mu} p^{\mu} = m^2\end{split}\]</div>
+<p><em>Johannes Siedersleben, July 2026</em></p>
 <p>In Newtonian physics, we are familiar with the system of three perpendicular coordinates, designated by <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>.
 Each point in space can be defined by three numbers, with the origin being arbitrarily fixed.</p>
 <p>Special relativity is all about two or more observers or reference frames.</p>
@@ -583,6 +647,7 @@ A four-dimensional vector (one time dimension, three space dimensions) can be de
         x_2 \\
         x_3 \\
 \end{bmatrix}\end{split}\]</div>
+</section>
 <section id="galileo-transformation">
 <h2>Galileo Transformation<a class="headerlink" href="#galileo-transformation" title="Permalink to this heading">#</a></h2>
 <p>The Galileo transformation relates two reference frames, <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(K'\)</span>,
@@ -617,7 +682,7 @@ G(v) \cdot
         t \\ 
         x - vt \\
 \end{bmatrix}\end{split}\]</div>
-<p>We get immediately</p>
+<p>We get</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}G^{-1}(v) = \begin{bmatrix}
         1 &amp; 0 \\ 
@@ -680,7 +745,7 @@ The Lorentz transformation <span class="math notranslate nohighlight">\(\Lambda\
 <p>The speed of light is constant. Therefore, given the time, we get the distance travelled,
 and given the distance, we get the time elapsed.
 The light clock is a photon bouncing between two parallel mirrors, <span class="math notranslate nohighlight">\(L\)</span> length units apart.
-We call <span class="math notranslate nohighlight">\(\tau\)</span> the time needed to cover the distance <span class="math notranslate nohighlight">\(L\)</span>,
+and with <span class="math notranslate nohighlight">\(c = 1\)</span>, the time <span class="math notranslate nohighlight">\(\tau\)</span> needed to cover the distance <span class="math notranslate nohighlight">\(L\)</span> equals <span class="math notranslate nohighlight">\(L\)</span>.
 and time is measured in multiples of <span class="math notranslate nohighlight">\(\tau\)</span>, counting the number of bounces.</p>
 <p>On the left of <a class="reference internal" href="#fig-lorentz"><span class="std std-numref">Fig. 4</span></a> you see the clock at rest, as seen by a local observer.</p>
 <p>On the right of <a class="reference internal" href="#fig-lorentz"><span class="std std-numref">Fig. 4</span></a> you see the clock moving to the right
@@ -819,16 +884,15 @@ u^{\mu} &amp;= \frac{dx^{\mu}}{d\tau} &amp;&amp;= \frac{dx^{\mu}}{dt} \frac{dt}{
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Special Relativity</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-nutshell">In a Nutshell</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t-and-tau-v-constant"><span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span>, <span class="math notranslate nohighlight">\(v\)</span> constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourvectors-x-v-u">Fourvectors <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(v\)</span>, <span class="math notranslate nohighlight">\(u\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-integrals-v-depending-on-t">Two Integrals, <span class="math notranslate nohighlight">\(v\)</span> depending on <span class="math notranslate nohighlight">\(t\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-lagrangians">Two Lagrangians</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#galileo-transformation">Galileo Transformation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#there-is-no-simultaneity">There is No Simultaneity</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lorentz-transformation">Lorentz transformation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relativistic-mechanics">Relativistic Mechanics</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
