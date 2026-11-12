@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Classical vector calculus presents students with a bewildering array of distinct operations—gradient, divergence, curl, Laplacian, Jacobian, Hessian—each with its own notation, definition, and geometric interpretation. While this zoo of operators serves physics and engineering well, it obscures a deeper unity: **all these operators are just different ways of composing partial derivatives**.
+Classical vector calculus, e.g. {cite}`schey2005div`, presents students with a bewildering array of distinct operations—gradient, divergence, curl, Laplacian, Jacobian, Hessian—each with its own notation, definition, and geometric interpretation. While this zoo of operators serves physics and engineering well, it obscures a deeper unity: **all these operators are just different ways of composing partial derivatives**.
 
 This note develops a systematic, algebraic framework for differential operators that treats them as first-class mathematical objects that can be manipulated, composed, and applied. The key insight is disarmingly simple: if we denote the partial derivative operator by $\partial_i$ (or $\partial_x$, $\partial_y$, etc., when variables have names), then we can construct all the familiar operators of vector calculus through standard algebraic operations—scalar multiplication, vector dot products, cross products, and tensor products.
 
@@ -10,7 +10,7 @@ This note develops a systematic, algebraic framework for differential operators 
 
 Consider the gradient operator. Traditionally, we define it as an operation that takes a scalar function $f: \mathbb{R}^n \to \mathbb{R}$ and produces a vector field. But we can think of it more abstractly: the gradient operator **is** the column vector
 
-$$\partial = \begin{pmatrix} \partial_1 \\ \partial_2 \\ \vdots \\ \partial_n \end{pmatrix}$$
+$$\partial = \begin{bmatrix} \partial_1 \\ \partial_2 \\ \vdots \\ \partial_n \end{bmatrix}$$
 
 where each $\partial_i$ represents the operator "take the partial derivative with respect to the $i$-th variable."
 
@@ -31,7 +31,7 @@ We adopt the following notational framework:
 **Basic derivative operators:**
 - $\partial_i$ denotes $\frac{\partial}{\partial x_i}$ when variables are indexed as $x_1, x_2, \ldots, x_n$
 - $\partial_x, \partial_y, \partial_z$ when variables have names
-- $\partial$ denotes the **gradient operator**, the column vector $(\partial_1, \partial_2, \ldots, \partial_n)^T$
+- $\partial$ denotes the **gradient operator**, the column vector $(\partial_1, \partial_2, \ldots, \partial_n)^{\intercal}$
 
 **Operator composition:**
 - $\partial \cdot f$ is the gradient of scalar function $f$ (scalar multiplication)

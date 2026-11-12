@@ -1,4 +1,4 @@
-# Zeit
+# Time
 
 Johannes Siedersleben, 31.8.2026
 

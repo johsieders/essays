@@ -97,22 +97,14 @@ parts:
         title: Bayesian Decision-Making *
       - file: mathematics/bayesian-tests
         title: Bayesian Tests
-      - file: mathematics/arithmetic
-        title: First Steps in Arithmetic
       - file: mathematics/numbers
         title: From Naturals to Reals
+      - file: mathematics/arithmetic
+        title: First Steps in Arithmetic
       - file: mathematics/calculus
         title: First Steps in Calculus
       - file: mathematics/diff-operators
-        title: Differential Operators *  
-      - file: mathematics/differentials
-        title: Differential Calculus
-      - file: mathematics/tangent-cotangent-n
-        title: Tangent and Cotangent Spaces
-      - file: mathematics/tensors
-        title: Tensors
-      - file: mathematics/calculus-rn
-        title: Differential Calculus
+        title: Differential Operators *
         
   - caption: History
     chapters:

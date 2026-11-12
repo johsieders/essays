@@ -1,8 +1,115 @@
-# Special Relativity
+# Special Relativity in a Nutshell
+
+*Johannes Siedersleben, November 2026*
+
+
+
+## $t$ and $\tau$, $v$ constant
+
+```{math}
+\tau^2 &= t^2 - x^2       \\
+\tau &= \sqrt{t^2 - x^2}  \\
+```
+
+```{math}
+x &= vt                   \\
+\tau^2 &= t^2(1 - v^2)    \\
+\tau &= t \sqrt{1 - v^2}  \\
+t &= \frac{\tau}{\sqrt{1 - v^2}}  \\
+v \tau &= x \sqrt{1 - v^2} < x
+```
+
+
+```{math}
+\frac{dt}{d\tau} &= \frac{1}{\sqrt{1 - v^2}}  > 1 \\
+\frac{d\tau}{dt} &= \sqrt{1 - v^2}  < 1           \\
+d\tau &= dt \sqrt{1 - v^2} \\
+dt &= \frac{d\tau}{\sqrt{1 - v^2}} 
+```
+
+
+```{math}
+\gamma(v) = \frac{1}{\sqrt{1 - v^2}} = \frac{t}{\tau} &> 1  \\
+```
+
+## Fourvectors $x$, $v$, $u$
+
+```{math}
+x = \begin{bmatrix}
+        x_0 = t \\  
+        x_1 \\  
+        x_2 \\ 
+        x_3
+\end{bmatrix}
+```
+
+```{math}
+v = \frac{dx}{dt} = \begin{bmatrix}
+        v_0 = 1 \\  
+        v_1 \\  
+        v_2 \\ 
+        v_3
+\end{bmatrix}
+```
+
+```{math}
+u = \frac{dx}{d\tau} =  \frac{dx}{dt} \frac{dt}{d\tau} = \gamma(v) v
+```
+
+```{math}
+x_{\mu}x^{\mu} &= x_0^2 - (x_1^2 + x_2^2 + x_3^2) \\
+v_{\mu}v^{\mu} &= 1 - (v_1^2 + v_2^2 + v_3^2)    \\ 
+u_{\mu}u^{\mu} &= \gamma^2  v_{\mu}v^{\mu} = 1
+```
+
+## Two Integrals, $v$ depending on $t$
+
+Assume the light clock is moving at a velocity $v(t) < 1$ during the interval $[0, T]$. 
+Partition $[0, T]$ by $0 = t_0 < t_1 < \ldots < t_n = T$, let $v_i = v(t_i)$ and $\Delta t_i = t_i - t_{i-1}$. We get
+
+```{math}
+\tau(T) \approx \sum_{i=1}^n \Delta t_i \sqrt{1 - v_i^2}
+```
+and, with ever finer partitions, arrive at
+
+```{math}
+\tau(T) &=  \int_{0}^{\tau(T)} d\tau = \int_{0}^T dt \sqrt{1 - v(t)^2}  \\ 
+d\tau &= dt \sqrt{1- v(t)^2}
+```
+
+```{math}
+t(\mathcal{T}) = \int_{0}^{t(\mathcal{T})} dt = \int_0^{\mathcal{T}} \frac{d\tau}{\sqrt{1- v(t)^2}}  
+```
+
+## Two Lagrangians
+
+Newtonian Lagrangian with an arbitrary constant $-m$ added.
+
+```{math}
+L_N(x,v) &= \frac{1}{2}mv^2 - m       \\
+p &= \frac{\partial L}{\partial v} = mv    \\ 
+E &= pv - L = \frac{1}{2}mv^2
+```
+An approximation
+
+```{math}
+\frac{1}{2}mv^2 - m &= -m + m\frac{1}{2}v^2 + m\frac{1}{8}v^3 + 0(v^4)  \\
+  &= -m \sqrt{1-v^2}     
+```
+
+Relativistic Lagrangian
+
+```{math}
+L_R(x,v) &= -m \sqrt{1-v^2}               \\
+p &= \frac{\partial L}{\partial v} = m \frac{v}{\sqrt{1-v^2}} = m u    \\ 
+E &= pv - L = \frac{m}{\sqrt{1-v^2}} = m u_0 \\
+E^2 - p^2 &= p_{\mu} p^{\mu} = m^2
+```
+
+
 
 *Johannes Siedersleben, July 2026*
 
-# In a Nutshell
 
 In Newtonian physics, we are familiar with the system of three perpendicular coordinates, designated by $x$, $y$ and $z$. 
 Each point in space can be defined by three numbers, with the origin being arbitrarily fixed.
@@ -82,7 +189,7 @@ G(v) \cdot
 \end{bmatrix}
 ```
 
-We get immediately
+We get
 
 ```{math}
 G^{-1}(v) = \begin{bmatrix}
@@ -109,9 +216,6 @@ Look at figure {numref}`fig-simultaneity` where $K'$ is moving with respect to $
 and returns to $K$ at $C$. Seen from $K$, the event $0$ halfway between $A$ and $C$ is simultaneous with $B$. But $K'$ wouldn't agree: 
 He meets the photon at $P$ and then again at $Q$. 
 So, he would consider the event $R$ halfway between $P$ and $Q$ to be simultaneous with $B$.
-
-
-
 
 ## Lorentz transformation
 
@@ -167,7 +271,7 @@ Light clock at rest (left), in motion with respect to the observer (right)
 The speed of light is constant. Therefore, given the time, we get the distance travelled, 
 and given the distance, we get the time elapsed.
 The light clock is a photon bouncing between two parallel mirrors, $L$ length units apart. 
-We call $\tau$ the time needed to cover the distance $L$, 
+and with $c = 1$, the time $\tau$ needed to cover the distance $L$ equals $L$.
 and time is measured in multiples of $\tau$, counting the number of bounces. 
 
 On the left of {numref}`fig-lorentz` you see the clock at rest, as seen by a local observer.
@@ -280,3 +384,4 @@ u &= \gamma \dot{x} &&= \frac{dx}{d\tau} = \frac{dx}{dt} \frac{dt}{d\tau}
 u^{\mu} &= \frac{dx^{\mu}}{d\tau} &&= \frac{dx^{\mu}}{dt} \frac{dt}{d\tau} = \frac{v^{\mu}}{\sqrt{1 - v^2}} 
 \end{alignat*}
 ```
+
