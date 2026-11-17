@@ -550,17 +550,16 @@ document.write(`
 <h2>Path Integrals<a class="headerlink" href="#path-integrals" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(C\)</span> be a smooth curve in <span class="math notranslate nohighlight">\(\mathbb{R^n}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{t}(x)\)</span>
 the normal tangent vector (length <span class="math notranslate nohighlight">\(= 1\)</span>) at <span class="math notranslate nohighlight">\(x \in C\)</span>.
-Let <span class="math notranslate nohighlight">\(X = [x_0=a, x_1, \ldots, x_n = b], x_k \in C\)</span> be a polygon approximating <span class="math notranslate nohighlight">\(C\)</span>. We define</p>
+Let <span class="math notranslate nohighlight">\(X = \{x_0=a, x_1, \ldots, x_n = b\}, x_k \in C\)</span> be a polygon approximating <span class="math notranslate nohighlight">\(C\)</span>. We define</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}C_k = [x_k, x_{k-1}] \\
-\Delta_k = x_k - x_{k-1}  \\
-\mu(X) = \min \| C_k \|
-\boldsymbol{t}_k = \frac{\Delta_k}{\| \Delta_k \|}\end{split}\]</div>
+\[\begin{split}\Delta_k &amp;= x_k - x_{k-1}  \\
+\mu(X) &amp;= \min \| \Delta_k \| \\
+\boldsymbol{t}_k &amp;= \frac{\Delta_k}{\| \Delta_k \|}\end{split}\]</div>
 <p>The quantity <span class="math notranslate nohighlight">\(\mu(X)\)</span> is called the granularity of <span class="math notranslate nohighlight">\(X\)</span>.
 As <span class="math notranslate nohighlight">\(C\)</span> is smooth, the approximations</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}|C| \approx \sum_{k=1}^n  C_k \\
-\boldsymbol{t}_k \approx \boldsymbol{t}(x_k)\end{split}\]</div>
+\[\begin{split}|C| &amp;\approx \sum_{k=1}^n  \| \Delta_k \| \\
+\boldsymbol{t}_k &amp;\approx \boldsymbol{t}(x_k)\end{split}\]</div>
 <p>become arbitrairily good as <span class="math notranslate nohighlight">\(\mu(X)\)</span> approaches zero.
 We consider a differentiable scalar field <span class="math notranslate nohighlight">\(f\)</span> and a vector field <span class="math notranslate nohighlight">\(F\)</span> on <span class="math notranslate nohighlight">\(C\)</span>.</p>
 <div class="math notranslate nohighlight">
@@ -629,35 +628,33 @@ C &amp;= x([0,T])\end{split}\]</div>
 <p>(ii)
 The scalar path integral is given by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\int_C f \, ds = \int_0^T f(x(t)) \| \dot{x}(t)  \| \, dt 
+\[\begin{split}\int_C f \, ds &amp;= \int_0^T f(x(t)) \| \dot{x}(t)  \| \, dt 
 \\ \\
-&amp;ds = \| \dot{x} \| \, dt\end{split}\]</div>
+ds &amp;= \| \dot{x} \| \, dt\end{split}\]</div>
 <p>(iii)
 The vectorial path integral is given by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\int_C F \cdot \boldsymbol{t} \, ds = \int_0^T F(x(t))  \cdot \dot{x}(t) \, dt
+\[\begin{split}\int_C F \cdot \boldsymbol{t} \, ds &amp;= \int_0^T F(x(t))  \cdot \dot{x}(t) \, dt
 \\ \\
-&amp;\boldsymbol{t} \, ds = \dot{x} \, dt\end{split}\]</div>
+\boldsymbol{t} \, ds &amp;= \dot{x} \, dt\end{split}\]</div>
 <p>(iv)
 The integral of a gradient along a parametrized curve <span class="math notranslate nohighlight">\(C\)</span>, is given by</p>
 <div class="math notranslate nohighlight">
 \[\int_C \partial f \cdot \boldsymbol{t} \, ds = f(x(T)) - f(x(0))\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (ii)
+<p>Proof. (i)
+TODO</p>
+<p>(ii)
 Let <span class="math notranslate nohighlight">\([t_k]\)</span> be a partition of <span class="math notranslate nohighlight">\([0, T]\)</span>, and <span class="math notranslate nohighlight">\({x_k} = x(t_k)\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\| \dot{x}(t_k) \| \approx \frac{\| \Delta_k \|}{t_k - t_{k-1}}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\int_C f \, ds &amp;\approx \sum_{k=1}^n f(x_k) \frac{\| \Delta_k \|}{t_k - t_{k-1}} \, (t_k - t_{k-1}) \\
-&amp;\approx \int_0^T f(x(t)) \| \dot{x}(t)  \| \, dt 
-\\ \\
-ds &amp;= \| \dot{x} \| \, dt\end{split}\]</div>
+&amp;\approx \int_0^T f(x(t)) \| \dot{x}(t)  \| \, dt \end{split}\]</div>
 <p>(iii)</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\int_C F \cdot \boldsymbol{t} \, ds &amp;= \int_0^T F \frac{\dot{x}}{\| \dot{x} \|} \, ds = \int_0^T F(x(t))  \cdot \dot{x}(t) \, dt
-\\ \\
-\boldsymbol{t} \, ds &amp;= \frac{\dot{x}}{\| \dot{x} \|} \, ds = \dot{x} \, dt\end{split}\]</div>
+\[\int_C F \cdot \boldsymbol{t} \, ds = \int_0^T F \frac{\dot{x}}{\| \dot{x} \|} \, ds = \int_0^T F(x(t))  \cdot \dot{x}(t) \, dt\]</div>
 <p>(iv)</p>
 <div class="math notranslate nohighlight">
 \[\int_C \partial f \cdot \boldsymbol{t} \, ds = \int_0^T \partial f(x(t))  \cdot \dot{x}(t) \, dt = f(x(T)) - f(x(0))\]</div>
@@ -667,7 +664,7 @@ ds &amp;= \| \dot{x} \| \, dt\end{split}\]</div>
 <h2>Surface Integrals<a class="headerlink" href="#surface-integrals" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a smooth surface in <span class="math notranslate nohighlight">\(\mathbb{R^3}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{n}(x)\)</span>
 the outer normal vector (length <span class="math notranslate nohighlight">\(= 1\)</span>) at <span class="math notranslate nohighlight">\(x \in A\)</span>.
-Let <span class="math notranslate nohighlight">\(X = [x_{00}, \ldots, x_{mn},], x_{jk} \in A\)</span> be a polyhedron approximating <span class="math notranslate nohighlight">\(A\)</span>. We define</p>
+Let <span class="math notranslate nohighlight">\(X = \{x_{00}, \ldots, x_{mn} \}, x_{jk} \in A\)</span> be a polyhedron approximating <span class="math notranslate nohighlight">\(A\)</span>. We define</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A_{jk} &amp;= [x_{jk}, x_{j-1, k}] \times [x_{jk}, x_{j, k-1}] \\
 a_{jk} &amp;= (x_{jk} - x_{j-1, k}) \times (x_{jk} - x_{j, k-1}) \\
@@ -697,12 +694,18 @@ With <span class="math notranslate nohighlight">\(f = 1\)</span> we get the <str
 <div class="math notranslate nohighlight">
 \[\begin{split}\int_A F \cdot \boldsymbol{n} \, dS &amp;= \lim_{\mu(X) \to 0} \sum_{j,k=1}^n F(x_{jk}) \frac{a_{jk}}{\| a_{jk} \|}  \| a_{jk} \|  \\
 &amp;= \lim_{\mu(X) \to 0} \sum_{j,k=1}^n F(x_{jk}) a_{jk}\end{split}\]</div>
-<p>This reads as: The integral of the flow density equals the flow of <span class="math notranslate nohighlight">\(F\)</span> through <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>This reads as: The integral of the flow density over <span class="math notranslate nohighlight">\(A\)</span> equals the flow through <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
-</div><div class="proof theorem admonition" id="thr-def-curl">
+</div><p>We recall that the <strong>curl</strong> of a vector field is defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\partial \times F = \begin{bmatrix} \partial_2 F_3 - \partial_3 F_2 \\ 
+                                    \partial_3 F_1 - \partial_1 F_3 \\
+                                    \partial_1 F_2 - \partial_2 F_1 
+                    \end{bmatrix}\end{split}\]</div>
+<div class="proof theorem admonition" id="thr-def-curl">
 <p class="admonition-title"><span class="caption-number">Theorem 43 </span> (Curl)</p>
 <section class="theorem-content" id="proof-content">
-<p>The <strong>curl</strong> of <span class="math notranslate nohighlight">\(F\)</span>, denoted by <span class="math notranslate nohighlight">\((\partial \times F)(x)\)</span> of a vector field is characterized by the defining property:
+<p>The <strong>curl</strong> of <span class="math notranslate nohighlight">\(F\)</span> is characterized by the defining property:
 Let <span class="math notranslate nohighlight">\(x \in A\)</span> and <span class="math notranslate nohighlight">\(U \subset A\)</span> be a neighbourhood of <span class="math notranslate nohighlight">\(x\)</span>. The approximation</p>
 <div class="math notranslate nohighlight">
 \[(\partial \times F)(x) \cdot \boldsymbol{n}(x) \approx \frac{1}{| U |}\int_{\partial U} F \cdot \boldsymbol{t} \, ds\]</div>
@@ -712,7 +715,7 @@ Let <span class="math notranslate nohighlight">\(x \in A\)</span> and <span clas
 <p>Proof. see Schey, p. 75</p>
 </div>
 <div class="proof theorem admonition" id="thr-stokes">
-<p class="admonition-title"><span class="caption-number">Theorem 47 </span> (Stokes’ Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 44 </span> (Stokes’ Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <div class="math notranslate nohighlight">
 \[\int_A (\partial \times F) \cdot \boldsymbol{n} \, dS = \int_{\partial A} F \cdot \boldsymbol{t} \, ds\]</div>
@@ -724,7 +727,7 @@ Let <span class="math notranslate nohighlight">\(x \in A\)</span> and <span clas
 <p>Note that <span class="math notranslate nohighlight">\(\frac{a_{jk}}{\| a_{jk} \|} = \boldsymbol{n}_{jk} \approx \boldsymbol{n}(x_{jk}) \)</span>. Summing over <span class="math notranslate nohighlight">\(k\)</span> gives:</p>
 <div class="math notranslate nohighlight">
 \[\sum_{j,k=1}^n(\partial \times F)(x_{jk}) \cdot \| a_{jk} \| \approx \sum_{j,k=1}^n \int_{\partial A_{jk}} F \cdot \boldsymbol{t} \, ds\]</div>
-<p>The left-hand side represents the definition of the surface integral. The right-hand side is a telescoping sum because the sides of neighbouring rectangles facing each other cancel each other out, leaving only the sides facing outside. These sides approximate the boundary of A, <span class="math notranslate nohighlight">\(\partial A\)</span>. To be honest, it requires a certain amount of <span class="math notranslate nohighlight">\(\epsilon\)</span>-ceremony to rigourosly prove the last statement but you have got the idea. Thus</p>
+<p>The left-hand side represents the definition of the surface integral. The right-hand side is a telescoping sum because the sides of neighbouring rectangles facing each other cancel each other out, leaving only the sides facing outside. These sides approximate the boundary <span class="math notranslate nohighlight">\(\partial A\)</span>. To be honest, it requires a certain amount of <span class="math notranslate nohighlight">\(\epsilon\)</span>-ceremony to rigourosly prove the last statement but you have got the idea. Thus</p>
 <div class="math notranslate nohighlight">
 \[\int_A (\partial \times F) \cdot \boldsymbol{n} \, dS = \int_{\partial A} F \cdot \boldsymbol{t} \, ds\]</div>
 </div>
@@ -741,7 +744,7 @@ A &amp;= x(R) \end{split}\]</div>
 \[x_{jk} = x(u_j, v_k) \]</div>
 <p>Then <span class="math notranslate nohighlight">\(X = [x_{00}, \ldots, x_{mn}]\)</span> is a polyhedron covering <span class="math notranslate nohighlight">\(A\)</span>.</p>
 <div class="proof theorem admonition" id="thr-parametrized-surfaces">
-<p class="admonition-title"><span class="caption-number">Theorem 48 </span> (Parameterized Surfaces)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 45 </span> (Parameterized Surfaces)</p>
 <section class="theorem-content" id="proof-content">
 <p>(i) The normal vector at <span class="math notranslate nohighlight">\(x(u, v)\)</span> is given by</p>
 <div class="math notranslate nohighlight">
@@ -791,118 +794,121 @@ The key observation is this:</p>
 <section id="volume-integrals">
 <h2>Volume Integrals<a class="headerlink" href="#volume-integrals" title="Permalink to this heading">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(\Omega\)</span> be a volume in <span class="math notranslate nohighlight">\(\mathbb{R^3}\)</span> whose surface <span class="math notranslate nohighlight">\(\partial \Omega\)</span> is closed and smooth. .
-Let <span class="math notranslate nohighlight">\(C = [c_{0}, \ldots, c_{m},] be a set of cubes covering \)</span>\Omega$ that is</p>
+Let <span class="math notranslate nohighlight">\(C = [c_{0}, \ldots, c_{n}]\)</span> be a set of disjoint cubes covering <span class="math notranslate nohighlight">\(\Omega\)</span>, that is</p>
 <div class="math notranslate nohighlight">
 \[\Omega \subseteq \bigcup_{k} c_k\]</div>
-<p>Let</p>
+<p>We define the <strong>granularity</strong> of <span class="math notranslate nohighlight">\(C\)</span> as</p>
 <div class="math notranslate nohighlight">
-\[\mu(X) &amp;= \min_{k} | c_k |\]</div>
-<p>The quantity <span class="math notranslate nohighlight">\(\mu(X)\)</span> is called the <strong>granularity</strong> of <span class="math notranslate nohighlight">\(X\)</span>.
+\[\mu(C) = \min_{k} \text{len}(c_k)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\text{len}(c_k)\)</span> is the edge length of <span class="math notranslate nohighlight">\(c_k\)</span>.
 As <span class="math notranslate nohighlight">\(\partial \Omega\)</span> is smooth, the approximation</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}|A| &amp;\approx \sum_{j,k=1}^{m,n} \| a_{jk} \| \\\end{split}\]</div>
-<p>becomes arbitrarily good as <span class="math notranslate nohighlight">\(\mu(X)\)</span> approaches zero.
-We consider a differentiable scalar field <span class="math notranslate nohighlight">\(f\)</span> and a vector field <span class="math notranslate nohighlight">\(F\)</span> on <span class="math notranslate nohighlight">\(A\)</span>.</p>
+\[\begin{split}|\Omega| \approx \sum_{k=1}^{n} | c_k | \\\end{split}\]</div>
+<p>becomes arbitrarily good as <span class="math notranslate nohighlight">\(\mu(C)\)</span> approaches zero.</p>
+<p>We consider a differentiable scalar field <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}f &amp;: \Omega &amp;\to \mathbb{R} \\
-\partial f &amp;: \Omega &amp;\to \mathbb{R^3} \\
-F &amp;: \Omega &amp;\to \mathbb{R^3}\end{split}\]</div>
+\[\begin{split}f : \Omega &amp;\to \mathbb{R} \\\end{split}\]</div>
 <div class="proof definition admonition" id="definition-7">
-<p class="admonition-title"><span class="caption-number">Definition 32 </span> (Volume Integral)</p>
+<p class="admonition-title"><span class="caption-number">Definition 32 </span> (Volume Integrals)</p>
 <section class="definition-content" id="proof-content">
-<p>(i) The integral of <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\(\Omega\)</span> is defined as</p>
+<p>The integral of <span class="math notranslate nohighlight">\(f\)</span> over <span class="math notranslate nohighlight">\(\Omega\)</span> is defined as</p>
 <div class="math notranslate nohighlight">
-\[\int_{\Omega} f \, dV \approx \sum_{k=1}^{n} f(x_{jk}) \| c_{k} \|\]</div>
-<p>provided that the approximation becomes arbitrarily good as <span class="math notranslate nohighlight">\(\mu(X)\)</span> approaches zero.</p>
-<p>If <span class="math notranslate nohighlight">\(f\)</span> is the density of the material from which <span class="math notranslate nohighlight">\(\Omega\)</span> is made, then \int_{\Omega} f , dV is the <strong>weight</strong> of <span class="math notranslate nohighlight">\(A\)</span>. With <span class="math notranslate nohighlight">\(f = 1\)</span> we get the <strong>volume</strong> <span class="math notranslate nohighlight">\(|Omega| = \int_{\Omega} \, dV\)</span>.</p>
+\[\int_{\Omega} f \, dV \approx \sum_{k=1}^{n} f(x_{k}) \, | c_{k} |\]</div>
+<p>provided that the approximation becomes arbitrarily good as <span class="math notranslate nohighlight">\(\mu(C)\)</span> approaches zero.</p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is the density of the material from which <span class="math notranslate nohighlight">\(\Omega\)</span> is made, then <span class="math notranslate nohighlight">\(\int_{\Omega} f \, dV\)</span> is the <strong>weight</strong> of <span class="math notranslate nohighlight">\(\Omega\)</span>. With <span class="math notranslate nohighlight">\(f = 1\)</span> we get the <strong>volume</strong> <span class="math notranslate nohighlight">\(|\Omega| = \int_{\Omega} \, dV\)</span>.</p>
 </section>
-</div><div class="proof theorem admonition" id="thr-def-div">
+</div><p>We recall that the <strong>divergence</strong> of a vector field is defined as</p>
+<div class="math notranslate nohighlight">
+\[\partial \cdot F = \sum_{i=1}^{3} \partial_i F_i\]</div>
+<div class="proof theorem admonition" id="thr-def-div">
 <p class="admonition-title"><span class="caption-number">Theorem 46 </span> (Divergence)</p>
 <section class="theorem-content" id="proof-content">
-<p>The <strong>divrgence</strong> of <span class="math notranslate nohighlight">\(f\)</span>, denoted by <span class="math notranslate nohighlight">\((\partial \cdot f)(x)\)</span> of a scalar field <span class="math notranslate nohighlight">\(f\)</span> is characterized by the defining property:
-Let <span class="math notranslate nohighlight">\(x \in A\)</span> and <span class="math notranslate nohighlight">\(U \subset A\)</span> be a neighbourhood of <span class="math notranslate nohighlight">\(x\)</span>. The approximation</p>
+<p>Let <span class="math notranslate nohighlight">\(U\)</span> be a small neighbourhood of <span class="math notranslate nohighlight">\(x\)</span> with a smooth surface. The approximation</p>
 <div class="math notranslate nohighlight">
-\[(\partial \times F)(x) \cdot \boldsymbol{n}(x) \approx \frac{1}{| U |}\int_{\partial U} F \cdot \boldsymbol{t} \, ds\]</div>
-<p>becomes arbitrarily good as <span class="math notranslate nohighlight">\(|U|\)</span> approaches zero.</p>
+\[(\partial \cdot F)(x) \approx \frac{1}{| U |}\int_{\partial U} F \cdot \boldsymbol{n} \, dS\]</div>
+<p>becomes arbitrarily good as <span class="math notranslate nohighlight">\(|U|\)</span> approaches zero,</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. see Schey, p. 75</p>
+<p>Proof. We consider a small cube <span class="math notranslate nohighlight">\(Q\)</span> with side lengths <span class="math notranslate nohighlight">\(s_1, s_2, s_3\)</span>. Let <span class="math notranslate nohighlight">\(\boldsymbol{e}_i\)</span> be the i-th unitvector.
+We get for <span class="math notranslate nohighlight">\(i= 1, 2, 3\)</span></p>
+<div class="math notranslate nohighlight">
+\[\int_{\partial Q} F_i \cdot \boldsymbol{e}_i \, dS \approx \frac{F_i(x + s_i \boldsymbol{e}_i)}{s_i} s_1 s_2 s_3\]</div>
+<p>Summing over <span class="math notranslate nohighlight">\(i\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\int_{\partial Q} F \cdot \boldsymbol{n} \, dS = (\partial F_1 + \partial F_2 + \partial F_3) \, |Q| = (\partial \cdot F) \, |Q|\]</div>
 </div>
-<div class="proof theorem admonition" id="thr-stokes">
-<p class="admonition-title"><span class="caption-number">Theorem 47 </span> (Stokes’ Theorem)</p>
+<div class="proof theorem admonition" id="thr-gauss">
+<p class="admonition-title"><span class="caption-number">Theorem 47 </span> (Gauss’ Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <div class="math notranslate nohighlight">
-\[\int_A (\partial \times F) \cdot \boldsymbol{n} \, dS = \int_{\partial A} F \cdot \boldsymbol{t} \, ds\]</div>
+\[\int_{\Omega} (\partial \cdot F) \, dV = \int_{\partial \Omega} F \cdot \boldsymbol{n} \, dS\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. <a class="reference internal" href="#thr-def-curl">Theorem 43</a>  tells us, with <span class="math notranslate nohighlight">\(U = A_{jk}\)</span>,</p>
+<p>Proof. <a class="reference internal" href="#thr-def-div">Theorem 46</a>  tells us, with <span class="math notranslate nohighlight">\(U = c_k\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[(\partial \times F)(x_{jk}) \cdot \frac{a_{jk}}{\| a_{jk} \|} \| a_{jk} \| \approx \int_{\partial A_{jk}} F \cdot \boldsymbol{t} \, ds\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(\frac{a_{jk}}{\| a_{jk} \|} = \boldsymbol{n}_{jk} \approx \boldsymbol{n}(x_{jk}) \)</span>. Summing over <span class="math notranslate nohighlight">\(k\)</span> gives:</p>
+\[(\partial \cdot F)(x_k) \, | c_k | \approx \int_{\partial c_k} F \cdot \boldsymbol{n} \, dS\]</div>
+<p>Summing over <span class="math notranslate nohighlight">\(k\)</span> gives:</p>
 <div class="math notranslate nohighlight">
-\[\sum_{j,k=1}^n(\partial \times F)(x_{jk}) \cdot \| a_{jk} \| \approx \sum_{j,k=1}^n \int_{\partial A_{jk}} F \cdot \boldsymbol{t} \, ds\]</div>
-<p>The left-hand side represents the definition of the surface integral. The right-hand side is a telescoping sum because the sides of neighbouring rectangles facing each other cancel each other out, leaving only the sides facing outside. These sides approximate the boundary of A, <span class="math notranslate nohighlight">\(\partial A\)</span>. To be honest, it requires a certain amount of <span class="math notranslate nohighlight">\(\epsilon\)</span>-ceremony to rigourosly prove the last statement but you have got the idea. Thus</p>
+\[\sum_{k=1}^n (\partial \cdot F)(x_k) \, | c_k | \approx \sum_{k=1}^n \int_{\partial c_k} F \cdot \boldsymbol{n} \, dS\]</div>
+<p>The left-hand side represents the definition of the volume integral. The right-hand side is a telescoping sum because the sides of neighbouring cubes facing each other cancel each other out, leaving only the sides facing outside. These sides approximate the boundary <span class="math notranslate nohighlight">\(\partial \Omega\)</span>. Thus</p>
 <div class="math notranslate nohighlight">
-\[\int_A (\partial \times F) \cdot \boldsymbol{n} \, dS = \int_{\partial A} F \cdot \boldsymbol{t} \, ds\]</div>
+\[\int_{\Omega} (\partial \cdot F)(x) \, dV \=  \int_{\partial \Omega} F \cdot \boldsymbol{n} \, dS \]</div>
 </div>
-<p>Now let <span class="math notranslate nohighlight">\(A\)</span> be defined by a smooth parameter function <span class="math notranslate nohighlight">\(x\)</span>. Let</p>
+<p>Now let <span class="math notranslate nohighlight">\(\Psi \subset \mathbb{R^3}\)</span> be another volume and</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}R &amp;= [0, U] \times [0, V] \subseteq \mathbb{R^2} \\
-x &amp;: R \to \mathbb{R^3}  \\
-A &amp;= x(R) \end{split}\]</div>
-<p>We assume that</p>
+\[\begin{split}x &amp;: \Psi \to \mathbb{R^3}  \\
+\Omega &amp;= x(\Psi) \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\)</span> is differentiable and</p>
 <div class="math notranslate nohighlight">
-\[\| \partial_u x \times \partial_v x \| \neq 0\]</div>
-<p>on <span class="math notranslate nohighlight">\(R\)</span>. Let <span class="math notranslate nohighlight">\(\{u_j\}\)</span> be a partition of <span class="math notranslate nohighlight">\([0, U]\)</span>, <span class="math notranslate nohighlight">\(\{v_k\}\)</span> one of <span class="math notranslate nohighlight">\([0, V]\)</span>, and <span class="math notranslate nohighlight">\(R_{jk}\)</span> the rectangle with upper right corner <span class="math notranslate nohighlight">\((u_j, v_k)\)</span>. Let</p>
-<div class="math notranslate nohighlight">
-\[x_{jk} = x(u_j, v_k) \]</div>
-<p>Then <span class="math notranslate nohighlight">\(X = [x_{00}, \ldots, x_{mn}]\)</span> is a polyhedron covering <span class="math notranslate nohighlight">\(A\)</span>.</p>
-<div class="proof theorem admonition" id="thr-parametrized-surfaces">
-<p class="admonition-title"><span class="caption-number">Theorem 48 </span> (Parameterized Surfaces)</p>
+\[\det (\partial \otimes x) \neq 0\]</div>
+<p>on <span class="math notranslate nohighlight">\(Z\)</span>.</p>
+<div class="proof theorem admonition" id="thr-parametrized-volumes">
+<p class="admonition-title"><span class="caption-number">Theorem 48 </span> (Parameterized Volumes)</p>
 <section class="theorem-content" id="proof-content">
-<p>(i) The normal vector at <span class="math notranslate nohighlight">\(x(u, v)\)</span> is given by</p>
 <div class="math notranslate nohighlight">
-\[\boldsymbol{n}(u, v) =  \frac{\partial_u x(u,v) \times \partial_v x(u,v)}{\| \partial_u x(u,v) \times \partial_v x(u,v) \|}\]</div>
-<p>(ii)
-The scalar integral is given by</p>
+\[\int_{\Omega} f \, dV = \int_{Z} f(x(u,v,w)) \, | \det (\partial \otimes x) | \, d(u,v,w) \]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof theorem admonition" id="thr-green">
+<p class="admonition-title"><span class="caption-number">Theorem 49 </span> (Green’s Formula)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f, g: \mathbb{R^3} \to \mathbb{R}\)</span> be scalar fields, <span class="math notranslate nohighlight">\(A \subset \mathbb{R^3}\)</span> a smooth surface, and <span class="math notranslate nohighlight">\(\Omega \subset \mathbb{R^3}\)</span> a volume with a smooth surface.</p>
+<p>(i) <strong>Product Rule</strong></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\int_A f \, dS &amp;= \int_{R} f(x(u,v)) \, \| \partial_u x \times \partial_v x \| \, d(u,v) 
-\\ \\
-dS &amp;=  \| \partial_u x \times \partial_v x \| \, d(u,v)\end{split}\]</div>
+\[\partial \cdot (f \, \partial g) = f \partial^2 g + \partial f \partial g \]</div>
+<p>(ii)</p>
+<div class="math notranslate nohighlight">
+\[\int_A (f \,  \partial g) \cdot \boldsymbol{n} \, dS = \int_A f \, \frac{\partial g}{\partial \boldsymbol{n}} \, dS\]</div>
+<p>(iii) <strong>Green’s Formula</strong></p>
+<div class="math notranslate nohighlight">
+\[\int_{\Omega} (f \, \partial^2 g - g \, \partial^2 f) \, dV = \int_{\partial \Omega} f \, \frac{\partial g}{\partial \boldsymbol{n}}  -
+                                                                                     g \, \frac{\partial f}{\partial \boldsymbol{n}} \, dS\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (i) Note that</p>
+<div class="math notranslate nohighlight">
+\[\partial^2 f = \partial_1^2 f + \partial_2^2 f + \partial_3^2 f\]</div>
+<p>and apply the plain product rule.</p>
+<p>(ii)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\int_A (f \,  \partial g) \cdot \boldsymbol{n} \, dS &amp;\approx \sum_{j,k}^{m,n} f(x_{jk})\partial g(x_{jk}) \cdot a_{jk} \\
+                                                     &amp;= \sum_{j,k}^{m,n} f(x_{jk}) \,(\partial g(x_{jk}) \cdot \boldsymbol{n}_{jk}) \| a_{jk} \| \\
+                                                     &amp;\approx \int_A f(x) \, (\partial g(x) \cdot \boldsymbol{n}(x)) \, dS \\
+                                                     &amp;= \int_A f \, \frac{\partial g}{\partial \boldsymbol{n}} \, dS\end{split}\]</div>
 <p>(iii)
-The flow integral is given by</p>
+We know from (i) that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\int_A F \cdot \boldsymbol{n} \, dS &amp;= \int_{R} F(x(u,v)) \cdot (\partial_u x \times \partial_v x) \, d(u,v) 
-\\ \\
-\boldsymbol{n} \, dS &amp;=  (\partial_u x \times \partial_v x) \, d(u,v)\end{split}\]</div>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. (i)
-TODO</p>
-<p>(ii)
-We recall that, for any two vectors <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, the surface of the parallelogram spanned by <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is given by</p>
+\[f \, \partial^2 g - g \, \partial^2 f = \partial \cdot (f \, \partial g) - \partial \cdot (g \, \partial f)\]</div>
+<p><a class="reference internal" href="#thr-gauss">Theorem 47</a> gives us, using (ii)</p>
 <div class="math notranslate nohighlight">
-\[\| a \times b \| = \| a \| \, \|  b \| \sin \alpha \]</div>
-<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is the angle between <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.
-Now let <span class="math notranslate nohighlight">\(\alpha_{jk}\)</span> be the angle between <span class="math notranslate nohighlight">\(x_{jk} - x_{j-1, k}\)</span> and <span class="math notranslate nohighlight">\(x_{jk} - x_{j, k-1}\)</span>.
-The key observation is this:</p>
+\[\int_{\Omega} \partial \cdot (f \, \partial g) = \int_{\partial \Omega} f \, \partial g \cdot \boldsymbol{n} \, dS
+                                               = \int_{\partial \Omega} f \, \frac{\partial g}{\partial \boldsymbol{n}} \, dS\]</div>
+<p>which yields the result</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\frac{\| a_{jk} \|}{(u_j - u_{j-1}) (v_k - v_{k-1})} &amp;= 
-\frac{\| (x_{jk} - x_{j-1, k}) \times (x_{jk} - x_{j, k-1}) \|}{(u_j - u_{j-1}) (v_k - v_{k-1})} \\
-&amp;= \frac{(x_{jk} - x_{j-1, k}) (x_{jk} - x_{j, k-1})}{(u_j - u_{j-1})(v_k - v_{k-1})} \sin(\alpha_{jk}) \\
-&amp;\approx \| \partial_u x(u_j, v_k) \| \, \| \partial_v x(u_j, v_k) \| \sin(\alpha_{jk}) \\
-&amp;\approx \| \partial_u(u_j, v_k) x \times \partial_v x(u_j, v_k) \| \end{split}\]</div>
-<p>Thus</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\int_A f \, dS &amp;\approx \sum_{j,k=1}^{m,n} f(x_k) \| a_{jk} \|  \\
-&amp;= \sum_{j,k=1}^{m,n} f(x_k) \frac{\| a_{jk} \|}{(u_j - u_{j-1}) \cdot(v_k - v_{k-1})} (u_j - u_{j-1}) (v_k - v_{k-1}) \\
-&amp;\approx \sum_{j,k=1}^{m,n} f(x_k) \| \partial_u x(u_j, v_k) \times \partial_v x(u_j, v_k) \| (u_j - u_{j-1}) (v_k - v_{k-1}) \\
-&amp;\approx  \int_{R} f(x(u,v)) \, \| \partial_u x \times \partial_v x \| \, d(u,v) \end{split}\]</div>
-<p>(iii)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\int_A F \cdot \boldsymbol{n} \, dS &amp;=  \int_{R} F(x(u,v)) \cdot \boldsymbol{n} \, \| \partial_u x \times \partial_v x \| \, d(u,v) \\
-&amp;= \int_{R} F(x(u,v)) \cdot \frac{\partial_u x \times \partial_v x}{\|\partial_u x \times \partial_v x\|} \| \partial_u x \times \partial_v x \| \, d(u,v) \\
-&amp;= \int_{R} F(x(u,v)) \cdot (\partial_u x \times \partial_v) \, d(u,v) \end{split}\]</div>
+\[\int_{\Omega}  (f \, \partial^2 g - g \, \partial^2 f) \, dV =  \int_{\partial \Omega} (f \, \frac{\partial g}{\partial \boldsymbol{n}}
+                                                                                      - g \, \frac{\partial f}{\partial \boldsymbol{n}}) \, dS\]</div>
 </div>
 </section>
 </section>
