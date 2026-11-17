@@ -9,7 +9,6 @@ exclude_patterns:
   - ".claude/**"           # Claude Code worktrees, never build
   - mathematics/pontryagin.md
   - mathematics/tangent-cotangent.md
-  - mathematics/calculus-rn.md   # not in toc; sphinx-proof crashes on un-numbered docs
   # improve.py artifacts: tracked in git, but not built/published
   - "**/*-plan.md"
   - "**/*-backup.md"

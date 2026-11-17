@@ -97,14 +97,16 @@ parts:
         title: Bayesian Decision-Making *
       - file: mathematics/bayesian-tests
         title: Bayesian Tests
-      - file: mathematics/numbers
+      - file: mathematics/naturals-to-reals
         title: From Naturals to Reals
-      - file: mathematics/arithmetic
+      - file: mathematics/arithmetic-intro
         title: First Steps in Arithmetic
-      - file: mathematics/calculus
+      - file: mathematics/calculus-intro
         title: First Steps in Calculus
-      - file: mathematics/diff-operators
-        title: Differential Operators *
+      - file: mathematics/differential-calculus
+        title: Differential Calculus *
+      - file: mathematics/integral-calculus
+        title: Integral Calculus
         
   - caption: History
     chapters:
