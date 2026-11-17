@@ -251,10 +251,11 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mathematics/bayesian-decisions.html">Bayesian Decision-Making *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics/bayesian-tests.html">Bayesian Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics/numbers.html">From Naturals to Reals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics/arithmetic.html">First Steps in Arithmetic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics/calculus.html">First Steps in Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics/diff-operators.html">Differential Operators *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/naturals-to-reals.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/arithmetic-intro.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/calculus-intro.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/differential-calculus.html">Differential Calculus *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/integral-calculus.html">Integral Calculus</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -502,6 +503,9 @@ document.write(`
    <a href="#cap-def-step-functions"><strong>def-step-functions</strong></a> | 
    <a href="#cap-def-sup-norm"><strong>def-sup-norm</strong></a> | 
    <a href="#cap-def-topology-R"><strong>def-topology-R</strong></a> | 
+   <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
+   <a href="#cap-definition-3"><strong>definition-3</strong></a> | 
+   <a href="#cap-definition-7"><strong>definition-7</strong></a> | 
    <a href="#cap-lem-compactness-completeness"><strong>lem-compactness-completeness</strong></a> | 
    <a href="#cap-lem-euclid-util"><strong>lem-euclid-util</strong></a> | 
    <a href="#cap-lem-euler"><strong>lem-euler</strong></a> | 
@@ -528,6 +532,8 @@ document.write(`
    <a href="#cap-thr-continuity-on-compact-sets"><strong>thr-continuity-on-compact-sets</strong></a> | 
    <a href="#cap-thr-convergent-sequences"><strong>thr-convergent-sequences</strong></a> | 
    <a href="#cap-thr-countable-uncountable"><strong>thr-countable-uncountable</strong></a> | 
+   <a href="#cap-thr-def-curl"><strong>thr-def-curl</strong></a> | 
+   <a href="#cap-thr-def-div"><strong>thr-def-div</strong></a> | 
    <a href="#cap-thr-differentiation-rules"><strong>thr-differentiation-rules</strong></a> | 
    <a href="#cap-thr-equivalence-relation"><strong>thr-equivalence-relation</strong></a> | 
    <a href="#cap-thr-euler"><strong>thr-euler</strong></a> | 
@@ -547,6 +553,9 @@ document.write(`
    <a href="#cap-thr-mean-value-integration"><strong>thr-mean-value-integration</strong></a> | 
    <a href="#cap-thr-modules"><strong>thr-modules</strong></a> | 
    <a href="#cap-thr-nested-intervals"><strong>thr-nested-intervals</strong></a> | 
+   <a href="#cap-thr-parametrized-curves"><strong>thr-parametrized-curves</strong></a> | 
+   <a href="#cap-thr-parametrized-surfaces"><strong>thr-parametrized-surfaces</strong></a> | 
+   <a href="#cap-thr-path-independence"><strong>thr-path-independence</strong></a> | 
    <a href="#cap-thr-poisson-brackets"><strong>thr-poisson-brackets</strong></a> | 
    <a href="#cap-thr-properties-derivatives"><strong>thr-properties-derivatives</strong></a> | 
    <a href="#cap-thr-properties-riemann"><strong>thr-properties-riemann</strong></a> | 
@@ -555,6 +564,7 @@ document.write(`
    <a href="#cap-thr-riemann-integrable-functions"><strong>thr-riemann-integrable-functions</strong></a> | 
    <a href="#cap-thr-riemann-integrals"><strong>thr-riemann-integrals</strong></a> | 
    <a href="#cap-thr-riemann-primitives"><strong>thr-riemann-primitives</strong></a> | 
+   <a href="#cap-thr-stokes"><strong>thr-stokes</strong></a> | 
    <a href="#cap-thr-supremum-infimum"><strong>thr-supremum-infimum</strong></a> | 
    <a href="#cap-thr-taylor"><strong>thr-taylor</strong></a>
    </div>
@@ -566,7 +576,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#alg-euclid-extended"><code class="xref">alg-euclid-extended</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#alg-euclid-extended"><code class="xref">alg-euclid-extended</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>algorithm</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-cor-little-fermat"><td></td><td>
@@ -574,7 +584,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#cor-little-fermat"><code class="xref">cor-little-fermat</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#cor-little-fermat"><code class="xref">cor-little-fermat</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-add-mul-ord"><td></td><td>
@@ -582,7 +592,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-add-mul-ord"><code class="xref">def-add-mul-ord</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-add-mul-ord"><code class="xref">def-add-mul-ord</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-axiom-countable-choice"><td></td><td>
@@ -590,7 +600,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-axiom-countable-choice"><code class="xref">def-axiom-countable-choice</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-axiom-countable-choice"><code class="xref">def-axiom-countable-choice</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-compact"><td></td><td>
@@ -598,7 +608,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-compact"><code class="xref">def-compact</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-compact"><code class="xref">def-compact</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-congruences"><td></td><td>
@@ -606,7 +616,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#def-congruences"><code class="xref">def-congruences</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#def-congruences"><code class="xref">def-congruences</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-continuity"><td></td><td>
@@ -614,7 +624,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-continuity"><code class="xref">def-continuity</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-continuity"><code class="xref">def-continuity</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-convergence"><td></td><td>
@@ -622,7 +632,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-convergence"><code class="xref">def-convergence</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-convergence"><code class="xref">def-convergence</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-convergence-functions"><td></td><td>
@@ -630,7 +640,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-convergence-functions"><code class="xref">def-convergence-functions</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-convergence-functions"><code class="xref">def-convergence-functions</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-convergence-reals"><td></td><td>
@@ -638,7 +648,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-convergence-reals"><code class="xref">def-convergence-reals</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-convergence-reals"><code class="xref">def-convergence-reals</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-derivatives"><td></td><td>
@@ -646,7 +656,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-derivatives"><code class="xref">def-derivatives</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-derivatives"><code class="xref">def-derivatives</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-diophantine"><td></td><td>
@@ -654,7 +664,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#def-diophantine"><code class="xref">def-diophantine</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#def-diophantine"><code class="xref">def-diophantine</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-euler-lagrange"><td></td><td>
@@ -686,7 +696,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-infinity"><code class="xref">def-infinity</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-infinity"><code class="xref">def-infinity</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-integer-division"><td></td><td>
@@ -694,7 +704,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#def-integer-division"><code class="xref">def-integer-division</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#def-integer-division"><code class="xref">def-integer-division</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-least-action"><td></td><td>
@@ -726,7 +736,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#def-module"><code class="xref">def-module</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#def-module"><code class="xref">def-module</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-ordering-integers"><td></td><td>
@@ -734,7 +744,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-ordering-integers"><code class="xref">def-ordering-integers</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-ordering-integers"><code class="xref">def-ordering-integers</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-ordering-rationals"><td></td><td>
@@ -742,7 +752,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-ordering-rationals"><code class="xref">def-ordering-rationals</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-ordering-rationals"><code class="xref">def-ordering-rationals</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-ordering-reals"><td></td><td>
@@ -750,7 +760,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-ordering-reals"><code class="xref">def-ordering-reals</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-ordering-reals"><code class="xref">def-ordering-reals</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-peano-axioms"><td></td><td>
@@ -758,7 +768,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#def-peano-axioms"><code class="xref">def-peano-axioms</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#def-peano-axioms"><code class="xref">def-peano-axioms</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-poisson-brackets"><td></td><td>
@@ -774,7 +784,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-riemann-integrals-sums"><code class="xref">def-riemann-integrals-sums</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-riemann-integrals-sums"><code class="xref">def-riemann-integrals-sums</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-schroedinger"><td></td><td>
@@ -790,7 +800,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-step-functions"><code class="xref">def-step-functions</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-step-functions"><code class="xref">def-step-functions</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-sup-norm"><td></td><td>
@@ -798,7 +808,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-sup-norm"><code class="xref">def-sup-norm</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-sup-norm"><code class="xref">def-sup-norm</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-topology-R"><td></td><td>
@@ -806,7 +816,31 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#def-topology-R"><code class="xref">def-topology-R</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#def-topology-R"><code class="xref">def-topology-R</code></a> <em>(mathematics/calculus-intro)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-0"><td></td><td>
+       <strong>definition-0</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#definition-0"><code class="xref">definition-0</code></a> <em>(mathematics/integral-calculus)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-3"><td></td><td>
+       <strong>definition-3</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#definition-3"><code class="xref">definition-3</code></a> <em>(mathematics/integral-calculus)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-definition-7"><td></td><td>
+       <strong>definition-7</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#definition-7"><code class="xref">definition-7</code></a> <em>(mathematics/integral-calculus)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-compactness-completeness"><td></td><td>
@@ -814,7 +848,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#lem-compactness-completeness"><code class="xref">lem-compactness-completeness</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#lem-compactness-completeness"><code class="xref">lem-compactness-completeness</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-euclid-util"><td></td><td>
@@ -822,7 +856,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#lem-euclid-util"><code class="xref">lem-euclid-util</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#lem-euclid-util"><code class="xref">lem-euclid-util</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-euler"><td></td><td>
@@ -830,7 +864,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#lem-euler"><code class="xref">lem-euler</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#lem-euler"><code class="xref">lem-euler</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-open-closed"><td></td><td>
@@ -838,7 +872,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#lem-open-closed"><code class="xref">lem-open-closed</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#lem-open-closed"><code class="xref">lem-open-closed</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-phi-prime"><td></td><td>
@@ -846,7 +880,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#phi-prime"><code class="xref">phi-prime</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#phi-prime"><code class="xref">phi-prime</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-primes"><td></td><td>
@@ -854,7 +888,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#primes"><code class="xref">primes</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#primes"><code class="xref">primes</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-carmichael"><td></td><td>
@@ -862,7 +896,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#rem-carmichael"><code class="xref">rem-carmichael</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#rem-carmichael"><code class="xref">rem-carmichael</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-continuum-hypothesis"><td></td><td>
@@ -870,7 +904,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#rem-continuum-hypothesis"><code class="xref">rem-continuum-hypothesis</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#rem-continuum-hypothesis"><code class="xref">rem-continuum-hypothesis</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-counterexample"><td></td><td>
@@ -878,7 +912,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#rem-counterexample"><code class="xref">rem-counterexample</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#rem-counterexample"><code class="xref">rem-counterexample</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-dx-calculus"><td></td><td>
@@ -886,7 +920,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#rem-dx-calculus"><code class="xref">rem-dx-calculus</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#rem-dx-calculus"><code class="xref">rem-dx-calculus</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-lagrangian"><td></td><td>
@@ -902,7 +936,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#rem-lebesgue-criterion"><code class="xref">rem-lebesgue-criterion</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#rem-lebesgue-criterion"><code class="xref">rem-lebesgue-criterion</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-rem-sup-norm"><td></td><td>
@@ -910,7 +944,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#rem-sup-norm"><code class="xref">rem-sup-norm</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#rem-sup-norm"><code class="xref">rem-sup-norm</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-15"><td></td><td>
@@ -918,7 +952,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#remark-15"><code class="xref">remark-15</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#remark-15"><code class="xref">remark-15</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-16"><td></td><td>
@@ -926,7 +960,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#remark-16"><code class="xref">remark-16</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#remark-16"><code class="xref">remark-16</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-3"><td></td><td>
@@ -934,7 +968,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#remark-3"><code class="xref">remark-3</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#remark-3"><code class="xref">remark-3</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-R-completeness"><td></td><td>
@@ -942,7 +976,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#thr-R-completeness"><code class="xref">thr-R-completeness</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#thr-R-completeness"><code class="xref">thr-R-completeness</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-R-uncountable"><td></td><td>
@@ -950,7 +984,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#thr-R-uncountable"><code class="xref">thr-R-uncountable</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#thr-R-uncountable"><code class="xref">thr-R-uncountable</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-archimedean-property"><td></td><td>
@@ -958,7 +992,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#thr-archimedean-property"><code class="xref">thr-archimedean-property</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#thr-archimedean-property"><code class="xref">thr-archimedean-property</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-bezout"><td></td><td>
@@ -966,7 +1000,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-bezout"><code class="xref">thr-bezout</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-bezout"><code class="xref">thr-bezout</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-bolzano-weierstrass"><td></td><td>
@@ -974,7 +1008,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-bolzano-weierstrass"><code class="xref">thr-bolzano-weierstrass</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-bolzano-weierstrass"><code class="xref">thr-bolzano-weierstrass</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-chinese-remainder"><td></td><td>
@@ -982,7 +1016,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-chinese-remainder"><code class="xref">thr-chinese-remainder</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-chinese-remainder"><code class="xref">thr-chinese-remainder</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-conservation"><td></td><td>
@@ -998,7 +1032,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-continuity-on-compact-sets"><code class="xref">thr-continuity-on-compact-sets</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-continuity-on-compact-sets"><code class="xref">thr-continuity-on-compact-sets</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-convergent-sequences"><td></td><td>
@@ -1006,7 +1040,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#thr-convergent-sequences"><code class="xref">thr-convergent-sequences</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#thr-convergent-sequences"><code class="xref">thr-convergent-sequences</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-countable-uncountable"><td></td><td>
@@ -1014,7 +1048,23 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#thr-countable-uncountable"><code class="xref">thr-countable-uncountable</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#thr-countable-uncountable"><code class="xref">thr-countable-uncountable</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-def-curl"><td></td><td>
+       <strong>thr-def-curl</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#thr-def-curl"><code class="xref">thr-def-curl</code></a> <em>(mathematics/integral-calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-def-div"><td></td><td>
+       <strong>thr-def-div</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#thr-def-div"><code class="xref">thr-def-div</code></a> <em>(mathematics/integral-calculus)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-differentiation-rules"><td></td><td>
@@ -1022,7 +1072,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-differentiation-rules"><code class="xref">thr-differentiation-rules</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-differentiation-rules"><code class="xref">thr-differentiation-rules</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-equivalence-relation"><td></td><td>
@@ -1030,7 +1080,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-equivalence-relation"><code class="xref">thr-equivalence-relation</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-equivalence-relation"><code class="xref">thr-equivalence-relation</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-euler"><td></td><td>
@@ -1038,7 +1088,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-euler"><code class="xref">thr-euler</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-euler"><code class="xref">thr-euler</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-fundamental"><td></td><td>
@@ -1046,7 +1096,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-fundamental"><code class="xref">thr-fundamental</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-fundamental"><code class="xref">thr-fundamental</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-gcd-lcm"><td></td><td>
@@ -1054,7 +1104,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-gcd-lcm"><code class="xref">thr-gcd-lcm</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-gcd-lcm"><code class="xref">thr-gcd-lcm</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-hamiltonian-equations"><td></td><td>
@@ -1070,7 +1120,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-infinite-primes"><code class="xref">thr-infinite-primes</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-infinite-primes"><code class="xref">thr-infinite-primes</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-integer-division"><td></td><td>
@@ -1078,7 +1128,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-integer-division"><code class="xref">thr-integer-division</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-integer-division"><code class="xref">thr-integer-division</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-integration-rules"><td></td><td>
@@ -1086,7 +1136,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-integration-rules"><code class="xref">thr-integration-rules</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-integration-rules"><code class="xref">thr-integration-rules</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-intermediate-value"><td></td><td>
@@ -1094,7 +1144,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-intermediate-value"><code class="xref">thr-intermediate-value</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-intermediate-value"><code class="xref">thr-intermediate-value</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-legendre"><td></td><td>
@@ -1102,7 +1152,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-legendre"><code class="xref">thr-legendre</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-legendre"><code class="xref">thr-legendre</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-legendre-invertibility"><td></td><td>
@@ -1118,7 +1168,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-limit-differentiable-functions"><code class="xref">thr-limit-differentiable-functions</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-limit-differentiable-functions"><code class="xref">thr-limit-differentiable-functions</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-limit-riemann-integrable"><td></td><td>
@@ -1126,7 +1176,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-limit-riemann-integrable"><code class="xref">thr-limit-riemann-integrable</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-limit-riemann-integrable"><code class="xref">thr-limit-riemann-integrable</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-main-theorem-calculus"><td></td><td>
@@ -1134,7 +1184,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-main-theorem-calculus"><code class="xref">thr-main-theorem-calculus</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-main-theorem-calculus"><code class="xref">thr-main-theorem-calculus</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-mean-value-differentiation"><td></td><td>
@@ -1142,7 +1192,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-mean-value-differentiation"><code class="xref">thr-mean-value-differentiation</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-mean-value-differentiation"><code class="xref">thr-mean-value-differentiation</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-mean-value-integration"><td></td><td>
@@ -1150,7 +1200,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-mean-value-integration"><code class="xref">thr-mean-value-integration</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-mean-value-integration"><code class="xref">thr-mean-value-integration</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-modules"><td></td><td>
@@ -1158,7 +1208,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-modules"><code class="xref">thr-modules</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-modules"><code class="xref">thr-modules</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-nested-intervals"><td></td><td>
@@ -1166,7 +1216,31 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-nested-intervals"><code class="xref">thr-nested-intervals</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-nested-intervals"><code class="xref">thr-nested-intervals</code></a> <em>(mathematics/calculus-intro)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-parametrized-curves"><td></td><td>
+       <strong>thr-parametrized-curves</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#thr-parametrized-curves"><code class="xref">thr-parametrized-curves</code></a> <em>(mathematics/integral-calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-parametrized-surfaces"><td></td><td>
+       <strong>thr-parametrized-surfaces</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#thr-parametrized-surfaces"><code class="xref">thr-parametrized-surfaces</code></a> <em>(mathematics/integral-calculus)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-path-independence"><td></td><td>
+       <strong>thr-path-independence</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#thr-path-independence"><code class="xref">thr-path-independence</code></a> <em>(mathematics/integral-calculus)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-poisson-brackets"><td></td><td>
@@ -1182,7 +1256,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-properties-derivatives"><code class="xref">thr-properties-derivatives</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-properties-derivatives"><code class="xref">thr-properties-derivatives</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-properties-riemann"><td></td><td>
@@ -1190,7 +1264,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-properties-riemann"><code class="xref">thr-properties-riemann</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-properties-riemann"><code class="xref">thr-properties-riemann</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-rationals-reals"><td></td><td>
@@ -1198,7 +1272,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/numbers.html#thr-rationals-reals"><code class="xref">thr-rationals-reals</code></a> <em>(mathematics/numbers)</em></td><td>
+       <a href="mathematics/naturals-to-reals.html#thr-rationals-reals"><code class="xref">thr-rationals-reals</code></a> <em>(mathematics/naturals-to-reals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-residue-class-ring"><td></td><td>
@@ -1206,7 +1280,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/arithmetic.html#thr-residue-class-ring"><code class="xref">thr-residue-class-ring</code></a> <em>(mathematics/arithmetic)</em></td><td>
+       <a href="mathematics/arithmetic-intro.html#thr-residue-class-ring"><code class="xref">thr-residue-class-ring</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-riemann-integrable-functions"><td></td><td>
@@ -1214,7 +1288,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-riemann-integrable-functions"><code class="xref">thr-riemann-integrable-functions</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-riemann-integrable-functions"><code class="xref">thr-riemann-integrable-functions</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-riemann-integrals"><td></td><td>
@@ -1222,7 +1296,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-riemann-integrals"><code class="xref">thr-riemann-integrals</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-riemann-integrals"><code class="xref">thr-riemann-integrals</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-riemann-primitives"><td></td><td>
@@ -1230,15 +1304,23 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-riemann-primitives"><code class="xref">thr-riemann-primitives</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-riemann-primitives"><code class="xref">thr-riemann-primitives</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-stokes"><td></td><td>
+       <strong>thr-stokes</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/integral-calculus.html#thr-stokes"><code class="xref">thr-stokes</code></a> <em>(mathematics/integral-calculus)</em></td><td>
+       <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-supremum-infimum"><td></td><td>
        <strong>thr-supremum-infimum</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-supremum-infimum"><code class="xref">thr-supremum-infimum</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-supremum-infimum"><code class="xref">thr-supremum-infimum</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-taylor"><td></td><td>
@@ -1246,7 +1328,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="mathematics/calculus.html#thr-taylor"><code class="xref">thr-taylor</code></a> <em>(mathematics/calculus)</em></td><td>
+       <a href="mathematics/calculus-intro.html#thr-taylor"><code class="xref">thr-taylor</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
    </table>
 

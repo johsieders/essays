@@ -1,6 +1,4 @@
-# Differential Operators: A Formal Algebraic Approach
-
-## Introduction
+# Differential Calculus
 
 Classical vector calculus, e.g. {cite}`schey2005div`, presents students with a bewildering array of distinct operations—gradient, divergence, curl, Laplacian, Jacobian, Hessian—each with its own notation, definition, and geometric interpretation. While this zoo of operators serves physics and engineering well, it obscures a deeper unity: **all these operators are just different ways of composing partial derivatives**.
 
