@@ -104,10 +104,16 @@ parts:
       - file: mathematics/calculus-intro
         title: First Steps in Calculus
       - file: mathematics/differential-calculus
-        title: Differential Calculus *
+        title: Differential Calculus
       - file: mathematics/integral-calculus
         title: Integral Calculus
-        
+      - file: mathematics/tangent-cotangent
+        title: Tangent, Cotangent
+      - file: mathematics/tangent-cotangent-n
+        title: Tangent, Cotangent in n Dimensions
+      - file: mathematics/tensors
+        title: Tensors
+
   - caption: History
     chapters:
       - file: history/8-holy_roman_empire

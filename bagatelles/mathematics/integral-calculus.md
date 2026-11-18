@@ -9,8 +9,7 @@ TODO (Introduction)
 
 ## Path Integrals
 
-Let $C$ be a smooth curve in $\mathbb{R^n}$ and $\boldsymbol{t}(x)$ 
-the normal tangent vector (length $= 1$) at $x \in C$. 
+Let $C$ be a smooth curve in $\mathbb{R^n}$ and $\boldsymbol{t}(x)$. 
 Let $X = \{x_0=a, x_1, \ldots, x_n = b\}, x_k \in C$ be a polygon approximating $C$. We define 
 
 ```{math}
@@ -18,14 +17,14 @@ Let $X = \{x_0=a, x_1, \ldots, x_n = b\}, x_k \in C$ be a polygon approximating 
 \mu(X) &= \min \| \Delta_k \| \\
 \boldsymbol{t}_k &= \frac{\Delta_k}{\| \Delta_k \|}
 ```
-The quantity $\mu(X)$ is called the granularity of $X$.
-As $C$ is smooth, the approximations
+The quantity $\mu(X)$ is called the **granularity** of $X$.
+
+The tangent vector (length $= 1$) at $x \in C$ is defined by 
 
 ```{math}
-|C| &\approx \sum_{k=1}^n  \| \Delta_k \| \\
-\boldsymbol{t}_k &\approx \boldsymbol{t}(x_k)
+\boldsymbol{t}(x) = \lim_{h \to 0} \frac{h}{\| h \|}
 ```
-become arbitrairily good as $\mu(X)$ approaches zero.
+
 We consider a differentiable scalar field $f$ and a vector field $F$ on $C$.
 
 ```{math}
@@ -46,8 +45,8 @@ With $f = 1$ we get the **arc length** $|C| = \int_C \, ds$.
 (ii) Substituting $F \cdot \boldsymbol{t}$ for $f$, we get the definition of the integral of a vector field
 
 ```{math}
-\int_C F \cdot \boldsymbol{t} \, ds &\approx \sum_{k=1}^n F(x_k) \frac{\Delta_k}{\| \Delta_k \|}  \| \Delta_k \|  \\
-&= \sum_{k=1}^n F(x_k) \Delta_k
+\int_C F \cdot \boldsymbol{t} \, ds &\approx \sum_{k=1}^n F(x_k) \cdot \frac{\Delta_k}{\| \Delta_k \|}  \| \Delta_k \|  \\
+&= \sum_{k=1}^n F(x_k) \cdot \Delta_k
 ```
 ````
 
@@ -419,7 +418,7 @@ becomes arbitrarily good as $|U|$ approaches zero,
 ````
 
 ````{prf:proof}
-We consider a small cube $Q$ with side lengths $s_1, s_2, s_3$. Let $\boldsymbol{e}_i$ be the i-th unitvector.
+We consider a small cube $Q$ with side lengths $s_1, s_2, s_3$. Let $\boldsymbol{e}_i$ be the $i$-th unit vector.
 We get for $i= 1, 2, 3$
 
 ```{math}
@@ -455,7 +454,7 @@ Summing over $k$ gives:
 The left-hand side represents the definition of the volume integral. The right-hand side is a telescoping sum because the sides of neighbouring cubes facing each other cancel each other out, leaving only the sides facing outside. These sides approximate the boundary $\partial \Omega$. Thus
 
 ```{math}
-\int_{\Omega} (\partial \cdot F)(x) \, dV \=  \int_{\partial \Omega} F \cdot \boldsymbol{n} \, dS 
+\int_{\Omega} (\partial \cdot F)(x) \, dV =  \int_{\partial \Omega} F \cdot \boldsymbol{n} \, dS 
 ```
 ````
 
@@ -504,8 +503,8 @@ Let $f, g: \mathbb{R^3} \to \mathbb{R}$ be scalar fields, $A \subset \mathbb{R^3
 
 (iii) **Green's Formula**
 ```{math}
-\int_{\Omega} (f \, \partial^2 g - g \, \partial^2 f) \, dV = \int_{\partial \Omega} f \, \frac{\partial g}{\partial \boldsymbol{n}}  -
-                                                                                     g \, \frac{\partial f}{\partial \boldsymbol{n}} \, dS
+\int_{\Omega} (f \, \partial^2 g - g \, \partial^2 f) \, dV = \int_{\partial \Omega} \left( f \, \frac{\partial g}{\partial \boldsymbol{n}}  -
+                                                                                     g \, \frac{\partial f}{\partial \boldsymbol{n}} \right) \, dS
 ```
 
 ````
@@ -540,8 +539,8 @@ f \, \partial^2 g - g \, \partial^2 f = \partial \cdot (f \, \partial g) - \part
 which yields the result
 
 ```{math}
-\int_{\Omega}  (f \, \partial^2 g - g \, \partial^2 f) \, dV =  \int_{\partial \Omega} (f \, \frac{\partial g}{\partial \boldsymbol{n}}
-                                                                                      - g \, \frac{\partial f}{\partial \boldsymbol{n}}) \, dS
+\int_{\Omega}  (f \, \partial^2 g - g \, \partial^2 f) \, dV =  \int_{\partial \Omega} \left(f \, \frac{\partial g}{\partial \boldsymbol{n}}
+                                                                                      - g \, \frac{\partial f}{\partial \boldsymbol{n}} \right) \, dS
 ```
 ````
 
