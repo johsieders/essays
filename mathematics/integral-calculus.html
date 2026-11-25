@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/integral-calculus';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Was the Empire Holy, Roman, or an Empire at All?" href="../history/8-holy_roman_empire.html" />
+    <link rel="next" title="Differentials" href="differentials.html" />
     <link rel="prev" title="Differential Calculus" href="differential-calculus.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -233,6 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/ai-regulation-policy-proposal.html">Reining in AI Agents *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computer-science/py4alg.html">A Compositional Algebra Library *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/cryptoanalysis.html">Cryptoanalysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -250,8 +251,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="naturals-to-reals.html">From Naturals to Reals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arithmetic-intro.html">First Steps in Arithmetic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="calculus-intro.html">First Steps in Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="differential-calculus.html">Differential Calculus *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differential-calculus.html">Differential Calculus</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Integral Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differentials.html">Differentials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -548,20 +550,17 @@ document.write(`
 <p>TODO (Introduction)</p>
 <section id="path-integrals">
 <h2>Path Integrals<a class="headerlink" href="#path-integrals" title="Permalink to this heading">#</a></h2>
-<p>Let <span class="math notranslate nohighlight">\(C\)</span> be a smooth curve in <span class="math notranslate nohighlight">\(\mathbb{R^n}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{t}(x)\)</span>
-the normal tangent vector (length <span class="math notranslate nohighlight">\(= 1\)</span>) at <span class="math notranslate nohighlight">\(x \in C\)</span>.
+<p>Let <span class="math notranslate nohighlight">\(C\)</span> be a smooth curve in <span class="math notranslate nohighlight">\(\mathbb{R^n}\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{t}(x)\)</span>.
 Let <span class="math notranslate nohighlight">\(X = \{x_0=a, x_1, \ldots, x_n = b\}, x_k \in C\)</span> be a polygon approximating <span class="math notranslate nohighlight">\(C\)</span>. We define</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\Delta_k &amp;= x_k - x_{k-1}  \\
 \mu(X) &amp;= \min \| \Delta_k \| \\
 \boldsymbol{t}_k &amp;= \frac{\Delta_k}{\| \Delta_k \|}\end{split}\]</div>
-<p>The quantity <span class="math notranslate nohighlight">\(\mu(X)\)</span> is called the granularity of <span class="math notranslate nohighlight">\(X\)</span>.
-As <span class="math notranslate nohighlight">\(C\)</span> is smooth, the approximations</p>
+<p>The quantity <span class="math notranslate nohighlight">\(\mu(X)\)</span> is called the <strong>granularity</strong> of <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p>The tangent vector (length <span class="math notranslate nohighlight">\(= 1\)</span>) at <span class="math notranslate nohighlight">\(x \in C\)</span> is defined by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}|C| &amp;\approx \sum_{k=1}^n  \| \Delta_k \| \\
-\boldsymbol{t}_k &amp;\approx \boldsymbol{t}(x_k)\end{split}\]</div>
-<p>become arbitrairily good as <span class="math notranslate nohighlight">\(\mu(X)\)</span> approaches zero.
-We consider a differentiable scalar field <span class="math notranslate nohighlight">\(f\)</span> and a vector field <span class="math notranslate nohighlight">\(F\)</span> on <span class="math notranslate nohighlight">\(C\)</span>.</p>
+\[\boldsymbol{t}(x) = \lim_{h \to 0} \frac{h}{\| h \|}\]</div>
+<p>We consider a differentiable scalar field <span class="math notranslate nohighlight">\(f\)</span> and a vector field <span class="math notranslate nohighlight">\(F\)</span> on <span class="math notranslate nohighlight">\(C\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}f &amp;: C &amp;\to \mathbb{R} \\
 \partial f &amp;: C &amp;\to \mathbb{R^n} \\
@@ -576,8 +575,8 @@ F &amp;: C &amp;\to \mathbb{R^n}\end{split}\]</div>
 With <span class="math notranslate nohighlight">\(f = 1\)</span> we get the <strong>arc length</strong> <span class="math notranslate nohighlight">\(|C| = \int_C \, ds\)</span>.</p>
 <p>(ii) Substituting <span class="math notranslate nohighlight">\(F \cdot \boldsymbol{t}\)</span> for <span class="math notranslate nohighlight">\(f\)</span>, we get the definition of the integral of a vector field</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\int_C F \cdot \boldsymbol{t} \, ds &amp;\approx \sum_{k=1}^n F(x_k) \frac{\Delta_k}{\| \Delta_k \|}  \| \Delta_k \|  \\
-&amp;= \sum_{k=1}^n F(x_k) \Delta_k\end{split}\]</div>
+\[\begin{split}\int_C F \cdot \boldsymbol{t} \, ds &amp;\approx \sum_{k=1}^n F(x_k) \cdot \frac{\Delta_k}{\| \Delta_k \|}  \| \Delta_k \|  \\
+&amp;= \sum_{k=1}^n F(x_k) \cdot \Delta_k\end{split}\]</div>
 </section>
 </div><div class="proof theorem admonition" id="thr-path-independence">
 <p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Path Independence)</p>
@@ -829,7 +828,7 @@ As <span class="math notranslate nohighlight">\(\partial \Omega\)</span> is smoo
 <p>becomes arbitrarily good as <span class="math notranslate nohighlight">\(|U|\)</span> approaches zero,</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We consider a small cube <span class="math notranslate nohighlight">\(Q\)</span> with side lengths <span class="math notranslate nohighlight">\(s_1, s_2, s_3\)</span>. Let <span class="math notranslate nohighlight">\(\boldsymbol{e}_i\)</span> be the i-th unitvector.
+<p>Proof. We consider a small cube <span class="math notranslate nohighlight">\(Q\)</span> with side lengths <span class="math notranslate nohighlight">\(s_1, s_2, s_3\)</span>. Let <span class="math notranslate nohighlight">\(\boldsymbol{e}_i\)</span> be the <span class="math notranslate nohighlight">\(i\)</span>-th unit vector.
 We get for <span class="math notranslate nohighlight">\(i= 1, 2, 3\)</span></p>
 <div class="math notranslate nohighlight">
 \[\int_{\partial Q} F_i \cdot \boldsymbol{e}_i \, dS \approx \frac{F_i(x + s_i \boldsymbol{e}_i)}{s_i} s_1 s_2 s_3\]</div>
@@ -852,7 +851,7 @@ We get for <span class="math notranslate nohighlight">\(i= 1, 2, 3\)</span></p>
 \[\sum_{k=1}^n (\partial \cdot F)(x_k) \, | c_k | \approx \sum_{k=1}^n \int_{\partial c_k} F \cdot \boldsymbol{n} \, dS\]</div>
 <p>The left-hand side represents the definition of the volume integral. The right-hand side is a telescoping sum because the sides of neighbouring cubes facing each other cancel each other out, leaving only the sides facing outside. These sides approximate the boundary <span class="math notranslate nohighlight">\(\partial \Omega\)</span>. Thus</p>
 <div class="math notranslate nohighlight">
-\[\int_{\Omega} (\partial \cdot F)(x) \, dV \=  \int_{\partial \Omega} F \cdot \boldsymbol{n} \, dS \]</div>
+\[\int_{\Omega} (\partial \cdot F)(x) \, dV =  \int_{\partial \Omega} F \cdot \boldsymbol{n} \, dS \]</div>
 </div>
 <p>Now let <span class="math notranslate nohighlight">\(\Psi \subset \mathbb{R^3}\)</span> be another volume and</p>
 <div class="math notranslate nohighlight">
@@ -883,8 +882,8 @@ We get for <span class="math notranslate nohighlight">\(i= 1, 2, 3\)</span></p>
 \[\int_A (f \,  \partial g) \cdot \boldsymbol{n} \, dS = \int_A f \, \frac{\partial g}{\partial \boldsymbol{n}} \, dS\]</div>
 <p>(iii) <strong>Green’s Formula</strong></p>
 <div class="math notranslate nohighlight">
-\[\int_{\Omega} (f \, \partial^2 g - g \, \partial^2 f) \, dV = \int_{\partial \Omega} f \, \frac{\partial g}{\partial \boldsymbol{n}}  -
-                                                                                     g \, \frac{\partial f}{\partial \boldsymbol{n}} \, dS\]</div>
+\[\int_{\Omega} (f \, \partial^2 g - g \, \partial^2 f) \, dV = \int_{\partial \Omega} \left( f \, \frac{\partial g}{\partial \boldsymbol{n}}  -
+                                                                                     g \, \frac{\partial f}{\partial \boldsymbol{n}} \right) \, dS\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (i) Note that</p>
@@ -907,8 +906,8 @@ We know from (i) that</p>
                                                = \int_{\partial \Omega} f \, \frac{\partial g}{\partial \boldsymbol{n}} \, dS\]</div>
 <p>which yields the result</p>
 <div class="math notranslate nohighlight">
-\[\int_{\Omega}  (f \, \partial^2 g - g \, \partial^2 f) \, dV =  \int_{\partial \Omega} (f \, \frac{\partial g}{\partial \boldsymbol{n}}
-                                                                                      - g \, \frac{\partial f}{\partial \boldsymbol{n}}) \, dS\]</div>
+\[\int_{\Omega}  (f \, \partial^2 g - g \, \partial^2 f) \, dV =  \int_{\partial \Omega} \left(f \, \frac{\partial g}{\partial \boldsymbol{n}}
+                                                                                      - g \, \frac{\partial f}{\partial \boldsymbol{n}} \right) \, dS\]</div>
 </div>
 </section>
 </section>
@@ -953,11 +952,11 @@ We know from (i) that</p>
       </div>
     </a>
     <a class="right-next"
-       href="../history/8-holy_roman_empire.html"
+       href="differentials.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Was the Empire Holy, Roman, or an Empire at All?</p>
+        <p class="prev-next-title">Differentials</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

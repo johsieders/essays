@@ -237,6 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="computer-science/30-formal-logic.html">Formal Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="computer-science/ai-regulation-policy-proposal.html">Reining in AI Agents *</a></li>
 <li class="toctree-l1"><a class="reference internal" href="computer-science/py4alg.html">A Compositional Algebra Library *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computer-science/cryptoanalysis.html">Cryptoanalysis</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
 <ul class="nav bd-sidenav">
@@ -254,8 +255,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="mathematics/naturals-to-reals.html">From Naturals to Reals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics/arithmetic-intro.html">First Steps in Arithmetic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics/calculus-intro.html">First Steps in Calculus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics/differential-calculus.html">Differential Calculus *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/differential-calculus.html">Differential Calculus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mathematics/integral-calculus.html">Integral Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics/differentials.html">Differentials</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
 <ul class="nav bd-sidenav">
@@ -486,12 +488,14 @@ document.write(`
    <a href="#cap-def-diophantine"><strong>def-diophantine</strong></a> | 
    <a href="#cap-def-euler-lagrange"><strong>def-euler-lagrange</strong></a> | 
    <a href="#cap-def-force-momentum"><strong>def-force-momentum</strong></a> | 
+   <a href="#cap-def-germ"><strong>def-germ</strong></a> | 
    <a href="#cap-def-hamilton"><strong>def-hamilton</strong></a> | 
    <a href="#cap-def-infinity"><strong>def-infinity</strong></a> | 
    <a href="#cap-def-integer-division"><strong>def-integer-division</strong></a> | 
    <a href="#cap-def-least-action"><strong>def-least-action</strong></a> | 
    <a href="#cap-def-legendre-invertibility"><strong>def-legendre-invertibility</strong></a> | 
    <a href="#cap-def-lie-algebra"><strong>def-lie-algebra</strong></a> | 
+   <a href="#cap-def-local-parametrization"><strong>def-local-parametrization</strong></a> | 
    <a href="#cap-def-module"><strong>def-module</strong></a> | 
    <a href="#cap-def-ordering-integers"><strong>def-ordering-integers</strong></a> | 
    <a href="#cap-def-ordering-rationals"><strong>def-ordering-rationals</strong></a> | 
@@ -509,6 +513,7 @@ document.write(`
    <a href="#cap-lem-compactness-completeness"><strong>lem-compactness-completeness</strong></a> | 
    <a href="#cap-lem-euclid-util"><strong>lem-euclid-util</strong></a> | 
    <a href="#cap-lem-euler"><strong>lem-euler</strong></a> | 
+   <a href="#cap-lem-hadamard"><strong>lem-hadamard</strong></a> | 
    <a href="#cap-lem-open-closed"><strong>lem-open-closed</strong></a> | 
    <a href="#cap-phi-prime"><strong>phi-prime</strong></a> | 
    <a href="#cap-primes"><strong>primes</strong></a> | 
@@ -546,6 +551,7 @@ document.write(`
    <a href="#cap-thr-integer-division"><strong>thr-integer-division</strong></a> | 
    <a href="#cap-thr-integration-rules"><strong>thr-integration-rules</strong></a> | 
    <a href="#cap-thr-intermediate-value"><strong>thr-intermediate-value</strong></a> | 
+   <a href="#cap-thr-kinematic-algebraic"><strong>thr-kinematic-algebraic</strong></a> | 
    <a href="#cap-thr-legendre"><strong>thr-legendre</strong></a> | 
    <a href="#cap-thr-legendre-invertibility"><strong>thr-legendre-invertibility</strong></a> | 
    <a href="#cap-thr-limit-differentiable-functions"><strong>thr-limit-differentiable-functions</strong></a> | 
@@ -569,6 +575,7 @@ document.write(`
    <a href="#cap-thr-riemann-primitives"><strong>thr-riemann-primitives</strong></a> | 
    <a href="#cap-thr-stokes"><strong>thr-stokes</strong></a> | 
    <a href="#cap-thr-supremum-infimum"><strong>thr-supremum-infimum</strong></a> | 
+   <a href="#cap-thr-tangent"><strong>thr-tangent</strong></a> | 
    <a href="#cap-thr-taylor"><strong>thr-taylor</strong></a>
    </div>
 
@@ -686,6 +693,14 @@ document.write(`
        <a href="physics/newton.html#def-force-momentum"><code class="xref">def-force-momentum</code></a> <em>(physics/newton)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-germ"><td></td><td>
+       <strong>def-germ</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/differentials.html#def-germ"><code class="xref">def-germ</code></a> <em>(mathematics/differentials)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-hamilton"><td></td><td>
        <strong>def-hamilton</strong></td><td></td></tr>
      <tr>
@@ -732,6 +747,14 @@ document.write(`
        <td></td>
        <td>
        <a href="physics/newton.html#def-lie-algebra"><code class="xref">def-lie-algebra</code></a> <em>(physics/newton)</em></td><td>
+       <em>definition</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-def-local-parametrization"><td></td><td>
+       <strong>def-local-parametrization</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/differentials.html#def-local-parametrization"><code class="xref">def-local-parametrization</code></a> <em>(mathematics/differentials)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def-module"><td></td><td>
@@ -868,6 +891,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/arithmetic-intro.html#lem-euler"><code class="xref">lem-euler</code></a> <em>(mathematics/arithmetic-intro)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem-hadamard"><td></td><td>
+       <strong>lem-hadamard</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/differentials.html#lem-hadamard"><code class="xref">lem-hadamard</code></a> <em>(mathematics/differentials)</em></td><td>
        <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lem-open-closed"><td></td><td>
@@ -1166,6 +1197,14 @@ document.write(`
        <a href="mathematics/calculus-intro.html#thr-intermediate-value"><code class="xref">thr-intermediate-value</code></a> <em>(mathematics/calculus-intro)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-kinematic-algebraic"><td></td><td>
+       <strong>thr-kinematic-algebraic</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/differentials.html#thr-kinematic-algebraic"><code class="xref">thr-kinematic-algebraic</code></a> <em>(mathematics/differentials)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-legendre"><td></td><td>
        <strong>thr-legendre</strong></td><td></td></tr>
      <tr>
@@ -1348,6 +1387,14 @@ document.write(`
        <td></td>
        <td>
        <a href="mathematics/calculus-intro.html#thr-supremum-infimum"><code class="xref">thr-supremum-infimum</code></a> <em>(mathematics/calculus-intro)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thr-tangent"><td></td><td>
+       <strong>thr-tangent</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="mathematics/differentials.html#thr-tangent"><code class="xref">thr-tangent</code></a> <em>(mathematics/differentials)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thr-taylor"><td></td><td>

@@ -1,0 +1,972 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Differentials &#8212; Bagatelles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show code';</script>
+    <script>let toggleHintHide = 'Click to hide code';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'mathematics/differentials';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Was the Empire Holy, Roman, or an Empire at All?" href="../history/8-holy_roman_empire.html" />
+    <link rel="prev" title="Differential Calculus" href="integral-calculus.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pict-03.png" class="logo__image only-light" alt="Bagatelles - Home"/>
+    <script>document.write(`<img src="../_static/pict-03.png" class="logo__image only-dark" alt="Bagatelles - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Bagatelles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Philosophy</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/4-philo-2charts.html">Philosophy on Two Charts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/34-medieval-philosophy.html">Medieval Philosophy *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/10-sciences.html">L'essence des sciences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/13-kant.html">Kant und seine Zeit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/5-do-we-have-a-soul.html">Do We Have a Soul?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/12-what-is-a-dream.html">What is a Dream?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/18-einstein-philosophy.html">Einstein and Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/27-science.html">Can Science Tell Us Everything?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/28-truth.html">Is Truth Objective, Eternal, and the Same for Everyone?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/36-free-will-1.html">Problem of Free Will Dissolved *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/mathematics-existence.html">What Exists in Mathematics? *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../philosophy/meinungsfreiheit-toleranz.html">Meinungsfreiheit und Toleranz</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../philosophy/ethik-0.html">Wie soll man leben? *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-1.html">1.1 Philosophen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-2.html">1.2 Regeln</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-3.html">1.3 Ziele</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-4.html">1.4 Begründungen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-1-5.html">1.5 Spaltungen</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-1.html">2.1 Stoiker vs. Epikur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-2.html">2.2 Konfuzius vs. Buddha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-3.html">2.3 Prediger vs. Sprüche Salomos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-4.html">2.4 Kant vs. Mill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-5.html">2.5 Aristoteles vs. Nietzsche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-6.html">2.6 Platon vs. Hume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-7.html">2.7 Descartes vs. Spinoza</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-8.html">2.8 Schopenhauer vs. Neues Testament</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-2-9.html">2.9 Thomas von Aquin vs. Sartre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-3.html">3. Fragen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../philosophy/ethik-4.html">4. Literatur</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computer Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/33-cyber-espionage.html">The Spy Who Came in from the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/30-formal-logic.html">Formal Logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/ai-regulation-policy-proposal.html">Reining in AI Agents *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/py4alg.html">A Compositional Algebra Library *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computer-science/cryptoanalysis.html">Cryptoanalysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/energy-modelling.html">Energie-Modellierung *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/25-physics-roadmap.html">Physics Roadmap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/29-physics-one-page.html">Modern Physics One-Pager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/newton.html">Newton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/sr.html">Special Relativity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/minkowski.html">SO(3) and O(1,3)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mathematics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bayesian-decisions.html">Bayesian Decision-Making *</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayesian-tests.html">Bayesian Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naturals-to-reals.html">From Naturals to Reals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetic-intro.html">First Steps in Arithmetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="calculus-intro.html">First Steps in Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differential-calculus.html">Differential Calculus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integral-calculus.html">Integral Calculus</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Differentials</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">History</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../history/8-holy_roman_empire.html">Was the Holy Roman Empire holy, roman or an empire at all?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/15-american-civil-war.html">How did Britain react to the American Civil War?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/6-korean-war.html">The way to the Korean War</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/31-edinburgh.html">Edinburgh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history/marlborough.html">Marlborough and Paoli</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../israel/israel-0.html">Geschichte der Juden *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-1.html">Ursprünge (bis 135 CE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-2.html">Diaspora (135–1492)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-3.html">Neuzeit (1492–1897)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-4.html">Von Basel bis Auschwitz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-5.html">Israel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-6.html">Von der Gründung bis zum Sechstagekrieg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-7.html">Vom Sechstagekrieg bis Oslo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-8.html">Von Oslo bis 2026</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-9.html">Das Flüchtlingsproblem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/israel-10.html">Stationen des jüdischen Volkes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/glossary.html">Glossar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/index-of-names.html">Namensverzeichnis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../israel/references.html">Literatur</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ireland/ireland-0.html">Story of the Irish *</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ireland/ireland-1.html">The World Before England (1 CE–1168)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ireland/ireland-2.html">The Lordship and the Two Nations (1169–1541)</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Religion</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/22-god-and-evil.html">Is God responsible for evil?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/23-is-science-a-threat.html">Is science a threat to religion?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/7-genesis-questions.html">Questions about Genesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/20-revelations.html">Die Offenbarungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/32-religions-in-britain.html">Religions in Britain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../religion/wissenschaft-religion.html">Wissenschaft und Religion</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Shakespeare</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/21-henry-iv.html">Henry IV, Part 1 and Part 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/17-hotspur-henry-v.html">Hotspur and Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/19-henry-v-chorus.html">The Chorus in Henry V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/16-battle-of-bosworth.html">The Battle of Bosworth</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Language &amp; Culture</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/9-russell-on-useless-knowledge.html">Bertrand Russell on Useless Knowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/3-francais-perdition.html">Le français en voie de perdition ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/0-bibliography.html">Books to read</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Environment &amp; Society</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/1-animaux.html">Modeste proposition pour la sauvegarde du bétail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../literature/14-fliegen.html">Darf man noch fliegen?</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For Fun</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../literature/2-baviere.html">Qu'est-ce qu'elle est belle, la Bavière!</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../references-page.html">References</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/edit/main/mathematics/differentials.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/johsieders/essays/issues/new?title=Issue%20on%20page%20%2Fmathematics/differentials.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/mathematics/differentials.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Differentials</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-simple-case">The Simple Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kinematic-approach">The Kinematic Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-algebraic-approach">The Algebraic Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-case">The One-Dimensional Case</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-space">Tangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-space">Cotangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-of-a-function">Differential of a Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-bundle">Tangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-bundle">Cotangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="differentials">
+<h1>Differentials<a class="headerlink" href="#differentials" title="Permalink to this heading">#</a></h1>
+<section id="the-simple-case">
+<h2>The Simple Case<a class="headerlink" href="#the-simple-case" title="Permalink to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(C\)</span> be a smooth curve in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. In the simplest case, <span class="math notranslate nohighlight">\(C\)</span> is parameterized by a global parameter function <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x: \left\{
+       \begin{array}{lr}
+          [a, b] \to C \\
+          t \mapsto x(t)
+       \end{array}
+   \right .\end{split}\]</div>
+<p>The tangent vector <span class="math notranslate nohighlight">\(\boldsymbol{t}_p\)</span> on a point <span class="math notranslate nohighlight">\(p = x(t) \in C\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{t}_p = \frac{x(t)}{\| \dot{x}(t) \|}\]</div>
+<p>provided that</p>
+<div class="math notranslate nohighlight">
+\[\| \dot{x}(t) \| \neq 0 \quad \text{on} \; [a, b]\]</div>
+<p>which implies that the mapping <span class="math notranslate nohighlight">\(x^{-1}\)</span> is defined on <span class="math notranslate nohighlight">\(C\)</span>: For each <span class="math notranslate nohighlight">\(p \in C\)</span> there is exactly one <span class="math notranslate nohighlight">\(t \in [a, b]\)</span>
+such that <span class="math notranslate nohighlight">\(x(t) = p\)</span>. The value <span class="math notranslate nohighlight">\(\| \dot{x}(t) \|\)</span> is the velocity at which the point <span class="math notranslate nohighlight">\(p = x(t)\)</span> moves along <span class="math notranslate nohighlight">\(C\)</span> as
+<span class="math notranslate nohighlight">\(t\)</span> moves uniformly from <span class="math notranslate nohighlight">\(a\)</span> to <span class="math notranslate nohighlight">\(b\)</span>. The condition states that <span class="math notranslate nohighlight">\(x(t)\)</span> never stops, meaning it cannot change direction.
+The <strong>tangent space</strong> of <span class="math notranslate nohighlight">\(C\)</span> at <span class="math notranslate nohighlight">\(p = x(t)\)</span> is defined by</p>
+<div class="math notranslate nohighlight">
+\[T_p C = \text{span}\{\boldsymbol{t}_p\}\]</div>
+<p>The <strong>cotangent space</strong> <span class="math notranslate nohighlight">\(T^*_p C\)</span> is the dual of the tangent space.
+It looks similar:</p>
+<div class="math notranslate nohighlight">
+\[T^*_p C = \text{span}\{\boldsymbol{t}^*_p\}\]</div>
+<p>where, for <span class="math notranslate nohighlight">\(v, w \in T_p C\)</span>, we define <span class="math notranslate nohighlight">\(v^*\)</span> through</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v^*(w) &amp;= v \cdot w       \\
+v^*(v) &amp;= v^2\end{split}\]</div>
+<p>and, in particular</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{t}^*_p(\boldsymbol{t}_p) = \boldsymbol{t}^2_p = 1\]</div>
+<p>So, every <strong>covector</strong> <span class="math notranslate nohighlight">\(\omega \in T^*_p C\)</span> has the form</p>
+<div class="math notranslate nohighlight">
+\[\omega = \lambda \, \boldsymbol{t}^*_p \quad (\sigma \in \mathbb{R})\]</div>
+<p>It is useful to remember that a covector is a mapping</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\omega_p:
+   \left\{
+       \begin{array}{lr}
+          T_p C \to \mathbb{R} \\
+          v \mapsto \omega_p(v)
+       \end{array}
+   \right .\end{split}\]</div>
+<p>Every vector <span class="math notranslate nohighlight">\(u \in \mathbb{R}^n\)</span> defines a covector <span class="math notranslate nohighlight">\(u^*\)</span> through</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u^*(v) &amp;= u \cdot v \quad (v \in T_p C)  \\
+       &amp;= \lambda_u \, \boldsymbol{t}^*_p(v)\end{split}\]</div>
+<p>Two vectors <span class="math notranslate nohighlight">\(u_1, u_2\)</span> define (or represent) the same covector iff <span class="math notranslate nohighlight">\(u_1 - u_2 \perp T_p C\)</span>.</p>
+<p>An important covector is the <strong>differential</strong>. The differential <span class="math notranslate nohighlight">\(df_p\)</span> of a smooth function <span class="math notranslate nohighlight">\(f: C \to \mathbb{R}\)</span>
+at <span class="math notranslate nohighlight">\(p\)</span> is a covector defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}df_p(\boldsymbol{t}_p) &amp;= \frac{d}{dt}f(x(t))|_{t=t_0}    \\
+                       &amp;= \frac{d}{dt}f(x(t))|_{t=t_0} \, \boldsymbol{t}^*_p (\boldsymbol{t}_p)\end{split}\]</div>
+<p>which can be written as</p>
+<div class="math notranslate nohighlight">
+\[df_p = \lambda_f \, \boldsymbol{t}^*_p  \quad \text{(a covector)}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\lambda_f = \frac{d}{dt}f(x(t))|_{t=t_0}  \quad \text{(a scalar)}\]</div>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is defined and smooth on an open set <span class="math notranslate nohighlight">\(U \supset C\)</span> then the gradient <span class="math notranslate nohighlight">\(\partial f\)</span> exists on <span class="math notranslate nohighlight">\(U\)</span> then we can apply the chain rule and get with <span class="math notranslate nohighlight">\(p = x(t_0), v = \dot{x}(t_0)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}df_p(v) &amp;= \frac{d}{dt}f(x(t))|_{t=t_0} \\
+        &amp;= \partial f(x(t_0)) \cdot \dot{x}(t_0) \\
+        &amp;= \partial f(p) \cdot v\end{split}\]</div>
+<p>To put it loosely, the differential is just the gradient <span class="math notranslate nohighlight">\(\partial f(p)\)</span>; however, the point is that we only need <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\(C\)</span> and can do without a gradient.</p>
+</section>
+<section id="the-kinematic-approach">
+<h2>The Kinematic Approach<a class="headerlink" href="#the-kinematic-approach" title="Permalink to this heading">#</a></h2>
+<p>The kinematic approach makes do with a local parametrization rather than a global one.</p>
+<div class="proof definition admonition" id="def-local-parametrization">
+<p class="admonition-title"><span class="caption-number">Definition 33 </span> (Local Parametrization)</p>
+<section class="definition-content" id="proof-content">
+<p><strong>i)</strong> A <strong>local parametrization</strong> of <span class="math notranslate nohighlight">\(C\)</span> in <span class="math notranslate nohighlight">\(p\)</span> is a smooth function
+<span class="math notranslate nohighlight">\(\gamma: (-\epsilon, \epsilon) \to C\)</span> with <span class="math notranslate nohighlight">\(\gamma(0) = p\)</span>, <span class="math notranslate nohighlight">\(\dot{\gamma(t)} \neq 0\)</span>, where <span class="math notranslate nohighlight">\(\epsilon\)</span> is arbitrarily small.</p>
+<p><strong>ii)</strong> It is called <strong>regular</strong> if it is a diffeomorphism
+from <span class="math notranslate nohighlight">\((-\epsilon, \epsilon )\)</span> to an open environment of <span class="math notranslate nohighlight">\(p\)</span>.</p>
+</section>
+</div><div class="proof theorem admonition" id="thr-tangent">
+<p class="admonition-title"><span class="caption-number">Theorem 50 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(C\)</span> be a smooth curve and <span class="math notranslate nohighlight">\(x\)</span> a local regular parametrizations of <span class="math notranslate nohighlight">\(C\)</span> at <span class="math notranslate nohighlight">\(p \in C\)</span>.
+Then for any two local parametrizations <span class="math notranslate nohighlight">\(\gamma\)</span>, <span class="math notranslate nohighlight">\(\sigma\)</span> it holds that, for some  <span class="math notranslate nohighlight">\(\lambda \in \mathbb{R}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\dot{\gamma}(0) = \lambda \, \dot{\sigma}(0)\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let</p>
+<p>Since <span class="math notranslate nohighlight">\(x\)</span> is a diffeomorphism, we can define a function <span class="math notranslate nohighlight">\(\phi\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi:
+   \left\{
+       \begin{array}{lr}
+          (-\epsilon, \epsilon ) \to (-\epsilon, \epsilon ) \\
+          t \mapsto x^{-1}(\gamma(t))
+       \end{array}
+   \right .\end{split}\]</div>
+<p>So</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\phi(0) &amp;= x^{-1}(\gamma(0)) = 0 \\
+\gamma(t) &amp;= x(\phi(t))\end{split}\]</div>
+<p>The chain rule gives</p>
+<div class="math notranslate nohighlight">
+\[\dot{\gamma}(t) = \dot{x}(\phi(t)) \dot{\phi}(t)\]</div>
+<p>which proves the assertion.</p>
+</div>
+<p>We can now choose any local parameterization <span class="math notranslate nohighlight">\(\gamma\)</span> and define, as before,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\boldsymbol{t}_p &amp;= \frac{\gamma(0)}{\| \dot{\gamma}(0) \|} \\
+\\
+T_p C &amp;= \text{span}\{\boldsymbol{t}_p\}  \\
+\\
+T^*_p C &amp;= \text{span}\{\boldsymbol{t}^*_p\} \end{split}\]</div>
+<p>and this definition does not depend on the choice of <span class="math notranslate nohighlight">\(\gamma\)</span>.</p>
+<p>The definition of the differential remains the same, up to the new interpretation of <span class="math notranslate nohighlight">\(x\)</span>:
+The differential <span class="math notranslate nohighlight">\(df_p\)</span> of a smooth function <span class="math notranslate nohighlight">\(f: C \to \mathbb{R}\)</span> at <span class="math notranslate nohighlight">\(p\)</span> is a covector defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}df_p(\boldsymbol{t}_p) &amp;= \frac{d}{dt}f(\gamma(t))|_{t=0}    \\
+                       &amp;= \frac{d}{dt}f(\gamma(t))|_{t=0} \, \boldsymbol{t}^*_p (\boldsymbol{t}_p)\end{split}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[df_p = \frac{d}{dt}f(\gamma(t))|_{t=0} \, \boldsymbol{t}^*_p\]</div>
+<p>where <span class="math notranslate nohighlight">\(\gamma\)</span> is any local parameterization of <span class="math notranslate nohighlight">\(C\)</span> at <span class="math notranslate nohighlight">\(p\)</span>.</p>
+</section>
+<section id="the-algebraic-approach">
+<h2>The Algebraic Approach<a class="headerlink" href="#the-algebraic-approach" title="Permalink to this heading">#</a></h2>
+<div class="proof definition admonition" id="def-germ">
+<p class="admonition-title"><span class="caption-number">Definition 34 </span> (Germ)</p>
+<section class="definition-content" id="proof-content">
+<p><strong>(i)</strong> Let <span class="math notranslate nohighlight">\(U, V \subseteq C\)</span> be open neighbourhood of a point <span class="math notranslate nohighlight">\(p \in C\)</span> and <span class="math notranslate nohighlight">\(f \to U\)</span>, <span class="math notranslate nohighlight">\(g \to V\)</span> two smooth functions.
+We say that <span class="math notranslate nohighlight">\(f \sim_p g\)</span> iff there is a <span class="math notranslate nohighlight">\(W \subseteq U \cap V\)</span> such that <span class="math notranslate nohighlight">\(p \in W\)</span> and <span class="math notranslate nohighlight">\(f = g\)</span> on <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p>The equivalence class of <span class="math notranslate nohighlight">\(f\)</span>, denoted by <span class="math notranslate nohighlight">\([f]_p\)</span>, is called the <strong>germ</strong> of <span class="math notranslate nohighlight">\(f\)</span> in <span class="math notranslate nohighlight">\(p\)</span>. It contains all functions that coincide with <span class="math notranslate nohighlight">\(f\)</span> is some neighbourhood of <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<p><strong>(ii)</strong>
+The <strong>algebra of germs</strong> of smooth real-valued functions on <span class="math notranslate nohighlight">\(C\)</span> in <span class="math notranslate nohighlight">\(p\)</span> is denoted by <span class="math notranslate nohighlight">\(C^{\infty}_p (C )\)</span>.</p>
+<p><strong>(iii)</strong>
+A linear mapping <span class="math notranslate nohighlight">\(D : C^{\infty}_p (C ) \to \mathbb{R}\)</span> is called a <strong>derivation</strong> in <span class="math notranslate nohighlight">\(p\)</span> iff it satisfies the <strong>Leibniz rule</strong>. It clearly holds that <span class="math notranslate nohighlight">\(D = 0\)</span> for constant functions.</p>
+<div class="math notranslate nohighlight">
+\[D(fg) = f(p)D(g) + D(f)g(p)\]</div>
+</section>
+</div><div class="proof lemma admonition" id="lem-hadamard">
+<p class="admonition-title"><span class="caption-number">Lemma 5 </span> (Hadamard)</p>
+<section class="lemma-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a smooth function on <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(p \in C\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[f(x) = f(p) + (x-x(p))\, g(x)\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[g(p) = \frac{f}{x}(p)\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof.</p>
+</div>
+<div class="proof theorem admonition" id="thr-kinematic-algebraic">
+<p class="admonition-title"><span class="caption-number">Theorem 51 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>The <strong>tangent space</strong> <span class="math notranslate nohighlight">\(T_p C\)</span> is the set of all derivations in <span class="math notranslate nohighlight">\(p\)</span></p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof.
+<strong>(i)</strong> Any <span class="math notranslate nohighlight">\(v = \gamma'(0)\)</span> defines a derivation through</p>
+<div class="math notranslate nohighlight">
+\[D_v(f) = \frac{d}{dt}f(\gamma(t))|_{t=0}\]</div>
+<p><strong>(ii)</strong></p>
+</div>
+<p>############################</p>
+</section>
+<section id="the-one-dimensional-case">
+<h2>The One-Dimensional Case<a class="headerlink" href="#the-one-dimensional-case" title="Permalink to this heading">#</a></h2>
+<p>Let Q be a 1-dimensional manifold given by a smooth curve:
+<span class="math notranslate nohighlight">\(x: [a, b] \to V\)</span>
+where <span class="math notranslate nohighlight">\(V\)</span> is a vector space and <span class="math notranslate nohighlight">\(x \in C^\infty([a,b], V)\)</span>.</p>
+<section id="tangent-space">
+<h3>Tangent Space<a class="headerlink" href="#tangent-space" title="Permalink to this heading">#</a></h3>
+<p>At each point <span class="math notranslate nohighlight">\(x(t_0) \in Q\)</span>, we define the <strong>directional derivative operator</strong> <span class="math notranslate nohighlight">\(\partial_t|_{t_0}\)</span> by its action on smooth functions:</p>
+<p><span class="math notranslate nohighlight">\(
+\partial_t|_{t_0}: C^{\infty}(Q) \to \mathbb{R}, \quad f \mapsto \frac{d}{dt}\bigg|_{t=t_0} f(x(t))
+\)</span></p>
+<p>The <strong>tangent space</strong> at <span class="math notranslate nohighlight">\(x(t_0)\)</span> is:</p>
+<p><span class="math notranslate nohighlight">\(
+T_{x(t_0)} Q = \text{span}\{\partial_t|_{t_0}\}
+\)</span></p>
+<p>This is a one-dimensional vector space. A general tangent vector has the form <span class="math notranslate nohighlight">\(v = \lambda \partial_t|_{t_0}\)</span> for <span class="math notranslate nohighlight">\(\lambda \in \mathbb{R}\)</span>.</p>
+</section>
+<section id="cotangent-space">
+<h3>Cotangent Space<a class="headerlink" href="#cotangent-space" title="Permalink to this heading">#</a></h3>
+<p>The <strong>cotangent space</strong> <span class="math notranslate nohighlight">\(T^*_{x(t_0)}Q\)</span> is the dual space of <span class="math notranslate nohighlight">\(T_{x(t_0)}Q\)</span>. It is also one-dimensional, with basis element <span class="math notranslate nohighlight">\(dt\)</span> defined by:</p>
+<p><span class="math notranslate nohighlight">\(
+dt: T_{x(t_0)}Q \to \mathbb{R}, \quad \text{where } dt(\partial_t|_{t_0}) = 1
+\)</span></p>
+<p>For a general tangent vector <span class="math notranslate nohighlight">\(v = \lambda \partial_t|_{t_0}\)</span>, we have <span class="math notranslate nohighlight">\(dt(v) = \lambda\)</span>.</p>
+</section>
+<section id="differential-of-a-function">
+<h3>Differential of a Function<a class="headerlink" href="#differential-of-a-function" title="Permalink to this heading">#</a></h3>
+<p>For any smooth function <span class="math notranslate nohighlight">\(f \in C^{\infty}(Q)\)</span>, the <strong>differential</strong> <span class="math notranslate nohighlight">\(df\)</span> is the covector:</p>
+<p><span class="math notranslate nohighlight">\(
+df: T_{x(t_0)}Q \to \mathbb{R}, \quad df(v) = v(f)
+\)</span></p>
+<p>Explicitly, for <span class="math notranslate nohighlight">\(v = \lambda \partial_t|_{t_0}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(
+df(v) = \lambda \cdot \partial_t|_{t_0} f = \lambda \cdot \frac{d}{dt}\bigg|_{t=t_0} f(x(t))
+\)</span></p>
+<p>In the basis <span class="math notranslate nohighlight">\(\{dt\}\)</span>, we can write: <span class="math notranslate nohighlight">\(df = (\partial_t f) \cdot dt\)</span>.</p>
+</section>
+<section id="tangent-bundle">
+<h3>Tangent Bundle<a class="headerlink" href="#tangent-bundle" title="Permalink to this heading">#</a></h3>
+<p>The <strong>tangent bundle</strong> is the collection of all tangent spaces:</p>
+<p><span class="math notranslate nohighlight">\(
+TQ = \bigcup_{x \in Q} \{x\} \times T_x Q = \{(x, v) \mid x \in Q, v \in T_x Q\}
+\)</span></p>
+<p>Using the parameterization <span class="math notranslate nohighlight">\(x: [a,b] \to Q\)</span>, we can also write:</p>
+<p><span class="math notranslate nohighlight">\(
+TQ = \{(x(t), v) \mid t \in [a,b], v \in T_{x(t)}Q\}
+\)</span></p>
+<p>or more explicitly:</p>
+<p><span class="math notranslate nohighlight">\(
+TQ = \{(x(t), \lambda \partial_t|_t) \mid t \in [a,b], \lambda \in \mathbb{R}\}
+\)</span></p>
+<p>Note that the basis vector <span class="math notranslate nohighlight">\(\partial_t|_t\)</span> depends on the point <span class="math notranslate nohighlight">\(x(t)\)</span> — it represents the tangent vector at that specific point. The tangent bundle TQ is a 2-dimensional manifold.</p>
+</section>
+<section id="cotangent-bundle">
+<h3>Cotangent Bundle<a class="headerlink" href="#cotangent-bundle" title="Permalink to this heading">#</a></h3>
+<p>The <strong>cotangent bundle</strong> is the collection of all cotangent spaces:</p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \bigcup_{x \in Q} \{x\} \times T^*_x Q = \{(x, p) \mid x \in Q, p \in T^*_x Q\}
+\)</span></p>
+<p>Using the parameterization:</p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \{(x(t), p) \mid t \in [a,b], p \in T^*_{x(t)}Q\}
+\)</span></p>
+<p>or more explicitly:</p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \{(x(t), p_1 \, dt) \mid t \in [a,b], p_1 \in \mathbb{R}\}
+\)</span></p>
+<p>The cotangent bundle <span class="math notranslate nohighlight">\(T^*Q\)</span> is also a 2-dimensional manifold and serves as the <strong>phase space</strong> for Hamiltonian mechanics.</p>
+</section>
+<section id="key-points">
+<h3>Key Points<a class="headerlink" href="#key-points" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The tangent space <span class="math notranslate nohighlight">\(T_x Q\)</span> at each point <span class="math notranslate nohighlight">\(x\)</span> is a vector space containing tangent vectors (velocities)</p></li>
+<li><p>The cotangent space <span class="math notranslate nohighlight">\(T^*_x Q\)</span> at each point <span class="math notranslate nohighlight">\(x\)</span> is the dual vector space containing covectors (momenta)</p></li>
+<li><p>The basis vectors <span class="math notranslate nohighlight">\(\partial_t|_t\)</span> and dual basis <span class="math notranslate nohighlight">\(dt\)</span> depend on the point via the parameter <span class="math notranslate nohighlight">\(t\)</span></p></li>
+<li><p>This definition is coordinate-independent in the sense that it depends only on the manifold structure of Q, though we use the parameterization <span class="math notranslate nohighlight">\(x(t)\)</span> to make computations explicit</p></li>
+</ul>
+</section>
+<section id="question">
+<h3>Question<a class="headerlink" href="#question" title="Permalink to this heading">#</a></h3>
+<p>Let’s summarize:</p>
+<p><span class="math notranslate nohighlight">\(
+T_{x(t_0)} Q = \text{span}\{\partial_t|_{t_0}\} 
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+T^*_{x(t_0)} Q = \text{span}\{dt\}
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+TQ = \{(x, v) \mid x \in Q, v \in T_x Q\}
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \{(x, p) \mid x \in Q, p \in T^*_x Q\}
+\)</span></p>
+<p>Question 1: When you write</p>
+<p><span class="math notranslate nohighlight">\(
+T^*Q = \{(x(t), p_1 \, dt) \mid t \in [a,b], p_1 \in \mathbb{R}\}
+\)</span></p>
+<p>how do you express the fact that <span class="math notranslate nohighlight">\(p_1 \, dt\)</span> depends on <span class="math notranslate nohighlight">\(t\)</span>.
+We need something like <span class="math notranslate nohighlight">\(dt|t_0\)</span> don’t we?</p>
+<p>Question 2: These are formal definitions; the terms <span class="math notranslate nohighlight">\(\partial_t|_{t_0}\)</span> and <span class="math notranslate nohighlight">\(dt\)</span> are just symbols satisfying</p>
+<p><span class="math notranslate nohighlight">\(
+dt(\partial_t|_{t_0}) = 1
+\)</span></p>
+<p>All this is independent of Euler-Lagrange. How do poisson brackets come in?</p>
+<p>We already have</p>
+<p><span class="math notranslate nohighlight">\(
+&lt;p, v&gt; = p_i v^i
+\)</span></p>
+<p>but not yet</p>
+<p><span class="math notranslate nohighlight">\(
+{x^i, p_j} = \delta_{ij}
+\)</span></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./mathematics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="integral-calculus.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Differential Calculus</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../history/8-holy_roman_empire.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Was the Empire Holy, Roman, or an Empire at All?</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-simple-case">The Simple Case</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kinematic-approach">The Kinematic Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-algebraic-approach">The Algebraic Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-one-dimensional-case">The One-Dimensional Case</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-space">Tangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-space">Cotangent Space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-of-a-function">Differential of a Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-bundle">Tangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cotangent-bundle">Cotangent Bundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-points">Key Points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question">Question</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Johannes Siedersleben
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Johannes Siedersleben.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
