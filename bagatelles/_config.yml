@@ -8,7 +8,6 @@ logo: pict-03.png
 exclude_patterns:
   - ".claude/**"           # Claude Code worktrees, never build
   - mathematics/pontryagin.md
-  - mathematics/tangent-cotangent.md
   # improve.py artifacts: tracked in git, but not built/published
   - "**/*-plan.md"
   - "**/*-backup.md"

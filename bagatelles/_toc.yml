@@ -76,6 +76,8 @@ parts:
         title: Reining in AI Agents *
       - file: computer-science/py4alg
         title: A Compositional Algebra Library *
+      - file: computer-science/cryptoanalysis
+        title: Cryptoanalysis
   - caption: Physics
     chapters:
       - file: physics/energy-modelling
@@ -107,12 +109,8 @@ parts:
         title: Differential Calculus
       - file: mathematics/integral-calculus
         title: Integral Calculus
-      - file: mathematics/tangent-cotangent
-        title: Tangent, Cotangent
-      - file: mathematics/tangent-cotangent-n
-        title: Tangent, Cotangent in n Dimensions
-      - file: mathematics/tensors
-        title: Tensors
+      - file: mathematics/differentials
+        title: Differentials
 
   - caption: History
     chapters:
